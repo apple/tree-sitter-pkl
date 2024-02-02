@@ -1,0 +1,43 @@
+================================================================================
+types/cyclicTypeAlias2
+================================================================================
+
+typealias Foo = List<Bar>
+
+typealias Bar = Set<Baz>
+
+typealias Baz = Map<String, Foo>
+
+--------------------------------------------------------------------------------
+
+(module
+  (typeAlias
+    (identifier)
+    (type
+      (qualifiedIdentifier
+        (identifier))
+      (typeArgumentList
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (typeAlias
+    (identifier)
+    (type
+      (qualifiedIdentifier
+        (identifier))
+      (typeArgumentList
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (typeAlias
+    (identifier)
+    (type
+      (qualifiedIdentifier
+        (identifier))
+      (typeArgumentList
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (type
+          (qualifiedIdentifier
+            (identifier)))))))

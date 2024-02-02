@@ -1,0 +1,20 @@
+================================================================================
+api/yamlParser1Yaml11
+================================================================================
+
+amends "yamlParser1Compat.pkl"
+
+parser { mode = "1.1" }
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral)))))

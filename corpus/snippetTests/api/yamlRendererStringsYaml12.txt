@@ -1,0 +1,20 @@
+================================================================================
+api/yamlRendererStringsYaml12
+================================================================================
+
+amends "yamlRendererStringsCompat.pkl"
+
+renderer { mode = "1.2" }
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral)))))

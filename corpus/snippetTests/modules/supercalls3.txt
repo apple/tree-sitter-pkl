@@ -1,0 +1,112 @@
+================================================================================
+modules/supercalls3
+================================================================================
+
+module supercalls3
+
+extends "supercalls2.pkl"
+
+import "pkl:test"
+
+hidden pigeonBarnOwl = super.pigeon + super.barnOwl()
+function barnOwlPigeon() = super.barnOwl() + super.pigeon
+hidden parrot = super.say("Parrot")
+function other() = super.other()
+
+prefix = "Oh "
+
+res1 = pigeon
+res2 = barnOwl()
+res3 = say2("Parrot")
+res4 = pigeonBarnOwl
+res5 = barnOwlPigeon()
+res6 = parrot
+res7 = test.catch(() -> other())
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (moduleClause
+      (qualifiedIdentifier
+        (identifier)))
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (importClause
+    (stringConstant))
+  (classProperty
+    (modifier)
+    (identifier)
+    (binaryExpr
+      (propertyCallExpr
+        (identifier))
+      (methodCallExpr
+        (identifier)
+        (argumentList))))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList))
+    (binaryExpr
+      (methodCallExpr
+        (identifier)
+        (argumentList))
+      (propertyCallExpr
+        (identifier))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral))))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList))
+    (methodCallExpr
+      (identifier)
+      (argumentList)))
+  (classProperty
+    (identifier)
+    (slStringLiteral))
+  (classProperty
+    (identifier)
+    (variableExpr
+      (identifier)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral))))
+  (classProperty
+    (identifier)
+    (variableExpr
+      (identifier)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList)))
+  (classProperty
+    (identifier)
+    (variableExpr
+      (identifier)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (identifier)
+            (argumentList)))))))

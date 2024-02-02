@@ -1,0 +1,21 @@
+================================================================================
+classes/externalProperty
+================================================================================
+
+class Foo {
+  external bar: String
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (modifier)
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))))))

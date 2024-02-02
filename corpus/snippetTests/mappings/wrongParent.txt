@@ -1,0 +1,246 @@
+================================================================================
+mappings/wrongParent
+================================================================================
+
+import "pkl:test"
+
+class Person {}
+
+res1 = test.catch(() -> (5) { ["pigeon"] = true })
+res2 = test.catch(() -> new List { ["pigeon"] = true })
+res3 = test.catch(() -> (List()) { ["pigeon"] = true })
+res4 = test.catch(() -> new Person { ["pigeon"] = true })
+res5 = test.catch(() -> new ValueRenderer { ["pigeon"] = true })
+res6 = test.catch(() -> new Listing { [0] = true })
+
+res7 = test.catch(() -> (5) { ["fr" + "ed"] = true })
+res8 = test.catch(() -> new List { ["fr" + "ed"] = true })
+res9 = test.catch(() -> (List()) { ["fr" + "ed"] = true })
+res10 = test.catch(() -> new Person { ["fr" + "ed"] = true })
+res11 = test.catch(() -> new ValueRenderer { ["fr" + "ed"] = true })
+res12 = test.catch(() -> new Listing { [0 + 0] = true })
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (clazz
+    (identifier)
+    (classBody))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (objectLiteral
+            (parenthesizedExpr
+              (intLiteral))
+            (objectBody
+              (objectEntry
+                (slStringLiteral)
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (slStringLiteral)
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (objectLiteral
+            (parenthesizedExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList)))
+            (objectBody
+              (objectEntry
+                (slStringLiteral)
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (slStringLiteral)
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (slStringLiteral)
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (objectLiteral
+            (parenthesizedExpr
+              (intLiteral))
+            (objectBody
+              (objectEntry
+                (binaryExpr
+                  (slStringLiteral)
+                  (slStringLiteral))
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (binaryExpr
+                  (slStringLiteral)
+                  (slStringLiteral))
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (objectLiteral
+            (parenthesizedExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList)))
+            (objectBody
+              (objectEntry
+                (binaryExpr
+                  (slStringLiteral)
+                  (slStringLiteral))
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (binaryExpr
+                  (slStringLiteral)
+                  (slStringLiteral))
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (binaryExpr
+                  (slStringLiteral)
+                  (slStringLiteral))
+                (trueLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (binaryExpr
+                  (intLiteral)
+                  (intLiteral))
+                (trueLiteral)))))))))

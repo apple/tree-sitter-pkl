@@ -1,0 +1,105 @@
+================================================================================
+basic/moduleRef1
+================================================================================
+
+module test
+
+a = 42
+
+m1 = module.a
+
+foo {
+  b = 43
+  m2 = module.a
+  m3 = module.foo.b
+  local c = () -> module.foo.b
+  m4 = c.apply()
+}
+
+m5 = f()
+
+m6 = new Person {}
+
+function f() = module.a
+
+class Person {
+  age = module.a
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (moduleClause
+      (qualifiedIdentifier
+        (identifier))))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (propertyCallExpr
+      (moduleExpr)
+      (identifier)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (propertyCallExpr
+          (moduleExpr)
+          (identifier)))
+      (objectProperty
+        (identifier)
+        (propertyCallExpr
+          (propertyCallExpr
+            (moduleExpr)
+            (identifier))
+          (identifier)))
+      (objectProperty
+        (modifier)
+        (identifier)
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (propertyCallExpr
+              (moduleExpr)
+              (identifier))
+            (identifier))))
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList)))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody)))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList))
+    (propertyCallExpr
+      (moduleExpr)
+      (identifier)))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (propertyCallExpr
+          (moduleExpr)
+          (identifier))))))

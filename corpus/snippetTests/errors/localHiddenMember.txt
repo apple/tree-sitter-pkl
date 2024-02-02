@@ -1,0 +1,17 @@
+================================================================================
+errors/localHiddenMember
+================================================================================
+
+local hidden name: String
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))))

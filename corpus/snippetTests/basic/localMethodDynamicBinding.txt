@@ -1,0 +1,191 @@
+================================================================================
+basic/localMethodDynamicBinding
+================================================================================
+
+import "pkl:test"
+
+class X {
+  x = 1
+  y = compute()
+  local function compute() = x
+}
+
+res1 = new X {}
+
+res2 = (res1) {
+  x = 2
+}
+
+class X2 {
+  x = 1
+  nested {
+    y = compute()
+    local function compute() = x
+  }
+}
+
+res3 = new X2 {}
+
+res4 = (res3) {
+  x = 2
+}
+
+res5 {
+  x = 1
+  y = compute()
+  local function compute() = x
+}
+
+res6 = (res5) {
+  x = 2
+}
+
+res7 {
+  x = 1
+  nested {
+    y = compute()
+    local function compute() = x
+  }
+}
+
+res8 = (res7) {
+  x = 2
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (intLiteral))
+      (classProperty
+        (identifier)
+        (methodCallExpr
+          (identifier)
+          (argumentList)))
+      (classMethod
+        (methodHeader
+          (modifier)
+          (identifier)
+          (parameterList))
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody)))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral)))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (intLiteral))
+      (classProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (methodCallExpr
+              (identifier)
+              (argumentList)))
+          (objectMethod
+            (methodHeader
+              (modifier)
+              (identifier)
+              (parameterList))
+            (variableExpr
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody)))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral)))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (identifier)
+          (argumentList)))
+      (objectMethod
+        (methodHeader
+          (modifier)
+          (identifier)
+          (parameterList))
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral)))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (methodCallExpr
+              (identifier)
+              (argumentList)))
+          (objectMethod
+            (methodHeader
+              (modifier)
+              (identifier)
+              (parameterList))
+            (variableExpr
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral))))))

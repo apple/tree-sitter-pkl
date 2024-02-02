@@ -1,0 +1,35 @@
+================================================================================
+basic/readGlob2
+================================================================================
+
+// excluded from native tests because this globs the classpath.
+amends "../snippetTest.pkl"
+
+examples {
+  ["modulepath"] {
+    read*("modulepath:/**.pkl").keys.toListing()
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (readGlobExpr
+              (methodCallExpr
+                (propertyCallExpr
+                  (parenthesizedExpr
+                    (slStringLiteral))
+                  (identifier))
+                (identifier)
+                (argumentList)))))))))

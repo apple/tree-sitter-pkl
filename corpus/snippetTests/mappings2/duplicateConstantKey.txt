@@ -1,0 +1,36 @@
+================================================================================
+mappings2/duplicateConstantKey
+================================================================================
+
+res1 = new Mapping {
+  when (false) { [0] = 0 }
+  ["barn owl"] = 1
+  ["pigeon"] = 2
+  ["barn owl"] = 3
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (whenGenerator
+          (falseLiteral)
+          (objectBody
+            (objectEntry
+              (intLiteral)
+              (intLiteral))))
+        (objectEntry
+          (slStringLiteral)
+          (intLiteral))
+        (objectEntry
+          (slStringLiteral)
+          (intLiteral))
+        (objectEntry
+          (slStringLiteral)
+          (intLiteral))))))

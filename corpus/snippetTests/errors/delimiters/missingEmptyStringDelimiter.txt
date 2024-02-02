@@ -1,0 +1,17 @@
+================================================================================
+errors/delimiters/missingEmptyStringDelimiter
+================================================================================
+
+res1 = "
+res2 = 42
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (MISSING """)))
+  (classProperty
+    (identifier)
+    (intLiteral)))

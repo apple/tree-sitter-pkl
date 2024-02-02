@@ -1,0 +1,69 @@
+================================================================================
+api/module
+================================================================================
+
+amends "../snippetTest.pkl"
+
+examples {
+  ["relativePathTo()"] {
+    module.relativePathTo(import("dir1/dir2/relativePathTo.pkl"))
+    module.relativePathTo(import("list.pkl"))
+    import("list.pkl").relativePathTo(import("set.pkl"))
+    module.relativePathTo(module)
+    module.catch(() -> import("dir1/dir2/relativePathTo.pkl").relativePathTo(module))
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (importExpr
+                  (stringConstant)))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (importExpr
+                  (stringConstant)))))
+          (objectElement
+            (methodCallExpr
+              (importExpr
+                (stringConstant))
+              (identifier)
+              (argumentList
+                (importExpr
+                  (stringConstant)))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (moduleExpr))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (methodCallExpr
+                    (importExpr
+                      (stringConstant))
+                    (identifier)
+                    (argumentList
+                      (moduleExpr))))))))))))

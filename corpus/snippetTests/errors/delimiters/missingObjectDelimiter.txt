@@ -1,0 +1,18 @@
+================================================================================
+errors/delimiters/missingObjectDelimiter
+================================================================================
+
+foo = new {
+  x = 1
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (newExpr
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral))
+        (MISSING "}")))))

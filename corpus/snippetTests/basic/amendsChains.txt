@@ -1,0 +1,268 @@
+================================================================================
+basic/amendsChains
+================================================================================
+
+foo {
+  bar { "Hello" }
+} {
+  bar { "World" }
+}
+  
+bar {
+  baz = new Listing {}
+} {
+  baz { "first" } { "second" "third" } { "forth" }
+}
+
+baz = new Listing<Listing<Listing<Number>>> {
+    new { new { 1 } }
+    new { new { 2 } new { 2 2 } }
+    new { new { 3 } new { 3 3 } new { 3 3 3 } }
+  } {
+    [[ length > 1 ]] {
+      [[ toList().first < 3 ]] {
+        -3
+      } {
+        -30
+      }
+    } {
+      new Listing { 1.1 }
+    }
+  }.fold(List(), (acc, middle: Listing<Listing<Number>>) ->
+    middle.fold(acc, (_acc, inner) ->
+      inner.fold(_acc, (__acc, it) -> __acc.add(it))))
+
+qux {
+  (foo.bar) { "world" "!" } { [0] = "Goodbye " [1] = "cruel " }.toList().join("")
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectElement
+            (slStringLiteral)))))
+    (objectBody
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectElement
+            (slStringLiteral))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody))))
+    (objectBody
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectElement
+            (slStringLiteral)))
+        (objectBody
+          (objectElement
+            (slStringLiteral))
+          (objectElement
+            (slStringLiteral)))
+        (objectBody
+          (objectElement
+            (slStringLiteral))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (objectLiteral
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (qualifiedIdentifier
+                  (identifier))
+                (typeArgumentList
+                  (type
+                    (qualifiedIdentifier
+                      (identifier))
+                    (typeArgumentList
+                      (type
+                        (qualifiedIdentifier
+                          (identifier)))))))))
+          (objectBody
+            (objectElement
+              (newExpr
+                (objectBody
+                  (objectElement
+                    (newExpr
+                      (objectBody
+                        (objectElement
+                          (intLiteral))))))))
+            (objectElement
+              (newExpr
+                (objectBody
+                  (objectElement
+                    (newExpr
+                      (objectBody
+                        (objectElement
+                          (intLiteral)))))
+                  (objectElement
+                    (newExpr
+                      (objectBody
+                        (objectElement
+                          (intLiteral))
+                        (objectElement
+                          (intLiteral))))))))
+            (objectElement
+              (newExpr
+                (objectBody
+                  (objectElement
+                    (newExpr
+                      (objectBody
+                        (objectElement
+                          (intLiteral)))))
+                  (objectElement
+                    (newExpr
+                      (objectBody
+                        (objectElement
+                          (intLiteral))
+                        (objectElement
+                          (intLiteral)))))
+                  (objectElement
+                    (newExpr
+                      (objectBody
+                        (objectElement
+                          (intLiteral))
+                        (objectElement
+                          (intLiteral))
+                        (objectElement
+                          (intLiteral))))))))))
+        (objectBody
+          (objectPredicate
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (intLiteral))
+            (objectBody
+              (objectPredicate
+                (binaryExpr
+                  (propertyCallExpr
+                    (methodCallExpr
+                      (identifier)
+                      (argumentList))
+                    (identifier))
+                  (intLiteral))
+                (objectBody
+                  (objectElement
+                    (unaryExpr
+                      (intLiteral))))
+                (objectBody
+                  (objectElement
+                    (unaryExpr
+                      (intLiteral))))))
+            (objectBody
+              (objectElement
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody
+                    (objectElement
+                      (floatLiteral)))))))))
+      (identifier)
+      (argumentList
+        (methodCallExpr
+          (identifier)
+          (argumentList))
+        (functionLiteral
+          (parameterList
+            (typedIdentifier
+              (identifier))
+            (typedIdentifier
+              (identifier)
+              (typeAnnotation
+                (type
+                  (qualifiedIdentifier
+                    (identifier))
+                  (typeArgumentList
+                    (type
+                      (qualifiedIdentifier
+                        (identifier))
+                      (typeArgumentList
+                        (type
+                          (qualifiedIdentifier
+                            (identifier))))))))))
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (variableExpr
+                (identifier))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier))
+                  (typedIdentifier
+                    (identifier)))
+                (methodCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier)
+                  (argumentList
+                    (variableExpr
+                      (identifier))
+                    (functionLiteral
+                      (parameterList
+                        (typedIdentifier
+                          (identifier))
+                        (typedIdentifier
+                          (identifier)))
+                      (methodCallExpr
+                        (variableExpr
+                          (identifier))
+                        (identifier)
+                        (argumentList
+                          (variableExpr
+                            (identifier))))))))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (propertyCallExpr
+          (methodCallExpr
+            (objectLiteral
+              (objectLiteral
+                (parenthesizedExpr
+                  (propertyCallExpr
+                    (variableExpr
+                      (identifier))
+                    (identifier)))
+                (objectBody
+                  (objectElement
+                    (slStringLiteral))
+                  (objectElement
+                    (slStringLiteral))))
+              (objectBody
+                (objectEntry
+                  (intLiteral)
+                  (subscriptExpr
+                    (slStringLiteral)
+                    (intLiteral)))
+                (ERROR)
+                (objectElement
+                  (slStringLiteral))))
+            (identifier)
+            (argumentList))
+          (identifier)))
+      (objectElement
+        (parenthesizedExpr
+          (slStringLiteral))))))

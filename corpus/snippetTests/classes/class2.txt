@@ -1,0 +1,117 @@
+================================================================================
+classes/class2
+================================================================================
+
+class Person {
+  name: String = "X"
+  age: Int = 40
+  friends: List<Person>
+  address: Address
+}
+
+class Address {
+  street: String = "Howdy St"
+}
+
+pigeon = new Person {
+  name = "Pigeon Who"
+  age = 30
+  friends = List(
+    new Person {
+      name = "Emma"
+    },
+    new Person {
+      name = "Tony"
+    }
+  )
+  address {
+    street = "Pigeon St."
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteral))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (intLiteral))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (qualifiedIdentifier
+                  (identifier)))))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteral))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral))
+        (objectProperty
+          (identifier)
+          (intLiteral))
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (newExpr
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (objectBody
+                  (objectProperty
+                    (identifier)
+                    (slStringLiteral))))
+              (newExpr
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (objectBody
+                  (objectProperty
+                    (identifier)
+                    (slStringLiteral)))))))
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral))))))))

@@ -1,0 +1,20 @@
+================================================================================
+errors/invalidGlobImport7
+================================================================================
+
+import* "../../input-helper/globtest/**.pkl" as globbedImports
+
+res: globbedImports
+
+--------------------------------------------------------------------------------
+
+(module
+  (importGlobClause
+    (stringConstant)
+    (identifier))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))))

@@ -1,0 +1,31 @@
+================================================================================
+modules/supercalls1
+================================================================================
+
+open module supercalls1
+
+prefix = ""
+function say(msg) = prefix + msg
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (moduleClause
+      (modifier)
+      (qualifiedIdentifier
+        (identifier))))
+  (classProperty
+    (identifier)
+    (slStringLiteral))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier))))
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (variableExpr
+        (identifier)))))

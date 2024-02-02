@@ -1,0 +1,18 @@
+================================================================================
+errors/keywordNotAllowedHere2
+================================================================================
+
+function outer() = 42
+res1 = 42
+
+--------------------------------------------------------------------------------
+
+(module
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList))
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (intLiteral)))

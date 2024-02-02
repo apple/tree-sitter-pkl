@@ -1,0 +1,26 @@
+================================================================================
+errors/functionNotFoundInModule
+================================================================================
+
+function bar(x) = x
+
+res1 = module.baz(42)
+
+--------------------------------------------------------------------------------
+
+(module
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier))))
+    (variableExpr
+      (identifier)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (moduleExpr)
+      (identifier)
+      (argumentList
+        (intLiteral)))))

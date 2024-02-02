@@ -1,0 +1,94 @@
+================================================================================
+api/propertiesRendererBug66849708.properties
+================================================================================
+
+object {
+  nullable = null
+  property = "value"
+}
+
+mapping {
+  ["nullable"] = null
+  ["key"] = "value"
+}
+
+map = Map("nullable", null, "key", "value")
+
+output {
+  renderer = new PropertiesRenderer {
+    omitNullProperties = true
+    converters {
+      ["object.property"] = (it) -> "converted"
+      ["mapping[key]"] = (it) -> "converted"
+      ["map[key]"] = (it) -> "converted"
+    }
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (nullLiteral))
+      (objectProperty
+        (identifier)
+        (slStringLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral)
+        (nullLiteral))
+      (objectEntry
+        (slStringLiteral)
+        (slStringLiteral))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral)
+        (nullLiteral)
+        (slStringLiteral)
+        (slStringLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (trueLiteral))
+            (objectProperty
+              (identifier)
+              (objectBody
+                (objectEntry
+                  (slStringLiteral)
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (slStringLiteral)))
+                (objectEntry
+                  (slStringLiteral)
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (slStringLiteral)))
+                (objectEntry
+                  (slStringLiteral)
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (slStringLiteral)))))))))))

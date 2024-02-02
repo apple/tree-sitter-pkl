@@ -1,0 +1,47 @@
+================================================================================
+classes/unionTypesErrorDifferent1
+================================================================================
+
+class X {
+  a: Boolean|List<Int>
+}
+
+res1 = new X {
+  a = List(1, 3.14, 2)
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (type
+              (qualifiedIdentifier
+                (identifier))
+              (typeArgumentList
+                (type
+                  (qualifiedIdentifier
+                    (identifier))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)
+              (floatLiteral)
+              (intLiteral))))))))

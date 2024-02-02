@@ -1,0 +1,115 @@
+================================================================================
+listings/wrongIndex
+================================================================================
+
+import "pkl:test"
+
+local x = new Listing {
+  "pigeon"
+}
+
+res1 = test.catch(() -> (x) {
+  [3] = "barn owl"
+})
+
+res2 = test.catch(() -> (x) {
+  [2 + 1] = "barn owl"
+})
+
+res3 = test.catch(() -> (x) {
+  [-1] = "barn owl"
+})
+
+res4 = test.catch(() -> (x) {
+  [-1 * 1] = "barn owl"
+})
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectElement
+          (slStringLiteral)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (objectLiteral
+            (parenthesizedExpr
+              (variableExpr
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (slStringLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (objectLiteral
+            (parenthesizedExpr
+              (variableExpr
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (binaryExpr
+                  (intLiteral)
+                  (intLiteral))
+                (slStringLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (objectLiteral
+            (parenthesizedExpr
+              (variableExpr
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (unaryExpr
+                  (intLiteral))
+                (slStringLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (objectLiteral
+            (parenthesizedExpr
+              (variableExpr
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (binaryExpr
+                  (unaryExpr
+                    (intLiteral))
+                  (intLiteral))
+                (slStringLiteral)))))))))

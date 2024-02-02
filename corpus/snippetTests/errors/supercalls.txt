@@ -1,0 +1,19 @@
+================================================================================
+errors/supercalls
+================================================================================
+
+foo {
+  bar = super.bar()
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (identifier)
+          (argumentList))))))

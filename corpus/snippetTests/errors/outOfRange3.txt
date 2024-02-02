@@ -1,0 +1,22 @@
+================================================================================
+errors/outOfRange3
+================================================================================
+
+res1 = List(1, 2, 3).sublist(2, 1)
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (methodCallExpr
+        (identifier)
+        (argumentList
+          (intLiteral)
+          (intLiteral)
+          (intLiteral)))
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)))))

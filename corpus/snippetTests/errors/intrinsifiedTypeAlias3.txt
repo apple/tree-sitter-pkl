@@ -1,0 +1,16 @@
+================================================================================
+errors/intrinsifiedTypeAlias3
+================================================================================
+
+res1: NonNull = null
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (nullLiteral)))

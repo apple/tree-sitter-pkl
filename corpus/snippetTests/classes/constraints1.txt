@@ -1,0 +1,137 @@
+================================================================================
+classes/constraints1
+================================================================================
+
+import "pkl:test"
+
+class Person {
+  name: String(length.isBetween(10, 20))
+}
+
+class Person2 {
+  alternativeNames: Listing<String>(!isEmpty)
+}
+
+res1 = new Person {
+  name = "Linda Forth"
+}
+
+res2 = test.catch(() ->
+  new Person {
+    name = "Pigeon"
+  }.name
+)
+
+res3: Person2 = new {
+  alternativeNames = new {
+    "Parrot"
+  }
+}
+
+res4 = test.catch(() ->
+  new Person2 {
+    alternativeNames {}
+  }.alternativeNames
+)
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (intLiteral)
+                (intLiteral))))))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier))
+              (typeArgumentList
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))))
+            (unaryExpr
+              (variableExpr
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (slStringLiteral))))
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectProperty
+          (identifier)
+          (newExpr
+            (objectBody
+              (objectElement
+                (slStringLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (objectBody))))
+            (identifier)))))))

@@ -1,0 +1,17 @@
+================================================================================
+errors/invalidPropertyModifier
+================================================================================
+
+open foo: Int = 42
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (intLiteral)))

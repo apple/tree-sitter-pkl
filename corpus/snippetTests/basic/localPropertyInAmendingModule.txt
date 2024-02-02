@@ -1,0 +1,207 @@
+================================================================================
+basic/localPropertyInAmendingModule
+================================================================================
+
+amends "baseModule.pkl"
+
+import "pkl:test"
+
+local const x: Int = 42
+local const y: Int = "wrong type"
+
+local a = x
+local b = y
+
+foo {
+  res1 = a
+  res2 = test.catch(() -> b)
+  res3 = x
+  res4 = test.catch(() -> y)
+  bar {
+    local x: Int = 42
+    local y: Int = "wrong type"
+    res5 = x
+    res6 = test.catch(() -> y)
+  }
+  c = new C {}
+}
+
+local class C {
+  foo {
+    res7 = x
+    res8 = test.catch(() -> y)
+    bar {
+      local x: Int = 42
+      local y: Int = "wrong type"
+      res9 = x
+      res10 = test.catch(() -> y)
+    }
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (importClause
+    (stringConstant))
+  (classProperty
+    (modifier)
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (intLiteral))
+  (classProperty
+    (modifier)
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral))
+  (classProperty
+    (modifier)
+    (identifier)
+    (variableExpr
+      (identifier)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (variableExpr
+      (identifier)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (variableExpr
+          (identifier)))
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (functionLiteral
+              (parameterList)
+              (variableExpr
+                (identifier))))))
+      (objectProperty
+        (identifier)
+        (variableExpr
+          (identifier)))
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (functionLiteral
+              (parameterList)
+              (variableExpr
+                (identifier))))))
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (modifier)
+            (identifier)
+            (typeAnnotation
+              (type
+                (qualifiedIdentifier
+                  (identifier))))
+            (intLiteral))
+          (objectProperty
+            (modifier)
+            (identifier)
+            (typeAnnotation
+              (type
+                (qualifiedIdentifier
+                  (identifier))))
+            (slStringLiteral))
+          (objectProperty
+            (identifier)
+            (variableExpr
+              (identifier)))
+          (objectProperty
+            (identifier)
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (variableExpr
+                    (identifier))))))))
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody)))))
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (variableExpr
+              (identifier)))
+          (objectProperty
+            (identifier)
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (variableExpr
+                    (identifier))))))
+          (objectProperty
+            (identifier)
+            (objectBody
+              (objectProperty
+                (modifier)
+                (identifier)
+                (typeAnnotation
+                  (type
+                    (qualifiedIdentifier
+                      (identifier))))
+                (intLiteral))
+              (objectProperty
+                (modifier)
+                (identifier)
+                (typeAnnotation
+                  (type
+                    (qualifiedIdentifier
+                      (identifier))))
+                (slStringLiteral))
+              (objectProperty
+                (identifier)
+                (variableExpr
+                  (identifier)))
+              (objectProperty
+                (identifier)
+                (methodCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier)
+                  (argumentList
+                    (functionLiteral
+                      (parameterList)
+                      (variableExpr
+                        (identifier)))))))))))))

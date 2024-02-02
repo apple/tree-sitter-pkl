@@ -1,0 +1,38 @@
+================================================================================
+objectSpread
+================================================================================
+
+res {
+  foo = 1
+} {
+  bar = 2 
+  baz {
+    biz = 3
+  } {
+    buz = 4
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral)))
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral)))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral)))))))

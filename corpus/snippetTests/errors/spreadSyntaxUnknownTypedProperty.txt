@@ -1,0 +1,46 @@
+================================================================================
+errors/spreadSyntaxUnknownTypedProperty
+================================================================================
+
+class Person { name: String }
+
+local personDynamic {
+  name = "Barn Owl"
+  age = 34
+}
+
+res1: Person = new { ...personDynamic }
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral))
+      (objectProperty
+        (identifier)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectSpread
+          (variableExpr
+            (identifier)))))))

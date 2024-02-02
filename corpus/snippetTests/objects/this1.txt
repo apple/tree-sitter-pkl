@@ -1,0 +1,25 @@
+================================================================================
+objects/this1
+================================================================================
+
+foo {
+  bar = this.baz + 1
+  baz = 3
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (binaryExpr
+          (propertyCallExpr
+            (thisExpr)
+            (identifier))
+          (intLiteral)))
+      (objectProperty
+        (identifier)
+        (intLiteral)))))

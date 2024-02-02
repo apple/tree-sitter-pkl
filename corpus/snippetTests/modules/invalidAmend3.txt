@@ -1,0 +1,23 @@
+================================================================================
+modules/invalidAmend3
+================================================================================
+
+amends "library.pkl"
+
+// non-local property definition
+name: String = "parrot"
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral)))

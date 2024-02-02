@@ -1,0 +1,69 @@
+================================================================================
+classes/wrongType3
+================================================================================
+
+class Person {
+  name: String
+  age: Int
+  address: Address
+}
+
+class Address {
+  street: String
+}
+
+person = new Person {
+  name = "Pigeon"
+  age = 42
+  address = "Howdy St."
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral))
+        (objectProperty
+          (identifier)
+          (intLiteral))
+        (objectProperty
+          (identifier)
+          (slStringLiteral))))))

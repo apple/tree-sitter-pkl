@@ -1,0 +1,103 @@
+================================================================================
+api/xmlRendererInline2.xml
+================================================================================
+
+import "pkl:xml"
+
+order {
+  items {
+    new { name = "banana"; quantity = 42 }
+    new { name = "orange"; quantity = 21 }
+  }
+}
+
+output {
+  renderer = new xml.Renderer {
+    converters {
+      ["order.items"] = (it) -> xml.Inline(it) // remove `items` (repeated element)
+      ["order.items[*]"] = (it) -> (xml.Element("item")) { xml.Inline(it) } // element + inline = rename
+    }
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectElement
+            (newExpr
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (slStringLiteral))
+                (objectProperty
+                  (identifier)
+                  (intLiteral)))))
+          (objectElement
+            (newExpr
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (slStringLiteral))
+                (objectProperty
+                  (identifier)
+                  (intLiteral)))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (objectBody
+                (objectEntry
+                  (slStringLiteral)
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (methodCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier)
+                      (argumentList
+                        (variableExpr
+                          (identifier))))))
+                (lineComment)
+                (objectEntry
+                  (slStringLiteral)
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (objectLiteral
+                      (parenthesizedExpr
+                        (methodCallExpr
+                          (variableExpr
+                            (identifier))
+                          (identifier)
+                          (argumentList
+                            (slStringLiteral))))
+                      (objectBody
+                        (objectElement
+                          (methodCallExpr
+                            (variableExpr
+                              (identifier))
+                            (identifier)
+                            (argumentList
+                              (variableExpr
+                                (identifier)))))))))
+                (lineComment)))))))))

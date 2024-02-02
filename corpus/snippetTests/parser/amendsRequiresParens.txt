@@ -1,0 +1,21 @@
+================================================================================
+parser/amendsRequiresParens
+================================================================================
+
+foo {
+  (bar { "baz" })
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (parenthesizedExpr
+          (variableObjectLiteral
+            (identifier)
+            (objectBody
+              (objectElement
+                (slStringLiteral)))))))))

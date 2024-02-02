@@ -1,0 +1,42 @@
+================================================================================
+classes/unionTypesErrorSimple
+================================================================================
+
+class X {
+  a: Boolean|List<Int>
+}
+
+res1 = new X {
+  a = 42
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (type
+              (qualifiedIdentifier
+                (identifier))
+              (typeArgumentList
+                (type
+                  (qualifiedIdentifier
+                    (identifier))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral))))))

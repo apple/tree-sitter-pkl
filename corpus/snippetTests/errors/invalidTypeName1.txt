@@ -1,0 +1,23 @@
+================================================================================
+errors/invalidTypeName1
+================================================================================
+
+local base = import("pkl:base")
+listing = new base.Listing {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (importExpr
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)
+          (identifier)))
+      (objectBody))))

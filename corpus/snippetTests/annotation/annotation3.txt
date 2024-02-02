@@ -1,0 +1,24 @@
+================================================================================
+annotation/annotation3
+================================================================================
+
+class NoAnn
+
+@NoAnn
+invalidAnnotationOnTypedProperty: String = "hi"
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier))
+  (classProperty
+    (annotation
+      (qualifiedIdentifier
+        (identifier)))
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral)))

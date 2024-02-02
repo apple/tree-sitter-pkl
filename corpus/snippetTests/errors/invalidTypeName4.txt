@@ -1,0 +1,25 @@
+================================================================================
+errors/invalidTypeName4
+================================================================================
+
+class Foo
+local Foo2 = Foo
+foo2 = new Foo2 {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier))
+  (classProperty
+    (modifier)
+    (identifier)
+    (variableExpr
+      (identifier)))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody))))

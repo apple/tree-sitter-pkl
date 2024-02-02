@@ -1,0 +1,17 @@
+================================================================================
+errors/delimiters/missingContainerAmendDefDelimiter
+================================================================================
+
+foo {
+  x = 1
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (MISSING "}"))))

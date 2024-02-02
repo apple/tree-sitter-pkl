@@ -1,0 +1,27 @@
+================================================================================
+errors/invalidClassMethodModifier
+================================================================================
+
+class Foo {
+  open function foo() = 42
+}
+
+res1 = Foo {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classMethod
+        (methodHeader
+          (modifier)
+          (identifier)
+          (parameterList))
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (variableObjectLiteral
+      (identifier)
+      (objectBody))))

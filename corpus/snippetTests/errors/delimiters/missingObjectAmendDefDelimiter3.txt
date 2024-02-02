@@ -1,0 +1,34 @@
+================================================================================
+errors/delimiters/missingObjectAmendDefDelimiter3
+================================================================================
+
+foo {
+  bar {
+    baz {
+      y = 2
+    }
+  bar2 {
+    x = 1
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (ERROR
+    (identifier)
+    (variableObjectLiteral
+      (identifier)
+      (objectBody
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectProperty
+              (identifier)
+              (intLiteral))))
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectProperty
+              (identifier)
+              (intLiteral))))))))

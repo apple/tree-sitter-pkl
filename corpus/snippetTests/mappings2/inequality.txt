@@ -1,0 +1,257 @@
+================================================================================
+mappings2/inequality
+================================================================================
+
+local x = new Mapping {
+  when (false) { [0] = 0 }
+  ["one"] = 1
+  ["two"] = 2
+}
+
+res1 = x != x
+res2 = x != new Mapping {
+  when (false) { [0] = 0 }
+  ["one"] = 1
+  ["two"] = 2
+}
+res3 = x != new Mapping {
+  when (false) { [0] = 0 }
+  ["two"] = 2
+}
+res4 = x != new Mapping {
+  when (false) { [0] = 0 }
+  ["one"] = 1
+  ["two"] = 3
+}
+res5 = x != (x) {}
+res6 = x != (x) { when (false) { [0] = 0 }; ["one"] = 1 }
+res7 = x != (x) { when (false) { [0] = 0 }; ["one"] = 2 }
+res8 = x != (x) { when (false) { [0] = 0 }; default = 9 }
+res9 = (x) { when (false) { [0] = 0 }; default = 9 } != (x) { when (false) { [0] = 0 }; default = 10 }
+res10 = new Mapping { when (false) { [0] = 0 }; ["one"] = 1 } != new Mapping { when (false) { [0] = 0 }; ["one"] = 1; default = 1 }
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (whenGenerator
+          (falseLiteral)
+          (objectBody
+            (objectEntry
+              (intLiteral)
+              (intLiteral))))
+        (objectEntry
+          (slStringLiteral)
+          (intLiteral))
+        (objectEntry
+          (slStringLiteral)
+          (intLiteral)))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (variableExpr
+        (identifier))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral))
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral))
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectProperty
+            (identifier)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectProperty
+            (identifier)
+            (intLiteral))))
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectProperty
+            (identifier)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral))))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (whenGenerator
+            (falseLiteral)
+            (objectBody
+              (objectEntry
+                (intLiteral)
+                (intLiteral))))
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral))
+          (objectProperty
+            (identifier)
+            (intLiteral)))))))

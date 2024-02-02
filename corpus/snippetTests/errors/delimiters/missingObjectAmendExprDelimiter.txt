@@ -1,0 +1,21 @@
+================================================================================
+errors/delimiters/missingObjectAmendExprDelimiter
+================================================================================
+
+foo = (bar) {
+  x = 1
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral))
+        (MISSING "}")))))

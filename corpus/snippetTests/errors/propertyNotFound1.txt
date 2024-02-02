@@ -1,0 +1,33 @@
+================================================================================
+errors/propertyNotFound1
+================================================================================
+
+foo {
+  xbar = 1
+  barx = 2
+  other = 3
+}
+
+res1 = foo.bar
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (propertyCallExpr
+      (variableExpr
+        (identifier))
+      (identifier))))

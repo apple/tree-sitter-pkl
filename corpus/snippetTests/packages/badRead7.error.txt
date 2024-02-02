@@ -1,0 +1,16 @@
+================================================================================
+packages/badRead7.error
+================================================================================
+
+// malformed dependency JSON
+res = read("package://localhost:12110/badDependencyJson@1.0.0#/Bug.pkl")
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (classProperty
+    (identifier)
+    (readExpr
+      (parenthesizedExpr
+        (slStringLiteral)))))

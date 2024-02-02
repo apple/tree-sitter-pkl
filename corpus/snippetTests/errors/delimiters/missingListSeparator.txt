@@ -1,0 +1,19 @@
+================================================================================
+errors/delimiters/missingListSeparator
+================================================================================
+
+list = List(1, 2  3, 4)
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)
+        (ERROR
+          (intLiteral))
+        (intLiteral)))))

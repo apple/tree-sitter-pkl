@@ -1,0 +1,17 @@
+================================================================================
+projects/badProjectDeps4/bug
+================================================================================
+
+import "@badLocalProject/dog.pkl"
+
+res = dog
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (classProperty
+    (identifier)
+    (variableExpr
+      (identifier))))

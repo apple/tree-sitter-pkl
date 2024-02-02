@@ -1,0 +1,21 @@
+================================================================================
+errors/delimiters/missingMapSeparator
+================================================================================
+
+map = Map(1, 2, 3  4, 5, 6)
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)
+        (intLiteral)
+        (ERROR
+          (intLiteral))
+        (intLiteral)
+        (intLiteral)))))

@@ -1,0 +1,17 @@
+================================================================================
+errors/outOfRange2
+================================================================================
+
+res1 = "abc".substring(2, 1)
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (slStringLiteral)
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)))))

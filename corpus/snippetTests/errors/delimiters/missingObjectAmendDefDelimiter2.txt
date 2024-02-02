@@ -1,0 +1,20 @@
+================================================================================
+errors/delimiters/missingObjectAmendDefDelimiter2
+================================================================================
+
+foo {
+  bar {
+    x = 1
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (ERROR
+    (identifier)
+    (variableObjectLiteral
+      (identifier)
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral))))))

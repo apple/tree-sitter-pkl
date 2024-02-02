@@ -1,0 +1,28 @@
+================================================================================
+errors/forGeneratorCannotGenerateProperties
+================================================================================
+
+res {
+  for (n in List(1, 2, 3)) { foo = n }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (forGenerator
+        (typedIdentifier
+          (identifier))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (intLiteral)
+            (intLiteral)
+            (intLiteral)))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (variableExpr
+              (identifier))))))))

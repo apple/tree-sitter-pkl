@@ -1,0 +1,20 @@
+================================================================================
+unionTypes
+================================================================================
+
+foo: String|*Int
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (type
+          (type
+            (qualifiedIdentifier
+              (identifier))))))))

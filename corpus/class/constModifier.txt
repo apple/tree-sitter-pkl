@@ -1,0 +1,22 @@
+================================================================================
+constModifier
+================================================================================
+
+class MyClass {
+    const myProp: String = "hello"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (modifier)
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteral)))))

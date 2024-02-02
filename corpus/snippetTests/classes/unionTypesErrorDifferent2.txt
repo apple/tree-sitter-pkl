@@ -1,0 +1,52 @@
+================================================================================
+classes/unionTypesErrorDifferent2
+================================================================================
+
+class X {
+  a: Boolean|List<Int>(length > 3)
+}
+
+res1 = new X {
+  a = List(1, 2, 3)
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (type
+              (type
+                (qualifiedIdentifier
+                  (identifier))
+                (typeArgumentList
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))))
+              (binaryExpr
+                (variableExpr
+                  (identifier))
+                (intLiteral))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)
+              (intLiteral)
+              (intLiteral))))))))

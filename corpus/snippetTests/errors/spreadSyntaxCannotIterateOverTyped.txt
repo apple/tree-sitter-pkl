@@ -1,0 +1,43 @@
+================================================================================
+errors/spreadSyntaxCannotIterateOverTyped
+================================================================================
+
+class Person {
+  name: String
+}
+
+person: Person = new { name = "Bob" }
+
+result {
+  ...person
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral)))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectSpread
+        (variableExpr
+          (identifier))))))

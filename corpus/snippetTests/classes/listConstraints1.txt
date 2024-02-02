@@ -1,0 +1,311 @@
+================================================================================
+classes/listConstraints1
+================================================================================
+
+import "pkl:test"
+
+class Numbers {
+  xs: List<Int>
+  ys: List<Int(this < 0)>
+  zs: List<Int(this < 0)>(length >= 5)
+}
+
+class Numbers2 {
+  // type constraint but no type parameter
+  ys: List(every((it) -> it is Int(this < 0)))
+}
+
+res1 = new Numbers {
+  xs = List(1, 2, 3)
+  ys = List(-1, -2, -3)
+  zs = List(-1, -2, -3, -4, -5)
+}
+
+res1b = new Numbers2 {
+  ys = List(-1, -2, -3)
+}
+
+res2 = test.catch(() ->
+  new Numbers {
+    xs = "one"
+  }.xs
+)
+
+res3 = test.catch(() ->
+  new Numbers {
+    xs = List("one")
+  }.xs
+)
+
+res4 = test.catch(() ->
+  new Numbers {
+    ys = List(1, 2, 3)
+  }.ys
+)
+
+res4b = test.catch(() ->
+  new Numbers2 {
+    ys = List(1, 2, 3)
+  }.ys
+)
+
+res5 = test.catch(() ->
+  new Numbers {
+    zs = List(-1, -2, -3)
+  }.zs
+)
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (qualifiedIdentifier
+                  (identifier)))))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (binaryExpr
+                  (thisExpr)
+                  (intLiteral)))))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier))
+              (typeArgumentList
+                (type
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (binaryExpr
+                    (thisExpr)
+                    (intLiteral)))))
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (intLiteral)))))))
+  (clazz
+    (identifier)
+    (classBody
+      (lineComment)
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList
+                    (typedIdentifier
+                      (identifier)))
+                  (isExpr
+                    (variableExpr
+                      (identifier))
+                    (type
+                      (type
+                        (qualifiedIdentifier
+                          (identifier)))
+                      (binaryExpr
+                        (thisExpr)
+                        (intLiteral))))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)
+              (intLiteral)
+              (intLiteral))))
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (unaryExpr
+                (intLiteral))
+              (unaryExpr
+                (intLiteral))
+              (unaryExpr
+                (intLiteral)))))
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (unaryExpr
+                (intLiteral))
+              (unaryExpr
+                (intLiteral))
+              (unaryExpr
+                (intLiteral))
+              (unaryExpr
+                (intLiteral))
+              (unaryExpr
+                (intLiteral))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (unaryExpr
+                (intLiteral))
+              (unaryExpr
+                (intLiteral))
+              (unaryExpr
+                (intLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (slStringLiteral))))
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (slStringLiteral))))))
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (intLiteral)
+                      (intLiteral)
+                      (intLiteral))))))
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (intLiteral)
+                      (intLiteral)
+                      (intLiteral))))))
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (unaryExpr
+                        (intLiteral))
+                      (unaryExpr
+                        (intLiteral))
+                      (unaryExpr
+                        (intLiteral)))))))
+            (identifier)))))))

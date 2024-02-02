@@ -1,0 +1,89 @@
+================================================================================
+classes/constraints9
+================================================================================
+
+import "pkl:test"
+
+class X {
+  a: Int("not a boolean")
+  b: Int((x) -> "not a boolean")
+}
+
+res1 = test.catch(() ->
+  new X {
+    a = 1
+  }.a
+)
+
+res2 = test.catch(() ->
+  new X {
+    b = 1
+  }.b
+)
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (slStringLiteral))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (functionLiteral
+              (parameterList
+                (typedIdentifier
+                  (identifier)))
+              (slStringLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (intLiteral))))
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (intLiteral))))
+            (identifier)))))))

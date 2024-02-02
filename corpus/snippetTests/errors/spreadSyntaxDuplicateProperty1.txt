@@ -1,0 +1,32 @@
+================================================================================
+errors/spreadSyntaxDuplicateProperty1
+================================================================================
+
+local source {
+  foo = 1
+}
+
+res {
+  ...source
+  foo = 2
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectSpread
+        (variableExpr
+          (identifier)))
+      (objectProperty
+        (identifier)
+        (intLiteral)))))

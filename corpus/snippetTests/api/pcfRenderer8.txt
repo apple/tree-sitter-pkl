@@ -1,0 +1,18 @@
+================================================================================
+api/pcfRenderer8
+================================================================================
+
+// Test that unrenderable types do have an informative location in the error message.
+m = new Mixin {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody))))

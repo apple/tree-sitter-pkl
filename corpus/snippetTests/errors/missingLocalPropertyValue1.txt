@@ -1,0 +1,16 @@
+================================================================================
+errors/missingLocalPropertyValue1
+================================================================================
+
+local x: Int
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))))

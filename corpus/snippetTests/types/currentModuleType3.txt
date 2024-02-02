@@ -1,0 +1,17 @@
+================================================================================
+types/currentModuleType3
+================================================================================
+
+extends "currentModuleType2.pkl"
+
+res1 = module
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (moduleExpr)))

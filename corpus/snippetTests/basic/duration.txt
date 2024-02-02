@@ -1,0 +1,603 @@
+================================================================================
+basic/duration
+================================================================================
+
+amends "../snippetTest.pkl"
+
+examples {
+  ["construct"] {
+    1.ns
+    2.us
+    3.ms
+    4.s
+    5.min
+    6.h
+    7.d
+
+    1.1.ns
+    2.2.us
+     3.3.ms
+     4.4.s
+     5.5.min
+     6.6.h
+     7.7.d
+  }
+
+  ["addition"] {
+    2.s + 4.s
+    2.2.s + 3.3.s
+    2.s + 3.min
+    10.ns + 7.d
+
+    4.s + 2.s
+    3.3.s + 2.2.s
+    3.min + 2.s
+    7.d + 10.ns
+  }
+
+  ["subtraction"] {
+    2.s - 4.s
+    2.2.s - 3.3.s
+    2.s - 3.min
+    10.ns - 7.d
+
+    4.s - 2.s
+    3.3.s - 2.2.s
+    3.min - 2.s
+    7.d - 10.ns
+  }
+
+  ["multiplication"] {
+    2.s * 3
+    2.s * 3.3
+    2.2.s * 3
+    2.2.s * 3.3
+
+    3 * 2.s
+    3.3 * 2.s
+    3 * 2.2.s
+    3.3 * 2.2.s
+  }
+
+  ["division"] {
+    2.s / 3
+    2.s / 3.3
+    2.2.s / 3
+    2.2.s / 3.3
+
+    module.catch(() -> 3 / 2.s)
+    module.catch(() -> 3.3 / 2.s)
+    module.catch(() -> 3 / 2.2.s)
+    module.catch(() -> 3.3 / 2.3.s)
+  }
+
+  ["division by duration"] {
+    2.s / 3.s
+    2.s / 3.3.s
+    2.2.s / 3.min
+    2.2.h / 3.3.s
+  }
+
+  ["negation"] {
+    local d = -4.s
+    d
+    -d
+    --d
+
+    local d2 = -4.4.s
+    d2
+    -d2
+    --d2
+  }
+
+  ["truncating division"] {
+    5.s ~/ 3
+    7.s ~/ 3.3
+    6.2.s ~/ 3
+    6.2.s ~/ 3.3
+  }
+
+  ["truncating division by duration"] {
+    5.s ~/ 3.s
+    7.s ~/ 3.3.s
+    6.2.s ~/ 3.min
+    6.2.h ~/ 3.3.s
+  }
+
+  ["power"] {
+    2.s ** 3
+    2.s ** 3.3
+    2.2.s ** 3
+    2.2.s ** 3.3
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (intLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (intLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (intLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (intLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (intLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (intLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (intLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (floatLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (floatLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (floatLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (floatLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (floatLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (floatLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (floatLiteral)
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (floatLiteral)
+                  (identifier))
+                (floatLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (floatLiteral)
+                  (identifier))
+                (floatLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (floatLiteral)
+                  (identifier))
+                (floatLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (floatLiteral)
+                  (identifier))
+                (floatLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))
+              (floatLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (floatLiteral)
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (floatLiteral)
+                (identifier))
+              (floatLiteral)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (intLiteral)
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (floatLiteral)
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (intLiteral)
+                (floatLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (floatLiteral)
+                (floatLiteral))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))
+              (floatLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (floatLiteral)
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (floatLiteral)
+                (identifier))
+              (floatLiteral)))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (propertyCallExpr
+                    (binaryExpr
+                      (intLiteral)
+                      (intLiteral))
+                    (identifier))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (propertyCallExpr
+                    (binaryExpr
+                      (floatLiteral)
+                      (intLiteral))
+                    (identifier))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (propertyCallExpr
+                    (binaryExpr
+                      (intLiteral)
+                      (floatLiteral))
+                    (identifier))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (propertyCallExpr
+                    (binaryExpr
+                      (floatLiteral)
+                      (floatLiteral))
+                    (identifier))))))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (floatLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (floatLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (floatLiteral)
+                  (identifier))
+                (floatLiteral))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectProperty
+            (modifier)
+            (identifier)
+            (propertyCallExpr
+              (unaryExpr
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (binaryExpr
+              (binaryExpr
+                (variableExpr
+                  (identifier))
+                (variableExpr
+                  (identifier)))
+              (unaryExpr
+                (variableExpr
+                  (identifier)))))
+          (objectProperty
+            (modifier)
+            (identifier)
+            (propertyCallExpr
+              (unaryExpr
+                (floatLiteral))
+              (identifier)))
+          (objectElement
+            (binaryExpr
+              (binaryExpr
+                (variableExpr
+                  (identifier))
+                (variableExpr
+                  (identifier)))
+              (unaryExpr
+                (variableExpr
+                  (identifier)))))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))
+              (floatLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (floatLiteral)
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (floatLiteral)
+                (identifier))
+              (floatLiteral)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (floatLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (floatLiteral)
+                  (identifier))
+                (intLiteral))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (floatLiteral)
+                  (identifier))
+                (floatLiteral))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (binaryExprRightAssoc
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExprRightAssoc
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))
+              (floatLiteral)))
+          (objectElement
+            (binaryExprRightAssoc
+              (propertyCallExpr
+                (floatLiteral)
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExprRightAssoc
+              (propertyCallExpr
+                (floatLiteral)
+                (identifier))
+              (floatLiteral))))))))

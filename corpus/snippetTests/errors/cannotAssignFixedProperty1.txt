@@ -1,0 +1,45 @@
+================================================================================
+errors/cannotAssignFixedProperty1
+================================================================================
+
+class Bird {
+  fixed name: String = "Hawk"
+}
+
+p: Bird = new {
+  // Using a non-constant node causes this to turn into a TypeCheckedPropertyNode
+  local _name = "Penguin"
+  name = _name
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (modifier)
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteral))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (lineComment)
+        (objectProperty
+          (modifier)
+          (identifier)
+          (slStringLiteral))
+        (objectProperty
+          (identifier)
+          (variableExpr
+            (identifier)))))))

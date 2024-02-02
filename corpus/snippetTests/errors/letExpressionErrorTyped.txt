@@ -1,0 +1,26 @@
+================================================================================
+errors/letExpressionErrorTyped
+================================================================================
+
+res1 =
+  let (x: Float = "abc")
+    x.reverse()
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (letExpr
+      (typedIdentifier
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (slStringLiteral)
+      (methodCallExpr
+        (variableExpr
+          (identifier))
+        (identifier)
+        (argumentList)))))

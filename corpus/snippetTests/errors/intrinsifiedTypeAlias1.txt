@@ -1,0 +1,16 @@
+================================================================================
+errors/intrinsifiedTypeAlias1
+================================================================================
+
+res1: Int16 = "abc"
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral)))

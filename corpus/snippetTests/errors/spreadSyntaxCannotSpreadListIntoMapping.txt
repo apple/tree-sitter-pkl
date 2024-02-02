@@ -1,0 +1,37 @@
+================================================================================
+errors/spreadSyntaxCannotSpreadListIntoMapping
+================================================================================
+
+l: List = List(1, 2, 3, 4)
+
+m: Mapping = new {
+  ...l
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)
+        (intLiteral)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectSpread
+          (variableExpr
+            (identifier)))))))

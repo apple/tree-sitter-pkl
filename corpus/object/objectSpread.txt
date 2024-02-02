@@ -1,0 +1,51 @@
+================================================================================
+objectSpread
+================================================================================
+
+res {
+  ...person1
+  ...person2
+  ...?person3
+  ...?person4
+  for (elem in iterable) {
+    ...elem
+  }
+  when (cond) {
+    ...elem
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectSpread
+        (variableExpr
+          (identifier)))
+      (objectSpread
+        (variableExpr
+          (identifier)))
+      (objectSpread
+        (variableExpr
+          (identifier)))
+      (objectSpread
+        (variableExpr
+          (identifier)))
+      (forGenerator
+        (typedIdentifier
+          (identifier))
+        (variableExpr
+          (identifier))
+        (objectBody
+          (objectSpread
+            (variableExpr
+              (identifier)))))
+      (whenGenerator
+        (variableExpr
+          (identifier))
+        (objectBody
+          (objectSpread
+            (variableExpr
+              (identifier))))))))

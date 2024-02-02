@@ -1,0 +1,40 @@
+================================================================================
+api/jsonRenderer1.json
+================================================================================
+
+pigeon {
+  name = "pigeon"
+  age = 30
+}
+
+output {
+  value = pigeon
+  renderer = new JsonRenderer {}
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral))
+      (objectProperty
+        (identifier)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (variableExpr
+          (identifier)))
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody))))))

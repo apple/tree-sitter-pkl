@@ -1,0 +1,24 @@
+================================================================================
+errors/stackTraceWithQuotedMemberName
+================================================================================
+
+one {
+  `two three` {
+    four = throw("ouch")
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (throwExpr
+              (parenthesizedExpr
+                (slStringLiteral)))))))))

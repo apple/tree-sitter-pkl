@@ -1,0 +1,35 @@
+================================================================================
+projects/project3/basic
+================================================================================
+
+amends ".../snippetTest.pkl"
+
+examples {
+  ["inherits all the imports of project1"] {
+    import("@birds/catalog/Swallow.pkl")
+    import("@fruits/catalog/apple.pkl")
+    import("@project2/penguin.pkl")
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (importExpr
+              (stringConstant)))
+          (objectElement
+            (importExpr
+              (stringConstant)))
+          (objectElement
+            (importExpr
+              (stringConstant))))))))

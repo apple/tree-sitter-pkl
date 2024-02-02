@@ -1,0 +1,24 @@
+================================================================================
+basic/stringError1
+================================================================================
+
+singleLineStringCannotSpanLines = "
+How are you today?
+Are you hungry?
+"
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (ERROR
+      (identifier))
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)))

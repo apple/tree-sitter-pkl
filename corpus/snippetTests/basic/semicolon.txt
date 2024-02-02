@@ -1,0 +1,19 @@
+================================================================================
+basic/semicolon
+================================================================================
+
+res1 = new { b = 1; d = 2 }
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (newExpr
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral))
+        (objectProperty
+          (identifier)
+          (intLiteral))))))

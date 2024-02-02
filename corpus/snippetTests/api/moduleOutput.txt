@@ -1,0 +1,22 @@
+================================================================================
+api/moduleOutput
+================================================================================
+
+amends "../snippetTest.pkl"
+
+output {
+  text = "some string"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral)))))

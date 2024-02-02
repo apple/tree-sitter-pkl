@@ -1,0 +1,38 @@
+================================================================================
+errors/spreadSyntaxCannotHaveElement
+================================================================================
+
+local source {
+  1
+  2
+  3
+}
+
+res: Mapping = new {
+  ...source
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (objectBody
+      (objectElement
+        (intLiteral))
+      (objectElement
+        (intLiteral))
+      (objectElement
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectSpread
+          (variableExpr
+            (identifier)))))))

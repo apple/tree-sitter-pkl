@@ -1,0 +1,16 @@
+================================================================================
+modules/externalProperty
+================================================================================
+
+external foo: String
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))))

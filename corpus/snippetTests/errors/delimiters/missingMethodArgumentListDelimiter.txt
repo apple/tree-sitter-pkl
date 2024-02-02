@@ -1,0 +1,22 @@
+================================================================================
+errors/delimiters/missingMethodArgumentListDelimiter
+================================================================================
+
+res1 = "abc".substring(0, 1 + "def"
+res2 = 42
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (propertyCallExpr
+      (slStringLiteral)
+      (identifier)))
+  (ERROR
+    (intLiteral)
+    (binaryExpr
+      (intLiteral)
+      (slStringLiteral))
+    (identifier)
+    (intLiteral)))

@@ -1,0 +1,51 @@
+{
+  "name": "@apple/tree-sitter-pkl",
+  "version": "0.16.0",
+  "description": "Pkl grammar for node-tree-sitter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apple/tree-sitter-pkl"
+  },
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "lexer"
+  ],
+  "author": "pkl-oss@group.apple.com",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/apple/tree-sitter-pkl/issues"
+  },
+  "engines": {
+    "node": "18.17.0",
+    "npm": "9.6.0"
+  },
+  "dependencies": {
+    "nan": "^2.17.0"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/node": "^20.4.5",
+    "node-gyp": "^9.1.0",
+    "tree-sitter-cli": "^0.20.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.9.0"
+  },
+  "scripts": {
+    "build": "tree-sitter generate && node-gyp configure && node-gyp build",
+    "test": "tree-sitter test",
+    "synctests": "ts-node src/synctests.ts",
+    "getVersion": "node -p \"require('./package.json').version\""
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.pkl",
+      "file-types": [
+        "pkl",
+        "pcf"
+      ],
+      "first-line-regex": "#!.*\\bpkl$",
+      "injection-regex": "pkl"
+    }
+  ]
+}

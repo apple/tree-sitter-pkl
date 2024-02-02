@@ -1,0 +1,25 @@
+================================================================================
+errors/objectCannotHavePredicateMember
+================================================================================
+
+class Foo
+
+res1 = new Foo {
+  [[true]] = 42
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectPredicate
+          (trueLiteral)
+          (intLiteral))))))

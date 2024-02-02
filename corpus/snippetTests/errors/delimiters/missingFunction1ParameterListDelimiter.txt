@@ -1,0 +1,25 @@
+================================================================================
+errors/delimiters/missingFunction1ParameterListDelimiter
+================================================================================
+
+f = (arg -> arg + 1
+res1 = 42
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (functionLiteral
+      (parameterList
+        (typedIdentifier
+          (identifier))
+        (MISSING
+          ")"))
+      (binaryExpr
+        (variableExpr
+          (identifier))
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (intLiteral)))

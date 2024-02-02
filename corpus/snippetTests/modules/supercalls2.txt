@@ -1,0 +1,54 @@
+================================================================================
+modules/supercalls2
+================================================================================
+
+open module supercalls2
+
+extends "supercalls1.pkl"
+
+hidden pigeon = super.say("Pigeon")
+function barnOwl() = super.say("Barn Owl")
+function say2(msg) = super.say(msg) + super.say(msg)
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (moduleClause
+      (modifier)
+      (qualifiedIdentifier
+        (identifier)))
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral))))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList))
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral))))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier))))
+    (binaryExpr
+      (methodCallExpr
+        (identifier)
+        (argumentList
+          (variableExpr
+            (identifier))))
+      (methodCallExpr
+        (identifier)
+        (argumentList
+          (variableExpr
+            (identifier)))))))

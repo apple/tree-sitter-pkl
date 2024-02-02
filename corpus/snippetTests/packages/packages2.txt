@@ -1,0 +1,81 @@
+================================================================================
+packages/packages2
+================================================================================
+
+amends ".../snippetTest.pkl"
+
+examples {
+  ["glob import"] {
+    import*("package://localhost:12110/birds@0.5.0#/catalog/*.pkl")
+  }
+  ["glob import within package"] {
+    import("package://localhost:12110/birds@0.5.0#/catalog.pkl").catalog
+  }
+  ["glob import transitive dep within package"] {
+    import("package://localhost:12110/birds@0.5.0#/allFruit.pkl").fruit
+  }
+  ["glob read"] {
+    read*("package://localhost:12110/birds@0.5.0#/catalog/*.pkl")
+  }
+  ["glob read within package"] {
+    import("package://localhost:12110/birds@0.5.0#/catalog.pkl").catalogFiles
+  }
+  ["glob read transitive dep within package"] {
+    import("package://localhost:12110/birds@0.5.0#/allFruit.pkl").fruitFiles
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (importGlobExpr
+              (stringConstant)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (importExpr
+                (stringConstant))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (importExpr
+                (stringConstant))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (readGlobExpr
+              (parenthesizedExpr
+                (slStringLiteral))))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (importExpr
+                (stringConstant))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (importExpr
+                (stringConstant))
+              (identifier))))))))

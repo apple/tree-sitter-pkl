@@ -1,0 +1,29 @@
+================================================================================
+generators/duplicateDefinition2
+================================================================================
+
+x {
+  ["y"] = 123
+  for (i in List(1)) { ["y"] = 456 }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral)
+        (intLiteral))
+      (forGenerator
+        (typedIdentifier
+          (identifier))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (intLiteral)))
+        (objectBody
+          (objectEntry
+            (slStringLiteral)
+            (intLiteral)))))))

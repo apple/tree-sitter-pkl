@@ -1,0 +1,30 @@
+================================================================================
+errors/nested1
+================================================================================
+
+a {
+  b {
+    c {
+      x = outer.outer // nested syntax error
+    }
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (objectBody
+              (objectProperty
+                (identifier)
+                (propertyCallExpr
+                  (outerExpr)
+                  (identifier)))
+              (lineComment))))))))

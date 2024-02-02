@@ -1,0 +1,38 @@
+================================================================================
+errors/forGeneratorDuplicateParams1
+================================================================================
+
+a = List(1, 2, 3, 4)
+
+foo {
+  for (i, i in a) {
+    i
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)
+        (intLiteral)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (forGenerator
+        (typedIdentifier
+          (identifier))
+        (typedIdentifier
+          (identifier))
+        (variableExpr
+          (identifier))
+        (objectBody
+          (objectElement
+            (variableExpr
+              (identifier))))))))

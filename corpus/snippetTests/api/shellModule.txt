@@ -1,0 +1,68 @@
+================================================================================
+api/shellModule
+================================================================================
+
+amends "../snippetTest.pkl"
+
+import "pkl:shell"
+
+examples {
+  ["escapeWithSingleQuotes()"] {
+    shell.escapeWithSingleQuotes("asdf")
+    shell.escapeWithSingleQuotes("`@#$")
+    shell.escapeWithSingleQuotes("abc\"abc")
+    shell.escapeWithSingleQuotes("abc'def''ghi'''jkl")
+    shell.escapeWithSingleQuotes("'abc'")
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (importClause
+    (stringConstant))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral)
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (escapeSequence)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral)))))))))

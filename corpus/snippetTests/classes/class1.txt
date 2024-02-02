@@ -1,0 +1,53 @@
+================================================================================
+classes/class1
+================================================================================
+
+class Person extends Typed {
+  name = "X"
+  age = 40
+}
+
+pigeon = new Person {
+  name = "Pigeon Who"
+}
+
+pigeonName = pigeon.name
+pigeonAge = pigeon.age
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (qualifiedIdentifier
+        (identifier)))
+    (classBody
+      (classProperty
+        (identifier)
+        (slStringLiteral))
+      (classProperty
+        (identifier)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral)))))
+  (classProperty
+    (identifier)
+    (propertyCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)))
+  (classProperty
+    (identifier)
+    (propertyCallExpr
+      (variableExpr
+        (identifier))
+      (identifier))))

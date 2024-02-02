@@ -1,0 +1,17 @@
+================================================================================
+errors/intrinsifiedTypeAlias2
+================================================================================
+
+res1: UInt16 = -1
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (unaryExpr
+      (intLiteral))))

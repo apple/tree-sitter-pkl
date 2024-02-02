@@ -1,0 +1,35 @@
+================================================================================
+projects/project5/main
+================================================================================
+
+import "@birds/Bird.pkl"
+
+bird: Bird = new {
+  name = "Finch"
+  favoriteFruit {
+    name = "Nuts"
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral))
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral))))))))

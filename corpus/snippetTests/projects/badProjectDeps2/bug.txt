@@ -1,0 +1,21 @@
+================================================================================
+projects/badProjectDeps2/bug
+================================================================================
+
+import "@bird/Bird.pkl"
+
+res: Bird = new {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody))))

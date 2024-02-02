@@ -1,0 +1,28 @@
+================================================================================
+errors/undefinedProperty1
+================================================================================
+
+class Person {
+  name: String
+}
+
+res1: Person
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))))

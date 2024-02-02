@@ -1,0 +1,18 @@
+================================================================================
+modules/invalidAmend5
+================================================================================
+
+amends "library.pkl"
+
+// non-local class definition
+class Other
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant)))
+  (lineComment)
+  (clazz
+    (identifier)))

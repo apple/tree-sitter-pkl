@@ -1,0 +1,24 @@
+================================================================================
+generators/duplicateDefinition1
+================================================================================
+
+x {
+  y = 123
+  when (true) { y = 456 }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (whenGenerator
+        (trueLiteral)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral)))))))

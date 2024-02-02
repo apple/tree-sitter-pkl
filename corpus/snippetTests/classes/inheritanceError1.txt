@@ -1,0 +1,19 @@
+================================================================================
+classes/inheritanceError1
+================================================================================
+
+class Base // not open or abstract
+
+class Derived extends Base
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier))
+  (lineComment)
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (qualifiedIdentifier
+        (identifier)))))

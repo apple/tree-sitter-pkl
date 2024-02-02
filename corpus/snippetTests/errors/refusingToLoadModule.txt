@@ -1,0 +1,17 @@
+================================================================================
+errors/refusingToLoadModule
+================================================================================
+
+import "birds:///foo.pkl"
+
+output = foo
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant))
+  (classProperty
+    (identifier)
+    (variableExpr
+      (identifier))))

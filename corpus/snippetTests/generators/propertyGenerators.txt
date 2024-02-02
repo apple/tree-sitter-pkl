@@ -1,0 +1,97 @@
+================================================================================
+generators/propertyGenerators
+================================================================================
+
+res1 {
+  x = "x"
+  when (1 + 1 == 2) { foo = "foo" }
+  when (1 + 1 == 3) { bar = "bar" }
+  y = "y"
+}
+
+class Person {
+  name: String = "Name"
+  age: Int = 21
+}
+
+res2 = new Person {
+  when (1 + 1 == 2) { name = "Pigeon" }
+  when (1 + 1 == 3) { age = 42 }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral))
+      (whenGenerator
+        (binaryExpr
+          (binaryExpr
+            (intLiteral)
+            (intLiteral))
+          (intLiteral))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (slStringLiteral))))
+      (whenGenerator
+        (binaryExpr
+          (binaryExpr
+            (intLiteral)
+            (intLiteral))
+          (intLiteral))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (slStringLiteral))))
+      (objectProperty
+        (identifier)
+        (slStringLiteral))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteral))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (whenGenerator
+          (binaryExpr
+            (binaryExpr
+              (intLiteral)
+              (intLiteral))
+            (intLiteral))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral))))
+        (whenGenerator
+          (binaryExpr
+            (binaryExpr
+              (intLiteral)
+              (intLiteral))
+            (intLiteral))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (intLiteral))))))))

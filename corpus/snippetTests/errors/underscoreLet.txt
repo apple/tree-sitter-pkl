@@ -1,0 +1,18 @@
+================================================================================
+errors/underscoreLet
+================================================================================
+
+foo = let (_ = throw("oops")) 0
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (letExpr
+      (typedIdentifier
+        (identifier))
+      (throwExpr
+        (parenthesizedExpr
+          (slStringLiteral)))
+      (intLiteral))))

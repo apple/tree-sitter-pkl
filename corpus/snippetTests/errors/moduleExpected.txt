@@ -1,0 +1,42 @@
+================================================================================
+errors/moduleExpected
+================================================================================
+
+hidden path: List<String> = import("moduleExpected.pkl").relativePathTo(module)
+dummy = 42
+result = (module) { dummy = 0 }.path
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (methodCallExpr
+      (importExpr
+        (stringConstant))
+      (identifier)
+      (argumentList
+        (moduleExpr))))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (propertyCallExpr
+      (objectLiteral
+        (parenthesizedExpr
+          (moduleExpr))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral))))
+      (identifier))))

@@ -1,0 +1,30 @@
+================================================================================
+errors/forGeneratorCannotGenerateMethods
+================================================================================
+
+foo {
+  for (n in List(1, 2, 3)) { local function foo() = "foo" }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (forGenerator
+        (typedIdentifier
+          (identifier))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (intLiteral)
+            (intLiteral)
+            (intLiteral)))
+        (objectBody
+          (objectMethod
+            (methodHeader
+              (modifier)
+              (identifier)
+              (parameterList))
+            (slStringLiteral)))))))
