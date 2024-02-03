@@ -3,7 +3,7 @@
 (clazz (identifier) @type)
 (typeAlias (identifier) @type)
 ((identifier) @type
- (match? @type "^[A-Z]"))
+ (#match? @type "^[A-Z]"))
 
 (typeArgumentList
   "<" @punctuation.bracket
@@ -90,7 +90,7 @@
 
 "(" @punctuation.bracket
 ")" @punctuation.bracket
-; "[" @punctuation.bracket TODO: FIGURE OUT HOW TO REFER TO CUSTOM TOKENS
+"[" @punctuation.bracket
 "]" @punctuation.bracket
 "{" @punctuation.bracket
 "}" @punctuation.bracket

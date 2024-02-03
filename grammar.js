@@ -252,7 +252,7 @@ module.exports = grammar({
     objectMethod: $ => seq($.methodHeader, "=", $._expr),
 
     objectEntry: $ => seq(
-      $._open_entry_bracket,
+      alias($._open_entry_bracket, "["),
       $._expr,
       "]",
       choice(
@@ -675,7 +675,7 @@ module.exports = grammar({
 
     propertyCallExpr: $ => seq(choice("super", $._expr), choice(".", "?."), $.identifier),
 
-    subscriptExpr: $ => seq(choice("super", $._expr), $._open_square_bracket, $._expr, "]"),
+    subscriptExpr: $ => seq(choice("super", $._expr), alias($._open_square_bracket, "["), $._expr, "]"),
 
     unaryExpr: $ => choice(
       prec.left(PREC.NEG, seq($._expr, '!!')),
