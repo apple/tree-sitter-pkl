@@ -710,8 +710,13 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "_open_entry_bracket"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_open_entry_bracket"
+          },
+          "named": false,
+          "value": "["
         },
         {
           "type": "SYMBOL",
@@ -2998,8 +3003,13 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "_open_square_bracket"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_open_square_bracket"
+          },
+          "named": false,
+          "value": "["
         },
         {
           "type": "SYMBOL",
