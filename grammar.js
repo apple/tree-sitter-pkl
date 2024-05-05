@@ -80,18 +80,12 @@ module.exports = grammar({
     $.lineComment,
     $.docComment,
     $.blockComment,
-    /[ \t\f\r\n;]/
+    /[\s;]/
   ],
 
   word: $ => $.identifier,
 
   conflicts: $ => [
-    // in ANTLR we deal with these by not allowing a newline or semicolon before subscript
-    [$.objectProperty, $.subscriptExpr],
-    [$.objectMethod, $.subscriptExpr],
-    [$.objectEntry, $.subscriptExpr],
-    [$.objectPredicate, $.subscriptExpr],
-
     // these should be fixable in some other way (perhaps with prec)
     [$.propertyCallExpr, $.methodCallExpr],
     [$.variableExpr, $.methodCallExpr],
@@ -762,18 +756,18 @@ module.exports = grammar({
   }
 });
 
-function commaSep1 (rule) {
+function commaSep1(rule) {
   return seq(rule, repeat(seq(',', rule)));
 }
 
-function commaSep (rule) {
+function commaSep(rule) {
   return optional(commaSep1(rule));
 }
 
-function sepBy (sep, rule) {
+function sepBy(sep, rule) {
   return optional(sepBy1(sep, rule))
 }
 
-function sepBy1 (sep, rule) {
+function sepBy1(sep, rule) {
   return seq(rule, repeat(seq(sep, rule)));
 }

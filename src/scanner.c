@@ -1,5 +1,4 @@
-#include <tree_sitter/parser.h>
-#include <stdio.h>
+#include "tree_sitter/parser.h"
 
 enum TokenType {
   // sequence of "normal" characters in single line string with one pound sign
@@ -35,9 +34,11 @@ enum TokenType {
 };
 
 void *tree_sitter_pkl_external_scanner_create() { return NULL; }
+
 void tree_sitter_pkl_external_scanner_destroy(void *p) {}
-void tree_sitter_pkl_external_scanner_reset(void *p) {}
+
 unsigned tree_sitter_pkl_external_scanner_serialize(void *p, char *buffer) { return 0; }
+
 void tree_sitter_pkl_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
 
 static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
@@ -61,8 +62,6 @@ static bool parse_slx_string_chars(TSLexer *lexer, int num_pounds) {
       lexer->result_symbol = SL5_STRING_CHARS;
       break;
     case 6:
-      lexer->result_symbol = SL6_STRING_CHARS;
-      break;
     default:
       lexer->result_symbol = SL6_STRING_CHARS;
       break;
@@ -98,7 +97,7 @@ static bool parse_slx_string_chars(TSLexer *lexer, int num_pounds) {
 static bool parse_ml_string_chars(TSLexer *lexer) {
   bool has_content = false;
   lexer->result_symbol = ML_STRING_CHARS;
-  
+
   while (true) {
     switch (lexer->lookahead) {
       case '"':
@@ -142,8 +141,6 @@ static bool parse_mlx_string_chars(TSLexer *lexer, int num_pounds) {
       lexer->result_symbol = ML5_STRING_CHARS;
       break;
     case 6:
-      lexer->result_symbol = ML6_STRING_CHARS;
-      break;
     default:
       lexer->result_symbol = ML6_STRING_CHARS;
       break;
@@ -232,12 +229,12 @@ bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const 
   bool ml6 = valid_symbols[ML6_STRING_CHARS];
   bool osb = valid_symbols[OPEN_SQUARE_BRACKET];
   bool oeb = valid_symbols[OPEN_ENTRY_BRACKET];
-  
+
   if (sl1 && sl2 && sl3 && sl4 && sl5 && sl6 && ml && ml1 && ml2 && ml3 && ml4 && ml5 && ml6 && osb && oeb) {
     // error recovery mode -> don't match any string chars
     return false;
   }
-  
+
   if (ml) {
     return parse_ml_string_chars(lexer);
   }

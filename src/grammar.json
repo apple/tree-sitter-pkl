@@ -3860,26 +3860,10 @@
     },
     {
       "type": "PATTERN",
-      "value": "[ \\t\\f\\r\\n;]"
+      "value": "[\\s;]"
     }
   ],
   "conflicts": [
-    [
-      "objectProperty",
-      "subscriptExpr"
-    ],
-    [
-      "objectMethod",
-      "subscriptExpr"
-    ],
-    [
-      "objectEntry",
-      "subscriptExpr"
-    ],
-    [
-      "objectPredicate",
-      "subscriptExpr"
-    ],
     [
       "propertyCallExpr",
       "methodCallExpr"
@@ -3969,4 +3953,3 @@
   "inline": [],
   "supertypes": []
 }
-
