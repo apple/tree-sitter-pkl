@@ -14,13 +14,13 @@ res = new {
     (newExpr
       (objectBody
         (ERROR
-          (objectLiteral
-            (binaryExpr
-              (variableExpr
-                (identifier))
-              (slStringLiteral))
-            (ERROR)
-            (objectBody
-              (objectProperty
-                (identifier)
-                (intLiteral)))))))))
+          (binaryExpr
+            (variableExpr
+              (identifier))
+            (objectLiteral
+              (slStringLiteral)
+              (ERROR)
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (intLiteral))))))))))

@@ -9,12 +9,10 @@ map = Map("one", 1, "two", 2
 (module
   (classProperty
     (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList
-        (slStringLiteral)
-        (intLiteral)
-        (slStringLiteral)
-        (intLiteral)
-        (MISSING
-          ")")))))
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (slStringLiteral)
+    (intLiteral)
+    (slStringLiteral)
+    (intLiteral)))

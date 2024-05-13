@@ -11,9 +11,8 @@ res2 = 42
   (classProperty
     (identifier)
     (ERROR
-      (ERROR
-        (identifier)
-        (intLiteral)
-        (intLiteral))
+      (identifier)
+      (intLiteral)
+      (intLiteral)
       (identifier))
     (intLiteral)))

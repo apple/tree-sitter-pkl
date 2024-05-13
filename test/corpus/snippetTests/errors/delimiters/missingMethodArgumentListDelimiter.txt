@@ -10,13 +10,15 @@ res2 = 42
 (module
   (classProperty
     (identifier)
-    (propertyCallExpr
+    (methodCallExpr
       (slStringLiteral)
-      (identifier)))
-  (ERROR
-    (intLiteral)
-    (binaryExpr
-      (intLiteral)
-      (slStringLiteral))
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (binaryExpr
+          (intLiteral)
+          (slStringLiteral))
+        (MISSING ")"))))
+  (classProperty
     (identifier)
     (intLiteral)))

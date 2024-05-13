@@ -9,9 +9,10 @@ res1 = x[3 + 4
 (module
   (classProperty
     (identifier)
-    (variableExpr
-      (identifier)))
-  (ERROR
-    (binaryExpr
-      (intLiteral)
-      (intLiteral))))
+    (subscriptExpr
+      (variableExpr
+        (identifier))
+      (binaryExpr
+        (intLiteral)
+        (intLiteral))
+      (MISSING "]"))))

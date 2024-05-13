@@ -8,10 +8,13 @@ res1 = 42
 --------------------------------------------------------------------------------
 
 (module
-  (ERROR
+  (classProperty
     (identifier)
-    (unaryExpr
-      (ERROR
-        (intLiteral)
-        (identifier))
-      (intLiteral))))
+    (parenthesizedExpr
+      (unaryExpr
+        (ERROR)
+        (intLiteral))
+      (MISSING ")")))
+  (classProperty
+    (identifier)
+    (intLiteral)))
