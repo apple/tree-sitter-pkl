@@ -12,7 +12,8 @@ class Other
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (lineComment)
   (clazz
     (identifier)))

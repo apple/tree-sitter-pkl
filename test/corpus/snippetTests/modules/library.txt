@@ -31,7 +31,8 @@ open class Person {
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -45,7 +46,8 @@ open class Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classMethod
     (methodHeader
       (identifier)

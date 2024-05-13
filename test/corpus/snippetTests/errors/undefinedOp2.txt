@@ -10,5 +10,6 @@ res1 = "str" + 42
   (classProperty
     (identifier)
     (binaryExpr
-      (slStringLiteral)
+      (slStringLiteral
+        (stringFragment))
       (intLiteral))))

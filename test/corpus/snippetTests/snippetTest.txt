@@ -21,7 +21,8 @@ output {
       (qualifiedIdentifier
         (identifier)))
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody

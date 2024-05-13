@@ -44,7 +44,8 @@ res7 = (new Baz {}).value
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (typeAlias
     (identifier)
     (typeParameterList
@@ -93,11 +94,13 @@ res7 = (new Baz {}).value
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)))
+            (slStringLiteral
+              (stringFragment))))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (typeAlias
     (identifier)
     (typeParameterList
@@ -132,9 +135,11 @@ res7 = (new Baz {}).value
       (identifier)
       (argumentList
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (typeAlias
     (identifier)
     (typeParameterList
@@ -163,11 +168,13 @@ res7 = (new Baz {}).value
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (propertyCallExpr
           (intLiteral)
           (identifier))
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (propertyCallExpr
           (intLiteral)
           (identifier)))))
@@ -217,7 +224,8 @@ res7 = (new Baz {}).value
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (newExpr
           (type
             (qualifiedIdentifier
@@ -225,7 +233,8 @@ res7 = (new Baz {}).value
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (nullLiteral))))
   (typeAlias
     (identifier)
@@ -265,7 +274,8 @@ res7 = (new Baz {}).value
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -280,7 +290,8 @@ res7 = (new Baz {}).value
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (clazz
     (modifier)
     (identifier)

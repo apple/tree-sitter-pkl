@@ -60,12 +60,14 @@ local class Person {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -84,7 +86,8 @@ local class Person {
                   (intLiteral)
                   (nullLiteral)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -104,12 +107,14 @@ local class Person {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (nullLiteral))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExprRightAssoc
@@ -142,7 +147,8 @@ local class Person {
                 (identifier))
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -151,7 +157,8 @@ local class Person {
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (identifier)
               (argumentList)))
           (objectElement
@@ -184,7 +191,8 @@ local class Person {
                     (identifier)
                     (argumentList))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectProperty
             (modifier)

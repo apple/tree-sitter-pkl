@@ -23,7 +23,8 @@ foo = new Dynamic {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -34,6 +35,7 @@ foo = new Dynamic {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier)))))

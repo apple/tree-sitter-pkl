@@ -17,4 +17,5 @@ invalidAnnotationOnTypeCheckedProperty = "hi"
       (qualifiedIdentifier
         (identifier)))
     (identifier)
-    (slStringLiteral)))
+    (slStringLiteral
+      (stringFragment))))

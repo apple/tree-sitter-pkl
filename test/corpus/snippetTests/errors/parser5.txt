@@ -10,5 +10,6 @@ res1 = "some string"""
   (classProperty
     (identifier)
     (ERROR
-      (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
     (slStringLiteral)))

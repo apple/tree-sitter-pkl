@@ -27,7 +27,8 @@ res1 = new Listing {
             (identifier)
             (argumentList
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (objectElement

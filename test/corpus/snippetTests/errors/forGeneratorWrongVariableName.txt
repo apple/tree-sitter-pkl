@@ -44,7 +44,8 @@ res: Mapping<String, Int> = new {
               (slStringLiteral
                 (interpolationExpr
                   (variableExpr
-                    (identifier))))
+                    (identifier)))
+                (stringFragment))
               (variableExpr
                 (identifier)))))
         (forGenerator
@@ -62,7 +63,8 @@ res: Mapping<String, Int> = new {
               (slStringLiteral
                 (interpolationExpr
                   (variableExpr
-                    (identifier))))
+                    (identifier)))
+                (stringFragment))
               (variableExpr
                 (identifier)))
             (lineComment)))))))

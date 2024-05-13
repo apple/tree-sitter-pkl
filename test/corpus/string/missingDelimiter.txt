@@ -1,5 +1,5 @@
 ================================================================================
-missingDelimiter
+string/missingDelimiter
 ================================================================================
 
 res1 = "Hello
@@ -14,12 +14,15 @@ res3 = ##"Hello there"#
   (classProperty
     (identifier)
     (slStringLiteral
+      (stringFragment)
       (MISSING """)))
   (classProperty
     (identifier)
     (slStringLiteral
+      (stringFragment)
       (MISSING ""#")))
   (classProperty
     (identifier)
     (slStringLiteral
+      (stringFragment)
       (MISSING ""##"))))

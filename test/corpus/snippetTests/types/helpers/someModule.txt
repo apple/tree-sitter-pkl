@@ -14,7 +14,8 @@ bar: Int = 42
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation

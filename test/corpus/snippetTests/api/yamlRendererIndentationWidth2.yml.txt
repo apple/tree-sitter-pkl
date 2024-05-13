@@ -80,7 +80,8 @@ output {
 (module
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (intLiteral))
@@ -88,9 +89,11 @@ output {
     (identifier)
     (objectBody
       (objectElement
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectElement
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (objectBody
@@ -98,16 +101,20 @@ output {
         (newExpr
           (objectBody
             (objectElement
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectElement
-              (slStringLiteral)))))
+              (slStringLiteral
+                (stringFragment))))))
       (objectElement
         (newExpr
           (objectBody
             (objectElement
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectElement
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (objectBody
@@ -116,55 +123,68 @@ output {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (stringFragment))))))
       (objectElement
         (newExpr
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (intLiteral))))
@@ -176,7 +196,8 @@ output {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectProperty
         (identifier)
         (objectBody
@@ -185,10 +206,12 @@ output {
             (intLiteral))))))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody

@@ -10,7 +10,8 @@ res1 = nonExisting.bar
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (propertyCallExpr

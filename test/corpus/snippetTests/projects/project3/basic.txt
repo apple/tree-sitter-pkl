@@ -17,19 +17,24 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (importExpr
-              (stringConstant)))
+              (stringConstant
+                (stringFragment))))
           (objectElement
             (importExpr
-              (stringConstant)))
+              (stringConstant
+                (stringFragment))))
           (objectElement
             (importExpr
-              (stringConstant))))))))
+              (stringConstant
+                (stringFragment)))))))))

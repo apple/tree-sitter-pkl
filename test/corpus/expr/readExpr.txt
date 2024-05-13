@@ -11,4 +11,5 @@ foo = read*("*.txt")
     (identifier)
     (readGlobExpr
       (parenthesizedExpr
-        (slStringLiteral)))))
+        (slStringLiteral
+          (stringFragment))))))

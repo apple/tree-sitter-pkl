@@ -17,7 +17,8 @@ Even though this line is not valid Pkl syntax, Pkl should give a "nice" minPklVe
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (moduleClause
       (modifier)
       (qualifiedIdentifier

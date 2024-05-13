@@ -17,19 +17,22 @@ examples {
   (lineComment)
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (readGlobExpr
               (methodCallExpr
                 (propertyCallExpr
                   (parenthesizedExpr
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (identifier))
                 (identifier)
                 (argumentList)))))))))

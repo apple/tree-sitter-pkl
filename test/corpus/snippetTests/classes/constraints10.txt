@@ -26,7 +26,8 @@ res3 = test.catch(() ->
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classMethod
     (methodHeader
       (modifier)
@@ -78,10 +79,17 @@ res3 = test.catch(() ->
               (identifier)
               (argumentList
                 (slStringLiteral
-                  (escapeSequence)
-                  (escapeSequence)
-                  (escapeSequence))))))
-        (slStringLiteral))))
+                  (stringFragment
+                    (escapeSequence))
+                  (stringFragment)
+                  (stringFragment
+                    (escapeSequence))
+                  (stringFragment)
+                  (stringFragment
+                    (escapeSequence))
+                  (stringFragment))))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (newExpr
@@ -98,7 +106,8 @@ res3 = test.catch(() ->
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -116,5 +125,6 @@ res3 = test.catch(() ->
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (stringFragment)))))
             (identifier)))))))

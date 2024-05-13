@@ -84,24 +84,30 @@ examples {
         (identifier)
         (identifier)))
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
     (objectLiteral
       (parenthesizedExpr
         (importExpr
-          (stringConstant)))
+          (stringConstant
+            (stringFragment))))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (modifier)
     (identifier)
@@ -141,12 +147,14 @@ examples {
         (variableExpr
           (identifier))
         (identifier))
-      (slStringLiteral)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -167,14 +175,16 @@ examples {
                   (identifier)))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (binaryExpr
               (propertyCallExpr
                 (variableExpr
                   (identifier))
                 (identifier))
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -186,7 +196,8 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (stringFragment)))))))
           (objectElement
             (binaryExpr
               (methodCallExpr
@@ -220,7 +231,8 @@ examples {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (stringFragment))))))
           (objectElement
             (binaryExpr
               (propertyCallExpr
@@ -233,7 +245,8 @@ examples {
                 (identifier)
                 (argumentList))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -257,16 +270,19 @@ examples {
                   (identifier)))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (binaryExpr
               (propertyCallExpr
                 (variableExpr
                   (identifier))
                 (identifier))
-              (slStringLiteral)))))
+              (slStringLiteral
+                (stringFragment))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -277,9 +293,11 @@ examples {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (stringFragment))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -290,9 +308,11 @@ examples {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (stringFragment))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -320,7 +340,8 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (propertyCallExpr
               (binaryExpr
@@ -397,7 +418,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -408,7 +430,8 @@ examples {
                 (subscriptExpr
                   (variableExpr
                     (identifier))
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment)))
                 (methodCallExpr
                   (variableExpr
                     (identifier))
@@ -424,7 +447,8 @@ examples {
                             (identifier))
                           (identifier)))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -435,7 +459,8 @@ examples {
                 (subscriptExpr
                   (variableExpr
                     (identifier))
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment)))
                 (methodCallExpr
                   (identifier)
                   (argumentList))

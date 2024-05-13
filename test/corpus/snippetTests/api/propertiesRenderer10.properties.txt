@@ -20,4 +20,5 @@ foo = new PropertiesRenderer {}.renderValue(List("bar"))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)))))))
+            (slStringLiteral
+              (stringFragment))))))))

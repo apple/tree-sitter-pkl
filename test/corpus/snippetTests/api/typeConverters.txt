@@ -107,7 +107,8 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectElement
           (newExpr
             (type
@@ -116,7 +117,8 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectElement
           (newExpr
             (type
@@ -125,7 +127,8 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectElement
           (newExpr
             (type
@@ -134,7 +137,8 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectElement
           (newExpr
             (type
@@ -143,7 +147,8 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectElement
           (newExpr
             (type
@@ -152,7 +157,8 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (objectBody
@@ -178,7 +184,8 @@ output {
                         (propertyCallExpr
                           (variableExpr
                             (identifier))
-                          (identifier))))))
+                          (identifier)))
+                      (stringFragment))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -187,6 +194,7 @@ output {
                       (typedIdentifier
                         (identifier)))
                     (slStringLiteral
+                      (stringFragment)
                       (interpolationExpr
                         (propertyCallExpr
                           (variableExpr
@@ -200,6 +208,7 @@ output {
                       (typedIdentifier
                         (identifier)))
                     (slStringLiteral
+                      (stringFragment)
                       (interpolationExpr
                         (propertyCallExpr
                           (variableExpr

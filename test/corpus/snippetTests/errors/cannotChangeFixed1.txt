@@ -32,4 +32,5 @@ class Dog extends Animal {
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral)))))
+        (slStringLiteral
+          (stringFragment))))))

@@ -10,4 +10,5 @@ res = import("./@child/theChild.pkl")
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant))))
+      (stringConstant
+        (stringFragment)))))

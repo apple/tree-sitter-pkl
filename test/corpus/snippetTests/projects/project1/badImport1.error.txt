@@ -8,4 +8,5 @@ import "@doesnotexist/bar/baz.pkl"
 
 (module
   (importClause
-    (stringConstant)))
+    (stringConstant
+      (stringFragment))))

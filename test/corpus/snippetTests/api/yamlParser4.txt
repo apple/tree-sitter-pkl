@@ -87,7 +87,8 @@ res2 = parser.parseAll("""
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -101,39 +102,34 @@ res2 = parser.parseAll("""
           (identifier)
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
                     (identifier)))
                 (intLiteral)))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
                     (identifier)))
-                (slStringLiteral)))
+                (slStringLiteral
+                  (stringFragment))))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
                     (identifier)))
-                (slStringLiteral)))
+                (slStringLiteral
+                  (stringFragment))))
             (objectEntry
-              (slStringLiteral)
-              (functionLiteral
-                (parameterList
-                  (typedIdentifier
-                    (identifier)))
-                (methodCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier)
-                  (argumentList))))
-            (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
@@ -144,14 +140,29 @@ res2 = parser.parseAll("""
                   (identifier)
                   (argumentList))))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
                     (identifier)))
-                (slStringLiteral)))
+                (methodCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier)
+                  (argumentList))))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (slStringLiteral
+                  (stringFragment))))
+            (objectEntry
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
@@ -161,7 +172,8 @@ res2 = parser.parseAll("""
                     (identifier))
                   (intLiteral))))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
@@ -177,7 +189,8 @@ res2 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -185,4 +198,5 @@ res2 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral)))))
+        (mlStringLiteral
+          (stringFragment))))))

@@ -9,5 +9,6 @@ res1 = """some string
 (module
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteral  
+      (stringFragment)
       (MISSING """""))))

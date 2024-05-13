@@ -12,7 +12,9 @@ map = Map("one", 1, "two", 2
     (variableExpr
       (identifier)))
   (ERROR
-    (slStringLiteral)
+    (slStringLiteral
+      (stringFragment))
     (intLiteral)
-    (slStringLiteral)
+    (slStringLiteral
+      (stringFragment))
     (intLiteral)))

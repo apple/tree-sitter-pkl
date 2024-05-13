@@ -51,7 +51,8 @@ res3 = foo6.x
       (objectProperty
         (modifier)
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (variableExpr
@@ -66,7 +67,8 @@ res3 = foo6.x
         (objectProperty
           (modifier)
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (propertyCallExpr
@@ -80,7 +82,8 @@ res3 = foo6.x
       (objectProperty
         (modifier)
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (variableExpr
@@ -94,7 +97,8 @@ res3 = foo6.x
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (propertyCallExpr
@@ -107,7 +111,8 @@ res3 = foo6.x
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (variableExpr
@@ -122,7 +127,8 @@ res3 = foo6.x
         (objectProperty
           (modifier)
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (propertyCallExpr

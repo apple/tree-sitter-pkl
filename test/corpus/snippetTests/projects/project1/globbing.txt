@@ -45,77 +45,96 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (lineComment)
           (objectElement
             (propertyCallExpr
               (importExpr
-                (stringConstant))
+                (stringConstant
+                  (stringFragment)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (importGlobExpr
-              (stringConstant)))))
+              (stringConstant
+                (stringFragment))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (importGlobExpr
-              (stringConstant)))))
+              (stringConstant
+                (stringFragment))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (propertyCallExpr
               (importGlobExpr
-                (stringConstant))
+                (stringConstant
+                  (stringFragment)))
               (identifier)))
           (objectElement
             (propertyCallExpr
               (importGlobExpr
-                (stringConstant))
+                (stringConstant
+                  (stringFragment)))
               (identifier)))
           (objectElement
             (propertyCallExpr
               (importGlobExpr
-                (stringConstant))
+                (stringConstant
+                  (stringFragment)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (readGlobExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (readGlobExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (readGlobExpr
               (parenthesizedExpr
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (lineComment)
           (objectElement
             (propertyCallExpr
               (importExpr
-                (stringConstant))
+                (stringConstant
+                  (stringFragment)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (readGlobExpr
               (parenthesizedExpr
-                (slStringLiteral)))))))))
+                (slStringLiteral
+                  (stringFragment))))))))))

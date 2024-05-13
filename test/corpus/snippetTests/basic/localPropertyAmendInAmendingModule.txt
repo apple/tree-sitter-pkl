@@ -13,11 +13,13 @@ local object {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (modifier)
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral)))))
+        (slStringLiteral
+          (stringFragment))))))

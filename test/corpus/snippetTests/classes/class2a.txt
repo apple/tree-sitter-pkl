@@ -39,7 +39,8 @@ pigeon = new Person {
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -68,7 +69,8 @@ pigeon = new Person {
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (newExpr
@@ -78,7 +80,8 @@ pigeon = new Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))
@@ -97,11 +100,13 @@ pigeon = new Person {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral))))
+                      (slStringLiteral
+                        (stringFragment)))))
                 (lineComment)))))
         (objectProperty
           (identifier)
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))))))
+              (slStringLiteral
+                (stringFragment)))))))))

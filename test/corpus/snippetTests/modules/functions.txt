@@ -98,9 +98,11 @@ res11 = nestedCapture(99)
         (typedIdentifier
           (identifier))))
     (slStringLiteral
+      (stringFragment)
       (interpolationExpr
         (variableExpr
           (identifier)))
+      (stringFragment)
       (interpolationExpr
         (variableExpr
           (identifier)))))
@@ -207,7 +209,8 @@ res11 = nestedCapture(99)
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))))
   (classProperty
     (identifier)

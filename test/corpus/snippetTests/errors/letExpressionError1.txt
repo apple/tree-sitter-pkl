@@ -22,4 +22,5 @@ res1 =
         (intLiteral)
         (throwExpr
           (parenthesizedExpr
-            (slStringLiteral)))))))
+            (slStringLiteral
+              (stringFragment))))))))

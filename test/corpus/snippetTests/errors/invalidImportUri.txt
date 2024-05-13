@@ -10,7 +10,8 @@ foo = _foo
 
 (module
   (importClause
-    (stringConstant)
+    (stringConstant
+      (stringFragment))
     (identifier))
   (classProperty
     (identifier)

@@ -10,7 +10,8 @@ res: Bird = new {}
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation

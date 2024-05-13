@@ -41,10 +41,12 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -64,10 +66,12 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -80,7 +84,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -93,10 +98,12 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -119,7 +126,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -132,7 +140,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -175,7 +184,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))
       (newExpr
         (type
@@ -183,7 +193,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectProperty
             (identifier)
@@ -197,7 +208,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (variableExpr
               (identifier)))
           (objectProperty
@@ -210,7 +222,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -221,7 +234,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (variableExpr
               (identifier)))
           (objectProperty
@@ -231,14 +245,16 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectProperty
             (identifier)
@@ -253,7 +269,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
               (identifier)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (variableExpr
                 (identifier)))
             (objectProperty
@@ -262,7 +279,8 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
               (intLiteral))))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (variableExpr
               (identifier)))
           (objectProperty
@@ -275,8 +293,10 @@ res13 = new Mapping { ["one"] = x; local x = 1 } { ["two"] = y; local y = 2 } ==
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral)))))))

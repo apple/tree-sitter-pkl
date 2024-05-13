@@ -24,8 +24,10 @@ result = mapping2[mapping1["x"]]
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (modifier)
     (identifier)
@@ -35,8 +37,10 @@ result = mapping2[mapping1["x"]]
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (subscriptExpr
@@ -45,4 +49,5 @@ result = mapping2[mapping1["x"]]
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral)))))
+        (slStringLiteral
+          (stringFragment))))))

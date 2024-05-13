@@ -39,7 +39,9 @@ pigeon = new Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (stringFragment)))))))

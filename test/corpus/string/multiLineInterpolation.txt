@@ -42,46 +42,61 @@ res9 = ######"""
 (module
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (stringFragment)
       (interpolationExpr
         (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (mlStringLiteral))
+          (identifier)))
+      (stringFragment)))
   (classProperty
     (identifier)
     (mlStringLiteral
-      (interpolationExpr
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (mlStringLiteral))
+      (stringFragment)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (stringFragment)
       (interpolationExpr
         (variableExpr
-          (identifier)))))
+          (identifier)))
+      (stringFragment)))
   (classProperty
     (identifier)
     (mlStringLiteral
-      (interpolationExpr
-        (variableExpr
-          (identifier)))))
+      (stringFragment)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (stringFragment)
       (interpolationExpr
         (variableExpr
-          (identifier)))))
+          (identifier)))
+      (stringFragment)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (stringFragment)
       (interpolationExpr
         (variableExpr
-          (identifier))))))
+          (identifier)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (stringFragment))))

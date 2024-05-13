@@ -22,7 +22,8 @@ res2 = 42
         (variableExpr
           (identifier))
         (intLiteral)))
-    (slStringLiteral))
+      (slStringLiteral
+        (stringFragment)))
   (classProperty
     (identifier)
     (intLiteral)))

@@ -11,13 +11,15 @@ res2 = 42
   (classProperty
     (identifier)
     (methodCallExpr
-      (slStringLiteral)
+      (slStringLiteral
+        (stringFragment))
       (identifier)
       (argumentList
         (intLiteral)
         (binaryExpr
           (intLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (MISSING ")"))))
   (classProperty
     (identifier)

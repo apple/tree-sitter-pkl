@@ -11,4 +11,5 @@ res = read*("https://www.google.com/**.pkl")
     (identifier)
     (readGlobExpr
       (parenthesizedExpr
-        (slStringLiteral)))))
+        (slStringLiteral
+          (stringFragment))))))

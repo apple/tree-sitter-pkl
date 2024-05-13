@@ -65,7 +65,8 @@ foo = new Foo {
                 (identifier)))
             (objectBody
               (objectElement
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectProperty
           (identifier)
           (trueLiteral))))))

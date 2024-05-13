@@ -30,5 +30,6 @@ res1 = f.apply("Pigeon", 42)
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral)))))

@@ -10,4 +10,5 @@ otherFile = import("filename with spaces.pkl")
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant))))
+      (stringConstant
+        (stringFragment)))))

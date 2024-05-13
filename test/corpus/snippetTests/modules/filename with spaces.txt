@@ -9,4 +9,5 @@ foo = "bar"
 (module
   (classProperty
     (identifier)
-    (slStringLiteral)))
+    (slStringLiteral
+      (stringFragment))))

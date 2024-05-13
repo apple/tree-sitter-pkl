@@ -89,6 +89,7 @@ a: A = new {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (stringFragment)))))
               (newExpr
                 (objectBody)))))))))

@@ -14,7 +14,8 @@ x {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))
       (forGenerator
         (typedIdentifier
@@ -25,5 +26,6 @@ x {
             (intLiteral)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral)))))))

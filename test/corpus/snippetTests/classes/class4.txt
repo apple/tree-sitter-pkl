@@ -19,7 +19,8 @@ res2 = test.catch(() -> Person.bar())
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody

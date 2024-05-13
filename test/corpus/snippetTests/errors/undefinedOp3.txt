@@ -21,4 +21,5 @@ res1 = l["idx"]
     (subscriptExpr
       (variableExpr
         (identifier))
-      (slStringLiteral))))
+      (slStringLiteral
+        (stringFragment)))))

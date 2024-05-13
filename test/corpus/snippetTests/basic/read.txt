@@ -43,21 +43,25 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -67,30 +71,37 @@ examples {
                   (parameterList)
                   (readExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (readOrNullExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (readOrNullExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (readOrNullExpr
               (parenthesizedExpr
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -100,26 +111,32 @@ examples {
                   (parameterList)
                   (readExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (readOrNullExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (readOrNullExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (readOrNullExpr
               (parenthesizedExpr
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -129,17 +146,21 @@ examples {
                   (parameterList)
                   (readExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (readOrNullExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (readOrNullExpr
               (parenthesizedExpr
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -150,7 +171,8 @@ examples {
                   (parameterList)
                   (readExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -160,4 +182,5 @@ examples {
                   (parameterList)
                   (readOrNullExpr
                     (parenthesizedExpr
-                      (slStringLiteral))))))))))))
+                      (slStringLiteral
+                        (stringFragment)))))))))))))

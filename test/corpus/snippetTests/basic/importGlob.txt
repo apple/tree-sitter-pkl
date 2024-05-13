@@ -65,17 +65,21 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (importGlobClause
-    (stringConstant)
+    (stringConstant
+      (stringFragment))
     (identifier))
   (importGlobClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -86,7 +90,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -97,29 +102,34 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (stringFragment)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (stringFragment)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -142,40 +152,47 @@ examples {
                     (identifier)
                     (argumentList))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (stringFragment)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (stringFragment)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (stringFragment)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -186,40 +203,51 @@ examples {
                   (parameterList)
                   (methodCallExpr
                     (importGlobExpr
-                      (stringConstant))
+                      (stringConstant
+                        (stringFragment)))
                     (identifier)
                     (argumentList))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
                   (stringConstant
-                    (escapeSequence)
-                    (escapeSequence)))
+                    (stringFragment)
+                    (stringFragment
+                      (escapeSequence))
+                    (stringFragment
+                      (escapeSequence))
+                    (stringFragment)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (stringFragment)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (lineComment)
           (objectElement
             (importGlobExpr
-              (stringConstant)))
+              (stringConstant
+                (stringFragment))))
           (objectElement
             (importGlobExpr
-              (stringConstant))))))))
+              (stringConstant
+                (stringFragment)))))))))

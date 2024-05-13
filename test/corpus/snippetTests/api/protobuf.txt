@@ -273,9 +273,11 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -329,7 +331,8 @@ examples {
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (lineComment)
   (clazz
     (modifier)
@@ -410,7 +413,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (stringFragment))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -441,7 +445,8 @@ examples {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral)))))
+                    (slStringLiteral
+                      (stringFragment))))))
             (objectElement
               (newExpr
                 (type
@@ -450,7 +455,8 @@ examples {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))))))))
+                    (slStringLiteral
+                      (stringFragment)))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -488,7 +494,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (stringFragment)))))
             (intLiteral)
             (newExpr
               (type
@@ -497,7 +504,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (stringFragment))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -546,7 +554,8 @@ examples {
                           (objectBody
                             (objectProperty
                               (identifier)
-                              (slStringLiteral))))
+                              (slStringLiteral
+                                (stringFragment)))))
                         (newExpr
                           (type
                             (qualifiedIdentifier
@@ -554,7 +563,8 @@ examples {
                           (objectBody
                             (objectProperty
                               (identifier)
-                              (slStringLiteral)))))))))))))
+                              (slStringLiteral
+                                (stringFragment))))))))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -585,7 +595,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (stringFragment)))))
             (newExpr
               (type
                 (qualifiedIdentifier
@@ -593,7 +604,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (stringFragment))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -610,7 +622,8 @@ examples {
         (newExpr
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (objectBody
                 (objectElement
                   (newExpr
@@ -718,17 +731,21 @@ examples {
     (type
       (type
         (type
-          (stringConstant))
+          (stringConstant
+            (stringFragment)))
         (type
-          (stringConstant)))
+          (stringConstant
+            (stringFragment))))
       (type
-        (stringConstant))))
+        (stringConstant
+          (stringFragment)))))
   (typeAlias
     (modifier)
     (identifier)
     (type
       (type
-        (stringConstant))
+        (stringConstant
+          (stringFragment)))
       (type
         (qualifiedIdentifier
           (identifier)))))
@@ -740,9 +757,11 @@ examples {
       (type
         (type
           (type
-            (stringConstant))
+            (stringConstant
+              (stringFragment)))
           (type
-            (stringConstant)))
+            (stringConstant
+              (stringFragment))))
         (type
           (qualifiedIdentifier
             (identifier))))
@@ -890,7 +909,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (forGenerator
             (typedIdentifier
@@ -983,7 +1003,8 @@ examples {
                       (qualifiedIdentifier
                         (identifier)))))
                 (objectElement
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment)))
                 (objectElement
                   (propertyCallExpr
                     (intLiteral)
@@ -1012,7 +1033,8 @@ examples {
                     (variableExpr
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1024,7 +1046,8 @@ examples {
                       (identifier)))
                   (objectBody)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1037,7 +1060,8 @@ examples {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1058,7 +1082,8 @@ examples {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1073,7 +1098,8 @@ examples {
                       (objectBody
                         (objectProperty
                           (identifier)
-                          (slStringLiteral))))
+                          (slStringLiteral
+                            (stringFragment)))))
                     (objectProperty
                       (identifier)
                       (objectBody
@@ -1088,14 +1114,17 @@ examples {
                       (identifier)
                       (objectBody
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (stringFragment))
                           (objectBody))
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (stringFragment))
                           (objectBody
                             (objectProperty
                               (identifier)
-                              (slStringLiteral)))))))))))
+                              (slStringLiteral
+                                (stringFragment))))))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1106,7 +1135,8 @@ examples {
                       (identifier)))
                   (objectBody)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1148,7 +1178,8 @@ examples {
                                   (intLiteral)
                                   (identifier)))))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1188,7 +1219,8 @@ examples {
                                 (intLiteral)
                                 (intLiteral))))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1203,7 +1235,8 @@ examples {
                       (identifier)
                       (objectBody
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (stringFragment))
                           (objectBody))))
                     (objectProperty
                       (identifier)
@@ -1257,7 +1290,8 @@ examples {
                                       (objectBody))
                                     (objectBody))))))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1269,7 +1303,8 @@ examples {
                       (identifier)))
                   (objectBody)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1300,7 +1335,8 @@ examples {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1314,7 +1350,8 @@ examples {
                       (identifier)
                       (objectBody
                         (objectElement
-                          (slStringLiteral))
+                          (slStringLiteral
+                            (stringFragment)))
                         (objectElement
                           (intLiteral))
                         (objectElement
@@ -1339,7 +1376,8 @@ examples {
                             (identifier)))
                         (objectBody))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1359,7 +1397,8 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral))))))))))
+                            (slStringLiteral
+                              (stringFragment)))))))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -1384,7 +1423,8 @@ examples {
                               (objectBody
                                 (objectProperty
                                   (identifier)
-                                  (slStringLiteral)))))))))))))
+                                  (slStringLiteral
+                                    (stringFragment))))))))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1403,7 +1443,8 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral)))))
+                            (slStringLiteral
+                              (stringFragment))))))
                     (objectProperty
                       (identifier)
                       (newExpr
@@ -1413,4 +1454,5 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral)))))))))))))))
+                            (slStringLiteral
+                              (stringFragment))))))))))))))))

@@ -62,48 +62,57 @@ foo {
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (clazz
     (modifier)
     (identifier)
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (clazz
     (identifier)
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classMethod
     (methodHeader
       (modifier)
       (identifier)
       (parameterList))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classMethod
     (methodHeader
       (modifier)
       (identifier)
       (parameterList))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classMethod
     (methodHeader
       (identifier)
       (parameterList))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (propertyCallExpr

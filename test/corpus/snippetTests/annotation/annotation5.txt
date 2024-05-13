@@ -25,4 +25,5 @@ integer: Int = 1
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral)))
+    (slStringLiteral
+      (stringFragment))))

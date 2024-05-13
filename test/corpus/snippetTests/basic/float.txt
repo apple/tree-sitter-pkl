@@ -202,14 +202,17 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -277,7 +280,8 @@ examples {
                     (floatLiteral)))
                 (floatLiteral))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -304,7 +308,8 @@ examples {
                   (floatLiteral)
                   (intLiteral)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -333,7 +338,8 @@ examples {
                   (intLiteral)
                   (floatLiteral)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -352,7 +358,8 @@ examples {
                   (floatLiteral)
                   (floatLiteral)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -371,7 +378,8 @@ examples {
                   (floatLiteral)
                   (floatLiteral)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -388,7 +396,8 @@ examples {
                   (floatLiteral)
                   (floatLiteral)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -405,7 +414,8 @@ examples {
                   (floatLiteral)
                   (floatLiteral)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -439,7 +449,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (floatLiteral))
@@ -472,7 +483,8 @@ examples {
           (objectElement
             (floatLiteral))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -483,7 +495,8 @@ examples {
               (intLiteral)
               (floatLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -494,7 +507,8 @@ examples {
               (floatLiteral)
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -505,7 +519,8 @@ examples {
               (intLiteral)
               (floatLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -516,7 +531,8 @@ examples {
               (floatLiteral)
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -539,7 +555,8 @@ examples {
               (floatLiteral)
               (floatLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -550,7 +567,8 @@ examples {
               (intLiteral)
               (floatLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (lineComment)
           (lineComment)
@@ -580,7 +598,8 @@ examples {
                   (identifier)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExprRightAssoc

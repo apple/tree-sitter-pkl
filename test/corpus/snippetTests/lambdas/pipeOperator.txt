@@ -29,7 +29,8 @@ res11 = test.catch(() -> 42 |> new Person {})
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)

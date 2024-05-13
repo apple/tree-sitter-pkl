@@ -48,7 +48,8 @@ res7 = x7[1] == 42
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -63,11 +64,13 @@ res7 = x7[1] == 42
     (newExpr
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (intLiteral))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (modifier)
     (identifier)
@@ -87,9 +90,11 @@ res7 = x7[1] == 42
     (newExpr
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (modifier)
     (identifier)
@@ -150,7 +155,8 @@ res7 = x7[1] == 42
         (objectElement
           (throwExpr
             (parenthesizedExpr
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -167,7 +173,8 @@ res7 = x7[1] == 42
         (objectElement
           (throwExpr
             (parenthesizedExpr
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -182,7 +189,8 @@ res7 = x7[1] == 42
         (objectElement
           (throwExpr
             (parenthesizedExpr
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -194,13 +202,15 @@ res7 = x7[1] == 42
         (objectElement
           (throwExpr
             (parenthesizedExpr
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (objectElement
           (intLiteral))
         (objectElement
           (throwExpr
             (parenthesizedExpr
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (binaryExpr

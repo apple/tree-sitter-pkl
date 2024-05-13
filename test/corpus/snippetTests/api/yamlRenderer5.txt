@@ -41,7 +41,8 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody
@@ -101,7 +102,8 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -112,8 +114,10 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -124,8 +128,10 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -136,9 +142,12 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral)
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -153,9 +162,11 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
               (identifier)))
           (objectBody
             (objectElement
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectElement
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -169,10 +180,13 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
               (identifier)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment)))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))))))
   (classProperty
     (identifier)
@@ -188,7 +202,8 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectProperty
               (identifier)
               (intLiteral)))))))
@@ -206,7 +221,8 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectProperty
               (identifier)
               (intLiteral)))))))
@@ -350,7 +366,8 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
                             (identifier)))
                         (throwExpr
                           (parenthesizedExpr
-                            (slStringLiteral)))))))))
+                            (slStringLiteral
+                              (stringFragment))))))))))
             (identifier)
             (argumentList
               (intLiteral)))))))
@@ -394,7 +411,8 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectElement
                     (intLiteral))))))))))
   (classProperty
@@ -417,7 +435,9 @@ res22 = test.catch(() -> renderer.renderDocument(new Dynamic { ["foo"] = "foo"; 
                     (identifier)))
                 (objectBody
                   (objectEntry
-                    (slStringLiteral)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectElement
                     (intLiteral)))))))))))

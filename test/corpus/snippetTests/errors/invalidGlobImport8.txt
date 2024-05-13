@@ -11,7 +11,8 @@ res: globbedImports.Foo
 
 (module
   (importGlobClause
-    (stringConstant)
+    (stringConstant
+      (stringFragment))
     (identifier))
   (lineComment)
   (classProperty

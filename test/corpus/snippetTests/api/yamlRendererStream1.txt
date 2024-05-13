@@ -54,7 +54,8 @@ c = renderer.renderDocument(stream.toSet())
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (intLiteral))
         (objectElement
@@ -64,9 +65,11 @@ c = renderer.renderDocument(stream.toSet())
                 (identifier)))
             (objectBody
               (objectElement
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectElement
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectElement
           (newExpr
             (type
@@ -74,17 +77,21 @@ c = renderer.renderDocument(stream.toSet())
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (stringFragment)))))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral)))))))
+                    (slStringLiteral
+                      (stringFragment))))))))
         (objectElement
           (newExpr
             (type
@@ -93,7 +100,8 @@ c = renderer.renderDocument(stream.toSet())
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectProperty
                 (identifier)
                 (intLiteral))))))))

@@ -73,12 +73,14 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -137,7 +139,8 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -196,16 +199,19 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (asExpr
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)))
               (type
                 (qualifiedIdentifier
@@ -228,9 +234,11 @@ examples {
                     (methodCallExpr
                       (identifier)
                       (argumentList
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (stringFragment))
                         (intLiteral)
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (stringFragment))
                         (intLiteral)))
                     (type
                       (qualifiedIdentifier
@@ -243,7 +251,8 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -291,7 +300,8 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -330,10 +340,12 @@ examples {
                     (identifier)))
                 (objectBody
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (stringFragment))
                     (intLiteral))
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (stringFragment))
                     (intLiteral))))
               (type
                 (qualifiedIdentifier
@@ -359,10 +371,12 @@ examples {
                           (identifier)))
                       (objectBody
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (stringFragment))
                           (intLiteral))
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (stringFragment))
                           (intLiteral))))
                     (type
                       (qualifiedIdentifier
@@ -375,7 +389,8 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (asExpr
@@ -494,7 +509,8 @@ examples {
                             (qualifiedIdentifier
                               (identifier)))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (asExpr
@@ -538,7 +554,8 @@ examples {
                             (qualifiedIdentifier
                               (identifier)))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -607,16 +624,20 @@ examples {
                         (qualifiedIdentifier
                           (identifier)))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (asExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (type
                 (type
-                  (stringConstant))
+                  (stringConstant
+                    (stringFragment)))
                 (type
-                  (stringConstant)))))
+                  (stringConstant
+                    (stringFragment))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -625,18 +646,23 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (asExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (stringFragment))
                     (type
                       (type
-                        (stringConstant))
+                        (stringConstant
+                          (stringFragment)))
                       (type
-                        (stringConstant))))))))))
+                        (stringConstant
+                          (stringFragment)))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (asExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (type
                 (qualifiedIdentifier
                   (identifier)))))
@@ -654,7 +680,8 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (asExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (stringFragment))
                     (type
                       (type
                         (qualifiedIdentifier
@@ -668,9 +695,12 @@ examples {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))
               (type
                 (qualifiedIdentifier
                   (identifier))

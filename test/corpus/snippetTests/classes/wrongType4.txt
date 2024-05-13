@@ -62,7 +62,8 @@ person = new Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))

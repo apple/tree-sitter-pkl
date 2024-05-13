@@ -39,12 +39,14 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (traceExpr
@@ -57,20 +59,13 @@ examples {
           (objectElement
             (traceExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (traceExpr
               (parenthesizedExpr
-                (mlStringLiteral))))
-          (objectElement
-            (traceExpr
-              (parenthesizedExpr
-                (methodCallExpr
-                  (identifier)
-                  (argumentList
-                    (intLiteral)
-                    (intLiteral)
-                    (intLiteral))))))
+                (mlStringLiteral
+                  (stringFragment)))))
           (objectElement
             (traceExpr
               (parenthesizedExpr
@@ -87,9 +82,20 @@ examples {
                   (identifier)
                   (argumentList
                     (intLiteral)
-                    (slStringLiteral)
                     (intLiteral)
-                    (slStringLiteral))))))
+                    (intLiteral))))))
+          (objectElement
+            (traceExpr
+              (parenthesizedExpr
+                (methodCallExpr
+                  (identifier)
+                  (argumentList
+                    (intLiteral)
+                    (slStringLiteral
+                      (stringFragment))
+                    (intLiteral)
+                    (slStringLiteral
+                      (stringFragment)))))))
           (objectElement
             (traceExpr
               (parenthesizedExpr
@@ -97,7 +103,8 @@ examples {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral))
+                      (slStringLiteral
+                        (stringFragment)))
                     (objectProperty
                       (identifier)
                       (intLiteral)))))))
@@ -107,22 +114,27 @@ examples {
                 (newExpr
                   (objectBody
                     (objectElement
-                      (slStringLiteral))
+                      (slStringLiteral
+                        (stringFragment)))
                     (objectElement
-                      (slStringLiteral))
+                      (slStringLiteral
+                        (stringFragment)))
                     (objectElement
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (traceExpr
               (parenthesizedExpr
                 (newExpr
                   (objectBody
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (objectBody
                         (objectProperty
                           (identifier)
-                          (slStringLiteral))
+                          (slStringLiteral
+                            (stringFragment)))
                         (objectProperty
                           (identifier)
                           (intLiteral))))))))))))))

@@ -32,7 +32,8 @@ c = new C {}
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody

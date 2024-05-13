@@ -145,185 +145,259 @@ res38 = ###"""
 (module
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (stringFragment)
       (interpolationExpr
         (variableExpr
-          (identifier)))))
+          (identifier)))
+      (stringFragment)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (stringFragment)
       (interpolationExpr
         (variableExpr
-          (identifier)))))
+          (identifier)))
+      (stringFragment)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (stringFragment)
       (interpolationExpr
         (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
+          (identifier)))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (interpolationExpr
-        (slStringLiteral
-          (interpolationExpr
-            (slStringLiteral))))
-      (interpolationExpr
-        (slStringLiteral))))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)
       (interpolationExpr
         (slStringLiteral
-          (escapeSequence)
-          (escapeSequence)
+          (stringFragment)
           (interpolationExpr
             (slStringLiteral
-              (escapeSequence)
-              (escapeSequence)
-              (escapeSequence)))
-          (escapeSequence)
-          (escapeSequence)))
-      (escapeSequence)
+              (stringFragment)))
+          (stringFragment)))
+      (stringFragment)
       (interpolationExpr
         (slStringLiteral
-          (escapeSequence)
-          (escapeSequence)))))
+          (stringFragment)))))
   (classProperty
     (identifier)
     (slStringLiteral
       (escapeSequence)
-      (escapeSequence)
-      (interpolationExpr
-        (slStringLiteral
-          (escapeSequence)))))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)
-      (interpolationExpr
-        (slStringLiteral
-          (escapeSequence)))))
-  (classProperty
-    (identifier)
-    (mlStringLiteral))
-  (classProperty
-    (identifier)
-    (mlStringLiteral))
-  (classProperty
-    (identifier)
-    (mlStringLiteral))
-  (classProperty
-    (identifier)
-    (mlStringLiteral
-      (interpolationExpr
-        (slStringLiteral
-          (interpolationExpr
-            (slStringLiteral))))
-      (interpolationExpr
-        (slStringLiteral))))
-  (classProperty
-    (identifier)
-    (mlStringLiteral
-      (escapeSequence)
+      (stringFragment)
       (interpolationExpr
         (slStringLiteral
           (escapeSequence)
           (escapeSequence)
+          (stringFragment)
           (interpolationExpr
             (slStringLiteral
-              (escapeSequence)
-              (escapeSequence)
-              (escapeSequence)))
+              (stringFragment
+                (escapeSequence))
+              (stringFragment
+                (escapeSequence))
+              (stringFragment
+                (escapeSequence))))
+          (stringFragment)
           (escapeSequence)
           (escapeSequence)))
+      (stringFragment)
       (escapeSequence)
+      (stringFragment)
       (interpolationExpr
         (slStringLiteral
           (escapeSequence)
           (escapeSequence)))))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (slStringLiteral
       (escapeSequence)
+      (stringFragment)
       (escapeSequence)
+      (stringFragment)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (escapeSequence)
+      (stringFragment)
+      (escapeSequence)
+      (stringFragment)
       (interpolationExpr
         (slStringLiteral
           (escapeSequence)))))
   (classProperty
     (identifier)
     (mlStringLiteral
-      (escapeSequence)
-      (escapeSequence)
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
       (interpolationExpr
         (slStringLiteral
-          (escapeSequence))))))
+          (stringFragment)
+          (interpolationExpr
+            (slStringLiteral
+              (stringFragment)))
+          (stringFragment)))
+      (stringFragment)
+      (interpolationExpr
+        (slStringLiteral
+          (stringFragment)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (escapeSequence)
+      (stringFragment)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)
+          (escapeSequence)
+          (stringFragment)
+          (interpolationExpr
+            (slStringLiteral
+              (stringFragment
+                (escapeSequence))
+              (stringFragment
+                (escapeSequence))
+              (stringFragment
+                (escapeSequence))))
+          (stringFragment)
+          (escapeSequence)
+          (escapeSequence)))
+      (stringFragment)
+      (escapeSequence)
+      (stringFragment)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)
+          (escapeSequence)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (escapeSequence)
+      (stringFragment)
+      (escapeSequence)
+      (stringFragment)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (escapeSequence)
+      (stringFragment)
+      (escapeSequence)
+      (stringFragment)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)))
+      (stringFragment))))

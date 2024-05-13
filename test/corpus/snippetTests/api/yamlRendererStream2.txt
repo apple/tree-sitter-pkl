@@ -40,7 +40,8 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (clazz
     (modifier)
     (identifier))
@@ -59,7 +60,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -81,7 +83,10 @@ examples {
                           (objectProperty
                             (identifier)
                             (slStringLiteral
-                              (escapeSequence))))))
+                              (stringFragment)
+                              (stringFragment
+                                (escapeSequence))
+                              (stringFragment))))))
                     (objectElement
                       (newExpr
                         (type
@@ -90,9 +95,11 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral))))))))))))
+                            (slStringLiteral
+                              (stringFragment)))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -113,7 +120,8 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral)))))
+                            (slStringLiteral
+                              (stringFragment))))))
                     (objectElement
                       (newExpr
                         (type
@@ -123,9 +131,13 @@ examples {
                           (objectProperty
                             (identifier)
                             (slStringLiteral
-                              (escapeSequence)))))))))))))
+                              (stringFragment)
+                              (stringFragment
+                                (escapeSequence))
+                              (stringFragment)))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr

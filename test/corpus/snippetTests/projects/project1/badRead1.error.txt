@@ -11,4 +11,5 @@ res = read("@doesnotexist/bar/baz.pkl")
     (identifier)
     (readExpr
       (parenthesizedExpr
-        (slStringLiteral)))))
+        (slStringLiteral
+          (stringFragment))))))

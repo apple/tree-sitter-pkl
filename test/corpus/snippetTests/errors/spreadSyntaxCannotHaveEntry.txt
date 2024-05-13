@@ -18,7 +18,8 @@ res: Listing = new {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))))
   (classProperty
     (identifier)

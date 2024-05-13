@@ -43,7 +43,8 @@ res6: String(List(1).map((it) -> List(2).map((it) -> getClass())).single.single 
               (identifier))
             (identifier))
           (intLiteral))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -82,7 +83,8 @@ res6: String(List(1).map((it) -> List(2).map((it) -> getClass())).single.single 
               (identifier))
             (identifier))
           (intLiteral))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
@@ -108,7 +110,8 @@ res6: String(List(1).map((it) -> List(2).map((it) -> getClass())).single.single 
                     (identifier)))))
             (identifier))
           (intLiteral))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -146,7 +149,8 @@ res6: String(List(1).map((it) -> List(2).map((it) -> getClass())).single.single 
               (identifier))
             (identifier))
           (intLiteral))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
@@ -174,7 +178,8 @@ res6: String(List(1).map((it) -> List(2).map((it) -> getClass())).single.single 
             (identifier))
           (variableExpr
             (identifier)))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -214,4 +219,5 @@ res6: String(List(1).map((it) -> List(2).map((it) -> getClass())).single.single 
             (identifier))
           (variableExpr
             (identifier)))))
-    (slStringLiteral)))
+    (slStringLiteral
+      (stringFragment))))

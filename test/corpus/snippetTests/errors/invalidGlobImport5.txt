@@ -10,7 +10,8 @@ res = allPklModules
 
 (module
   (importGlobClause
-    (stringConstant)
+    (stringConstant
+      (stringFragment))
     (identifier))
   (classProperty
     (identifier)

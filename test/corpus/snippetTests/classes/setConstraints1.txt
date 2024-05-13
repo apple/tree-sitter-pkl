@@ -59,7 +59,8 @@ res5 = test.catch(() ->
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody
@@ -210,7 +211,8 @@ res5 = test.catch(() ->
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (stringFragment)))))
             (identifier))))))
   (classProperty
     (identifier)
@@ -232,7 +234,8 @@ res5 = test.catch(() ->
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral))))))
+                      (slStringLiteral
+                        (stringFragment)))))))
             (identifier))))))
   (classProperty
     (identifier)

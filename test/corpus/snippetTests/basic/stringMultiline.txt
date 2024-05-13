@@ -127,31 +127,39 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (interpolationExpr
                 (variableExpr
                   (identifier)))
+              (stringFragment)
               (escapeSequence)
+              (stringFragment)
               (interpolationExpr
                 (propertyCallExpr
                   (newExpr
@@ -162,6 +170,7 @@ examples {
                       (objectProperty
                         (identifier)
                         (slStringLiteral
+                          (stringFragment)
                           (interpolationExpr
                             (propertyCallExpr
                               (newExpr
@@ -174,22 +183,29 @@ examples {
                                     (variableExpr
                                       (identifier)))))
                               (identifier)))))))
-                  (identifier)))))))
+                  (identifier)))
+              (stringFragment)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (escapeSequence)
               (escapeSequence)
-              (escapeSequence)))
+              (escapeSequence)
+              (stringFragment)))
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (escapeSequence)
               (escapeSequence)
-              (escapeSequence)))
+              (escapeSequence)
+              (stringFragment)))
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (escapeSequence)
               (escapeSequence)
               (escapeSequence)
@@ -197,63 +213,88 @@ examples {
               (escapeSequence)
               (escapeSequence)
               (escapeSequence)
-              (escapeSequence)))))
+              (escapeSequence)
+              (stringFragment)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
-            (mlStringLiteral))))
+            (mlStringLiteral
+              (stringFragment)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
-            (mlStringLiteral))
+            (mlStringLiteral
+              (stringFragment)))
           (objectElement
-            (mlStringLiteral))
+            (mlStringLiteral
+              (stringFragment)))
           (objectElement
-            (mlStringLiteral))
+            (mlStringLiteral
+              (stringFragment)))
           (objectElement
-            (mlStringLiteral))
+            (mlStringLiteral
+              (stringFragment)))
           (objectElement
-            (mlStringLiteral))))
+            (mlStringLiteral
+              (stringFragment)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
-            (mlStringLiteral))
+            (mlStringLiteral
+              (stringFragment)))
           (objectElement
-            (mlStringLiteral))
+            (mlStringLiteral
+              (stringFragment)))
           (objectElement
-            (mlStringLiteral))))
+            (mlStringLiteral
+              (stringFragment)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
-            (mlStringLiteral))
+            (mlStringLiteral
+              (stringFragment)))
           (objectElement
-            (mlStringLiteral))
+            (mlStringLiteral
+              (stringFragment)))
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (interpolationExpr
                 (variableExpr
-                  (identifier)))))
+                  (identifier)))
+              (stringFragment)))
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (interpolationExpr
                 (variableExpr
-                  (identifier)))))
+                  (identifier)))
+              (stringFragment)))
           (objectElement
-            (mlStringLiteral))
+            (mlStringLiteral
+              (stringFragment)))
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (interpolationExpr
                 (variableExpr
-                  (identifier))))))))))
+                  (identifier)))
+              (stringFragment))))))))

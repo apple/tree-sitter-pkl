@@ -16,9 +16,11 @@ res4 = other.bar
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant)
+    (stringConstant
+      (stringFragment))
     (identifier))
   (classProperty
     (identifier)

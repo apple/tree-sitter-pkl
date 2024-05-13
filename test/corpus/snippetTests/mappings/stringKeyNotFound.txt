@@ -23,20 +23,29 @@ res1 = x["foo"]
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (subscriptExpr
       (variableExpr
         (identifier))
-      (slStringLiteral))))
+      (slStringLiteral
+        (stringFragment)))))

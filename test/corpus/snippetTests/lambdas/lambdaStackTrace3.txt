@@ -22,7 +22,8 @@ res1 = fs[1].apply()
           (parameterList)
           (throwExpr
             (parenthesizedExpr
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (methodCallExpr

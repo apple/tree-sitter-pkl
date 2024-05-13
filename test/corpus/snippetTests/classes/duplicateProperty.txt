@@ -29,7 +29,8 @@ class Person {
             (type
               (qualifiedIdentifier
                 (identifier)))))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (lineComment)
       (classProperty
         (identifier)

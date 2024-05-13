@@ -38,10 +38,12 @@ res10 = new Mapping { ["one"] = 1 } != new Mapping { ["one"] = 1; default = 1 }
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -61,10 +63,12 @@ res10 = new Mapping { ["one"] = 1 } != new Mapping { ["one"] = 1; default = 1 }
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -77,7 +81,8 @@ res10 = new Mapping { ["one"] = 1 } != new Mapping { ["one"] = 1; default = 1 }
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -90,10 +95,12 @@ res10 = new Mapping { ["one"] = 1 } != new Mapping { ["one"] = 1; default = 1 }
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -116,7 +123,8 @@ res10 = new Mapping { ["one"] = 1 } != new Mapping { ["one"] = 1; default = 1 }
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -129,7 +137,8 @@ res10 = new Mapping { ["one"] = 1 } != new Mapping { ["one"] = 1; default = 1 }
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -172,7 +181,8 @@ res10 = new Mapping { ["one"] = 1 } != new Mapping { ["one"] = 1; default = 1 }
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))
       (newExpr
         (type
@@ -180,7 +190,8 @@ res10 = new Mapping { ["one"] = 1 } != new Mapping { ["one"] = 1; default = 1 }
             (identifier)))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectProperty
             (identifier)

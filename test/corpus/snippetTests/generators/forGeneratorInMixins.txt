@@ -67,10 +67,12 @@ function mapEnvLiteral(_env: Dynamic) = (it) -> (it) {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))))))))
+                    (slStringLiteral
+                      (stringFragment)))))))))
       (objectProperty
         (identifier)
         (binaryExpr
@@ -89,10 +91,12 @@ function mapEnvLiteral(_env: Dynamic) = (it) -> (it) {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))))))))))
+                    (slStringLiteral
+                      (stringFragment)))))))))))
   (classMethod
     (methodHeader
       (identifier)
@@ -143,13 +147,15 @@ function mapEnvLiteral(_env: Dynamic) = (it) -> (it) {
                     (binaryExpr
                       (variableExpr
                         (identifier))
-                      (slStringLiteral)))
+                      (slStringLiteral
+                        (stringFragment))))
                   (objectProperty
                     (identifier)
                     (binaryExpr
                       (variableExpr
                         (identifier))
-                      (slStringLiteral)))))))))))
+                      (slStringLiteral
+                        (stringFragment))))))))))))
   (classMethod
     (methodHeader
       (identifier)
@@ -204,10 +210,12 @@ function mapEnvLiteral(_env: Dynamic) = (it) -> (it) {
                       (binaryExpr
                         (variableExpr
                           (identifier))
-                        (slStringLiteral)))
+                        (slStringLiteral
+                          (stringFragment))))
                     (objectProperty
                       (identifier)
                       (binaryExpr
                         (variableExpr
                           (identifier))
-                        (slStringLiteral)))))))))))))
+                        (slStringLiteral
+                          (stringFragment))))))))))))))

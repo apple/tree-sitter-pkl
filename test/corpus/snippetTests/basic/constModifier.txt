@@ -48,14 +48,17 @@ res05 = test.catch(() -> constFunctionCallingNonConst().apply("hello "))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -209,4 +212,5 @@ res05 = test.catch(() -> constFunctionCallingNonConst().apply("hello "))
               (argumentList))
             (identifier)
             (argumentList
-              (slStringLiteral))))))))
+              (slStringLiteral
+                (stringFragment)))))))))

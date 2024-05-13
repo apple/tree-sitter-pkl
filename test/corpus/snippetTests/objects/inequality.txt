@@ -130,7 +130,8 @@ res28 = person4_3 != person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -141,7 +142,8 @@ res28 = person4_3 != person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -155,7 +157,8 @@ res28 = person4_3 != person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -163,7 +166,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -180,7 +184,8 @@ res28 = person4_3 != person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -191,7 +196,8 @@ res28 = person4_3 != person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -205,7 +211,8 @@ res28 = person4_3 != person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -216,10 +223,12 @@ res28 = person4_3 != person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -238,7 +247,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (modifier)
     (identifier)
@@ -255,14 +265,16 @@ res28 = person4_3 != person4_1
         (intLiteral))
       (objectProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (modifier)
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (intLiteral))))
@@ -292,7 +304,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -305,7 +318,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectLiteral
         (parenthesizedExpr
           (variableExpr
@@ -321,7 +335,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectLiteral
         (parenthesizedExpr
           (variableExpr
@@ -329,7 +344,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -340,7 +356,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectLiteral
         (parenthesizedExpr
           (variableExpr
@@ -359,7 +376,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -372,7 +390,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -385,7 +404,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (clazz
@@ -393,7 +413,8 @@ res28 = person4_3 != person4_1
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -412,7 +433,8 @@ res28 = person4_3 != person4_1
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -459,7 +481,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -467,7 +490,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -478,7 +502,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -486,7 +511,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -500,7 +526,8 @@ res28 = person4_3 != person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -508,7 +535,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -525,7 +553,8 @@ res28 = person4_3 != person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -533,7 +562,8 @@ res28 = person4_3 != person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -570,7 +600,8 @@ res28 = person4_3 != person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -584,13 +615,15 @@ res28 = person4_3 != person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (modifier)
     (identifier)
@@ -608,7 +641,8 @@ res28 = person4_3 != person4_1
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -677,7 +711,8 @@ res28 = person4_3 != person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -691,13 +726,15 @@ res28 = person4_3 != person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (modifier)
     (identifier)
@@ -708,16 +745,19 @@ res28 = person4_3 != person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr

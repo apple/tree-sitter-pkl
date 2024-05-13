@@ -10,8 +10,7 @@ res1 = "foo \u{123 bar"
   (classProperty
     (identifier)
     (slStringLiteral
+       (stringFragment)
       (ERROR
-        (UNEXPECTED
-          '
-          ')
+        (UNEXPECTED ' ')
         (identifier)))))

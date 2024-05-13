@@ -81,7 +81,8 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (modifier)
     (identifier)
@@ -94,14 +95,16 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (trueLiteral))
           (objectElement
             (falseLiteral))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -112,13 +115,15 @@ examples {
           (objectElement
             (binaryExpr
               (falseLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (binaryExpr
               (falseLiteral)
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (stringFragment))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -130,7 +135,8 @@ examples {
                     (trueLiteral)
                     (throwExpr
                       (parenthesizedExpr
-                        (slStringLiteral))))))))
+                        (slStringLiteral
+                          (stringFragment)))))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -142,7 +148,8 @@ examples {
                     (parenthesizedExpr
                       (throwExpr
                         (parenthesizedExpr
-                          (slStringLiteral))))
+                          (slStringLiteral
+                            (stringFragment)))))
                     (falseLiteral))))))
           (objectElement
             (methodCallExpr
@@ -155,7 +162,8 @@ examples {
                     (intLiteral)
                     (trueLiteral))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -166,13 +174,15 @@ examples {
           (objectElement
             (binaryExpr
               (trueLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (binaryExpr
               (trueLiteral)
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (stringFragment))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -184,7 +194,8 @@ examples {
                     (falseLiteral)
                     (throwExpr
                       (parenthesizedExpr
-                        (slStringLiteral))))))))
+                        (slStringLiteral
+                          (stringFragment)))))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -196,7 +207,8 @@ examples {
                     (parenthesizedExpr
                       (throwExpr
                         (parenthesizedExpr
-                          (slStringLiteral))))
+                          (slStringLiteral
+                            (stringFragment)))))
                     (trueLiteral))))))
           (objectElement
             (methodCallExpr
@@ -209,7 +221,8 @@ examples {
                     (intLiteral)
                     (trueLiteral))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (unaryExpr
@@ -220,7 +233,8 @@ examples {
               (variableExpr
                 (identifier))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -239,7 +253,8 @@ examples {
               (falseLiteral)
               (falseLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -258,7 +273,8 @@ examples {
               (falseLiteral)
               (falseLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -377,7 +393,8 @@ examples {
                             (identifier)))
                         (objectBody))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -416,4 +433,5 @@ examples {
                     (argumentList
                       (throwExpr
                         (parenthesizedExpr
-                          (slStringLiteral))))))))))))))
+                          (slStringLiteral
+                            (stringFragment)))))))))))))))

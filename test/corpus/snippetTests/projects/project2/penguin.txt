@@ -15,7 +15,8 @@ bird: Bird = new {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -26,10 +27,12 @@ bird: Bird = new {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))))))
+              (slStringLiteral
+                (stringFragment)))))))))

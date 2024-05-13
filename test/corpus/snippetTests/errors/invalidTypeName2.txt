@@ -18,7 +18,8 @@ listing = new x.y.Listing {}
         (objectProperty
           (identifier)
           (importExpr
-            (stringConstant))))))
+            (stringConstant
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (newExpr

@@ -27,7 +27,8 @@ res2 = new Person {
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (whenGenerator
         (binaryExpr
           (binaryExpr
@@ -37,7 +38,8 @@ res2 = new Person {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (whenGenerator
         (binaryExpr
           (binaryExpr
@@ -47,10 +49,12 @@ res2 = new Person {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (clazz
     (identifier)
     (classBody
@@ -60,7 +64,8 @@ res2 = new Person {
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -84,7 +89,8 @@ res2 = new Person {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (whenGenerator
           (binaryExpr
             (binaryExpr

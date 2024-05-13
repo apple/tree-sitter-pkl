@@ -140,7 +140,8 @@ e3 = person4_3 == person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -151,7 +152,8 @@ e3 = person4_3 == person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -165,7 +167,8 @@ e3 = person4_3 == person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -173,7 +176,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -190,7 +194,8 @@ e3 = person4_3 == person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -201,7 +206,8 @@ e3 = person4_3 == person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -215,7 +221,8 @@ e3 = person4_3 == person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -226,10 +233,12 @@ e3 = person4_3 == person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -248,7 +257,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -383,14 +393,16 @@ e3 = person4_3 == person4_1
         (intLiteral))
       (objectProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (modifier)
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (intLiteral))))
@@ -420,7 +432,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -433,7 +446,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectLiteral
         (parenthesizedExpr
           (variableExpr
@@ -449,7 +463,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectLiteral
         (parenthesizedExpr
           (variableExpr
@@ -457,7 +472,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -468,7 +484,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectLiteral
         (parenthesizedExpr
           (variableExpr
@@ -487,7 +504,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -500,7 +518,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -513,7 +532,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (clazz
@@ -521,7 +541,8 @@ e3 = person4_3 == person4_1
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -540,7 +561,8 @@ e3 = person4_3 == person4_1
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -587,7 +609,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -595,7 +618,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -606,7 +630,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -614,7 +639,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -628,7 +654,8 @@ e3 = person4_3 == person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -636,7 +663,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -653,7 +681,8 @@ e3 = person4_3 == person4_1
             (intLiteral))
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -661,42 +690,8 @@ e3 = person4_3 == person4_1
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))
-          (objectProperty
-            (identifier)
-            (intLiteral))))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (newExpr
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (objectBody
-          (objectProperty
-            (identifier)
-            (variableExpr
-              (identifier)))
-          (objectProperty
-            (modifier)
-            (identifier)
-            (intLiteral))
-          (objectProperty
-            (identifier)
-            (variableExpr
-              (identifier)))
-          (objectProperty
-            (modifier)
-            (identifier)
-            (slStringLiteral))))
-      (newExpr
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (objectBody
-          (objectProperty
-            (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -723,7 +718,23 @@ e3 = person4_3 == person4_1
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (slStringLiteral
+              (stringFragment)))
+          (objectProperty
+            (identifier)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
       (newExpr
         (type
           (qualifiedIdentifier
@@ -744,7 +755,30 @@ e3 = person4_3 == person4_1
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (variableExpr
+              (identifier)))
+          (objectProperty
+            (modifier)
+            (identifier)
+            (intLiteral))
+          (objectProperty
+            (identifier)
+            (variableExpr
+              (identifier)))
+          (objectProperty
+            (modifier)
+            (identifier)
+            (slStringLiteral
+              (stringFragment)))))))
   (clazz
     (identifier)
     (classBody
@@ -778,7 +812,8 @@ e3 = person4_3 == person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -792,13 +827,15 @@ e3 = person4_3 == person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (modifier)
     (identifier)
@@ -816,7 +853,8 @@ e3 = person4_3 == person4_1
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -885,7 +923,8 @@ e3 = person4_3 == person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -899,13 +938,15 @@ e3 = person4_3 == person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (modifier)
     (identifier)
@@ -916,16 +957,19 @@ e3 = person4_3 == person4_1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr

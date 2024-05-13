@@ -25,7 +25,8 @@ p: Bird = new {
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -38,7 +39,8 @@ p: Bird = new {
         (objectProperty
           (modifier)
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (variableExpr

@@ -46,9 +46,11 @@ facts {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -60,7 +62,8 @@ facts {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -90,7 +93,8 @@ facts {
                 (identifier))
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -103,15 +107,18 @@ facts {
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))
+                      (slStringLiteral
+                        (stringFragment))))
                   (variableExpr
                     (identifier)))
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -124,9 +131,11 @@ facts {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))
+                    (slStringLiteral
+                      (stringFragment)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -138,7 +147,8 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -149,9 +159,11 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -163,7 +175,8 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -174,9 +187,11 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (binaryExpr
@@ -208,7 +223,8 @@ facts {
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -219,7 +235,8 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -231,4 +248,5 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)))))))))
+                (slStringLiteral
+                  (stringFragment))))))))))

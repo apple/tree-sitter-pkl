@@ -85,7 +85,8 @@ res2 = parser.parseAll("""
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -118,7 +119,8 @@ res2 = parser.parseAll("""
                 (binaryExpr
                   (variableExpr
                     (identifier))
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (stringFragment)))))
             (objectEntry
               (variableExpr
                 (identifier))
@@ -155,7 +157,8 @@ res2 = parser.parseAll("""
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral))))))
+                      (slStringLiteral
+                        (stringFragment)))))))
             (objectEntry
               (variableExpr
                 (identifier))
@@ -169,7 +172,8 @@ res2 = parser.parseAll("""
                       (identifier)))
                   (objectBody
                     (objectElement
-                      (slStringLiteral)))))))))))
+                      (slStringLiteral
+                        (stringFragment))))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -177,7 +181,8 @@ res2 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -185,4 +190,5 @@ res2 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral)))))
+        (mlStringLiteral
+          (stringFragment))))))

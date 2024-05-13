@@ -16,6 +16,8 @@ amends "foo.pkl"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (extendsOrAmendsClause
-      (stringConstant))))
+      (stringConstant
+        (stringFragment)))))

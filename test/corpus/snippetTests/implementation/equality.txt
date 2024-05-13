@@ -30,7 +30,8 @@ facts {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classMethod
     (methodHeader
       (modifier)
@@ -49,7 +50,8 @@ facts {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -104,7 +106,8 @@ facts {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral))))
+                      (slStringLiteral
+                        (stringFragment)))))
                 (newExpr
                   (type
                     (qualifiedIdentifier
@@ -112,7 +115,8 @@ facts {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectElement
             (unaryExpr
               (methodCallExpr
@@ -125,7 +129,8 @@ facts {
                     (objectBody
                       (objectProperty
                         (identifier)
-                        (slStringLiteral))))
+                        (slStringLiteral
+                          (stringFragment)))))
                   (newExpr
                     (type
                       (qualifiedIdentifier
@@ -133,20 +138,25 @@ facts {
                     (objectBody
                       (objectProperty
                         (identifier)
-                        (slStringLiteral))))))))
+                        (slStringLiteral
+                          (stringFragment)))))))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (unaryExpr
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))
           (objectElement
             (methodCallExpr
               (identifier)

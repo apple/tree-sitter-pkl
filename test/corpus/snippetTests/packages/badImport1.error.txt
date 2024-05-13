@@ -12,4 +12,5 @@ res = import("package://localhost:12110/foo#/bar.pkl")
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant))))
+      (stringConstant
+        (stringFragment)))))

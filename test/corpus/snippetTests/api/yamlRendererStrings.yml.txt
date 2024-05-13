@@ -120,184 +120,284 @@ output {
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment
+        (escapeSequence))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
+  (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
+  (lineComment)
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody
@@ -309,52 +409,68 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (mlStringLiteral))))))))
+                (mlStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody

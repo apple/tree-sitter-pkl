@@ -75,9 +75,11 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -94,7 +96,8 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -102,7 +105,8 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -110,7 +114,8 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -118,7 +123,77 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (stringFragment))))))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (stringFragment))))))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (stringFragment))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment)))))
   (lineComment)
   (classProperty
     (identifier)
@@ -135,6 +210,68 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
             (identifier)
             (argumentList
               (slStringLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (stringFragment))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (mlStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (mlStringLiteral
+          (stringFragment)))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (mlStringLiteral
+          (stringFragment)))))
   (lineComment)
   (classProperty
     (identifier)
@@ -150,124 +287,5 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
               (identifier))
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (methodCallExpr
-            (variableExpr
-              (identifier))
-            (identifier)
-            (argumentList
-              (slStringLiteral)))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (slStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (slStringLiteral))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (methodCallExpr
-            (variableExpr
-              (identifier))
-            (identifier)
-            (argumentList
-              (slStringLiteral)))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (methodCallExpr
-            (variableExpr
-              (identifier))
-            (identifier)
-            (argumentList
-              (slStringLiteral)))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (slStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (slStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (mlStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (mlStringLiteral))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (mlStringLiteral))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (methodCallExpr
-            (variableExpr
-              (identifier))
-            (identifier)
-            (argumentList
-              (slStringLiteral))))))))
+              (slStringLiteral
+                (stringFragment)))))))))

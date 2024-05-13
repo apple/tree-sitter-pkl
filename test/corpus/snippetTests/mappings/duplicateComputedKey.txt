@@ -20,7 +20,8 @@ res2 = test.catch(() -> new Mapping {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -36,15 +37,19 @@ res2 = test.catch(() -> new Mapping {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))
                 (intLiteral))))))))
   (classProperty
     (identifier)
@@ -62,14 +67,19 @@ res2 = test.catch(() -> new Mapping {
             (objectBody
               (objectEntry
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))
                 (intLiteral)))))))))

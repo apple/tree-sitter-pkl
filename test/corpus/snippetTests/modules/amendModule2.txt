@@ -14,7 +14,8 @@ pigeon = new Person {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (lineComment)
   (classProperty
     (identifier)
@@ -25,4 +26,5 @@ pigeon = new Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (stringFragment)))))))

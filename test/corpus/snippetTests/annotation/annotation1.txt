@@ -88,14 +88,16 @@ class Ann3 extends Annotation {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (annotation
       (qualifiedIdentifier
         (identifier))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))))
@@ -115,14 +117,16 @@ class Ann3 extends Annotation {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (annotation
       (qualifiedIdentifier
         (identifier))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))))
@@ -140,21 +144,24 @@ class Ann3 extends Annotation {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (annotation
           (qualifiedIdentifier
             (identifier))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectProperty
               (identifier)
               (intLiteral))))
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (lineComment)
       (lineComment)
       (classProperty
@@ -167,14 +174,16 @@ class Ann3 extends Annotation {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (annotation
           (qualifiedIdentifier
             (identifier))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectProperty
               (identifier)
               (intLiteral))))
@@ -183,7 +192,8 @@ class Ann3 extends Annotation {
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (lineComment)
   (lineComment)
   (classMethod
@@ -196,21 +206,24 @@ class Ann3 extends Annotation {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (annotation
       (qualifiedIdentifier
         (identifier))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))))
     (methodHeader
       (identifier)
       (parameterList))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (lineComment)
   (lineComment)
   (classProperty
@@ -223,14 +236,16 @@ class Ann3 extends Annotation {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (annotation
       (qualifiedIdentifier
         (identifier))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))))
@@ -239,7 +254,8 @@ class Ann3 extends Annotation {
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (clazz
     (identifier)
     (classExtendsClause

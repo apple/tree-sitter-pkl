@@ -11,4 +11,5 @@ res = read*(".../foo/bar.txt")
     (identifier)
     (readGlobExpr
       (parenthesizedExpr
-        (slStringLiteral)))))
+        (slStringLiteral
+          (stringFragment))))))

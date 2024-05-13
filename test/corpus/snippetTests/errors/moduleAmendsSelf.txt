@@ -9,4 +9,5 @@ amends "moduleAmendsSelf.pkl"
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant))))
+      (stringConstant
+        (stringFragment)))))

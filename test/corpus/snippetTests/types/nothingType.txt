@@ -17,7 +17,8 @@ myValue: String = throws()
         (type)))
     (throwExpr
       (parenthesizedExpr
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (typeAnnotation

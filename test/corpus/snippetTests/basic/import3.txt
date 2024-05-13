@@ -17,14 +17,17 @@ foo {
       (objectProperty
         (identifier)
         (importExpr
-          (stringConstant)))
+          (stringConstant
+            (stringFragment))))
       (objectProperty
         (identifier)
         (importExpr
-          (stringConstant)))
+          (stringConstant
+            (stringFragment))))
       (objectProperty
         (identifier)
         (propertyCallExpr
           (importExpr
-            (stringConstant))
+            (stringConstant
+              (stringFragment)))
           (identifier))))))

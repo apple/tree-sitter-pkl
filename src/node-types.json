@@ -2171,6 +2171,10 @@
         {
           "type": "interpolationExpr",
           "named": true
+        },
+        {
+          "type": "stringFragment",
+          "named": true
         }
       ]
     }
@@ -4132,6 +4136,10 @@
         {
           "type": "interpolationExpr",
           "named": true
+        },
+        {
+          "type": "stringFragment",
+          "named": true
         }
       ]
     }
@@ -4142,6 +4150,25 @@
     "fields": {},
     "children": {
       "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escapeSequence",
+          "named": true
+        },
+        {
+          "type": "stringFragment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stringFragment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
       "required": false,
       "types": [
         {

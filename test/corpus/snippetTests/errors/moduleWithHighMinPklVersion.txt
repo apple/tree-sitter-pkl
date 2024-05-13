@@ -17,7 +17,8 @@ x = 1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (moduleClause
       (modifier)
       (qualifiedIdentifier

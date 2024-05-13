@@ -56,7 +56,8 @@ res8 = (res7) {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody

@@ -111,7 +111,8 @@ res11 = (res1) { when (false) { [0] = 0 } }
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (newExpr
@@ -126,10 +127,12 @@ res11 = (res1) { when (false) { [0] = 0 } }
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -145,14 +148,17 @@ res11 = (res1) { when (false) { [0] = 0 } }
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (binaryExpr
             (subscriptExpr
               (thisExpr)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -168,14 +174,17 @@ res11 = (res1) { when (false) { [0] = 0 } }
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (binaryExpr
             (subscriptExpr
               (thisExpr)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -191,7 +200,8 @@ res11 = (res1) { when (false) { [0] = 0 } }
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -207,14 +217,16 @@ res11 = (res1) { when (false) { [0] = 0 } }
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (newExpr
             (type
               (qualifiedIdentifier
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (newExpr
                   (type
                     (qualifiedIdentifier
@@ -227,10 +239,12 @@ res11 = (res1) { when (false) { [0] = 0 } }
                           (intLiteral)
                           (intLiteral))))
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral)))))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (newExpr
                   (type
                     (qualifiedIdentifier
@@ -243,10 +257,12 @@ res11 = (res1) { when (false) { [0] = 0 } }
                           (intLiteral)
                           (intLiteral))))
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral))))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (newExpr
             (type
               (qualifiedIdentifier
@@ -259,7 +275,8 @@ res11 = (res1) { when (false) { [0] = 0 } }
                     (intLiteral)
                     (intLiteral))))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (newExpr
                   (type
                     (qualifiedIdentifier
@@ -272,22 +289,26 @@ res11 = (res1) { when (false) { [0] = 0 } }
                           (intLiteral)
                           (intLiteral))))
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral)))))))))))
   (classProperty
     (identifier)
     (subscriptExpr
       (variableExpr
         (identifier))
-      (slStringLiteral)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (subscriptExpr
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral))
-      (slStringLiteral)))
+        (slStringLiteral
+          (stringFragment)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (subscriptExpr
@@ -295,17 +316,22 @@ res11 = (res1) { when (false) { [0] = 0 } }
         (subscriptExpr
           (variableExpr
             (identifier))
-          (slStringLiteral))
-        (slStringLiteral))
-      (slStringLiteral)))
+          (slStringLiteral
+            (stringFragment)))
+        (slStringLiteral
+          (stringFragment)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (subscriptExpr
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral))
-      (slStringLiteral)))
+        (slStringLiteral
+          (stringFragment)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (subscriptExpr
@@ -313,23 +339,29 @@ res11 = (res1) { when (false) { [0] = 0 } }
         (subscriptExpr
           (variableExpr
             (identifier))
-          (slStringLiteral))
-        (slStringLiteral))
-      (slStringLiteral)))
+          (slStringLiteral
+            (stringFragment)))
+        (slStringLiteral
+          (stringFragment)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (subscriptExpr
       (variableExpr
         (identifier))
-      (slStringLiteral)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (subscriptExpr
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral))
-      (slStringLiteral)))
+        (slStringLiteral
+          (stringFragment)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (subscriptExpr
@@ -337,9 +369,12 @@ res11 = (res1) { when (false) { [0] = 0 } }
         (subscriptExpr
           (variableExpr
             (identifier))
-          (slStringLiteral))
-        (slStringLiteral))
-      (slStringLiteral)))
+          (slStringLiteral
+            (stringFragment)))
+        (slStringLiteral
+          (stringFragment)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -352,7 +387,8 @@ res11 = (res1) { when (false) { [0] = 0 } }
           (subscriptExpr
             (variableExpr
               (identifier))
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (newExpr
@@ -367,7 +403,8 @@ res11 = (res1) { when (false) { [0] = 0 } }
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (methodCallExpr
             (identifier)
             (argumentList
@@ -375,11 +412,13 @@ res11 = (res1) { when (false) { [0] = 0 } }
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (binaryExpr
             (subscriptExpr
               (thisExpr)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (methodCallExpr
               (identifier)
               (argumentList
@@ -387,7 +426,8 @@ res11 = (res1) { when (false) { [0] = 0 } }
                 (intLiteral)
                 (intLiteral)))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -403,10 +443,12 @@ res11 = (res1) { when (false) { [0] = 0 } }
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (binaryExpr
             (subscriptExpr
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (methodCallExpr
               (identifier)
               (argumentList
@@ -414,10 +456,12 @@ res11 = (res1) { when (false) { [0] = 0 } }
                 (intLiteral)
                 (intLiteral)))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (binaryExpr
             (subscriptExpr
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -451,13 +495,16 @@ res11 = (res1) { when (false) { [0] = 0 } }
                   (identifier)
                   (intLiteral))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody)))))
   (classProperty
     (identifier)
@@ -491,13 +538,16 @@ res11 = (res1) { when (false) { [0] = 0 } }
                   (identifier)
                   (intLiteral))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
@@ -516,13 +566,16 @@ res11 = (res1) { when (false) { [0] = 0 } }
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)

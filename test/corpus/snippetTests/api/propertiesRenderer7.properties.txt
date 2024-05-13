@@ -52,28 +52,44 @@ local function countBackslashes(value: String): Int = value.chars.count((c) -> c
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))))
   (lineComment)
   (lineComment)
   (classProperty
@@ -183,68 +199,116 @@ local function countBackslashes(value: String): Int = value.chars.count((c) -> c
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)
-      (escapeSequence)))
+      (stringFragment)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)
+      (stringFragment
+        (escapeSequence))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -483,4 +547,5 @@ local function countBackslashes(value: String): Int = value.chars.count((c) -> c
             (variableExpr
               (identifier))
             (slStringLiteral
-              (escapeSequence))))))))
+              (stringFragment
+                (escapeSequence)))))))))

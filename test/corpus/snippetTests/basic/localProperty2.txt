@@ -27,7 +27,8 @@ barX = test.catch(() -> bar.x)
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody

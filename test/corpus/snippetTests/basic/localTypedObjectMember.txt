@@ -34,7 +34,8 @@ foo {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody
@@ -62,7 +63,8 @@ foo {
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (modifier)
         (identifier)
@@ -77,8 +79,10 @@ foo {
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))
       (objectProperty
         (modifier)
         (identifier)
@@ -93,7 +97,8 @@ foo {
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))
       (objectProperty
         (modifier)
@@ -216,7 +221,8 @@ foo {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (stringFragment))))))))
       (objectProperty
         (identifier)
         (methodCallExpr
@@ -238,8 +244,10 @@ foo {
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectProperty
         (identifier)
         (methodCallExpr
@@ -255,5 +263,6 @@ foo {
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral))))))))))))

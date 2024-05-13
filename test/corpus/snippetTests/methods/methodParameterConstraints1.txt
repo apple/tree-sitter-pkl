@@ -181,8 +181,10 @@ res4 = x.nullable(null)
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -193,9 +195,11 @@ res4 = x.nullable(null)
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral)
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -204,7 +208,8 @@ res4 = x.nullable(null)
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr

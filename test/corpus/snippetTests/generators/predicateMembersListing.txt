@@ -95,7 +95,8 @@ res12 = (people) {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -109,7 +110,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -118,7 +120,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -127,7 +130,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectProperty
                 (identifier)
                 (intLiteral))))))))
@@ -142,7 +146,8 @@ res12 = (people) {
           (binaryExpr
             (variableExpr
               (identifier))
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectBody
             (objectProperty
               (identifier)
@@ -162,12 +167,14 @@ res12 = (people) {
                   (identifier))
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))))
               (variableExpr
                 (identifier)))
             (identifier)
             (argumentList
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (objectProperty
               (identifier)
@@ -204,7 +211,8 @@ res12 = (people) {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (newExpr
             (objectBody
@@ -247,7 +255,8 @@ res12 = (people) {
                         (binaryExpr
                           (variableExpr
                             (identifier))
-                          (slStringLiteral))
+                          (slStringLiteral
+                            (stringFragment)))
                         (objectBody
                           (objectProperty
                             (identifier)
@@ -286,7 +295,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -294,7 +304,8 @@ res12 = (people) {
           (binaryExpr
             (variableExpr
               (identifier))
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectBody
             (objectProperty
               (identifier)
@@ -310,7 +321,8 @@ res12 = (people) {
           (binaryExpr
             (variableExpr
               (identifier))
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectBody
             (objectProperty
               (identifier)
@@ -320,7 +332,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectProperty
                 (identifier)
                 (intLiteral))))))))
@@ -349,7 +362,8 @@ res12 = (people) {
                 (binaryExpr
                   (variableExpr
                     (identifier))
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment)))
                 (objectBody
                   (objectProperty
                     (identifier)
@@ -374,7 +388,8 @@ res12 = (people) {
                     (identifier))
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (stringFragment))))
                 (objectBody
                   (objectProperty
                     (identifier)
@@ -383,7 +398,8 @@ res12 = (people) {
                 (binaryExpr
                   (variableExpr
                     (identifier))
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment)))
                 (objectBody
                   (objectProperty
                     (identifier)
@@ -402,8 +418,10 @@ res12 = (people) {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (objectPredicate
               (binaryExpr
@@ -432,7 +450,8 @@ res12 = (people) {
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectBody
                 (objectProperty
                   (identifier)
@@ -446,7 +465,8 @@ res12 = (people) {
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectBody
                 (objectProperty
                   (identifier)

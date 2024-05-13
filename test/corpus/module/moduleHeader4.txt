@@ -19,13 +19,16 @@ import "bar.pkl"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (moduleClause
       (qualifiedIdentifier
         (identifier)
         (identifier)
         (identifier)))
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (importClause
-    (stringConstant)))
+    (stringConstant
+      (stringFragment))))

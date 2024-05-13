@@ -47,11 +47,13 @@ bazCall2ShouldNotWarn = new Bar {}.baz()
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classMethod
         (methodHeader
           (identifier)
@@ -80,7 +82,8 @@ bazCall2ShouldNotWarn = new Bar {}.baz()
           (methodCallExpr
             (identifier)
             (argumentList))
-          (slStringLiteral)))
+          (slStringLiteral
+            (stringFragment))))
       (classMethod
         (methodHeader
           (identifier)

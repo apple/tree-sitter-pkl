@@ -24,7 +24,8 @@ aFoo: Foo
     (identifier)
     (throwExpr
       (parenthesizedExpr
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (modifier)
     (identifier)

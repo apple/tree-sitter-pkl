@@ -28,18 +28,24 @@ output {
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (mlStringLiteral
-      (escapeSequence)))
+      (stringFragment)
+      (escapeSequence)
+      (stringFragment)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (mlStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (stringFragment
+        (escapeSequence))
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody

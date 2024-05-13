@@ -30,7 +30,8 @@ res2 = res1 == new Person { name = "Barn Owl" }
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -54,4 +55,5 @@ res2 = res1 == new Person { name = "Barn Owl" }
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral)))))))
+            (slStringLiteral
+              (stringFragment))))))))

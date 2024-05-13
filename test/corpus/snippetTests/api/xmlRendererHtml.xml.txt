@@ -43,7 +43,8 @@ output {
 (module
   (lineComment)
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classMethod
     (methodHeader
       (identifier)
@@ -53,7 +54,8 @@ output {
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classMethod
     (methodHeader
       (identifier)
@@ -63,7 +65,8 @@ output {
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classMethod
     (methodHeader
       (identifier)
@@ -73,7 +76,8 @@ output {
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classMethod
     (methodHeader
       (identifier)
@@ -85,7 +89,8 @@ output {
             (identifier))
           (identifier)
           (argumentList
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectBody
         (objectProperty
           (identifier)
@@ -111,11 +116,14 @@ output {
     (identifier)
     (objectBody
       (objectElement
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectElement
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectElement
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (objectBody
@@ -126,7 +134,8 @@ output {
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (objectLiteral
               (parenthesizedExpr
@@ -135,7 +144,8 @@ output {
                   (argumentList)))
               (objectBody
                 (objectElement
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment)))
                 (objectElement
                   (propertyCallExpr
                     (methodCallExpr
@@ -145,7 +155,8 @@ output {
                       (argumentList))
                     (identifier)))
                 (objectElement
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment)))
                 (objectElement
                   (objectLiteral
                     (parenthesizedExpr
@@ -154,9 +165,11 @@ output {
                         (argumentList)))
                     (objectBody
                       (objectElement
-                        (slStringLiteral)))))
+                        (slStringLiteral
+                          (stringFragment))))))
                 (objectElement
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (stringFragment))))))
           (objectElement
             (objectLiteral
               (parenthesizedExpr
@@ -197,4 +210,5 @@ output {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))))))
+              (slStringLiteral
+                (stringFragment)))))))))

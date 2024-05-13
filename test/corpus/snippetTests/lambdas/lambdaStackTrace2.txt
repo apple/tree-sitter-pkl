@@ -24,7 +24,8 @@ res1 = f1.apply()
                   (parameterList)
                   (throwExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))
+                      (slStringLiteral
+                        (stringFragment))))))
               (identifier)
               (argumentList))))
         (identifier)

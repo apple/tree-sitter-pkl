@@ -41,7 +41,8 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                   (identifier)))
               (binaryExpr
                 (thisExpr)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (isExpr
           (thisExpr)
           (type
@@ -50,7 +51,8 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -65,14 +67,16 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                   (identifier)))
               (binaryExpr
                 (thisExpr)
-                (slStringLiteral)))
+                (slStringLiteral
+                  (stringFragment))))
             (type
               (type
                 (qualifiedIdentifier
                   (identifier)))
               (binaryExpr
                 (thisExpr)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (isExpr
           (thisExpr)
           (type
@@ -84,8 +88,10 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -105,7 +111,8 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                         (identifier)))
                     (binaryExpr
                       (thisExpr)
-                      (slStringLiteral)))))
+                      (slStringLiteral
+                        (stringFragment))))))
               (isExpr
                 (thisExpr)
                 (type
@@ -122,11 +129,13 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)))
+            (slStringLiteral
+              (stringFragment))))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -140,7 +149,8 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                 (identifier)))
             (binaryExpr
               (thisExpr)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (binaryExpr
               (methodCallExpr
                 (parenthesizedExpr
@@ -149,7 +159,8 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                     (thisExpr)))
                 (identifier)
                 (argumentList))
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (binaryExpr
               (parenthesizedExpr
                 (letExpr
@@ -158,11 +169,13 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                   (thisExpr)
                   (variableExpr
                     (identifier))))
-              (slStringLiteral))))))
+              (slStringLiteral
+                (stringFragment)))))))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (newExpr
@@ -194,7 +207,8 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                       (identifier)))
                   (binaryExpr
                     (thisExpr)
-                    (slStringLiteral)))))
+                    (slStringLiteral
+                      (stringFragment))))))
             (isExpr
               (thisExpr)
               (type
@@ -203,7 +217,8 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -218,14 +233,16 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                       (identifier)))
                   (binaryExpr
                     (thisExpr)
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (stringFragment))))
                 (type
                   (type
                     (qualifiedIdentifier
                       (identifier)))
                   (binaryExpr
                     (thisExpr)
-                    (slStringLiteral)))))
+                    (slStringLiteral
+                      (stringFragment))))))
             (isExpr
               (thisExpr)
               (type
@@ -237,8 +254,10 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
               (identifier)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -258,7 +277,8 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                             (identifier)))
                         (binaryExpr
                           (thisExpr)
-                          (slStringLiteral)))))
+                          (slStringLiteral
+                            (stringFragment))))))
                   (isExpr
                     (thisExpr)
                     (type
@@ -275,11 +295,13 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)))
+                (slStringLiteral
+                  (stringFragment))))
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classMethod
     (methodHeader
       (identifier)
@@ -303,7 +325,8 @@ function fun(x: List<Set<String(this == "one")>(this is Set)>(this is List)) = x
                               (identifier)))
                           (binaryExpr
                             (thisExpr)
-                            (slStringLiteral)))))
+                            (slStringLiteral
+                              (stringFragment))))))
                     (isExpr
                       (thisExpr)
                       (type

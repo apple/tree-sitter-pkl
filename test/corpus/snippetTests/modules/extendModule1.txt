@@ -22,7 +22,8 @@ parrot: Teacher = new Teacher {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (clazz
     (identifier)
     (classExtendsClause
@@ -52,7 +53,8 @@ parrot: Teacher = new Teacher {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -66,11 +68,14 @@ parrot: Teacher = new Teacher {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral))))))))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment)))))))))

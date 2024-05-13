@@ -58,7 +58,8 @@ res15 = kick(() -> multiplier.mult.apply(2, 3))
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (intLiteral))))

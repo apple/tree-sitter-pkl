@@ -13,10 +13,12 @@ res3 {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral)))))
+        (slStringLiteral
+          (stringFragment))))))

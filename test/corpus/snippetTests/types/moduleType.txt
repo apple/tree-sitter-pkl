@@ -18,7 +18,8 @@ res3: Listing<someModule> = new {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -29,7 +30,8 @@ res3: Listing<someModule> = new {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (isExpr

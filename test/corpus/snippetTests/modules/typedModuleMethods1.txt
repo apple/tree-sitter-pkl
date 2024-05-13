@@ -29,9 +29,11 @@ res9 = test.catch(() -> library.say(42))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classMethod
     (methodHeader
       (identifier)
@@ -44,7 +46,8 @@ res9 = test.catch(() -> library.say(42))
           (unaryExpr
             (variableExpr
               (identifier))))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classMethod
     (methodHeader
       (identifier)
@@ -137,21 +140,26 @@ res9 = test.catch(() -> library.say(42))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -159,7 +167,8 @@ res9 = test.catch(() -> library.say(42))
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -185,7 +194,8 @@ res9 = test.catch(() -> library.say(42))
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))))))
   (classProperty
     (identifier)
@@ -200,7 +210,8 @@ res9 = test.catch(() -> library.say(42))
             (identifier)
             (argumentList
               (intLiteral)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (methodCallExpr

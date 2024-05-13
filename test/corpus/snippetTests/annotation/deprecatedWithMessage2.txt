@@ -23,7 +23,8 @@ res2b = List(25, 26, 27).map((n) -> f2(n))
       (qualifiedIdentifier
         (identifier)))
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classMethod
     (annotation
       (qualifiedIdentifier
@@ -31,7 +32,8 @@ res2b = List(25, 26, 27).map((n) -> f2(n))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (methodHeader
       (identifier)
       (parameterList

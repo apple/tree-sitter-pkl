@@ -19,14 +19,16 @@ function say2(msg) = super.say(msg) + super.say(msg)
       (qualifiedIdentifier
         (identifier)))
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (modifier)
     (identifier)
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classMethod
     (methodHeader
       (identifier)
@@ -34,7 +36,8 @@ function say2(msg) = super.say(msg) + super.say(msg)
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classMethod
     (methodHeader
       (identifier)

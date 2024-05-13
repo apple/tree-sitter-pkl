@@ -78,7 +78,8 @@ res24c = test.catch(() -> bad.res24c)
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -137,7 +138,8 @@ res24c = test.catch(() -> bad.res24c)
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -206,7 +208,8 @@ res24c = test.catch(() -> bad.res24c)
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (typeAnnotation

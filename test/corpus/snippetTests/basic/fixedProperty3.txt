@@ -13,11 +13,13 @@ fixed res4: String = "aloha"
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -25,4 +27,5 @@ fixed res4: String = "aloha"
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral)))
+    (slStringLiteral
+      (stringFragment))))

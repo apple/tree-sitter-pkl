@@ -114,7 +114,8 @@ nullish: Null
     (identifier)
     (typeAnnotation
       (type
-        (stringConstant))))
+        (stringConstant
+          (stringFragment)))))
   (classProperty
     (identifier)
     (typeAnnotation

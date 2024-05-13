@@ -12,4 +12,5 @@ res = import("package://localhost:12110/bar/baz@1.0.0")
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant))))
+      (stringConstant
+        (stringFragment)))))

@@ -330,11 +330,14 @@ res6 = new Defaults {}
           (type
             (type
               (type
-                (stringConstant))
+                (stringConstant
+                  (stringFragment)))
               (type
-                (stringConstant)))
+                (stringConstant
+                  (stringFragment))))
             (type
-              (stringConstant)))))))
+              (stringConstant
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -363,16 +366,20 @@ res6 = new Defaults {}
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (newExpr
@@ -386,7 +393,8 @@ res6 = new Defaults {}
             (parameterList
               (typedIdentifier
                 (identifier)))
-            (slStringLiteral)))
+            (slStringLiteral
+              (stringFragment))))
         (objectProperty
           (identifier)
           (functionLiteral
@@ -396,7 +404,8 @@ res6 = new Defaults {}
             (floatLiteral)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (newExpr
@@ -406,7 +415,8 @@ res6 = new Defaults {}
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (methodCallExpr
@@ -458,8 +468,10 @@ res6 = new Defaults {}
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment)))))
         (objectProperty
           (identifier)
           (methodCallExpr
@@ -478,20 +490,24 @@ res6 = new Defaults {}
             (identifier)
             (argumentList
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))
               (methodCallExpr
                 (identifier)
                 (argumentList
                   (intLiteral)
                   (intLiteral)
                   (intLiteral)))
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (methodCallExpr
                 (identifier)
                 (argumentList
@@ -501,8 +517,10 @@ res6 = new Defaults {}
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))))))
         (objectProperty
           (identifier)
           (propertyCallExpr

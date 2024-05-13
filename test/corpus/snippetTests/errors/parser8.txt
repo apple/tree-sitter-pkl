@@ -11,4 +11,5 @@ res1 = """
 (module
   (classProperty
     (identifier)
-    (mlStringLiteral)))
+    (mlStringLiteral
+      (stringFragment))))

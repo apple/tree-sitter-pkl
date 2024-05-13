@@ -10,7 +10,8 @@ class test // duplicate
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier))
   (lineComment))

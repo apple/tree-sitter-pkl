@@ -21,7 +21,8 @@ res1 =
           (identifier))
         (throwExpr
           (parenthesizedExpr
-            (slStringLiteral)))
+            (slStringLiteral
+              (stringFragment))))
         (binaryExpr
           (variableExpr
             (identifier))

@@ -44,9 +44,11 @@ local class C {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (modifier)
@@ -64,7 +66,8 @@ local class C {
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -126,7 +129,8 @@ local class C {
               (type
                 (qualifiedIdentifier
                   (identifier))))
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
             (variableExpr
@@ -189,7 +193,8 @@ local class C {
                   (type
                     (qualifiedIdentifier
                       (identifier))))
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectProperty
                 (identifier)
                 (variableExpr

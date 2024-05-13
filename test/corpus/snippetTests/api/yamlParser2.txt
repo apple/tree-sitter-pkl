@@ -100,9 +100,11 @@ res15 = parser.parseAll("""
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -119,7 +121,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (lineComment)
   (classProperty
     (identifier)
@@ -128,7 +131,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -136,7 +140,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -144,7 +149,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -152,7 +158,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -175,7 +182,8 @@ res15 = parser.parseAll("""
               (identifier))
             (identifier)
             (argumentList
-              (mlStringLiteral)))))))
+              (mlStringLiteral
+                (stringFragment))))))))
   (lineComment)
   (classProperty
     (identifier)
@@ -192,7 +200,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (lineComment)
   (classProperty
     (identifier)
@@ -201,7 +210,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (lineComment)
   (classProperty
     (identifier)
@@ -210,7 +220,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (lineComment)
   (classProperty
     (identifier)
@@ -219,7 +230,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -227,7 +239,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -235,7 +248,8 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -243,4 +257,5 @@ res15 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral)))))
+        (mlStringLiteral
+          (stringFragment))))))

@@ -24,7 +24,8 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody))
@@ -42,7 +43,8 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
               (intLiteral))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (trueLiteral))))))))
   (classProperty
     (identifier)
@@ -59,7 +61,8 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (trueLiteral))))))))
   (classProperty
     (identifier)
@@ -77,7 +80,8 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
                 (argumentList)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (trueLiteral))))))))
   (classProperty
     (identifier)
@@ -94,7 +98,8 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (trueLiteral))))))))
   (classProperty
     (identifier)
@@ -111,7 +116,8 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (trueLiteral))))))))
   (classProperty
     (identifier)
@@ -145,8 +151,10 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
             (objectBody
               (objectEntry
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))
                 (trueLiteral))))))))
   (classProperty
     (identifier)
@@ -164,8 +172,10 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
             (objectBody
               (objectEntry
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))
                 (trueLiteral))))))))
   (classProperty
     (identifier)
@@ -184,8 +194,10 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
             (objectBody
               (objectEntry
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))
                 (trueLiteral))))))))
   (classProperty
     (identifier)
@@ -203,8 +215,10 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
             (objectBody
               (objectEntry
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))
                 (trueLiteral))))))))
   (classProperty
     (identifier)
@@ -222,8 +236,10 @@ res12 = test.catch(() -> new Listing { [0 + 0] = true })
             (objectBody
               (objectEntry
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))
                 (trueLiteral))))))))
   (classProperty
     (identifier)

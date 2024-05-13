@@ -21,9 +21,11 @@ res10 = base != base2
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant)
+    (stringConstant
+      (stringFragment))
     (identifier))
   (classProperty
     (identifier)

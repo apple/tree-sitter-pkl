@@ -77,7 +77,8 @@ res7 = test.catch(() ->
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody
@@ -194,24 +195,30 @@ res7 = test.catch(() ->
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral))))
         (objectProperty
           (identifier)
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral)))))
         (objectProperty
@@ -219,19 +226,24 @@ res7 = test.catch(() ->
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))))))))
   (classProperty
@@ -246,13 +258,16 @@ res7 = test.catch(() ->
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (unaryExpr
                 (intLiteral))))))))
   (classProperty
@@ -272,7 +287,8 @@ res7 = test.catch(() ->
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (stringFragment)))))
             (identifier))))))
   (classProperty
     (identifier)
@@ -294,8 +310,10 @@ res7 = test.catch(() ->
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)
-                      (slStringLiteral))))))
+                      (slStringLiteral
+                        (stringFragment))
+                      (slStringLiteral
+                        (stringFragment)))))))
             (identifier))))))
   (classProperty
     (identifier)
@@ -340,11 +358,14 @@ res7 = test.catch(() ->
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral)
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral)
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral))))))
             (identifier))))))
   (classProperty
@@ -367,11 +388,14 @@ res7 = test.catch(() ->
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral)
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral)
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral))))))
             (identifier))))))
   (classProperty
@@ -397,10 +421,12 @@ res7 = test.catch(() ->
                       (slStringLiteral)
                       (unaryExpr
                         (intLiteral))
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (unaryExpr
                         (intLiteral))
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (unaryExpr
                         (intLiteral)))))))
             (identifier))))))
@@ -427,10 +453,12 @@ res7 = test.catch(() ->
                       (slStringLiteral)
                       (unaryExpr
                         (intLiteral))
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (unaryExpr
                         (intLiteral))
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (unaryExpr
                         (intLiteral)))))))
             (identifier))))))
@@ -454,13 +482,16 @@ res7 = test.catch(() ->
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (unaryExpr
                         (intLiteral))
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (unaryExpr
                         (intLiteral))
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (unaryExpr
                         (intLiteral)))))))
             (identifier)))))))

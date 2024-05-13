@@ -17,7 +17,8 @@ mod: module = typeMismatchHelper
         (identifier)
         (identifier))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (typeAnnotation

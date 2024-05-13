@@ -81,7 +81,8 @@ res17 = res16.length
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -107,10 +108,12 @@ res17 = res16.length
     (newExpr
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (modifier)
@@ -146,9 +149,11 @@ res17 = res16.length
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))))
   (classProperty
     (modifier)

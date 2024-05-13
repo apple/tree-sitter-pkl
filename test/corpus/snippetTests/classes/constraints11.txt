@@ -36,7 +36,8 @@ res6 = test.catch(() -> (res3) { yyy = 0 }.yyy)
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (modifier)
     (identifier)

@@ -454,7 +454,8 @@ res27 = x.derived(new Derived {}, new Derived {})
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -462,8 +463,10 @@ res27 = x.derived(new Derived {}, new Derived {})
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr

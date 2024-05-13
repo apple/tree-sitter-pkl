@@ -39,7 +39,8 @@ class Person {
             (type
               (qualifiedIdentifier
                 (identifier)))))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classMethod
         (methodHeader
           (identifier)
@@ -50,5 +51,6 @@ class Person {
             (type
               (qualifiedIdentifier
                 (identifier)))))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (lineComment))))

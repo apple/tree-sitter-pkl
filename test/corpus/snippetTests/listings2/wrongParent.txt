@@ -24,7 +24,8 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody))
@@ -47,7 +48,8 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                   (objectElement
                     (intLiteral))))
               (objectElement
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -68,7 +70,8 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                   (objectElement
                     (intLiteral))))
               (objectElement
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -90,7 +93,8 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                   (objectElement
                     (intLiteral))))
               (objectElement
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -111,7 +115,8 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                   (objectElement
                     (intLiteral))))
               (objectElement
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -132,7 +137,8 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                   (objectElement
                     (intLiteral))))
               (objectElement
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -153,7 +159,8 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                   (objectElement
                     (intLiteral))))
               (objectElement
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -174,8 +181,10 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                     (intLiteral))))
               (objectElement
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -197,8 +206,10 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                     (intLiteral))))
               (objectElement
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -221,8 +232,10 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                     (intLiteral))))
               (objectElement
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -244,8 +257,10 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                     (intLiteral))))
               (objectElement
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -267,8 +282,10 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                     (intLiteral))))
               (objectElement
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -290,5 +307,7 @@ res12 = test.catch(() -> new Mapping { when (false) { 0 }; "fr" + "ed" })
                     (intLiteral))))
               (objectElement
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))))))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))))))))))

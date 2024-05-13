@@ -39,27 +39,38 @@ res1 = new X {
                     (type
                       (type
                         (type
-                          (stringConstant))
+                          (stringConstant
+                            (stringFragment)))
                         (type
-                          (stringConstant)))
+                          (stringConstant
+                            (stringFragment))))
                       (type
-                        (stringConstant)))
+                        (stringConstant
+                          (stringFragment))))
                     (type
-                      (stringConstant)))
+                      (stringConstant
+                        (stringFragment))))
                   (type
-                    (stringConstant)))
+                    (stringConstant
+                      (stringFragment))))
                 (type
-                  (stringConstant)))
+                  (stringConstant
+                    (stringFragment))))
               (type
-                (stringConstant)))
+                (stringConstant
+                  (stringFragment))))
             (type
-              (stringConstant)))
+              (stringConstant
+                (stringFragment))))
           (type
-            (stringConstant)))
+            (stringConstant
+              (stringFragment))))
         (type
-          (stringConstant)))
+          (stringConstant
+            (stringFragment))))
       (type
-        (stringConstant))))
+        (stringConstant
+          (stringFragment)))))
   (clazz
     (identifier)
     (classBody
@@ -78,4 +89,5 @@ res1 = new X {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (stringFragment)))))))

@@ -36,7 +36,8 @@ c = new C {}
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody
@@ -64,7 +65,8 @@ c = new C {}
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (modifier)
         (identifier)
@@ -79,8 +81,10 @@ c = new C {}
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))
       (classProperty
         (modifier)
         (identifier)
@@ -95,7 +99,8 @@ c = new C {}
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))
       (classProperty
         (modifier)
@@ -218,7 +223,8 @@ c = new C {}
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (stringFragment))))))))
       (classProperty
         (identifier)
         (methodCallExpr
@@ -240,8 +246,10 @@ c = new C {}
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment))
+                (slStringLiteral
+                  (stringFragment)))))))
       (classProperty
         (identifier)
         (methodCallExpr
@@ -257,7 +265,8 @@ c = new C {}
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (stringFragment))
                       (intLiteral)))))))))))
   (classProperty
     (identifier)

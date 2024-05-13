@@ -22,26 +22,32 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (readGlobExpr
               (parenthesizedExpr
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (readGlobExpr
               (parenthesizedExpr
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -51,7 +57,8 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (importExpr
-                    (stringConstant))))))
+                    (stringConstant
+                      (stringFragment)))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -61,4 +68,5 @@ examples {
                   (parameterList)
                   (readExpr
                     (parenthesizedExpr
-                      (slStringLiteral))))))))))))
+                      (slStringLiteral
+                        (stringFragment)))))))))))))

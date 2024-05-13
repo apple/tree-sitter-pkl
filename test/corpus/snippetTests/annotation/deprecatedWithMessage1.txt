@@ -73,7 +73,8 @@ res7b = List(19, 20, 21).map((n) -> new C {}.f2(n))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (stringFragment)))))
     (methodHeader
       (identifier)
       (parameterList
@@ -95,7 +96,8 @@ res7b = List(19, 20, 21).map((n) -> new C {}.f2(n))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (methodHeader
           (identifier)
           (parameterList
@@ -130,7 +132,8 @@ res7b = List(19, 20, 21).map((n) -> new C {}.f2(n))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (methodHeader
           (identifier)
           (parameterList
@@ -155,7 +158,8 @@ res7b = List(19, 20, 21).map((n) -> new C {}.f2(n))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (methodHeader
           (identifier)
           (parameterList

@@ -21,4 +21,5 @@ invalidAnnotationOnTypedProperty: String = "hi"
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral)))
+    (slStringLiteral
+      (stringFragment))))

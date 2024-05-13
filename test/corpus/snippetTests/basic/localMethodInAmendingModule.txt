@@ -41,9 +41,11 @@ local class C {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classMethod
     (methodHeader
       (modifier)
@@ -83,7 +85,8 @@ local class C {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (objectBody
@@ -113,7 +116,8 @@ local class C {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (stringFragment))))))))
       (objectProperty
         (identifier)
         (objectBody
@@ -154,7 +158,8 @@ local class C {
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))))
+                      (slStringLiteral
+                        (stringFragment))))))))))
       (objectProperty
         (identifier)
         (newExpr
@@ -187,7 +192,8 @@ local class C {
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (stringFragment))))))))
           (objectProperty
             (identifier)
             (objectBody
@@ -228,4 +234,5 @@ local class C {
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral))))))))))))))
+                          (slStringLiteral
+                            (stringFragment)))))))))))))))

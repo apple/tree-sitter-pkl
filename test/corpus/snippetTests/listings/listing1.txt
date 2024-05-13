@@ -98,12 +98,14 @@ res3 = new Listing {
         (objectElement
           (floatLiteral))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (objectElement
           (propertyCallExpr
             (intLiteral)
@@ -136,9 +138,11 @@ res3 = new Listing {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral))))
         (objectElement
           (newExpr
@@ -148,7 +152,8 @@ res3 = new Listing {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -160,7 +165,8 @@ res3 = new Listing {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -183,10 +189,12 @@ res3 = new Listing {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))))))
   (classProperty
     (identifier)
@@ -219,7 +227,8 @@ res3 = new Listing {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (objectElement
           (methodCallExpr
             (identifier)
@@ -227,7 +236,8 @@ res3 = new Listing {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (stringFragment)))))))
         (objectElement
           (methodCallExpr
             (identifier)
@@ -278,9 +288,11 @@ res3 = new Listing {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral))))))
         (objectElement
           (methodCallExpr
@@ -293,7 +305,8 @@ res3 = new Listing {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectProperty
                     (identifier)
                     (intLiteral)))))))
@@ -308,7 +321,8 @@ res3 = new Listing {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectProperty
                     (identifier)
                     (intLiteral)))))))
@@ -337,8 +351,10 @@ res3 = new Listing {
                     (identifier)))
                 (objectBody
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (stringFragment))
                     (intLiteral))
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (stringFragment))
                     (intLiteral)))))))))))

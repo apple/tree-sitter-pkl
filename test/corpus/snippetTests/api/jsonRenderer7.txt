@@ -27,7 +27,8 @@ output {
     (intLiteral))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody

@@ -46,9 +46,11 @@ res10 = new Listing { when (false) { 0 }; "one" } != new Listing { when (false) 
             (objectElement
               (intLiteral))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -72,9 +74,11 @@ res10 = new Listing { when (false) { 0 }; "one" } != new Listing { when (false) 
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -91,7 +95,8 @@ res10 = new Listing { when (false) { 0 }; "one" } != new Listing { when (false) 
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -108,9 +113,11 @@ res10 = new Listing { when (false) { 0 }; "one" } != new Listing { when (false) 
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -137,7 +144,8 @@ res10 = new Listing { when (false) { 0 }; "one" } != new Listing { when (false) 
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -199,7 +207,8 @@ res10 = new Listing { when (false) { 0 }; "one" } != new Listing { when (false) 
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -211,7 +220,8 @@ res10 = new Listing { when (false) { 0 }; "one" } != new Listing { when (false) 
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectProperty
             (identifier)
             (intLiteral)))))))

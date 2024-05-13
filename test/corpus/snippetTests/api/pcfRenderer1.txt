@@ -49,7 +49,8 @@ output {
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (intLiteral))))
@@ -59,14 +60,17 @@ output {
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectElement
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (intLiteral))
       (objectElement
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (objectBody
@@ -76,12 +80,15 @@ output {
             (lineComment)
             (objectProperty
               (identifier)
-              (mlStringLiteral))
+              (mlStringLiteral
+                (stringFragment)))
             (objectElement
-              (mlStringLiteral)))))
+              (mlStringLiteral
+                (stringFragment))))))
       (lineComment)
       (objectElement
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (objectBody

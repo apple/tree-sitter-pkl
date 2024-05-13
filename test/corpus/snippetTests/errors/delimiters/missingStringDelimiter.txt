@@ -10,8 +10,9 @@ res2 = 42
 (module
   (classProperty
     (identifier)
-    (slStringLiteral
-      (MISSING """)))
+      (slStringLiteral
+        (stringFragment)
+        (MISSING """)))
   (classProperty
     (identifier)
     (intLiteral)))

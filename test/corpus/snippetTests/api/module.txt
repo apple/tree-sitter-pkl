@@ -19,12 +19,14 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -32,22 +34,26 @@ examples {
               (identifier)
               (argumentList
                 (importExpr
-                  (stringConstant)))))
+                  (stringConstant
+                    (stringFragment))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
               (identifier)
               (argumentList
                 (importExpr
-                  (stringConstant)))))
+                  (stringConstant
+                    (stringFragment))))))
           (objectElement
             (methodCallExpr
               (importExpr
-                (stringConstant))
+                (stringConstant
+                  (stringFragment)))
               (identifier)
               (argumentList
                 (importExpr
-                  (stringConstant)))))
+                  (stringConstant
+                    (stringFragment))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -63,7 +69,8 @@ examples {
                   (parameterList)
                   (methodCallExpr
                     (importExpr
-                      (stringConstant))
+                      (stringConstant
+                        (stringFragment)))
                     (identifier)
                     (argumentList
                       (moduleExpr))))))))))))

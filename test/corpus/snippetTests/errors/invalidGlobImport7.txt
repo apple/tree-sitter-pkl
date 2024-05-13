@@ -10,7 +10,8 @@ res: globbedImports
 
 (module
   (importGlobClause
-    (stringConstant)
+    (stringConstant
+      (stringFragment))
     (identifier))
   (classProperty
     (identifier)

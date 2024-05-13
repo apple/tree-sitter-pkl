@@ -15,4 +15,5 @@ amends "baseModule.pkl"
       (qualifiedIdentifier
         (identifier)))
     (extendsOrAmendsClause
-      (stringConstant))))
+      (stringConstant
+        (stringFragment)))))

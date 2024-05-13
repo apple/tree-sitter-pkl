@@ -39,7 +39,8 @@ output {
 (module
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (intLiteral))
@@ -51,30 +52,37 @@ output {
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (objectProperty
         (identifier)
         (intLiteral))))
@@ -92,7 +100,8 @@ output {
               (identifier)
               (objectBody
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (functionLiteral
                     (parameterList
                       (typedIdentifier
@@ -103,7 +112,8 @@ output {
                       (identifier)
                       (argumentList))))
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (functionLiteral
                     (parameterList
                       (typedIdentifier
@@ -111,9 +121,11 @@ output {
                     (binaryExpr
                       (variableExpr
                         (identifier))
-                      (slStringLiteral))))
+                      (slStringLiteral
+                        (stringFragment)))))
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (functionLiteral
                     (parameterList
                       (typedIdentifier
@@ -123,23 +135,29 @@ output {
                         (identifier))
                       (identifier))))
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (functionLiteral
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (stringFragment))))
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (functionLiteral
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (stringFragment))))
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (functionLiteral
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))))))))))
+                    (slStringLiteral
+                      (stringFragment))))))))))))

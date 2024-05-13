@@ -12,4 +12,5 @@ res = import("@birds/badImport3.error.pkl")
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant))))
+      (stringConstant
+        (stringFragment)))))

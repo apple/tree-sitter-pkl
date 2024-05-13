@@ -27,9 +27,11 @@ res4b = List(37, 38, 39).map((n) -> deprecatedWithMessage2.f2(n))
       (qualifiedIdentifier
         (identifier))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (methodCallExpr

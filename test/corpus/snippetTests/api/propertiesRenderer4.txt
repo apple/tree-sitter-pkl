@@ -37,7 +37,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody
@@ -101,7 +102,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
         (objectBody))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -173,8 +175,10 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -195,8 +199,10 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -217,9 +223,12 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)))))))))
   (classProperty
     (identifier)
@@ -244,9 +253,11 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
                     (identifier)))
                 (objectBody
                   (objectElement
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectElement
-                    (slStringLiteral))))))))))
+                    (slStringLiteral
+                      (stringFragment)))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -270,10 +281,13 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
                     (identifier)))
                 (objectBody
                   (objectEntry
-                    (slStringLiteral)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (stringFragment))
                     (intLiteral))))))))))
   (classProperty
     (identifier)
@@ -299,7 +313,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectProperty
                     (identifier)
                     (intLiteral))))))))))
@@ -327,7 +342,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectProperty
                     (identifier)
                     (intLiteral))))))))))
@@ -441,7 +457,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderValue(IntSeq(1, 4)))
                             (identifier)))
                         (throwExpr
                           (parenthesizedExpr
-                            (slStringLiteral)))))))))
+                            (slStringLiteral
+                              (stringFragment))))))))))
             (identifier)
             (argumentList
               (intLiteral)))))))

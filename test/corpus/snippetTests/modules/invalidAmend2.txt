@@ -12,8 +12,10 @@ other = "parrot"
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (lineComment)
   (classProperty
     (identifier)
-    (slStringLiteral)))
+    (slStringLiteral
+      (stringFragment))))

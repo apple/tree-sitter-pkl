@@ -19,7 +19,8 @@ baz: Baz = new typeMismatchHelper.Baz {}
         (identifier)
         (identifier))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier))
   (classProperty

@@ -64,7 +64,8 @@ res5 = amend5.apply(1, 2, 3, 4, 5)
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -98,7 +99,8 @@ res5 = amend5.apply(1, 2, 3, 4, 5)
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -139,7 +141,8 @@ res5 = amend5.apply(1, 2, 3, 4, 5)
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -187,7 +190,8 @@ res5 = amend5.apply(1, 2, 3, 4, 5)
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -242,7 +246,8 @@ res5 = amend5.apply(1, 2, 3, 4, 5)
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -304,7 +309,8 @@ res5 = amend5.apply(1, 2, 3, 4, 5)
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (methodCallExpr

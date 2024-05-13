@@ -117,7 +117,8 @@ res17 = new Mapping {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -143,10 +144,12 @@ res17 = new Mapping {
     (newExpr
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (modifier)
@@ -164,17 +167,21 @@ res17 = new Mapping {
         (objectElement
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (modifier)
     (identifier)
@@ -209,9 +216,11 @@ res17 = new Mapping {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))))
   (classProperty
     (modifier)
@@ -299,6 +308,7 @@ res17 = new Mapping {
                   (objectBody
                     (objectElement
                       (slStringLiteral
+                        (stringFragment)
                         (interpolationExpr
                           (variableExpr
                             (identifier))))))))))))
@@ -345,10 +355,12 @@ res17 = new Mapping {
           (variableExpr
             (identifier)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -388,7 +400,8 @@ res17 = new Mapping {
                 (variableExpr
                   (identifier)))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))))))
   (classProperty
     (identifier)
@@ -536,7 +549,8 @@ res17 = new Mapping {
           (variableExpr
             (identifier)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (newExpr
             (type
               (qualifiedIdentifier
@@ -546,7 +560,8 @@ res17 = new Mapping {
                 (variableExpr
                   (identifier)))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (newExpr
                   (type
                     (qualifiedIdentifier
@@ -576,10 +591,12 @@ res17 = new Mapping {
           (variableExpr
             (identifier)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -599,7 +616,8 @@ res17 = new Mapping {
                 (variableExpr
                   (identifier)))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))))))
   (classProperty
     (modifier)
@@ -612,16 +630,19 @@ res17 = new Mapping {
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (stringFragment)))))))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
               (objectBody
                 (objectElement
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (newExpr

@@ -94,7 +94,8 @@ res19 = let (x = this) let (y = this) x == y && y == this && this == module
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (letExpr
@@ -174,7 +175,8 @@ res19 = let (x = this) let (y = this) x == y && y == this && this == module
             (newExpr
               (objectBody
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (binaryExpr
                     (variableExpr
                       (identifier))
@@ -185,7 +187,8 @@ res19 = let (x = this) let (y = this) x == y && y == this && this == module
       (typedIdentifier
         (identifier))
       (methodCallExpr
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (identifier)
         (argumentList))
       (methodCallExpr
@@ -196,7 +199,8 @@ res19 = let (x = this) let (y = this) x == y && y == this && this == module
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (letExpr
@@ -423,7 +427,8 @@ res19 = let (x = this) let (y = this) x == y && y == this && this == module
               (identifier))
             (throwExpr
               (parenthesizedExpr
-                (slStringLiteral)))
+                (slStringLiteral
+                  (stringFragment))))
             (binaryExpr
               (variableExpr
                 (identifier))
@@ -443,7 +448,8 @@ res19 = let (x = this) let (y = this) x == y && y == this && this == module
             (intLiteral)
             (throwExpr
               (parenthesizedExpr
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -462,7 +468,8 @@ res19 = let (x = this) let (y = this) x == y && y == this && this == module
                 (identifier))
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))))
               (binaryExpr
                 (variableExpr
                   (identifier))
@@ -487,7 +494,8 @@ res19 = let (x = this) let (y = this) x == y && y == this && this == module
               (intLiteral)
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (lineComment)
   (classProperty
     (identifier)

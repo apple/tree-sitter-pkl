@@ -68,7 +68,8 @@ output {
               (identifier)))))))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (trueLiteral))
@@ -93,7 +94,8 @@ output {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (trueLiteral)
         (intLiteral))))
   (classProperty
@@ -101,7 +103,8 @@ output {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (trueLiteral)
         (intLiteral))))
   (classProperty
@@ -109,9 +112,11 @@ output {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (trueLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (floatLiteral))))
   (classProperty
     (identifier)
@@ -121,7 +126,8 @@ output {
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (trueLiteral))
         (objectElement
@@ -134,10 +140,13 @@ output {
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -148,7 +157,8 @@ output {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -161,7 +171,8 @@ output {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (nullLiteral))
@@ -191,7 +202,8 @@ output {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectProperty
               (identifier)
               (objectBody
@@ -252,6 +264,7 @@ output {
                           (variableExpr
                             (identifier))
                           (identifier)))
+                      (stringFragment)
                       (interpolationExpr
                         (propertyCallExpr
                           (variableExpr
@@ -270,6 +283,7 @@ output {
                           (variableExpr
                             (identifier))
                           (identifier)))
+                      (stringFragment)
                       (interpolationExpr
                         (propertyCallExpr
                           (variableExpr
@@ -314,7 +328,8 @@ output {
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (stringFragment))
                           (propertyCallExpr
                             (intLiteral)
                             (identifier)))))))
@@ -345,7 +360,8 @@ output {
                           (identifier)))
                       (objectBody
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (stringFragment))
                           (propertyCallExpr
                             (intLiteral)
                             (identifier)))))))
@@ -363,7 +379,8 @@ output {
                       (objectBody
                         (objectProperty
                           (identifier)
-                          (slStringLiteral))))))
+                          (slStringLiteral
+                            (stringFragment)))))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -387,7 +404,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (stringFragment))))
                 (objectEntry
                   (variableExpr
                     (identifier))

@@ -83,17 +83,21 @@ res3: Mapping<String, Person> = new {
               (identifier)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectProperty
               (identifier)
               (intLiteral)))))))
@@ -136,29 +140,34 @@ res3: Mapping<String, Person> = new {
               (variableExpr
                 (identifier)))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectProperty
               (identifier)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
               (binaryExpr
                 (propertyCallExpr
                   (identifier))
-                (slStringLiteral)))
+                (slStringLiteral
+                  (stringFragment))))
             (objectProperty
               (identifier)
               (intLiteral))))))))

@@ -19,7 +19,8 @@ res: Mapping = new {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))))
   (classProperty
     (identifier)
@@ -30,7 +31,8 @@ res: Mapping = new {
     (newExpr
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectSpread
           (variableExpr

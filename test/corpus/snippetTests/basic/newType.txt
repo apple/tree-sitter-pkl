@@ -88,7 +88,8 @@ res18 = test.catch(() -> new "foo" {})
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody
@@ -107,7 +108,8 @@ res18 = test.catch(() -> new "foo" {})
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (objectBody
@@ -120,7 +122,8 @@ res18 = test.catch(() -> new "foo" {})
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (stringFragment))))))
       (objectElement
         (newExpr
           (type
@@ -129,9 +132,11 @@ res18 = test.catch(() -> new "foo" {})
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (stringFragment))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (newExpr
           (type
             (qualifiedIdentifier
@@ -139,7 +144,8 @@ res18 = test.catch(() -> new "foo" {})
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -155,7 +161,8 @@ res18 = test.catch(() -> new "foo" {})
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -172,7 +179,8 @@ res18 = test.catch(() -> new "foo" {})
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -192,13 +200,15 @@ res18 = test.catch(() -> new "foo" {})
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectElement
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -212,13 +222,15 @@ res18 = test.catch(() -> new "foo" {})
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectEntry
           (intLiteral)
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -234,7 +246,8 @@ res18 = test.catch(() -> new "foo" {})
               (identifier)))))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (newExpr
             (type
               (qualifiedIdentifier
@@ -242,20 +255,25 @@ res18 = test.catch(() -> new "foo" {})
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -264,18 +282,22 @@ res18 = test.catch(() -> new "foo" {})
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -286,7 +308,8 @@ res18 = test.catch(() -> new "foo" {})
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -297,7 +320,8 @@ res18 = test.catch(() -> new "foo" {})
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -334,7 +358,8 @@ res18 = test.catch(() -> new "foo" {})
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -345,7 +370,8 @@ res18 = test.catch(() -> new "foo" {})
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -386,7 +412,8 @@ res18 = test.catch(() -> new "foo" {})
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -397,7 +424,8 @@ res18 = test.catch(() -> new "foo" {})
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -449,7 +477,8 @@ res18 = test.catch(() -> new "foo" {})
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -460,7 +489,8 @@ res18 = test.catch(() -> new "foo" {})
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -516,7 +546,8 @@ res18 = test.catch(() -> new "foo" {})
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (typeAlias
     (identifier)
     (type
@@ -537,7 +568,8 @@ res18 = test.catch(() -> new "foo" {})
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (newExpr
             (type
               (qualifiedIdentifier
@@ -545,20 +577,25 @@ res18 = test.catch(() -> new "foo" {})
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -569,7 +606,8 @@ res18 = test.catch(() -> new "foo" {})
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (newExpr
@@ -583,7 +621,8 @@ res18 = test.catch(() -> new "foo" {})
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -641,5 +680,6 @@ res18 = test.catch(() -> new "foo" {})
           (parameterList)
           (newExpr
             (type
-              (stringConstant))
+              (stringConstant
+                (stringFragment)))
             (objectBody)))))))

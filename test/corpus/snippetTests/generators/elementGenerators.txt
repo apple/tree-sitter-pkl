@@ -841,9 +841,11 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (whenGenerator
@@ -868,9 +870,11 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (whenGenerator
@@ -897,9 +901,11 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (whenGenerator
@@ -931,9 +937,11 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (whenGenerator
@@ -1120,10 +1128,12 @@ whenWithElse = new Dynamic {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1151,10 +1161,12 @@ whenWithElse = new Dynamic {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1184,10 +1196,12 @@ whenWithElse = new Dynamic {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1222,10 +1236,12 @@ whenWithElse = new Dynamic {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1258,10 +1274,12 @@ whenWithElse = new Dynamic {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1289,10 +1307,12 @@ whenWithElse = new Dynamic {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1322,10 +1342,12 @@ whenWithElse = new Dynamic {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1360,10 +1382,12 @@ whenWithElse = new Dynamic {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1388,7 +1412,8 @@ whenWithElse = new Dynamic {
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (whenGenerator
           (binaryExpr
             (binaryExpr
@@ -1397,7 +1422,8 @@ whenWithElse = new Dynamic {
             (intLiteral))
           (objectBody
             (objectElement
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (whenGenerator
           (binaryExpr
             (binaryExpr
@@ -1406,7 +1432,8 @@ whenWithElse = new Dynamic {
             (intLiteral))
           (objectBody
             (objectElement
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -1415,7 +1442,8 @@ whenWithElse = new Dynamic {
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (whenGenerator
           (binaryExpr
             (binaryExpr
@@ -1424,7 +1452,8 @@ whenWithElse = new Dynamic {
             (intLiteral))
           (objectBody
             (objectElement
-              (slStringLiteral))))
+              (slStringLiteral
+                (stringFragment)))))
         (whenGenerator
           (binaryExpr
             (binaryExpr
@@ -1433,7 +1462,8 @@ whenWithElse = new Dynamic {
             (intLiteral))
           (objectBody
             (objectElement
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -1447,9 +1477,12 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1457,8 +1490,10 @@ whenWithElse = new Dynamic {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))
               (objectBody
                 (objectElement
                   (binaryExpr
@@ -1479,9 +1514,12 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1489,8 +1527,10 @@ whenWithElse = new Dynamic {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))
               (objectBody
                 (objectElement
                   (binaryExpr
@@ -1513,9 +1553,12 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1525,8 +1568,10 @@ whenWithElse = new Dynamic {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))
               (objectBody
                 (objectElement
                   (methodCallExpr
@@ -1557,9 +1602,12 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1569,8 +1617,10 @@ whenWithElse = new Dynamic {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))
               (objectBody
                 (objectElement
                   (methodCallExpr
@@ -1594,7 +1644,8 @@ whenWithElse = new Dynamic {
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (forGenerator
           (typedIdentifier
             (identifier))
@@ -1616,16 +1667,20 @@ whenWithElse = new Dynamic {
                       (identifier))
                     (intLiteral)))))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (forGenerator
           (typedIdentifier
             (identifier))
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1633,8 +1688,10 @@ whenWithElse = new Dynamic {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))
               (objectBody
                 (objectElement
                   (binaryExpr
@@ -1643,7 +1700,8 @@ whenWithElse = new Dynamic {
                     (variableExpr
                       (identifier))))))))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (newExpr
@@ -1652,7 +1710,8 @@ whenWithElse = new Dynamic {
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (forGenerator
           (typedIdentifier
             (identifier))
@@ -1674,16 +1733,20 @@ whenWithElse = new Dynamic {
                       (identifier))
                     (intLiteral)))))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (forGenerator
           (typedIdentifier
             (identifier))
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1691,8 +1754,10 @@ whenWithElse = new Dynamic {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))
               (objectBody
                 (objectElement
                   (binaryExpr
@@ -1701,7 +1766,8 @@ whenWithElse = new Dynamic {
                     (variableExpr
                       (identifier))))))))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (lineComment)
   (classProperty
     (identifier)
@@ -1728,9 +1794,12 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (objectElement
               (variableExpr
@@ -1773,9 +1842,12 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (objectElement
               (variableExpr
@@ -1827,9 +1899,12 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (objectElement
               (methodCallExpr
@@ -1893,9 +1968,12 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (objectElement
               (methodCallExpr
@@ -1934,7 +2012,8 @@ whenWithElse = new Dynamic {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))
@@ -1944,7 +2023,8 @@ whenWithElse = new Dynamic {
             (identifier)
             (argumentList
               (intLiteral)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -1993,20 +2073,26 @@ whenWithElse = new Dynamic {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (newExpr
@@ -2043,6 +2129,7 @@ whenWithElse = new Dynamic {
                 (interpolationExpr
                   (variableExpr
                     (identifier)))
+                (stringFragment)
                 (interpolationExpr
                   (variableExpr
                     (identifier))))))))))
@@ -2072,7 +2159,8 @@ whenWithElse = new Dynamic {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -2118,6 +2206,7 @@ whenWithElse = new Dynamic {
                 (interpolationExpr
                   (variableExpr
                     (identifier)))
+                (stringFragment)
                 (interpolationExpr
                   (variableExpr
                     (identifier))))))))))
@@ -2132,16 +2221,22 @@ whenWithElse = new Dynamic {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (newExpr
@@ -2178,6 +2273,7 @@ whenWithElse = new Dynamic {
                 (interpolationExpr
                   (variableExpr
                     (identifier)))
+                (stringFragment)
                 (interpolationExpr
                   (variableExpr
                     (identifier))))))))))
@@ -2194,9 +2290,12 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (objectElement
               (variableExpr
@@ -2205,12 +2304,14 @@ whenWithElse = new Dynamic {
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral)))
+                (slStringLiteral
+                  (stringFragment))))
             (objectElement
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (stringFragment)))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -2224,8 +2325,10 @@ whenWithElse = new Dynamic {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -2235,9 +2338,11 @@ whenWithElse = new Dynamic {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)))
               (objectBody
                 (objectElement
@@ -2272,9 +2377,11 @@ whenWithElse = new Dynamic {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)))
               (objectBody
                 (objectElement

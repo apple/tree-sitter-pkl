@@ -10,7 +10,8 @@ res1 = "abc".substring(2, 1)
   (classProperty
     (identifier)
     (methodCallExpr
-      (slStringLiteral)
+      (slStringLiteral
+        (stringFragment))
       (identifier)
       (argumentList
         (intLiteral)

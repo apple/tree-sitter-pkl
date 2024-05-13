@@ -51,7 +51,8 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (modifier)
     (identifier)
@@ -85,7 +86,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (variableExpr
@@ -97,7 +99,8 @@ examples {
             (variableExpr
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -115,7 +118,8 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (slStringLiteral
@@ -133,20 +137,27 @@ examples {
                 (variableExpr
                   (identifier)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (interpolationExpr
                 (variableExpr
-                  (identifier)))))
+                  (identifier)))
+              (stringFragment)))
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (interpolationExpr
                 (variableExpr
-                  (identifier)))))
+                  (identifier)))
+              (stringFragment)))
           (objectElement
             (mlStringLiteral
+              (stringFragment)
               (interpolationExpr
                 (variableExpr
-                  (identifier))))))))))
+                  (identifier)))
+              (stringFragment))))))))

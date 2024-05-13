@@ -36,7 +36,8 @@ fixed res3: Bird = new { name = "Swallow" }
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -56,4 +57,5 @@ fixed res3: Bird = new { name = "Swallow" }
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (stringFragment)))))))

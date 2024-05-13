@@ -137,7 +137,8 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (modifier)
     (identifier)
@@ -149,7 +150,8 @@ examples {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classMethod
     (methodHeader
       (modifier)
@@ -168,585 +170,690 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)
           (objectElement
             (variableExpr
               (identifier)))
           (objectElement
             (parenthesizedExpr
-              (slStringLiteral)))
+              (slStringLiteral
+                (stringFragment))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (objectElement
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (stringFragment)))))
           (lineComment)))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectElement
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -759,7 +866,9 @@ examples {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral))
+                      (slStringLiteral
+                        (stringFragment)))
                     (objectProperty
                       (identifier)
-                      (slStringLiteral))))))))))))
+                      (slStringLiteral
+                        (stringFragment)))))))))))))

@@ -226,7 +226,8 @@ facts {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (stringFragment))))
   (classProperty
     (modifier)
     (identifier)
@@ -252,11 +253,14 @@ facts {
       (identifier)
       (argumentList
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (modifier)
     (identifier)
@@ -290,7 +294,8 @@ facts {
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (intLiteral)))))
   (classProperty
@@ -302,10 +307,13 @@ facts {
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (modifier)
@@ -333,11 +341,13 @@ facts {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (type
                 (qualifiedIdentifier
                   (identifier)))))
@@ -350,11 +360,13 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (type
                 (qualifiedIdentifier
                   (identifier)))))
@@ -480,7 +492,8 @@ facts {
                 (qualifiedIdentifier
                   (identifier)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -505,7 +518,8 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))
@@ -651,7 +665,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -663,7 +678,8 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))
@@ -824,7 +840,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -842,12 +859,14 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -867,12 +886,14 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -890,12 +911,14 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -919,7 +942,8 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))
@@ -934,7 +958,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -958,7 +983,8 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))
@@ -973,7 +999,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1001,7 +1028,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1029,7 +1057,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1055,7 +1084,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1077,12 +1107,14 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1108,7 +1140,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1136,7 +1169,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1149,7 +1183,8 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))
@@ -1318,7 +1353,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1340,12 +1376,14 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1367,12 +1405,14 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1392,12 +1432,14 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1426,7 +1468,8 @@ facts {
                     (qualifiedIdentifier
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (objectBody
           (objectElement
             (isExpr
@@ -1455,7 +1498,8 @@ facts {
             (unaryExpr
               (parenthesizedExpr
                 (isExpr
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (type
                     (qualifiedIdentifier
                       (identifier))))))))))))

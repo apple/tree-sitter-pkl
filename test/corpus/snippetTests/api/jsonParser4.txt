@@ -50,7 +50,8 @@ res5 = res3["address"] is Mapping
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -70,7 +71,8 @@ res5 = res3["address"] is Mapping
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -78,7 +80,8 @@ res5 = res3["address"] is Mapping
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -86,7 +89,8 @@ res5 = res3["address"] is Mapping
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (mlStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (isExpr
@@ -101,7 +105,8 @@ res5 = res3["address"] is Mapping
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (type
         (qualifiedIdentifier
           (identifier))))))

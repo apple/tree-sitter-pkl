@@ -46,13 +46,15 @@ qux {
         (identifier)
         (objectBody
           (objectElement
-            (slStringLiteral)))))
+            (slStringLiteral
+              (stringFragment))))))
     (objectBody
       (objectProperty
         (identifier)
         (objectBody
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (objectBody
@@ -68,15 +70,19 @@ qux {
         (identifier)
         (objectBody
           (objectElement
-            (slStringLiteral)))
+            (slStringLiteral
+              (stringFragment))))
         (objectBody
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (stringFragment)))
           (objectElement
-            (slStringLiteral)))
+            (slStringLiteral
+              (stringFragment))))
         (objectBody
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -248,18 +254,22 @@ qux {
                     (identifier)))
                 (objectBody
                   (objectElement
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (stringFragment)))
                   (objectElement
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (stringFragment)))))
               (objectBody
                 (objectEntry
                   (intLiteral)
                   (subscriptExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (stringFragment))
                     (intLiteral)))
                 (ERROR)
                 (objectElement
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (stringFragment)))))
             (identifier)
             (argumentList))
           (identifier)))

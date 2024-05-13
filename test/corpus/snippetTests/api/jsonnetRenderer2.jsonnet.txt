@@ -24,7 +24,8 @@ output {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody
@@ -35,7 +36,10 @@ output {
             (intLiteral))
           (objectElement
             (slStringLiteral
-              (escapeSequence)))))))
+              (stringFragment)
+              (stringFragment
+                (escapeSequence))
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (methodCallExpr

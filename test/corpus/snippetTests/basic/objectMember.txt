@@ -97,10 +97,12 @@ res12 {1.2;.3;.4;.5}
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (subscriptExpr
           (intLiteral)
-          (slStringLiteral)))
+          (slStringLiteral
+            (stringFragment))))
       (ERROR)
       (objectElement
         (intLiteral))))

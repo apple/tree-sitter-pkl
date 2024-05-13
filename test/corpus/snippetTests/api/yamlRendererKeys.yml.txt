@@ -62,48 +62,62 @@ output {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral))))
   (lineComment)
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (stringFragment)))
   (classProperty
     (identifier)
     (objectBody
       (lineComment)
       (objectEntry
         (slStringLiteral
-          (escapeSequence))
+          (stringFragment)
+          (stringFragment
+            (escapeSequence))
+          (stringFragment))
         (intLiteral))
       (lineComment)
       (objectEntry
         (methodCallExpr
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (identifier)
           (argumentList
             (intLiteral)))
@@ -111,7 +125,8 @@ output {
       (lineComment)
       (objectEntry
         (methodCallExpr
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (identifier)
           (argumentList
             (intLiteral)))

@@ -12,5 +12,7 @@ l = List("one", "two"
     (variableExpr
       (identifier)))
   (ERROR
-    (slStringLiteral)
-    (slStringLiteral)))
+    (slStringLiteral
+      (stringFragment))
+    (slStringLiteral
+      (stringFragment))))

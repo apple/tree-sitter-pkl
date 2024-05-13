@@ -60,7 +60,8 @@ res3 = new Foo6 {}.foo.x
           (modifier)
           (identifier)
           (parameterList))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (objectBody
@@ -80,7 +81,8 @@ res3 = new Foo6 {}.foo.x
           (modifier)
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (propertyCallExpr
@@ -102,7 +104,8 @@ res3 = new Foo6 {}.foo.x
           (modifier)
           (identifier)
           (parameterList))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (objectBody
@@ -121,7 +124,8 @@ res3 = new Foo6 {}.foo.x
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (propertyCallExpr
@@ -142,7 +146,8 @@ res3 = new Foo6 {}.foo.x
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))
+        (slStringLiteral
+          (stringFragment)))
       (classProperty
         (identifier)
         (objectBody
@@ -162,7 +167,8 @@ res3 = new Foo6 {}.foo.x
           (modifier)
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (propertyCallExpr

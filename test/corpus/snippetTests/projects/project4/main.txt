@@ -12,7 +12,8 @@ orange = new Fruit {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (identifier)
     (newExpr
@@ -22,4 +23,5 @@ orange = new Fruit {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (stringFragment)))))))

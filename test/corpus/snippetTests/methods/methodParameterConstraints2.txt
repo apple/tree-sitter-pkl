@@ -34,7 +34,8 @@ res8 = test.catch(() -> y.optional(""))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody
@@ -254,7 +255,8 @@ res8 = test.catch(() -> y.optional(""))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (slStringLiteral)))))))))
   (classProperty
     (identifier)
@@ -273,9 +275,11 @@ res8 = test.catch(() -> y.optional(""))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (unaryExpr
                     (intLiteral))))))))))
   (classProperty
@@ -334,7 +338,8 @@ res8 = test.catch(() -> y.optional(""))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (slStringLiteral)))))))))
   (classProperty
     (identifier)
@@ -353,9 +358,11 @@ res8 = test.catch(() -> y.optional(""))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (unaryExpr
                     (intLiteral))))))))))
   (classProperty

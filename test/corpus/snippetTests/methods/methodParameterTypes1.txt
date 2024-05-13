@@ -23,7 +23,8 @@ res6 = test.catch(() -> x.sum3(1, 1))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (clazz
     (identifier)
     (classBody
@@ -165,7 +166,8 @@ res6 = test.catch(() -> x.sum3(1, 1))
             (identifier)
             (argumentList
               (floatLiteral)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (stringFragment))))))))
   (classProperty
     (identifier)
     (methodCallExpr

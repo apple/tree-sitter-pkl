@@ -26,9 +26,11 @@ output {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -36,7 +38,8 @@ output {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -49,7 +52,8 @@ output {
             (identifier))
           (identifier)
           (argumentList
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (objectBody
         (objectElement
           (methodCallExpr
@@ -94,7 +98,8 @@ output {
                                 (identifier))
                               (identifier)
                               (argumentList
-                                (slStringLiteral))))
+                                (slStringLiteral
+                                  (stringFragment)))))
                           (objectBody
                             (objectElement
                               (variableExpr

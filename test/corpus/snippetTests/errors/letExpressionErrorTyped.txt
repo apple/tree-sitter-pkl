@@ -18,7 +18,8 @@ res1 =
           (type
             (qualifiedIdentifier
               (identifier)))))
-      (slStringLiteral)
+      (slStringLiteral
+        (stringFragment))
       (methodCallExpr
         (variableExpr
           (identifier))

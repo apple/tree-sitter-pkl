@@ -8,4 +8,5 @@ import "...abc"
 
 (module
   (importClause
-    (stringConstant)))
+    (stringConstant
+      (stringFragment))))

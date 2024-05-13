@@ -123,9 +123,11 @@ var = let (_ = "foo") 0
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (stringFragment))
         (intLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (newExpr
@@ -141,9 +143,11 @@ var = let (_ = "foo") 0
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (objectElement
@@ -161,9 +165,11 @@ var = let (_ = "foo") 0
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (objectElement
@@ -183,9 +189,11 @@ var = let (_ = "foo") 0
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (forGenerator
@@ -196,9 +204,11 @@ var = let (_ = "foo") 0
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)))
               (objectBody
                 (objectEntry
@@ -226,9 +236,11 @@ var = let (_ = "foo") 0
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (forGenerator
@@ -239,9 +251,11 @@ var = let (_ = "foo") 0
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)))
               (objectBody
                 (objectEntry
@@ -269,9 +283,11 @@ var = let (_ = "foo") 0
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (intLiteral)))
           (objectBody
             (forGenerator
@@ -282,9 +298,11 @@ var = let (_ = "foo") 0
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (intLiteral)))
               (objectBody
                 (objectEntry
@@ -358,7 +376,8 @@ var = let (_ = "foo") 0
             (identifier))
           (identifier)
           (argumentList
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -377,7 +396,8 @@ var = let (_ = "foo") 0
                 (identifier)))
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectProperty
               (identifier)
               (variableExpr
@@ -409,5 +429,6 @@ var = let (_ = "foo") 0
     (letExpr
       (typedIdentifier
         (identifier))
-      (slStringLiteral)
+      (slStringLiteral
+        (stringFragment))
       (intLiteral))))

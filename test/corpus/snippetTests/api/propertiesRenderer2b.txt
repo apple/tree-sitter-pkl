@@ -68,7 +68,8 @@ res12 = !entries.contains("NO")
           (identifier)
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
@@ -79,7 +80,8 @@ res12 = !entries.contains("NO")
                   (identifier)
                   (argumentList))))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
@@ -90,7 +92,8 @@ res12 = !entries.contains("NO")
                   (identifier)
                   (argumentList))))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (functionLiteral
                 (parameterList
                   (typedIdentifier
@@ -115,13 +118,15 @@ res12 = !entries.contains("NO")
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment)))
             (objectProperty
               (identifier)
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -129,7 +134,8 @@ res12 = !entries.contains("NO")
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -137,7 +143,8 @@ res12 = !entries.contains("NO")
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -146,7 +153,8 @@ res12 = !entries.contains("NO")
           (identifier)))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -155,7 +163,8 @@ res12 = !entries.contains("NO")
           (identifier)))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (modifier)
     (identifier)
@@ -170,20 +179,25 @@ res12 = !entries.contains("NO")
               (identifier)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (stringFragment)))))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (objectBody
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (stringFragment))
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral)))))))))))
+                      (slStringLiteral
+                        (stringFragment))))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -191,7 +205,8 @@ res12 = !entries.contains("NO")
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -199,7 +214,8 @@ res12 = !entries.contains("NO")
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -208,7 +224,8 @@ res12 = !entries.contains("NO")
           (identifier)))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -217,7 +234,8 @@ res12 = !entries.contains("NO")
           (identifier)))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (modifier)
     (identifier)
@@ -232,14 +250,19 @@ res12 = !entries.contains("NO")
               (identifier)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
-              (slStringLiteral))
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment)))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (objectBody
                 (objectEntry
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -247,7 +270,8 @@ res12 = !entries.contains("NO")
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -255,7 +279,8 @@ res12 = !entries.contains("NO")
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -264,7 +289,8 @@ res12 = !entries.contains("NO")
           (identifier)))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -273,4 +299,5 @@ res12 = !entries.contains("NO")
           (identifier)))
       (identifier)
       (argumentList
-        (slStringLiteral)))))
+        (slStringLiteral
+          (stringFragment))))))

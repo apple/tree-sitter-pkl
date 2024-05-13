@@ -108,9 +108,11 @@ res22 = new Listing {
 (module
   (lineComment)
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (stringFragment)))
   (classProperty
     (modifier)
     (identifier)
@@ -125,13 +127,17 @@ res22 = new Listing {
             (objectElement
               (intLiteral))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (binaryExpr
-            (slStringLiteral)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (subscriptExpr
@@ -234,7 +240,8 @@ res22 = new Listing {
                   (objectElement
                     (intLiteral))))
               (objectElement
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (stringFragment))))))
         (objectElement
           (newExpr
             (type
@@ -247,11 +254,14 @@ res22 = new Listing {
                   (objectElement
                     (intLiteral))))
               (objectElement
-                (slStringLiteral))
+                (slStringLiteral
+                  (stringFragment)))
               (objectElement
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))))))
         (objectElement
           (newExpr
             (type
@@ -264,7 +274,8 @@ res22 = new Listing {
                   (objectElement
                     (intLiteral))))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (stringFragment))
                 (intLiteral))))))))
   (classProperty
     (identifier)
@@ -297,7 +308,8 @@ res22 = new Listing {
         (variableExpr
           (identifier))
         (intLiteral))
-      (slStringLiteral)))
+      (slStringLiteral
+        (stringFragment))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -342,7 +354,8 @@ res22 = new Listing {
               (variableExpr
                 (identifier))
               (intLiteral))
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (newExpr
@@ -356,13 +369,15 @@ res22 = new Listing {
             (objectElement
               (intLiteral))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (subscriptExpr
             (thisExpr)
             (intLiteral)))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (subscriptExpr
             (thisExpr)
@@ -384,7 +399,8 @@ res22 = new Listing {
             (objectElement
               (intLiteral))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (subscriptExpr
             (thisExpr)
@@ -406,13 +422,15 @@ res22 = new Listing {
             (objectElement
               (intLiteral))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (binaryExpr
             (subscriptExpr
               (thisExpr)
               (intLiteral))
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -427,13 +445,15 @@ res22 = new Listing {
               (intLiteral))))
         (objectEntry
           (intLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (binaryExpr
             (subscriptExpr
               (thisExpr)
               (intLiteral))
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -448,13 +468,15 @@ res22 = new Listing {
               (intLiteral))))
         (objectEntry
           (intLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (binaryExpr
             (subscriptExpr
               (thisExpr)
               (intLiteral))
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -472,24 +494,28 @@ res22 = new Listing {
           (binaryExpr
             (subscriptExpr
               (intLiteral))
-            (slStringLiteral)))
+            (slStringLiteral
+              (stringFragment))))
         (objectEntry
           (intLiteral)
           (binaryExpr
             (subscriptExpr
               (intLiteral))
-            (slStringLiteral)))
+            (slStringLiteral
+              (stringFragment))))
         (objectElement
           (binaryExpr
             (subscriptExpr
               (intLiteral))
-            (slStringLiteral)))
+            (slStringLiteral
+              (stringFragment))))
         (objectElement
           (binaryExpr
             (subscriptExpr
               (thisExpr)
               (intLiteral))
-            (slStringLiteral))))))
+            (slStringLiteral
+              (stringFragment)))))))
   (classProperty
     (modifier)
     (identifier)
@@ -504,7 +530,8 @@ res22 = new Listing {
             (objectElement
               (intLiteral))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (stringFragment)))
         (objectElement
           (subscriptExpr
             (thisExpr)

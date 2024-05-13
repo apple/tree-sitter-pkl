@@ -59,10 +59,12 @@ res13 =
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (stringFragment))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -88,10 +90,12 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -110,7 +114,8 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -129,10 +134,12 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -161,7 +168,8 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -180,7 +188,8 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -247,7 +256,8 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))
       (newExpr
         (type
@@ -261,7 +271,8 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectProperty
             (identifier)
@@ -281,7 +292,8 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (variableExpr
               (identifier)))
           (objectProperty
@@ -300,7 +312,8 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -317,7 +330,8 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (variableExpr
               (identifier)))
           (objectProperty
@@ -327,7 +341,8 @@ res13 =
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (stringFragment)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -340,7 +355,8 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectProperty
             (identifier)
@@ -361,7 +377,8 @@ res13 =
                   (intLiteral)
                   (intLiteral))))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (variableExpr
                 (identifier)))
             (objectProperty
@@ -370,7 +387,8 @@ res13 =
               (intLiteral))))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (variableExpr
               (identifier)))
           (objectProperty
@@ -389,8 +407,10 @@ res13 =
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (stringFragment))
             (intLiteral)))))))

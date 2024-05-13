@@ -18,7 +18,8 @@ res = new {
             (variableExpr
               (identifier))
             (objectLiteral
-              (slStringLiteral)
+              (slStringLiteral
+                (stringFragment))
               (ERROR)
               (objectBody
                 (objectProperty

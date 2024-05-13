@@ -47,7 +47,8 @@ res1 = amendAbc.apply(1, 2)
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (stringFragment))))))
   (classProperty
     (identifier)
     (methodCallExpr

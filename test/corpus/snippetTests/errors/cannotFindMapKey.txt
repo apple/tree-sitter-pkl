@@ -15,17 +15,26 @@ res1 = x["foo"]
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
-        (slStringLiteral)
-        (slStringLiteral)
-        (slStringLiteral)
-        (slStringLiteral)
-        (slStringLiteral)
-        (slStringLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment)))))
   (classProperty
     (identifier)
     (subscriptExpr
       (variableExpr
         (identifier))
-      (slStringLiteral))))
+      (slStringLiteral
+        (stringFragment)))))

@@ -12,4 +12,5 @@ res = import*("../*/../*/../*/../*/../*/../*/../*.")
   (classProperty
     (identifier)
     (importGlobExpr
-      (stringConstant))))
+      (stringConstant
+        (stringFragment)))))
