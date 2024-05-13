@@ -10,10 +10,10 @@ y = 42
 (module
   (classProperty
     (identifier)
-    (intLiteral))
-  (ERROR
-    (binaryExpr
+    (ERROR
       (intLiteral)
-      (intLiteral))
-    (identifier)
+      (binaryExpr
+        (intLiteral)
+        (intLiteral))
+      (identifier))
     (intLiteral)))
