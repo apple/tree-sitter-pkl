@@ -58,6 +58,10 @@ const decimalLiteral = seq(/\d/, /[\d_]*/);
 module.exports = grammar({
   name: 'pkl',
 
+  precedences: $ => [
+    ["OBJ_ENTRY", "SUBSCRIPT"]
+  ],
+
   externals: $ => [
     $._sl1_string_chars,
     $._sl2_string_chars,
@@ -253,11 +257,11 @@ module.exports = grammar({
 
     objectEntry: $ => seq(
       alias($._open_entry_bracket, "["),
-      $._expr,
+      field("key", $._expr),
       "]",
       choice(
-        seq("=", $._expr),
-        repeat1($.objectBody)
+        seq("=", field("value", $._expr)),
+        field("value", repeat1($.objectBody))
       )
     ),
 
@@ -265,11 +269,11 @@ module.exports = grammar({
 
     objectPredicate: $ => seq(
       "[[",
-      $._expr,
+      field("condition", $._expr),
       "]]",
       choice(
-        seq("=", $._expr),
-        repeat1($.objectBody)
+        seq("=", field("consequence", $._expr)),
+        field("consequence", repeat1($.objectBody))
       )
     ),
 
@@ -284,10 +288,7 @@ module.exports = grammar({
       "in",
       $._expr,
       ")",
-      choice(
-        $.objectBody,
-        $._objectMember // deprecated in 0.15
-      )
+      $.objectBody,
     ),
 
     whenGenerator: $ => seq(
@@ -295,10 +296,7 @@ module.exports = grammar({
       "(",
       $._expr,
       ")",
-      choice(
-        $.objectBody,
-        $._objectMember // deprecated in 0.15
-      )
+      $.objectBody,
     ),
 
     objectSpread: $ => seq(
@@ -325,7 +323,7 @@ module.exports = grammar({
       prec(PREC.NULLABLE_TYPE, seq($.type, "?")),
       seq($.type, "(", commaSep1($._expr), ")"),
       prec.left(PREC.UNION_TYPE, seq($.type, "|", $.type)),
-      prec(PREC.DEFAULT_TYPE, seq("*", $.type)),
+      prec(PREC.DEFAULT_TYPE, seq("*",field("default", $.type))),
       prec(PREC.FUN_TYPE, seq("(", commaSep($.type), ")", "->", $.type))
     ),
 
@@ -672,23 +670,23 @@ module.exports = grammar({
 
     objectLiteral: $ => prec(PREC.OBJ_LITERAL, seq($._expr2, $.objectBody)),
 
-    methodCallExpr: $ => seq(optional(seq(choice("super", $._expr), choice(".", "?."))), $.identifier, $.argumentList),
+    methodCallExpr: $ => seq(optional(seq(choice("super", field("object", $._expr)), choice(".", "?."))), field("method", $.identifier), field("args", $.argumentList)),
 
-    propertyCallExpr: $ => seq(choice("super", $._expr), choice(".", "?."), $.identifier),
+    propertyCallExpr: $ => seq(choice("super", field("object", $._expr)), choice(".", "?."), field("property", $.identifier)),
 
     subscriptExpr: $ => seq(choice("super", $._expr), alias($._open_square_bracket, "["), $._expr, "]"),
 
     unaryExpr: $ => choice(
-      prec.left(PREC.NEG, seq($._expr, '!!')),
-      prec.left(PREC.NEG, seq('-', $._expr)),
-      prec.left(PREC.NOT, seq('!', $._expr)),
+      prec.left(PREC.NEG, seq($._expr, field("operator", '!!'))),
+      prec.left(PREC.NEG, seq(field("operator", '-'), $._expr)),
+      prec.left(PREC.NOT, seq(field("operator", '!'), $._expr)),
     ),
 
     binaryExprRightAssoc: $ => choice(...[
       ['**', PREC.EXP],
       ['??', PREC.COALESCE]
     ].map(([operator, precedence]) =>
-      prec.right(precedence, seq($._expr, operator, $._expr))
+      prec.right(precedence, seq($._expr, field("operator", operator), $._expr))
     )),
 
     binaryExpr: $ => choice(...[
@@ -708,14 +706,14 @@ module.exports = grammar({
       ['||', PREC.OR],
       ['|>', PREC.PIPE]
     ].map(([operator, precedence]) =>
-      prec.left(precedence, seq($._expr, operator, $._expr))
+      prec.left(precedence, seq(field("left", $._expr), field("operator", operator), field("right", $._expr)))
     )),
 
     isExpr: $ => prec(PREC.IS, seq($._expr, "is", $.type)),
 
     asExpr: $ => prec(PREC.IS, seq($._expr, "as", $.type)),
 
-    ifExpr: $ => prec(PREC.IF, seq("if", "(", $._expr, ")", $._expr, "else", $._expr)),
+    ifExpr: $ => prec(PREC.IF, seq("if", "(", field("condition", $._expr), ")", field("consequence", $._expr), "else", field("alternative", $._expr))),
 
     letExpr: $ => prec(PREC.LET, seq("let", "(", $.typedIdentifier, "=", $._expr, ")", $._expr)),
 
@@ -729,11 +727,11 @@ module.exports = grammar({
 
     readGlobExpr: $ => prec(PREC.READ_GLOB, seq("read*", $._expr)),
 
-    importExpr: $ => seq("import", seq('(', $.stringConstant, ')')),
+    importExpr: $ => seq("import", seq('(', field("path", $.stringConstant), ')')),
 
-    importGlobExpr: $ => seq("import*", seq('(', $.stringConstant, ')')),
+    importGlobExpr: $ => seq("import*", seq('(', field("path", $.stringConstant), ')')),
 
-    functionLiteral: $ => prec(PREC.FUN, seq($.parameterList, "->", $._expr)),
+    functionLiteral: $ => prec(PREC.FUN, seq(field("args", $.parameterList), "->", field("body", $._expr))),
 
     qualifiedIdentifier: $ => seq(
       $.identifier,
