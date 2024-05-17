@@ -1575,9 +1575,7 @@ whenWithElse = new Dynamic {
                         (identifier))
                       (variableExpr
                         (identifier)))
-                    (intLiteral)))))
-            (objectProperty
-              (identifier)
+                    (intLiteral))))
               (objectBody
                 (objectElement
                   (methodCallExpr

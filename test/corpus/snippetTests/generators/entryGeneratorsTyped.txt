@@ -1808,9 +1808,7 @@ whenWithElse = new Dynamic {
                           (intLiteral)))
                       (variableExpr
                         (identifier)))
-                    (intLiteral)))))
-            (objectProperty
-              (identifier)
+                    (intLiteral))))
               (objectBody
                 (objectEntry
                   (methodCallExpr

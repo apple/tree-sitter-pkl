@@ -294,9 +294,12 @@ module.exports = grammar({
     whenGenerator: $ => seq(
       "when",
       "(",
-      $._expr,
+      field("condition", $._expr),
       ")",
-      $.objectBody,
+      field("consequence", $.objectBody),
+      optional(
+        seq("else", field("alternative", $.objectBody))
+      )
     ),
 
     objectSpread: $ => seq(
