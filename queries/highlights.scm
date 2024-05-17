@@ -2,8 +2,7 @@
 
 (clazz (identifier) @type)
 (typeAlias (identifier) @type)
-((identifier) @type
- (#match? @type "^[A-Z]"))
+(type (_ (identifier).) @type)
 
 (typeArgumentList
   "<" @punctuation.bracket
