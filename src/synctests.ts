@@ -33,7 +33,7 @@ const treeSitterCmd = 'node_modules/.bin/tree-sitter';
   for (const srcFile of srcFiles) {
     const contents = await fs.readFile(srcFile, { encoding: 'utf-8' })
     const testName = srcFile.replace(testDir + '/', '').replace(/.pkl$/, '')
-    const output = `==========\n${testName}\n==========\n\n${contents.trim()}\n\n---\n\n`
+    const output = `================================================================================\n${testName}\n================================================================================\n\n${contents.trim()}\n\n--------------------------------------------------------------------------------\n\n`
     const dest = `test/corpus/snippetTests/${testName}.txt`;
     // const destExists = await fs.
     await fs.mkdir(path.dirname(dest), { recursive: true });

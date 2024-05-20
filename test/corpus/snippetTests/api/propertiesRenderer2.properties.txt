@@ -350,7 +350,8 @@ output {
                               (objectProperty
                                 (identifier)
                                 (intLiteral))))
-                          (blockComment)))))
+                          (blockComment
+                            (commentText))))))
                   (objectEntry
                     (variableExpr
                       (identifier))

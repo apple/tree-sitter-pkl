@@ -815,6 +815,21 @@
     }
   },
   {
+    "type": "blockComment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "commentText",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "classBody",
     "named": true,
     "fields": {},
@@ -1200,6 +1215,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "commentText",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "extendsOrAmendsClause",
@@ -6160,6 +6180,10 @@
     "named": false
   },
   {
+    "type": "*/",
+    "named": false
+  },
+  {
     "type": "+",
     "named": false
   },
@@ -6189,6 +6213,10 @@
   },
   {
     "type": "/",
+    "named": false
+  },
+  {
+    "type": "/*",
     "named": false
   },
   {
@@ -6290,10 +6318,6 @@
   {
     "type": "as",
     "named": false
-  },
-  {
-    "type": "blockComment",
-    "named": true
   },
   {
     "type": "class",

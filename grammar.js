@@ -756,11 +756,12 @@ module.exports = grammar({
     // TODO
     docComment: $ => token(seq('///', /.*/)),
 
-    blockComment: $ => token(seq(
-      '/*',
-      /[^*]*\*+([^/*][^*]*\*+)*/,
-      '/'
-    ))
+    blockComment: $ => seq(
+      "/*",
+      optional($.commentText),
+      "*/"
+    ),
+    commentText: $ => repeat1(choice(/.|\n|\r/)),
   }
 });
 

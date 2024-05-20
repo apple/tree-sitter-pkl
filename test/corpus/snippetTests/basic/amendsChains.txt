@@ -243,7 +243,7 @@ qux {
     (identifier)
     (objectBody
       (objectElement
-        (propertyCallExpr
+        (methodCallExpr
           (methodCallExpr
             (objectLiteral
               (objectLiteral
@@ -272,7 +272,6 @@ qux {
                     (stringFragment)))))
             (identifier)
             (argumentList))
-          (identifier)))
-      (objectElement
-        (parenthesizedExpr
-          (slStringLiteral))))))
+          (identifier)
+          (argumentList
+            (slStringLiteral)))))))
