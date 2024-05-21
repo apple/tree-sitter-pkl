@@ -1,0 +1,18 @@
+================================================================================
+errors/delimiters/missingStringDelimiter
+================================================================================
+
+res1 = "abc
+res2 = 42
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+      (slStringLiteral
+        (stringFragment)
+        (MISSING """)))
+  (classProperty
+    (identifier)
+    (intLiteral)))

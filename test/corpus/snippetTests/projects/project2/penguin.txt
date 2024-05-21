@@ -1,0 +1,38 @@
+================================================================================
+projects/project2/penguin
+================================================================================
+
+import "@burds/Bird.pkl"
+
+bird: Bird = new {
+  name = "Penguin"
+  favoriteFruit {
+    name = "Ice Fruit"
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (stringFragment)))))))))

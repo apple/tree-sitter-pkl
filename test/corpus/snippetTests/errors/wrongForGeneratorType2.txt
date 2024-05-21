@@ -1,0 +1,38 @@
+================================================================================
+errors/wrongForGeneratorType2
+================================================================================
+
+res1 = new Mapping {
+  for (n: Int in List(1, "other", 2)) { [n] = n }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (forGenerator
+          (typedIdentifier
+            (identifier)
+            (typeAnnotation
+              (type
+                (qualifiedIdentifier
+                  (identifier)))))
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)
+              (slStringLiteral
+                (stringFragment))
+              (intLiteral)))
+          (objectBody
+            (objectEntry
+              (variableExpr
+                (identifier))
+              (variableExpr
+                (identifier)))))))))

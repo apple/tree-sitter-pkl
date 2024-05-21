@@ -1,0 +1,102 @@
+================================================================================
+multiline
+================================================================================
+
+res1 = """
+  Well hello there how are you?
+  """
+
+res2 = """
+  Hi \(bob)
+  """
+
+res3 = #"""
+  Hi \(bob)
+  """#
+
+res4 = #"""
+  Hi \#(bob)
+  """#
+
+res5 = ##"""
+  Hi \#(bob)
+  """##
+
+res6 = ###"""
+  Hi \###(bob)
+  """###
+
+res7 = ####"""
+  Hi \####(bob)
+  """####
+
+res8 = #####"""
+  Hi \#####(bob)
+  """#####
+
+res9 = ######"""
+  Hi \######(bob)
+  """######
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (stringFragment))))

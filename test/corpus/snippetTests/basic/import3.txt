@@ -1,0 +1,33 @@
+================================================================================
+basic/import3
+================================================================================
+
+foo {
+  bar = import("imported.pkl")
+  baz = import("imported.pkl")
+  bak = import("imported.pkl").foo
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (importExpr
+          (stringConstant
+            (stringFragment))))
+      (objectProperty
+        (identifier)
+        (importExpr
+          (stringConstant
+            (stringFragment))))
+      (objectProperty
+        (identifier)
+        (propertyCallExpr
+          (importExpr
+            (stringConstant
+              (stringFragment)))
+          (identifier))))))

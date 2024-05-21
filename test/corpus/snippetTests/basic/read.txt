@@ -1,0 +1,186 @@
+================================================================================
+basic/read
+================================================================================
+
+amends "../snippetTest.pkl"
+
+examples {
+  ["read env variable"] {
+    read("env:NAME1")
+    read("env:NAME2")
+    module.catch(() -> read("env:OTHER"))
+
+    read?("env:NAME1")
+    read?("env:NAME2")
+    read?("env:OTHER")
+  }
+
+  ["read external property"] {
+    read("prop:name1")
+    read("prop:name2")
+    module.catch(() -> read("prop:other"))
+
+    read?("prop:name1")
+    read?("prop:name2")
+    read?("prop:other")
+  }
+
+  ["read file"] {
+    read("read.pkl")
+    module.catch(() -> read("other.txt"))
+    read?("read.pkl")
+    read?("other.txt")
+  }
+
+  ["read non-allowed resource"] {
+    module.catch(() -> read("forbidden:resource"))
+    module.catch(() -> read?("forbidden:resource"))
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (readExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (readExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (readExpr
+                    (parenthesizedExpr
+                      (slStringLiteral
+                        (stringFragment))))))))
+          (objectElement
+            (readOrNullExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (readOrNullExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (readOrNullExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (readExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (readExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (readExpr
+                    (parenthesizedExpr
+                      (slStringLiteral
+                        (stringFragment))))))))
+          (objectElement
+            (readOrNullExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (readOrNullExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (readOrNullExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (readExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (readExpr
+                    (parenthesizedExpr
+                      (slStringLiteral
+                        (stringFragment))))))))
+          (objectElement
+            (readOrNullExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (readOrNullExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (readExpr
+                    (parenthesizedExpr
+                      (slStringLiteral
+                        (stringFragment))))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (readOrNullExpr
+                    (parenthesizedExpr
+                      (slStringLiteral
+                        (stringFragment)))))))))))))

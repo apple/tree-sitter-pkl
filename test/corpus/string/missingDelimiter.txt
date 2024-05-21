@@ -1,0 +1,28 @@
+================================================================================
+string/missingDelimiter
+================================================================================
+
+res1 = "Hello
+
+res2 = #"Hello there"
+
+res3 = ##"Hello there"#
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)
+      (MISSING """)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)
+      (MISSING ""#")))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)
+      (MISSING ""##"))))

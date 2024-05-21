@@ -1,0 +1,235 @@
+================================================================================
+api/jsonnetRenderer1.jsonnet
+================================================================================
+
+import "pkl:jsonnet"
+
+int = 123
+
+float = 1.23
+
+bool = true
+
+string = "Pigeon"
+
+unicodeString = "abc😀abc😎abc"
+
+multiLineString = """
+  have a
+  great
+  day
+  """
+
+class Person {
+  name: String
+  age: Int
+  address: Address
+}
+
+class Address {
+  street: String
+}
+
+typedObject = new Person {
+  name = "Bob"
+  age = 42
+  address {
+    street = "Abby Rd."
+  }
+}
+
+dynamicObject {
+  name = "Pigeon"
+  age = 30
+  address {
+    street = "Folsom St."
+  }
+  friend = null
+}
+
+annoyingNames {
+  ["5hello"] = 123
+  ["local"] = "remote"
+  ["foo.bar"] = "baz"
+  ["single'quote"] = "double\"quote"
+}
+
+list = new {
+  1
+  2
+  3
+  null
+}
+
+someExternalVariable = jsonnet.ExtVar("MY_VARIABLE")
+
+someImportStr = jsonnet.ImportStr("my/private/key.pem")
+
+output {
+  renderer = new jsonnet.Renderer {}
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (floatLiteral))
+  (classProperty
+    (identifier)
+    (trueLiteral))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (stringFragment)))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))
+        (objectProperty
+          (identifier)
+          (intLiteral))
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (stringFragment))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral
+          (stringFragment)))
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (slStringLiteral
+              (stringFragment)))))
+      (objectProperty
+        (identifier)
+        (nullLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment)))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment)))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment)
+          (stringFragment
+            (escapeSequence))
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (objectBody
+        (objectElement
+          (intLiteral))
+        (objectElement
+          (intLiteral))
+        (objectElement
+          (intLiteral))
+        (objectElement
+          (nullLiteral)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)
+              (identifier)))
+          (objectBody))))))

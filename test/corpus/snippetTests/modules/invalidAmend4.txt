@@ -1,0 +1,23 @@
+================================================================================
+modules/invalidAmend4
+================================================================================
+
+amends "library.pkl"
+
+// non-local function definition
+function foo() = "parrot"
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (lineComment)
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList))
+    (slStringLiteral
+      (stringFragment))))

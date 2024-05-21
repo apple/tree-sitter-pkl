@@ -1,0 +1,56 @@
+================================================================================
+classes/duplicateFunction
+================================================================================
+
+class Person {
+  function foo(): Int = 42
+  foo: Int // OK
+  function bar(): String = "bar"
+  function foo(arg): String = "foo" // duplicate
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classMethod
+        (methodHeader
+          (identifier)
+          (parameterList)
+          (typeAnnotation
+            (type
+              (qualifiedIdentifier
+                (identifier)))))
+        (intLiteral))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (lineComment)
+      (classMethod
+        (methodHeader
+          (identifier)
+          (parameterList)
+          (typeAnnotation
+            (type
+              (qualifiedIdentifier
+                (identifier)))))
+        (slStringLiteral
+          (stringFragment)))
+      (classMethod
+        (methodHeader
+          (identifier)
+          (parameterList
+            (typedIdentifier
+              (identifier)))
+          (typeAnnotation
+            (type
+              (qualifiedIdentifier
+                (identifier)))))
+        (slStringLiteral
+          (stringFragment)))
+      (lineComment))))

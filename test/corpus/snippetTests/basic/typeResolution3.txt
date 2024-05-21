@@ -1,0 +1,63 @@
+================================================================================
+basic/typeResolution3
+================================================================================
+
+amends "typeResolution2.pkl"
+
+local class Person3 { name = "person3" }
+
+local ppp1: Person1 = new Person1 {}
+local ppp2: Person2 = new Person2 {}
+local ppp3: Person3 = new Person3 {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody))))

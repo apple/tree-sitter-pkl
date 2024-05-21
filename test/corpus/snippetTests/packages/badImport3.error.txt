@@ -1,0 +1,16 @@
+================================================================================
+packages/badImport3.error
+================================================================================
+
+// no fragment
+res = import("package://localhost:12110/bar/baz@1.0.0")
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (classProperty
+    (identifier)
+    (importExpr
+      (stringConstant
+        (stringFragment)))))

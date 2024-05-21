@@ -1,0 +1,173 @@
+================================================================================
+listings/inequality
+================================================================================
+
+local x = new Listing {
+  "one"
+  "two"
+}
+
+res1 = x != x
+res2 = x != new Listing {
+  "one"
+  "two"
+}
+res3 = x != new Listing {
+  "two"
+}
+res4 = x != new Listing {
+  "two"
+  "one"
+}
+res5 = x != (x) {}
+res6 = x != (x) { "one" }
+res8 = x != (x) { default = 9 }
+res9 = (x) { default = 9 } != (x) { default = 10 }
+res10 = new Listing { "one" } != new Listing { "one"; default = 9 }
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectElement
+          (slStringLiteral
+            (stringFragment)))
+        (objectElement
+          (slStringLiteral
+            (stringFragment))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (variableExpr
+        (identifier))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (objectElement
+            (slStringLiteral
+              (stringFragment)))
+          (objectElement
+            (slStringLiteral
+              (stringFragment)))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (objectElement
+            (slStringLiteral
+              (stringFragment)))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (objectElement
+            (slStringLiteral
+              (stringFragment)))
+          (objectElement
+            (slStringLiteral
+              (stringFragment)))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody
+          (objectElement
+            (slStringLiteral
+              (stringFragment)))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral))))
+      (objectLiteral
+        (parenthesizedExpr
+          (variableExpr
+            (identifier)))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (objectElement
+            (slStringLiteral
+              (stringFragment)))))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (objectElement
+            (slStringLiteral
+              (stringFragment)))
+          (objectProperty
+            (identifier)
+            (intLiteral)))))))

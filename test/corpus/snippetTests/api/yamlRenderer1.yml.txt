@@ -1,0 +1,41 @@
+================================================================================
+api/yamlRenderer1.yml
+================================================================================
+
+pigeon {
+  name = "pigeon"
+  age = 30
+}
+
+output {
+  value = pigeon
+  renderer = new YamlRenderer {}
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral
+          (stringFragment)))
+      (objectProperty
+        (identifier)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (variableExpr
+          (identifier)))
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody))))))

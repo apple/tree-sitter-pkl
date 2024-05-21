@@ -1,0 +1,20 @@
+================================================================================
+basic/fixedProperty5
+================================================================================
+
+myObj = new {
+  fixed bar = "bar"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (newExpr
+      (objectBody
+        (objectProperty
+          (modifier)
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))))))

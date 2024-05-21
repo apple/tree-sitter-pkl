@@ -1,0 +1,93 @@
+================================================================================
+classes/unionTypesErrorAlias
+================================================================================
+
+typealias A =
+    "aaaaaaaaaaaaaaa"
+    | "bbbbbbbbbbbbb"
+    | "ccccccccccccc"
+    | "ddddddddddddd"
+    | "eeeeeeeeeeeee"
+    | "fffffffffffff"
+    | "ggggggggggggg"
+    | "hhhhhhhhhhhhh"
+    | "iiiiiiiiiiiii"
+    | "jjjjjjjjjjjjj"
+    | "kkkkkkkkkkkkk"
+
+class X {
+  a: A
+}
+
+res1 = new X {
+  a = "other"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (typeAlias
+    (identifier)
+    (type
+      (type
+        (type
+          (type
+            (type
+              (type
+                (type
+                  (type
+                    (type
+                      (type
+                        (type
+                          (stringConstant
+                            (stringFragment)))
+                        (type
+                          (stringConstant
+                            (stringFragment))))
+                      (type
+                        (stringConstant
+                          (stringFragment))))
+                    (type
+                      (stringConstant
+                        (stringFragment))))
+                  (type
+                    (stringConstant
+                      (stringFragment))))
+                (type
+                  (stringConstant
+                    (stringFragment))))
+              (type
+                (stringConstant
+                  (stringFragment))))
+            (type
+              (stringConstant
+                (stringFragment))))
+          (type
+            (stringConstant
+              (stringFragment))))
+        (type
+          (stringConstant
+            (stringFragment))))
+      (type
+        (stringConstant
+          (stringFragment)))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))))))

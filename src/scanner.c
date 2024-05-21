@@ -193,7 +193,7 @@ static bool parse_mlx_string_chars(TSLexer *lexer, int num_pounds) {
   }
 }
 
-bool parse_square_bracket_variant(TSLexer *lexer, bool open_square_bracket, bool open_entry_bracket) {
+static bool parse_square_bracket_variant(TSLexer *lexer, bool open_square_bracket, bool open_entry_bracket) {
   while (
     lexer->lookahead == ' ' ||
     lexer->lookahead == '\t' ||

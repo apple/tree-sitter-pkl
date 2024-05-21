@@ -1,0 +1,30 @@
+================================================================================
+modules/amendModule2
+================================================================================
+
+amends "library.pkl"
+
+// use inherited type
+pigeon = new Person {
+  name = "pigeon2"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))))))

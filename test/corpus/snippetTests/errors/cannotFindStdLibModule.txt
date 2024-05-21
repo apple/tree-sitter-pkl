@@ -1,0 +1,20 @@
+================================================================================
+errors/cannotFindStdLibModule
+================================================================================
+
+import "pkl:nonExisting"
+
+res1 = nonExisting.bar
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (propertyCallExpr
+      (variableExpr
+        (identifier))
+      (identifier))))

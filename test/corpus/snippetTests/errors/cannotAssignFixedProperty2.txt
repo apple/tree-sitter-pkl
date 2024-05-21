@@ -1,0 +1,19 @@
+================================================================================
+errors/cannotAssignFixedProperty2
+================================================================================
+
+amends "../basic/fixedProperty1.pkl"
+
+res1 = "bye"
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment))))

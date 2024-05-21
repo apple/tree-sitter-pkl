@@ -1,0 +1,187 @@
+================================================================================
+classes/nullableTypes
+================================================================================
+
+import "pkl:test"
+
+class X {
+  a: String?
+  b: List<String?>
+  c: List<String>?
+  d: List<String?>?
+}
+
+res1 = new X {
+  a = "a"
+  b = List("b")
+  c = List("c")
+  d = List("d")
+}
+
+res2 = new X {
+  a = null
+  b = List(null)
+  c = null
+  d = List(null)
+}
+
+res3 = test.catch(() ->
+  new X {
+    b = null
+  }.b
+)
+
+res4 = test.catch(() ->
+  new X {
+    c = List(null)
+  }.c
+)
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier))))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (type
+                  (qualifiedIdentifier
+                    (identifier))))))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier))
+              (typeArgumentList
+                (type
+                  (qualifiedIdentifier
+                    (identifier))))))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier))
+              (typeArgumentList
+                (type
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (stringFragment)))))
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (stringFragment)))))
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (stringFragment))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (nullLiteral))
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (nullLiteral))))
+        (objectProperty
+          (identifier)
+          (nullLiteral))
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (nullLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (nullLiteral))))
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (nullLiteral))))))
+            (identifier)))))))

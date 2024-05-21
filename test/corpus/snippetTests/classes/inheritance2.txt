@@ -1,0 +1,92 @@
+================================================================================
+classes/inheritance2
+================================================================================
+
+open class Person {
+  name: String = "Pigeon"
+}
+
+class Teacher extends Person {
+  subjects: List<String> = List("Rocks", "Stone Age")
+}
+
+res1 = new Teacher {}
+
+res2 = (res1) {
+  name = "Parrot"
+}
+
+res3 = (res2) {
+  subjects = List("Fire Making")
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteral
+          (stringFragment)))))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (qualifiedIdentifier
+        (identifier)))
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (qualifiedIdentifier
+                  (identifier))))))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody)))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (stringFragment)))))))))

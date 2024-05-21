@@ -1,0 +1,253 @@
+================================================================================
+basic/importGlob
+================================================================================
+
+amends ".../snippetTest.pkl"
+
+import* "../../input-helper/globtest/*.pkl" as globTestFiles
+import* "../../input-helper/globtest/*.pkl"
+
+examples {
+  ["import* clause keys"] {
+    globTestFiles.keys.toListing()
+  }
+
+  ["import* inferred name"] {
+    `*`.keys.toListing()
+  }
+
+  ["globstar"] {
+    import*("../../input-helper/globtest/**.pkl").keys.toListing()
+  }
+
+  ["globstar then up one level"] {
+    import*("../../input-helper/globtest/**/../*.pkl").keys.toListing()
+  }
+
+  ["empty glob matches current directory"] {
+    import*("").keys.toListing()
+    module.catch(() -> import*("").toMap())
+  }
+
+  ["no wildcards"] {
+    import*("../../input-helper/globtest/moduleA.pkl").keys.toListing()
+  }
+
+  ["wildcard that does match"] {
+    import*("../../input-helper/globtest/{moduleA}.pkl").keys.toListing()
+  }
+
+  ["character classes"] {
+    import*("../../input-helper/globtest/module[A-B].pkl").keys.toListing()
+  }
+
+  ["match directories"] {
+    module.catch(() -> import*("../../input-helper/globtest").toMap())
+  }
+
+  ["match literal backslash"] {
+    import*("../../input-helper/globtest/\\\\moduleC.pkl").keys.toListing()
+  }
+
+  ["import glob first segment is wildcard"] {
+    import*("*Glob.pkl").keys.toListing()
+  }
+
+  ["import glob matching unsafe uri chars"] {
+    // no percent encoding because this is just a path (same rules as `import`)
+    import*(#"../../input-helper/globtest/module with \[weird] ~!characters.pkl"#)
+    import*("../../input-helper/globtest/module *")
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (importGlobClause
+    (stringConstant
+      (stringFragment))
+    (identifier))
+  (importGlobClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (stringFragment)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (stringFragment)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant))
+                (identifier))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (methodCallExpr
+                    (importGlobExpr
+                      (stringConstant))
+                    (identifier)
+                    (argumentList))))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (stringFragment)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (stringFragment)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (stringFragment)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (methodCallExpr
+                    (importGlobExpr
+                      (stringConstant
+                        (stringFragment)))
+                    (identifier)
+                    (argumentList))))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (stringFragment)
+                    (stringFragment
+                      (escapeSequence))
+                    (stringFragment
+                      (escapeSequence))
+                    (stringFragment)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (stringFragment)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (lineComment)
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (stringFragment))))
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (stringFragment)))))))))

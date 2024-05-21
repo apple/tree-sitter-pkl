@@ -1,0 +1,31 @@
+================================================================================
+basic/fixedProperty3
+================================================================================
+
+extends "fixedProperty1.pkl"
+
+fixed res1 = "goodbye"
+
+fixed res4: String = "aloha"
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral
+      (stringFragment))))

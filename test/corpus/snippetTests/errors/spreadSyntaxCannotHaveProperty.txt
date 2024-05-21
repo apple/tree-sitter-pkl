@@ -1,0 +1,34 @@
+================================================================================
+errors/spreadSyntaxCannotHaveProperty
+================================================================================
+
+local source {
+  foo = "foo"
+}
+
+res: Listing = new {
+  ...source
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectSpread
+          (variableExpr
+            (identifier)))))))

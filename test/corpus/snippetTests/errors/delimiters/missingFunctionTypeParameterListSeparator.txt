@@ -1,0 +1,30 @@
+================================================================================
+errors/delimiters/missingFunctionTypeParameterListSeparator
+================================================================================
+
+f: (String, Int String) -> String
+res1 = 42
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (ERROR
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (intLiteral)))

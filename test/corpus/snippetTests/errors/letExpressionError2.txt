@@ -1,0 +1,29 @@
+================================================================================
+errors/letExpressionError2
+================================================================================
+
+res1 =
+  let (x = 1)
+    let (y = throw("ouch"))
+      y + 2
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (letExpr
+      (typedIdentifier
+        (identifier))
+      (intLiteral)
+      (letExpr
+        (typedIdentifier
+          (identifier))
+        (throwExpr
+          (parenthesizedExpr
+            (slStringLiteral
+              (stringFragment))))
+        (binaryExpr
+          (variableExpr
+            (identifier))
+          (intLiteral))))))

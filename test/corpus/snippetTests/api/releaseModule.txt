@@ -1,0 +1,252 @@
+================================================================================
+api/releaseModule
+================================================================================
+
+amends "../snippetTest.pkl"
+
+import "pkl:release"
+
+local current = release.current
+
+facts {
+  ["version"] {
+    current.version.major == 0
+    current.version.minor >= 16
+    current.version.patch >= 0
+  }
+
+  ["versionInfo"] {
+    current.versionInfo.contains("macOS") || current.versionInfo.contains("Linux")
+  }
+
+  ["commitId"] {
+    current.commitId.matches(Regex(#"[0-9a-f]{7,40}"#))
+  }
+
+  ["sourceCode"] {
+    current.sourceCode.homepage.startsWith("https://")
+    current.sourceCode.homepage.endsWith("/")
+  }
+
+  ["documentation"] {
+    current.documentation.homepage.startsWith("https://")
+    current.documentation.homepage.endsWith("/")
+  }
+  
+  ["standardLibrary"] {
+    current.standardLibrary.modules.length > 10
+    current.standardLibrary.modules.every((it) -> it.startsWith("pkl:"))
+    current.standardLibrary.modules.contains("pkl:base")
+    !current.standardLibrary.modules.contains("pkl:package-info")
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (propertyCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (intLiteral)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (binaryExpr
+                  (methodCallExpr
+                    (propertyCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier))
+                    (identifier)
+                    (argumentList
+                      (slStringLiteral
+                        (stringFragment))))
+                  (variableExpr
+                    (identifier)))
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (methodCallExpr
+                  (identifier)
+                  (argumentList
+                    (slStringLiteral
+                      (stringFragment)))))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (propertyCallExpr
+                    (variableExpr
+                      (identifier))
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList
+                    (typedIdentifier
+                      (identifier)))
+                  (methodCallExpr
+                    (variableExpr
+                      (identifier))
+                    (identifier)
+                    (argumentList
+                      (slStringLiteral
+                        (stringFragment))))))))
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (unaryExpr
+                    (variableExpr
+                      (identifier)))
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment))))))))))

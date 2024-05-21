@@ -1,0 +1,20 @@
+================================================================================
+packages/badImport5.error
+================================================================================
+
+import "package://localhost:12110/badChecksum@1.0.0#/Bug.pkl"
+
+res: Bug
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))))

@@ -1,0 +1,38 @@
+================================================================================
+snippetTest
+================================================================================
+
+open module snippetTest
+
+extends "pkl:test"
+
+output {
+  renderer = new PcfRenderer {
+    omitNullProperties = true
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (moduleClause
+      (modifier)
+      (qualifiedIdentifier
+        (identifier)))
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (trueLiteral))))))))

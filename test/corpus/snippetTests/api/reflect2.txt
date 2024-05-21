@@ -1,0 +1,480 @@
+================================================================================
+api/reflect2
+================================================================================
+
+/// Module doc comment line 1
+/// Module doc comment line 2
+module api.reflect
+
+amends ".../snippetTest.pkl"
+
+import "pkl:reflect"
+import ".../input-helper/api/reflect/BaseModule.pkl"
+import ".../input-helper/api/reflect/ExtendingModule.pkl"
+
+local testHelpers = (import(".../input-helper/api/reflect/testHelpers.pkl")) {
+  referenceModule = "ExtendingModule.pkl"
+}
+
+local mod = reflect.Module(ExtendingModule)
+local modClass = mod.moduleClass
+local modClassProps = modClass.properties
+local modClassMethods = modClass.methods
+local person2Class = mod.classes["Person2"]
+
+facts {
+  ["Reflecting an extending module"] {
+    mod.reflectee == ExtendingModule
+    mod.annotations == testHelpers.MyAnn("extending module annotation")
+    mod.docComment == "extending module doc comment"
+    mod.uri.matches(Regex(#"file:///.*/input-helper/api/reflect/ExtendingModule.pkl"#))
+    mod.supermodule == reflect.Module(BaseModule) == true
+    mod.isAmend == false
+    mod.classes.keys == Set("Person2")
+    mod.typeAliases.keys == Set()
+  }
+  
+  ["Reflecting an extending module class"] {
+    modClass.reflectee == ExtendingModule.getClass()
+    modClass.annotations == testHelpers.MyAnn("extending module annotation")
+    modClass.docComment == "extending module doc comment"
+  }
+  
+  ["Reflecting properties"] {
+    modClassProps.keys == Set("property")
+  }
+  
+  ["Reflecting methods"] {
+    modClassMethods.keys == Set("method")    
+  }
+  
+  ["Reflecting an extended class"] {
+    person2Class.annotations == List()
+    person2Class.docComment == null
+    person2Class.location.displayUri.contains("ExtendingModule.pkl")
+    person2Class.reflectee == ExtendingModule.Person2
+    person2Class.typeParameters == List()
+    person2Class.superclass == reflect.Class(BaseModule.Person)
+    person2Class.supertype == reflect.DeclaredType(person2Class.superclass!!)
+    person2Class.properties.keys == Set()
+    person2Class.methods.keys == Set()    
+  }
+}
+
+examples {
+  ["Reflected module properties of known extending type metadata"] {
+    testHelpers.property(modClassProps["property"], reflect.DeclaredType(reflect.Class(ExtendingModule.Person2))) 
+  }
+  ["Reflecting a method from an extending module"] {
+    testHelpers.method(
+      modClassMethods["method"],
+      List(),
+      reflect.DeclaredType(reflect.Class(BaseModule.Person)))
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (lineComment)
+  (moduleHeader
+    (moduleClause
+      (qualifiedIdentifier
+        (identifier)
+        (identifier)))
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (importExpr
+          (stringConstant
+            (stringFragment))))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment))))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (propertyCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (propertyCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (propertyCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (subscriptExpr
+      (propertyCallExpr
+        (variableExpr
+          (identifier))
+        (identifier))
+      (slStringLiteral
+        (stringFragment))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (variableExpr
+                (identifier))))
+          (objectElement
+            (methodCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (variableExpr
+                  (identifier)))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (slStringLiteral
+                (stringFragment))))
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (methodCallExpr
+                  (identifier)
+                  (argumentList
+                    (slStringLiteral
+                      (stringFragment)))))))
+          (objectElement
+            (binaryExpr
+              (methodCallExpr
+                (binaryExpr
+                  (propertyCallExpr
+                    (variableExpr
+                      (identifier))
+                    (identifier))
+                  (variableExpr
+                    (identifier)))
+                (identifier)
+                (argumentList
+                  (variableExpr
+                    (identifier))))
+              (trueLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (falseLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (slStringLiteral
+                    (stringFragment))))))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (variableExpr
+                  (identifier)))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (variableExpr
+                  (identifier)))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (slStringLiteral
+                (stringFragment))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (slStringLiteral
+                    (stringFragment))))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (slStringLiteral
+                    (stringFragment))))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList))))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (nullLiteral)))
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (propertyCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (variableExpr
+                  (identifier)))
+              (identifier)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList))))
+          (objectElement
+            (methodCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (variableExpr
+                  (identifier)))
+              (identifier)
+              (argumentList
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier)))))
+          (objectElement
+            (methodCallExpr
+              (binaryExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (variableExpr
+                  (identifier)))
+              (identifier)
+              (argumentList
+                (unaryExpr
+                  (propertyCallExpr
+                    (variableExpr
+                      (identifier))
+                    (identifier))))))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList))))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (subscriptExpr
+                  (variableExpr
+                    (identifier))
+                  (slStringLiteral
+                    (stringFragment)))
+                (methodCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier)
+                  (argumentList
+                    (methodCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier)
+                      (argumentList
+                        (propertyCallExpr
+                          (variableExpr
+                            (identifier))
+                          (identifier)))))))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (subscriptExpr
+                  (variableExpr
+                    (identifier))
+                  (slStringLiteral
+                    (stringFragment)))
+                (methodCallExpr
+                  (identifier)
+                  (argumentList))
+                (methodCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier)
+                  (argumentList
+                    (methodCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier)
+                      (argumentList
+                        (propertyCallExpr
+                          (variableExpr
+                            (identifier))
+                          (identifier))))))))))))))

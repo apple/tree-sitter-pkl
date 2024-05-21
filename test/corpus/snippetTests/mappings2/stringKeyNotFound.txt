@@ -1,0 +1,58 @@
+================================================================================
+mappings2/stringKeyNotFound
+================================================================================
+
+hidden x = new Mapping {
+  when (false) { [0] = 0 }
+  ["xfoo"] = "xfoo"
+  ["fooy"] = "fooy"
+  ["fozo"] = "fozo"
+  ["other"] = "other"
+}
+
+res1 = x["foo"]
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (whenGenerator
+          (falseLiteral)
+          (objectBody
+            (objectEntry
+              (intLiteral)
+              (intLiteral))))
+        (objectEntry
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
+        (objectEntry
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
+        (objectEntry
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment)))
+        (objectEntry
+          (slStringLiteral
+            (stringFragment))
+          (slStringLiteral
+            (stringFragment))))))
+  (classProperty
+    (identifier)
+    (subscriptExpr
+      (variableExpr
+        (identifier))
+      (slStringLiteral
+        (stringFragment)))))

@@ -1,0 +1,78 @@
+================================================================================
+api/shellModule
+================================================================================
+
+amends "../snippetTest.pkl"
+
+import "pkl:shell"
+
+examples {
+  ["escapeWithSingleQuotes()"] {
+    shell.escapeWithSingleQuotes("asdf")
+    shell.escapeWithSingleQuotes("`@#$")
+    shell.escapeWithSingleQuotes("abc\"abc")
+    shell.escapeWithSingleQuotes("abc'def''ghi'''jkl")
+    shell.escapeWithSingleQuotes("'abc'")
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)
+                  (stringFragment
+                    (escapeSequence))
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment))))))))))

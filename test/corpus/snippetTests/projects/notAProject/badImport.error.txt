@@ -1,0 +1,14 @@
+================================================================================
+projects/notAProject/badImport.error
+================================================================================
+
+res = import("@child/theChild.pkl")
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (importExpr
+      (stringConstant
+        (stringFragment)))))

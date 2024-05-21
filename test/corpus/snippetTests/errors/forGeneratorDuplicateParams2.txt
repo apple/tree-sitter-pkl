@@ -1,0 +1,66 @@
+================================================================================
+errors/forGeneratorDuplicateParams2
+================================================================================
+
+a = List(1, 2, 3, 4)
+
+b = List("a", "b", "c", "d")
+
+foo {
+  for (_dup, i in a) {
+    for (_dup, j in b) {
+      i + j
+    }
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)
+        (intLiteral)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment))
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (forGenerator
+        (typedIdentifier
+          (identifier))
+        (typedIdentifier
+          (identifier))
+        (variableExpr
+          (identifier))
+        (objectBody
+          (forGenerator
+            (typedIdentifier
+              (identifier))
+            (typedIdentifier
+              (identifier))
+            (variableExpr
+              (identifier))
+            (objectBody
+              (objectElement
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (variableExpr
+                    (identifier)))))))))))

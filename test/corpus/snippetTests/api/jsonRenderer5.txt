@@ -1,0 +1,390 @@
+================================================================================
+api/jsonRenderer5
+================================================================================
+
+import "pkl:test"
+
+class Person {
+  name: String
+  age: Int
+}
+
+typealias Email = String
+
+local renderer = new JsonRenderer {}
+
+res1 = renderer.renderDocument(123)
+res2 = renderer.renderDocument(1.23)
+res3 = renderer.renderDocument(false)
+res4 = renderer.renderDocument("pigeon")
+res6 = renderer.renderDocument(List("pigeon", "parrot"))
+res7 = renderer.renderDocument(Set("pigeon", "parrot"))
+res8 = renderer.renderDocument(Map("name", "pigeon", "age", 42))
+res9 = renderer.renderDocument(new Listing { "pigeon"; "parrot" })
+res10 = renderer.renderDocument(new Mapping { ["name"] = "pigeon"; ["age"] = 42 })
+res11 = renderer.renderDocument(new Dynamic { name = "pigeon"; age = 42 })
+res12 = renderer.renderDocument(new Person { name = "pigeon"; age = 42 })
+res13 = renderer.renderDocument(null)
+
+res14 = test.catch(() -> renderer.renderDocument(1.min))
+res15 = test.catch(() -> renderer.renderDocument(Pair(1, 2)))
+res16 = test.catch(() -> renderer.renderDocument(1.mb))
+res17 = test.catch(() -> renderer.renderDocument(Person))
+res18 = test.catch(() -> renderer.renderDocument(Email))
+res19 = test.catch(() -> renderer.renderDocument((x) -> x))
+res20 = test.catch(() -> new JsonRenderer { converters { [Int] = (_) -> throw("ouch") } }.renderDocument(42))
+res21 = test.catch(() -> renderer.renderDocument(IntSeq(1, 4)))
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (typeAlias
+    (identifier)
+    (type
+      (qualifiedIdentifier
+        (identifier))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (floatLiteral))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (falseLiteral))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment))
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectElement
+              (slStringLiteral
+                (stringFragment)))
+            (objectElement
+              (slStringLiteral
+                (stringFragment))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectEntry
+              (slStringLiteral
+                (stringFragment))
+              (slStringLiteral
+                (stringFragment)))
+            (objectEntry
+              (slStringLiteral
+                (stringFragment))
+              (intLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (stringFragment)))
+            (objectProperty
+              (identifier)
+              (intLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (stringFragment)))
+            (objectProperty
+              (identifier)
+              (intLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (nullLiteral))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (intLiteral)
+                  (intLiteral)))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (propertyCallExpr
+                (intLiteral)
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (variableExpr
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (variableExpr
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (variableExpr
+                  (identifier)))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (objectBody
+                    (objectEntry
+                      (variableExpr
+                        (identifier))
+                      (functionLiteral
+                        (parameterList
+                          (typedIdentifier
+                            (identifier)))
+                        (throwExpr
+                          (parenthesizedExpr
+                            (slStringLiteral
+                              (stringFragment))))))))))
+            (identifier)
+            (argumentList
+              (intLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (intLiteral)
+                  (intLiteral))))))))))

@@ -1,0 +1,39 @@
+================================================================================
+lambdas/lambdaStackTrace2
+================================================================================
+
+hidden f1 = () -> (() -> (() -> throw("ouch")).apply()).apply()
+
+res1 = f1.apply()
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (functionLiteral
+      (parameterList)
+      (methodCallExpr
+        (parenthesizedExpr
+          (functionLiteral
+            (parameterList)
+            (methodCallExpr
+              (parenthesizedExpr
+                (functionLiteral
+                  (parameterList)
+                  (throwExpr
+                    (parenthesizedExpr
+                      (slStringLiteral
+                        (stringFragment))))))
+              (identifier)
+              (argumentList))))
+        (identifier)
+        (argumentList))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList))))

@@ -1,0 +1,25 @@
+================================================================================
+basic/localPropertyAmendInAmendingModule
+================================================================================
+
+amends "baseModule.pkl"
+
+local object {
+  property = "value"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral
+          (stringFragment))))))

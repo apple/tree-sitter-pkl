@@ -1,0 +1,198 @@
+================================================================================
+implementation/inequality
+================================================================================
+
+amends "../snippetTest.pkl"
+
+local function notEquals(left, right) = left != right
+
+facts {
+  ["mix EqualsNode specializations (VmValue first)"] {
+    !notEquals(42.s, 42.s)
+    notEquals(42.s, 43.s)
+    !notEquals(42.mb, 42.mb)
+    notEquals(42.mb, 43.mb)
+    !notEquals(new Dynamic { name = "Pigeon" }, new Dynamic { name = "Pigeon" })
+    notEquals(new Dynamic { name = "Pigeon" }, new Dynamic { name = "Parrot" })
+    !notEquals("Pigeon", "Pigeon")
+    notEquals("Pigeon", "Parrot")
+    !notEquals(42, 42)
+    notEquals(42, 43)
+    !notEquals(1.23, 1.23)
+    notEquals(1.23, 1.24)
+    !notEquals(true, true)
+    notEquals(true, false)
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classMethod
+    (methodHeader
+      (modifier)
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier))
+        (typedIdentifier
+          (identifier))))
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (variableExpr
+        (identifier))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (unaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (propertyCallExpr
+                    (intLiteral)
+                    (identifier))
+                  (propertyCallExpr
+                    (intLiteral)
+                    (identifier))))))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier)))))
+          (objectElement
+            (unaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (propertyCallExpr
+                    (intLiteral)
+                    (identifier))
+                  (propertyCallExpr
+                    (intLiteral)
+                    (identifier))))))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier))
+                (propertyCallExpr
+                  (intLiteral)
+                  (identifier)))))
+          (objectElement
+            (unaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (newExpr
+                    (type
+                      (qualifiedIdentifier
+                        (identifier)))
+                    (objectBody
+                      (objectProperty
+                        (identifier)
+                        (slStringLiteral
+                          (stringFragment)))))
+                  (newExpr
+                    (type
+                      (qualifiedIdentifier
+                        (identifier)))
+                    (objectBody
+                      (objectProperty
+                        (identifier)
+                        (slStringLiteral
+                          (stringFragment)))))))))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody
+                    (objectProperty
+                      (identifier)
+                      (slStringLiteral
+                        (stringFragment)))))
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody
+                    (objectProperty
+                      (identifier)
+                      (slStringLiteral
+                        (stringFragment))))))))
+          (objectElement
+            (unaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment))))))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment))
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (unaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (intLiteral)
+                  (intLiteral)))))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (intLiteral)
+                (intLiteral))))
+          (objectElement
+            (unaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (floatLiteral)
+                  (floatLiteral)))))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (floatLiteral)
+                (floatLiteral))))
+          (objectElement
+            (unaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (trueLiteral)
+                  (trueLiteral)))))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (trueLiteral)
+                (falseLiteral)))))))))

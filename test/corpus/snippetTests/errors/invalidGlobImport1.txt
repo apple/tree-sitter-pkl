@@ -1,0 +1,19 @@
+================================================================================
+errors/invalidGlobImport1
+================================================================================
+
+import* "{foo{bar}}.pkl" as invalidGlob
+
+res = invalidGlob
+
+--------------------------------------------------------------------------------
+
+(module
+  (importGlobClause
+    (stringConstant
+      (stringFragment))
+    (identifier))
+  (classProperty
+    (identifier)
+    (variableExpr
+      (identifier))))

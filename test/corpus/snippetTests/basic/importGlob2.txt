@@ -1,0 +1,117 @@
+================================================================================
+basic/importGlob2
+================================================================================
+
+// Test is excluded from native tests because it globs classpath resources.
+amends "../snippetTest.pkl"
+
+examples {
+  ["classpath"] {
+    import*("modulepath:/com/apple/pkl/core/snippets/*.pkl")
+    import*("modulepath:/com/apple/pkl/core/snippets/**.pkl")
+  }
+
+  ["classpath globstar"] {
+    import*("modulepath:/**.pkl").keys.toListing()
+  }
+
+  ["classpath globs and up one level"] {
+    import*("modulepath:/com/apple/pkl/core/*/../snippets/*.pkl")
+  }
+
+  ["globbing with absolute uris and percent encoding"] {
+    // percent encoding needed beacuse this is an absolute URI (same rules as `import`)
+    import*("modulepath:/com/apple/pkl/core/snippets/name%20*")
+    import*(#"modulepath:/com/apple/pkl/core/snippets/name%20with%20%5C%5Bwierd%5D!%20chars~~.pkl"#)
+  }
+  ["package"] {
+    import*("package://localhost:12110/birds@0.5.0#/catalog/*.pkl")
+    import*("package://localhost:12110/birds@0.5.0#/**.pkl").keys.toListing()
+  }
+  ["package glob and up one level"] {
+    import*("package://localhost:12110/birds@0.5.0#/catalog/../catalog/*.pkl")
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (stringFragment))))
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (stringFragment))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (stringFragment)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (stringFragment))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (lineComment)
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (stringFragment))))
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (stringFragment))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (stringFragment))))
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (stringFragment)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (stringFragment)))))))))

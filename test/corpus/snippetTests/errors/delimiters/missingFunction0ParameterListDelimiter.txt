@@ -1,0 +1,20 @@
+================================================================================
+errors/delimiters/missingFunction0ParameterListDelimiter
+================================================================================
+
+f = ( -> 42
+res1 = 42
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (parenthesizedExpr
+      (unaryExpr
+        (ERROR)
+        (intLiteral))
+      (MISSING ")")))
+  (classProperty
+    (identifier)
+    (intLiteral)))

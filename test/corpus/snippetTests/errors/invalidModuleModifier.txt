@@ -1,0 +1,19 @@
+================================================================================
+errors/invalidModuleModifier
+================================================================================
+
+abstract module foo
+
+amends "baseModule.pkl"
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (moduleClause
+      (modifier)
+      (qualifiedIdentifier
+        (identifier)))
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment)))))

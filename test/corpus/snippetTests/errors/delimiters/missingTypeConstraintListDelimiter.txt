@@ -1,0 +1,29 @@
+================================================================================
+errors/delimiters/missingTypeConstraintListDelimiter
+================================================================================
+
+res1: String(!isEmpty, length < 5 = "abc"
+res2 = 42
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (ERROR
+      (unaryExpr
+        (variableExpr
+          (identifier)))
+      (binaryExpr
+        (variableExpr
+          (identifier))
+        (intLiteral)))
+      (slStringLiteral
+        (stringFragment)))
+  (classProperty
+    (identifier)
+    (intLiteral)))

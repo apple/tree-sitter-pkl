@@ -1,0 +1,13 @@
+================================================================================
+errors/moduleExtendsVersionCheck
+================================================================================
+
+extends "moduleWithHighMinPklVersion.pkl"
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment)))))

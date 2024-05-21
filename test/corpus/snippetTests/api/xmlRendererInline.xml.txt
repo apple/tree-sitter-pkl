@@ -1,0 +1,175 @@
+================================================================================
+api/xmlRendererInline.xml
+================================================================================
+
+import "pkl:xml"
+
+class Person {
+  name: String
+  age: Int
+}
+
+content {
+  xml.Inline(List("pigeon", "parrot"))
+  xml.Inline(Set("pigeon", "parrot"))
+  xml.Inline(new Listing { "pigeon"; "parrot" })
+  xml.Inline(Map("name", "pigeon", "age", 42))
+  xml.Inline(new Mapping { ["name"] = "pigeon"; ["age"] = 42 })
+  xml.Inline(new Dynamic { name = "pigeon"; age = 42 })
+  xml.Inline(new Person { name = "pigeon"; age = 42 })
+}
+
+output {
+  renderer = new xml.Renderer {}
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment))
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectElement
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment))
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectElement
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectElement
+                  (slStringLiteral
+                    (stringFragment)))
+                (objectElement
+                  (slStringLiteral
+                    (stringFragment))))))))
+      (objectElement
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment))
+                (slStringLiteral
+                  (stringFragment))
+                (slStringLiteral
+                  (stringFragment))
+                (intLiteral))))))
+      (objectElement
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectEntry
+                  (slStringLiteral
+                    (stringFragment))
+                  (slStringLiteral
+                    (stringFragment)))
+                (objectEntry
+                  (slStringLiteral
+                    (stringFragment))
+                  (intLiteral)))))))
+      (objectElement
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (slStringLiteral
+                    (stringFragment)))
+                (objectProperty
+                  (identifier)
+                  (intLiteral)))))))
+      (objectElement
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (slStringLiteral
+                    (stringFragment)))
+                (objectProperty
+                  (identifier)
+                  (intLiteral)))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)
+              (identifier)))
+          (objectBody))))))

@@ -1,0 +1,18 @@
+================================================================================
+errors/delimiters/missingListDelimiter
+================================================================================
+
+l = List("one", "two"
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (slStringLiteral
+      (stringFragment))
+    (slStringLiteral
+      (stringFragment))))

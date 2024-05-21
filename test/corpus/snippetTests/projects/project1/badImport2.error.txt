@@ -1,0 +1,16 @@
+================================================================================
+projects/project1/badImport2.error
+================================================================================
+
+// Name shadowing check; package `birds` names this dependency "fruities" but this project
+// calls it `fruits`.
+import "@fruities/Fruit.pkl"
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (lineComment)
+  (importClause
+    (stringConstant
+      (stringFragment))))

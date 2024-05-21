@@ -1,0 +1,39 @@
+================================================================================
+errors/spreadSyntaxDuplicateEntry2
+================================================================================
+
+local source {
+  ["foo"] = 1
+}
+
+res: Mapping = new {
+  ["foo"] = 2
+  ...source
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectEntry
+          (slStringLiteral
+            (stringFragment))
+          (intLiteral))
+        (objectSpread
+          (variableExpr
+            (identifier)))))))

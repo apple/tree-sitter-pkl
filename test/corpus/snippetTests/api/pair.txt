@@ -1,0 +1,170 @@
+================================================================================
+api/pair
+================================================================================
+
+amends "../snippetTest.pkl"
+
+local pair = Pair("Pigeon", 42)
+local pair2 = Pair(new Dynamic { name = "Pigeon" }, List(1, 2, 3))
+local pair3 = Pair(null, Pair(Regex("Pigeon"), 42.ms))
+
+examples {
+  ["first"] {
+    pair.first
+    pair2.first
+    pair3.first
+  }
+
+  ["second"] {
+    pair.second
+    pair2.second
+    pair3.second
+  }
+
+  ["key"] {
+    pair.key
+    pair2.key
+    pair3.key
+  }
+
+  ["value"] {
+    pair.value
+    pair2.value
+    pair3.value
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (stringFragment)))))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (intLiteral)
+            (intLiteral)
+            (intLiteral))))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (nullLiteral)
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment))))
+            (propertyCallExpr
+              (intLiteral)
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (variableExpr
+                (identifier))
+              (identifier))))))))

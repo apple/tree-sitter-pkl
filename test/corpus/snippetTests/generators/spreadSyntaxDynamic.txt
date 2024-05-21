@@ -1,0 +1,411 @@
+================================================================================
+generators/spreadSyntaxDynamic
+================================================================================
+
+amends ".../snippetTest.pkl"
+
+local listing: Listing = new { 1; 2; 3 }
+local mapping: Mapping = new { ["a"] = 1; ["b"] = 2 }
+local dynamic: Dynamic = new {
+  1
+  2
+  3
+  ["foo"] = 0
+  ["bar"] = 1
+  foo = "foo"
+  bar = "bar"
+}
+local list: List<Int> = List(1, 2, 3)
+local map: Map<String, Int> = Map("zz", 1, "yy", 2)
+local intseq: IntSeq = IntSeq(0, 5).step(2)
+local set: Set<Int> = Set(10, 20, 30)
+
+examples {
+  ["inferred Dynamic parent"] {
+    new {
+      ...listing
+    }
+    new {
+      ...mapping
+      ...listing
+      ...dynamic
+      ...list
+      ...map
+      ...intseq
+      ...set
+    }
+  }
+  ["explicit Dynamic type"] {
+    new Dynamic {
+      ...listing
+    }
+    new Dynamic {
+      ...mapping
+      ...listing
+      ...dynamic
+      ...list
+      ...map
+      ...intseq
+      ...set
+    }
+  }
+  ["legacy syntax"] {
+    (Dynamic) { ...dynamic }
+    (Dynamic) { ...listing }
+    (Dynamic) { ...list }
+    (Dynamic) { ...map }
+    (Dynamic) { ...intseq }
+    (Dynamic) { ...set }
+  }
+}
+
+facts {
+  ["length"] {
+    new Dynamic {
+      ...mapping
+      ...listing
+      ...dynamic
+      ...list
+      ...map
+      ...intseq
+      ...set
+    }.length() == 15
+  }
+  ["equality"] {
+    new Dynamic { ...dynamic } == dynamic
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectElement
+          (intLiteral))
+        (objectElement
+          (intLiteral))
+        (objectElement
+          (intLiteral)))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectEntry
+          (slStringLiteral
+            (stringFragment))
+          (intLiteral))
+        (objectEntry
+          (slStringLiteral
+            (stringFragment))
+          (intLiteral)))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (objectBody
+        (objectElement
+          (intLiteral))
+        (objectElement
+          (intLiteral))
+        (objectElement
+          (intLiteral))
+        (objectEntry
+          (slStringLiteral
+            (stringFragment))
+          (intLiteral))
+        (objectEntry
+          (slStringLiteral
+            (stringFragment))
+          (intLiteral))
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment))))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)
+        (intLiteral))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral)
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (methodCallExpr
+      (methodCallExpr
+        (identifier)
+        (argumentList
+          (intLiteral)
+          (intLiteral)))
+      (identifier)
+      (argumentList
+        (intLiteral))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (newExpr
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))
+          (objectElement
+            (newExpr
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))
+          (objectElement
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier)))
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (objectLiteral
+              (parenthesizedExpr
+                (variableExpr
+                  (identifier)))
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))
+          (objectElement
+            (objectLiteral
+              (parenthesizedExpr
+                (variableExpr
+                  (identifier)))
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))
+          (objectElement
+            (objectLiteral
+              (parenthesizedExpr
+                (variableExpr
+                  (identifier)))
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))
+          (objectElement
+            (objectLiteral
+              (parenthesizedExpr
+                (variableExpr
+                  (identifier)))
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))
+          (objectElement
+            (objectLiteral
+              (parenthesizedExpr
+                (variableExpr
+                  (identifier)))
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))
+          (objectElement
+            (objectLiteral
+              (parenthesizedExpr
+                (variableExpr
+                  (identifier)))
+              (objectBody
+                (objectSpread
+                  (variableExpr
+                    (identifier))))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (methodCallExpr
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody
+                    (objectSpread
+                      (variableExpr
+                        (identifier)))
+                    (objectSpread
+                      (variableExpr
+                        (identifier)))
+                    (objectSpread
+                      (variableExpr
+                        (identifier)))
+                    (objectSpread
+                      (variableExpr
+                        (identifier)))
+                    (objectSpread
+                      (variableExpr
+                        (identifier)))
+                    (objectSpread
+                      (variableExpr
+                        (identifier)))
+                    (objectSpread
+                      (variableExpr
+                        (identifier)))))
+                (identifier)
+                (argumentList))
+              (intLiteral)))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (newExpr
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (objectBody
+                  (objectSpread
+                    (variableExpr
+                      (identifier)))))
+              (variableExpr
+                (identifier)))))))))

@@ -1,0 +1,31 @@
+================================================================================
+errors/invalidTypeName2
+================================================================================
+
+local x = new {
+  y = import("pkl:base")
+}
+listing = new x.y.Listing {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (objectBody
+        (objectProperty
+          (identifier)
+          (importExpr
+            (stringConstant
+              (stringFragment)))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)
+          (identifier)
+          (identifier)))
+      (objectBody))))

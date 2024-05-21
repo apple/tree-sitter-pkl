@@ -1,0 +1,16 @@
+================================================================================
+errors/delimiters/missingEmptyMultiLineStringDelimiterAtEof
+================================================================================
+
+// no newline after opening quote
+res1 = """
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+    (stringFragment)
+      (MISSING """""))))

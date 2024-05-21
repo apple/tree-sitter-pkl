@@ -1,0 +1,14 @@
+================================================================================
+packages/badImport7.error
+================================================================================
+
+res = import("package://localhost:12110/badMetadataJson@1.0.0#/Bug.pkl")
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (importExpr
+      (stringConstant
+        (stringFragment)))))

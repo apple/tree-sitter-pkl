@@ -1,0 +1,20 @@
+================================================================================
+errors/delimiters/missingMapDelimiter
+================================================================================
+
+map = Map("one", 1, "two", 2
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (slStringLiteral
+      (stringFragment))
+    (intLiteral)
+    (slStringLiteral
+      (stringFragment))
+    (intLiteral)))

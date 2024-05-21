@@ -1,0 +1,277 @@
+================================================================================
+basic/localTypedClassMember
+================================================================================
+
+import "pkl:test"
+
+class Foo { x: Int }
+
+class C {
+  local p1: Int = 42
+  local p2: Int = "foo"
+  local p3: List<String> = List("foo", "bar")
+  local p4: List<String> = List("foo", 42)
+  local p6: Foo = new { x = 10 }
+
+  res1 = p1
+  res2 = test.catch(() -> p2)
+  res3 = p3
+  res4 = test.catch(() -> p4)
+  res6 = p6
+
+  local function f1(x: Int): Int = x
+  local function f2(x: Int): String = x
+  local function f3(x: List<String>): Int = x.length
+
+  res7 = f1(42)
+  res8 = test.catch(() -> f1("foo"))
+  res9 = test.catch(() -> f2(42))
+  res10 = f3(List("foo", "bar"))
+  res11 = test.catch(() -> f3(List("foo", 42)))
+}
+
+c = new C {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (modifier)
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (intLiteral))
+      (classProperty
+        (modifier)
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteral
+          (stringFragment)))
+      (classProperty
+        (modifier)
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (qualifiedIdentifier
+                  (identifier))))))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (stringFragment))
+            (slStringLiteral
+              (stringFragment)))))
+      (classProperty
+        (modifier)
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (qualifiedIdentifier
+                  (identifier))))))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (stringFragment))
+            (intLiteral))))
+      (classProperty
+        (modifier)
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (newExpr
+          (objectBody
+            (objectProperty
+              (identifier)
+              (intLiteral)))))
+      (classProperty
+        (identifier)
+        (variableExpr
+          (identifier)))
+      (classProperty
+        (identifier)
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (functionLiteral
+              (parameterList)
+              (variableExpr
+                (identifier))))))
+      (classProperty
+        (identifier)
+        (variableExpr
+          (identifier)))
+      (classProperty
+        (identifier)
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (functionLiteral
+              (parameterList)
+              (variableExpr
+                (identifier))))))
+      (classProperty
+        (identifier)
+        (variableExpr
+          (identifier)))
+      (classMethod
+        (methodHeader
+          (modifier)
+          (identifier)
+          (parameterList
+            (typedIdentifier
+              (identifier)
+              (typeAnnotation
+                (type
+                  (qualifiedIdentifier
+                    (identifier))))))
+          (typeAnnotation
+            (type
+              (qualifiedIdentifier
+                (identifier)))))
+        (variableExpr
+          (identifier)))
+      (classMethod
+        (methodHeader
+          (modifier)
+          (identifier)
+          (parameterList
+            (typedIdentifier
+              (identifier)
+              (typeAnnotation
+                (type
+                  (qualifiedIdentifier
+                    (identifier))))))
+          (typeAnnotation
+            (type
+              (qualifiedIdentifier
+                (identifier)))))
+        (variableExpr
+          (identifier)))
+      (classMethod
+        (methodHeader
+          (modifier)
+          (identifier)
+          (parameterList
+            (typedIdentifier
+              (identifier)
+              (typeAnnotation
+                (type
+                  (qualifiedIdentifier
+                    (identifier))
+                  (typeArgumentList
+                    (type
+                      (qualifiedIdentifier
+                        (identifier))))))))
+          (typeAnnotation
+            (type
+              (qualifiedIdentifier
+                (identifier)))))
+        (propertyCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)))
+      (classProperty
+        (identifier)
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (intLiteral))))
+      (classProperty
+        (identifier)
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (functionLiteral
+              (parameterList)
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (slStringLiteral
+                    (stringFragment))))))))
+      (classProperty
+        (identifier)
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (functionLiteral
+              (parameterList)
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (intLiteral)))))))
+      (classProperty
+        (identifier)
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (stringFragment))
+                (slStringLiteral
+                  (stringFragment)))))))
+      (classProperty
+        (identifier)
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (functionLiteral
+              (parameterList)
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (slStringLiteral
+                        (stringFragment))
+                      (intLiteral)))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody))))

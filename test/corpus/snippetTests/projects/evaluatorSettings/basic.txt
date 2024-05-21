@@ -1,0 +1,72 @@
+================================================================================
+projects/evaluatorSettings/basic
+================================================================================
+
+amends ".../snippetTest.pkl"
+
+examples {
+  ["all env vars come from settings"] {
+    read*("env:**")
+  }
+  ["all props come from settings"] {
+    read*("prop:**")
+  }
+  ["cannot import modulepath because it is not allowed"] {
+    module.catch(() -> import("modulepath:/com/apple/pkl/core/stdlib/release.pkl"))
+    module.catch(() -> read("modulepath:/com/apple/pkl/core/brokenModule1.pkl"))
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (readGlobExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (readGlobExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (importExpr
+                    (stringConstant
+                      (stringFragment)))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (readExpr
+                    (parenthesizedExpr
+                      (slStringLiteral
+                        (stringFragment)))))))))))))

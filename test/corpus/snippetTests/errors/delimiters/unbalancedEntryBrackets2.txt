@@ -1,0 +1,26 @@
+================================================================================
+errors/delimiters/unbalancedEntryBrackets2
+================================================================================
+
+res = new {
+  [name == "Pigeon"]] { age = 42 }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (newExpr
+      (objectBody
+        (objectEntry
+          (binaryExpr
+            (variableExpr
+              (identifier))
+                (slStringLiteral
+                  (stringFragment)))
+          (ERROR)
+          (objectBody
+            (objectProperty
+              (identifier)
+              (intLiteral))))))))

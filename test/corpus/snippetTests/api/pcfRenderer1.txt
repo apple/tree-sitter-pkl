@@ -1,0 +1,101 @@
+================================================================================
+api/pcfRenderer1
+================================================================================
+
+pigeon {
+  name = "pigeon"
+  age = 30
+}
+
+// dynamic object with properties and elements
+barnOwl {
+  name = "barn owl"
+  "surfing"
+  age = 42
+  "fire making"
+}
+
+parrot {
+  new {
+    // multiline string that is a property within an element
+    lastName = """
+      Flinstone
+
+      Flinstone
+      """
+    """
+    Flinstone
+
+    Flinstone
+    """
+  }
+  // multiline string that is an element
+  """
+  Flistone
+
+  Flistone
+  """
+}
+
+output {
+  renderer = new PcfRenderer {}
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral
+          (stringFragment)))
+      (objectProperty
+        (identifier)
+        (intLiteral))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral
+          (stringFragment)))
+      (objectElement
+        (slStringLiteral
+          (stringFragment)))
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectElement
+        (slStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (newExpr
+          (objectBody
+            (lineComment)
+            (objectProperty
+              (identifier)
+              (mlStringLiteral
+                (stringFragment)))
+            (objectElement
+              (mlStringLiteral
+                (stringFragment))))))
+      (lineComment)
+      (objectElement
+        (mlStringLiteral
+          (stringFragment)))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody))))))

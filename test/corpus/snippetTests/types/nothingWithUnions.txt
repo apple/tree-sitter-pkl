@@ -1,0 +1,31 @@
+================================================================================
+types/nothingWithUnions
+================================================================================
+
+x: "foo"|nothing = "foo"
+
+y: nothing|"foo" = "foo"
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (stringConstant
+            (stringFragment)))
+        (type)))
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type)
+        (type
+          (stringConstant
+            (stringFragment)))))
+    (slStringLiteral
+      (stringFragment))))

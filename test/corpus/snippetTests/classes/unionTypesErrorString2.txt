@@ -1,0 +1,85 @@
+================================================================================
+classes/unionTypesErrorString2
+================================================================================
+
+class X {
+  a: "aaaaaaaaaaaaaaa"
+     | "bbbbbbbbbbbbb"
+     | "ccccccccccccc"
+     | "ddddddddddddd"
+     | "eeeeeeeeeeeee"
+     | "fffffffffffff"
+     | "ggggggggggggg"
+     | "hhhhhhhhhhhhh"
+     | "iiiiiiiiiiiii"
+     | "jjjjjjjjjjjjj"
+     | "kkkkkkkkkkkkk"
+}
+
+res1 = new X {
+  a = "other"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (type
+                (type
+                  (type
+                    (type
+                      (type
+                        (type
+                          (type
+                            (type
+                              (type
+                                (stringConstant
+                                  (stringFragment)))
+                              (type
+                                (stringConstant
+                                  (stringFragment))))
+                            (type
+                              (stringConstant
+                                (stringFragment))))
+                          (type
+                            (stringConstant
+                              (stringFragment))))
+                        (type
+                          (stringConstant
+                            (stringFragment))))
+                      (type
+                        (stringConstant
+                          (stringFragment))))
+                    (type
+                      (stringConstant
+                        (stringFragment))))
+                  (type
+                    (stringConstant
+                      (stringFragment))))
+                (type
+                  (stringConstant
+                    (stringFragment))))
+              (type
+                (stringConstant
+                  (stringFragment))))
+            (type
+              (stringConstant
+                (stringFragment))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))))))

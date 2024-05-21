@@ -1,0 +1,33 @@
+================================================================================
+annotation/annotation4
+================================================================================
+
+@Mapping {
+  a = "hi"
+  b = "hi"
+}
+someProperty: String = "hi"
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (stringFragment)))))
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral
+      (stringFragment))))

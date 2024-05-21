@@ -1,0 +1,20 @@
+================================================================================
+basic/exceptions
+================================================================================
+
+foo {
+  bar = throw("Something went wrong")
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (throwExpr
+          (parenthesizedExpr
+            (slStringLiteral
+              (stringFragment))))))))

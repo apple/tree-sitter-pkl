@@ -1,0 +1,398 @@
+================================================================================
+basic/map
+================================================================================
+
+amends "../snippetTest.pkl"
+
+local map1 = Map(1, 1, "two", 2, "three", 3)
+local map2 = Map(30, new Dynamic { name = "Pigeon" }, new Dynamic { name = "Pigeon" }, 30, 1, 1)
+
+facts {
+  ["equality"] {
+    map1 == map1
+    map1 == Map("three", 3, 1, 1, "two", 2)
+    !(map1 == map2)
+  }
+
+  ["inequality"] {
+    map1 != map2
+    !(map1 != map1)
+    !(map1 != Map("three", 3, 1, 1, "two", 2))
+  }
+}
+
+examples {
+  ["construction"] {
+    Map(1, 1, 2, 2, 1, 3, 2, 4)
+    Map(1, 1, 2, 2, 1, "three", 2, "four")
+  }
+
+  ["addition"] {
+    map1 + map1
+    map1 + Map("three", 3, 1, 1, "two", 2)
+    map1 + map2
+    Map() + Map()
+    map1 + Map()
+    Map() + map1
+    Map(1, 11) + Map(1, 1, 2, 2)
+    Map(1, 1, 2, 2) + Map(1, 11)
+  }
+
+  ["subscript"] {
+    map1[1]
+    map1["two"]
+    map1["three"]
+    map2[30]
+    map2[new Dynamic { name = "Pigeon" }]
+    map2[1]
+
+    local map3 = Map(1111, 1, "two", 2, "three", 3, "tree", 4)
+    module.catch(() -> map3["hree"])
+    module.catch(() -> map3["other"])
+    module.catch(() -> map3["1111"])
+    module.catch(() -> map3[11111])
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (intLiteral)
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral)
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (intLiteral)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (stringFragment)))))
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (stringFragment)))))
+        (intLiteral)
+        (intLiteral)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (variableExpr
+                (identifier))))
+          (objectElement
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (slStringLiteral
+                    (stringFragment))
+                  (intLiteral)
+                  (intLiteral)
+                  (intLiteral)
+                  (slStringLiteral
+                    (stringFragment))
+                  (intLiteral)))))
+          (objectElement
+            (unaryExpr
+              (parenthesizedExpr
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (variableExpr
+                    (identifier))))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (variableExpr
+                (identifier))))
+          (objectElement
+            (unaryExpr
+              (parenthesizedExpr
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (variableExpr
+                    (identifier))))))
+          (objectElement
+            (unaryExpr
+              (parenthesizedExpr
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (slStringLiteral
+                        (stringFragment))
+                      (intLiteral)
+                      (intLiteral)
+                      (intLiteral)
+                      (slStringLiteral
+                        (stringFragment))
+                      (intLiteral)))))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (intLiteral)
+                (intLiteral)
+                (intLiteral)
+                (intLiteral)
+                (intLiteral)
+                (intLiteral)
+                (intLiteral)
+                (intLiteral))))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (intLiteral)
+                (intLiteral)
+                (intLiteral)
+                (intLiteral)
+                (intLiteral)
+                (slStringLiteral
+                  (stringFragment))
+                (intLiteral)
+                (slStringLiteral
+                  (stringFragment)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (variableExpr
+                (identifier))))
+          (objectElement
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (slStringLiteral
+                    (stringFragment))
+                  (intLiteral)
+                  (intLiteral)
+                  (intLiteral)
+                  (slStringLiteral
+                    (stringFragment))
+                  (intLiteral)))))
+          (objectElement
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (variableExpr
+                (identifier))))
+          (objectElement
+            (binaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList))
+              (methodCallExpr
+                (identifier)
+                (argumentList))))
+          (objectElement
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (methodCallExpr
+                (identifier)
+                (argumentList))))
+          (objectElement
+            (binaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList))
+              (variableExpr
+                (identifier))))
+          (objectElement
+            (binaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (intLiteral)
+                  (intLiteral)))
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (intLiteral)
+                  (intLiteral)
+                  (intLiteral)
+                  (intLiteral)))))
+          (objectElement
+            (binaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (intLiteral)
+                  (intLiteral)
+                  (intLiteral)
+                  (intLiteral)))
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (intLiteral)
+                  (intLiteral)))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (subscriptExpr
+              (variableExpr
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (subscriptExpr
+              (variableExpr
+                (identifier))
+              (slStringLiteral
+                (stringFragment))))
+          (objectElement
+            (subscriptExpr
+              (variableExpr
+                (identifier))
+              (slStringLiteral
+                (stringFragment))))
+          (objectElement
+            (subscriptExpr
+              (variableExpr
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (subscriptExpr
+              (variableExpr
+                (identifier))
+              (newExpr
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (objectBody
+                  (objectProperty
+                    (identifier)
+                    (slStringLiteral
+                      (stringFragment)))))))
+          (objectElement
+            (subscriptExpr
+              (variableExpr
+                (identifier))
+              (intLiteral)))
+          (objectProperty
+            (modifier)
+            (identifier)
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (intLiteral)
+                (intLiteral)
+                (slStringLiteral
+                  (stringFragment))
+                (intLiteral)
+                (slStringLiteral
+                  (stringFragment))
+                (intLiteral)
+                (slStringLiteral
+                  (stringFragment))
+                (intLiteral))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (subscriptExpr
+                    (variableExpr
+                      (identifier))
+                    (slStringLiteral
+                      (stringFragment)))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (subscriptExpr
+                    (variableExpr
+                      (identifier))
+                    (slStringLiteral
+                      (stringFragment)))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (subscriptExpr
+                    (variableExpr
+                      (identifier))
+                    (slStringLiteral
+                      (stringFragment)))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (subscriptExpr
+                    (variableExpr
+                      (identifier))
+                    (intLiteral)))))))))))

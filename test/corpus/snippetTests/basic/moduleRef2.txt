@@ -1,0 +1,84 @@
+================================================================================
+basic/moduleRef2
+================================================================================
+
+amends "moduleRefLibrary.pkl"
+
+a = 44
+
+foo {
+  m1 = module.a
+  b = 43
+  m2 = module.foo.b
+  local c = () -> module.a
+  m3 = c.apply()
+  m4 = new Person {}
+}
+
+local class Person {
+  age: Int = module.a
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (propertyCallExpr
+          (moduleExpr)
+          (identifier)))
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (propertyCallExpr
+          (propertyCallExpr
+            (moduleExpr)
+            (identifier))
+          (identifier)))
+      (objectProperty
+        (modifier)
+        (identifier)
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (moduleExpr)
+            (identifier))))
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList)))
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody)))))
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (propertyCallExpr
+          (moduleExpr)
+          (identifier))))))

@@ -1,0 +1,143 @@
+================================================================================
+api/yamlRendererKeys.yml
+================================================================================
+
+// need quoting
+`one[two` = 42
+`one]two` = 42
+`one{two` = 42
+`one}two` = 42
+`one,two` = 42
+
+// need quoting
+entries {
+  ["one[two"] = 42
+  ["one]two"] = 42
+  ["one{two"] = 42
+  ["one}two"] = 42
+  ["one,two"] = 42
+}
+
+// don't need quoting
+a1 = "one[two"
+a2 = "one]two"
+a3 = "one{two"
+a4 = "one}two"
+a5 = "one,two"
+
+entries2 {
+  // needs explicit key
+  ["one\ntwo"] = 42
+  // needs explicit key
+  ["a".repeat(1025)] = 42
+  // doesn't need explicit key
+  ["a".repeat(1024)] = 42
+}
+
+output {
+  renderer = new YamlRenderer {}
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (intLiteral))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (lineComment)
+      (objectEntry
+        (slStringLiteral
+          (stringFragment)
+          (stringFragment
+            (escapeSequence))
+          (stringFragment))
+        (intLiteral))
+      (lineComment)
+      (objectEntry
+        (methodCallExpr
+          (slStringLiteral
+            (stringFragment))
+          (identifier)
+          (argumentList
+            (intLiteral)))
+        (intLiteral))
+      (lineComment)
+      (objectEntry
+        (methodCallExpr
+          (slStringLiteral
+            (stringFragment))
+          (identifier)
+          (argumentList
+            (intLiteral)))
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody))))))

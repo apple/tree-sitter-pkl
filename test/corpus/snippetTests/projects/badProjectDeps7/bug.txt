@@ -1,0 +1,21 @@
+================================================================================
+projects/badProjectDeps7/bug
+================================================================================
+
+import "@fruit/Fruit.pkl"
+
+fruit = new Fruit {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody))))

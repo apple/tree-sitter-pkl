@@ -1,0 +1,140 @@
+================================================================================
+api/yamlRendererStream1
+================================================================================
+
+local renderer = new YamlRenderer { isStream = true }
+
+local stream = new Listing {
+  "pigeon"
+  42
+  new Listing {
+    "barn owl"
+    "parrot"
+  }
+  new Mapping {
+    ["surfing"] {
+      skill = "low"
+    }
+    ["firemaking"] {
+      skill = "high"
+    }
+  }
+  new Dynamic {
+    street = "Norton St."
+    zip = 12345
+  }
+}
+
+a = renderer.renderDocument(stream)
+
+b = renderer.renderDocument(stream.toList())
+
+c = renderer.renderDocument(stream.toSet())
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (trueLiteral)))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectElement
+          (slStringLiteral
+            (stringFragment)))
+        (objectElement
+          (intLiteral))
+        (objectElement
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectElement
+                (slStringLiteral
+                  (stringFragment)))
+              (objectElement
+                (slStringLiteral
+                  (stringFragment))))))
+        (objectElement
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (slStringLiteral
+                  (stringFragment))
+                (objectBody
+                  (objectProperty
+                    (identifier)
+                    (slStringLiteral
+                      (stringFragment)))))
+              (objectEntry
+                (slStringLiteral
+                  (stringFragment))
+                (objectBody
+                  (objectProperty
+                    (identifier)
+                    (slStringLiteral
+                      (stringFragment))))))))
+        (objectElement
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectProperty
+                (identifier)
+                (slStringLiteral
+                  (stringFragment)))
+              (objectProperty
+                (identifier)
+                (intLiteral))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList))))))

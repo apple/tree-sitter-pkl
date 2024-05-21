@@ -1,0 +1,97 @@
+================================================================================
+packages/packages1
+================================================================================
+
+amends ".../snippetTest.pkl"
+
+import "package://localhost:12110/birds@0.5.0#/Bird.pkl"
+import "package://localhost:12110/fruit@1.0.5#/Fruit.pkl"
+
+examples {
+  ["basic imports"] {
+    new Bird { 
+      name = "Pigeon"
+      // purposefully instantiate a Fruit to verify that the types match up.
+      favoriteFruit = new Fruit {
+        name = "Banana"
+      }
+    }
+    import("package://localhost:12110/birds@0.5.0#/catalog/Swallow.pkl")
+    import("package://localhost:12110/birds@0.5.0#/catalog/Ostritch.pkl")
+  }
+  ["reads"] {
+    read("package://localhost:12110/birds@0.5.0#/Bird.pkl")
+    read("package://localhost:12110/birds@0.5.0#/catalog/Swallow.pkl")
+    read("package://localhost:12110/birds@0.5.0#/catalog/Ostritch.pkl")
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (stringFragment))))
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (importClause
+    (stringConstant
+      (stringFragment)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (slStringLiteral
+                    (stringFragment)))
+                (lineComment)
+                (objectProperty
+                  (identifier)
+                  (newExpr
+                    (type
+                      (qualifiedIdentifier
+                        (identifier)))
+                    (objectBody
+                      (objectProperty
+                        (identifier)
+                        (slStringLiteral
+                          (stringFragment)))))))))
+          (objectElement
+            (importExpr
+              (stringConstant
+                (stringFragment))))
+          (objectElement
+            (importExpr
+              (stringConstant
+                (stringFragment))))))
+      (objectEntry
+        (slStringLiteral
+          (stringFragment))
+        (objectBody
+          (objectElement
+            (readExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (readExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment)))))
+          (objectElement
+            (readExpr
+              (parenthesizedExpr
+                (slStringLiteral
+                  (stringFragment))))))))))
