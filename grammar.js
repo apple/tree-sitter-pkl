@@ -78,7 +78,6 @@ module.exports = grammar({
 
   extras: $ => [
     $.lineComment,
-    $.docComment,
     $.blockComment,
     /[ \t\f\r\n;]/
   ],
@@ -112,6 +111,7 @@ module.exports = grammar({
     ),
 
     moduleHeader: $ => seq(
+      optional($.docComment),
       repeat($.annotation),
       choice(
         seq($.moduleClause, optional($.extendsOrAmendsClause)),
@@ -150,6 +150,7 @@ module.exports = grammar({
     ),
 
     clazz: $ => seq(
+      optional($.docComment),
       repeat($.annotation),
       repeat($.modifier),
       "class",
@@ -172,6 +173,7 @@ module.exports = grammar({
     ),
 
     typeAlias: $ => seq(
+      optional($.docComment),
       repeat($.annotation),
       repeat($.modifier),
       "typealias",
@@ -182,6 +184,7 @@ module.exports = grammar({
     ),
 
     classProperty: $ => seq(
+      optional($.docComment),
       repeat($.annotation),
       repeat($.modifier),
       $.identifier,
@@ -198,6 +201,7 @@ module.exports = grammar({
     ),
 
     classMethod: $ => seq(
+      optional($.docComment),
       repeat($.annotation),
       $.methodHeader,
       optional(seq("=", $._expr))
@@ -450,7 +454,7 @@ module.exports = grammar({
       seq(
         '"',
         repeat(choice(
-          token.immediate(/[^"\\\n\r]+/),
+          $.slStringLiteralPart,
           $.escapeSequence
         )),
         '"'
@@ -458,7 +462,7 @@ module.exports = grammar({
       seq(
         '#"',
         repeat(choice(
-          $._sl1_string_chars,
+          alias($.slStringLiteralPart1, $.slStringLiteralPart),
           alias($.escapeSequence1, $.escapeSequence),
         )),
         '"#'
@@ -469,7 +473,7 @@ module.exports = grammar({
       seq(
         '"',
         repeat(choice(
-          token.immediate(/[^"\\\n\r]+/),
+          $.slStringLiteralPart,
           $.escapeSequence,
           $.interpolationExpr,
         )),
@@ -478,7 +482,7 @@ module.exports = grammar({
       seq(
         '#"',
         repeat(choice(
-          $._sl1_string_chars,
+          alias($.slStringLiteralPart1, $.slStringLiteralPart),
           alias($.escapeSequence1, $.escapeSequence),
           alias($.interpolationExpr1, $.interpolationExpr)
         )),
@@ -487,7 +491,7 @@ module.exports = grammar({
       seq(
         '##"',
         repeat(choice(
-          $._sl2_string_chars,
+          alias($.slStringLiteralPart2, $.slStringLiteralPart),
           alias($.escapeSequence2, $.escapeSequence),
           alias($.interpolationExpr2, $.interpolationExpr)
         )),
@@ -496,7 +500,7 @@ module.exports = grammar({
       seq(
         '###"',
         repeat(choice(
-          $._sl3_string_chars,
+          alias($.slStringLiteralPart3, $.slStringLiteralPart),
           alias($.escapeSequence3, $.escapeSequence),
           alias($.interpolationExpr3, $.interpolationExpr)
         )),
@@ -505,7 +509,7 @@ module.exports = grammar({
       seq(
         '####"',
         repeat(choice(
-          $._sl4_string_chars,
+          alias($.slStringLiteralPart4, $.slStringLiteralPart),
           alias($.escapeSequence4, $.escapeSequence),
           alias($.interpolationExpr4, $.interpolationExpr)
         )),
@@ -514,7 +518,7 @@ module.exports = grammar({
       seq(
         '#####"',
         repeat(choice(
-          $._sl5_string_chars,
+          alias($.slStringLiteralPart5, $.slStringLiteralPart),
           alias($.escapeSequence5, $.escapeSequence),
           alias($.interpolationExpr5, $.interpolationExpr)
         )),
@@ -523,7 +527,7 @@ module.exports = grammar({
       seq(
         '######"',
         repeat(choice(
-          $._sl6_string_chars,
+          alias($.slStringLiteralPart6, $.slStringLiteralPart),
           alias($.escapeSequence6, $.escapeSequence),
           alias($.interpolationExpr6, $.interpolationExpr)
         )),
@@ -531,11 +535,25 @@ module.exports = grammar({
       ),
     ),
 
+    slStringLiteralPart: $ => token.immediate(/[^"\\\n\r]+/),
+
+    slStringLiteralPart1: $ => $._sl1_string_chars,
+
+    slStringLiteralPart2: $ => $._sl2_string_chars,
+
+    slStringLiteralPart3: $ => $._sl3_string_chars,
+
+    slStringLiteralPart4: $ => $._sl4_string_chars,
+
+    slStringLiteralPart5: $ => $._sl5_string_chars,
+
+    slStringLiteralPart6: $ => $._sl6_string_chars,
+
     mlStringLiteral: $ => choice(
       seq(
         '"""',
         repeat(choice(
-          $._ml_string_chars,
+          $.mlStringLiteralPart,
           $.escapeSequence,
           $.interpolationExpr
         )),
@@ -544,7 +562,7 @@ module.exports = grammar({
       seq(
         '#"""',
         repeat(choice(
-          $._ml1_string_chars,
+          alias($.mlStringLiteralPart1, $.mlStringLiteralPart),
           alias($.escapeSequence1, $.escapeSequence),
           alias($.interpolationExpr1, $.interpolationExpr)
         )),
@@ -553,7 +571,7 @@ module.exports = grammar({
       seq(
         '##"""',
         repeat(choice(
-          $._ml2_string_chars,
+          alias($.mlStringLiteralPart2, $.mlStringLiteralPart),
           alias($.escapeSequence2, $.escapeSequence),
           alias($.interpolationExpr2, $.interpolationExpr)
         )),
@@ -562,7 +580,7 @@ module.exports = grammar({
       seq(
         '###"""',
         repeat(choice(
-          $._ml3_string_chars,
+          alias($.mlStringLiteralPart3, $.mlStringLiteralPart),
           alias($.escapeSequence3, $.escapeSequence),
           alias($.interpolationExpr3, $.interpolationExpr)
         )),
@@ -571,7 +589,7 @@ module.exports = grammar({
       seq(
         '####"""',
         repeat(choice(
-          $._ml4_string_chars,
+          alias($.mlStringLiteralPart4, $.mlStringLiteralPart),
           alias($.escapeSequence4, $.escapeSequence),
           alias($.interpolationExpr4, $.interpolationExpr)
         )),
@@ -580,7 +598,7 @@ module.exports = grammar({
       seq(
         '#####"""',
         repeat(choice(
-          $._ml5_string_chars,
+          alias($.mlStringLiteralPart5, $.mlStringLiteralPart),
           alias($.escapeSequence5, $.escapeSequence),
           alias($.interpolationExpr5, $.interpolationExpr)
         )),
@@ -589,13 +607,27 @@ module.exports = grammar({
       seq(
         '######"""',
         repeat(choice(
-          $._ml6_string_chars,
+          alias($.mlStringLiteralPart6, $.mlStringLiteralPart),
           alias($.escapeSequence6, $.escapeSequence),
           alias($.interpolationExpr6, $.interpolationExpr)
         )),
         '"""######'
       ),
     ),
+
+    mlStringLiteralPart: $ => token.immediate(/[^"\\\n\r]+/),
+
+    mlStringLiteralPart1: $ => $._ml1_string_chars,
+
+    mlStringLiteralPart2: $ => $._ml2_string_chars,
+
+    mlStringLiteralPart3: $ => $._ml3_string_chars,
+
+    mlStringLiteralPart4: $ => $._ml4_string_chars,
+
+    mlStringLiteralPart5: $ => $._ml5_string_chars,
+
+    mlStringLiteralPart6: $ => $._ml6_string_chars,
 
     escapeSequence: $ => token.immediate(seq(
       '\\',
@@ -749,10 +781,16 @@ module.exports = grammar({
       return token(choice(seq(alpha, repeat(alpha_numeric)), /`[^`]*`/))
     },
 
-    lineComment: $ => token(seq('//', /.*/)),
+    lineComment: $ => choice(
+      token(seq(/\/\/[^\/]/, /.*/)),
+      '//$',
+    ),
 
     // TODO
-    docComment: $ => token(seq('///', /.*/)),
+    docComment: $ => seq(
+      token(seq('///', /.*/)),
+      repeat(token(seq('///', /.*/)))
+    ),
 
     blockComment: $ => token(seq(
       '/*',
