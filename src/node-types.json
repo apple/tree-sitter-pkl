@@ -657,6 +657,10 @@
           "named": true
         },
         {
+          "type": "docComment",
+          "named": true
+        },
+        {
           "type": "falseLiteral",
           "named": true
         },
@@ -805,6 +809,10 @@
         },
         {
           "type": "binaryExprRightAssoc",
+          "named": true
+        },
+        {
+          "type": "docComment",
           "named": true
         },
         {
@@ -967,6 +975,10 @@
           "named": true
         },
         {
+          "type": "docComment",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -980,6 +992,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "docComment",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "extendsOrAmendsClause",
@@ -1975,6 +1992,11 @@
     }
   },
   {
+    "type": "lineComment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "methodCallExpr",
     "named": true,
     "fields": {},
@@ -2171,9 +2193,18 @@
         {
           "type": "interpolationExpr",
           "named": true
+        },
+        {
+          "type": "mlStringLiteralPart",
+          "named": true
         }
       ]
     }
+  },
+  {
+    "type": "mlStringLiteralPart",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "modifier",
@@ -2253,6 +2284,10 @@
       "types": [
         {
           "type": "annotation",
+          "named": true
+        },
+        {
+          "type": "docComment",
           "named": true
         },
         {
@@ -4132,9 +4167,18 @@
         {
           "type": "interpolationExpr",
           "named": true
+        },
+        {
+          "type": "slStringLiteralPart",
+          "named": true
         }
       ]
     }
+  },
+  {
+    "type": "slStringLiteralPart",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "stringConstant",
@@ -4146,6 +4190,10 @@
       "types": [
         {
           "type": "escapeSequence",
+          "named": true
+        },
+        {
+          "type": "slStringLiteralPart",
           "named": true
         }
       ]
@@ -4749,6 +4797,10 @@
       "types": [
         {
           "type": "annotation",
+          "named": true
+        },
+        {
+          "type": "docComment",
           "named": true
         },
         {
@@ -5378,6 +5430,10 @@
     "named": false
   },
   {
+    "type": "//$",
+    "named": false
+  },
+  {
     "type": ":",
     "named": false
   },
@@ -5490,10 +5546,6 @@
     "named": false
   },
   {
-    "type": "docComment",
-    "named": true
-  },
-  {
     "type": "else",
     "named": false
   },
@@ -5564,10 +5616,6 @@
   {
     "type": "let",
     "named": false
-  },
-  {
-    "type": "lineComment",
-    "named": true
   },
   {
     "type": "local",
