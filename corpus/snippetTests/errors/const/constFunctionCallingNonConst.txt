@@ -1,0 +1,52 @@
+================================================================================
+errors/const/constFunctionCallingNonConst
+================================================================================
+
+function nonConstFunction() = "hello"
+
+const function constFunctionCallingNonConst(): (String) -> String = (s) -> s + nonConstFunction()
+
+res = constFunctionCallingNonConst().apply("prefix")
+
+--------------------------------------------------------------------------------
+
+(module
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList))
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classMethod
+    (methodHeader
+      (modifier)
+      (identifier)
+      (parameterList)
+      (typeAnnotation
+        (type
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (functionLiteral
+      (parameterList
+        (typedIdentifier
+          (identifier)))
+      (binaryExpr
+        (variableExpr
+          (identifier))
+        (methodCallExpr
+          (identifier)
+          (argumentList)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (methodCallExpr
+        (identifier)
+        (argumentList))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart))))))

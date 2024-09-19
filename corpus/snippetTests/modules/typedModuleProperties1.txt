@@ -22,14 +22,16 @@ class Teacher extends library.Person {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (typeAnnotation
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -40,7 +42,8 @@ class Teacher extends library.Person {
         (unaryExpr
           (variableExpr
             (identifier)))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -56,7 +59,8 @@ class Teacher extends library.Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -71,13 +75,15 @@ class Teacher extends library.Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (clazz
     (identifier)
     (classExtendsClause

@@ -85,7 +85,8 @@ res2 = parser.parseAll("""
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -118,7 +119,8 @@ res2 = parser.parseAll("""
                 (binaryExpr
                   (variableExpr
                     (identifier))
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (objectEntry
               (variableExpr
                 (identifier))
@@ -155,7 +157,8 @@ res2 = parser.parseAll("""
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral))))))
+                      (slStringLiteral
+                        (slStringLiteralPart)))))))
             (objectEntry
               (variableExpr
                 (identifier))
@@ -169,7 +172,8 @@ res2 = parser.parseAll("""
                       (identifier)))
                   (objectBody
                     (objectElement
-                      (slStringLiteral)))))))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -177,12 +181,337 @@ res2 = parser.parseAll("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
+        (ERROR)
+        (binaryExpr
+          (binaryExpr
+            (binaryExpr
+              (unaryExpr
+                (unaryExpr
+                  (unaryExpr
+                    (ERROR
+                      (identifier)
+                      (intLiteral)
+                      (identifier))
+                    (intLiteral))))
+              (intLiteral))
+            (ERROR
+              (intLiteral))
+            (variableExpr
+              (identifier)))
+          (ERROR
+            (identifier)
+            (UNEXPECTED 'i'))
+          (variableExpr
+            (identifier)))
+        (MISSING "))))
   (classProperty
     (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (ERROR)
+        (ERROR
+          (intLiteral))
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (ERROR
+    (identifier)
+    (identifier)
+    (UNEXPECTED '2')
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR
+    (identifier))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (ERROR
+        (intLiteral))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR)
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (ERROR
+      (typeAnnotation
+        (ERROR)
+        (type
+          (qualifiedIdentifier
+            (identifier)))))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (ERROR
+      (typeAnnotation
+        (ERROR
+          (intLiteral))
+        (type
+          (qualifiedIdentifier
+            (identifier)))))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (ERROR
+      (typeAnnotation
+        (ERROR
+          (floatLiteral))
+        (type
+          (qualifiedIdentifier
+            (identifier)))))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (ERROR
+      (typeAnnotation
+        (ERROR
+          (intLiteral))
+        (type
+          (qualifiedIdentifier
+            (identifier)))))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR
+    (identifier))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (ERROR
+        (floatLiteral))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR
+    (floatLiteral))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (ERROR
+        (floatLiteral))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier))
+  (classProperty
+    (annotation
+      (ERROR
+        (intLiteral)
+        (intLiteral))
+      (qualifiedIdentifier
+        (identifier)))
+    (ERROR
       (identifier)
-      (argumentList
-        (mlStringLiteral)))))
+      (identifier))
+    (identifier)
+    (typeAnnotation
+      (ERROR
+        (intLiteral))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR
+    (intLiteral)
+    (intLiteral)
+    (intLiteral)
+    (identifier))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (ERROR
+        (UNEXPECTED 'i'))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (ERROR)
+        (ERROR
+          (intLiteral))
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (ERROR
+    (identifier)
+    (identifier)
+    (UNEXPECTED '2')
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR
+    (identifier))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (ERROR
+        (intLiteral))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR)
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (ERROR)
+  (classProperty
+    (identifier)
+    (ERROR
+      (typeAnnotation
+        (ERROR)
+        (type
+          (qualifiedIdentifier
+            (identifier)))))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (ERROR
+      (typeAnnotation
+        (ERROR
+          (intLiteral))
+        (type
+          (qualifiedIdentifier
+            (identifier)))))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (ERROR
+      (typeAnnotation
+        (ERROR
+          (floatLiteral))
+        (type
+          (qualifiedIdentifier
+            (identifier)))))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (ERROR
+      (typeAnnotation
+        (ERROR
+          (intLiteral))
+        (type
+          (qualifiedIdentifier
+            (identifier)))))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR
+    (identifier))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (ERROR
+        (floatLiteral))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR
+    (floatLiteral))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (ERROR
+        (floatLiteral))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (ERROR
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier)
+    (intLiteral)
+    (intLiteral)))

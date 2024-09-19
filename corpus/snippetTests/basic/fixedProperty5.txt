@@ -16,4 +16,5 @@ myObj = new {
         (objectProperty
           (modifier)
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (slStringLiteralPart)))))))

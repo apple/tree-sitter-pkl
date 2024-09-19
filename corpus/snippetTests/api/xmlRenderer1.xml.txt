@@ -57,7 +57,8 @@ output {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classBody
@@ -106,13 +107,21 @@ output {
     (trueLiteral))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (ERROR
+      (identifier))
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (identifier)
+    (identifier))
   (classProperty
     (identifier)
     (newExpr
@@ -122,7 +131,8 @@ output {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral))
@@ -131,7 +141,8 @@ output {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectProperty
           (identifier)
           (nullLiteral)))))
@@ -140,7 +151,8 @@ output {
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (objectProperty
         (identifier)
         (intLiteral))
@@ -149,7 +161,8 @@ output {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (objectProperty
         (identifier)
         (nullLiteral))))

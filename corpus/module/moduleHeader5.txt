@@ -9,6 +9,8 @@ import "bar.pkl"
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant)))
+    (stringConstant
+      (slStringLiteralPart))))

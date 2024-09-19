@@ -28,18 +28,33 @@ output {
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
-    (mlStringLiteral
-      (escapeSequence)))
+    (ERROR
+      (escapeSequence)
+      (slStringLiteralPart)
+      (identifier))
+    (variableExpr
+      (identifier)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (ERROR
+      (identifier))
+    (ERROR
+      (identifier))
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (identifier)
+    (identifier)
+    (identifier))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (escapeSequence)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody

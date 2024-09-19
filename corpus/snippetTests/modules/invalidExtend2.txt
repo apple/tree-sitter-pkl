@@ -11,4 +11,5 @@ extends "extendModule1.pkl"
   (lineComment)
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant))))
+      (stringConstant
+        (slStringLiteralPart)))))

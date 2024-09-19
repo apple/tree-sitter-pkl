@@ -4,8 +4,6 @@ basic/moduleRef2
 
 amends "moduleRefLibrary.pkl"
 
-a = 44
-
 foo {
   m1 = module.a
   b = 43
@@ -24,10 +22,8 @@ local class Person {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
-  (classProperty
-    (identifier)
-    (intLiteral))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody

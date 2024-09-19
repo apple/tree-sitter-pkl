@@ -37,7 +37,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classBody
@@ -71,9 +72,12 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral)
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -91,10 +95,13 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
               (identifier)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))))))
   (classProperty
     (identifier)
@@ -113,7 +120,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectProperty
               (identifier)
               (intLiteral)))))))
@@ -134,7 +142,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectProperty
               (identifier)
               (intLiteral)))))))
@@ -249,7 +258,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
               (objectBody))
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -270,8 +280,10 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -292,8 +304,10 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -317,9 +331,11 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
                     (identifier)))
                 (objectBody
                   (objectElement
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (slStringLiteralPart)))
                   (objectElement
-                    (slStringLiteral))))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -448,7 +464,8 @@ res20 = test.catch(() -> new PropertiesRenderer {}.renderDocument(IntSeq(1, 4)))
                             (identifier)))
                         (throwExpr
                           (parenthesizedExpr
-                            (slStringLiteral)))))))))
+                            (slStringLiteral
+                              (slStringLiteralPart))))))))))
             (identifier)
             (argumentList
               (intLiteral)))))))

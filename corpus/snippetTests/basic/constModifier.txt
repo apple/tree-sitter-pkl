@@ -2,14 +2,23 @@
 basic/constModifier
 ================================================================================
 
+open module constModifier
+
 import "pkl:test"
 
 const constantSimpleValue = "constant"
+
+local const constLocal = "const-local"
 
 nonConstantSimpleValue = "NON-CONSTANT"
 
 const constantNestedValue {
   nestedSimpleValue = constantSimpleValue
+}
+
+const constDyn = new Dynamic {
+  [1] = "1"
+  prop = "2"
 }
 
 nonConstantNestedValue {
@@ -18,7 +27,28 @@ nonConstantNestedValue {
 
 function nonConstFunction() = nonConstantSimpleValue
 
-const function constFunctionCallingNonConst(): (String) -> String = (s) -> s + nonConstFunction()
+class ConstImport {
+  const cst = 10
+  local const lcst = 11
+  //pi1 = math.pi
+  pi2 = import("pkl:math").pi
+  mod = module.constantSimpleValue
+  outr = outer.constantSimpleValue
+  clocal = constLocal
+  dynconst = constDyn[1]
+  dynconst2 = constDyn.prop
+  constAccess = cst
+  constAccess2 = lcst
+}
+
+constImport = new ConstImport {}
+
+class ValidConstOuter {
+  name: String
+  fancyName = new { title = "The \(outer.name)" }
+}
+
+validOuter = new ValidConstOuter { name = "Winner" }
 
 class Valid {
   nested = constantNestedValue
@@ -42,20 +72,33 @@ res01 = new Valid {}
 res02 = test.catch(() -> "\(new BrokenSimple {})")
 res03 = test.catch(() -> "\(new BrokenNested {})")
 res04 = test.catch(() -> "\(new BrokenFunction {})")
-res05 = test.catch(() -> constFunctionCallingNonConst().apply("hello "))
 
 --------------------------------------------------------------------------------
 
 (module
+  (moduleHeader
+    (moduleClause
+      (modifier)
+      (qualifiedIdentifier
+        (identifier))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (modifier)
+    (modifier)
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -64,6 +107,22 @@ res05 = test.catch(() -> constFunctionCallingNonConst().apply("hello "))
         (identifier)
         (variableExpr
           (identifier)))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectEntry
+          (intLiteral)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (objectBody
@@ -77,29 +136,99 @@ res05 = test.catch(() -> constFunctionCallingNonConst().apply("hello "))
       (parameterList))
     (variableExpr
       (identifier)))
-  (classMethod
-    (methodHeader
-      (modifier)
-      (identifier)
-      (parameterList)
-      (typeAnnotation
-        (type
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (type
-            (qualifiedIdentifier
-              (identifier))))))
-    (functionLiteral
-      (parameterList
-        (typedIdentifier
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (modifier)
+        (identifier)
+        (intLiteral))
+      (classProperty
+        (modifier)
+        (modifier)
+        (identifier)
+        (intLiteral))
+      (lineComment)
+      (classProperty
+        (identifier)
+        (propertyCallExpr
+          (importExpr
+            (stringConstant
+              (slStringLiteralPart)))
           (identifier)))
-      (binaryExpr
+      (classProperty
+        (identifier)
+        (propertyCallExpr
+          (moduleExpr)
+          (identifier)))
+      (classProperty
+        (identifier)
+        (propertyCallExpr
+          (outerExpr)
+          (identifier)))
+      (classProperty
+        (identifier)
         (variableExpr
-          (identifier))
-        (methodCallExpr
+          (identifier)))
+      (classProperty
+        (identifier)
+        (subscriptExpr
+          (variableExpr
+            (identifier))
+          (intLiteral)))
+      (classProperty
+        (identifier)
+        (propertyCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)))
+      (classProperty
+        (identifier)
+        (variableExpr
+          (identifier)))
+      (classProperty
+        (identifier)
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody)))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (identifier)
+        (newExpr
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (slStringLiteralPart)
+                (interpolationExpr
+                  (propertyCallExpr
+                    (outerExpr)
+                    (identifier))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
           (identifier)
-          (argumentList)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (clazz
     (identifier)
     (classBody
@@ -193,20 +322,4 @@ res05 = test.catch(() -> constFunctionCallingNonConst().apply("hello "))
                 (type
                   (qualifiedIdentifier
                     (identifier)))
-                (objectBody))))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (methodCallExpr
-            (methodCallExpr
-              (identifier)
-              (argumentList))
-            (identifier)
-            (argumentList
-              (slStringLiteral))))))))
+                (objectBody)))))))))

@@ -31,9 +31,11 @@ res7 = test.catch(() -> other())
       (qualifiedIdentifier
         (identifier)))
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -59,7 +61,8 @@ res7 = test.catch(() -> other())
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classMethod
     (methodHeader
       (identifier)
@@ -69,7 +72,8 @@ res7 = test.catch(() -> other())
       (argumentList)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (variableExpr
@@ -84,7 +88,8 @@ res7 = test.catch(() -> other())
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (variableExpr

@@ -15,4 +15,7 @@ res2 = 42
   (classProperty
     (identifier)
     (mlStringLiteral
-      (MISSING """""))))
+      (MISSING """"")))
+  (classProperty
+    (identifier)
+    (intLiteral)))

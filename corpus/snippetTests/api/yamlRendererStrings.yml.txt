@@ -136,18 +136,92 @@ output {
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (escapeSequence)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (slStringLiteral
       (escapeSequence)
-      (escapeSequence)))
+      (escapeSequence)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (slStringLiteral
       (escapeSequence)
       (escapeSequence)
+      (escapeSequence)
+      (slStringLiteralPart)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (escapeSequence)
+      (escapeSequence)
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (escapeSequence)
+      (escapeSequence)
+      (escapeSequence)
+      (slStringLiteralPart)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (escapeSequence)
+      (escapeSequence)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (escapeSequence)
+      (escapeSequence)
+      (escapeSequence)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
   (lineComment)
   (classProperty
     (identifier)
@@ -156,148 +230,127 @@ output {
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
       (escapeSequence)))
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)
-      (escapeSequence)
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
       (escapeSequence)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)
-      (escapeSequence)))
-  (lineComment)
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
+  (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
       (escapeSequence)
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (slStringLiteral
       (escapeSequence)
+      (slStringLiteralPart)
       (escapeSequence)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
-  (lineComment)
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)
-      (escapeSequence)))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody
@@ -309,52 +362,92 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (mlStringLiteral))))))))
+                (ERROR)
+                (variableExpr
+                  (identifier)))
+              (objectElement
+                (variableExpr
+                  (identifier)))
+              (objectElement
+                (variableExpr
+                  (identifier)))
+              (objectElement
+                (mlStringLiteral
+                  (MISSING """"")))))))))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (binaryExpr
+      (mlStringLiteral
+        (MISSING """""))
+      (variableExpr
+        (identifier))))
+  (ERROR
+    (identifier))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (ERROR)
+    (variableExpr
+      (identifier)))
+  (ERROR)
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (ERROR)
+    (typeAnnotation
+      (ERROR
+        (identifier))
+      (type
+        (stringConstant))))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (ERROR)
+    (unaryExpr
+      (variableExpr
+        (identifier))))
+  (ERROR)
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody

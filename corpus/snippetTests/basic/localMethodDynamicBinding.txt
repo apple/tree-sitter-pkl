@@ -2,8 +2,6 @@
 basic/localMethodDynamicBinding
 ================================================================================
 
-import "pkl:test"
-
 class X {
   x = 1
   y = compute()
@@ -55,8 +53,6 @@ res8 = (res7) {
 --------------------------------------------------------------------------------
 
 (module
-  (importClause
-    (stringConstant))
   (clazz
     (identifier)
     (classBody

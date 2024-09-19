@@ -110,17 +110,21 @@ res3 = new Mapping {
           (floatLiteral)
           (floatLiteral))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectEntry
           (propertyCallExpr
             (intLiteral)
@@ -176,16 +180,20 @@ res3 = new Mapping {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral))))
         (objectEntry
           (newExpr
@@ -195,7 +203,8 @@ res3 = new Mapping {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral))))
@@ -206,7 +215,8 @@ res3 = new Mapping {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -218,7 +228,8 @@ res3 = new Mapping {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral))))
@@ -229,7 +240,8 @@ res3 = new Mapping {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -263,10 +275,12 @@ res3 = new Mapping {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))
           (newExpr
             (type
@@ -274,10 +288,12 @@ res3 = new Mapping {
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))))))
   (classProperty
     (identifier)
@@ -332,11 +348,13 @@ res3 = new Mapping {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectEntry
           (methodCallExpr
             (identifier)
@@ -344,14 +362,16 @@ res3 = new Mapping {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (methodCallExpr
             (identifier)
             (argumentList
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (objectEntry
           (methodCallExpr
             (identifier)
@@ -440,9 +460,11 @@ res3 = new Mapping {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)))))
           (methodCallExpr
             (identifier)
@@ -450,9 +472,11 @@ res3 = new Mapping {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral))))))
         (objectEntry
           (methodCallExpr
@@ -465,7 +489,8 @@ res3 = new Mapping {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (slStringLiteralPart)))
                   (objectProperty
                     (identifier)
                     (intLiteral))))))
@@ -479,7 +504,8 @@ res3 = new Mapping {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (slStringLiteralPart)))
                   (objectProperty
                     (identifier)
                     (intLiteral)))))))
@@ -494,7 +520,8 @@ res3 = new Mapping {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (slStringLiteralPart)))
                   (objectProperty
                     (identifier)
                     (intLiteral))))))
@@ -508,7 +535,8 @@ res3 = new Mapping {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (slStringLiteralPart)))
                   (objectProperty
                     (identifier)
                     (intLiteral)))))))
@@ -551,10 +579,12 @@ res3 = new Mapping {
                     (identifier)))
                 (objectBody
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (intLiteral))
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (intLiteral))))))
           (methodCallExpr
             (identifier)
@@ -565,8 +595,10 @@ res3 = new Mapping {
                     (identifier)))
                 (objectBody
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (intLiteral))
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (intLiteral)))))))))))

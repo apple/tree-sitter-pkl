@@ -114,7 +114,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (typeAlias
     (identifier)
     (type
@@ -143,13 +144,15 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (typeAlias
     (identifier)
     (type
@@ -185,7 +188,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -198,7 +202,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (typeAlias
     (identifier)
     (type
@@ -232,7 +237,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -242,7 +248,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (typeAlias
     (identifier)
     (type
@@ -281,11 +288,13 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -298,11 +307,13 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (typeAlias
     (identifier)
     (type
@@ -395,13 +406,15 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classProperty
         (identifier)
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -411,51 +424,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (methodCallExpr
-          (identifier)
-          (argumentList
-            (methodCallExpr
-              (identifier)
-              (argumentList
-                (slStringLiteral))))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (slStringLiteral))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (methodCallExpr
-          (identifier)
-          (argumentList
-            (slStringLiteral))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (methodCallExpr
-          (identifier)
-          (argumentList
-            (slStringLiteral)
-            (methodCallExpr
-              (identifier)
-              (argumentList
-                (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -468,11 +438,62 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (slStringLiteralPart)))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (slStringLiteralPart))
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -579,7 +600,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (methodCallExpr
               (identifier)
               (argumentList
@@ -596,7 +618,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (methodCallExpr
                   (identifier)
                   (argumentList
@@ -607,7 +630,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -617,7 +641,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -815,7 +840,8 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (typeAlias
     (identifier)
     (type
@@ -840,16 +866,20 @@ res20: VeryComposite = Pair(Map("abc", List("def")), Map("abc", List("def")))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)))))))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))))))

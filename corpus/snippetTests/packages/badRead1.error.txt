@@ -3,7 +3,7 @@ packages/badRead1.error
 ================================================================================
 
 // no semver
-res = read("package://localhost:12110/foo#/bar.pkl")
+res = read("package://localhost:0/foo#/bar.pkl")
 
 --------------------------------------------------------------------------------
 
@@ -13,4 +13,5 @@ res = read("package://localhost:12110/foo#/bar.pkl")
     (identifier)
     (readExpr
       (parenthesizedExpr
-        (slStringLiteral)))))
+        (slStringLiteral
+          (slStringLiteralPart))))))

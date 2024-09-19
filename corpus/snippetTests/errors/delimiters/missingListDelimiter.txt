@@ -12,7 +12,8 @@ l = List("one", "two"
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
-        (slStringLiteral)
-        (MISSING
-          ")")))))
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart))
+        (MISSING ")))))

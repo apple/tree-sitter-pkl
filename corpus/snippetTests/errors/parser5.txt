@@ -9,6 +9,6 @@ res1 = "some string"""
 (module
   (classProperty
     (identifier)
-    (ERROR
-      (slStringLiteral))
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart)
+      (ERROR))))

@@ -3,7 +3,7 @@ packages/badImport1.error
 ================================================================================
 
 // no semver
-res = import("package://localhost:12110/foo#/bar.pkl")
+res = import("package://localhost:0/foo#/bar.pkl")
 
 --------------------------------------------------------------------------------
 
@@ -12,4 +12,5 @@ res = import("package://localhost:12110/foo#/bar.pkl")
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant))))
+      (stringConstant
+        (slStringLiteralPart)))))

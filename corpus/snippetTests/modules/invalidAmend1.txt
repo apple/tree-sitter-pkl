@@ -12,7 +12,8 @@ name = 42
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (lineComment)
   (classProperty
     (identifier)

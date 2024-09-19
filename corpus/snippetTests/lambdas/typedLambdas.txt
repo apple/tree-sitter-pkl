@@ -30,7 +30,8 @@ res7 = ((x: List<String>(isNotEmpty), y: Set<String>(isNotEmpty)) -> x.toSet() =
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -75,7 +76,8 @@ res7 = ((x: List<String>(isNotEmpty), y: Set<String>(isNotEmpty)) -> x.toSet() =
                   (intLiteral))))
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -159,7 +161,8 @@ res7 = ((x: List<String>(isNotEmpty), y: Set<String>(isNotEmpty)) -> x.toSet() =
                     (identifier))))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectProperty
             (identifier)
             (methodCallExpr
@@ -189,7 +192,8 @@ res7 = ((x: List<String>(isNotEmpty), y: Set<String>(isNotEmpty)) -> x.toSet() =
                           (identifier))))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -261,10 +265,14 @@ res7 = ((x: List<String>(isNotEmpty), y: Set<String>(isNotEmpty)) -> x.toSet() =
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral)))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart))))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral)))))))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart))))))))

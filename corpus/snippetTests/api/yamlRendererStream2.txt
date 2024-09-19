@@ -40,7 +40,8 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (clazz
     (modifier)
     (identifier))
@@ -59,7 +60,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -81,7 +83,9 @@ examples {
                           (objectProperty
                             (identifier)
                             (slStringLiteral
-                              (escapeSequence))))))
+                              (slStringLiteralPart)
+                              (escapeSequence)
+                              (slStringLiteralPart))))))
                     (objectElement
                       (newExpr
                         (type
@@ -90,9 +94,11 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral))))))))))))
+                            (slStringLiteral
+                              (slStringLiteralPart)))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -113,7 +119,8 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral)))))
+                            (slStringLiteral
+                              (slStringLiteralPart))))))
                     (objectElement
                       (newExpr
                         (type
@@ -123,9 +130,12 @@ examples {
                           (objectProperty
                             (identifier)
                             (slStringLiteral
-                              (escapeSequence)))))))))))))
+                              (slStringLiteralPart)
+                              (escapeSequence)
+                              (slStringLiteralPart)))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr

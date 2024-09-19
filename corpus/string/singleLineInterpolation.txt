@@ -28,56 +28,67 @@ res10 = ######"Hi there \######(bob)"######
   (classProperty
     (identifier)
     (slStringLiteral
-      (interpolationExpr
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (interpolationExpr
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (slStringLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral
+      (slStringLiteralPart)
       (interpolationExpr
         (variableExpr
           (identifier)))))
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
       (interpolationExpr
         (slStringLiteral
+          (slStringLiteralPart)
           (interpolationExpr
             (variableExpr
               (identifier)))))))
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (interpolationExpr
         (variableExpr
           (identifier)))))
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (interpolationExpr
         (variableExpr
           (identifier)))))
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (interpolationExpr
         (variableExpr
           (identifier)))))
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (interpolationExpr
         (variableExpr
           (identifier))))))

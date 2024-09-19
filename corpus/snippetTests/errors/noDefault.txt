@@ -1,0 +1,23 @@
+================================================================================
+errors/noDefault
+================================================================================
+
+foo: "foo"|"bar"|"baz"
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (type
+            (stringConstant
+              (slStringLiteralPart)))
+          (type
+            (stringConstant
+              (slStringLiteralPart))))
+        (type
+          (stringConstant
+            (slStringLiteralPart)))))))

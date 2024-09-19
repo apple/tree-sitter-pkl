@@ -10,4 +10,5 @@ foo = import*("*.txt")
   (classProperty
     (identifier)
     (importGlobExpr
-      (stringConstant))))
+      (stringConstant
+        (slStringLiteralPart)))))

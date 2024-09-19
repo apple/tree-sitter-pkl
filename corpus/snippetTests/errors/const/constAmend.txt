@@ -1,16 +1,23 @@
 ================================================================================
-packages/badRead6.error
+errors/const/constAmend
 ================================================================================
 
-// this package's metadata points to an FTP URI, but we only accept HTTPS URIs
-res = read("package://localhost:12110/badPackageZipUrl@1.0.0#/Bug.pkl")
+amends "../../basic/constModifier.pkl"
+
+constDyn {
+  bar = 1
+}
 
 --------------------------------------------------------------------------------
 
 (module
-  (lineComment)
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
-    (readExpr
-      (parenthesizedExpr
-        (slStringLiteral)))))
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral)))))

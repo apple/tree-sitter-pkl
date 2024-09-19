@@ -10,6 +10,7 @@ res1 = "xxx\axxx"
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (ERROR
         (UNEXPECTED 'a')
         (identifier)))))

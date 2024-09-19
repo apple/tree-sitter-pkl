@@ -26,17 +26,17 @@ examples {
 
 facts {
   ["package-relative dependency is not same import as absolute URI dependency"] {
-    import("@birds/Bird.pkl") != import("package://localhost:12110/birds@0.5.0#/Bird.pkl")
+    import("@birds/Bird.pkl") != import("package://localhost:0/birds@0.5.0#/Bird.pkl")
   }
   ["package-relative dependency has scheme projectpackage"] {
-    import("@birds/Bird.pkl") == import("projectpackage://localhost:12110/birds@0.5.0#/Bird.pkl")
+    import("@birds/Bird.pkl") == import("projectpackage://localhost:0/birds@0.5.0#/Bird.pkl")
   }
   ["transitive import resolves to same dependency as direct dependency import"] {
     Swallow.favoriteFruit == import("@fruits/catalog/apple.pkl")
   }
   ["transitive import resolves to same dependency as projectpackage import"] {
-    Swallow.favoriteFruit == import("projectpackage://localhost:12110/fruit@1.1.0#/catalog/apple.pkl")
-    Swallow.favoriteFruit != import("projectpackage://localhost:12110/fruit@1.0.5#/catalog/apple.pkl")
+    Swallow.favoriteFruit == import("projectpackage://localhost:0/fruit@1.1.0#/catalog/apple.pkl")
+    Swallow.favoriteFruit != import("projectpackage://localhost:0/fruit@1.0.5#/catalog/apple.pkl")
   }
 }
 
@@ -45,16 +45,20 @@ facts {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (variableExpr
@@ -63,46 +67,58 @@ facts {
             (variableExpr
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (importExpr
-              (stringConstant)))))
+              (stringConstant
+                (slStringLiteralPart))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (lineComment)
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
               (importExpr
-                (stringConstant))
+                (stringConstant
+                  (slStringLiteralPart)))
               (importExpr
-                (stringConstant))))))
+                (stringConstant
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
               (importExpr
-                (stringConstant))
+                (stringConstant
+                  (slStringLiteralPart)))
               (importExpr
-                (stringConstant))))))
+                (stringConstant
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -111,9 +127,11 @@ facts {
                   (identifier))
                 (identifier))
               (importExpr
-                (stringConstant))))))
+                (stringConstant
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -122,7 +140,8 @@ facts {
                   (identifier))
                 (identifier))
               (importExpr
-                (stringConstant))))
+                (stringConstant
+                  (slStringLiteralPart)))))
           (objectElement
             (binaryExpr
               (propertyCallExpr
@@ -130,4 +149,5 @@ facts {
                   (identifier))
                 (identifier))
               (importExpr
-                (stringConstant)))))))))
+                (stringConstant
+                  (slStringLiteralPart))))))))))

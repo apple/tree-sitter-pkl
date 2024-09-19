@@ -10,7 +10,8 @@ res1 = test.catch(() -> module.relativePathTo(import("../../module.pkl")))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -25,4 +26,5 @@ res1 = test.catch(() -> module.relativePathTo(import("../../module.pkl")))
             (identifier)
             (argumentList
               (importExpr
-                (stringConstant)))))))))
+                (stringConstant
+                  (slStringLiteralPart))))))))))

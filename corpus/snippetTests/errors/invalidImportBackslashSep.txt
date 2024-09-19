@@ -1,0 +1,16 @@
+================================================================================
+errors/invalidImportBackslashSep
+================================================================================
+
+// In all OSes, the directory separator is forward slash. 
+res = import(#"..\basic\baseModule.pkl"#)
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (classProperty
+    (identifier)
+    (importExpr
+      (stringConstant
+        (slStringLiteralPart)))))

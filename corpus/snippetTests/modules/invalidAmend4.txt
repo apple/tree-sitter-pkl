@@ -12,10 +12,12 @@ function foo() = "parrot"
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (lineComment)
   (classMethod
     (methodHeader
       (identifier)
       (parameterList))
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart))))

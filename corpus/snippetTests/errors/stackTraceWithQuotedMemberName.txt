@@ -21,4 +21,5 @@ one {
             (identifier)
             (throwExpr
               (parenthesizedExpr
-                (slStringLiteral)))))))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))))))

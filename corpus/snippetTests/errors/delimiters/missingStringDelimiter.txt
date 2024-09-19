@@ -11,6 +11,7 @@ res2 = 42
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (MISSING """)))
   (classProperty
     (identifier)

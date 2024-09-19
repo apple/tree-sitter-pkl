@@ -12,7 +12,8 @@ name: String = "parrot"
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (lineComment)
   (classProperty
     (identifier)
@@ -20,4 +21,5 @@ name: String = "parrot"
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart))))

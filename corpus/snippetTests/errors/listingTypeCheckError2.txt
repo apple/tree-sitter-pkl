@@ -1,0 +1,30 @@
+================================================================================
+errors/listingTypeCheckError2
+================================================================================
+
+one = 1
+
+res = new Listing<String> {
+  one
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (objectBody
+        (objectElement
+          (variableExpr
+            (identifier)))))))

@@ -22,11 +22,14 @@ res1 = new X {
           (type
             (type
               (type
-                (stringConstant))
+                (stringConstant
+                  (slStringLiteralPart)))
               (type
-                (stringConstant)))
+                (stringConstant
+                  (slStringLiteralPart))))
             (type
-              (stringConstant)))))))
+              (stringConstant
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -36,4 +39,5 @@ res1 = new X {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (slStringLiteralPart)))))))

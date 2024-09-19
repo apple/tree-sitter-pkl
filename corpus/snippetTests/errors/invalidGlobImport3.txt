@@ -11,6 +11,7 @@ res = invalidGlob
 (module
   (importGlobClause
     (stringConstant
+      (slStringLiteralPart)
       (escapeSequence))
     (identifier))
   (classProperty

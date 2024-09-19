@@ -64,13 +64,17 @@ local class NestedDirectives {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody
@@ -85,43 +89,24 @@ local class NestedDirectives {
               (identifier)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (newExpr
                 (type
                   (qualifiedIdentifier
                     (identifier)))
                 (objectBody)))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (newExpr
                 (type
                   (qualifiedIdentifier
                     (identifier)))
                 (objectBody)))
             (objectEntry
-              (slStringLiteral)
-              (newExpr
-                (type
-                  (qualifiedIdentifier
-                    (identifier)
-                    (identifier)))
-                (objectBody)))
-            (objectEntry
-              (slStringLiteral)
-              (newExpr
-                (type
-                  (qualifiedIdentifier
-                    (identifier)))
-                (objectBody)))
-            (objectEntry
-              (slStringLiteral)
-              (newExpr
-                (type
-                  (qualifiedIdentifier
-                    (identifier)))
-                (objectBody)))
-            (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (newExpr
                 (type
                   (qualifiedIdentifier
@@ -129,7 +114,24 @@ local class NestedDirectives {
                     (identifier)))
                 (objectBody)))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
+              (newExpr
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (objectBody)))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (newExpr
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (objectBody)))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
               (newExpr
                 (type
                   (qualifiedIdentifier
@@ -137,7 +139,17 @@ local class NestedDirectives {
                     (identifier)))
                 (objectBody)))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
+              (newExpr
+                (type
+                  (qualifiedIdentifier
+                    (identifier)
+                    (identifier)))
+                (objectBody)))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
               (newExpr
                 (type
                   (qualifiedIdentifier
@@ -162,9 +174,13 @@ local class NestedDirectives {
                         (objectProperty
                           (identifier)
                           (slStringLiteral
+                            (slStringLiteralPart)
                             (escapeSequence)
+                            (slStringLiteralPart)
                             (escapeSequence)
-                            (escapeSequence))))))))
+                            (slStringLiteralPart)
+                            (escapeSequence)
+                            (slStringLiteralPart))))))))
               (objectElement
                 (methodCallExpr
                   (variableExpr
@@ -178,7 +194,8 @@ local class NestedDirectives {
                       (objectBody
                         (objectProperty
                           (identifier)
-                          (slStringLiteral)))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))))))
               (objectElement
                 (methodCallExpr
                   (variableExpr
@@ -194,7 +211,8 @@ local class NestedDirectives {
                           (binaryExpr
                             (variableExpr
                               (identifier))
-                            (slStringLiteral))
+                            (slStringLiteral
+                              (slStringLiteralPart)))
                           (objectBody
                             (objectProperty
                               (identifier)
@@ -206,7 +224,8 @@ local class NestedDirectives {
                           (binaryExpr
                             (variableExpr
                               (identifier))
-                            (slStringLiteral))
+                            (slStringLiteral
+                              (slStringLiteralPart)))
                           (objectBody
                             (objectProperty
                               (identifier)
@@ -224,7 +243,8 @@ local class NestedDirectives {
                       (objectBody
                         (objectProperty
                           (identifier)
-                          (slStringLiteral)))))))))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))))))))))))
   (clazz
     (modifier)
     (identifier)
@@ -239,7 +259,8 @@ local class NestedDirectives {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -274,7 +295,8 @@ local class NestedDirectives {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral)))))))
+                            (slStringLiteral
+                              (slStringLiteralPart))))))))
                 (objectProperty
                   (identifier)
                   (newExpr
@@ -284,7 +306,8 @@ local class NestedDirectives {
                     (objectBody
                       (objectProperty
                         (identifier)
-                        (slStringLiteral))))))))))
+                        (slStringLiteral
+                          (slStringLiteralPart)))))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -295,7 +318,8 @@ local class NestedDirectives {
         (newExpr
           (objectBody
             (objectElement
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectElement
               (newExpr
                 (type
@@ -304,9 +328,11 @@ local class NestedDirectives {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral)))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))))
             (objectElement
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -317,8 +343,10 @@ local class NestedDirectives {
         (newExpr
           (objectBody
             (objectEntry
-              (slStringLiteral)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectEntry
               (newExpr
                 (type
@@ -327,10 +355,12 @@ local class NestedDirectives {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (intLiteral))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (newExpr
                 (type
                   (qualifiedIdentifier
@@ -338,4 +368,5 @@ local class NestedDirectives {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral)))))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))))))))))

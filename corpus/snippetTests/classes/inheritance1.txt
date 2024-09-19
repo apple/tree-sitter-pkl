@@ -61,14 +61,17 @@ res3 = (res2) {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -78,7 +81,8 @@ res3 = (res2) {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -91,4 +95,5 @@ res3 = (res2) {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))))))
+              (slStringLiteral
+                (slStringLiteralPart)))))))))

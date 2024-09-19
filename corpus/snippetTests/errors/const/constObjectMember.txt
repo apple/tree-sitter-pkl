@@ -1,0 +1,22 @@
+================================================================================
+errors/const/constObjectMember
+================================================================================
+
+foo = new Dyn {
+  const foo = 10
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (modifier)
+          (identifier)
+          (intLiteral))))))

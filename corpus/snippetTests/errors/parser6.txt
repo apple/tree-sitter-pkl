@@ -7,7 +7,5 @@ res1 = """some string"
 --------------------------------------------------------------------------------
 
 (module
-  (classProperty
-    (identifier)
-    (mlStringLiteral
-      (MISSING """""))))
+  (ERROR
+    (identifier)))

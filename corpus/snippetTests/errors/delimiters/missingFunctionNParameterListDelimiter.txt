@@ -18,8 +18,7 @@ res1 = 42
           (identifier))
         (typedIdentifier
           (identifier))
-        (MISSING
-          ")"))
+        (MISSING "))
       (binaryExpr
         (binaryExpr
           (variableExpr

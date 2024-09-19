@@ -76,9 +76,8 @@ class Ann3 extends Annotation {
 --------------------------------------------------------------------------------
 
 (module
-  (lineComment)
-  (lineComment)
   (moduleHeader
+    (docComment)
     (annotation
       (qualifiedIdentifier
         (identifier)))
@@ -88,14 +87,16 @@ class Ann3 extends Annotation {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (slStringLiteralPart)))))
     (annotation
       (qualifiedIdentifier
         (identifier))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral))))
@@ -103,9 +104,8 @@ class Ann3 extends Annotation {
       (qualifiedIdentifier
         (identifier)
         (identifier))))
-  (lineComment)
-  (lineComment)
   (clazz
+    (docComment)
     (annotation
       (qualifiedIdentifier
         (identifier)))
@@ -115,22 +115,23 @@ class Ann3 extends Annotation {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (slStringLiteralPart)))))
     (annotation
       (qualifiedIdentifier
         (identifier))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral))))
     (identifier)
     (classBody
-      (lineComment)
-      (lineComment)
       (classMethod
+        (docComment)
         (annotation
           (qualifiedIdentifier
             (identifier)))
@@ -140,24 +141,26 @@ class Ann3 extends Annotation {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (annotation
           (qualifiedIdentifier
             (identifier))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectProperty
               (identifier)
               (intLiteral))))
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))
-      (lineComment)
-      (lineComment)
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classProperty
+        (docComment)
         (annotation
           (qualifiedIdentifier
             (identifier)))
@@ -167,14 +170,16 @@ class Ann3 extends Annotation {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (annotation
           (qualifiedIdentifier
             (identifier))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectProperty
               (identifier)
               (intLiteral))))
@@ -183,10 +188,10 @@ class Ann3 extends Annotation {
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))))
-  (lineComment)
-  (lineComment)
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classMethod
+    (docComment)
     (annotation
       (qualifiedIdentifier
         (identifier)))
@@ -196,24 +201,26 @@ class Ann3 extends Annotation {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (slStringLiteralPart)))))
     (annotation
       (qualifiedIdentifier
         (identifier))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral))))
     (methodHeader
       (identifier)
       (parameterList))
-    (slStringLiteral))
-  (lineComment)
-  (lineComment)
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
+    (docComment)
     (annotation
       (qualifiedIdentifier
         (identifier)))
@@ -223,14 +230,16 @@ class Ann3 extends Annotation {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (slStringLiteralPart)))))
     (annotation
       (qualifiedIdentifier
         (identifier))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral))))
@@ -239,7 +248,8 @@ class Ann3 extends Annotation {
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classExtendsClause

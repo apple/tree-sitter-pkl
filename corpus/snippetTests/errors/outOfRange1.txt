@@ -10,5 +10,6 @@ res1 = "abc"[4]
   (classProperty
     (identifier)
     (subscriptExpr
-      (slStringLiteral)
+      (slStringLiteral
+        (slStringLiteralPart))
       (intLiteral))))

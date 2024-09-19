@@ -97,7 +97,8 @@ res11 = (res1) {}
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (newExpr
@@ -106,10 +107,12 @@ res11 = (res1) {}
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -119,14 +122,17 @@ res11 = (res1) {}
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (binaryExpr
             (subscriptExpr
               (thisExpr)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -136,14 +142,17 @@ res11 = (res1) {}
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (binaryExpr
             (subscriptExpr
               (thisExpr)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -153,7 +162,8 @@ res11 = (res1) {}
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -163,63 +173,74 @@ res11 = (res1) {}
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (newExpr
             (type
               (qualifiedIdentifier
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (newExpr
                   (type
                     (qualifiedIdentifier
                       (identifier)))
                   (objectBody
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
                       (intLiteral)))))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (newExpr
                   (type
                     (qualifiedIdentifier
                       (identifier)))
                   (objectBody
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
                       (intLiteral))))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (newExpr
             (type
               (qualifiedIdentifier
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (newExpr
                   (type
                     (qualifiedIdentifier
                       (identifier)))
                   (objectBody
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
                       (intLiteral)))))))))))
   (classProperty
     (identifier)
     (subscriptExpr
       (variableExpr
         (identifier))
-      (slStringLiteral)))
+      (slStringLiteral
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (subscriptExpr
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral))
-      (slStringLiteral)))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (slStringLiteral
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (subscriptExpr
@@ -227,17 +248,22 @@ res11 = (res1) {}
         (subscriptExpr
           (variableExpr
             (identifier))
-          (slStringLiteral))
-        (slStringLiteral))
-      (slStringLiteral)))
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (slStringLiteral
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (subscriptExpr
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral))
-      (slStringLiteral)))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (slStringLiteral
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (subscriptExpr
@@ -245,23 +271,29 @@ res11 = (res1) {}
         (subscriptExpr
           (variableExpr
             (identifier))
-          (slStringLiteral))
-        (slStringLiteral))
-      (slStringLiteral)))
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (slStringLiteral
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (subscriptExpr
       (variableExpr
         (identifier))
-      (slStringLiteral)))
+      (slStringLiteral
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (subscriptExpr
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral))
-      (slStringLiteral)))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (slStringLiteral
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (subscriptExpr
@@ -269,9 +301,12 @@ res11 = (res1) {}
         (subscriptExpr
           (variableExpr
             (identifier))
-          (slStringLiteral))
-        (slStringLiteral))
-      (slStringLiteral)))
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (slStringLiteral
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -284,7 +319,8 @@ res11 = (res1) {}
           (subscriptExpr
             (variableExpr
               (identifier))
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (newExpr
@@ -293,7 +329,8 @@ res11 = (res1) {}
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (methodCallExpr
             (identifier)
             (argumentList
@@ -301,11 +338,13 @@ res11 = (res1) {}
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (binaryExpr
             (subscriptExpr
               (thisExpr)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (methodCallExpr
               (identifier)
               (argumentList
@@ -313,7 +352,8 @@ res11 = (res1) {}
                 (intLiteral)
                 (intLiteral)))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -323,10 +363,12 @@ res11 = (res1) {}
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (binaryExpr
             (subscriptExpr
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (methodCallExpr
               (identifier)
               (argumentList
@@ -334,10 +376,12 @@ res11 = (res1) {}
                 (intLiteral)
                 (intLiteral)))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (binaryExpr
             (subscriptExpr
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -365,13 +409,16 @@ res11 = (res1) {}
                   (identifier)
                   (intLiteral))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody)))))
   (classProperty
     (identifier)
@@ -399,13 +446,16 @@ res11 = (res1) {}
                   (identifier)
                   (intLiteral))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody
             (objectProperty
               (identifier)
@@ -418,13 +468,16 @@ res11 = (res1) {}
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody
             (objectProperty
               (identifier)

@@ -12,7 +12,8 @@ listing = new base.Listing {}
     (modifier)
     (identifier)
     (importExpr
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (newExpr

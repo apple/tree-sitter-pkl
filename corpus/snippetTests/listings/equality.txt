@@ -40,9 +40,11 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -61,9 +63,11 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
             (identifier)))
         (objectBody
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -75,7 +79,8 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
             (identifier)))
         (objectBody
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -87,9 +92,11 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
             (identifier)))
         (objectBody
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -111,7 +118,8 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
             (identifier)))
         (objectBody
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -153,14 +161,16 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
             (identifier)))
         (objectBody
           (objectElement
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (newExpr
         (type
           (qualifiedIdentifier
             (identifier)))
         (objectBody
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -178,14 +188,16 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (newExpr
         (type
           (qualifiedIdentifier
             (identifier)))
         (objectBody
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -200,18 +212,21 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (newExpr
         (type
           (qualifiedIdentifier
             (identifier)))
         (objectBody
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -230,7 +245,8 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
             (objectProperty
               (modifier)
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectBody
           (objectElement
             (variableExpr
@@ -238,13 +254,16 @@ res13 = new Listing { x; local x = "one" } { y; local y = "two" } == new Listing
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (newExpr
         (type
           (qualifiedIdentifier
             (identifier)))
         (objectBody
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectElement
-            (slStringLiteral)))))))
+            (slStringLiteral
+              (slStringLiteralPart))))))))

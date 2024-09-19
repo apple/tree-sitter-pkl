@@ -1,0 +1,75 @@
+================================================================================
+errors/mappingTypeCheckError6
+================================================================================
+
+a = new Listing { "hi" }
+
+b = (a) {
+  "hihih"
+}
+
+bar = new Mapping {
+  [b] = "foo"
+}
+
+res: Mapping<Listing<String(length == 5)>, String> = bar
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectElement
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectElement
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectEntry
+          (variableExpr
+            (identifier))
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (intLiteral)))))
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (variableExpr
+      (identifier))))

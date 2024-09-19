@@ -70,7 +70,8 @@ output {
       (qualifiedIdentifier
         (identifier))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -196,7 +197,8 @@ output {
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -372,4 +374,5 @@ output {
                                 (objectBody
                                   (objectProperty
                                     (identifier)
-                                    (slStringLiteral)))))))))))))))))))
+                                    (slStringLiteral
+                                      (slStringLiteralPart))))))))))))))))))))

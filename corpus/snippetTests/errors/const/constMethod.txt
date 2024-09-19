@@ -1,0 +1,35 @@
+================================================================================
+errors/const/constMethod
+================================================================================
+
+function fun() = 1
+
+class Foo {
+  foo = fun()
+}
+
+foo = new Foo {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList))
+    (intLiteral))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (methodCallExpr
+          (identifier)
+          (argumentList)))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody))))

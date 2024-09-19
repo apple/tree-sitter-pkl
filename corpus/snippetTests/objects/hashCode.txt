@@ -64,7 +64,8 @@ facts {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (clazz
     (modifier)
     (identifier)
@@ -142,7 +143,8 @@ facts {
                   (variableExpr
                     (identifier))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (modifier)
@@ -154,7 +156,8 @@ facts {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectProperty
             (modifier)
             (identifier)
@@ -170,7 +173,8 @@ facts {
                 (objectProperty
                   (modifier)
                   (identifier)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectProperty
             (modifier)
             (identifier)
@@ -187,7 +191,8 @@ facts {
                   (objectProperty
                     (modifier)
                     (identifier)
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (objectBody
                 (objectProperty
                   (identifier)
@@ -196,7 +201,8 @@ facts {
                 (objectProperty
                   (modifier)
                   (identifier)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (methodCallExpr
@@ -259,7 +265,8 @@ facts {
                 (identifier))
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (modifier)
@@ -271,7 +278,8 @@ facts {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectProperty
             (modifier)
             (identifier)
@@ -287,7 +295,8 @@ facts {
                 (objectProperty
                   (modifier)
                   (identifier)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectProperty
             (modifier)
             (identifier)
@@ -304,7 +313,8 @@ facts {
                   (objectProperty
                     (modifier)
                     (identifier)
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (objectBody
                 (objectProperty
                   (identifier)
@@ -313,7 +323,8 @@ facts {
                 (objectProperty
                   (modifier)
                   (identifier)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (methodCallExpr
@@ -376,7 +387,8 @@ facts {
                 (identifier))
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (modifier)
@@ -388,7 +400,8 @@ facts {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectProperty
             (modifier)
             (identifier)
@@ -399,7 +412,8 @@ facts {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectProperty
                   (identifier)
                   (functionLiteral
@@ -451,7 +465,8 @@ facts {
                 (identifier))
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (modifier)
@@ -463,7 +478,8 @@ facts {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectProperty
             (modifier)
             (identifier)
@@ -474,7 +490,8 @@ facts {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectProperty
                   (identifier)
                   (intLiteral)))))
@@ -522,7 +539,8 @@ facts {
                 (identifier))
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (modifier)
@@ -534,7 +552,8 @@ facts {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectElement
             (binaryExpr
               (propertyCallExpr

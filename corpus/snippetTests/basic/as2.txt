@@ -24,9 +24,9 @@ examples {
   
   ["listing"] {
     new Listing { 1; 2; 3 } as Listing<Int>
-    module.catch(() -> new Listing { 1; 2; 3 } as Listing<String>)
+    module.catch(() -> (new Listing { 1; 2; 3 } as Listing<String>)[0])
   }
-  
+
   ["mapping"] {
     module.catch(() -> new Listing { 1; 2; 3 } as Mapping<Int, String>)
     new Mapping { ["Pigeon"] = 42; ["Barn Owl"] = 21 } as Mapping<String, Int>
@@ -53,9 +53,9 @@ examples {
   ["function type"] {
     (((x) -> x) as (Int) -> Int).apply(42)
     (((x) -> x) as (String) -> String).apply(42)
-    module.catch(() -> ((x, y) -> x) as (Int) -> Int)
+    module.catch(() -> ((x, _) -> x) as (Int) -> Int)
   }
-  
+
   ["string literal type"] {
     "Pigeon" as "Pigeon"|"Barn Owl"
     module.catch(() -> "Pigeon" as "Piggy"|"Barn Owl")
@@ -73,12 +73,14 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -137,7 +139,8 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -196,16 +199,19 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (asExpr
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)))
               (type
                 (qualifiedIdentifier
@@ -228,9 +234,11 @@ examples {
                     (methodCallExpr
                       (identifier)
                       (argumentList
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral)
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral)))
                     (type
                       (qualifiedIdentifier
@@ -243,7 +251,8 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -271,27 +280,31 @@ examples {
               (argumentList
                 (functionLiteral
                   (parameterList)
-                  (asExpr
-                    (newExpr
-                      (type
-                        (qualifiedIdentifier
-                          (identifier)))
-                      (objectBody
-                        (objectElement
-                          (intLiteral))
-                        (objectElement
-                          (intLiteral))
-                        (objectElement
-                          (intLiteral))))
-                    (type
-                      (qualifiedIdentifier
-                        (identifier))
-                      (typeArgumentList
+                  (subscriptExpr
+                    (parenthesizedExpr
+                      (asExpr
+                        (newExpr
+                          (type
+                            (qualifiedIdentifier
+                              (identifier)))
+                          (objectBody
+                            (objectElement
+                              (intLiteral))
+                            (objectElement
+                              (intLiteral))
+                            (objectElement
+                              (intLiteral))))
                         (type
                           (qualifiedIdentifier
-                            (identifier))))))))))))
+                            (identifier))
+                          (typeArgumentList
+                            (type
+                              (qualifiedIdentifier
+                                (identifier)))))))
+                    (intLiteral))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -330,10 +343,12 @@ examples {
                     (identifier)))
                 (objectBody
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (intLiteral))
                   (objectEntry
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (intLiteral))))
               (type
                 (qualifiedIdentifier
@@ -359,10 +374,12 @@ examples {
                           (identifier)))
                       (objectBody
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (slStringLiteralPart))
                           (intLiteral))
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (slStringLiteralPart))
                           (intLiteral))))
                     (type
                       (qualifiedIdentifier
@@ -375,7 +392,8 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (asExpr
@@ -494,7 +512,8 @@ examples {
                             (qualifiedIdentifier
                               (identifier)))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (asExpr
@@ -538,7 +557,8 @@ examples {
                             (qualifiedIdentifier
                               (identifier)))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -607,16 +627,20 @@ examples {
                         (qualifiedIdentifier
                           (identifier)))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (asExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (type
                 (type
-                  (stringConstant))
+                  (stringConstant
+                    (slStringLiteralPart)))
                 (type
-                  (stringConstant)))))
+                  (stringConstant
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -625,18 +649,23 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (asExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (type
                       (type
-                        (stringConstant))
+                        (stringConstant
+                          (slStringLiteralPart)))
                       (type
-                        (stringConstant))))))))))
+                        (stringConstant
+                          (slStringLiteralPart)))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (asExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (type
                 (qualifiedIdentifier
                   (identifier)))))
@@ -654,7 +683,8 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (asExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (type
                       (type
                         (qualifiedIdentifier
@@ -668,9 +698,12 @@ examples {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (type
                 (qualifiedIdentifier
                   (identifier))

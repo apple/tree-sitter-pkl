@@ -12,7 +12,7 @@ listing: Listing<Person>
 mapping: Mapping<String, Person>
 obj: Person
 nullable: Person?
-union: Person|String
+union: *Person|String
 stringLiteral: "Pigeon"
 nullish: Null
 
@@ -105,16 +105,18 @@ nullish: Null
     (typeAnnotation
       (type
         (type
-          (qualifiedIdentifier
-            (identifier)))
-        (type
-          (qualifiedIdentifier
-            (identifier))))))
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
   (classProperty
     (identifier)
     (typeAnnotation
       (type
-        (stringConstant))))
+        (stringConstant
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (typeAnnotation

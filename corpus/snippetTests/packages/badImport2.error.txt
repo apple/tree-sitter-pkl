@@ -3,7 +3,7 @@ packages/badImport2.error
 ================================================================================
 
 // invalid semver
-res = import("package://localhost:12110/foo@notAVersion#/bar.pkl")
+res = import("package://localhost:0/foo@notAVersion#/bar.pkl")
 
 --------------------------------------------------------------------------------
 
@@ -12,4 +12,5 @@ res = import("package://localhost:12110/foo@notAVersion#/bar.pkl")
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant))))
+      (stringConstant
+        (slStringLiteralPart)))))

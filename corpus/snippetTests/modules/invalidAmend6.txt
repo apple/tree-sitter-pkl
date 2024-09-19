@@ -20,4 +20,5 @@ resource = new Resource {
         (lineComment)
         (objectProperty
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (slStringLiteralPart)))))))

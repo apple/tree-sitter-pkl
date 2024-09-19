@@ -4,7 +4,7 @@ basic/moduleRef1
 
 module test
 
-a = 42
+const a = 42
 
 m1 = module.a
 
@@ -34,6 +34,7 @@ class Person {
       (qualifiedIdentifier
         (identifier))))
   (classProperty
+    (modifier)
     (identifier)
     (intLiteral))
   (classProperty

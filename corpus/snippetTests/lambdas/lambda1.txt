@@ -23,7 +23,8 @@ res4 = mult.apply(2, 3)
     (identifier)
     (functionLiteral
       (parameterList)
-      (slStringLiteral)))
+      (slStringLiteral
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (methodCallExpr

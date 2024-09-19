@@ -36,25 +36,32 @@ output {
         (nullLiteral))
       (objectProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (nullLiteral))
       (objectEntry
-        (slStringLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (nullLiteral)
-        (slStringLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (objectBody
@@ -72,23 +79,29 @@ output {
               (identifier)
               (objectBody
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (functionLiteral
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (functionLiteral
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (functionLiteral
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))))))))))

@@ -10,7 +10,8 @@ res = invalidGlob
 
 (module
   (importGlobClause
-    (stringConstant)
+    (stringConstant
+      (slStringLiteralPart))
     (identifier))
   (classProperty
     (identifier)

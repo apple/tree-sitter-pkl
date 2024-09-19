@@ -14,14 +14,18 @@ y: nothing|"foo" = "foo"
     (typeAnnotation
       (type
         (type
-          (stringConstant))
+          (stringConstant
+            (slStringLiteralPart)))
         (type)))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (typeAnnotation
       (type
         (type)
         (type
-          (stringConstant))))
-    (slStringLiteral)))
+          (stringConstant
+            (slStringLiteralPart)))))
+    (slStringLiteral
+      (slStringLiteralPart))))

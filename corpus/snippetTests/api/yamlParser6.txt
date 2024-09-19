@@ -32,7 +32,8 @@ res4 = parser.parse("""
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -48,12 +49,29 @@ res4 = parser.parse("""
   (classProperty
     (modifier)
     (identifier)
-    (methodCallExpr
+    (ERROR
       (variableExpr
         (identifier))
       (identifier)
-      (argumentList
-        (mlStringLiteral))))
+      (ERROR
+        (identifier)
+        (identifier)
+        (identifier))
+      (unaryExpr
+        (variableExpr
+          (identifier))))
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (ERROR
+        (identifier))
+      (type
+        (stringConstant))))
+  (ERROR)
   (classProperty
     (identifier)
     (variableExpr
@@ -73,7 +91,8 @@ res4 = parser.parse("""
         (subscriptExpr
           (variableExpr
             (identifier))
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (intLiteral))
       (type
         (qualifiedIdentifier
@@ -85,4 +104,10 @@ res4 = parser.parse("""
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral)))))
+        (mlStringLiteral
+          (ERROR
+            (identifier)
+            (identifier)
+            (intLiteral)
+            (identifier)
+            (identifier)))))))

@@ -16,7 +16,8 @@ output {
 (module
   (lineComment)
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (newExpr

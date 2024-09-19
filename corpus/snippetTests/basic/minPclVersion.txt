@@ -19,7 +19,8 @@ class Class1
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (identifier)
@@ -34,5 +35,6 @@ class Class1
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (slStringLiteralPart)))))
     (identifier)))

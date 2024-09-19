@@ -15,7 +15,8 @@ pigeon = new Person {}
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (modifier)
     (identifier)

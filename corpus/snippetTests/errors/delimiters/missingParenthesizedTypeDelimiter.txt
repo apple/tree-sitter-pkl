@@ -27,8 +27,7 @@ res2 = 42
               (type
                 (qualifiedIdentifier
                   (identifier))))))
-        (MISSING
-          ")"))))
+        (MISSING "))))
   (classProperty
     (identifier)
     (intLiteral)))

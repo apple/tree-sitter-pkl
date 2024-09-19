@@ -14,19 +14,16 @@ res1 = foo(1, 2)
       (parameterList
         (typedIdentifier
           (identifier)
+          (ERROR
+            (typeAnnotation
+              (type
+                (qualifiedIdentifier
+                  (identifier))))
+            (identifier))
           (typeAnnotation
             (type
               (qualifiedIdentifier
-                (identifier)))))
-        (MISSING
-          ")"))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (ERROR)
+                (identifier)))))))
     (binaryExpr
       (variableExpr
         (identifier))

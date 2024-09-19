@@ -1,0 +1,64 @@
+================================================================================
+api/reflectedDeclaration
+================================================================================
+
+import "pkl:reflect"
+
+typealias MyAlias = Boolean | String
+
+class Rec {
+  rec: Rec?
+}
+
+alias = reflect.TypeAlias(MyAlias)
+
+rec = reflect.DeclaredType(reflect.Class(Rec))
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (typeAlias
+    (identifier)
+    (type
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (variableExpr
+              (identifier))))))))

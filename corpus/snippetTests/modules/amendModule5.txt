@@ -25,7 +25,8 @@ local class Foo {
   (lineComment)
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody
@@ -48,7 +49,8 @@ local class Foo {
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classMethod
     (methodHeader
       (modifier)
@@ -64,4 +66,5 @@ local class Foo {
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral)))))
+        (slStringLiteral
+          (slStringLiteralPart))))))

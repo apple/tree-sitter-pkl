@@ -62,7 +62,8 @@ example4 {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (objectProperty
         (identifier)
         (methodCallExpr
@@ -89,7 +90,8 @@ example4 {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (objectProperty
         (modifier)
         (identifier)
@@ -147,13 +149,16 @@ example4 {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)))
+                (slStringLiteral
+                  (slStringLiteralPart))))
             (identifier)
             (argumentList
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (identifier)
           (argumentList
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (objectBody
@@ -223,11 +228,14 @@ example4 {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral)))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart))))
             (identifier)
             (argumentList
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (identifier)
           (argumentList)))
       (objectProperty
@@ -362,8 +370,11 @@ example4 {
               (argumentList))
             (identifier)
             (argumentList
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral)))))))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart))))))))

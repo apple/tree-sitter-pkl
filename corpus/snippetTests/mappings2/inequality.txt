@@ -48,10 +48,12 @@ res10 = new Mapping { when (false) { [0] = 0 }; ["one"] = 1 } != new Mapping { w
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -77,10 +79,12 @@ res10 = new Mapping { when (false) { [0] = 0 }; ["one"] = 1 } != new Mapping { w
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -99,7 +103,8 @@ res10 = new Mapping { when (false) { [0] = 0 }; ["one"] = 1 } != new Mapping { w
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -118,10 +123,12 @@ res10 = new Mapping { when (false) { [0] = 0 }; ["one"] = 1 } != new Mapping { w
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -150,7 +157,8 @@ res10 = new Mapping { when (false) { [0] = 0 }; ["one"] = 1 } != new Mapping { w
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -169,7 +177,8 @@ res10 = new Mapping { when (false) { [0] = 0 }; ["one"] = 1 } != new Mapping { w
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -236,7 +245,8 @@ res10 = new Mapping { when (false) { [0] = 0 }; ["one"] = 1 } != new Mapping { w
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))))
       (newExpr
         (type
@@ -250,7 +260,8 @@ res10 = new Mapping { when (false) { [0] = 0 }; ["one"] = 1 } != new Mapping { w
                 (intLiteral)
                 (intLiteral))))
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))
           (objectProperty
             (identifier)

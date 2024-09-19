@@ -16,7 +16,9 @@ res1 = 42
           (qualifiedIdentifier
             (identifier)))
         (ERROR
-          (identifier))
+          (type
+            (qualifiedIdentifier
+              (identifier))))
         (type
           (qualifiedIdentifier
             (identifier)))

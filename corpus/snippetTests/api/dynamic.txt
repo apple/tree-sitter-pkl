@@ -99,12 +99,14 @@ local class Person {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -127,16 +129,19 @@ local class Person {
                               (identifier)))
                           (objectBody
                             (objectElement
-                              (slStringLiteral))
+                              (slStringLiteral
+                                (slStringLiteralPart)))
                             (objectElement
-                              (slStringLiteral))))
+                              (slStringLiteral
+                                (slStringLiteralPart)))))
                         (objectBody
                           (objectProperty
                             (identifier)
                             (intLiteral))))
                       (objectBody
                         (objectElement
-                          (slStringLiteral))))
+                          (slStringLiteral
+                            (slStringLiteralPart)))))
                     (objectBody)))
                 (identifier)
                 (argumentList))
@@ -170,7 +175,8 @@ local class Person {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral))))
+                      (slStringLiteral
+                        (slStringLiteralPart)))))
                 (identifier)
                 (argumentList))
               (intLiteral)))
@@ -183,8 +189,10 @@ local class Person {
                       (identifier)))
                   (objectBody
                     (objectEntry
-                      (slStringLiteral)
-                      (slStringLiteral))))
+                      (slStringLiteral
+                        (slStringLiteralPart))
+                      (slStringLiteral
+                        (slStringLiteralPart)))))
                 (identifier)
                 (argumentList))
               (intLiteral)))))))
@@ -192,7 +200,8 @@ local class Person {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -200,7 +209,8 @@ local class Person {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -208,15 +218,18 @@ local class Person {
               (identifier)
               (argumentList
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -229,9 +242,11 @@ local class Person {
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -239,7 +254,8 @@ local class Person {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -247,24 +263,29 @@ local class Person {
               (identifier)
               (argumentList
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -272,7 +293,8 @@ local class Person {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -280,45 +302,53 @@ local class Person {
               (identifier)
               (argumentList
                 (binaryExpr
-                  (slStringLiteral)
-                  (slStringLiteral)))))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -339,7 +369,8 @@ local class Person {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -360,7 +391,8 @@ local class Person {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -402,7 +434,8 @@ local class Person {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral))))
+                      (slStringLiteral
+                        (slStringLiteralPart)))))
                 (identifier)
                 (argumentList
                   (variableExpr
@@ -424,7 +457,8 @@ local class Person {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral))))
+                            (slStringLiteral
+                              (slStringLiteralPart)))))
                       (identifier)
                       (argumentList
                         (variableExpr
@@ -471,20 +505,27 @@ local class Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -495,10 +536,12 @@ local class Person {
       (objectBody
         (objectEntry
           (intLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
           (intLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -510,7 +553,8 @@ local class Person {
         (objectProperty
           (modifier)
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (variableExpr
@@ -542,7 +586,8 @@ local class Person {
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classProperty
         (identifier)
         (typeAnnotation

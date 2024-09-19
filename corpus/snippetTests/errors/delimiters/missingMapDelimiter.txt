@@ -12,9 +12,10 @@ map = Map("one", 1, "two", 2
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral)
-        (MISSING
-          ")")))))
+        (MISSING ")))))

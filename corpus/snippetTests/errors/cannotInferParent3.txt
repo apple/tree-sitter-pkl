@@ -42,5 +42,7 @@ res1: Mapping<Person, String> = new {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))
-          (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
+          (slStringLiteral
+            (slStringLiteralPart)))))))

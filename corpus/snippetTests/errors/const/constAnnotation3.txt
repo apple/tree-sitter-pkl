@@ -1,0 +1,56 @@
+================================================================================
+errors/const/constAnnotation3
+================================================================================
+
+import "pkl:reflect"
+
+class Ann extends Annotation {
+  foo: Int
+}
+
+@Ann { foo = module }
+class Foo {}
+
+ann = reflect.Class(Foo).annotations[0]
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (qualifiedIdentifier
+        (identifier)))
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (clazz
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (moduleExpr))))
+    (identifier)
+    (classBody))
+  (classProperty
+    (identifier)
+    (subscriptExpr
+      (propertyCallExpr
+        (methodCallExpr
+          (variableExpr
+            (identifier))
+          (identifier)
+          (argumentList
+            (variableExpr
+              (identifier))))
+        (identifier))
+      (intLiteral))))

@@ -42,7 +42,8 @@ res8 = test.catch(() ->
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (letExpr
@@ -70,9 +71,11 @@ res8 = test.catch(() ->
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (methodCallExpr
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (identifier)
         (argumentList))
       (methodCallExpr
@@ -93,7 +96,8 @@ res8 = test.catch(() ->
             (binaryExpr
               (variableExpr
                 (identifier))
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (propertyCallExpr
         (binaryExpr
           (propertyCallExpr
@@ -138,11 +142,13 @@ res8 = test.catch(() ->
                     (qualifiedIdentifier
                       (identifier))))
                 (type
-                  (stringConstant)))))))
+                  (stringConstant
+                    (slStringLiteralPart))))))))
       (methodCallExpr
         (identifier)
         (argumentList
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (trueLiteral)
           (nullLiteral)))
       (variableExpr
@@ -188,9 +194,11 @@ res8 = test.catch(() ->
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral))))))
+                      (slStringLiteral
+                        (slStringLiteralPart)))))))
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList))
             (methodCallExpr
@@ -218,7 +226,8 @@ res8 = test.catch(() ->
                   (binaryExpr
                     (variableExpr
                       (identifier))
-                    (slStringLiteral)))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))))
             (propertyCallExpr
               (binaryExpr
                 (propertyCallExpr
@@ -271,11 +280,13 @@ res8 = test.catch(() ->
                           (qualifiedIdentifier
                             (identifier))))
                       (type
-                        (stringConstant)))))))
+                        (stringConstant
+                          (slStringLiteralPart))))))))
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (trueLiteral)
                 (nullLiteral)))
             (variableExpr

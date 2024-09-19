@@ -67,7 +67,8 @@ output {
               (identifier)))))))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (trueLiteral))
@@ -92,7 +93,8 @@ output {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (trueLiteral)
         (intLiteral))))
   (classProperty
@@ -100,7 +102,8 @@ output {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (trueLiteral)
         (intLiteral))))
   (classProperty
@@ -108,7 +111,8 @@ output {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (trueLiteral)
         (intLiteral)
         (floatLiteral))))
@@ -120,7 +124,8 @@ output {
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
           (trueLiteral))
         (objectElement
@@ -133,10 +138,13 @@ output {
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -147,7 +155,8 @@ output {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -160,7 +169,8 @@ output {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -201,7 +211,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -209,7 +220,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -217,7 +229,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -225,7 +238,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -233,7 +247,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -241,7 +256,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -249,7 +265,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -257,7 +274,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -265,7 +283,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -273,7 +292,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -281,7 +301,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -289,7 +310,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -297,7 +319,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -305,7 +328,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -313,7 +337,8 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectEntry
                   (variableExpr
                     (identifier))
@@ -321,4 +346,5 @@ output {
                     (parameterList
                       (typedIdentifier
                         (identifier)))
-                    (slStringLiteral)))))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))))))))))

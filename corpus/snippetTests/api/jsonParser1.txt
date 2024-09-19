@@ -73,11 +73,13 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
 
 --------------------------------------------------------------------------------
 
-(module
+(ERROR
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -94,7 +96,8 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -102,7 +105,8 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -110,7 +114,8 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -118,7 +123,77 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (slStringLiteralPart))))))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (slStringLiteralPart))))))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (slStringLiteralPart))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (lineComment)
   (classProperty
     (identifier)
@@ -135,7 +210,6 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
             (identifier)
             (argumentList
               (slStringLiteral)))))))
-  (lineComment)
   (classProperty
     (identifier)
     (methodCallExpr
@@ -150,9 +224,194 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
               (identifier))
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
-  (lineComment)
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (identifier)
+  (variableExpr
+    (identifier))
+  (identifier)
+  (ERROR
+    (UNEXPECTED '"'))
+  (slStringLiteral
+    (slStringLiteralPart))
+  (slStringLiteral
+    (slStringLiteralPart))
+  (ERROR
+    (slStringLiteral
+      (slStringLiteralPart))
+    (identifier))
+  (variableExpr
+    (identifier))
+  (identifier)
+  (mlStringLiteral
+    (MISSING """""))
+  (objectElement
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (ERROR)
+  (objectElement
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (ERROR)
+  (objectElement
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (ERROR)
+  (objectElement
+    (intLiteral))
+  (ERROR)
+  (objectElement
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (lineComment)
+      (MISSING """"")))
+  (objectProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (objectLiteral
+          (mlStringLiteral
+            (MISSING """""))
+          (objectBody
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (intLiteral))
+            (ERROR)
+            (objectElement
+              (objectLiteral
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (ERROR)
+                (objectBody
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart))))))
+            (ERROR)
+            (objectElement
+              (objectLiteral
+                (objectLiteral
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (ERROR
+                    (UNEXPECTED '\n'))
+                  (objectBody
+                    (objectElement
+                      (slStringLiteral
+                        (slStringLiteralPart)))
+                    (ERROR)
+                    (objectElement
+                      (slStringLiteral
+                        (slStringLiteralPart)))
+                    (ERROR)
+                    (objectElement
+                      (slStringLiteral
+                        (slStringLiteralPart)))
+                    (ERROR)
+                    (objectElement
+                      (slStringLiteral
+                        (slStringLiteralPart)))))
+                (ERROR)
+                (objectBody
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart))))))
+            (ERROR)
+            (objectElement
+              (objectLiteral
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (ERROR)
+                (objectBody
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart))))))))
+        (ERROR))))
+  (lineComment)
+  (objectProperty
     (identifier)
     (methodCallExpr
       (variableExpr
@@ -166,108 +425,5 @@ res17 = test.catch(() -> parser.parse("!@#$%"))
               (identifier))
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (slStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (slStringLiteral))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (methodCallExpr
-            (variableExpr
-              (identifier))
-            (identifier)
-            (argumentList
-              (slStringLiteral)))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (methodCallExpr
-            (variableExpr
-              (identifier))
-            (identifier)
-            (argumentList
-              (slStringLiteral)))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (slStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (slStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (mlStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (mlStringLiteral))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (mlStringLiteral))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (methodCallExpr
-            (variableExpr
-              (identifier))
-            (identifier)
-            (argumentList
-              (slStringLiteral))))))))
+              (slStringLiteral
+                (slStringLiteralPart)))))))))

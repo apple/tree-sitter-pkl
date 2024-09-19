@@ -42,46 +42,70 @@ res9 = ######"""
 (module
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (ERROR
+      (identifier))
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (identifier)
+    (identifier)
+    (identifier)
+    (identifier))
+  (classProperty
+    (identifier)
+    (ERROR
+      (identifier)
+      (UNEXPECTED '\')
+      (parameterList
+        (typedIdentifier
+          (identifier))))
+    (mlStringLiteral
+      (MISSING """"")))
   (classProperty
     (identifier)
     (mlStringLiteral
-      (interpolationExpr
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (mlStringLiteral))
+      (mlStringLiteralPart)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (mlStringLiteralPart)
       (interpolationExpr
         (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (mlStringLiteral))
-  (classProperty
-    (identifier)
-    (mlStringLiteral
-      (interpolationExpr
-        (variableExpr
-          (identifier)))))
+          (identifier)))
+      (mlStringLiteralPart)))
   (classProperty
     (identifier)
     (mlStringLiteral
-      (interpolationExpr
-        (variableExpr
-          (identifier)))))
+      (mlStringLiteralPart)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (mlStringLiteralPart)
       (interpolationExpr
         (variableExpr
-          (identifier)))))
+          (identifier)))
+      (mlStringLiteralPart)))
   (classProperty
     (identifier)
     (mlStringLiteral
+      (mlStringLiteralPart)
       (interpolationExpr
         (variableExpr
-          (identifier))))))
+          (identifier)))
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (mlStringLiteralPart))))

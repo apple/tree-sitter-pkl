@@ -17,21 +17,25 @@ function foo(arg) = "other" // duplicate
     (methodHeader
       (identifier)
       (parameterList))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (lineComment)
   (classMethod
     (methodHeader
       (identifier)
       (parameterList))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classMethod
     (methodHeader
       (identifier)
       (parameterList
         (typedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (lineComment))

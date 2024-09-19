@@ -15,6 +15,8 @@ extends "baseModule.pkl"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (slStringLiteralPart)))))
     (extendsOrAmendsClause
-      (stringConstant))))
+      (stringConstant
+        (slStringLiteralPart)))))

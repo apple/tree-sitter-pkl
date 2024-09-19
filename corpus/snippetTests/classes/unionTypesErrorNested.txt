@@ -67,20 +67,24 @@ res1 = new X {
             (identifier)
             (argumentList
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (methodCallExpr
                 (identifier)
                 (argumentList
                   (intLiteral)
                   (intLiteral)
                   (intLiteral)))
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (methodCallExpr
                 (identifier)
                 (argumentList
@@ -90,5 +94,6 @@ res1 = new X {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral))))))))))

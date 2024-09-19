@@ -10,7 +10,8 @@ res = dog
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (variableExpr

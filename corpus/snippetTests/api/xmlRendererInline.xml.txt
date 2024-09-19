@@ -27,7 +27,8 @@ output {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classBody
@@ -55,8 +56,10 @@ output {
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectElement
         (methodCallExpr
           (variableExpr
@@ -66,8 +69,10 @@ output {
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectElement
         (methodCallExpr
           (variableExpr
@@ -80,9 +85,11 @@ output {
                   (identifier)))
               (objectBody
                 (objectElement
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectElement
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))
       (objectElement
         (methodCallExpr
           (variableExpr
@@ -92,9 +99,12 @@ output {
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral)
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))))
       (objectElement
         (methodCallExpr
@@ -108,10 +118,13 @@ output {
                   (identifier)))
               (objectBody
                 (objectEntry
-                  (slStringLiteral)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectEntry
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)))))))
       (objectElement
         (methodCallExpr
@@ -126,7 +139,8 @@ output {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectProperty
                   (identifier)
                   (intLiteral)))))))
@@ -143,7 +157,8 @@ output {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectProperty
                   (identifier)
                   (intLiteral)))))))))

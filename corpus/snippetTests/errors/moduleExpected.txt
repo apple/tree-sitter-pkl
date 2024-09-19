@@ -22,7 +22,8 @@ result = (module) { dummy = 0 }.path
               (identifier))))))
     (methodCallExpr
       (importExpr
-        (stringConstant))
+        (stringConstant
+          (slStringLiteralPart)))
       (identifier)
       (argumentList
         (moduleExpr))))

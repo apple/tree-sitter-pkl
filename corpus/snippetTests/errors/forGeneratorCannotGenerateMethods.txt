@@ -27,4 +27,5 @@ foo {
               (modifier)
               (identifier)
               (parameterList))
-            (slStringLiteral)))))))
+            (slStringLiteral
+              (slStringLiteralPart))))))))

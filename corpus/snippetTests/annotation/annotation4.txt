@@ -18,13 +18,16 @@ someProperty: String = "hi"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (slStringLiteral))))
+          (slStringLiteral
+            (slStringLiteralPart)))))
     (identifier)
     (typeAnnotation
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart))))

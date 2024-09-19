@@ -4,8 +4,8 @@ packages/packages1
 
 amends ".../snippetTest.pkl"
 
-import "package://localhost:12110/birds@0.5.0#/Bird.pkl"
-import "package://localhost:12110/fruit@1.0.5#/Fruit.pkl"
+import "package://localhost:0/birds@0.5.0#/Bird.pkl"
+import "package://localhost:0/fruit@1.0.5#/Fruit.pkl"
 
 examples {
   ["basic imports"] {
@@ -16,13 +16,16 @@ examples {
         name = "Banana"
       }
     }
-    import("package://localhost:12110/birds@0.5.0#/catalog/Swallow.pkl")
-    import("package://localhost:12110/birds@0.5.0#/catalog/Ostritch.pkl")
+    import("package://localhost:0/birds@0.5.0#/catalog/Swallow.pkl")
+    import("package://localhost:0/birds@0.5.0#/catalog/Ostritch.pkl")
+  }
+  ["importing while specifying checksum"] {
+    import("package://localhost:0/birds@0.5.0::sha256:bfaf5281613d170a740505cc87561041f4e0cad1f0e6938bf94f7609f9a4673d#/catalog/Swallow.pkl")
   }
   ["reads"] {
-    read("package://localhost:12110/birds@0.5.0#/Bird.pkl")
-    read("package://localhost:12110/birds@0.5.0#/catalog/Swallow.pkl")
-    read("package://localhost:12110/birds@0.5.0#/catalog/Ostritch.pkl")
+    read("package://localhost:0/birds@0.5.0#/Bird.pkl")
+    read("package://localhost:0/birds@0.5.0#/catalog/Swallow.pkl")
+    read("package://localhost:0/birds@0.5.0#/catalog/Ostritch.pkl")
   }
 }
 
@@ -31,16 +34,20 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (newExpr
@@ -50,7 +57,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (lineComment)
                 (objectProperty
                   (identifier)
@@ -61,25 +69,40 @@ examples {
                     (objectBody
                       (objectProperty
                         (identifier)
-                        (slStringLiteral))))))))
+                        (slStringLiteral
+                          (slStringLiteralPart)))))))))
           (objectElement
             (importExpr
-              (stringConstant)))
+              (stringConstant
+                (slStringLiteralPart))))
           (objectElement
             (importExpr
-              (stringConstant)))))
+              (stringConstant
+                (slStringLiteralPart))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (importExpr
+              (stringConstant
+                (slStringLiteralPart))))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (readExpr
               (parenthesizedExpr
-                (slStringLiteral)))))))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))))))

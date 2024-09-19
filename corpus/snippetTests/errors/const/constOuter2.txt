@@ -1,0 +1,47 @@
+================================================================================
+errors/const/constOuter2
+================================================================================
+
+class Person {
+  name: String
+  const fancyName = new { title = "\(outer.name), Esq." }
+}
+
+person = new Person { name = "Foo" }
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (modifier)
+        (identifier)
+        (newExpr
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (interpolationExpr
+                  (propertyCallExpr
+                    (outerExpr)
+                    (identifier)))
+                (slStringLiteralPart))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart)))))))

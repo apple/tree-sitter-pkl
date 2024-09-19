@@ -10,4 +10,5 @@ res1 = #"""abc
   (classProperty
     (identifier)
     (mlStringLiteral
+      (mlStringLiteralPart)
       (MISSING """"#"))))

@@ -38,9 +38,11 @@ facts {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -52,7 +54,8 @@ facts {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -64,28 +67,8 @@ facts {
                 (identifier))
               (slStringLiteral)))))
       (objectEntry
-        (slStringLiteral)
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral)))
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral)))))
-      (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -106,7 +89,8 @@ facts {
                 (identifier))
               (slStringLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -127,7 +111,30 @@ facts {
                 (identifier))
               (slStringLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr

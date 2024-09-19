@@ -229,23 +229,29 @@ examples {
   ["toInt()"] {
     "123".toInt()
     "-123".toInt()
+    "1_2__3___".toInt()
+    "-1_2__3___".toInt()
     "0".toInt()
     "-0".toInt()
     module.catch(() -> "1.2".toInt())
     module.catch(() -> "9223372036854775808".toInt())
     module.catch(() -> "-9223372036854775809".toInt())
     module.catch(() -> "abc".toInt())
+    module.catch(() -> "_1_000".toInt())
   }
 
   ["toIntOrNull()"] {
     "123".toIntOrNull()
     "-123".toIntOrNull()
+    "1_2__3___".toIntOrNull()
+    "-1_2__3___".toIntOrNull()
     "0".toIntOrNull()
     "-0".toIntOrNull()
     "1.2".toIntOrNull()
     "9223372036854775808".toIntOrNull()
     "-9223372036854775809".toIntOrNull()
     "abc".toIntOrNull()
+    "_1_2__3___".toIntOrNull()
   }
 
   ["toFloat()"] {
@@ -282,13 +288,17 @@ examples {
     "-.45e-9".toFloat()
     "9e1024".toFloat()
     "-9e1024".toFloat()
+    "-1_2__3___.2_e+1_".toFloat()
     module.catch(() -> "abc".toFloat())
+    module.catch(() -> "123._34".toFloat())
+    module.catch(() -> "123e_34".toFloat())
   }
 
   ["toFloatOrNull()"] {
     "0".toFloatOrNull()
     "-0".toFloatOrNull()
     "abc".toFloatOrNull()
+    "_123_.1_".toFloatOrNull()
   }
 
   ["take()"] {
@@ -449,7 +459,7 @@ examples {
     "".sha256
     quickBrownFox.sha256
   }
-  
+
   ["sha256Int"] {
     "".sha256Int
     quickBrownFox.sha256Int
@@ -464,7 +474,7 @@ examples {
     "".base64
     quickBrownFox.base64
   }
-  
+
   ["base64Decoded"] {
     module.catch(() -> "~~~".base64Decoded)
   }
@@ -475,28 +485,34 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -509,7 +525,8 @@ examples {
                   (identifier)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -517,7 +534,8 @@ examples {
               (identifier)))
           (objectElement
             (propertyCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)))
           (objectElement
             (propertyCallExpr
@@ -533,7 +551,8 @@ examples {
                   (identifier)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (forGenerator
             (typedIdentifier
@@ -561,7 +580,8 @@ examples {
                     (identifier))
                   (intLiteral)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -582,7 +602,8 @@ examples {
               (variableExpr
                 (identifier))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -610,7 +631,8 @@ examples {
                   (identifier)
                   (argumentList
                     (slStringLiteral
-                      (escapeSequence)))))))
+                      (escapeSequence)
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -631,9 +653,11 @@ examples {
                   (identifier)
                   (argumentList
                     (slStringLiteral
-                      (escapeSequence)))))))))
+                      (escapeSequence)
+                      (slStringLiteralPart)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -645,7 +669,8 @@ examples {
                   (identifier)
                   (argumentList
                     (slStringLiteral
-                      (escapeSequence)))))))
+                      (escapeSequence)
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -657,7 +682,8 @@ examples {
                   (identifier)
                   (argumentList
                     (slStringLiteral
-                      (escapeSequence)))))))
+                      (escapeSequence)
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -668,9 +694,11 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -685,7 +713,8 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -695,7 +724,8 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -703,7 +733,8 @@ examples {
                   (identifier)))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -714,9 +745,11 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -731,7 +764,8 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -739,9 +773,11 @@ examples {
                   (identifier)))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -750,47 +786,56 @@ examples {
               (identifier)))
           (objectElement
             (propertyCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)))
           (objectElement
             (propertyCallExpr
               (unaryExpr
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
-              (identifier)
-              (argumentList)))
-          (objectElement
-            (methodCallExpr
-              (unaryExpr
-                (slStringLiteral))
-              (identifier)
-              (argumentList)))
-          (objectElement
-            (methodCallExpr
-              (unaryExpr
-                (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
               (unaryExpr
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (unaryExpr
+                (slStringLiteral
+                  (slStringLiteralPart)))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (unaryExpr
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (identifier)
               (argumentList)))
           (objectElement
@@ -802,7 +847,8 @@ examples {
                   (functionLiteral
                     (parameterList)
                     (methodCallExpr
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
                       (identifier)
                       (argumentList)))))
               (nullLiteral)))
@@ -815,7 +861,8 @@ examples {
                   (functionLiteral
                     (parameterList)
                     (methodCallExpr
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
                       (identifier)
                       (argumentList)))))
               (nullLiteral)))
@@ -833,29 +880,36 @@ examples {
                       (argumentList)))))
               (nullLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
               (methodCallExpr
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (identifier)
                 (argumentList))
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectElement
             (binaryExpr
               (methodCallExpr
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (identifier)
                 (argumentList))
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectElement
             (binaryExpr
               (methodCallExpr
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (identifier)
                 (argumentList))
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectElement
             (binaryExpr
               (methodCallExpr
@@ -864,29 +918,36 @@ examples {
                 (argumentList))
               (slStringLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
               (methodCallExpr
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (identifier)
                 (argumentList))
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectElement
             (binaryExpr
               (methodCallExpr
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (identifier)
                 (argumentList))
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectElement
             (binaryExpr
               (methodCallExpr
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (identifier)
                 (argumentList))
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectElement
             (binaryExpr
               (methodCallExpr
@@ -898,7 +959,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -906,7 +968,8 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -914,7 +977,8 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -934,7 +998,8 @@ examples {
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -944,7 +1009,8 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -960,9 +1026,11 @@ examples {
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral)))))))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -970,7 +1038,8 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -984,7 +1053,8 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -994,7 +1064,8 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1004,9 +1075,11 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1015,7 +1088,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1023,7 +1097,8 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1043,7 +1118,8 @@ examples {
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1053,7 +1129,8 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1079,9 +1156,11 @@ examples {
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral)))))))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1089,7 +1168,8 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1103,17 +1183,21 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectProperty
         (modifier)
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (objectProperty
         (modifier)
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1124,16 +1208,19 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1141,8 +1228,10 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1152,16 +1241,20 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
-                (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1171,8 +1264,10 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
-                (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -1188,10 +1283,13 @@ examples {
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral)))
-                      (slStringLiteral)))))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1199,8 +1297,10 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1210,16 +1310,20 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
-                (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1229,8 +1333,10 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
-                (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -1246,10 +1352,13 @@ examples {
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral)))
-                      (slStringLiteral)))))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1257,8 +1366,10 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1268,16 +1379,20 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
-                (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1287,8 +1402,10 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
-                (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -1304,10 +1421,13 @@ examples {
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral)))
-                      (slStringLiteral)))))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1315,15 +1435,18 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1333,30 +1456,36 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1366,17 +1495,21 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1384,15 +1517,18 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1402,30 +1538,36 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1435,17 +1577,21 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1453,15 +1599,18 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1471,30 +1620,36 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1504,17 +1659,21 @@ examples {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (functionLiteral
                   (parameterList
                     (typedIdentifier
                       (identifier)))
                   (slStringLiteral
+                    (slStringLiteralPart)
                     (interpolationExpr
                       (variableExpr
-                        (identifier))))))))))
+                        (identifier)))
+                    (slStringLiteralPart))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1524,7 +1683,8 @@ examples {
               (argumentList
                 (intLiteral)
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -1533,7 +1693,8 @@ examples {
               (argumentList
                 (intLiteral)
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -1548,7 +1709,8 @@ examples {
                     (argumentList
                       (intLiteral)
                       (intLiteral)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -1564,32 +1726,41 @@ examples {
                       (unaryExpr
                         (intLiteral))
                       (intLiteral)
-                      (slStringLiteral)))))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))))
       (objectProperty
         (modifier)
         (identifier)
         (slStringLiteral
+          (slStringLiteralPart)
           (escapeSequence)
+          (slStringLiteralPart)
           (escapeSequence)
+          (slStringLiteralPart)
           (escapeSequence)))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1598,7 +1769,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1607,7 +1779,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1616,7 +1789,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -1628,7 +1802,8 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -1640,26 +1815,43 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (slStringLiteral
+                (slStringLiteralPart))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
@@ -1670,7 +1862,8 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (methodCallExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (identifier)
                     (argumentList))))))
           (objectElement
@@ -1681,7 +1874,8 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (methodCallExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (identifier)
                     (argumentList))))))
           (objectElement
@@ -1692,7 +1886,8 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (methodCallExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (identifier)
                     (argumentList))))))
           (objectElement
@@ -1703,218 +1898,298 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (methodCallExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
+                    (identifier)
+                    (argumentList))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (methodCallExpr
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (identifier)
                     (argumentList))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (slStringLiteral
+                (slStringLiteralPart))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (slStringLiteral
+                (slStringLiteralPart))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
@@ -1925,29 +2200,65 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (methodCallExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
+                    (identifier)
+                    (argumentList))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (methodCallExpr
+                    (slStringLiteral
+                      (slStringLiteralPart))
+                    (identifier)
+                    (argumentList))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (methodCallExpr
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (identifier)
                     (argumentList))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1997,7 +2308,8 @@ examples {
                       (unaryExpr
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2054,7 +2366,8 @@ examples {
                   (binaryExpr
                     (variableExpr
                       (identifier))
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -2073,7 +2386,8 @@ examples {
                             (identifier)))
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2123,7 +2437,8 @@ examples {
                       (unaryExpr
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2180,7 +2495,8 @@ examples {
                   (binaryExpr
                     (variableExpr
                       (identifier))
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -2199,7 +2515,8 @@ examples {
                             (identifier)))
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2249,7 +2566,8 @@ examples {
                       (unaryExpr
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2306,7 +2624,8 @@ examples {
                   (binaryExpr
                     (variableExpr
                       (identifier))
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -2325,7 +2644,8 @@ examples {
                             (identifier)))
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2375,7 +2695,8 @@ examples {
                       (unaryExpr
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2432,7 +2753,8 @@ examples {
                   (binaryExpr
                     (variableExpr
                       (identifier))
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -2451,7 +2773,8 @@ examples {
                             (identifier)))
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2529,7 +2852,8 @@ examples {
                       (intLiteral)
                       (intLiteral)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2589,7 +2913,8 @@ examples {
                 (intLiteral)
                 (intLiteral))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2628,7 +2953,8 @@ examples {
               (argumentList
                 (intLiteral))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -2640,7 +2966,8 @@ examples {
               (slStringLiteral)
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2648,21 +2975,24 @@ examples {
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (slStringLiteral)
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (slStringLiteral)
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -2670,7 +3000,8 @@ examples {
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -2678,7 +3009,8 @@ examples {
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -2686,7 +3018,8 @@ examples {
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -2714,9 +3047,11 @@ examples {
                     (identifier)
                     (argumentList
                       (intLiteral)
-                      (slStringLiteral)))))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2724,21 +3059,24 @@ examples {
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (slStringLiteral)
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (slStringLiteral)
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -2746,7 +3084,8 @@ examples {
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -2754,7 +3093,8 @@ examples {
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -2762,7 +3102,8 @@ examples {
               (identifier)
               (argumentList
                 (intLiteral)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -2790,48 +3131,58 @@ examples {
                     (identifier)
                     (argumentList
                       (intLiteral)
-                      (slStringLiteral)))))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
             (methodCallExpr
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (identifier)
               (argumentList)))
           (objectElement
@@ -2840,7 +3191,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2896,7 +3248,8 @@ examples {
                       (unaryExpr
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -2908,7 +3261,8 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -2920,7 +3274,8 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -2932,7 +3287,8 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -2944,7 +3300,8 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -2956,7 +3313,8 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -2966,5 +3324,6 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (propertyCallExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (identifier)))))))))))

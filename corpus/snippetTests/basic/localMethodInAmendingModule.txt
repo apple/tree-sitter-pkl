@@ -26,12 +26,10 @@ foo {
 
 local class C {
   foo {
-    res7 = f1(42)
-    res8 = test.catch(() -> f1("wrong type"))
     bar {
       local function f1(x: Int): Int = x + 2
-      res9 = f1(42)
-      res10 = test.catch(() -> f1("wrong type"))
+      res7 = f1(42)
+      res8   = test.catch(() -> f1("wrong type"))
     }
   }
 }
@@ -41,9 +39,11 @@ local class C {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classMethod
     (methodHeader
       (modifier)
@@ -83,7 +83,8 @@ local class C {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (objectBody
@@ -113,7 +114,8 @@ local class C {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))
       (objectProperty
         (identifier)
         (objectBody
@@ -154,7 +156,8 @@ local class C {
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))
       (objectProperty
         (identifier)
         (newExpr
@@ -169,25 +172,6 @@ local class C {
       (classProperty
         (identifier)
         (objectBody
-          (objectProperty
-            (identifier)
-            (methodCallExpr
-              (identifier)
-              (argumentList
-                (intLiteral))))
-          (objectProperty
-            (identifier)
-            (methodCallExpr
-              (variableExpr
-                (identifier))
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (methodCallExpr
-                    (identifier)
-                    (argumentList
-                      (slStringLiteral)))))))
           (objectProperty
             (identifier)
             (objectBody
@@ -228,4 +212,5 @@ local class C {
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral))))))))))))))
+                          (slStringLiteral
+                            (slStringLiteralPart)))))))))))))))
