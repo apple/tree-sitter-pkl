@@ -77,12 +77,12 @@ local class InvalidMappingKey {
 }
 
 local typealias StringLiteralUnion
-  = "Qux"
+  = *"Qux"
   | "quux"
   | "QUUX"
 
 local typealias OpenEndedStringUnion
-  = "corge"
+  = *"corge"
   | String // Not a union of string literals, although fully String-y.
 
 local typealias HeterogeneousUnion
@@ -273,9 +273,11 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -307,8 +309,8 @@ examples {
       (argumentList
         (variableExpr
           (identifier)))))
-  (lineComment)
   (clazz
+    (docComment)
     (modifier)
     (modifier)
     (identifier)
@@ -319,8 +321,8 @@ examples {
           (type
             (qualifiedIdentifier
               (identifier)))))))
-  (lineComment)
   (clazz
+    (docComment)
     (modifier)
     (identifier)
     (classExtendsClause
@@ -329,9 +331,10 @@ examples {
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))))
-  (lineComment)
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (clazz
+    (docComment)
     (modifier)
     (identifier)
     (classBody
@@ -370,8 +373,8 @@ examples {
               (type
                 (qualifiedIdentifier
                   (identifier)))))))))
-  (lineComment)
   (clazz
+    (docComment)
     (modifier)
     (identifier)
     (classBody
@@ -410,7 +413,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -441,7 +445,8 @@ examples {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral)))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))))
             (objectElement
               (newExpr
                 (type
@@ -450,7 +455,8 @@ examples {
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -488,7 +494,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (intLiteral)
             (newExpr
               (type
@@ -497,7 +504,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -546,7 +554,8 @@ examples {
                           (objectBody
                             (objectProperty
                               (identifier)
-                              (slStringLiteral))))
+                              (slStringLiteral
+                                (slStringLiteralPart)))))
                         (newExpr
                           (type
                             (qualifiedIdentifier
@@ -554,7 +563,8 @@ examples {
                           (objectBody
                             (objectProperty
                               (identifier)
-                              (slStringLiteral)))))))))))))
+                              (slStringLiteral
+                                (slStringLiteralPart))))))))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -585,7 +595,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (newExpr
               (type
                 (qualifiedIdentifier
@@ -593,7 +604,8 @@ examples {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -610,7 +622,8 @@ examples {
         (newExpr
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (objectBody
                 (objectElement
                   (newExpr
@@ -624,8 +637,8 @@ examples {
                       (qualifiedIdentifier
                         (identifier)))
                     (objectBody))))))))))
-  (lineComment)
   (clazz
+    (docComment)
     (modifier)
     (identifier)
     (classBody
@@ -694,8 +707,8 @@ examples {
               (type
                 (qualifiedIdentifier
                   (identifier)))))))))
-  (lineComment)
   (clazz
+    (docComment)
     (modifier)
     (identifier)
     (classBody
@@ -718,20 +731,26 @@ examples {
     (type
       (type
         (type
-          (stringConstant))
+          (type
+            (stringConstant
+              (slStringLiteralPart)))
+          (type
+            (stringConstant
+              (slStringLiteralPart))))
         (type
-          (stringConstant)))
-      (type
-        (stringConstant))))
+          (stringConstant
+            (slStringLiteralPart))))))
   (typeAlias
     (modifier)
     (identifier)
     (type
       (type
-        (stringConstant))
-      (type
-        (qualifiedIdentifier
-          (identifier)))))
+        (type
+          (stringConstant
+            (slStringLiteralPart)))
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
   (lineComment)
   (typeAlias
     (modifier)
@@ -740,9 +759,11 @@ examples {
       (type
         (type
           (type
-            (stringConstant))
+            (stringConstant
+              (slStringLiteralPart)))
           (type
-            (stringConstant)))
+            (stringConstant
+              (slStringLiteralPart))))
         (type
           (qualifiedIdentifier
             (identifier))))
@@ -890,7 +911,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (forGenerator
             (typedIdentifier
@@ -983,7 +1005,8 @@ examples {
                       (qualifiedIdentifier
                         (identifier)))))
                 (objectElement
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectElement
                   (propertyCallExpr
                     (intLiteral)
@@ -1012,7 +1035,8 @@ examples {
                     (variableExpr
                       (identifier)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1024,7 +1048,8 @@ examples {
                       (identifier)))
                   (objectBody)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1037,7 +1062,8 @@ examples {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1058,7 +1084,8 @@ examples {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1073,7 +1100,8 @@ examples {
                       (objectBody
                         (objectProperty
                           (identifier)
-                          (slStringLiteral))))
+                          (slStringLiteral
+                            (slStringLiteralPart)))))
                     (objectProperty
                       (identifier)
                       (objectBody
@@ -1088,14 +1116,17 @@ examples {
                       (identifier)
                       (objectBody
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (slStringLiteralPart))
                           (objectBody))
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (slStringLiteralPart))
                           (objectBody
                             (objectProperty
                               (identifier)
-                              (slStringLiteral)))))))))))
+                              (slStringLiteral
+                                (slStringLiteralPart))))))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1106,7 +1137,8 @@ examples {
                       (identifier)))
                   (objectBody)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1148,7 +1180,8 @@ examples {
                                   (intLiteral)
                                   (identifier)))))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1188,7 +1221,8 @@ examples {
                                 (intLiteral)
                                 (intLiteral))))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1203,7 +1237,8 @@ examples {
                       (identifier)
                       (objectBody
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (slStringLiteralPart))
                           (objectBody))))
                     (objectProperty
                       (identifier)
@@ -1257,7 +1292,8 @@ examples {
                                       (objectBody))
                                     (objectBody))))))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1269,7 +1305,8 @@ examples {
                       (identifier)))
                   (objectBody)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1300,7 +1337,8 @@ examples {
                   (objectBody
                     (objectProperty
                       (identifier)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1314,7 +1352,8 @@ examples {
                       (identifier)
                       (objectBody
                         (objectElement
-                          (slStringLiteral))
+                          (slStringLiteral
+                            (slStringLiteralPart)))
                         (objectElement
                           (intLiteral))
                         (objectElement
@@ -1339,7 +1378,8 @@ examples {
                             (identifier)))
                         (objectBody))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -1359,7 +1399,8 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral))))))))))
+                            (slStringLiteral
+                              (slStringLiteralPart)))))))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -1384,7 +1425,8 @@ examples {
                               (objectBody
                                 (objectProperty
                                   (identifier)
-                                  (slStringLiteral)))))))))))))
+                                  (slStringLiteral
+                                    (slStringLiteralPart))))))))))))))
           (objectElement
             (methodCallExpr
               (identifier)
@@ -1403,7 +1445,8 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral)))))
+                            (slStringLiteral
+                              (slStringLiteralPart))))))
                     (objectProperty
                       (identifier)
                       (newExpr
@@ -1413,4 +1456,5 @@ examples {
                         (objectBody
                           (objectProperty
                             (identifier)
-                            (slStringLiteral)))))))))))))))
+                            (slStringLiteral
+                              (slStringLiteralPart))))))))))))))))

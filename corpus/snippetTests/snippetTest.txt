@@ -21,7 +21,8 @@ output {
       (qualifiedIdentifier
         (identifier)))
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody

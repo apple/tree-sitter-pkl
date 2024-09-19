@@ -1,0 +1,35 @@
+================================================================================
+errors/noDefault2
+================================================================================
+
+// alias has a default
+typealias Foo = *"foo"|"bar"
+
+// but property doesn't
+foo: Foo|"baz"
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (typeAlias
+    (identifier)
+    (type
+      (type
+        (type
+          (stringConstant
+            (slStringLiteralPart)))
+        (type
+          (stringConstant
+            (slStringLiteralPart))))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (type
+          (stringConstant
+            (slStringLiteralPart)))))))

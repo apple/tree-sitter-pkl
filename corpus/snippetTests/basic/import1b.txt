@@ -2,8 +2,8 @@
 basic/import1b
 ================================================================================
 
-import "modulepath:/com/apple/pkl/core/snippets/imported.pkl"
-import "modulepath:/com/apple/pkl/core/snippets/imported.pkl" as other
+import "modulepath:/org/pkl/core/snippets/imported.pkl"
+import "modulepath:/org/pkl/core/snippets/imported.pkl" as other
 
 bar = 1
 res1 = imported.foo
@@ -16,9 +16,11 @@ res4 = other.bar
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant)
+    (stringConstant
+      (slStringLiteralPart))
     (identifier))
   (classProperty
     (identifier)

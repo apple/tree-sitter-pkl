@@ -1,16 +1,29 @@
 ================================================================================
-projects/badProjectDeps7/bug
+errors/const/constModule
 ================================================================================
 
-import "@fruit/Fruit.pkl"
+notConst = 10
 
-fruit = new Fruit {}
+class Foo {
+  shouldBeConst = module.notConst
+}
+
+foo = new Foo {}
 
 --------------------------------------------------------------------------------
 
 (module
-  (importClause
-    (stringConstant))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (propertyCallExpr
+          (moduleExpr)
+          (identifier)))))
   (classProperty
     (identifier)
     (newExpr

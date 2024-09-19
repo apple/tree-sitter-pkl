@@ -73,7 +73,8 @@ output {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (intLiteral))
@@ -85,13 +86,21 @@ output {
     (trueLiteral))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (ERROR
+      (identifier))
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (identifier)
+    (identifier))
   (clazz
     (identifier)
     (classBody
@@ -131,7 +140,8 @@ output {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral))
@@ -140,13 +150,15 @@ output {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (objectProperty
         (identifier)
         (intLiteral))
@@ -155,7 +167,8 @@ output {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (objectProperty
         (identifier)
         (nullLiteral))))
@@ -163,18 +176,26 @@ output {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral))
       (objectEntry
-        (slStringLiteral)
-        (slStringLiteral))
-      (objectEntry
-        (slStringLiteral)
-        (slStringLiteral))
-      (objectEntry
-        (slStringLiteral)
         (slStringLiteral
-          (escapeSequence)))))
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart)
+          (escapeSequence)
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (newExpr
@@ -194,7 +215,8 @@ output {
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -202,7 +224,8 @@ output {
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (objectBody

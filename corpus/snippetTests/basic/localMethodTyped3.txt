@@ -28,7 +28,8 @@ foo {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classMethod
     (methodHeader
       (modifier)
@@ -38,7 +39,8 @@ foo {
         (type
           (qualifiedIdentifier
             (identifier)))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classMethod
     (methodHeader
       (modifier)
@@ -109,7 +111,8 @@ foo {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))
       (objectProperty
         (identifier)
         (methodCallExpr
@@ -123,7 +126,8 @@ foo {
                 (identifier)
                 (argumentList
                   (intLiteral)
-                  (slStringLiteral)))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))
       (objectProperty
         (identifier)
         (objectBody
@@ -151,7 +155,8 @@ foo {
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectProperty
             (identifier)
             (methodCallExpr
@@ -165,7 +170,8 @@ foo {
                     (identifier)
                     (argumentList
                       (intLiteral)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectProperty
             (identifier)
             (objectBody
@@ -193,7 +199,8 @@ foo {
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral)))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))))))
               (objectProperty
                 (identifier)
                 (methodCallExpr
@@ -207,4 +214,5 @@ foo {
                         (identifier)
                         (argumentList
                           (intLiteral)
-                          (slStringLiteral))))))))))))))
+                          (slStringLiteral
+                            (slStringLiteralPart)))))))))))))))

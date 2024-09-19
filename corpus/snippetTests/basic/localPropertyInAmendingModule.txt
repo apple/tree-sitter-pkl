@@ -6,8 +6,8 @@ amends "baseModule.pkl"
 
 import "pkl:test"
 
-local const x: Int = 42
-local const y: Int = "wrong type"
+local x: Int = 42
+local y: Int = "wrong type"
 
 local a = x
 local b = y
@@ -28,7 +28,7 @@ foo {
 
 local class C {
   foo {
-    res7 = x
+    //res7 = x
     res8 = test.catch(() -> y)
     bar {
       local x: Int = 42
@@ -44,11 +44,12 @@ local class C {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
-    (modifier)
     (modifier)
     (identifier)
     (typeAnnotation
@@ -58,13 +59,13 @@ local class C {
     (intLiteral))
   (classProperty
     (modifier)
-    (modifier)
     (identifier)
     (typeAnnotation
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -126,7 +127,8 @@ local class C {
               (type
                 (qualifiedIdentifier
                   (identifier))))
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectProperty
             (identifier)
             (variableExpr
@@ -156,10 +158,7 @@ local class C {
       (classProperty
         (identifier)
         (objectBody
-          (objectProperty
-            (identifier)
-            (variableExpr
-              (identifier)))
+          (lineComment)
           (objectProperty
             (identifier)
             (methodCallExpr
@@ -189,7 +188,8 @@ local class C {
                   (type
                     (qualifiedIdentifier
                       (identifier))))
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (variableExpr

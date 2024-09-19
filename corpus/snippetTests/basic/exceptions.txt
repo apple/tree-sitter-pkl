@@ -16,4 +16,5 @@ foo {
         (identifier)
         (throwExpr
           (parenthesizedExpr
-            (slStringLiteral)))))))
+            (slStringLiteral
+              (slStringLiteralPart))))))))

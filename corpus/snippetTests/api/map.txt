@@ -147,7 +147,8 @@ local abstract class Abstract
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (modifier)
     (identifier)
@@ -165,17 +166,21 @@ local abstract class Abstract
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -190,7 +195,8 @@ local abstract class Abstract
                   (identifier)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -198,7 +204,8 @@ local abstract class Abstract
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -207,7 +214,8 @@ local abstract class Abstract
                   (argumentList)))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -215,9 +223,11 @@ local abstract class Abstract
                   (identifier)))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -244,7 +254,8 @@ local abstract class Abstract
               (argumentList
                 (intLiteral))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -261,7 +272,8 @@ local abstract class Abstract
                       (identifier)))
                   (throwExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -296,9 +308,11 @@ local abstract class Abstract
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -317,7 +331,8 @@ local abstract class Abstract
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -334,7 +349,8 @@ local abstract class Abstract
                       (identifier)))
                   (throwExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (unaryExpr
@@ -353,7 +369,8 @@ local abstract class Abstract
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -367,7 +384,8 @@ local abstract class Abstract
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -375,48 +393,19 @@ local abstract class Abstract
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
-        (objectBody
-          (objectElement
-            (propertyCallExpr
-              (methodCallExpr
-                (identifier)
-                (argumentList))
-              (identifier)))
-          (objectElement
-            (propertyCallExpr
-              (methodCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier)
-                (argumentList
-                  (binaryExpr
-                    (methodCallExpr
-                      (identifier)
-                      (argumentList
-                        (slStringLiteral)
-                        (intLiteral)
-                        (slStringLiteral)
-                        (intLiteral)))
-                    (methodCallExpr
-                      (identifier)
-                      (argumentList
-                        (slStringLiteral)
-                        (intLiteral)
-                        (slStringLiteral)
-                        (intLiteral))))))
-              (identifier)))))
-      (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -435,20 +424,62 @@ local abstract class Abstract
                     (methodCallExpr
                       (identifier)
                       (argumentList
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral)
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral)))
                     (methodCallExpr
                       (identifier)
                       (argumentList
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral)
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral))))))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (propertyCallExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList))
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (methodCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier)
+                (argumentList
+                  (binaryExpr
+                    (methodCallExpr
+                      (identifier)
+                      (argumentList
+                        (slStringLiteral
+                          (slStringLiteralPart))
+                        (intLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
+                        (intLiteral)))
+                    (methodCallExpr
+                      (identifier)
+                      (argumentList
+                        (slStringLiteral
+                          (slStringLiteralPart))
+                        (intLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
+                        (intLiteral))))))
+              (identifier)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -457,14 +488,16 @@ local abstract class Abstract
                 (argumentList))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -473,7 +506,8 @@ local abstract class Abstract
               (argumentList
                 (intLiteral))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -490,7 +524,8 @@ local abstract class Abstract
                       (identifier)))
                   (throwExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -508,7 +543,8 @@ local abstract class Abstract
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -526,7 +562,8 @@ local abstract class Abstract
                       (identifier))
                     (identifier))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -543,7 +580,8 @@ local abstract class Abstract
                       (identifier)))
                   (throwExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -582,7 +620,8 @@ local abstract class Abstract
                   (variableExpr
                     (identifier))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -599,7 +638,8 @@ local abstract class Abstract
                       (identifier)))
                   (throwExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -636,7 +676,8 @@ local abstract class Abstract
                   (variableExpr
                     (identifier))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -653,7 +694,8 @@ local abstract class Abstract
                       (identifier)))
                   (throwExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -714,7 +756,8 @@ local abstract class Abstract
                             (identifier)))
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -731,7 +774,8 @@ local abstract class Abstract
                       (identifier)))
                   (throwExpr
                     (parenthesizedExpr
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -795,7 +839,8 @@ local abstract class Abstract
                             (identifier)))
                         (intLiteral))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -814,20 +859,25 @@ local abstract class Abstract
                     (methodCallExpr
                       (identifier)
                       (argumentList
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral)
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral)))
                     (methodCallExpr
                       (identifier)
                       (argumentList
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral)
-                        (slStringLiteral)
+                        (slStringLiteral
+                          (slStringLiteralPart))
                         (intLiteral))))))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -843,7 +893,8 @@ local abstract class Abstract
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -859,7 +910,8 @@ local abstract class Abstract
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -875,7 +927,8 @@ local abstract class Abstract
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -884,7 +937,8 @@ local abstract class Abstract
                 (argumentList))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))
           (objectElement
             (methodCallExpr
@@ -892,7 +946,8 @@ local abstract class Abstract
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))
           (objectElement
             (methodCallExpr
@@ -900,7 +955,8 @@ local abstract class Abstract
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))
           (objectElement
             (methodCallExpr
@@ -908,19 +964,24 @@ local abstract class Abstract
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)))
               (identifier)
               (argumentList
@@ -931,10 +992,13 @@ local abstract class Abstract
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (identifier)
               (argumentList
                 (variableExpr
@@ -945,7 +1009,8 @@ local abstract class Abstract
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (intLiteral)))
                 (identifier)
                 (argumentList
@@ -958,41 +1023,52 @@ local abstract class Abstract
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (identifier)
                 (argumentList
                   (variableExpr
                     (identifier))))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (methodCallExpr
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (identifier)
                 (argumentList
                   (variableExpr
                     (identifier))))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (identifier)
               (argumentList
                 (variableExpr
@@ -1009,8 +1085,10 @@ local abstract class Abstract
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral)
-                          (slStringLiteral)))
+                          (slStringLiteral
+                            (slStringLiteralPart))
+                          (slStringLiteral
+                            (slStringLiteralPart))))
                       (identifier)
                       (argumentList
                         (variableExpr
@@ -1056,7 +1134,8 @@ local abstract class Abstract
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classProperty
         (identifier)
         (typeAnnotation

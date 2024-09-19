@@ -47,7 +47,8 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (modifier)
     (identifier)
@@ -55,7 +56,8 @@ examples {
       (identifier)
       (argumentList
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral))))
   (classProperty
     (modifier)
@@ -64,13 +66,15 @@ examples {
       (identifier)
       (argumentList
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -103,7 +107,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -136,7 +141,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -201,7 +207,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (subscriptExpr

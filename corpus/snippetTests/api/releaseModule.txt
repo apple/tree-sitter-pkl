@@ -16,7 +16,7 @@ facts {
   }
 
   ["versionInfo"] {
-    current.versionInfo.contains("macOS") || current.versionInfo.contains("Linux")
+    current.versionInfo.contains("macOS") || current.versionInfo.contains("Linux") || current.versionInfo.contains("Windows")
   }
 
   ["commitId"] {
@@ -46,9 +46,11 @@ facts {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -60,7 +62,8 @@ facts {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -90,7 +93,8 @@ facts {
                 (identifier))
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -98,20 +102,33 @@ facts {
                 (binaryExpr
                   (methodCallExpr
                     (propertyCallExpr
-                      (variableExpr
-                        (identifier))
+                      (binaryExpr
+                        (methodCallExpr
+                          (propertyCallExpr
+                            (variableExpr
+                              (identifier))
+                            (identifier))
+                          (identifier)
+                          (argumentList
+                            (slStringLiteral
+                              (slStringLiteralPart))))
+                        (variableExpr
+                          (identifier)))
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))
+                      (slStringLiteral
+                        (slStringLiteralPart))))
                   (variableExpr
                     (identifier)))
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -124,9 +141,11 @@ facts {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -138,7 +157,8 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -149,9 +169,11 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -163,7 +185,8 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -174,9 +197,11 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -208,7 +233,8 @@ facts {
                       (identifier))
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -219,7 +245,8 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -231,4 +258,5 @@ facts {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)))))))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))))))

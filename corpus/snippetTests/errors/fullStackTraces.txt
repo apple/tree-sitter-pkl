@@ -2,13 +2,13 @@
 errors/fullStackTraces
 ================================================================================
 
-local wrong = throw("fail")
+const local wrong = throw("fail")
 
-hidden v1 = wrong
+const hidden v1 = wrong
 
-function f1() = v1
+const function f1() = v1
 
-local function f2() = f1()
+const local function f2() = f1()
 
 class Foo {
   foo = f2()
@@ -21,23 +21,28 @@ aFoo: Foo
 (module
   (classProperty
     (modifier)
+    (modifier)
     (identifier)
     (throwExpr
       (parenthesizedExpr
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
+    (modifier)
     (modifier)
     (identifier)
     (variableExpr
       (identifier)))
   (classMethod
     (methodHeader
+      (modifier)
       (identifier)
       (parameterList))
     (variableExpr
       (identifier)))
   (classMethod
     (methodHeader
+      (modifier)
       (modifier)
       (identifier)
       (parameterList))

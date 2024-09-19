@@ -1,0 +1,38 @@
+================================================================================
+errors/mappingTypeCheckError4
+================================================================================
+
+num = 1
+
+// EntriesLiteralNode
+res: Mapping<String, String> = new {
+  [num] = "foo"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (newExpr
+      (objectBody
+        (objectEntry
+          (variableExpr
+            (identifier))
+          (slStringLiteral
+            (slStringLiteralPart)))))))

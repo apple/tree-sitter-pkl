@@ -37,12 +37,12 @@ local x6: Mapping<String, String(!isEmpty)> = new {
   ["pigeon"] = ""
 }
 
-res1 = test.catch(() -> x1)
-res2 = test.catch(() -> x2)
+res1 = test.catch(() -> x1["barn owl"])
+res2 = test.catch(() -> x2["barney"])
 res3 = test.catch(() -> x3)
 res4 = test.catch(() -> x4)
 res5 = test.catch(() -> x5)
-res6 = test.catch(() -> x6)
+res6 = test.catch(() -> x6["pigeon"])
 
 hidden x7: Mapping = new {
   when (true) {
@@ -90,7 +90,8 @@ res10 = x10["second"] == 42
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -118,7 +119,8 @@ res10 = x10["second"] == 42
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (methodCallExpr
             (identifier)
             (argumentList
@@ -126,7 +128,8 @@ res10 = x10["second"] == 42
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (modifier)
@@ -156,8 +159,10 @@ res10 = x10["second"] == 42
               (intLiteral))))
         (objectEntry
           (binaryExpr
-            (slStringLiteral)
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (binaryExpr
             (methodCallExpr
               (identifier)
@@ -170,8 +175,10 @@ res10 = x10["second"] == 42
                 (intLiteral)))))
         (objectEntry
           (binaryExpr
-            (slStringLiteral)
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (binaryExpr
             (intLiteral)
             (intLiteral))))))
@@ -208,10 +215,12 @@ res10 = x10["second"] == 42
               (intLiteral)
               (intLiteral)
               (intLiteral)))
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
           (intLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -250,15 +259,19 @@ res10 = x10["second"] == 42
                 (intLiteral)
                 (intLiteral))))
           (binaryExpr
-            (slStringLiteral)
-            (slStringLiteral)))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart))))
         (objectEntry
           (binaryExpr
             (intLiteral)
             (intLiteral))
           (binaryExpr
-            (slStringLiteral)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (modifier)
     (identifier)
@@ -287,7 +300,8 @@ res10 = x10["second"] == 42
               (intLiteral))))
         (objectEntry
           (slStringLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -315,7 +329,8 @@ res10 = x10["second"] == 42
               (intLiteral)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (slStringLiteral)))))
   (classProperty
     (identifier)
@@ -326,8 +341,25 @@ res10 = x10["second"] == 42
       (argumentList
         (functionLiteral
           (parameterList)
-          (variableExpr
-            (identifier))))))
+          (subscriptExpr
+            (variableExpr
+              (identifier))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (subscriptExpr
+            (variableExpr
+              (identifier))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -370,19 +402,11 @@ res10 = x10["second"] == 42
       (argumentList
         (functionLiteral
           (parameterList)
-          (variableExpr
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (variableExpr
-            (identifier))))))
+          (subscriptExpr
+            (variableExpr
+              (identifier))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (modifier)
     (identifier)
@@ -396,10 +420,12 @@ res10 = x10["second"] == 42
           (trueLiteral)
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (forGenerator
           (typedIdentifier
             (identifier))
@@ -409,10 +435,12 @@ res10 = x10["second"] == 42
               (intLiteral)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -433,10 +461,12 @@ res10 = x10["second"] == 42
           (trueLiteral)
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (forGenerator
           (typedIdentifier
             (identifier))
@@ -446,10 +476,12 @@ res10 = x10["second"] == 42
               (intLiteral)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -468,10 +500,12 @@ res10 = x10["second"] == 42
           (trueLiteral)
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (forGenerator
           (typedIdentifier
             (identifier))
@@ -481,10 +515,12 @@ res10 = x10["second"] == 42
               (intLiteral)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -497,12 +533,15 @@ res10 = x10["second"] == 42
           (trueLiteral)
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (forGenerator
           (typedIdentifier
@@ -513,10 +552,12 @@ res10 = x10["second"] == 42
               (intLiteral)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (propertyCallExpr
@@ -544,5 +585,6 @@ res10 = x10["second"] == 42
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (intLiteral))))

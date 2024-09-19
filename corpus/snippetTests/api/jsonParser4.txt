@@ -48,9 +48,10 @@ res5 = res3["address"] is Mapping
 
 --------------------------------------------------------------------------------
 
-(module
+(ERROR
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -63,31 +64,172 @@ res5 = res3["address"] is Mapping
         (objectProperty
           (identifier)
           (trueLiteral)))))
-  (classProperty
+  (identifier)
+  (variableExpr
+    (identifier))
+  (identifier)
+  (ERROR
+    (UNEXPECTED '"'))
+  (slStringLiteral
+    (slStringLiteralPart))
+  (slStringLiteral
+    (slStringLiteralPart))
+  (ERROR
+    (slStringLiteral
+      (slStringLiteralPart))
+    (identifier))
+  (variableExpr
+    (identifier))
+  (identifier)
+  (mlStringLiteral
+    (MISSING """""))
+  (objectElement
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (ERROR)
+  (objectElement
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (ERROR)
+  (objectElement
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (ERROR)
+  (objectElement
+    (intLiteral))
+  (ERROR)
+  (objectElement
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (MISSING """"")))
+  (objectProperty
     (identifier)
     (methodCallExpr
       (variableExpr
         (identifier))
       (identifier)
       (argumentList
-        (mlStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (mlStringLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (mlStringLiteral))))
-  (classProperty
+        (objectLiteral
+          (mlStringLiteral
+            (MISSING """""))
+          (objectBody
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (ERROR)
+            (objectElement
+              (intLiteral))
+            (ERROR)
+            (objectElement
+              (objectLiteral
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (ERROR)
+                (objectBody
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart))))))
+            (ERROR)
+            (objectElement
+              (objectLiteral
+                (objectLiteral
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (ERROR
+                    (UNEXPECTED '\n'))
+                  (objectBody
+                    (objectElement
+                      (slStringLiteral
+                        (slStringLiteralPart)))
+                    (ERROR)
+                    (objectElement
+                      (slStringLiteral
+                        (slStringLiteralPart)))
+                    (ERROR)
+                    (objectElement
+                      (slStringLiteral
+                        (slStringLiteralPart)))
+                    (ERROR)
+                    (objectElement
+                      (slStringLiteral
+                        (slStringLiteralPart)))))
+                (ERROR)
+                (objectBody
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart))))))
+            (ERROR)
+            (objectElement
+              (objectLiteral
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (ERROR)
+                (objectBody
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))
+                  (ERROR)
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart))))))))
+        (ERROR))))
+  (objectProperty
     (identifier)
     (isExpr
       (variableExpr
@@ -95,13 +237,14 @@ res5 = res3["address"] is Mapping
       (type
         (qualifiedIdentifier
           (identifier)))))
-  (classProperty
+  (objectProperty
     (identifier)
     (isExpr
       (subscriptExpr
         (variableExpr
           (identifier))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (type
         (qualifiedIdentifier
           (identifier))))))

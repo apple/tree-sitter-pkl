@@ -39,12 +39,14 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (traceExpr
@@ -57,72 +59,76 @@ examples {
           (objectElement
             (traceExpr
               (parenthesizedExpr
-                (slStringLiteral))))
-          (objectElement
-            (traceExpr
-              (parenthesizedExpr
-                (mlStringLiteral))))
-          (objectElement
-            (traceExpr
-              (parenthesizedExpr
-                (methodCallExpr
-                  (identifier)
-                  (argumentList
-                    (intLiteral)
-                    (intLiteral)
-                    (intLiteral))))))
-          (objectElement
-            (traceExpr
+                (slStringLiteral
+                  (slStringLiteralPart)))))
+          (ERROR
+            (ERROR
+              (identifier)
+              (identifier)
+              (identifier))
+            (ERROR
               (parenthesizedExpr
                 (methodCallExpr
                   (identifier)
                   (argumentList
                     (intLiteral)
                     (intLiteral)
-                    (intLiteral))))))
-          (objectElement
-            (traceExpr
-              (parenthesizedExpr
-                (methodCallExpr
-                  (identifier)
-                  (argumentList
-                    (intLiteral)
-                    (slStringLiteral)
-                    (intLiteral)
-                    (slStringLiteral))))))
-          (objectElement
-            (traceExpr
-              (parenthesizedExpr
-                (newExpr
-                  (objectBody
-                    (objectProperty
-                      (identifier)
-                      (slStringLiteral))
-                    (objectProperty
-                      (identifier)
-                      (intLiteral)))))))
-          (objectElement
-            (traceExpr
-              (parenthesizedExpr
-                (newExpr
-                  (objectBody
-                    (objectElement
-                      (slStringLiteral))
-                    (objectElement
-                      (slStringLiteral))
-                    (objectElement
-                      (slStringLiteral)))))))
-          (objectElement
+                    (intLiteral))))
+              (traceExpr
+                (parenthesizedExpr
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (intLiteral)
+                      (intLiteral)
+                      (intLiteral)))))
+              (traceExpr
+                (parenthesizedExpr
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (intLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
+                      (intLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))))))
+              (traceExpr
+                (parenthesizedExpr
+                  (newExpr
+                    (objectBody
+                      (objectProperty
+                        (identifier)
+                        (slStringLiteral
+                          (slStringLiteralPart)))
+                      (objectProperty
+                        (identifier)
+                        (intLiteral))))))
+              (traceExpr
+                (parenthesizedExpr
+                  (newExpr
+                    (objectBody
+                      (objectElement
+                        (slStringLiteral
+                          (slStringLiteralPart)))
+                      (objectElement
+                        (slStringLiteral
+                          (slStringLiteralPart)))
+                      (objectElement
+                        (slStringLiteral
+                          (slStringLiteralPart))))))))
             (traceExpr
               (parenthesizedExpr
                 (newExpr
                   (objectBody
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
                       (objectBody
                         (objectProperty
                           (identifier)
-                          (slStringLiteral))
+                          (slStringLiteral
+                            (slStringLiteralPart)))
                         (objectProperty
                           (identifier)
                           (intLiteral))))))))))))))

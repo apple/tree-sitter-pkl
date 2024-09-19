@@ -60,10 +60,12 @@ person = new Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (slStringLiteralPart)))))))

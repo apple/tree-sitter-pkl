@@ -8,4 +8,5 @@ import ".../"
 
 (module
   (importClause
-    (stringConstant)))
+    (stringConstant
+      (slStringLiteralPart))))

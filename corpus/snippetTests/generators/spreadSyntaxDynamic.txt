@@ -81,7 +81,8 @@ facts {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (modifier)
     (identifier)
@@ -107,10 +108,12 @@ facts {
     (newExpr
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (modifier)
@@ -128,17 +131,21 @@ facts {
         (objectElement
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -173,9 +180,11 @@ facts {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral))))
   (classProperty
     (modifier)
@@ -214,7 +223,8 @@ facts {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (newExpr
@@ -247,7 +257,8 @@ facts {
                   (variableExpr
                     (identifier))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (newExpr
@@ -286,7 +297,8 @@ facts {
                   (variableExpr
                     (identifier))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (objectLiteral
@@ -346,7 +358,8 @@ facts {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -381,7 +394,8 @@ facts {
                 (argumentList))
               (intLiteral)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr

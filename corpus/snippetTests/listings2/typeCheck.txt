@@ -19,9 +19,9 @@ hidden x2: Listing<String(length > 3)> = new {
 
 hidden x3: Listing<String>(!isEmpty)
 
-res1 = test.catch(() -> x1)
-res2 = test.catch(() -> x2)
-res3 = test.catch(() -> x3)
+res1 = test.catch(() -> x1.toList())
+res2 = test.catch(() -> x2.toList())
+res3 = test.catch(() -> x3.toList())
 
 hidden x4: Listing = new {
   when (true) {
@@ -69,7 +69,8 @@ res7 = x7[1] == 42
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -89,11 +90,13 @@ res7 = x7[1] == 42
             (objectElement
               (intLiteral))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
           (intLiteral))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -118,9 +121,11 @@ res7 = x7[1] == 42
             (objectElement
               (intLiteral))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -145,8 +150,11 @@ res7 = x7[1] == 42
       (argumentList
         (functionLiteral
           (parameterList)
-          (variableExpr
-            (identifier))))))
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -156,8 +164,11 @@ res7 = x7[1] == 42
       (argumentList
         (functionLiteral
           (parameterList)
-          (variableExpr
-            (identifier))))))
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -167,8 +178,11 @@ res7 = x7[1] == 42
       (argumentList
         (functionLiteral
           (parameterList)
-          (variableExpr
-            (identifier))))))
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList))))))
   (classProperty
     (modifier)
     (identifier)
@@ -184,7 +198,8 @@ res7 = x7[1] == 42
             (objectElement
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (forGenerator
           (typedIdentifier
             (identifier))
@@ -196,7 +211,8 @@ res7 = x7[1] == 42
             (objectElement
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -216,7 +232,8 @@ res7 = x7[1] == 42
             (objectElement
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (forGenerator
           (typedIdentifier
             (identifier))
@@ -228,7 +245,8 @@ res7 = x7[1] == 42
             (objectElement
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -246,7 +264,8 @@ res7 = x7[1] == 42
             (objectElement
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (forGenerator
           (typedIdentifier
             (identifier))
@@ -258,7 +277,8 @@ res7 = x7[1] == 42
             (objectElement
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -273,7 +293,8 @@ res7 = x7[1] == 42
             (objectElement
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (objectElement
           (intLiteral))
         (forGenerator
@@ -287,7 +308,8 @@ res7 = x7[1] == 42
             (objectElement
               (throwExpr
                 (parenthesizedExpr
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (binaryExpr

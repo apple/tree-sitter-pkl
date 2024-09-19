@@ -21,14 +21,17 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -36,14 +39,8 @@ examples {
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
-          (objectElement
-            (methodCallExpr
-              (variableExpr
-                (identifier))
-              (identifier)
-              (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -51,18 +48,30 @@ examples {
               (identifier)
               (argumentList
                 (slStringLiteral
-                  (escapeSequence)))))
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)
+                  (escapeSequence)
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
                 (identifier))
               (identifier)
               (argumentList
-                (slStringLiteral)))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (slStringLiteralPart))))))))))

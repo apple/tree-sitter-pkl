@@ -96,7 +96,8 @@ res12 = (people) {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -107,7 +108,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -116,7 +118,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -125,7 +128,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral))))))))
@@ -140,7 +144,8 @@ res12 = (people) {
           (binaryExpr
             (variableExpr
               (identifier))
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectBody
             (objectProperty
               (identifier)
@@ -160,12 +165,14 @@ res12 = (people) {
                   (identifier))
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (variableExpr
                 (identifier)))
             (identifier)
             (argumentList
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (objectProperty
               (identifier)
@@ -202,7 +209,8 @@ res12 = (people) {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
           (newExpr
             (objectBody
@@ -245,7 +253,8 @@ res12 = (people) {
                         (binaryExpr
                           (variableExpr
                             (identifier))
-                          (slStringLiteral))
+                          (slStringLiteral
+                            (slStringLiteralPart)))
                         (objectBody
                           (objectProperty
                             (identifier)
@@ -284,7 +293,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral)))))
@@ -292,7 +302,8 @@ res12 = (people) {
           (binaryExpr
             (variableExpr
               (identifier))
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectBody
             (objectProperty
               (identifier)
@@ -308,7 +319,8 @@ res12 = (people) {
           (binaryExpr
             (variableExpr
               (identifier))
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectBody
             (objectProperty
               (identifier)
@@ -318,7 +330,8 @@ res12 = (people) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral))))))))
@@ -347,7 +360,8 @@ res12 = (people) {
                 (binaryExpr
                   (variableExpr
                     (identifier))
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectBody
                   (objectProperty
                     (identifier)
@@ -372,7 +386,8 @@ res12 = (people) {
                     (identifier))
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (objectBody
                   (objectProperty
                     (identifier)
@@ -381,7 +396,8 @@ res12 = (people) {
                 (binaryExpr
                   (variableExpr
                     (identifier))
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectBody
                   (objectProperty
                     (identifier)
@@ -400,8 +416,10 @@ res12 = (people) {
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (objectPredicate
               (binaryExpr
@@ -430,7 +448,8 @@ res12 = (people) {
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectBody
                 (objectProperty
                   (identifier)
@@ -444,7 +463,8 @@ res12 = (people) {
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectBody
                 (objectProperty
                   (identifier)

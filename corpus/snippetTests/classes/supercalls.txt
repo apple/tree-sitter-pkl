@@ -74,7 +74,8 @@ res12 = three2.parrot
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (classMethod
         (methodHeader
           (identifier)
@@ -82,7 +83,8 @@ res12 = three2.parrot
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (classMethod
         (methodHeader
           (identifier)
@@ -129,7 +131,8 @@ res12 = three2.parrot
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (modifier)
     (identifier)
@@ -166,7 +169,8 @@ res12 = three2.parrot
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (propertyCallExpr
@@ -196,7 +200,8 @@ res12 = three2.parrot
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -207,7 +212,8 @@ res12 = three2.parrot
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (propertyCallExpr
@@ -228,7 +234,8 @@ res12 = three2.parrot
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (propertyCallExpr

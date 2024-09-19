@@ -9,7 +9,9 @@ import* "bar.pkl" as bar
 
 (module
   (importGlobClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importGlobClause
-    (stringConstant)
+    (stringConstant
+      (slStringLiteralPart))
     (identifier)))

@@ -44,12 +44,14 @@ local class App {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (newExpr
@@ -60,8 +62,10 @@ local class App {
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)
-                      (slStringLiteral)))
+                      (slStringLiteral
+                        (slStringLiteralPart))
+                      (slStringLiteral
+                        (slStringLiteralPart))))
                   (objectBody
                     (forGenerator
                       (typedIdentifier
@@ -70,8 +74,10 @@ local class App {
                         (methodCallExpr
                           (identifier)
                           (argumentList
-                            (slStringLiteral)
-                            (slStringLiteral)))
+                            (slStringLiteral
+                              (slStringLiteralPart))
+                            (slStringLiteral
+                              (slStringLiteralPart))))
                         (identifier)
                         (argumentList
                           (functionLiteral
@@ -91,7 +97,8 @@ local class App {
                             (variableExpr
                               (identifier)))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (newExpr
@@ -102,8 +109,10 @@ local class App {
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)
-                      (slStringLiteral)))
+                      (slStringLiteral
+                        (slStringLiteralPart))
+                      (slStringLiteral
+                        (slStringLiteralPart))))
                   (objectBody
                     (whenGenerator
                       (propertyCallExpr
@@ -112,8 +121,10 @@ local class App {
                             (methodCallExpr
                               (identifier)
                               (argumentList
-                                (slStringLiteral)
-                                (slStringLiteral))))
+                                (slStringLiteral
+                                  (slStringLiteralPart))
+                                (slStringLiteral
+                                  (slStringLiteralPart)))))
                           (identifier)
                           (argumentList
                             (functionLiteral
@@ -131,7 +142,8 @@ local class App {
                           (variableExpr
                             (identifier))))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (newExpr

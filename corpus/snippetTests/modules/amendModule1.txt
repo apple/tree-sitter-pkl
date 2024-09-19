@@ -22,13 +22,16 @@ name = "pigeon1"
         (identifier)))
     (lineComment)
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart))))

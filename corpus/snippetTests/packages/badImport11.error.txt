@@ -1,16 +1,14 @@
 ================================================================================
-packages/badRead5.error
+packages/badImport11.error
 ================================================================================
 
-// this package's metadata has the wrong checksum.
-res = read("package://localhost:12110/badChecksum@1.0.0#/Bug.pkl")
+res = import("package://localhost:0/birds@0.5.0::boguschecksumpart#/catalog/Bird.pkl")
 
 --------------------------------------------------------------------------------
 
 (module
-  (lineComment)
   (classProperty
     (identifier)
-    (readExpr
-      (parenthesizedExpr
-        (slStringLiteral)))))
+    (importExpr
+      (stringConstant
+        (slStringLiteralPart)))))

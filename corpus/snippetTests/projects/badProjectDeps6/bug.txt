@@ -10,7 +10,8 @@ bird: Bird
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (typeAnnotation

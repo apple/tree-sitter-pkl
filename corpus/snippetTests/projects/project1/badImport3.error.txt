@@ -3,7 +3,7 @@ projects/project1/badImport3.error
 ================================================================================
 
 // Name `fruits` is visible in this project but it should not be visible within package `@birds`.
-res = import("@birds/badImport3.error.pkl")
+res = import("@badImportsWithinPackage/unknownDependency.pkl")
 
 --------------------------------------------------------------------------------
 
@@ -12,4 +12,5 @@ res = import("@birds/badImport3.error.pkl")
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant))))
+      (stringConstant
+        (slStringLiteralPart)))))

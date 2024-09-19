@@ -24,8 +24,7 @@ res1 = foo(1, 2)
             (type
               (qualifiedIdentifier
                 (identifier)))))
-        (MISSING
-          ")")))
+        (MISSING ")))
     (binaryExpr
       (variableExpr
         (identifier))

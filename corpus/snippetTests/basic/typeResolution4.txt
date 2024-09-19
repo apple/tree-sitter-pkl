@@ -16,11 +16,14 @@ res5: typeResolution3.Person2
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (typeAnnotation

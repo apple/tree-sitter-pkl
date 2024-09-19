@@ -17,7 +17,8 @@ res = new {
           (binaryExpr
             (variableExpr
               (identifier))
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (ERROR)
           (objectBody
             (objectProperty

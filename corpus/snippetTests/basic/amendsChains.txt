@@ -46,13 +46,15 @@ qux {
         (identifier)
         (objectBody
           (objectElement
-            (slStringLiteral)))))
+            (slStringLiteral
+              (slStringLiteralPart))))))
     (objectBody
       (objectProperty
         (identifier)
         (objectBody
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (objectBody
@@ -68,15 +70,19 @@ qux {
         (identifier)
         (objectBody
           (objectElement
-            (slStringLiteral)))
+            (slStringLiteral
+              (slStringLiteralPart))))
         (objectBody
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectElement
-            (slStringLiteral)))
+            (slStringLiteral
+              (slStringLiteralPart))))
         (objectBody
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -237,7 +243,7 @@ qux {
     (identifier)
     (objectBody
       (objectElement
-        (propertyCallExpr
+        (methodCallExpr
           (methodCallExpr
             (objectLiteral
               (objectLiteral
@@ -248,21 +254,24 @@ qux {
                     (identifier)))
                 (objectBody
                   (objectElement
-                    (slStringLiteral))
+                    (slStringLiteral
+                      (slStringLiteralPart)))
                   (objectElement
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (objectBody
                 (objectEntry
                   (intLiteral)
                   (subscriptExpr
-                    (slStringLiteral)
+                    (slStringLiteral
+                      (slStringLiteralPart))
                     (intLiteral)))
                 (ERROR)
                 (objectElement
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (identifier)
             (argumentList))
-          (identifier)))
-      (objectElement
-        (parenthesizedExpr
-          (slStringLiteral))))))
+          (identifier)
+          (argumentList
+            (slStringLiteral)))))))

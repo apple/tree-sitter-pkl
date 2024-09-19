@@ -149,7 +149,8 @@ class Person2 {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (nullLiteral)))
   (classProperty
     (identifier)
@@ -164,7 +165,8 @@ class Person2 {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (modifier)
     (identifier)
@@ -178,7 +180,8 @@ class Person2 {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (nullLiteral)))
   (classProperty
     (identifier)
@@ -196,7 +199,8 @@ class Person2 {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectProperty
         (modifier)
         (identifier)
@@ -210,7 +214,8 @@ class Person2 {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (nullLiteral)))
       (objectProperty
         (identifier)
@@ -224,16 +229,19 @@ class Person2 {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (ifExpr
           (trueLiteral)
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (nullLiteral)))))
   (clazz
     (modifier)
@@ -252,7 +260,8 @@ class Person2 {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (clazz
     (identifier)
     (classExtendsClause
@@ -267,7 +276,8 @@ class Person2 {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (nullLiteral)))))
   (classProperty
     (identifier)
@@ -299,7 +309,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -315,7 +326,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (nullLiteral))))))
   (classProperty
     (identifier)
@@ -332,7 +344,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -348,7 +361,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (falseLiteral))))))
   (classProperty
     (identifier)
@@ -370,7 +384,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -386,7 +401,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (nullLiteral))))))
   (classProperty
     (modifier)
@@ -409,7 +425,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (variableExpr
@@ -429,7 +446,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (falseLiteral))))))
   (classProperty
     (identifier)
@@ -439,7 +457,8 @@ class Person2 {
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (ifExpr
             (falseLiteral)
             (nullLiteral)
@@ -447,7 +466,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -456,14 +476,16 @@ class Person2 {
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (ifExpr
             (trueLiteral)
             (newExpr
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (nullLiteral))))))
   (classProperty
     (identifier)
@@ -481,7 +503,8 @@ class Person2 {
     (newExpr
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (ifExpr
             (falseLiteral)
             (nullLiteral)
@@ -489,7 +512,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -498,14 +522,16 @@ class Person2 {
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (ifExpr
             (trueLiteral)
             (newExpr
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (nullLiteral))))))
   (classProperty
     (modifier)
@@ -524,7 +550,8 @@ class Person2 {
     (newExpr
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (ifExpr
             (falseLiteral)
             (nullLiteral)
@@ -532,7 +559,8 @@ class Person2 {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (variableExpr
@@ -545,14 +573,16 @@ class Person2 {
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (ifExpr
             (trueLiteral)
             (newExpr
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (nullLiteral))))))
   (lineComment)
   (lineComment)
@@ -562,7 +592,8 @@ class Person2 {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (isExpr
@@ -576,7 +607,8 @@ class Person2 {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (isExpr
@@ -595,7 +627,8 @@ class Person2 {
         (objectBody))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (isExpr
@@ -642,7 +675,8 @@ class Person2 {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (isExpr
@@ -754,7 +788,8 @@ class Person2 {
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (objectBody
@@ -785,7 +820,8 @@ class Person2 {
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (nullLiteral)))))))
   (classMethod
     (methodHeader
@@ -808,4 +844,5 @@ class Person2 {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))))))
+              (slStringLiteral
+                (slStringLiteralPart)))))))))

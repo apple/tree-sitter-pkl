@@ -1,0 +1,45 @@
+================================================================================
+errors/mappingTypeCheckError7
+================================================================================
+
+res = new Mapping<Listing<String(length == 5)>, String> {
+  [new Listing { "hi" }] = "hi"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (intLiteral)))))
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (objectBody
+        (objectEntry
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectElement
+                (slStringLiteral
+                  (slStringLiteralPart)))))
+          (slStringLiteral
+            (slStringLiteralPart)))))))

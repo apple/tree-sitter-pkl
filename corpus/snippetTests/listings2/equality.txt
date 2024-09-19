@@ -56,9 +56,11 @@ res13 =
             (objectElement
               (intLiteral))))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -82,9 +84,11 @@ res13 =
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -101,7 +105,8 @@ res13 =
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -116,9 +121,11 @@ res13 =
             (trueLiteral)
             (objectBody
               (objectElement
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -145,7 +152,8 @@ res13 =
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -207,7 +215,8 @@ res13 =
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -219,7 +228,8 @@ res13 =
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -242,7 +252,8 @@ res13 =
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -254,7 +265,8 @@ res13 =
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -274,11 +286,13 @@ res13 =
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -290,7 +304,8 @@ res13 =
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectProperty
             (identifier)
             (intLiteral))))))
@@ -314,7 +329,8 @@ res13 =
             (objectProperty
               (modifier)
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectBody
           (objectElement
             (variableExpr
@@ -322,7 +338,8 @@ res13 =
           (objectProperty
             (modifier)
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (newExpr
         (type
           (qualifiedIdentifier
@@ -334,6 +351,8 @@ res13 =
               (objectElement
                 (intLiteral))))
           (objectElement
-            (slStringLiteral))
+            (slStringLiteral
+              (slStringLiteralPart)))
           (objectElement
-            (slStringLiteral)))))))
+            (slStringLiteral
+              (slStringLiteralPart))))))))

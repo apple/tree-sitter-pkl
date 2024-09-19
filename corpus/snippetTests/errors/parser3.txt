@@ -10,4 +10,5 @@ res1 = """some string
   (classProperty
     (identifier)
     (mlStringLiteral
+      (mlStringLiteralPart)
       (MISSING """""))))

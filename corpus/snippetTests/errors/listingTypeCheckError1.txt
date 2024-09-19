@@ -1,19 +1,24 @@
 ================================================================================
-packages/badImport5.error
+errors/listingTypeCheckError1
 ================================================================================
 
-import "package://localhost:12110/badChecksum@1.0.0#/Bug.pkl"
-
-res: Bug
+res = new Listing<String> {
+  1
+}
 
 --------------------------------------------------------------------------------
 
 (module
-  (importClause
-    (stringConstant))
   (classProperty
     (identifier)
-    (typeAnnotation
+    (newExpr
       (type
         (qualifiedIdentifier
-          (identifier))))))
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (objectBody
+        (objectElement
+          (intLiteral))))))

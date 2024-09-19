@@ -29,7 +29,8 @@ res1: Person = new { ...personDynamic }
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (objectProperty
         (identifier)
         (intLiteral))))

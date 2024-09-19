@@ -18,7 +18,8 @@ foo: Foo = new {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classBody

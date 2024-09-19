@@ -9,4 +9,5 @@ name = "Dog"
 (module
   (classProperty
     (identifier)
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart))))

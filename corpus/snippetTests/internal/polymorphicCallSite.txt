@@ -207,12 +207,14 @@ res18 = new Bar2 {}.x
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classMethod
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (clazz
     (identifier)
     (classExtendsClause
@@ -221,12 +223,14 @@ res18 = new Bar2 {}.x
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classMethod
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (clazz
     (identifier)
     (classExtendsClause
@@ -235,12 +239,14 @@ res18 = new Bar2 {}.x
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classMethod
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (clazz
     (identifier)
     (classExtendsClause
@@ -249,12 +255,14 @@ res18 = new Bar2 {}.x
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classMethod
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (clazz
     (identifier)
     (classExtendsClause
@@ -263,12 +271,14 @@ res18 = new Bar2 {}.x
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classMethod
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (lineComment)
   (classMethod
     (methodHeader
@@ -404,7 +414,8 @@ res18 = new Bar2 {}.x
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classProperty
         (identifier)
         (objectBody
@@ -427,7 +438,8 @@ res18 = new Bar2 {}.x
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (propertyCallExpr
@@ -462,7 +474,8 @@ res18 = new Bar2 {}.x
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (lineComment)
       (classProperty
         (identifier)
@@ -483,7 +496,8 @@ res18 = new Bar2 {}.x
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (propertyCallExpr

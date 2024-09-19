@@ -98,14 +98,17 @@ facts {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (modifier)
@@ -218,7 +221,8 @@ facts {
                   (identifier)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (modifier)
@@ -232,7 +236,8 @@ facts {
                 (objectProperty
                   (identifier)
                   (importExpr
-                    (stringConstant)))
+                    (stringConstant
+                      (slStringLiteralPart))))
                 (objectProperty
                   (identifier)
                   (intLiteral))
@@ -327,7 +332,8 @@ facts {
                   (identifier)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (modifier)
@@ -340,7 +346,8 @@ facts {
               (objectBody
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))
+                  (slStringLiteral
+                    (slStringLiteralPart)))
                 (objectProperty
                   (identifier)
                   (intLiteral))
@@ -421,7 +428,8 @@ facts {
                   (identifier)))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (modifier)
@@ -443,7 +451,8 @@ facts {
                   (identifier)
                   (objectBody
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
                       (objectBody
                         (objectProperty
                           (identifier)
@@ -471,21 +480,25 @@ facts {
                   (identifier)
                   (objectBody
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
                       (objectBody
                         (objectProperty
                           (identifier)
                           (importExpr
-                            (stringConstant)))))))
+                            (stringConstant
+                              (slStringLiteralPart))))))))
                 (objectProperty
                   (identifier)
                   (objectBody
                     (objectEntry
-                      (slStringLiteral)
+                      (slStringLiteral
+                        (slStringLiteralPart))
                       (objectBody
                         (objectProperty
                           (identifier)
-                          (slStringLiteral)))))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))))))))
           (objectProperty
             (modifier)
             (identifier)
@@ -502,8 +515,11 @@ facts {
               (identifier)
               (argumentList
                 (slStringLiteral
+                  (slStringLiteralPart)
                   (escapeSequence)
-                  (escapeSequence)))))
+                  (slStringLiteralPart)
+                  (escapeSequence)
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -511,8 +527,11 @@ facts {
               (identifier)
               (argumentList
                 (slStringLiteral
+                  (slStringLiteralPart)
                   (escapeSequence)
-                  (escapeSequence)))))
+                  (slStringLiteralPart)
+                  (escapeSequence)
+                  (slStringLiteralPart)))))
           (objectElement
             (methodCallExpr
               (variableExpr
@@ -520,5 +539,8 @@ facts {
               (identifier)
               (argumentList
                 (slStringLiteral
+                  (slStringLiteralPart)
                   (escapeSequence)
-                  (escapeSequence))))))))))
+                  (slStringLiteralPart)
+                  (escapeSequence)
+                  (slStringLiteralPart))))))))))

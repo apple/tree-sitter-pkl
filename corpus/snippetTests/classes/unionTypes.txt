@@ -26,8 +26,8 @@ class Z {
 }
 
 class Defaults {
-  a: Set|List|Map
-  b: "Pigeon"|"Parrot"|"Barn Owl"
+  a: *Set|List|Map
+  b: *"Pigeon"|"Parrot"|"Barn Owl"
 }
 
 res1 = new X {
@@ -316,25 +316,30 @@ res6 = new Defaults {}
           (type
             (type
               (type
-                (qualifiedIdentifier
-                  (identifier)))
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (type
+                  (qualifiedIdentifier
+                    (identifier))))
               (type
                 (qualifiedIdentifier
-                  (identifier))))
-            (type
-              (qualifiedIdentifier
-                (identifier))))))
+                  (identifier)))))))
       (classProperty
         (identifier)
         (typeAnnotation
           (type
             (type
               (type
-                (stringConstant))
+                (type
+                  (stringConstant
+                    (slStringLiteralPart)))
+                (type
+                  (stringConstant
+                    (slStringLiteralPart))))
               (type
-                (stringConstant)))
-            (type
-              (stringConstant)))))))
+                (stringConstant
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -363,16 +368,20 @@ res6 = new Defaults {}
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (newExpr
@@ -386,7 +395,8 @@ res6 = new Defaults {}
             (parameterList
               (typedIdentifier
                 (identifier)))
-            (slStringLiteral)))
+            (slStringLiteral
+              (slStringLiteralPart))))
         (objectProperty
           (identifier)
           (functionLiteral
@@ -396,7 +406,8 @@ res6 = new Defaults {}
             (floatLiteral)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (newExpr
@@ -406,7 +417,8 @@ res6 = new Defaults {}
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (methodCallExpr
@@ -458,8 +470,10 @@ res6 = new Defaults {}
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectProperty
           (identifier)
           (methodCallExpr
@@ -478,20 +492,24 @@ res6 = new Defaults {}
             (identifier)
             (argumentList
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (methodCallExpr
                 (identifier)
                 (argumentList
                   (intLiteral)
                   (intLiteral)
                   (intLiteral)))
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (methodCallExpr
                 (identifier)
                 (argumentList
@@ -501,8 +519,10 @@ res6 = new Defaults {}
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))))
         (objectProperty
           (identifier)
           (propertyCallExpr

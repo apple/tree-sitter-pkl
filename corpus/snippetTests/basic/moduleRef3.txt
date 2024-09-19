@@ -4,11 +4,11 @@ basic/moduleRef3
 
 extends "moduleRefLibrary.pkl"
 
-a = 44
+const a = 44
 
 m1 = module.a
 
-b = 43
+const b = 43
 
 m2 = module.b
 
@@ -34,8 +34,10 @@ class Person {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
+    (modifier)
     (identifier)
     (intLiteral))
   (classProperty
@@ -44,6 +46,7 @@ class Person {
       (moduleExpr)
       (identifier)))
   (classProperty
+    (modifier)
     (identifier)
     (intLiteral))
   (classProperty

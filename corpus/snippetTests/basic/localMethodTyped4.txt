@@ -32,7 +32,8 @@ c = new C {}
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classBody
@@ -45,7 +46,8 @@ c = new C {}
             (type
               (qualifiedIdentifier
                 (identifier)))))
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classMethod
         (methodHeader
           (modifier)
@@ -116,7 +118,8 @@ c = new C {}
                   (methodCallExpr
                     (identifier)
                     (argumentList
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectProperty
             (identifier)
             (methodCallExpr
@@ -130,7 +133,8 @@ c = new C {}
                     (identifier)
                     (argumentList
                       (intLiteral)
-                      (slStringLiteral)))))))
+                      (slStringLiteral
+                        (slStringLiteralPart))))))))
           (objectProperty
             (identifier)
             (objectBody
@@ -158,7 +162,8 @@ c = new C {}
                       (methodCallExpr
                         (identifier)
                         (argumentList
-                          (slStringLiteral)))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))))))
               (objectProperty
                 (identifier)
                 (methodCallExpr
@@ -172,7 +177,8 @@ c = new C {}
                         (identifier)
                         (argumentList
                           (intLiteral)
-                          (slStringLiteral)))))))
+                          (slStringLiteral
+                            (slStringLiteralPart))))))))
               (objectProperty
                 (identifier)
                 (objectBody
@@ -200,7 +206,8 @@ c = new C {}
                           (methodCallExpr
                             (identifier)
                             (argumentList
-                              (slStringLiteral)))))))
+                              (slStringLiteral
+                                (slStringLiteralPart))))))))
                   (objectProperty
                     (identifier)
                     (methodCallExpr
@@ -214,7 +221,8 @@ c = new C {}
                             (identifier)
                             (argumentList
                               (intLiteral)
-                              (slStringLiteral)))))))))))))))
+                              (slStringLiteral
+                                (slStringLiteralPart))))))))))))))))
   (classProperty
     (identifier)
     (newExpr

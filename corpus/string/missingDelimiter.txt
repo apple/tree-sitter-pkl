@@ -14,12 +14,15 @@ res3 = ##"Hello there"#
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (MISSING """)))
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (MISSING ""#")))
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (MISSING ""##"))))

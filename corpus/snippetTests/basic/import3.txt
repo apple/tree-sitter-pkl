@@ -17,14 +17,17 @@ foo {
       (objectProperty
         (identifier)
         (importExpr
-          (stringConstant)))
+          (stringConstant
+            (slStringLiteralPart))))
       (objectProperty
         (identifier)
         (importExpr
-          (stringConstant)))
+          (stringConstant
+            (slStringLiteralPart))))
       (objectProperty
         (identifier)
         (propertyCallExpr
           (importExpr
-            (stringConstant))
+            (stringConstant
+              (slStringLiteralPart)))
           (identifier))))))

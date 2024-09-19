@@ -17,4 +17,4 @@ x = List(1)
       (identifier)
       (argumentList
         (intLiteral))))
-  (lineComment))
+  (ERROR))

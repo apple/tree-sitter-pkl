@@ -21,7 +21,8 @@ p: Person = new {}
           (type
             (qualifiedIdentifier
               (identifier))))
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (typeAnnotation

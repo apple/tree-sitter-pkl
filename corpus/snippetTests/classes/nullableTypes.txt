@@ -41,7 +41,8 @@ res4 = test.catch(() ->
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classBody
@@ -95,25 +96,29 @@ res4 = test.catch(() ->
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectProperty
           (identifier)
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectProperty
           (identifier)
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (newExpr

@@ -31,10 +31,14 @@ foo {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
-        (slStringLiteral)
-        (slStringLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (objectBody

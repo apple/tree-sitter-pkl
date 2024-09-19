@@ -1,0 +1,44 @@
+================================================================================
+errors/const/constImplicitThisMethod
+================================================================================
+
+open class A {
+  function a() = 1
+}
+
+class B extends A {
+  const b = a()
+}
+
+b: B
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classMethod
+        (methodHeader
+          (identifier)
+          (parameterList))
+        (intLiteral))))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (qualifiedIdentifier
+        (identifier)))
+    (classBody
+      (classProperty
+        (modifier)
+        (identifier)
+        (methodCallExpr
+          (identifier)
+          (argumentList)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))))

@@ -1,0 +1,19 @@
+================================================================================
+errors/const/constAssign
+================================================================================
+
+amends "../../basic/constModifier.pkl"
+
+constantSimpleValue = "1"
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart))))

@@ -8,11 +8,12 @@ res2 = 42
 --------------------------------------------------------------------------------
 
 (module
-  (ERROR
+  (classProperty
     (identifier)
     (ERROR
-      (identifier)
-      (intLiteral)
-      (intLiteral)
+      (ERROR
+        (identifier)
+        (intLiteral)
+        (intLiteral))
       (identifier))
     (intLiteral)))

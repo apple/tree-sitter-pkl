@@ -9,4 +9,5 @@ amends "moduleWithHighMinPklVersion.pkl"
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant))))
+      (stringConstant
+        (slStringLiteralPart)))))

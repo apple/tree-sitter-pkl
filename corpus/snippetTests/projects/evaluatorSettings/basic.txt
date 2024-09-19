@@ -12,8 +12,8 @@ examples {
     read*("prop:**")
   }
   ["cannot import modulepath because it is not allowed"] {
-    module.catch(() -> import("modulepath:/com/apple/pkl/core/stdlib/release.pkl"))
-    module.catch(() -> read("modulepath:/com/apple/pkl/core/brokenModule1.pkl"))
+    module.catch(() -> import("modulepath:/org/pkl/core/stdlib/release.pkl"))
+    module.catch(() -> read("modulepath:/org/pkl/core/brokenModule1.pkl"))
   }
 }
 
@@ -22,26 +22,32 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (readGlobExpr
               (parenthesizedExpr
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (readGlobExpr
               (parenthesizedExpr
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -51,7 +57,8 @@ examples {
                 (functionLiteral
                   (parameterList)
                   (importExpr
-                    (stringConstant))))))
+                    (stringConstant
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (moduleExpr)
@@ -61,4 +68,5 @@ examples {
                   (parameterList)
                   (readExpr
                     (parenthesizedExpr
-                      (slStringLiteral))))))))))))
+                      (slStringLiteral
+                        (slStringLiteralPart)))))))))))))

@@ -65,9 +65,11 @@ output {
         (typeAnnotation
           (type
             (type
-              (stringConstant))
+              (stringConstant
+                (slStringLiteralPart)))
             (type
-              (stringConstant)))))))
+              (stringConstant
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -83,7 +85,8 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))
         (objectElement
           (newExpr
             (type
@@ -101,9 +104,11 @@ output {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (objectBody
@@ -134,6 +139,7 @@ output {
                       (variableExpr
                         (identifier))
                       (slStringLiteral
+                        (slStringLiteralPart)
                         (interpolationExpr
                           (methodCallExpr
                             (variableExpr
@@ -148,8 +154,10 @@ output {
                       (typedIdentifier
                         (identifier)))
                     (slStringLiteral
+                      (slStringLiteralPart)
                       (interpolationExpr
                         (propertyCallExpr
                           (variableExpr
                             (identifier))
-                          (identifier))))))))))))))
+                          (identifier)))
+                      (slStringLiteralPart))))))))))))

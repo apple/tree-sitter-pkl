@@ -32,7 +32,8 @@ res11 = test.catch(() -> f3(List("foo", 42)))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classBody
@@ -57,7 +58,8 @@ res11 = test.catch(() -> f3(List("foo", 42)))
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -72,8 +74,10 @@ res11 = test.catch(() -> f3(List("foo", 42)))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (modifier)
     (identifier)
@@ -88,7 +92,8 @@ res11 = test.catch(() -> f3(List("foo", 42)))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral))))
   (classProperty
     (modifier)
@@ -211,7 +216,8 @@ res11 = test.catch(() -> f3(List("foo", 42)))
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -233,8 +239,10 @@ res11 = test.catch(() -> f3(List("foo", 42)))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -250,5 +258,6 @@ res11 = test.catch(() -> f3(List("foo", 42)))
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral))))))))))

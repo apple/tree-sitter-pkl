@@ -13,4 +13,5 @@ res1: Int16 = "abc"
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart))))

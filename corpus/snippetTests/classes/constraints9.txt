@@ -25,7 +25,8 @@ res2 = test.catch(() ->
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classBody
@@ -36,7 +37,8 @@ res2 = test.catch(() ->
             (type
               (qualifiedIdentifier
                 (identifier)))
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (classProperty
         (identifier)
         (typeAnnotation
@@ -48,7 +50,8 @@ res2 = test.catch(() ->
               (parameterList
                 (typedIdentifier
                   (identifier)))
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (methodCallExpr

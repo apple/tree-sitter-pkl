@@ -10,4 +10,5 @@ res = import("@birds")
   (classProperty
     (identifier)
     (importExpr
-      (stringConstant))))
+      (stringConstant
+        (slStringLiteralPart)))))

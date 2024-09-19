@@ -11,12 +11,14 @@ res2 = 42
   (classProperty
     (identifier)
     (propertyCallExpr
-      (slStringLiteral)
+      (slStringLiteral
+        (slStringLiteralPart))
       (identifier)))
   (ERROR
     (intLiteral)
     (binaryExpr
       (intLiteral)
-      (slStringLiteral))
+      (slStringLiteral
+        (slStringLiteralPart)))
     (identifier)
     (intLiteral)))

@@ -68,7 +68,8 @@ y = (x) {
                   (intLiteral))
                 (objectProperty
                   (identifier)
-                  (slStringLiteral))))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
             (objectProperty
               (identifier)
               (objectBody

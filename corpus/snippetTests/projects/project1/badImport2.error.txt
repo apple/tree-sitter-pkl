@@ -12,4 +12,5 @@ import "@fruities/Fruit.pkl"
   (lineComment)
   (lineComment)
   (importClause
-    (stringConstant)))
+    (stringConstant
+      (slStringLiteralPart))))

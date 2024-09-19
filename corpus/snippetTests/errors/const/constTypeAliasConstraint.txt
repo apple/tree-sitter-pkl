@@ -1,0 +1,31 @@
+================================================================================
+errors/const/constTypeAliasConstraint
+================================================================================
+
+typealias MyValue = Any(isValid)
+
+isValid = true
+
+myValue: MyValue = 1
+
+--------------------------------------------------------------------------------
+
+(module
+  (typeAlias
+    (identifier)
+    (type
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (variableExpr
+        (identifier))))
+  (classProperty
+    (identifier)
+    (trueLiteral))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (intLiteral)))

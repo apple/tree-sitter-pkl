@@ -25,7 +25,8 @@ pigeonAge = pigeon.age
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (classProperty
         (identifier)
         (intLiteral))))
@@ -38,7 +39,8 @@ pigeonAge = pigeon.age
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (propertyCallExpr

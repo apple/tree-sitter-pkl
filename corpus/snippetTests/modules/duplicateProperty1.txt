@@ -10,8 +10,10 @@ test = "test" // duplicate
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (lineComment))

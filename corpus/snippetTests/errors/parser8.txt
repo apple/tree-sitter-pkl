@@ -11,4 +11,8 @@ res1 = """
 (module
   (classProperty
     (identifier)
-    (mlStringLiteral)))
+    (ERROR)
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (identifier)))

@@ -14,5 +14,6 @@ foo = let (_ = throw("oops")) 0
         (identifier))
       (throwExpr
         (parenthesizedExpr
-          (slStringLiteral)))
+          (slStringLiteral
+            (slStringLiteralPart))))
       (intLiteral))))

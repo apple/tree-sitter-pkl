@@ -21,7 +21,8 @@ p1: Person1
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (typeAnnotation

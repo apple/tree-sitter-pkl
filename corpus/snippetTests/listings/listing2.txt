@@ -90,7 +90,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classMethod
     (methodHeader
       (identifier)
@@ -108,11 +109,14 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -122,39 +126,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
       (objectBody
         (objectEntry
           (intLiteral)
-          (slStringLiteral)))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectEntry
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (intLiteral)))
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (slStringLiteral)))))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectEntry
-          (intLiteral)
-          (slStringLiteral))
-        (objectEntry
-          (intLiteral)
-          (slStringLiteral))
-        (objectEntry
-          (intLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -170,19 +143,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))
-        (objectEntry
-          (intLiteral)
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (slStringLiteral))))
-        (objectEntry
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (intLiteral)))
-          (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -192,63 +154,16 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
       (objectBody
         (objectEntry
           (intLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
           (intLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
           (intLiteral)
-          (slStringLiteral)))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectEntry
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (intLiteral)))
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (slStringLiteral))))
-        (objectEntry
-          (intLiteral)
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (slStringLiteral))))
-        (objectEntry
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (intLiteral)))
-          (slStringLiteral)))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectEntry
-          (intLiteral)
-          (slStringLiteral))
-        (objectElement
-          (slStringLiteral))
-        (objectEntry
-          (intLiteral)
-          (slStringLiteral))
-        (objectElement
-          (slStringLiteral))
-        (objectEntry
-          (intLiteral)
-          (slStringLiteral))
-        (objectElement
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -264,31 +179,146 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))
-        (objectElement
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectEntry
           (intLiteral)
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral))))
-        (objectElement
-          (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectEntry
           (methodCallExpr
             (identifier)
             (argumentList
               (intLiteral)))
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectEntry
+          (intLiteral)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectEntry
+          (intLiteral)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectEntry
+          (intLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectEntry
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)))
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (slStringLiteralPart)))))
+        (objectEntry
+          (intLiteral)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (slStringLiteralPart)))))
+        (objectEntry
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)))
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectEntry
+          (intLiteral)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectElement
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectEntry
+          (intLiteral)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectElement
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectEntry
+          (intLiteral)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectElement
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectEntry
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)))
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectElement
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
+        (objectEntry
+          (intLiteral)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (slStringLiteralPart)))))
+        (objectElement
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectEntry
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)))
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectElement
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -305,7 +335,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
             (objectBody
               (objectEntry
                 (intLiteral)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -325,7 +356,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -345,7 +377,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                   (identifier)
                   (argumentList
                     (intLiteral)))
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -368,7 +401,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -384,10 +418,12 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (identifier)))
             (objectBody
               (objectElement
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectEntry
                 (intLiteral)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -406,7 +442,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (objectEntry
                 (methodCallExpr
                   (identifier)
@@ -415,7 +452,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -433,7 +471,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
               (objectEntry
                 (unaryExpr
                   (intLiteral))
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -457,7 +496,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -473,8 +513,10 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -493,11 +535,13 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -514,7 +558,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -531,7 +576,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -547,10 +593,12 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (identifier)))
             (objectBody
               (objectElement
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -566,10 +614,12 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (identifier)))
             (objectBody
               (objectElement
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -588,10 +638,12 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -608,10 +660,12 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
             (objectBody
               (objectEntry
                 (intLiteral)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -634,10 +688,12 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -653,13 +709,16 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (identifier)))
             (objectBody
               (objectElement
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectEntry
                 (intLiteral)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -678,7 +737,8 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (objectEntry
                 (methodCallExpr
                   (identifier)
@@ -687,7 +747,9 @@ res14a = test.catch(() -> (x) { id("four"); [id(1)] = id("updated two"); foo = "
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))))))

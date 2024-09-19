@@ -24,8 +24,6 @@ examples {
     IntSeq(2, -3).step(-5)
     IntSeq(2, -3).step(-7)
 
-    // see https://youtrack.jetbrains.com/issue/KT-17176
-    // step(math.minInt) does not seem to cause problems for us
     IntSeq(0, 1).step(math.minInt)
     IntSeq(math.maxInt, math.minInt).step(math.minInt)
     IntSeq(math.minInt, math.maxInt).step(math.maxInt)
@@ -77,8 +75,6 @@ examples {
     IntSeq(2, -3).step(-5).map(id)
     IntSeq(2, -3).step(-7).map(id)
 
-    // see https://youtrack.jetbrains.com/issue/KT-17176
-    // step(math.minInt) does not seem to cause problems for us
     IntSeq(0, 1).step(math.minInt).map(id)
     IntSeq(math.maxInt, math.minInt).step(math.minInt).map(id)
     IntSeq(math.minInt, math.maxInt).step(math.maxInt).map(id)
@@ -106,9 +102,11 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -122,7 +120,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -163,7 +162,8 @@ examples {
                   (intLiteral))
                 (intLiteral))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -212,22 +212,19 @@ examples {
               (argumentList
                 (unaryExpr
                   (intLiteral)))))
-          (lineComment)
-          (lineComment)
           (objectElement
-            (propertyCallExpr
+            (methodCallExpr
               (methodCallExpr
                 (identifier)
                 (argumentList
                   (intLiteral)
                   (intLiteral)))
-              (identifier)))
-          (objectElement
-            (parenthesizedExpr
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier))))
+              (identifier)
+              (argumentList
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier)))))
           (objectElement
             (methodCallExpr
               (methodCallExpr
@@ -284,7 +281,8 @@ examples {
                     (argumentList
                       (intLiteral)))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -305,7 +303,8 @@ examples {
                     (intLiteral))))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -326,7 +325,8 @@ examples {
                     (intLiteral))))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -374,7 +374,8 @@ examples {
                     (intLiteral))))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -652,7 +653,8 @@ examples {
                       (variableExpr
                         (identifier))))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -789,79 +791,75 @@ examples {
               (argumentList
                 (variableExpr
                   (identifier)))))
-          (lineComment)
-          (lineComment)
-          (objectElement
-            (propertyCallExpr
-              (methodCallExpr
-                (identifier)
-                (argumentList
-                  (intLiteral)
-                  (intLiteral)))
-              (identifier)))
           (objectElement
             (methodCallExpr
-              (parenthesizedExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier)))
+              (methodCallExpr
+                (methodCallExpr
+                  (identifier)
+                  (argumentList
+                    (intLiteral)
+                    (intLiteral)))
+                (identifier)
+                (argumentList
+                  (propertyCallExpr
+                    (variableExpr
+                      (identifier))
+                    (identifier))))
               (identifier)
               (argumentList
                 (variableExpr
                   (identifier)))))
           (objectElement
-            (propertyCallExpr
+            (methodCallExpr
               (methodCallExpr
+                (methodCallExpr
+                  (identifier)
+                  (argumentList
+                    (propertyCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier))
+                    (propertyCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier))))
                 (identifier)
                 (argumentList
                   (propertyCallExpr
                     (variableExpr
                       (identifier))
-                    (identifier))
-                  (propertyCallExpr
-                    (variableExpr
-                      (identifier))
                     (identifier))))
-              (identifier)))
-          (objectElement
-            (methodCallExpr
-              (parenthesizedExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier)))
               (identifier)
               (argumentList
                 (variableExpr
                   (identifier)))))
           (objectElement
-            (propertyCallExpr
+            (methodCallExpr
               (methodCallExpr
+                (methodCallExpr
+                  (identifier)
+                  (argumentList
+                    (propertyCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier))
+                    (propertyCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier))))
                 (identifier)
                 (argumentList
                   (propertyCallExpr
                     (variableExpr
                       (identifier))
-                    (identifier))
-                  (propertyCallExpr
-                    (variableExpr
-                      (identifier))
                     (identifier))))
-              (identifier)))
-          (objectElement
-            (methodCallExpr
-              (parenthesizedExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier)))
               (identifier)
               (argumentList
                 (variableExpr
                   (identifier)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -876,7 +874,8 @@ examples {
                         (identifier)))
                     (objectBody))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -940,7 +939,8 @@ examples {
                   (intLiteral)
                   (intLiteral)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr

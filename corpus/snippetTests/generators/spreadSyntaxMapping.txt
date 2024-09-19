@@ -117,7 +117,8 @@ res17 = new Mapping {
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -143,10 +144,12 @@ res17 = new Mapping {
     (newExpr
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (modifier)
@@ -164,17 +167,21 @@ res17 = new Mapping {
         (objectElement
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -209,9 +216,11 @@ res17 = new Mapping {
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral))))
   (classProperty
     (modifier)
@@ -299,6 +308,7 @@ res17 = new Mapping {
                   (objectBody
                     (objectElement
                       (slStringLiteral
+                        (slStringLiteralPart)
                         (interpolationExpr
                           (variableExpr
                             (identifier))))))))))))
@@ -345,10 +355,12 @@ res17 = new Mapping {
           (variableExpr
             (identifier)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -388,7 +400,8 @@ res17 = new Mapping {
                 (variableExpr
                   (identifier)))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))))))
   (classProperty
     (identifier)
@@ -536,7 +549,8 @@ res17 = new Mapping {
           (variableExpr
             (identifier)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (newExpr
             (type
               (qualifiedIdentifier
@@ -546,7 +560,8 @@ res17 = new Mapping {
                 (variableExpr
                   (identifier)))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (newExpr
                   (type
                     (qualifiedIdentifier
@@ -576,10 +591,12 @@ res17 = new Mapping {
           (variableExpr
             (identifier)))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -599,7 +616,8 @@ res17 = new Mapping {
                 (variableExpr
                   (identifier)))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))))))
   (classProperty
     (modifier)
@@ -612,16 +630,19 @@ res17 = new Mapping {
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody
             (objectProperty
               (identifier)
               (objectBody
                 (objectElement
-                  (slStringLiteral)))))))))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
   (classProperty
     (identifier)
     (newExpr

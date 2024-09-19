@@ -14,13 +14,15 @@ pp2: Person2
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (clazz
     (identifier)
     (classBody
       (classProperty
         (identifier)
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (typeAnnotation

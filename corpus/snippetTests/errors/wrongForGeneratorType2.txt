@@ -27,7 +27,8 @@ res1 = new Mapping {
             (identifier)
             (argumentList
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))
           (objectBody
             (objectEntry

@@ -22,7 +22,8 @@ foo = List(pigeon(), barnOwl(), parrot())
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (clazz
     (modifier)
     (identifier)
@@ -52,7 +53,8 @@ foo = List(pigeon(), barnOwl(), parrot())
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (propertyCallExpr
@@ -69,7 +71,8 @@ foo = List(pigeon(), barnOwl(), parrot())
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (propertyCallExpr
@@ -88,7 +91,8 @@ foo = List(pigeon(), barnOwl(), parrot())
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (propertyCallExpr

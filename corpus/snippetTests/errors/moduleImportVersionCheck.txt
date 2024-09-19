@@ -10,7 +10,8 @@ res1 = moduleWithHighMinPklVersion.x
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (propertyCallExpr

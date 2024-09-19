@@ -137,8 +137,10 @@ res5 = x.lambda((str) -> str.length).apply("hello")
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -149,9 +151,11 @@ res5 = x.lambda((str) -> str.length).apply("hello")
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral)
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (intLiteral))))))
   (classProperty
     (identifier)
@@ -160,7 +164,8 @@ res5 = x.lambda((str) -> str.length).apply("hello")
         (identifier))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -187,4 +192,5 @@ res5 = x.lambda((str) -> str.length).apply("hello")
               (identifier)))))
       (identifier)
       (argumentList
-        (slStringLiteral)))))
+        (slStringLiteral
+          (slStringLiteralPart))))))

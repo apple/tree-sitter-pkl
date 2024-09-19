@@ -20,6 +20,16 @@ examples {
     import*("../../input-helper/globtest/**.pkl").keys.toListing()
   }
 
+  ["amended"] {
+    (import*("../../input-helper/globtest/**.pkl")) {
+      [[true]] {
+        output {
+          renderer = new YamlRenderer {}
+        }
+      }
+    }.toMap().values.map((it) -> it.output.text).join("\n---\n")
+  }
+
   ["globstar then up one level"] {
     import*("../../input-helper/globtest/**/../*.pkl").keys.toListing()
   }
@@ -45,10 +55,6 @@ examples {
     module.catch(() -> import*("../../input-helper/globtest").toMap())
   }
 
-  ["match literal backslash"] {
-    import*("../../input-helper/globtest/\\\\moduleC.pkl").keys.toListing()
-  }
-
   ["import glob first segment is wildcard"] {
     import*("*Glob.pkl").keys.toListing()
   }
@@ -58,6 +64,20 @@ examples {
     import*(#"../../input-helper/globtest/module with \[weird] ~!characters.pkl"#)
     import*("../../input-helper/globtest/module *")
   }
+
+  ["package"] {
+    import*("package://localhost:0/birds@0.5.0#/catalog/*.pkl")
+    import*("package://localhost:0/birds@0.5.0#/**.pkl").keys.toListing()
+  }
+
+  ["globbing with absolute URIs and percent encoding"] {
+    import*("package://localhost:0/packageContainingWildcardCharacters@1.0.0#/name%20*")
+    import*("package://localhost:0/packageContainingWildcardCharacters@1.0.0#/name%20with%20%5C%5Bwildcard%5D!%20characters~~.pkl")
+  }
+
+  ["package glob and up one level"] {
+    import*("package://localhost:0/birds@0.5.0#/catalog/../catalog/*.pkl")
+  }
 }
 
 --------------------------------------------------------------------------------
@@ -65,17 +85,21 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importGlobClause
-    (stringConstant)
+    (stringConstant
+      (slStringLiteralPart))
     (identifier))
   (importGlobClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -86,7 +110,8 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -97,29 +122,83 @@ examples {
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (slStringLiteralPart)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (methodCallExpr
+                (propertyCallExpr
+                  (methodCallExpr
+                    (objectLiteral
+                      (parenthesizedExpr
+                        (importGlobExpr
+                          (stringConstant
+                            (slStringLiteralPart))))
+                      (objectBody
+                        (objectPredicate
+                          (trueLiteral)
+                          (objectBody
+                            (objectProperty
+                              (identifier)
+                              (objectBody
+                                (objectProperty
+                                  (identifier)
+                                  (newExpr
+                                    (type
+                                      (qualifiedIdentifier
+                                        (identifier)))
+                                    (objectBody)))))))))
+                    (identifier)
+                    (argumentList))
+                  (identifier))
+                (identifier)
+                (argumentList
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (propertyCallExpr
+                      (propertyCallExpr
+                        (variableExpr
+                          (identifier))
+                        (identifier))
+                      (identifier)))))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (escapeSequence)
+                  (slStringLiteralPart)
+                  (escapeSequence)))))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (slStringLiteralPart)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -142,40 +221,47 @@ examples {
                     (identifier)
                     (argumentList))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (slStringLiteralPart)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (slStringLiteralPart)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
-                  (stringConstant))
+                  (stringConstant
+                    (slStringLiteralPart)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
@@ -186,40 +272,70 @@ examples {
                   (parameterList)
                   (methodCallExpr
                     (importGlobExpr
-                      (stringConstant))
+                      (stringConstant
+                        (slStringLiteralPart)))
                     (identifier)
                     (argumentList))))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (methodCallExpr
               (propertyCallExpr
                 (importGlobExpr
                   (stringConstant
-                    (escapeSequence)
-                    (escapeSequence)))
+                    (slStringLiteralPart)))
                 (identifier))
               (identifier)
               (argumentList)))))
       (objectEntry
-        (slStringLiteral)
-        (objectBody
-          (objectElement
-            (methodCallExpr
-              (propertyCallExpr
-                (importGlobExpr
-                  (stringConstant))
-                (identifier))
-              (identifier)
-              (argumentList)))))
-      (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (lineComment)
           (objectElement
             (importGlobExpr
-              (stringConstant)))
+              (stringConstant
+                (slStringLiteralPart))))
           (objectElement
             (importGlobExpr
-              (stringConstant))))))))
+              (stringConstant
+                (slStringLiteralPart))))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (slStringLiteralPart))))
+          (objectElement
+            (methodCallExpr
+              (propertyCallExpr
+                (importGlobExpr
+                  (stringConstant
+                    (slStringLiteralPart)))
+                (identifier))
+              (identifier)
+              (argumentList)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (slStringLiteralPart))))
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (slStringLiteralPart))))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (importGlobExpr
+              (stringConstant
+                (slStringLiteralPart)))))))))

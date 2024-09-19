@@ -20,6 +20,5 @@ res1 = 42
         (type
           (qualifiedIdentifier
             (identifier)))
-        (MISSING
-          ")")))
+        (MISSING ")))
     (intLiteral)))

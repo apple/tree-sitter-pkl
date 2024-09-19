@@ -2,7 +2,7 @@
 packages/badImport6.error
 ================================================================================
 
-import "package://localhost:12110/badPackageZipUrl@1.0.0#/Bug.pkl"
+import "package://localhost:0/badPackageZipUrl@1.0.0#/Bug.pkl"
 
 res: Bug
 
@@ -10,7 +10,8 @@ res: Bug
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (typeAnnotation

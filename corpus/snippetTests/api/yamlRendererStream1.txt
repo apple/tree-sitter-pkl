@@ -54,7 +54,8 @@ c = renderer.renderDocument(stream.toSet())
           (identifier)))
       (objectBody
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
           (intLiteral))
         (objectElement
@@ -64,9 +65,11 @@ c = renderer.renderDocument(stream.toSet())
                 (identifier)))
             (objectBody
               (objectElement
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectElement
-                (slStringLiteral)))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))
         (objectElement
           (newExpr
             (type
@@ -74,17 +77,21 @@ c = renderer.renderDocument(stream.toSet())
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (objectBody
                   (objectProperty
                     (identifier)
-                    (slStringLiteral)))))))
+                    (slStringLiteral
+                      (slStringLiteralPart))))))))
         (objectElement
           (newExpr
             (type
@@ -93,7 +100,8 @@ c = renderer.renderDocument(stream.toSet())
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (objectProperty
                 (identifier)
                 (intLiteral))))))))

@@ -60,6 +60,7 @@ local function countBackslashes(value: String): Int = value.chars.count((c) -> c
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)
       (escapeSequence)
       (escapeSequence)
@@ -69,6 +70,7 @@ local function countBackslashes(value: String): Int = value.chars.count((c) -> c
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)
       (escapeSequence)
       (escapeSequence)
@@ -183,29 +185,36 @@ local function countBackslashes(value: String): Int = value.chars.count((c) -> c
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
       (escapeSequence)))
   (lineComment)
   (classProperty
     (identifier)
     (slStringLiteral
-      (escapeSequence)))
+      (slStringLiteralPart)))
   (lineComment)
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (lineComment)
   (classProperty
     (identifier)
-    (slStringLiteral))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (lineComment)
   (classProperty
     (identifier)
@@ -242,8 +251,11 @@ local function countBackslashes(value: String): Int = value.chars.count((c) -> c
       (escapeSequence)
       (escapeSequence)
       (escapeSequence)
+      (slStringLiteralPart)
       (escapeSequence)
+      (slStringLiteralPart)
       (escapeSequence)
+      (slStringLiteralPart)
       (escapeSequence)))
   (classProperty
     (identifier)

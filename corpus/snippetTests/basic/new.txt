@@ -153,7 +153,8 @@ res40 = test.catch(() -> mixin4.apply(1))
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (clazz
     (identifier)
     (classBody
@@ -169,7 +170,8 @@ res40 = test.catch(() -> mixin4.apply(1))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -180,7 +182,8 @@ res40 = test.catch(() -> mixin4.apply(1))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (modifier)
     (identifier)
@@ -192,7 +195,8 @@ res40 = test.catch(() -> mixin4.apply(1))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (variableExpr
@@ -206,7 +210,8 @@ res40 = test.catch(() -> mixin4.apply(1))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (objectProperty
         (modifier)
         (identifier)
@@ -218,7 +223,8 @@ res40 = test.catch(() -> mixin4.apply(1))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (objectProperty
         (identifier)
         (variableExpr
@@ -228,14 +234,17 @@ res40 = test.catch(() -> mixin4.apply(1))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (newExpr
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (clazz
     (modifier)
     (identifier)
@@ -250,7 +259,8 @@ res40 = test.catch(() -> mixin4.apply(1))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (clazz
     (identifier)
     (classExtendsClause
@@ -263,7 +273,8 @@ res40 = test.catch(() -> mixin4.apply(1))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -291,7 +302,8 @@ res40 = test.catch(() -> mixin4.apply(1))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -305,7 +317,8 @@ res40 = test.catch(() -> mixin4.apply(1))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -318,7 +331,8 @@ res40 = test.catch(() -> mixin4.apply(1))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -332,7 +346,8 @@ res40 = test.catch(() -> mixin4.apply(1))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -350,7 +365,8 @@ res40 = test.catch(() -> mixin4.apply(1))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -364,7 +380,8 @@ res40 = test.catch(() -> mixin4.apply(1))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -383,7 +400,8 @@ res40 = test.catch(() -> mixin4.apply(1))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (variableExpr
@@ -401,7 +419,8 @@ res40 = test.catch(() -> mixin4.apply(1))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -410,12 +429,14 @@ res40 = test.catch(() -> mixin4.apply(1))
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -424,12 +445,14 @@ res40 = test.catch(() -> mixin4.apply(1))
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -446,12 +469,14 @@ res40 = test.catch(() -> mixin4.apply(1))
     (newExpr
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -460,12 +485,14 @@ res40 = test.catch(() -> mixin4.apply(1))
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -483,12 +510,14 @@ res40 = test.catch(() -> mixin4.apply(1))
     (newExpr
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (variableExpr
@@ -501,12 +530,14 @@ res40 = test.catch(() -> mixin4.apply(1))
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (newExpr
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (lineComment)
   (lineComment)
   (lineComment)
@@ -515,7 +546,8 @@ res40 = test.catch(() -> mixin4.apply(1))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (isExpr
@@ -529,7 +561,8 @@ res40 = test.catch(() -> mixin4.apply(1))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (isExpr
@@ -548,7 +581,8 @@ res40 = test.catch(() -> mixin4.apply(1))
         (objectBody))
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (isExpr
@@ -595,7 +629,8 @@ res40 = test.catch(() -> mixin4.apply(1))
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (isExpr
@@ -695,7 +730,8 @@ res40 = test.catch(() -> mixin4.apply(1))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (objectBody
@@ -724,7 +760,8 @@ res40 = test.catch(() -> mixin4.apply(1))
             (methodCallExpr
               (identifier)
               (argumentList
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classMethod
     (methodHeader
       (identifier)
@@ -746,7 +783,8 @@ res40 = test.catch(() -> mixin4.apply(1))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (modifier)
     (identifier)
@@ -758,7 +796,8 @@ res40 = test.catch(() -> mixin4.apply(1))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -769,7 +808,8 @@ res40 = test.catch(() -> mixin4.apply(1))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -810,7 +850,8 @@ res40 = test.catch(() -> mixin4.apply(1))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -821,7 +862,8 @@ res40 = test.catch(() -> mixin4.apply(1))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -863,7 +905,8 @@ res40 = test.catch(() -> mixin4.apply(1))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -874,7 +917,8 @@ res40 = test.catch(() -> mixin4.apply(1))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (variableExpr
         (identifier))))
   (classProperty
@@ -934,7 +978,8 @@ res40 = test.catch(() -> mixin4.apply(1))
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (binaryExpr
@@ -945,7 +990,8 @@ res40 = test.catch(() -> mixin4.apply(1))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (variableExpr
         (identifier))))
   (classProperty

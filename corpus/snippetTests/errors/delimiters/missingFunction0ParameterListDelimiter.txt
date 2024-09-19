@@ -7,11 +7,10 @@ res1 = 42
 
 --------------------------------------------------------------------------------
 
-(module
-  (ERROR
-    (identifier)
-    (unaryExpr
-      (ERROR
-        (intLiteral)
-        (identifier))
-      (intLiteral))))
+(ERROR
+  (identifier)
+  (unaryExpr
+    (ERROR
+      (intLiteral)
+      (identifier))
+    (intLiteral)))

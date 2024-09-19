@@ -51,7 +51,8 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (modifier)
     (identifier)
@@ -85,7 +86,8 @@ examples {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (variableExpr
@@ -97,7 +99,8 @@ examples {
             (variableExpr
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (propertyCallExpr
@@ -115,7 +118,8 @@ examples {
                 (identifier))
               (identifier)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (slStringLiteral
@@ -133,20 +137,31 @@ examples {
                 (variableExpr
                   (identifier)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
+          (ERROR
+            (UNEXPECTED '\'))
+          (objectElement
+            (parenthesizedExpr
+              (variableExpr
+                (identifier))))
+          (objectElement
+            (mlStringLiteral))
+          (ERROR
+            (UNEXPECTED '\'))
+          (objectElement
+            (parenthesizedExpr
+              (variableExpr
+                (identifier))))
+          (objectElement
+            (mlStringLiteral))
+          (ERROR
+            (UNEXPECTED '\'))
+          (objectElement
+            (parenthesizedExpr
+              (variableExpr
+                (identifier))))
           (objectElement
             (mlStringLiteral
-              (interpolationExpr
-                (variableExpr
-                  (identifier)))))
-          (objectElement
-            (mlStringLiteral
-              (interpolationExpr
-                (variableExpr
-                  (identifier)))))
-          (objectElement
-            (mlStringLiteral
-              (interpolationExpr
-                (variableExpr
-                  (identifier))))))))))
+              (MISSING """""))))))))

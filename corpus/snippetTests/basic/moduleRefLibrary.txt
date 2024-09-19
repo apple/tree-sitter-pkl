@@ -4,7 +4,7 @@ basic/moduleRefLibrary
 
 open module moduleRefLibrary
 
-a = 42
+const a = 42
 
 aa = module.a
 
@@ -19,6 +19,7 @@ foo {}
       (qualifiedIdentifier
         (identifier))))
   (classProperty
+    (modifier)
     (identifier)
     (intLiteral))
   (classProperty

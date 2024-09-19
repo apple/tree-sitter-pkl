@@ -11,7 +11,9 @@ res1 = "bye"
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart))))

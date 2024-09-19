@@ -26,7 +26,8 @@ res2 = test.catch(() ->
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classMethod
     (methodHeader
       (modifier)

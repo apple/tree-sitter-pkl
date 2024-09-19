@@ -10,7 +10,8 @@ res = new Bird {}
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (newExpr

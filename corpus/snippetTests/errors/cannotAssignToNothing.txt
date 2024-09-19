@@ -11,4 +11,5 @@ value: nothing = "foo"
     (identifier)
     (typeAnnotation
       (type))
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart))))

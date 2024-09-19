@@ -484,7 +484,8 @@ withinLetExpr =
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (newExpr
@@ -918,9 +919,11 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))
           (objectBody
             (whenGenerator
@@ -949,9 +952,11 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))
           (objectBody
             (whenGenerator
@@ -982,9 +987,11 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))
           (objectBody
             (whenGenerator
@@ -1018,9 +1025,11 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))
           (objectBody
             (whenGenerator
@@ -1227,10 +1236,12 @@ withinLetExpr =
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1262,160 +1273,12 @@ withinLetExpr =
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
-                (intLiteral))))
-          (objectBody
-            (whenGenerator
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier))
-              (objectBody
-                (objectEntry
-                  (variableExpr
-                    (identifier))
-                  (binaryExpr
-                    (variableExpr
-                      (identifier))
-                    (intLiteral))))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (forGenerator
-          (typedIdentifier
-            (identifier))
-          (typedIdentifier
-            (identifier))
-          (newExpr
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (objectBody
-              (objectEntry
-                (slStringLiteral)
-                (intLiteral))
-              (objectEntry
-                (slStringLiteral)
-                (intLiteral))))
-          (objectBody
-            (whenGenerator
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier))
-              (objectBody
-                (objectEntry
-                  (methodCallExpr
-                    (variableExpr
-                      (identifier))
-                    (identifier)
-                    (argumentList))
-                  (binaryExpr
-                    (variableExpr
-                      (identifier))
-                    (intLiteral))))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (forGenerator
-          (typedIdentifier
-            (identifier))
-          (typedIdentifier
-            (identifier))
-          (newExpr
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (objectBody
-              (objectEntry
-                (slStringLiteral)
-                (intLiteral))
-              (objectEntry
-                (slStringLiteral)
-                (intLiteral))))
-          (objectBody
-            (whenGenerator
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier))
-              (objectBody
-                (objectEntry
-                  (methodCallExpr
-                    (variableExpr
-                      (identifier))
-                    (identifier)
-                    (argumentList))
-                  (binaryExpr
-                    (variableExpr
-                      (identifier))
-                    (intLiteral))))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (forGenerator
-          (typedIdentifier
-            (identifier))
-          (newExpr
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (objectBody
-              (objectEntry
-                (slStringLiteral)
-                (intLiteral))
-              (objectEntry
-                (slStringLiteral)
-                (intLiteral))))
-          (objectBody
-            (whenGenerator
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier))
-              (objectBody
-                (objectEntry
-                  (variableExpr
-                    (identifier))
-                  (binaryExpr
-                    (variableExpr
-                      (identifier))
-                    (intLiteral))))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (forGenerator
-          (typedIdentifier
-            (identifier))
-          (newExpr
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (objectBody
-              (objectEntry
-                (slStringLiteral)
-                (intLiteral))
-              (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1449,10 +1312,12 @@ withinLetExpr =
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1489,10 +1354,170 @@ withinLetExpr =
                 (identifier)))
             (objectBody
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))
               (objectEntry
-                (slStringLiteral)
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (intLiteral))))
+          (objectBody
+            (whenGenerator
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (objectBody
+                (objectEntry
+                  (methodCallExpr
+                    (variableExpr
+                      (identifier))
+                    (identifier)
+                    (argumentList))
+                  (binaryExpr
+                    (variableExpr
+                      (identifier))
+                    (intLiteral))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (forGenerator
+          (typedIdentifier
+            (identifier))
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (intLiteral))
+              (objectEntry
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (intLiteral))))
+          (objectBody
+            (whenGenerator
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (objectBody
+                (objectEntry
+                  (variableExpr
+                    (identifier))
+                  (binaryExpr
+                    (variableExpr
+                      (identifier))
+                    (intLiteral))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (forGenerator
+          (typedIdentifier
+            (identifier))
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (intLiteral))
+              (objectEntry
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (intLiteral))))
+          (objectBody
+            (whenGenerator
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (objectBody
+                (objectEntry
+                  (variableExpr
+                    (identifier))
+                  (binaryExpr
+                    (variableExpr
+                      (identifier))
+                    (intLiteral))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (forGenerator
+          (typedIdentifier
+            (identifier))
+          (typedIdentifier
+            (identifier))
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (intLiteral))
+              (objectEntry
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (intLiteral))))
+          (objectBody
+            (whenGenerator
+              (propertyCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier))
+              (objectBody
+                (objectEntry
+                  (methodCallExpr
+                    (variableExpr
+                      (identifier))
+                    (identifier)
+                    (argumentList))
+                  (binaryExpr
+                    (variableExpr
+                      (identifier))
+                    (intLiteral))))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (forGenerator
+          (typedIdentifier
+            (identifier))
+          (typedIdentifier
+            (identifier))
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectEntry
+                (slStringLiteral
+                  (slStringLiteralPart))
+                (intLiteral))
+              (objectEntry
+                (slStringLiteral
+                  (slStringLiteralPart))
                 (intLiteral))))
           (objectBody
             (whenGenerator
@@ -1519,7 +1544,8 @@ withinLetExpr =
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (whenGenerator
           (binaryExpr
@@ -1529,7 +1555,8 @@ withinLetExpr =
             (intLiteral))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral))))
         (whenGenerator
           (binaryExpr
@@ -1539,7 +1566,8 @@ withinLetExpr =
             (intLiteral))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))))))
   (classProperty
     (identifier)
@@ -1549,7 +1577,8 @@ withinLetExpr =
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (whenGenerator
           (binaryExpr
@@ -1559,7 +1588,8 @@ withinLetExpr =
             (intLiteral))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral))))
         (whenGenerator
           (binaryExpr
@@ -1569,7 +1599,8 @@ withinLetExpr =
             (intLiteral))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))))))
   (classProperty
     (identifier)
@@ -1584,9 +1615,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1594,8 +1628,10 @@ withinLetExpr =
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (objectBody
                 (objectEntry
                   (binaryExpr
@@ -1621,9 +1657,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1631,8 +1670,10 @@ withinLetExpr =
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (objectBody
                 (objectEntry
                   (binaryExpr
@@ -1660,9 +1701,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1672,8 +1716,10 @@ withinLetExpr =
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (objectBody
                 (objectEntry
                   (binaryExpr
@@ -1709,9 +1755,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1721,8 +1770,10 @@ withinLetExpr =
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (objectBody
                 (objectEntry
                   (binaryExpr
@@ -1751,7 +1802,8 @@ withinLetExpr =
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (forGenerator
           (typedIdentifier
@@ -1778,7 +1830,8 @@ withinLetExpr =
                       (identifier))
                     (intLiteral)))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (forGenerator
           (typedIdentifier
@@ -1786,9 +1839,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1796,8 +1852,10 @@ withinLetExpr =
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (objectBody
                 (objectEntry
                   (binaryExpr
@@ -1811,7 +1869,8 @@ withinLetExpr =
                     (variableExpr
                       (identifier))))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (classProperty
     (identifier)
@@ -1821,7 +1880,8 @@ withinLetExpr =
           (identifier)))
       (objectBody
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (forGenerator
           (typedIdentifier
@@ -1848,7 +1908,8 @@ withinLetExpr =
                       (identifier))
                     (intLiteral)))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (forGenerator
           (typedIdentifier
@@ -1856,9 +1917,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -1866,8 +1930,10 @@ withinLetExpr =
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
-                  (slStringLiteral)))
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
               (objectBody
                 (objectEntry
                   (binaryExpr
@@ -1881,7 +1947,8 @@ withinLetExpr =
                     (variableExpr
                       (identifier))))))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))))
   (lineComment)
   (classProperty
@@ -1911,9 +1978,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (objectEntry
               (variableExpr
@@ -1962,9 +2032,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (objectEntry
               (variableExpr
@@ -2022,9 +2095,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (objectEntry
               (variableExpr
@@ -2094,9 +2170,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (objectEntry
               (variableExpr
@@ -2139,7 +2218,8 @@ withinLetExpr =
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral))
@@ -2149,7 +2229,8 @@ withinLetExpr =
             (identifier)
             (argumentList
               (intLiteral)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -2198,20 +2279,26 @@ withinLetExpr =
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral))
         (objectElement
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (newExpr
@@ -2276,7 +2363,8 @@ withinLetExpr =
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
           (intLiteral)))))
@@ -2335,16 +2423,22 @@ withinLetExpr =
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectEntry
-          (slStringLiteral)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (slStringLiteral)))))
+          (slStringLiteral
+            (slStringLiteralPart))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -2410,9 +2504,12 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (objectEntry
               (variableExpr
@@ -2423,20 +2520,24 @@ withinLetExpr =
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral)))
+                (slStringLiteral
+                  (slStringLiteralPart))))
             (objectEntry
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral))
+                (slStringLiteral
+                  (slStringLiteralPart)))
               (binaryExpr
                 (variableExpr
                   (identifier))
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (newExpr
@@ -2450,8 +2551,10 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectBody
             (forGenerator
               (typedIdentifier
@@ -2461,9 +2564,11 @@ withinLetExpr =
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)))
               (objectBody
                 (objectEntry
@@ -2520,9 +2625,11 @@ withinLetExpr =
               (methodCallExpr
                 (identifier)
                 (argumentList
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)
-                  (slStringLiteral)
+                  (slStringLiteral
+                    (slStringLiteralPart))
                   (intLiteral)))
               (objectBody
                 (objectEntry
@@ -2868,9 +2975,11 @@ withinLetExpr =
           (methodCallExpr
             (identifier)
             (argumentList
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral)))
           (objectBody
             (objectEntry
@@ -2891,9 +3000,11 @@ withinLetExpr =
       (methodCallExpr
         (identifier)
         (argumentList
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (intLiteral)))
       (newExpr
         (type

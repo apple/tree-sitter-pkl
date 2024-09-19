@@ -58,8 +58,10 @@ person = new Person {
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral))
+          (slStringLiteral
+            (slStringLiteralPart)))
         (lineComment)
         (objectProperty
           (identifier)
-          (slStringLiteral))))))
+          (slStringLiteral
+            (slStringLiteralPart)))))))

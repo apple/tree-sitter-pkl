@@ -127,32 +127,66 @@ examples {
 (module
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
+          (ERROR)
           (objectElement
-            (mlStringLiteral
-              (interpolationExpr
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (ERROR)
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (ERROR
+                (UNEXPECTED '\'))
+              (argumentList
                 (variableExpr
-                  (identifier)))
-              (escapeSequence)
-              (interpolationExpr
+                  (identifier)))))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (ERROR
+            (escapeSequence))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (ERROR
+                (UNEXPECTED '\'))
+              (argumentList
                 (propertyCallExpr
                   (newExpr
                     (type
@@ -162,6 +196,7 @@ examples {
                       (objectProperty
                         (identifier)
                         (slStringLiteral
+                          (slStringLiteralPart)
                           (interpolationExpr
                             (propertyCallExpr
                               (newExpr
@@ -174,86 +209,305 @@ examples {
                                     (variableExpr
                                       (identifier)))))
                               (identifier)))))))
-                  (identifier)))))))
+                  (identifier)))))
+          (ERROR
+            (identifier))
+          (objectElement
+            (mlStringLiteral
+              (MISSING """"")))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (mlStringLiteral
+              (ERROR
+                (UNEXPECTED '\'))
               (escapeSequence)
+              (ERROR)
+              (escapeSequence)
+              (mlStringLiteralPart)))
+          (objectElement
+            (mlStringLiteral
+              (ERROR
+                (UNEXPECTED '\')
+                (identifier))
               (escapeSequence)
               (escapeSequence)))
-          (objectElement
-            (mlStringLiteral
-              (escapeSequence)
-              (escapeSequence)
-              (escapeSequence)))
-          (objectElement
-            (mlStringLiteral
-              (escapeSequence)
-              (escapeSequence)
-              (escapeSequence)
-              (escapeSequence)
-              (escapeSequence)
-              (escapeSequence)
-              (escapeSequence)
-              (escapeSequence)))))
-      (objectEntry
-        (slStringLiteral)
-        (objectBody
-          (objectElement
-            (mlStringLiteral))))
-      (objectEntry
-        (slStringLiteral)
-        (objectBody
-          (objectElement
-            (mlStringLiteral))
-          (objectElement
-            (mlStringLiteral))
-          (objectElement
-            (mlStringLiteral))
-          (objectElement
-            (mlStringLiteral))
-          (objectElement
-            (mlStringLiteral))))
-      (objectEntry
-        (slStringLiteral)
-        (objectBody
-          (objectElement
-            (mlStringLiteral))
-          (objectElement
-            (mlStringLiteral))
-          (objectElement
-            (mlStringLiteral))))
-      (objectEntry
-        (slStringLiteral)
-        (objectBody
-          (objectElement
-            (mlStringLiteral))
-          (objectElement
-            (mlStringLiteral))
+          (ERROR
+            (UNEXPECTED '\'))
           (objectProperty
-            (modifier)
             (identifier)
+            (objectBody
+              (objectElement
+                (intLiteral))))
+          (ERROR
+            (escapeSequence)
+            (escapeSequence)
+            (escapeSequence)
+            (escapeSequence)
+            (escapeSequence)
+            (escapeSequence)
+            (escapeSequence))
+          (objectElement
+            (mlStringLiteral
+              (MISSING """"")))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (ERROR)
+          (objectElement
+            (intLiteral))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (ERROR
+                (UNEXPECTED '%'))
+              (variableExpr
+                (identifier))))
+          (objectElement
+            (mlStringLiteral
+              (MISSING """"")))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (ERROR)
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (mlStringLiteral))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (mlStringLiteral))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (mlStringLiteral))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (mlStringLiteral))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (mlStringLiteral
+              (MISSING """"")))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (ERROR)
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (mlStringLiteral))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (mlStringLiteral))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (mlStringLiteral
+              (MISSING """"")))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (ERROR)
+          (objectElement
+            (slStringLiteral
+              (slStringLiteralPart)))
+          (objectElement
+            (mlStringLiteral))
+          (objectElement
+            (slStringLiteral))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
             (slStringLiteral))
           (objectElement
             (mlStringLiteral
+              (MISSING """"")))
+          (objectProperty
+            (modifier)
+            (identifier)
+            (slStringLiteral
+              (slStringLiteralPart)))
+          (objectElement
+            (mlStringLiteral
+              (MISSING """"")))
+          (objectElement
+            (slStringLiteral
               (interpolationExpr
                 (variableExpr
                   (identifier)))))
           (objectElement
-            (mlStringLiteral
+            (mlStringLiteral))
+          (objectElement
+            (slStringLiteral
+              (ERROR)
               (interpolationExpr
                 (variableExpr
                   (identifier)))))
           (objectElement
-            (mlStringLiteral))
-          (objectProperty
-            (modifier)
-            (identifier)
+            (slStringLiteral))
+          (objectElement
             (slStringLiteral))
           (objectElement
             (mlStringLiteral
-              (interpolationExpr
+              (MISSING """"")))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
                 (variableExpr
-                  (identifier))))))))))
+                  (identifier))
+                (ERROR
+                  (identifier)))))
+          (objectElement
+            (slStringLiteral))
+          (objectElement
+            (mlStringLiteral
+              (MISSING """"")))
+          (objectProperty
+            (modifier)
+            (identifier)
+            (slStringLiteral
+              (slStringLiteralPart)))
+          (objectElement
+            (mlStringLiteral
+              (MISSING """"")))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (ERROR
+                (UNEXPECTED '\'))
+              (argumentList
+                (variableExpr
+                  (identifier)))))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (variableExpr
+                  (identifier))
+                (ERROR
+                  (identifier)))))
+          (objectElement
+            (slStringLiteral))
+          (objectElement
+            (mlStringLiteral
+              (MISSING """""))))))))

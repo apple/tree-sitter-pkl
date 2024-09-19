@@ -1,0 +1,42 @@
+================================================================================
+errors/const/constExplicitThis
+================================================================================
+
+open class A {
+  a = 1
+}
+
+class B extends A {
+  const b = this.a
+}
+
+b: B
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (intLiteral))))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (qualifiedIdentifier
+        (identifier)))
+    (classBody
+      (classProperty
+        (modifier)
+        (identifier)
+        (propertyCallExpr
+          (thisExpr)
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))))

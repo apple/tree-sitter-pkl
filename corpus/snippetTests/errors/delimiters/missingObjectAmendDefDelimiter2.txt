@@ -10,11 +10,13 @@ foo {
 --------------------------------------------------------------------------------
 
 (module
-  (ERROR
+  (classProperty
     (identifier)
-    (variableObjectLiteral
-      (identifier)
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral))))))
+    (objectBody
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral))))
+      (MISSING "}"))))

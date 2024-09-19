@@ -61,7 +61,8 @@ output {
             (objectElement
               (nullLiteral))
             (objectElement
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (objectProperty
         (identifier)
         (newExpr
@@ -70,10 +71,12 @@ output {
               (identifier)))
           (objectBody
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (nullLiteral))
             (objectEntry
-              (slStringLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))
               (intLiteral))
             (objectEntry
               (newExpr
@@ -82,7 +85,8 @@ output {
                     (identifier)))
                 (objectBody
                   (objectElement
-                    (slStringLiteral))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
               (nullLiteral)))))
       (objectProperty
         (identifier)

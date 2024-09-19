@@ -40,11 +40,19 @@ class Baz extends Bar {}
 
 res7 = (new Baz {}).value
 
+typealias MappingOrListing = Mapping|Listing
+
+res8 = new {
+  foo = 5
+  bar = if (foo is MappingOrListing) "bar" else foo
+}
+
 --------------------------------------------------------------------------------
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (typeAlias
     (identifier)
     (typeParameterList
@@ -93,11 +101,13 @@ res7 = (new Baz {}).value
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral)))
+            (slStringLiteral
+              (slStringLiteralPart))))
         (methodCallExpr
           (identifier)
           (argumentList
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (typeAlias
     (identifier)
     (typeParameterList
@@ -132,9 +142,11 @@ res7 = (new Baz {}).value
       (identifier)
       (argumentList
         (intLiteral)
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (intLiteral)
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (typeAlias
     (identifier)
     (typeParameterList
@@ -163,11 +175,13 @@ res7 = (new Baz {}).value
     (methodCallExpr
       (identifier)
       (argumentList
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (propertyCallExpr
           (intLiteral)
           (identifier))
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (propertyCallExpr
           (intLiteral)
           (identifier)))))
@@ -217,7 +231,8 @@ res7 = (new Baz {}).value
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (newExpr
           (type
             (qualifiedIdentifier
@@ -225,7 +240,8 @@ res7 = (new Baz {}).value
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (nullLiteral))))
   (typeAlias
     (identifier)
@@ -265,7 +281,8 @@ res7 = (new Baz {}).value
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (methodCallExpr
@@ -280,7 +297,8 @@ res7 = (new Baz {}).value
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (clazz
     (modifier)
     (identifier)
@@ -312,4 +330,33 @@ res7 = (new Baz {}).value
             (qualifiedIdentifier
               (identifier)))
           (objectBody)))
-      (identifier))))
+      (identifier)))
+  (typeAlias
+    (identifier)
+    (type
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (objectBody
+        (objectProperty
+          (identifier)
+          (intLiteral))
+        (objectProperty
+          (identifier)
+          (ifExpr
+            (isExpr
+              (variableExpr
+                (identifier))
+              (type
+                (qualifiedIdentifier
+                  (identifier))))
+            (slStringLiteral
+              (slStringLiteralPart))
+            (variableExpr
+              (identifier))))))))

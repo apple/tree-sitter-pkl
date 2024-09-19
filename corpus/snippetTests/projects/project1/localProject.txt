@@ -10,7 +10,8 @@ res = penguin
 
 (module
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (variableExpr

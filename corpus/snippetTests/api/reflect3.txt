@@ -33,23 +33,27 @@ facts {
 --------------------------------------------------------------------------------
 
 (module
-  (lineComment)
-  (lineComment)
   (moduleHeader
+    (docComment)
     (moduleClause
       (qualifiedIdentifier
         (identifier)
         (identifier)))
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (importClause
-    (stringConstant))
+    (stringConstant
+      (slStringLiteralPart)))
   (classProperty
     (modifier)
     (identifier)
@@ -64,7 +68,8 @@ facts {
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectElement
             (binaryExpr
@@ -85,14 +90,16 @@ facts {
                   (identifier)))
               (identifier)
               (argumentList
-                (slStringLiteral))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))
           (objectElement
             (binaryExpr
               (propertyCallExpr
                 (variableExpr
                   (identifier))
                 (identifier))
-              (slStringLiteral)))
+              (slStringLiteral
+                (slStringLiteralPart))))
           (objectElement
             (methodCallExpr
               (propertyCallExpr
@@ -104,7 +111,8 @@ facts {
                 (methodCallExpr
                   (identifier)
                   (argumentList
-                    (slStringLiteral))))))
+                    (slStringLiteral
+                      (slStringLiteralPart)))))))
           (objectElement
             (methodCallExpr
               (binaryExpr
@@ -179,5 +187,6 @@ facts {
                       (identifier)
                       (objectBody
                         (objectEntry
-                          (slStringLiteral)
+                          (slStringLiteral
+                            (slStringLiteralPart))
                           (objectBody))))))))))))))

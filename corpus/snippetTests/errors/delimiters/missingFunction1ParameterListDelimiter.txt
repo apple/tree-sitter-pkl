@@ -14,8 +14,7 @@ res1 = 42
       (parameterList
         (typedIdentifier
           (identifier))
-        (MISSING
-          ")"))
+        (MISSING "))
       (binaryExpr
         (variableExpr
           (identifier))

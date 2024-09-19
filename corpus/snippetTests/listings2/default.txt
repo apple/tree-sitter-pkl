@@ -79,7 +79,8 @@ res4 = (res3) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -103,7 +104,8 @@ res4 = (res3) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (objectLiteral
@@ -150,4 +152,5 @@ res4 = (res3) {
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral)))))))))
+                (slStringLiteral
+                  (slStringLiteralPart))))))))))

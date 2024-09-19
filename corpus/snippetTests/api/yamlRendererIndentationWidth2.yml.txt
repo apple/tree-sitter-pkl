@@ -80,7 +80,8 @@ output {
 (module
   (classProperty
     (identifier)
-    (slStringLiteral))
+    (slStringLiteral
+      (slStringLiteralPart)))
   (classProperty
     (identifier)
     (intLiteral))
@@ -88,9 +89,11 @@ output {
     (identifier)
     (objectBody
       (objectElement
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (objectElement
-        (slStringLiteral))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (objectBody
@@ -98,16 +101,20 @@ output {
         (newExpr
           (objectBody
             (objectElement
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectElement
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (objectElement
         (newExpr
           (objectBody
             (objectElement
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectElement
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (objectBody
@@ -116,55 +123,68 @@ output {
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))
+              (slStringLiteral
+                (slStringLiteralPart))))))
       (objectElement
         (newExpr
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral)))))))
+              (slStringLiteral
+                (slStringLiteralPart))))))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))
       (objectEntry
-        (slStringLiteral)
+        (slStringLiteral
+          (slStringLiteralPart))
         (objectBody
           (objectEntry
-            (slStringLiteral)
+            (slStringLiteral
+              (slStringLiteralPart))
             (objectBody
               (objectProperty
                 (identifier)
-                (slStringLiteral))))))))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
   (classProperty
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral))
+        (slStringLiteral
+          (slStringLiteralPart)))
       (objectProperty
         (identifier)
         (intLiteral))))
@@ -176,7 +196,8 @@ output {
         (objectBody
           (objectProperty
             (identifier)
-            (slStringLiteral))))
+            (slStringLiteral
+              (slStringLiteralPart)))))
       (objectProperty
         (identifier)
         (objectBody
@@ -185,12 +206,22 @@ output {
             (intLiteral))))))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (ERROR
+      (identifier))
+    (variableExpr
+      (identifier)))
+  (ERROR
+    (identifier))
   (classProperty
     (identifier)
-    (mlStringLiteral))
+    (ERROR
+      (identifier))
+    (variableExpr
+      (identifier)))
   (classProperty
     (identifier)
+    (ERROR
+      (identifier))
     (objectBody
       (objectProperty
         (identifier)

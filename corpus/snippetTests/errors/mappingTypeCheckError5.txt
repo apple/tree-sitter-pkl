@@ -1,0 +1,43 @@
+================================================================================
+errors/mappingTypeCheckError5
+================================================================================
+
+// GeneratorObjectLiteralNode
+res: Mapping<String, String> = new {
+  when (false) {
+    ["foo"] = "foo"
+  }
+  [1] = "foo"
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (lineComment)
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (newExpr
+      (objectBody
+        (whenGenerator
+          (falseLiteral)
+          (objectBody
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart)))))
+        (objectEntry
+          (intLiteral)
+          (slStringLiteral
+            (slStringLiteralPart)))))))

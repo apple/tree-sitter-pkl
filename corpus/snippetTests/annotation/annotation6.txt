@@ -16,4 +16,5 @@ annotation/annotation6
       (type
         (qualifiedIdentifier
           (identifier))))
-    (slStringLiteral)))
+    (slStringLiteral
+      (slStringLiteralPart))))

@@ -1,0 +1,44 @@
+================================================================================
+errors/const/constSubclass2
+================================================================================
+
+open class Foo {
+  x: Int
+}
+
+class Bar extends Foo {
+  const x = 2
+}
+
+bar = new Bar {}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (qualifiedIdentifier
+        (identifier)))
+    (classBody
+      (classProperty
+        (modifier)
+        (identifier)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody))))

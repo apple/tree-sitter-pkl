@@ -1,0 +1,30 @@
+================================================================================
+errors/mappingTypeCheckError2
+================================================================================
+
+res: Mapping<String, String> = new {
+  ["foo"] = 1
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (newExpr
+      (objectBody
+        (objectEntry
+          (slStringLiteral
+            (slStringLiteralPart))
+          (intLiteral))))))

@@ -92,17 +92,21 @@ res3: Mapping<String, Person> = new {
               (identifier)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))))
+              (slStringLiteral
+                (slStringLiteralPart)))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectProperty
               (identifier)
               (intLiteral)))))))
@@ -157,29 +161,34 @@ res3: Mapping<String, Person> = new {
               (variableExpr
                 (identifier)))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody
             (objectProperty
               (identifier)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral))
+              (slStringLiteral
+                (slStringLiteralPart)))
             (objectProperty
               (identifier)
               (intLiteral))))
         (objectEntry
-          (slStringLiteral)
+          (slStringLiteral
+            (slStringLiteralPart))
           (objectBody
             (objectProperty
               (identifier)
               (binaryExpr
                 (propertyCallExpr
                   (identifier))
-                (slStringLiteral)))
+                (slStringLiteral
+                  (slStringLiteralPart))))
             (objectProperty
               (identifier)
               (intLiteral))))))))

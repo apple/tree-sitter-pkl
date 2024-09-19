@@ -15,10 +15,12 @@ pigeon {
   (lineComment)
   (moduleHeader
     (extendsOrAmendsClause
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (slStringLiteral)))))
+        (slStringLiteral
+          (slStringLiteralPart))))))

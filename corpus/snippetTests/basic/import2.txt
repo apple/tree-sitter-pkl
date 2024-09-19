@@ -15,7 +15,8 @@ libBar = i.bar
     (modifier)
     (identifier)
     (importExpr
-      (stringConstant)))
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (intLiteral))
