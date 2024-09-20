@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/localPropertyOverride3
-================================================================================
+==========
 
 // verify that foo2.y gets foo2.l even though foo1.l is already in the property cache
 
@@ -14,41 +14,5 @@ foo2 = (foo1) {
   y = l
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (lineComment)
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (modifier)
-        (identifier)
-        (binaryExpr
-          (slStringLiteral
-            (slStringLiteralPart))
-          (slStringLiteral
-            (slStringLiteralPart))))
-      (objectProperty
-        (identifier)
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (modifier)
-          (identifier)
-          (binaryExpr
-            (slStringLiteral
-              (slStringLiteralPart))
-            (slStringLiteral
-              (slStringLiteralPart))))
-        (objectProperty
-          (identifier)
-          (variableExpr
-            (identifier)))))))

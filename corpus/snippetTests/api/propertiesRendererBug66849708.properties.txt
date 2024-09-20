@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/propertiesRendererBug66849708.properties
-================================================================================
+==========
 
 object {
   nullable = null
@@ -25,83 +25,5 @@ output {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (nullLiteral))
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (nullLiteral))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList
-        (slStringLiteral
-          (slStringLiteralPart))
-        (nullLiteral)
-        (slStringLiteral
-          (slStringLiteralPart))
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (trueLiteral))
-            (objectProperty
-              (identifier)
-              (objectBody
-                (objectEntry
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (functionLiteral
-                    (parameterList
-                      (typedIdentifier
-                        (identifier)))
-                    (slStringLiteral
-                      (slStringLiteralPart))))
-                (objectEntry
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (functionLiteral
-                    (parameterList
-                      (typedIdentifier
-                        (identifier)))
-                    (slStringLiteral
-                      (slStringLiteralPart))))
-                (objectEntry
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (functionLiteral
-                    (parameterList
-                      (typedIdentifier
-                        (identifier)))
-                    (slStringLiteral
-                      (slStringLiteralPart))))))))))))

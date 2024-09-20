@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/lateBinding3
-================================================================================
+==========
 
 class Foo {
   x: Int
@@ -24,58 +24,5 @@ v3 = (v1) {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (variableExpr
-                (identifier))))))
-      (objectProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectProperty
-              (identifier)
-              (intLiteral))))))))

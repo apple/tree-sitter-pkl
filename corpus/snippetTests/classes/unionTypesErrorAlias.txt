@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/unionTypesErrorAlias
-================================================================================
+==========
 
 typealias A =
     "aaaaaaaaaaaaaaa"
@@ -23,71 +23,5 @@ res1 = new X {
   a = "other"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (typeAlias
-    (identifier)
-    (type
-      (type
-        (type
-          (type
-            (type
-              (type
-                (type
-                  (type
-                    (type
-                      (type
-                        (type
-                          (stringConstant
-                            (slStringLiteralPart)))
-                        (type
-                          (stringConstant
-                            (slStringLiteralPart))))
-                      (type
-                        (stringConstant
-                          (slStringLiteralPart))))
-                    (type
-                      (stringConstant
-                        (slStringLiteralPart))))
-                  (type
-                    (stringConstant
-                      (slStringLiteralPart))))
-                (type
-                  (stringConstant
-                    (slStringLiteralPart))))
-              (type
-                (stringConstant
-                  (slStringLiteralPart))))
-            (type
-              (stringConstant
-                (slStringLiteralPart))))
-          (type
-            (stringConstant
-              (slStringLiteralPart))))
-        (type
-          (stringConstant
-            (slStringLiteralPart))))
-      (type
-        (stringConstant
-          (slStringLiteralPart)))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))))

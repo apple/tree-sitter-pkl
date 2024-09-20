@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/classExtendsSelf
-================================================================================
+==========
 
 open class Recurring extends Recurring {
 
@@ -8,21 +8,5 @@ open class Recurring extends Recurring {
 
 f: Recurring = new {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (modifier)
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
-    (classBody))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody))))

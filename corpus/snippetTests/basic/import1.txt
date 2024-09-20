@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/import1
-================================================================================
+==========
 
 import "imported.pkl"
 import "imported.pkl" as other
@@ -12,40 +12,5 @@ res2 = imported.bar
 res3 = other.foo
 res4 = other.bar
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart))
-    (identifier))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (variableExpr
-        (identifier))
-      (identifier))))

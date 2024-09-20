@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/wrongType1
-================================================================================
+==========
 
 class Person {
   name: String
@@ -10,25 +10,5 @@ pigeon = new Person {
   name = 42
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral))))))

@@ -1,23 +1,10 @@
-================================================================================
+==========
 errors/userDefinedTypeParameter1
-================================================================================
+==========
 
 class Box<A> {
   element: A
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (typeParameterList
-      (typeParameter
-        (identifier)))
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))))))

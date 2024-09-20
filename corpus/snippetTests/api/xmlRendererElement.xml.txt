@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/xmlRendererElement.xml
-================================================================================
+==========
 
 import "pkl:xml"
 
@@ -15,89 +15,5 @@ output {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectElement
-          (propertyCallExpr
-            (intLiteral)
-            (identifier)))
-        (objectElement
-          (propertyCallExpr
-            (intLiteral)
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (slStringLiteral
-                (slStringLiteralPart)))
-            (objectProperty
-              (identifier)
-              (objectBody
-                (objectEntry
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (functionLiteral
-                    (parameterList
-                      (typedIdentifier
-                        (identifier)))
-                    (methodCallExpr
-                      (methodCallExpr
-                        (variableExpr
-                          (identifier))
-                        (identifier)
-                        (argumentList))
-                      (identifier)
-                      (argumentList
-                        (functionLiteral
-                          (parameterList
-                            (typedIdentifier
-                              (identifier)))
-                          (objectLiteral
-                            (parenthesizedExpr
-                              (methodCallExpr
-                                (variableExpr
-                                  (identifier))
-                                (identifier)
-                                (argumentList
-                                  (slStringLiteral
-                                    (slStringLiteralPart)))))
-                            (objectBody
-                              (objectElement
-                                (objectLiteral
-                                  (parenthesizedExpr
-                                    (methodCallExpr
-                                      (variableExpr
-                                        (identifier))
-                                      (identifier)
-                                      (argumentList
-                                        (propertyCallExpr
-                                          (variableExpr
-                                            (identifier))
-                                          (identifier)))))
-                                  (objectBody
-                                    (objectElement
-                                      (propertyCallExpr
-                                        (variableExpr
-                                          (identifier))
-                                        (identifier)))))))))))))))))))))

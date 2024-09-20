@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/constraints10
-================================================================================
+==========
 
 import "pkl:test"
 
@@ -22,106 +22,5 @@ res3 = test.catch(() ->
   }.a
 )
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classMethod
-    (methodHeader
-      (modifier)
-      (identifier)
-      (parameterList
-        (typedIdentifier
-          (identifier)
-          (typeAnnotation
-            (type
-              (qualifiedIdentifier
-                (identifier))))))
-      (typeAnnotation
-        (type
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (type
-            (qualifiedIdentifier
-              (identifier))))))
-    (functionLiteral
-      (parameterList
-        (typedIdentifier
-          (identifier)))
-      (methodCallExpr
-        (variableExpr
-          (identifier))
-        (identifier)
-        (argumentList
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (variableExpr
-                (identifier))))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (binaryExpr
-              (variableExpr
-                (identifier))
-              (intLiteral))
-            (methodCallExpr
-              (identifier)
-              (argumentList
-                (slStringLiteral
-                  (escapeSequence)
-                  (slStringLiteralPart)
-                  (escapeSequence)
-                  (slStringLiteralPart)
-                  (escapeSequence)
-                  (slStringLiteralPart))))))
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody)))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (propertyCallExpr
-            (newExpr
-              (type
-                (qualifiedIdentifier
-                  (identifier)))
-              (objectBody
-                (objectProperty
-                  (identifier)
-                  (slStringLiteral
-                    (slStringLiteralPart)))))
-            (identifier)))))))

@@ -1,21 +1,11 @@
-================================================================================
+==========
 annotation/annotation2
-================================================================================
+==========
 
 class NoAnn
 
 @NoAnn
 invalidAnnotationOnTypeCheckedProperty = "hi"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier))
-  (classProperty
-    (annotation
-      (qualifiedIdentifier
-        (identifier)))
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart))))

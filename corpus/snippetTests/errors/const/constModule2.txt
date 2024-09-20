@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constModule2
-================================================================================
+==========
 
 class Foo {
   foo = module
@@ -8,19 +8,5 @@ class Foo {
 
 foo = new Foo {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (moduleExpr))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody))))

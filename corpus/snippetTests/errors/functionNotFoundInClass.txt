@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/functionNotFoundInClass
-================================================================================
+==========
 
 class Foo {
   function bar(x) = x
@@ -8,28 +8,5 @@ class Foo {
 
 res1 = new Foo {}.baz(42)
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classMethod
-        (methodHeader
-          (identifier)
-          (parameterList
-            (typedIdentifier
-              (identifier))))
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (newExpr
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (objectBody))
-      (identifier)
-      (argumentList
-        (intLiteral)))))

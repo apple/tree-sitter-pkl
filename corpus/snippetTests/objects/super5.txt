@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/super5
-================================================================================
+==========
 
 res1 {
   x = 42
@@ -14,56 +14,5 @@ res3 = (res2) {
   x = (() -> (() -> super.x).apply()).apply() + 1
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (binaryExpr
-            (methodCallExpr
-              (parenthesizedExpr
-                (functionLiteral
-                  (parameterList)
-                  (propertyCallExpr
-                    (identifier))))
-              (identifier)
-              (argumentList))
-            (intLiteral))))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (binaryExpr
-            (methodCallExpr
-              (parenthesizedExpr
-                (functionLiteral
-                  (parameterList)
-                  (methodCallExpr
-                    (parenthesizedExpr
-                      (functionLiteral
-                        (parameterList)
-                        (propertyCallExpr
-                          (identifier))))
-                    (identifier)
-                    (argumentList))))
-              (identifier)
-              (argumentList))
-            (intLiteral)))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/nonNull
-================================================================================
+==========
 
 amends "../snippetTest.pkl"
 
@@ -23,109 +23,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (clazz
-    (modifier)
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (unaryExpr
-                (intLiteral))
-              (intLiteral)))
-          (objectElement
-            (letExpr
-              (typedIdentifier
-                (identifier))
-              (intLiteral)
-              (binaryExpr
-                (unaryExpr
-                  (variableExpr
-                    (identifier)))
-                (intLiteral))))
-          (objectElement
-            (propertyCallExpr
-              (binaryExpr
-                (unaryExpr
-                  (propertyCallExpr
-                    (floatLiteral)
-                    (identifier)))
-                (floatLiteral))
-              (identifier)))
-          (objectElement
-            (binaryExpr
-              (unaryExpr
-                (methodCallExpr
-                  (identifier)
-                  (argumentList
-                    (intLiteral)
-                    (intLiteral))))
-              (methodCallExpr
-                (identifier)
-                (argumentList
-                  (intLiteral)
-                  (intLiteral)))))
-          (objectElement
-            (binaryExpr
-              (unaryExpr
-                (newExpr
-                  (type
-                    (qualifiedIdentifier
-                      (identifier)))
-                  (objectBody)))
-              (newExpr
-                (type
-                  (qualifiedIdentifier
-                    (identifier)))
-                (objectBody))))))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (unaryExpr
-                    (nullLiteral))))))
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (letExpr
-                    (typedIdentifier
-                      (identifier))
-                    (nullLiteral)
-                    (unaryExpr
-                      (variableExpr
-                        (identifier)))))))))))))

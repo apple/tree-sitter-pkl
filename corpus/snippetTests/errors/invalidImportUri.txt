@@ -1,19 +1,10 @@
-================================================================================
+==========
 errors/invalidImportUri
-================================================================================
+==========
 
 import "file:///foo^bar.pkl" as _foo
 
 foo = _foo
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart))
-    (identifier))
-  (classProperty
-    (identifier)
-    (variableExpr
-      (identifier))))

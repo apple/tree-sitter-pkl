@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constLexicalScope
-================================================================================
+==========
 
 class Foo {
   bar: String = "bar"
@@ -11,34 +11,5 @@ class Foo {
 
 foo: Foo = new {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (classProperty
-        (modifier)
-        (identifier)
-        (newExpr
-          (objectBody
-            (objectProperty
-              (identifier)
-              (variableExpr
-                (identifier))))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody))))

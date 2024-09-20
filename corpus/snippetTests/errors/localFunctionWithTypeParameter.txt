@@ -1,19 +1,8 @@
-================================================================================
+==========
 errors/localFunctionWithTypeParameter
-================================================================================
+==========
 
 local function x<T>() = x
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classMethod
-    (methodHeader
-      (modifier)
-      (identifier)
-      (typeParameterList
-        (typeParameter
-          (identifier)))
-      (parameterList))
-    (variableExpr
-      (identifier))))

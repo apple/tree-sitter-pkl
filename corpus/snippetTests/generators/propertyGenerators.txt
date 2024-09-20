@@ -1,6 +1,6 @@
-================================================================================
+==========
 generators/propertyGenerators
-================================================================================
+==========
 
 res1 {
   x = "x"
@@ -19,85 +19,5 @@ res2 = new Person {
   when (1 + 1 == 3) { age = 42 }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (whenGenerator
-        (binaryExpr
-          (binaryExpr
-            (intLiteral)
-            (intLiteral))
-          (intLiteral))
-        (objectBody
-          (objectProperty
-            (identifier)
-            (slStringLiteral
-              (slStringLiteralPart)))))
-      (whenGenerator
-        (binaryExpr
-          (binaryExpr
-            (intLiteral)
-            (intLiteral))
-          (intLiteral))
-        (objectBody
-          (objectProperty
-            (identifier)
-            (slStringLiteral
-              (slStringLiteralPart)))))
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (whenGenerator
-          (binaryExpr
-            (binaryExpr
-              (intLiteral)
-              (intLiteral))
-            (intLiteral))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (slStringLiteral
-                (slStringLiteralPart)))))
-        (whenGenerator
-          (binaryExpr
-            (binaryExpr
-              (intLiteral)
-              (intLiteral))
-            (intLiteral))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (intLiteral))))))))

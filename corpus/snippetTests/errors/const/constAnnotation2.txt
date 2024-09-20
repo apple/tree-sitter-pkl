@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constAnnotation2
-================================================================================
+==========
 
 import "pkl:reflect"
 
@@ -15,48 +15,5 @@ class Foo {}
 
 ann = reflect.Class(Foo).annotations[0]
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (clazz
-    (annotation
-      (qualifiedIdentifier
-        (identifier))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (variableExpr
-            (identifier)))))
-    (identifier)
-    (classBody))
-  (classProperty
-    (identifier)
-    (subscriptExpr
-      (propertyCallExpr
-        (methodCallExpr
-          (variableExpr
-            (identifier))
-          (identifier)
-          (argumentList
-            (variableExpr
-              (identifier))))
-        (identifier))
-      (intLiteral))))

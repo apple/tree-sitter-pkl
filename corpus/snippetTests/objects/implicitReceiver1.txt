@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/implicitReceiver1
-================================================================================
+==========
 
 x = 0
 foo {
@@ -11,27 +11,5 @@ foo {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (objectBody
-          (objectProperty
-            (identifier)
-            (intLiteral))
-          (objectProperty
-            (identifier)
-            (binaryExpr
-              (variableExpr
-                (identifier))
-              (intLiteral))))))))

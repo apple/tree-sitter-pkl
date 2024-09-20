@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/propertyNotFound1
-================================================================================
+==========
 
 foo {
   xbar = 1
@@ -10,24 +10,5 @@ foo {
 
 res1 = foo.bar
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (variableExpr
-        (identifier))
-      (identifier))))

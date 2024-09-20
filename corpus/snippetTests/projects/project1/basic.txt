@@ -1,6 +1,6 @@
-================================================================================
+==========
 projects/project1/basic
-================================================================================
+==========
 
 amends ".../snippetTest.pkl"
 
@@ -40,114 +40,5 @@ facts {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (variableExpr
-              (identifier)))
-          (objectElement
-            (variableExpr
-              (identifier)))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (importExpr
-              (stringConstant
-                (slStringLiteralPart))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (readExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (lineComment)
-          (objectElement
-            (readExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart)))
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart)))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart)))
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart)))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier))
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart)))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier))
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart)))))
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier))
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart))))))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/fixedProperty1
-================================================================================
+==========
 
 open module fixedProperty1
 
@@ -12,50 +12,5 @@ fixed res1: String = "hi"
 fixed res2: Boolean = true
 fixed res3: Bird = new { name = "Swallow" }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (modifier)
-      (qualifiedIdentifier
-        (identifier))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (modifier)
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (trueLiteral))
-  (classProperty
-    (modifier)
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))))

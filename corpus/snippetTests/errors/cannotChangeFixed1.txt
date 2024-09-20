@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/cannotChangeFixed1
-================================================================================
+==========
 
 abstract class Animal {
   fixed name: String
@@ -10,27 +10,5 @@ class Dog extends Animal {
   name = "Spot"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (modifier)
-    (identifier)
-    (classBody
-      (classProperty
-        (modifier)
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
-    (classBody
-      (classProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart))))))

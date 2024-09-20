@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/super4
-================================================================================
+==========
 
 parent {
  x = 1 + y
@@ -17,50 +17,5 @@ grandChild = (child) {
   y = 4
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (binaryExpr
-          (intLiteral)
-          (variableExpr
-            (identifier))))
-      (objectProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (binaryExpr
-            (propertyCallExpr
-              (identifier))
-            (intLiteral)))
-        (objectProperty
-          (identifier)
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (binaryExpr
-            (propertyCallExpr
-              (identifier))
-            (intLiteral)))
-        (objectProperty
-          (identifier)
-          (intLiteral))))))

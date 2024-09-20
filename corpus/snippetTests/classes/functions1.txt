@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/functions1
-================================================================================
+==========
 
 local const a = 1
 const b = 2
@@ -15,63 +15,5 @@ res1 = new X {}.compute()
 
 res2 = new X { d = 5 }.compute()
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (modifier)
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (modifier)
-    (identifier)
-    (intLiteral))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (modifier)
-        (identifier)
-        (intLiteral))
-      (classProperty
-        (identifier)
-        (intLiteral))
-      (classMethod
-        (methodHeader
-          (identifier)
-          (parameterList))
-        (binaryExpr
-          (binaryExpr
-            (binaryExpr
-              (variableExpr
-                (identifier))
-              (variableExpr
-                (identifier)))
-            (variableExpr
-              (identifier)))
-          (variableExpr
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (newExpr
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (objectBody))
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (newExpr
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (objectBody
-          (objectProperty
-            (identifier)
-            (intLiteral))))
-      (identifier)
-      (argumentList))))

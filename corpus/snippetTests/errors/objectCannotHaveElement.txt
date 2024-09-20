@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/objectCannotHaveElement
-================================================================================
+==========
 
 class Foo {
   normalProperty: Boolean
@@ -18,55 +18,5 @@ foo = new Foo {
   normalProperty = true
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))
-            (typeArgumentList
-              (type
-                (qualifiedIdentifier
-                  (identifier)))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectElement
-          (objectLiteral
-            (parenthesizedExpr
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier)))
-            (objectBody
-              (objectElement
-                (slStringLiteral
-                  (slStringLiteralPart))))))
-        (objectProperty
-          (identifier)
-          (trueLiteral))))))

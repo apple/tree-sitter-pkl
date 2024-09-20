@@ -1,6 +1,6 @@
-================================================================================
+==========
 lambdas/lambda1
-================================================================================
+==========
 
 local constant = () -> "abc"
 
@@ -15,72 +15,5 @@ local mult = (x, y) -> x * y
 
 res4 = mult.apply(2, 3)
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (functionLiteral
-      (parameterList)
-      (slStringLiteral
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (modifier)
-    (identifier)
-    (functionLiteral
-      (parameterList
-        (typedIdentifier
-          (identifier)))
-      (binaryExpr
-        (binaryExpr
-          (variableExpr
-            (identifier))
-          (intLiteral))
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (intLiteral))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (functionLiteral
-      (parameterList
-        (typedIdentifier
-          (identifier))
-        (typedIdentifier
-          (identifier)))
-      (binaryExpr
-        (variableExpr
-          (identifier))
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (intLiteral)
-        (intLiteral)))))

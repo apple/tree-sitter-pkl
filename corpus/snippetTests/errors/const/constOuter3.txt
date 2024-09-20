@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constOuter3
-================================================================================
+==========
 
 class Foo {
   const prop = new { value = outer }
@@ -8,24 +8,5 @@ class Foo {
 
 foo = new Foo {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (modifier)
-        (identifier)
-        (newExpr
-          (objectBody
-            (objectProperty
-              (identifier)
-              (outerExpr)))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constQualified
-================================================================================
+==========
 
 local notConstDyn = new Dynamic {
   prop = 2
@@ -12,33 +12,5 @@ class Foo {
 
 foo = new Foo {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral)))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (propertyCallExpr
-          (variableExpr
-            (identifier))
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody))))

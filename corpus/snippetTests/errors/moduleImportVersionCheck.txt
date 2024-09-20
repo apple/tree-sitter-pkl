@@ -1,20 +1,10 @@
-================================================================================
+==========
 errors/moduleImportVersionCheck
-================================================================================
+==========
 
 import "moduleWithHighMinPklVersion.pkl"
 
 res1 = moduleWithHighMinPklVersion.x
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (variableExpr
-        (identifier))
-      (identifier))))

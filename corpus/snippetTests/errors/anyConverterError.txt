@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/anyConverterError
-================================================================================
+==========
 
 class Dog {
   age: Int
@@ -14,43 +14,5 @@ output {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (objectBody
-                (objectEntry
-                  (variableExpr
-                    (identifier))
-                  (functionLiteral
-                    (parameterList
-                      (typedIdentifier
-                        (identifier)))
-                    (methodCallExpr
-                      (methodCallExpr
-                        (variableExpr
-                          (identifier))
-                        (identifier)
-                        (argumentList))
-                      (identifier)
-                      (argumentList))))))))))))

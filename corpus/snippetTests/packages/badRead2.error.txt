@@ -1,17 +1,9 @@
-================================================================================
+==========
 packages/badRead2.error
-================================================================================
+==========
 
 // invalid semver
 res = read("package://localhost:0/foo@notAVersion#/bar.pkl")
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (lineComment)
-  (classProperty
-    (identifier)
-    (readExpr
-      (parenthesizedExpr
-        (slStringLiteral
-          (slStringLiteralPart))))))

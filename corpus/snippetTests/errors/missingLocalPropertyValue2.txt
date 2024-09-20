@@ -1,22 +1,10 @@
-================================================================================
+==========
 errors/missingLocalPropertyValue2
-================================================================================
+==========
 
 amends "baseModule.pkl"
 
 local x: Int
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))))

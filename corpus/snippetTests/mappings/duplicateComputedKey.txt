@@ -1,6 +1,6 @@
-================================================================================
+==========
 mappings/duplicateComputedKey
-================================================================================
+==========
 
 import "pkl:test"
 
@@ -16,70 +16,5 @@ res2 = test.catch(() -> new Mapping {
   ["barn " + "owl"] = 3
 })
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (newExpr
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (objectBody
-              (objectEntry
-                (slStringLiteral
-                  (slStringLiteralPart))
-                (intLiteral))
-              (objectEntry
-                (slStringLiteral
-                  (slStringLiteralPart))
-                (intLiteral))
-              (objectEntry
-                (binaryExpr
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (slStringLiteral
-                    (slStringLiteralPart)))
-                (intLiteral))))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (newExpr
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (objectBody
-              (objectEntry
-                (binaryExpr
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (slStringLiteral
-                    (slStringLiteralPart)))
-                (intLiteral))
-              (objectEntry
-                (slStringLiteral
-                  (slStringLiteralPart))
-                (intLiteral))
-              (objectEntry
-                (binaryExpr
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (slStringLiteral
-                    (slStringLiteralPart)))
-                (intLiteral)))))))))

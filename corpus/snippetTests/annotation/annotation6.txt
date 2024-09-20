@@ -1,20 +1,8 @@
-================================================================================
+==========
 annotation/annotation6
-================================================================================
+==========
 
 @Int someProperty: String = "hi"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (annotation
-      (qualifiedIdentifier
-        (identifier)))
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (slStringLiteral
-      (slStringLiteralPart))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 annotation/annotationIsNotExpression2
-================================================================================
+==========
 
 class Ann1 extends Annotation
 
@@ -9,24 +9,5 @@ class Ann2 extends Annotation
 @Ann1|Ann2
 foo = 1
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier))))
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier))))
-  (classProperty
-    (annotation
-      (qualifiedIdentifier
-        (identifier)))
-    (ERROR
-      (identifier))
-    (identifier)
-    (intLiteral)))

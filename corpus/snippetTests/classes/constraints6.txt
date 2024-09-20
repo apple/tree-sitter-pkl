@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/constraints6
-================================================================================
+==========
 
 import "pkl:test"
 
@@ -22,64 +22,5 @@ res3 = test.catch(() ->
   }.y
 )
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (binaryExpr
-              (variableExpr
-                (identifier))
-              (intLiteral)))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (unaryExpr
-            (intLiteral))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (propertyCallExpr
-            (newExpr
-              (type
-                (qualifiedIdentifier
-                  (identifier)))
-              (objectBody
-                (objectProperty
-                  (identifier)
-                  (unaryExpr
-                    (intLiteral)))))
-            (identifier)))))))

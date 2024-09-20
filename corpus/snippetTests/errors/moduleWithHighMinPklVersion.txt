@@ -1,28 +1,11 @@
-================================================================================
+==========
 errors/moduleWithHighMinPklVersion
-================================================================================
+==========
 
 @ModuleInfo { minPklVersion = "99.9.9" }
 open module moduleWithHighMinPklVersion
 
 x = 1
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (annotation
-      (qualifiedIdentifier
-        (identifier))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))
-    (moduleClause
-      (modifier)
-      (qualifiedIdentifier
-        (identifier))))
-  (classProperty
-    (identifier)
-    (intLiteral)))

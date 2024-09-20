@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constClassBody
-================================================================================
+==========
 
 notConst = 1
 
@@ -10,23 +10,5 @@ class Foo {
 
 foo = new Foo {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody))))

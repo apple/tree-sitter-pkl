@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/outer
-================================================================================
+==========
 
 res1 {
   x = 1
@@ -31,65 +31,5 @@ res4 = (res3) {
 // chaining of outer (e.g. outer.outer) isn't currently supported,
 // and would need to be represented as a single GetEnclosingReceiverNode
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (objectBody
-          (objectProperty
-            (identifier)
-            (propertyCallExpr
-              (outerExpr)
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (objectBody
-          (objectProperty
-            (identifier)
-            (intLiteral))
-          (objectProperty
-            (identifier)
-            (propertyCallExpr
-              (outerExpr)
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral))
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectProperty
-              (identifier)
-              (intLiteral)))))))
-  (lineComment)
-  (lineComment))

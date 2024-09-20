@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/jsonRenderer7
-================================================================================
+==========
 
 res1 = null
 res2 = 1
@@ -16,38 +16,5 @@ output {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (nullLiteral))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (nullLiteral))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (trueLiteral))))))))

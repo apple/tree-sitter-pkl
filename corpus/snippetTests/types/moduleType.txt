@@ -1,6 +1,6 @@
-================================================================================
+==========
 types/moduleType
-================================================================================
+==========
 
 import "helpers/someModule.pkl"
 
@@ -14,44 +14,5 @@ res3: Listing<someModule> = new {
   res1
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart))))))
-  (classProperty
-    (identifier)
-    (isExpr
-      (variableExpr
-        (identifier))
-      (type
-        (qualifiedIdentifier
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))
-        (typeArgumentList
-          (type
-            (qualifiedIdentifier
-              (identifier))))))
-    (newExpr
-      (objectBody
-        (objectElement
-          (variableExpr
-            (identifier)))))))

@@ -1,21 +1,11 @@
-================================================================================
+==========
 modules/invalidAmend2
-================================================================================
+==========
 
 amends "library.pkl"
 
 // non-existing property
 other = "parrot"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart))))

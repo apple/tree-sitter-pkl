@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/shellModule
-================================================================================
+==========
 
 amends "../snippetTest.pkl"
 
@@ -16,62 +16,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (methodCallExpr
-              (variableExpr
-                (identifier))
-              (identifier)
-              (argumentList
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (objectElement
-            (methodCallExpr
-              (variableExpr
-                (identifier))
-              (identifier)
-              (argumentList
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (objectElement
-            (methodCallExpr
-              (variableExpr
-                (identifier))
-              (identifier)
-              (argumentList
-                (slStringLiteral
-                  (slStringLiteralPart)
-                  (escapeSequence)
-                  (slStringLiteralPart)))))
-          (objectElement
-            (methodCallExpr
-              (variableExpr
-                (identifier))
-              (identifier)
-              (argumentList
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (objectElement
-            (methodCallExpr
-              (variableExpr
-                (identifier))
-              (identifier)
-              (argumentList
-                (slStringLiteral
-                  (slStringLiteralPart))))))))))

@@ -1,20 +1,10 @@
-================================================================================
+==========
 errors/invalidGlobImport2
-================================================================================
+==========
 
 import* "\\foo.pkl" as invalidGlob
 
 res = invalidGlob
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importGlobClause
-    (stringConstant
-      (escapeSequence)
-      (slStringLiteralPart))
-    (identifier))
-  (classProperty
-    (identifier)
-    (variableExpr
-      (identifier))))

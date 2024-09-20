@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/spreadSyntaxUnknownTypedProperty
-================================================================================
+==========
 
 class Person { name: String }
 
@@ -11,37 +11,5 @@ local personDynamic {
 
 res1: Person = new { ...personDynamic }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (objectProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectSpread
-          (variableExpr
-            (identifier)))))))

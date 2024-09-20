@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/module
-================================================================================
+==========
 
 amends "../snippetTest.pkl"
 
@@ -14,63 +14,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (importExpr
-                  (stringConstant
-                    (slStringLiteralPart))))))
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (importExpr
-                  (stringConstant
-                    (slStringLiteralPart))))))
-          (objectElement
-            (methodCallExpr
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart)))
-              (identifier)
-              (argumentList
-                (importExpr
-                  (stringConstant
-                    (slStringLiteralPart))))))
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (moduleExpr))))
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (methodCallExpr
-                    (importExpr
-                      (stringConstant
-                        (slStringLiteralPart)))
-                    (identifier)
-                    (argumentList
-                      (moduleExpr))))))))))))

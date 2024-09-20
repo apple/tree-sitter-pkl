@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/extendModule1
-================================================================================
+==========
 
 extends "library.pkl"
 
@@ -17,65 +17,5 @@ parrot: Teacher = new Teacher {
   subjects = List("Fire making", "Stone age")
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))
-            (typeArgumentList
-              (type
-                (type
-                  (qualifiedIdentifier
-                    (identifier)))
-                (unaryExpr
-                  (variableExpr
-                    (identifier))))))))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (propertyCallExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectProperty
-          (identifier)
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (slStringLiteral
-                (slStringLiteralPart))
-              (slStringLiteral
-                (slStringLiteralPart)))))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/amendModule2
-================================================================================
+==========
 
 amends "library.pkl"
 
@@ -9,22 +9,5 @@ pigeon = new Person {
   name = "pigeon2"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))))

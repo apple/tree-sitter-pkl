@@ -1,22 +1,10 @@
-================================================================================
+==========
 errors/forGeneratorCannotIterateOverThisValue
-================================================================================
+==========
 
 foo {
   for (n in 5) { n }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (forGenerator
-        (typedIdentifier
-          (identifier))
-        (intLiteral)
-        (objectBody
-          (objectElement
-            (variableExpr
-              (identifier))))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constMethod2
-================================================================================
+==========
 
 function bar() = "bar"
 
@@ -10,33 +10,5 @@ class Foo {
 
 foo: Foo = new {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList))
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (methodCallExpr
-          (moduleExpr)
-          (identifier)
-          (argumentList)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody))))

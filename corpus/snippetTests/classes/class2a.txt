@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/class2a
-================================================================================
+==========
 
 class Person {
   name: String = "X"
@@ -27,86 +27,5 @@ pigeon = new Person {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (intLiteral))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectProperty
-          (identifier)
-          (intLiteral))
-        (objectProperty
-          (identifier)
-          (binaryExpr
-            (propertyCallExpr
-              (identifier))
-            (methodCallExpr
-              (identifier)
-              (argumentList
-                (newExpr
-                  (type
-                    (qualifiedIdentifier
-                      (identifier)))
-                  (objectBody
-                    (objectProperty
-                      (identifier)
-                      (slStringLiteral
-                        (slStringLiteralPart)))))
-                (lineComment)))))
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectProperty
-              (identifier)
-              (slStringLiteral
-                (slStringLiteralPart)))))))))

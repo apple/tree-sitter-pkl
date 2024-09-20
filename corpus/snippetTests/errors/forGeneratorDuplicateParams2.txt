@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/forGeneratorDuplicateParams2
-================================================================================
+==========
 
 a = List(1, 2, 3, 4)
 
@@ -14,53 +14,5 @@ foo {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList
-        (intLiteral)
-        (intLiteral)
-        (intLiteral)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList
-        (slStringLiteral
-          (slStringLiteralPart))
-        (slStringLiteral
-          (slStringLiteralPart))
-        (slStringLiteral
-          (slStringLiteralPart))
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (forGenerator
-        (typedIdentifier
-          (identifier))
-        (typedIdentifier
-          (identifier))
-        (variableExpr
-          (identifier))
-        (objectBody
-          (forGenerator
-            (typedIdentifier
-              (identifier))
-            (typedIdentifier
-              (identifier))
-            (variableExpr
-              (identifier))
-            (objectBody
-              (objectElement
-                (binaryExpr
-                  (variableExpr
-                    (identifier))
-                  (variableExpr
-                    (identifier)))))))))))

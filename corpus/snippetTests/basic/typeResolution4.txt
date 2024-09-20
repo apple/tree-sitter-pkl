@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/typeResolution4
-================================================================================
+==========
 
 import "typeResolution1.pkl"
 import "typeResolution2.pkl"
@@ -12,50 +12,5 @@ res3: typeResolution2.Person2
 res4: typeResolution3.Person1
 res5: typeResolution3.Person2
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier))))))

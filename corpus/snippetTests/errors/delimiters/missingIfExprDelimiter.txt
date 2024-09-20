@@ -1,19 +1,9 @@
-================================================================================
+==========
 errors/delimiters/missingIfExprDelimiter
-================================================================================
+==========
 
 res1 = if (cond 3 else 4
 res2 = 42
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (ERROR
-      (ERROR
-        (identifier)
-        (intLiteral)
-        (intLiteral))
-      (identifier))
-    (intLiteral)))

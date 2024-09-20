@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constSuperMethod
-================================================================================
+==========
 
 open class A {
   function bar() = 5
@@ -12,33 +12,5 @@ class B extends A {
 
 b: B
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (modifier)
-    (identifier)
-    (classBody
-      (classMethod
-        (methodHeader
-          (identifier)
-          (parameterList))
-        (intLiteral))))
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
-    (classBody
-      (classProperty
-        (modifier)
-        (identifier)
-        (methodCallExpr
-          (identifier)
-          (argumentList)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))))

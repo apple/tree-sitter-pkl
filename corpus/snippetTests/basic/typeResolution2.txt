@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/typeResolution2
-================================================================================
+==========
 
 extends "typeResolution1.pkl"
 
@@ -9,29 +9,5 @@ class Person2 { name = "person2" }
 pp1: Person1
 pp2: Person2
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))))

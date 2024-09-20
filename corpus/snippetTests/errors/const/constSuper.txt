@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constSuper
-================================================================================
+==========
 
 open class A {
   bar = 5
@@ -12,30 +12,5 @@ class B extends A {
 
 b: B
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (modifier)
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (intLiteral))))
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
-    (classBody
-      (classProperty
-        (modifier)
-        (identifier)
-        (propertyCallExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))))

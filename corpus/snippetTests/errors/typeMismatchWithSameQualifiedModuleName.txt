@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/typeMismatchWithSameQualifiedModuleName
-================================================================================
+==========
 
 module foo.bar
 
@@ -8,22 +8,5 @@ import "typeMismatchHelper.pkl"
 
 mod: module = typeMismatchHelper
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (qualifiedIdentifier
-        (identifier)
-        (identifier))))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (variableExpr
-      (identifier))))

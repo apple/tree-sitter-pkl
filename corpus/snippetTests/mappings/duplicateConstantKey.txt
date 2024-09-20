@@ -1,6 +1,6 @@
-================================================================================
+==========
 mappings/duplicateConstantKey
-================================================================================
+==========
 
 res1 = new Mapping {
   ["barn owl"] = 1
@@ -8,25 +8,5 @@ res1 = new Mapping {
   ["barn owl"] = 3
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectEntry
-          (slStringLiteral
-            (slStringLiteralPart))
-          (intLiteral))
-        (objectEntry
-          (slStringLiteral
-            (slStringLiteralPart))
-          (intLiteral))
-        (objectEntry
-          (slStringLiteral
-            (slStringLiteralPart))
-          (intLiteral))))))

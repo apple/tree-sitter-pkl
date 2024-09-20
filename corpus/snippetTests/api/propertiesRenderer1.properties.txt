@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/propertiesRenderer1.properties
-================================================================================
+==========
 
 pigeon {
   name = "pigeon"
@@ -12,30 +12,5 @@ output {
   renderer = new PropertiesRenderer {}
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (objectProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (variableExpr
-          (identifier)))
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody))))))

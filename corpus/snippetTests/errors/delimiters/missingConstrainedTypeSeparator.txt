@@ -1,22 +1,8 @@
-================================================================================
+==========
 errors/delimiters/missingConstrainedTypeSeparator
-================================================================================
+==========
 
 x: Int(isPositive this > 10)
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (binaryExpr
-          (variableExpr
-            (identifier))
-          (ERROR
-            (identifier))
-          (intLiteral))))))

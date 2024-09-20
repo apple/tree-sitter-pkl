@@ -1,28 +1,11 @@
-================================================================================
+==========
 errors/forGeneratorCannotIterateOverTyped
-================================================================================
+==========
 
 class Person
 foo {
   for (_ in new Person {}) { 42 }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier))
-  (classProperty
-    (identifier)
-    (objectBody
-      (forGenerator
-        (typedIdentifier
-          (identifier))
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody))
-        (objectBody
-          (objectElement
-            (intLiteral)))))))

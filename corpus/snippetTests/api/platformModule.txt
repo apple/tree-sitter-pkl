@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/platformModule
-================================================================================
+==========
 
 amends "../snippetTest.pkl"
 
@@ -33,115 +33,5 @@ facts {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (modifier)
-    (identifier)
-    (propertyCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral)))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral)))
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral)))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral)))
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral)))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral)))
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral)))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (propertyCallExpr
-                  (variableExpr
-                    (identifier))
-                  (identifier))
-                (identifier))
-              (slStringLiteral))))))))

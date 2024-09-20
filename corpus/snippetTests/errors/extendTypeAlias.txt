@@ -1,34 +1,11 @@
-================================================================================
+==========
 errors/extendTypeAlias
-================================================================================
+==========
 
 open class Foo
 typealias Bar = Foo(true)
 class Baz extends Bar
 qux = new Baz {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (modifier)
-    (identifier))
-  (typeAlias
-    (identifier)
-    (type
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (trueLiteral)))
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody))))

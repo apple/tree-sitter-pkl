@@ -1,6 +1,6 @@
-================================================================================
+==========
 annotation/annotation4
-================================================================================
+==========
 
 @Mapping {
   a = "hi"
@@ -8,26 +8,5 @@ annotation/annotation4
 }
 someProperty: String = "hi"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (annotation
-      (qualifiedIdentifier
-        (identifier))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (slStringLiteral
-      (slStringLiteralPart))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/cannotAssignFixedProperty1
-================================================================================
+==========
 
 class Bird {
   fixed name: String = "Hawk"
@@ -12,36 +12,5 @@ p: Bird = new {
   name = _name
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (modifier)
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (lineComment)
-        (objectProperty
-          (modifier)
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectProperty
-          (identifier)
-          (variableExpr
-            (identifier)))))))

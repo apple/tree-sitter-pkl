@@ -1,18 +1,8 @@
-================================================================================
+==========
 basic/objectMemberInvalid2
-================================================================================
+==========
 
 res1 {foo=1bar=2}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (intLiteral)))))

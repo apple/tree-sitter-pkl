@@ -1,6 +1,6 @@
-================================================================================
+==========
 mappings/stringKeyNotFound
-================================================================================
+==========
 
 hidden x = new Mapping {
   ["xfoo"] = "xfoo"
@@ -11,41 +11,5 @@ hidden x = new Mapping {
 
 res1 = x["foo"]
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectEntry
-          (slStringLiteral
-            (slStringLiteralPart))
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectEntry
-          (slStringLiteral
-            (slStringLiteralPart))
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectEntry
-          (slStringLiteral
-            (slStringLiteralPart))
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectEntry
-          (slStringLiteral
-            (slStringLiteralPart))
-          (slStringLiteral
-            (slStringLiteralPart))))))
-  (classProperty
-    (identifier)
-    (subscriptExpr
-      (variableExpr
-        (identifier))
-      (slStringLiteral
-        (slStringLiteralPart)))))

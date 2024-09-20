@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/yamlRendererIndentationWidth5.yml
-================================================================================
+==========
 
 amends "yamlRendererIndentationWidth2.yml.pkl"
 
@@ -10,23 +10,5 @@ output {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (intLiteral))))))))

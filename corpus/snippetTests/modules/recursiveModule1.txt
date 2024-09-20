@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/recursiveModule1
-================================================================================
+==========
 
 import "recursiveModule2.pkl"
 
@@ -14,38 +14,5 @@ foo: Foo = new {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)
-                (identifier))))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectProperty
-              (identifier)
-              (newExpr
-                (type
-                  (qualifiedIdentifier
-                    (identifier)))
-                (objectBody)))))))))

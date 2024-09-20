@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/trace
-================================================================================
+==========
 
 amends "../snippetTest.pkl"
 
@@ -34,101 +34,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (traceExpr
-              (parenthesizedExpr
-                (intLiteral))))
-          (objectElement
-            (traceExpr
-              (parenthesizedExpr
-                (trueLiteral))))
-          (objectElement
-            (traceExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (ERROR
-            (ERROR
-              (identifier)
-              (identifier)
-              (identifier))
-            (ERROR
-              (parenthesizedExpr
-                (methodCallExpr
-                  (identifier)
-                  (argumentList
-                    (intLiteral)
-                    (intLiteral)
-                    (intLiteral))))
-              (traceExpr
-                (parenthesizedExpr
-                  (methodCallExpr
-                    (identifier)
-                    (argumentList
-                      (intLiteral)
-                      (intLiteral)
-                      (intLiteral)))))
-              (traceExpr
-                (parenthesizedExpr
-                  (methodCallExpr
-                    (identifier)
-                    (argumentList
-                      (intLiteral)
-                      (slStringLiteral
-                        (slStringLiteralPart))
-                      (intLiteral)
-                      (slStringLiteral
-                        (slStringLiteralPart))))))
-              (traceExpr
-                (parenthesizedExpr
-                  (newExpr
-                    (objectBody
-                      (objectProperty
-                        (identifier)
-                        (slStringLiteral
-                          (slStringLiteralPart)))
-                      (objectProperty
-                        (identifier)
-                        (intLiteral))))))
-              (traceExpr
-                (parenthesizedExpr
-                  (newExpr
-                    (objectBody
-                      (objectElement
-                        (slStringLiteral
-                          (slStringLiteralPart)))
-                      (objectElement
-                        (slStringLiteral
-                          (slStringLiteralPart)))
-                      (objectElement
-                        (slStringLiteral
-                          (slStringLiteralPart))))))))
-            (traceExpr
-              (parenthesizedExpr
-                (newExpr
-                  (objectBody
-                    (objectEntry
-                      (slStringLiteral
-                        (slStringLiteralPart))
-                      (objectBody
-                        (objectProperty
-                          (identifier)
-                          (slStringLiteral
-                            (slStringLiteralPart)))
-                        (objectProperty
-                          (identifier)
-                          (intLiteral))))))))))))))

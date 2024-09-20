@@ -1,6 +1,6 @@
-================================================================================
+==========
 projects/project4/main
-================================================================================
+==========
 
 import "@fruit/Fruit.pkl"
 
@@ -8,20 +8,5 @@ orange = new Fruit {
   name = "Orange"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))))

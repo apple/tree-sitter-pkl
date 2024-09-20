@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/duplicateProperty
-================================================================================
+==========
 
 obj {
   prop1 = "prop1"
@@ -8,22 +8,5 @@ obj {
   prop1 = "other" // duplicate
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (lineComment))))

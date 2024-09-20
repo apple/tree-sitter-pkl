@@ -1,6 +1,6 @@
-================================================================================
+==========
 lambdas/equality
-================================================================================
+==========
 
 res1 = (() -> 1) == (() -> 1)
 res2 = (() -> 1) == (() -> 2)
@@ -10,54 +10,5 @@ local lambda = () -> 1
 
 res4 = lambda == lambda
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (parenthesizedExpr
-        (functionLiteral
-          (parameterList)
-          (intLiteral)))
-      (parenthesizedExpr
-        (functionLiteral
-          (parameterList)
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (parenthesizedExpr
-        (functionLiteral
-          (parameterList)
-          (intLiteral)))
-      (parenthesizedExpr
-        (functionLiteral
-          (parameterList)
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (parenthesizedExpr
-        (functionLiteral
-          (parameterList)
-          (intLiteral)))
-      (parenthesizedExpr
-        (functionLiteral
-          (parameterList
-            (typedIdentifier
-              (identifier)))
-          (intLiteral)))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (functionLiteral
-      (parameterList)
-      (intLiteral)))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier)))))

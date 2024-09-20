@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/equality
-================================================================================
+==========
 
 res1 = Int == Int
 res2 = Int == Float
@@ -19,106 +19,5 @@ res12 = Person != Person2
 class Person
 class Person2
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (binaryExpr
-        (variableExpr
-          (identifier))
-        (intLiteral))
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (binaryExpr
-        (methodCallExpr
-          (intLiteral)
-          (identifier)
-          (argumentList))
-        (intLiteral))
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (binaryExpr
-        (variableExpr
-          (identifier))
-        (intLiteral))
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (binaryExpr
-        (methodCallExpr
-          (intLiteral)
-          (identifier)
-          (argumentList))
-        (intLiteral))
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (clazz
-    (identifier))
-  (clazz
-    (identifier)))

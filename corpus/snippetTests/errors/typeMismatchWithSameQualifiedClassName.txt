@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/typeMismatchWithSameQualifiedClassName
-================================================================================
+==========
 
 module foo.bar
 
@@ -10,28 +10,5 @@ class Baz
 
 baz: Baz = new typeMismatchHelper.Baz {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (qualifiedIdentifier
-        (identifier)
-        (identifier))))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (clazz
-    (identifier))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier)))
-      (objectBody))))

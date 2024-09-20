@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/spreadSyntaxCannotIterateOverTyped
-================================================================================
+==========
 
 class Person {
   name: String
@@ -12,33 +12,5 @@ result {
   ...person
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart))))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectSpread
-        (variableExpr
-          (identifier))))))

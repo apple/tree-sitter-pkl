@@ -1,6 +1,6 @@
-================================================================================
+==========
 generators/spreadSyntaxNullable
-================================================================================
+==========
 
 a = null
 b { ...?a }
@@ -8,30 +8,5 @@ b { ...?a }
 c { 1; 2; 3 }
 d { ...?c }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (nullLiteral))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectSpread
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectElement
-        (intLiteral))
-      (objectElement
-        (intLiteral))
-      (objectElement
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectSpread
-        (variableExpr
-          (identifier))))))

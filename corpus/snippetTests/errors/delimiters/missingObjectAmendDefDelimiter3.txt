@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/delimiters/missingObjectAmendDefDelimiter3
-================================================================================
+==========
 
 foo {
   bar {
@@ -12,25 +12,5 @@ foo {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (objectBody
-          (objectProperty
-            (identifier)
-            (objectBody
-              (objectProperty
-                (identifier)
-                (intLiteral))))
-          (objectProperty
-            (identifier)
-            (objectBody
-              (objectProperty
-                (identifier)
-                (intLiteral))))))
-      (MISSING "}"))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/wrongType6
-================================================================================
+==========
 
 import "pkl:test"
 
@@ -11,35 +11,5 @@ open class Person {
 // property default value fails property type check
 pigeon = new Person {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (clazz
-    (modifier)
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier))
-              (typeArgumentList
-                (type
-                  (qualifiedIdentifier
-                    (identifier)))))
-            (unaryExpr
-              (variableExpr
-                (identifier))))))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody))))

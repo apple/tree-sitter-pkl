@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/unionTypesErrorString1
-================================================================================
+==========
 
 class X {
   a: "foo" | "bar" | "baz"
@@ -10,34 +10,5 @@ res1 = new X {
   a = "foox"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (type
-              (type
-                (stringConstant
-                  (slStringLiteralPart)))
-              (type
-                (stringConstant
-                  (slStringLiteralPart))))
-            (type
-              (stringConstant
-                (slStringLiteralPart))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))))

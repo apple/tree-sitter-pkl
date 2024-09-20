@@ -1,6 +1,6 @@
-================================================================================
+==========
 generators/spreadSyntaxTyped
-================================================================================
+==========
 
 class Person {
   name: String
@@ -12,48 +12,5 @@ res1: Person = new { ...barnOwlDynamic }
 
 res2 = res1 == new Person { name = "Barn Owl" }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectSpread
-          (variableExpr
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (newExpr
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (objectBody
-          (objectProperty
-            (identifier)
-            (slStringLiteral
-              (slStringLiteralPart))))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/xmlRenderer8
-================================================================================
+==========
 
 // Test that unrenderable types do have an informative location in the error message.
 import "pkl:xml"
@@ -11,28 +11,5 @@ output {
   renderer = new xml.Renderer {}
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (lineComment)
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)
-              (identifier)))
-          (objectBody))))))

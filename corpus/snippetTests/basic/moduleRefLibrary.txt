@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/moduleRefLibrary
-================================================================================
+==========
 
 open module moduleRefLibrary
 
@@ -10,23 +10,5 @@ aa = module.a
 
 foo {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (modifier)
-      (qualifiedIdentifier
-        (identifier))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (moduleExpr)
-      (identifier)))
-  (classProperty
-    (identifier)
-    (objectBody)))

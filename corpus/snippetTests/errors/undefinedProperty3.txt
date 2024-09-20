@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/undefinedProperty3
-================================================================================
+==========
 
 class D {
   dProperty: String
@@ -24,72 +24,5 @@ a: A = new {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))
-            (typeArgumentList
-              (type
-                (qualifiedIdentifier
-                  (identifier)))
-              (type
-                (qualifiedIdentifier
-                  (identifier)))))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectEntry
-              (newExpr
-                (type
-                  (qualifiedIdentifier
-                    (identifier)))
-                (objectBody
-                  (objectProperty
-                    (identifier)
-                    (slStringLiteral
-                      (slStringLiteralPart)))))
-              (newExpr
-                (objectBody)))))))))

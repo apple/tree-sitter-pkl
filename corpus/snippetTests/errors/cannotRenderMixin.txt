@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/cannotRenderMixin
-================================================================================
+==========
 
 m: Mixin = new {
     mixinVal = "anything"
@@ -10,32 +10,5 @@ foo = new Dynamic {
     bar = "baz"
 } |> m
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart))))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (newExpr
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (objectBody
-          (objectProperty
-            (identifier)
-            (slStringLiteral
-              (slStringLiteralPart)))))
-      (variableExpr
-        (identifier)))))

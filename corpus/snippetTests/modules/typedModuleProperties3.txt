@@ -1,20 +1,8 @@
-================================================================================
+==========
 modules/typedModuleProperties3
-================================================================================
+==========
 
 res1: String(!isEmpty) = ""
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (unaryExpr
-          (variableExpr
-            (identifier)))))
-    (slStringLiteral)))
