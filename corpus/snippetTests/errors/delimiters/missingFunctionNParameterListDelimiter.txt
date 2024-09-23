@@ -1,32 +1,9 @@
-================================================================================
+==========
 errors/delimiters/missingFunctionNParameterListDelimiter
-================================================================================
+==========
 
 f = (arg1, arg2, arg3 -> arg1 + arg2 + arg3
 res1 = 42
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (functionLiteral
-      (parameterList
-        (typedIdentifier
-          (identifier))
-        (typedIdentifier
-          (identifier))
-        (typedIdentifier
-          (identifier))
-        (MISSING "))
-      (binaryExpr
-        (binaryExpr
-          (variableExpr
-            (identifier))
-          (variableExpr
-            (identifier)))
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (intLiteral)))

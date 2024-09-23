@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/supercalls2
-================================================================================
+==========
 
 open module supercalls2
 
@@ -10,48 +10,5 @@ hidden pigeon = super.say("Pigeon")
 function barnOwl() = super.say("Barn Owl")
 function say2(msg) = super.say(msg) + super.say(msg)
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (modifier)
-      (qualifiedIdentifier
-        (identifier)))
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList))
-    (methodCallExpr
-      (identifier)
-      (argumentList
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList
-        (typedIdentifier
-          (identifier))))
-    (binaryExpr
-      (methodCallExpr
-        (identifier)
-        (argumentList
-          (variableExpr
-            (identifier))))
-      (methodCallExpr
-        (identifier)
-        (argumentList
-          (variableExpr
-            (identifier)))))))

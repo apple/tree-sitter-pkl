@@ -1,6 +1,6 @@
-================================================================================
+==========
 snippetTest
-================================================================================
+==========
 
 open module snippetTest
 
@@ -12,27 +12,5 @@ output {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (modifier)
-      (qualifiedIdentifier
-        (identifier)))
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (trueLiteral))))))))

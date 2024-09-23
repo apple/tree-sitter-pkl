@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/cannotInferParent3
-================================================================================
+==========
 
 class Person {
   name: String
@@ -10,39 +10,5 @@ res1: Mapping<Person, String> = new {
   [new { name = "Pigeon" }] = "Pigeon"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))
-        (typeArgumentList
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (type
-            (qualifiedIdentifier
-              (identifier))))))
-    (newExpr
-      (objectBody
-        (objectEntry
-          (newExpr
-            (objectBody
-              (objectProperty
-                (identifier)
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (slStringLiteral
-            (slStringLiteralPart)))))))

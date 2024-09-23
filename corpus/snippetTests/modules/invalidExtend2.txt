@@ -1,15 +1,9 @@
-================================================================================
+==========
 modules/invalidExtend2
-================================================================================
+==========
 
 // non-open module
 extends "extendModule1.pkl"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (lineComment)
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart)))))

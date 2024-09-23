@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constAmend
-================================================================================
+==========
 
 amends "../../basic/constModifier.pkl"
 
@@ -8,16 +8,5 @@ constDyn {
   bar = 1
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral)))))

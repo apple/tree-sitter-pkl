@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/undefinedProperty4
-================================================================================
+==========
 
 class Zebra {
   party: Party
@@ -38,104 +38,5 @@ zebra: Zebra = new {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))
-            (typeArgumentList
-              (type
-                (qualifiedIdentifier
-                  (identifier)))
-              (type
-                (qualifiedIdentifier
-                  (identifier)))))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectProperty
-              (identifier)
-              (objectBody
-                (objectEntry
-                  (intLiteral)
-                  (intLiteral))
-                (objectEntry
-                  (intLiteral)
-                  (intLiteral))
-                (objectEntry
-                  (intLiteral)
-                  (intLiteral))
-                (objectEntry
-                  (intLiteral)
-                  (intLiteral))
-                (objectEntry
-                  (intLiteral)
-                  (intLiteral))
-                (objectEntry
-                  (intLiteral)
-                  (intLiteral))
-                (objectEntry
-                  (intLiteral)
-                  (intLiteral))
-                (objectEntry
-                  (newExpr
-                    (type
-                      (qualifiedIdentifier
-                        (identifier)))
-                    (objectBody
-                      (objectProperty
-                        (identifier)
-                        (objectBody
-                          (objectProperty
-                            (identifier)
-                            (intLiteral))))))
-                  (intLiteral))
-                (objectEntry
-                  (newExpr
-                    (type
-                      (qualifiedIdentifier
-                        (identifier)))
-                    (objectBody))
-                  (intLiteral))))))))))

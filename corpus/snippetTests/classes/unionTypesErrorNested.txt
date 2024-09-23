@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/unionTypesErrorNested
-================================================================================
+==========
 
 class X {
   a: Boolean|Map<Int|List<Int>, String|Set<String>>
@@ -15,85 +15,5 @@ res1 = new X {
   )
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (type
-              (qualifiedIdentifier
-                (identifier))
-              (typeArgumentList
-                (type
-                  (type
-                    (qualifiedIdentifier
-                      (identifier)))
-                  (type
-                    (qualifiedIdentifier
-                      (identifier))
-                    (typeArgumentList
-                      (type
-                        (qualifiedIdentifier
-                          (identifier))))))
-                (type
-                  (type
-                    (qualifiedIdentifier
-                      (identifier)))
-                  (type
-                    (qualifiedIdentifier
-                      (identifier))
-                    (typeArgumentList
-                      (type
-                        (qualifiedIdentifier
-                          (identifier)))))))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (intLiteral)
-              (slStringLiteral
-                (slStringLiteralPart))
-              (intLiteral)
-              (methodCallExpr
-                (identifier)
-                (argumentList
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (slStringLiteral
-                    (slStringLiteralPart))))
-              (methodCallExpr
-                (identifier)
-                (argumentList
-                  (intLiteral)
-                  (intLiteral)
-                  (intLiteral)))
-              (slStringLiteral
-                (slStringLiteralPart))
-              (methodCallExpr
-                (identifier)
-                (argumentList
-                  (intLiteral)
-                  (intLiteral)
-                  (intLiteral)))
-              (methodCallExpr
-                (identifier)
-                (argumentList
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (intLiteral))))))))))

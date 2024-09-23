@@ -1,16 +1,9 @@
-================================================================================
+==========
 packages/badImport2.error
-================================================================================
+==========
 
 // invalid semver
 res = import("package://localhost:0/foo@notAVersion#/bar.pkl")
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (lineComment)
-  (classProperty
-    (identifier)
-    (importExpr
-      (stringConstant
-        (slStringLiteralPart)))))

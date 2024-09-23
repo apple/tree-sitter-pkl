@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/fullStackTraces2
-================================================================================
+==========
 
 local const invalid: String = 1
 
@@ -14,43 +14,5 @@ class Foo {
 
 aFoo = new Foo {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (modifier)
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (intLiteral))
-  (classMethod
-    (methodHeader
-      (modifier)
-      (identifier)
-      (parameterList))
-    (variableExpr
-      (identifier)))
-  (classProperty
-    (modifier)
-    (modifier)
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody))))

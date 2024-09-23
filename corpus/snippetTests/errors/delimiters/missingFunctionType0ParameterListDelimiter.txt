@@ -1,22 +1,9 @@
-================================================================================
+==========
 errors/delimiters/missingFunctionType0ParameterListDelimiter
-================================================================================
+==========
 
 f: ( -> String
 res1 = 42
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (ERROR)
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (MISSING "))))
-  (classProperty
-    (identifier)
-    (intLiteral)))

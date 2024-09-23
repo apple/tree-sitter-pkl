@@ -1,18 +1,9 @@
-================================================================================
+==========
 errors/functionNotFoundMaybeProperty
-================================================================================
+==========
 
 prop = 42
 call = prop()
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/spreadSyntaxDuplicateProperty2
-================================================================================
+==========
 
 local source {
   foo = 1
@@ -11,22 +11,5 @@ res {
   ...source
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectSpread
-        (variableExpr
-          (identifier))))))

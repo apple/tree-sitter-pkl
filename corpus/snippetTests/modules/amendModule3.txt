@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/amendModule3
-================================================================================
+==========
 
 // amend an amended module
 amends "amendModule1.pkl"
@@ -9,18 +9,5 @@ pigeon {
   name = "pigeon3"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (lineComment)
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart))))))

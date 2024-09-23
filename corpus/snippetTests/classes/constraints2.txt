@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/constraints2
-================================================================================
+==========
 
 import "pkl:test"
 
@@ -18,52 +18,5 @@ res2 = test.catch(() ->
   }.age
 )
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (binaryExpr
-              (thisExpr)
-              (intLiteral)))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (propertyCallExpr
-            (newExpr
-              (type
-                (qualifiedIdentifier
-                  (identifier)))
-              (objectBody
-                (objectProperty
-                  (identifier)
-                  (unaryExpr
-                    (intLiteral)))))
-            (identifier)))))))

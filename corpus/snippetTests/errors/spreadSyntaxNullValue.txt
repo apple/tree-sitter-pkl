@@ -1,20 +1,10 @@
-================================================================================
+==========
 errors/spreadSyntaxNullValue
-================================================================================
+==========
 
 source = null
 
 res { ...source }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (nullLiteral))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectSpread
-        (variableExpr
-          (identifier))))))

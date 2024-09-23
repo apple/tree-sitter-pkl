@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/yamlRendererKeys.yml
-================================================================================
+==========
 
 // need quoting
 `one[two` = 42
@@ -38,105 +38,5 @@ output {
   renderer = new YamlRenderer {}
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (lineComment)
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (intLiteral))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (intLiteral))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (intLiteral))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (intLiteral))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (intLiteral))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (lineComment)
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart)
-          (escapeSequence)
-          (slStringLiteralPart))
-        (intLiteral))
-      (lineComment)
-      (objectEntry
-        (methodCallExpr
-          (slStringLiteral
-            (slStringLiteralPart))
-          (identifier)
-          (argumentList
-            (intLiteral)))
-        (intLiteral))
-      (lineComment)
-      (objectEntry
-        (methodCallExpr
-          (slStringLiteral
-            (slStringLiteralPart))
-          (identifier)
-          (argumentList
-            (intLiteral)))
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody))))))

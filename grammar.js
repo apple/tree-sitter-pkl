@@ -615,7 +615,7 @@ module.exports = grammar({
       ),
     ),
 
-    mlStringLiteralPart: $ => token.immediate(/[^"\\\n\r]+/),
+    mlStringLiteralPart: $ => $._ml_string_chars,
 
     mlStringLiteralPart1: $ => $._ml1_string_chars,
 

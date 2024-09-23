@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/objectCannotHaveElement2
-================================================================================
+==========
 
 class Foo {
   normalProperty: Boolean
@@ -25,74 +25,5 @@ foo2 = (foo) {
   normalProperty = false
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))
-            (typeArgumentList
-              (type
-                (qualifiedIdentifier
-                  (identifier)))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectProperty
-              (identifier)
-              (objectBody
-                (objectElement
-                  (slStringLiteral
-                    (slStringLiteralPart)))))))
-        (objectProperty
-          (identifier)
-          (trueLiteral)))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectElement
-          (objectLiteral
-            (parenthesizedExpr
-              (propertyCallExpr
-                (variableExpr
-                  (identifier))
-                (identifier)))
-            (objectBody
-              (objectElement
-                (slStringLiteral
-                  (slStringLiteralPart))))))
-        (objectProperty
-          (identifier)
-          (falseLiteral))))))

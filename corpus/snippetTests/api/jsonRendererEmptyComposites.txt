@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/jsonRendererEmptyComposites
-================================================================================
+==========
 
 a1 = List()
 a2 = Set()
@@ -24,91 +24,5 @@ output {
   renderer = new JsonRenderer {}
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody)))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (methodCallExpr
-          (identifier)
-          (argumentList)))
-      (objectProperty
-        (identifier)
-        (methodCallExpr
-          (identifier)
-          (argumentList)))
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody)))
-      (objectProperty
-        (identifier)
-        (methodCallExpr
-          (identifier)
-          (argumentList)))
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody)))
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody)))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody))))))

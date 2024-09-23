@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/duplicateProperty
-================================================================================
+==========
 
 class Person {
   foo: Int
@@ -9,39 +9,5 @@ class Person {
   foo: String // duplicate
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classMethod
-        (methodHeader
-          (identifier)
-          (parameterList)
-          (typeAnnotation
-            (type
-              (qualifiedIdentifier
-                (identifier)))))
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (lineComment)
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (lineComment))))

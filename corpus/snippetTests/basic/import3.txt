@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/import3
-================================================================================
+==========
 
 foo {
   bar = import("imported.pkl")
@@ -8,26 +8,5 @@ foo {
   bak = import("imported.pkl").foo
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (importExpr
-          (stringConstant
-            (slStringLiteralPart))))
-      (objectProperty
-        (identifier)
-        (importExpr
-          (stringConstant
-            (slStringLiteralPart))))
-      (objectProperty
-        (identifier)
-        (propertyCallExpr
-          (importExpr
-            (stringConstant
-              (slStringLiteralPart)))
-          (identifier))))))

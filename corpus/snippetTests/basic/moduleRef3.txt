@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/moduleRef3
-================================================================================
+==========
 
 extends "moduleRefLibrary.pkl"
 
@@ -29,83 +29,5 @@ class Person {
   age = module.a
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (moduleExpr)
-      (identifier)))
-  (classProperty
-    (modifier)
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (moduleExpr)
-      (identifier)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (propertyCallExpr
-          (moduleExpr)
-          (identifier)))
-      (objectProperty
-        (identifier)
-        (propertyCallExpr
-          (moduleExpr)
-          (identifier)))
-      (objectProperty
-        (modifier)
-        (identifier)
-        (functionLiteral
-          (parameterList)
-          (propertyCallExpr
-            (moduleExpr)
-            (identifier))))
-      (objectProperty
-        (identifier)
-        (methodCallExpr
-          (variableExpr
-            (identifier))
-          (identifier)
-          (argumentList)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody)))
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList))
-    (propertyCallExpr
-      (moduleExpr)
-      (identifier)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (propertyCallExpr
-          (moduleExpr)
-          (identifier))))))

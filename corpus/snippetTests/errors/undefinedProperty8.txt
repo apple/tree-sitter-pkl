@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/undefinedProperty8
-================================================================================
+==========
 
 class Person {
   name: String
@@ -10,25 +10,5 @@ output {
   value = new Person {}
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody))))))

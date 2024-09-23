@@ -1,6 +1,6 @@
-================================================================================
+==========
 listings/numberLiterals
-================================================================================
+==========
 
 // if a semicolon or newline occurs before a minus operator, the latter is interpreted as unary rather than binary minus.
 // in all other cases, semicolons and newlines are treated as whitespace and have no meaning.
@@ -20,49 +20,5 @@ res1 = new Listing {
   1;; +; 2; // binary operator (semicolon is treated as whitespace and may occur anywhere)
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (lineComment)
-  (lineComment)
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectElement
-          (binaryExpr
-            (intLiteral)
-            (intLiteral)))
-        (lineComment)
-        (objectElement
-          (intLiteral))
-        (objectElement
-          (unaryExpr
-            (intLiteral)))
-        (lineComment)
-        (objectElement
-          (intLiteral))
-        (objectElement
-          (unaryExpr
-            (intLiteral)))
-        (lineComment)
-        (lineComment)
-        (objectElement
-          (intLiteral))
-        (objectElement
-          (binaryExpr
-            (unaryExpr
-              (intLiteral))
-            (binaryExpr
-              (binaryExpr
-                (intLiteral)
-                (intLiteral))
-              (intLiteral))))
-        (objectElement
-          (binaryExpr
-            (intLiteral)
-            (intLiteral)))
-        (lineComment)))))

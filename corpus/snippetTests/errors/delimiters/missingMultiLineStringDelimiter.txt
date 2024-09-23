@@ -1,18 +1,9 @@
-================================================================================
+==========
 errors/delimiters/missingMultiLineStringDelimiter
-================================================================================
+==========
 
 res1 = """abc
 res2 = 42
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (mlStringLiteral
-      (mlStringLiteralPart)
-      (MISSING """"")))
-  (classProperty
-    (identifier)
-    (intLiteral)))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/localProperty1
-================================================================================
+==========
 
 local l = 1
 
@@ -11,24 +11,5 @@ foo {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (modifier)
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (objectBody
-          (objectProperty
-            (identifier)
-            (variableExpr
-              (identifier))))))))

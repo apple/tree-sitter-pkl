@@ -1,16 +1,9 @@
-================================================================================
+==========
 packages/badImport4.error
-================================================================================
+==========
 
 // fragment path must be absolute
 res = import("package://localhost:0/birds@0.5.0#catalog/Swallow.pkl")
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (lineComment)
-  (classProperty
-    (identifier)
-    (importExpr
-      (stringConstant
-        (slStringLiteralPart)))))

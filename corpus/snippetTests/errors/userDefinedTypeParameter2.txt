@@ -1,33 +1,10 @@
-================================================================================
+==========
 errors/userDefinedTypeParameter2
-================================================================================
+==========
 
 class DoIt {
   function doit<A>(a: A): A = a
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classMethod
-        (methodHeader
-          (identifier)
-          (typeParameterList
-            (typeParameter
-              (identifier)))
-          (parameterList
-            (typedIdentifier
-              (identifier)
-              (typeAnnotation
-                (type
-                  (qualifiedIdentifier
-                    (identifier))))))
-          (typeAnnotation
-            (type
-              (qualifiedIdentifier
-                (identifier)))))
-        (variableExpr
-          (identifier))))))

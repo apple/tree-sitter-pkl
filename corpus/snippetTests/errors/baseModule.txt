@@ -1,23 +1,10 @@
-================================================================================
+==========
 errors/baseModule
-================================================================================
+==========
 
 open module baseModule
 
 x: Int = 42
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (modifier)
-      (qualifiedIdentifier
-        (identifier))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (intLiteral)))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/typedModuleProperties1
-================================================================================
+==========
 
 import "library.pkl"
 
@@ -18,90 +18,5 @@ class Teacher extends library.Person {
   subjects: List<String(!isEmpty)>
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (unaryExpr
-          (variableExpr
-            (identifier)))))
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier))))
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier))))
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectProperty
-          (identifier)
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (slStringLiteral
-                (slStringLiteralPart))))))))
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)
-        (identifier)))
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))
-            (typeArgumentList
-              (type
-                (type
-                  (qualifiedIdentifier
-                    (identifier)))
-                (unaryExpr
-                  (variableExpr
-                    (identifier)))))))))))

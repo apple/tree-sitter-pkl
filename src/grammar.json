@@ -2693,11 +2693,8 @@
       ]
     },
     "mlStringLiteralPart": {
-      "type": "IMMEDIATE_TOKEN",
-      "content": {
-        "type": "PATTERN",
-        "value": "[^\"\\\\\\n\\r]+"
-      }
+      "type": "SYMBOL",
+      "name": "_ml_string_chars"
     },
     "mlStringLiteralPart1": {
       "type": "SYMBOL",

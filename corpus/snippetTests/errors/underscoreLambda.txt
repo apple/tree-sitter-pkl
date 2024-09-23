@@ -1,38 +1,10 @@
-================================================================================
+==========
 errors/underscoreLambda
-================================================================================
+==========
 
 local lambda = (_, x: Int) -> `_` + x
 
 res = lambda.apply(1, 1)
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (functionLiteral
-      (parameterList
-        (typedIdentifier
-          (identifier))
-        (typedIdentifier
-          (identifier)
-          (typeAnnotation
-            (type
-              (qualifiedIdentifier
-                (identifier))))))
-      (binaryExpr
-        (variableExpr
-          (identifier))
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (intLiteral)
-        (intLiteral)))))

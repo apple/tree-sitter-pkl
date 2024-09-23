@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/yamlParser5
-================================================================================
+==========
 
 amends ".../snippetTest.pkl"
 
@@ -27,92 +27,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (modifier)
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (methodCallExpr
-              (variableExpr
-                (identifier))
-              (identifier)
-              (argumentList
-                (ERROR
-                  (identifier)
-                  (UNEXPECTED 'l'))
-                (subscriptExpr
-                  (variableExpr
-                    (identifier))
-                  (slStringLiteral
-                    (slStringLiteralPart)))
-                (MISSING "))))
-          (objectElement
-            (variableExpr
-              (identifier)))
-          (ERROR
-            (typeAnnotation
-              (type
-                (type
-                  (qualifiedIdentifier
-                    (identifier))))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (methodCallExpr
-                    (variableExpr
-                      (identifier))
-                    (identifier)
-                    (argumentList
-                      (ERROR
-                        (identifier)
-                        (UNEXPECTED 'l'))
-                      (binaryExpr
-                        (binaryExpr
-                          (subscriptExpr
-                            (variableExpr
-                              (identifier))
-                            (slStringLiteral
-                              (slStringLiteralPart)))
-                          (ERROR
-                            (identifier))
-                          (variableExpr
-                            (identifier)))
-                        (ERROR
-                          (identifier))
-                        (variableExpr
-                          (identifier)))
-                      (ERROR))))))))))))

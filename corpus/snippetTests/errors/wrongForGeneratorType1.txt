@@ -1,36 +1,10 @@
-================================================================================
+==========
 errors/wrongForGeneratorType1
-================================================================================
+==========
 
 res1 = new Listing {
   for (n: Int in List(1, "other", 2)) { n }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (forGenerator
-          (typedIdentifier
-            (identifier)
-            (typeAnnotation
-              (type
-                (qualifiedIdentifier
-                  (identifier)))))
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (intLiteral)
-              (slStringLiteral
-                (slStringLiteralPart))
-              (intLiteral)))
-          (objectBody
-            (objectElement
-              (variableExpr
-                (identifier)))))))))

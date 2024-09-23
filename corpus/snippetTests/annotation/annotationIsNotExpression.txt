@@ -1,6 +1,6 @@
-================================================================================
+==========
 annotation/annotationIsNotExpression
-================================================================================
+==========
 
 class MyAnn extends Annotation
 
@@ -9,22 +9,5 @@ local myAnn = MyAnn
 @myAnn
 foo = 1
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (variableExpr
-      (identifier)))
-  (classProperty
-    (annotation
-      (qualifiedIdentifier
-        (identifier)))
-    (identifier)
-    (intLiteral)))

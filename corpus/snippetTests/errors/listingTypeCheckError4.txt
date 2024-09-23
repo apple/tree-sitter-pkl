@@ -1,43 +1,10 @@
-================================================================================
+==========
 errors/listingTypeCheckError4
-================================================================================
+==========
 
 res: Listing<String(!isEmpty)> = new Listing<String(endsWith("ga"))> {
   "hola"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))
-        (typeArgumentList
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (unaryExpr
-              (variableExpr
-                (identifier)))))))
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier))
-        (typeArgumentList
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (methodCallExpr
-              (identifier)
-              (argumentList
-                (slStringLiteral
-                  (slStringLiteralPart)))))))
-      (objectBody
-        (objectElement
-          (slStringLiteral
-            (slStringLiteralPart)))))))

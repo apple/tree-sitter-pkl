@@ -1,19 +1,10 @@
-================================================================================
+==========
 errors/moduleExtendsSelf
-================================================================================
+==========
 
 open module moduleExtendsSelf
 
 extends "moduleExtendsSelf.pkl"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (modifier)
-      (qualifiedIdentifier
-        (identifier)))
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart)))))

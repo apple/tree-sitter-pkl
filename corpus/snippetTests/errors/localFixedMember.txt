@@ -1,19 +1,8 @@
-================================================================================
+==========
 errors/localFixedMember
-================================================================================
+==========
 
 local fixed name: String = "hello"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (modifier)
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (slStringLiteral
-      (slStringLiteralPart))))

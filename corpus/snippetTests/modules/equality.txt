@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/equality
-================================================================================
+==========
 
 import "pkl:base"
 import "pkl:base" as base2
@@ -17,75 +17,5 @@ res8 = this != base
 res9 = base != this
 res10 = base != base2
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart))
-    (identifier))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (thisExpr)
-      (thisExpr)))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (thisExpr)
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (thisExpr)))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (thisExpr)
-      (thisExpr)))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (thisExpr)
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (thisExpr)))
-  (classProperty
-    (identifier)
-    (binaryExpr
-      (variableExpr
-        (identifier))
-      (variableExpr
-        (identifier)))))

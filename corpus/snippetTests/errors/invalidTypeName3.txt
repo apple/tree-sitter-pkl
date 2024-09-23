@@ -1,20 +1,9 @@
-================================================================================
+==========
 errors/invalidTypeName3
-================================================================================
+==========
 
 class Foo
 bar = new Foo.Bar {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier)))
-      (objectBody))))

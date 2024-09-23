@@ -1,22 +1,9 @@
-================================================================================
+==========
 errors/moduleExtendsVersionCheck2
-================================================================================
+==========
 
 @ModuleInfo { minPklVersion = "99.9.9" }
 extends "baseModule.pkl"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (annotation
-      (qualifiedIdentifier
-        (identifier))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart)))))

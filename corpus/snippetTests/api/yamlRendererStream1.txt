@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/yamlRendererStream1
-================================================================================
+==========
 
 local renderer = new YamlRenderer { isStream = true }
 
@@ -31,110 +31,5 @@ b = renderer.renderDocument(stream.toList())
 
 c = renderer.renderDocument(stream.toSet())
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (trueLiteral)))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectElement
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectElement
-          (intLiteral))
-        (objectElement
-          (newExpr
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (objectBody
-              (objectElement
-                (slStringLiteral
-                  (slStringLiteralPart)))
-              (objectElement
-                (slStringLiteral
-                  (slStringLiteralPart))))))
-        (objectElement
-          (newExpr
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (objectBody
-              (objectEntry
-                (slStringLiteral
-                  (slStringLiteralPart))
-                (objectBody
-                  (objectProperty
-                    (identifier)
-                    (slStringLiteral
-                      (slStringLiteralPart)))))
-              (objectEntry
-                (slStringLiteral
-                  (slStringLiteralPart))
-                (objectBody
-                  (objectProperty
-                    (identifier)
-                    (slStringLiteral
-                      (slStringLiteralPart))))))))
-        (objectElement
-          (newExpr
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (objectBody
-              (objectProperty
-                (identifier)
-                (slStringLiteral
-                  (slStringLiteralPart)))
-              (objectProperty
-                (identifier)
-                (intLiteral))))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (variableExpr
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (methodCallExpr
-          (variableExpr
-            (identifier))
-          (identifier)
-          (argumentList)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (methodCallExpr
-          (variableExpr
-            (identifier))
-          (identifier)
-          (argumentList))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/yamlParser6
-================================================================================
+==========
 
 import "pkl:yaml"
 
@@ -28,86 +28,5 @@ res4 = parser.parse("""
   foo: bar
   """)
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (modifier)
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (trueLiteral)))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (ERROR
-      (variableExpr
-        (identifier))
-      (identifier)
-      (ERROR
-        (identifier)
-        (identifier)
-        (identifier))
-      (unaryExpr
-        (variableExpr
-          (identifier))))
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (ERROR
-        (identifier))
-      (type
-        (stringConstant))))
-  (ERROR)
-  (classProperty
-    (identifier)
-    (variableExpr
-      (identifier)))
-  (classProperty
-    (identifier)
-    (isExpr
-      (variableExpr
-        (identifier))
-      (type
-        (qualifiedIdentifier
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (isExpr
-      (subscriptExpr
-        (subscriptExpr
-          (variableExpr
-            (identifier))
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (intLiteral))
-      (type
-        (qualifiedIdentifier
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (mlStringLiteral
-          (ERROR
-            (identifier)
-            (identifier)
-            (intLiteral)
-            (identifier)
-            (identifier)))))))

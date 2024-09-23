@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/configureObjectAssign
-================================================================================
+==========
 
 x {
   foo {
@@ -26,53 +26,5 @@ y = (x) {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (objectBody
-          (objectProperty
-            (identifier)
-            (objectBody
-              (objectProperty
-                (identifier)
-                (intLiteral))
-              (objectProperty
-                (identifier)
-                (intLiteral))))
-          (objectProperty
-            (identifier)
-            (objectBody
-              (objectProperty
-                (identifier)
-                (intLiteral))))))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectProperty
-              (identifier)
-              (objectBody
-                (objectProperty
-                  (identifier)
-                  (intLiteral))
-                (objectProperty
-                  (identifier)
-                  (slStringLiteral
-                    (slStringLiteralPart)))))
-            (objectProperty
-              (identifier)
-              (objectBody
-                (objectProperty
-                  (identifier)
-                  (intLiteral))))))))))

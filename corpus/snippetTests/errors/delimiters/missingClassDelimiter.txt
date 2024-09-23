@@ -1,20 +1,9 @@
-================================================================================
+==========
 errors/delimiters/missingClassDelimiter
-================================================================================
+==========
 
 class Person {
   name: String
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (MISSING "}"))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 annotation/deprecatedNoRepeatedWarnings
-================================================================================
+==========
 
 @Deprecated
 function foo() = 0
@@ -13,46 +13,5 @@ shouldNotWarnForRepeatedCallToFooFromBar2 = bar()
 shouldWarnForDirectCallToFoo = foo()
 shouldWarnForRepeatedDirectCallToFoo = foo()
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classMethod
-    (annotation
-      (qualifiedIdentifier
-        (identifier)))
-    (methodHeader
-      (identifier)
-      (parameterList))
-    (intLiteral))
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList))
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList))))

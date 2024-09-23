@@ -1,45 +1,10 @@
-================================================================================
+==========
 lambdas/amendLambdaExternalClassError
-================================================================================
+==========
 
 hidden ab = (a, b) -> List(42)
 hidden amendAb = (ab) { amended = "amended" }
 res1 = amendAb.apply(1, 2)
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (functionLiteral
-      (parameterList
-        (typedIdentifier
-          (identifier))
-        (typedIdentifier
-          (identifier)))
-      (methodCallExpr
-        (identifier)
-        (argumentList
-          (intLiteral)))))
-  (classProperty
-    (modifier)
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (intLiteral)
-        (intLiteral)))))

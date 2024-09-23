@@ -1,24 +1,8 @@
-================================================================================
+==========
 api/propertiesRenderer10.properties
-================================================================================
+==========
 
 foo = new PropertiesRenderer {}.renderValue(List("bar"))
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (newExpr
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (objectBody))
-      (identifier)
-      (argumentList
-        (methodCallExpr
-          (identifier)
-          (argumentList
-            (slStringLiteral
-              (slStringLiteralPart))))))))

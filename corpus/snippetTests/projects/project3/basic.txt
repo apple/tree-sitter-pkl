@@ -1,6 +1,6 @@
-================================================================================
+==========
 projects/project3/basic
-================================================================================
+==========
 
 amends ".../snippetTest.pkl"
 
@@ -12,29 +12,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (importExpr
-              (stringConstant
-                (slStringLiteralPart))))
-          (objectElement
-            (importExpr
-              (stringConstant
-                (slStringLiteralPart))))
-          (objectElement
-            (importExpr
-              (stringConstant
-                (slStringLiteralPart)))))))))

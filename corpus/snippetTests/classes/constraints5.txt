@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/constraints5
-================================================================================
+==========
 
 class Gauge {
   min: Int
@@ -18,53 +18,5 @@ res2 = new Gauge {
   max = 3
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (binaryExpr
-              (thisExpr)
-              (variableExpr
-                (identifier))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral))
-        (objectProperty
-          (identifier)
-          (intLiteral)))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral))
-        (objectProperty
-          (identifier)
-          (intLiteral))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/pcfRenderer1
-================================================================================
+==========
 
 pigeon {
   name = "pigeon"
@@ -41,82 +41,5 @@ output {
   renderer = new PcfRenderer {}
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (objectProperty
-        (identifier)
-        (intLiteral))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (objectElement
-        (slStringLiteral
-          (slStringLiteralPart)))
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectElement
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectElement
-        (newExpr
-          (objectBody
-            (lineComment)
-            (objectProperty
-              (identifier)
-              (ERROR)
-              (variableExpr
-                (identifier)))
-            (objectElement
-              (variableExpr
-                (identifier)))
-            (objectElement
-              (mlStringLiteral))
-            (objectElement
-              (variableExpr
-                (identifier)))
-            (objectElement
-              (variableExpr
-                (identifier)))
-            (objectElement
-              (mlStringLiteral
-                (MISSING """""))))))
-      (lineComment)
-      (objectElement
-        (mlStringLiteral
-          (MISSING """"")))
-      (objectElement
-        (variableExpr
-          (identifier)))
-      (objectElement
-        (variableExpr
-          (identifier)))
-      (objectElement
-        (mlStringLiteral
-          (MISSING """"")))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody))))))

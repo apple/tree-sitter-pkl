@@ -1,33 +1,9 @@
-================================================================================
+==========
 errors/delimiters/missingParenthesizedTypeDelimiter
-================================================================================
+==========
 
 res1: ((String) -> String | List<String>
 res2 = 42
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (type
-              (qualifiedIdentifier
-                (identifier))))
-          (type
-            (qualifiedIdentifier
-              (identifier))
-            (typeArgumentList
-              (type
-                (qualifiedIdentifier
-                  (identifier))))))
-        (MISSING "))))
-  (classProperty
-    (identifier)
-    (intLiteral)))

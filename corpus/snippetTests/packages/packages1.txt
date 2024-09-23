@@ -1,6 +1,6 @@
-================================================================================
+==========
 packages/packages1
-================================================================================
+==========
 
 amends ".../snippetTest.pkl"
 
@@ -29,80 +29,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (newExpr
-              (type
-                (qualifiedIdentifier
-                  (identifier)))
-              (objectBody
-                (objectProperty
-                  (identifier)
-                  (slStringLiteral
-                    (slStringLiteralPart)))
-                (lineComment)
-                (objectProperty
-                  (identifier)
-                  (newExpr
-                    (type
-                      (qualifiedIdentifier
-                        (identifier)))
-                    (objectBody
-                      (objectProperty
-                        (identifier)
-                        (slStringLiteral
-                          (slStringLiteralPart)))))))))
-          (objectElement
-            (importExpr
-              (stringConstant
-                (slStringLiteralPart))))
-          (objectElement
-            (importExpr
-              (stringConstant
-                (slStringLiteralPart))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (importExpr
-              (stringConstant
-                (slStringLiteralPart))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (readExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (objectElement
-            (readExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (objectElement
-            (readExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart))))))))))

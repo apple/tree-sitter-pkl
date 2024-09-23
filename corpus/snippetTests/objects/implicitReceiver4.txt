@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/implicitReceiver4
-================================================================================
+==========
 
 foo {
   bar {
@@ -8,18 +8,5 @@ foo {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (objectBody
-          (objectProperty
-            (identifier)
-            (binaryExpr
-              (variableExpr
-                (identifier))
-              (intLiteral))))))))

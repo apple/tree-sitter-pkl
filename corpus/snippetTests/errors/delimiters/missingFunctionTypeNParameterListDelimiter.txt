@@ -1,28 +1,9 @@
-================================================================================
+==========
 errors/delimiters/missingFunctionTypeNParameterListDelimiter
-================================================================================
+==========
 
 f: (String, Int, String -> String
 res1 = 42
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (ERROR
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (ERROR
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (identifier))
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (intLiteral)))

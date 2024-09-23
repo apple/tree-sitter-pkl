@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/minPclVersion
-================================================================================
+==========
 
 examples {
   ["minPklVersion check"] {
@@ -12,29 +12,5 @@ examples {
 @ModuleInfo { minPklVersion = "0.8.0" }
 class Class1
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectProperty
-            (identifier)
-            (objectBody))
-          (objectProperty
-            (identifier)
-            (objectBody))))))
-  (clazz
-    (annotation
-      (qualifiedIdentifier
-        (identifier))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))
-    (identifier)))

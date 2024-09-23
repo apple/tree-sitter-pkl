@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/moduleOutput2
-================================================================================
+==========
 
 output {
   renderer = new JsonRenderer {}
@@ -9,20 +9,5 @@ output {
 // defining properties after output {} used to cause NPE
 res1 = 42
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody)))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (intLiteral)))

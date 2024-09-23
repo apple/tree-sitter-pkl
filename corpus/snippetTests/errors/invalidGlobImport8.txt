@@ -1,24 +1,11 @@
-================================================================================
+==========
 errors/invalidGlobImport8
-================================================================================
+==========
 
 import* "../../input-helper/globtest/**.pkl" as globbedImports
 
 // test for ResolveQualifiedDeclaredTypeNode
 res: globbedImports.Foo
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importGlobClause
-    (stringConstant
-      (slStringLiteralPart))
-    (identifier))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)
-          (identifier))))))

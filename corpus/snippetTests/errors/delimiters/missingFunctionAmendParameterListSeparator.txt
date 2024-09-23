@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/delimiters/missingFunctionAmendParameterListSeparator
-================================================================================
+==========
 
 f { arg1, arg2 arg3 ->
   x = arg1
@@ -8,28 +8,5 @@ f { arg1, arg2 arg3 ->
   z = arg3
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectBodyParameters
-        (typedIdentifier
-          (identifier))
-        (typedIdentifier
-          (identifier))
-        (ERROR
-          (identifier)))
-      (objectProperty
-        (identifier)
-        (variableExpr
-          (identifier)))
-      (objectProperty
-        (identifier)
-        (variableExpr
-          (identifier)))
-      (objectProperty
-        (identifier)
-        (variableExpr
-          (identifier))))))

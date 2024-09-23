@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/duplicateFunction
-================================================================================
+==========
 
 function foo() = "foo"
 
@@ -10,32 +10,5 @@ function bar() = "bar"
 
 function foo(arg) = "other" // duplicate
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList))
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (lineComment)
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList))
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList
-        (typedIdentifier
-          (identifier))))
-    (slStringLiteral
-      (slStringLiteralPart)))
-  (lineComment))

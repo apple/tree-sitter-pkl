@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constOuter2
-================================================================================
+==========
 
 class Person {
   name: String
@@ -9,39 +9,5 @@ class Person {
 
 person = new Person { name = "Foo" }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (modifier)
-        (identifier)
-        (newExpr
-          (objectBody
-            (objectProperty
-              (identifier)
-              (slStringLiteral
-                (interpolationExpr
-                  (propertyCallExpr
-                    (outerExpr)
-                    (identifier)))
-                (slStringLiteralPart))))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))))

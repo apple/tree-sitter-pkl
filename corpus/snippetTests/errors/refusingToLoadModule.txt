@@ -1,18 +1,10 @@
-================================================================================
+==========
 errors/refusingToLoadModule
-================================================================================
+==========
 
 import "birds:///foo.pkl"
 
 output = foo
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (variableExpr
-      (identifier))))

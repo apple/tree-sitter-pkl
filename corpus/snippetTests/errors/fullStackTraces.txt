@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/fullStackTraces
-================================================================================
+==========
 
 const local wrong = throw("fail")
 
@@ -16,50 +16,5 @@ class Foo {
 
 aFoo: Foo
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (modifier)
-    (identifier)
-    (throwExpr
-      (parenthesizedExpr
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (modifier)
-    (modifier)
-    (identifier)
-    (variableExpr
-      (identifier)))
-  (classMethod
-    (methodHeader
-      (modifier)
-      (identifier)
-      (parameterList))
-    (variableExpr
-      (identifier)))
-  (classMethod
-    (methodHeader
-      (modifier)
-      (modifier)
-      (identifier)
-      (parameterList))
-    (methodCallExpr
-      (identifier)
-      (argumentList)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (methodCallExpr
-          (identifier)
-          (argumentList)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))))

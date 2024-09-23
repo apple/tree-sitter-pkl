@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/typeResolution1
-================================================================================
+==========
 
 open module typeResolution1
 
@@ -8,24 +8,5 @@ class Person1 { name = "person1" }
 
 p1: Person1
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (modifier)
-      (qualifiedIdentifier
-        (identifier))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))))

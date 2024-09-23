@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/localProperty2
-================================================================================
+==========
 
 import "pkl:test"
 
@@ -23,63 +23,5 @@ barY = bar.y
 // should not be accessible
 barX = test.catch(() -> bar.x)
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (modifier)
-        (identifier)
-        (intLiteral))))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (propertyCallExpr
-            (variableExpr
-              (identifier))
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (modifier)
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (variableExpr
-          (identifier)))))
-  (lineComment)
-  (lineComment)
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)))
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (propertyCallExpr
-            (variableExpr
-              (identifier))
-            (identifier)))))))

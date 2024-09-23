@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/pcfRenderer7
-================================================================================
+==========
 
 rawString = import("../basic/rawString.pkl")
 
@@ -22,49 +22,5 @@ output {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (importExpr
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (ERROR
-      (escapeSequence)
-      (slStringLiteralPart)
-      (identifier))
-    (variableExpr
-      (identifier)))
-  (classProperty
-    (identifier)
-    (ERROR
-      (identifier))
-    (ERROR
-      (identifier))
-    (variableExpr
-      (identifier)))
-  (ERROR
-    (identifier)
-    (identifier)
-    (identifier))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (escapeSequence)
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (trueLiteral))))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/cannotAmendFixedProperty2
-================================================================================
+==========
 
 amends "../basic/fixedProperty1.pkl"
 
@@ -8,17 +8,5 @@ res3 {
   name = "Osprey"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart))))))

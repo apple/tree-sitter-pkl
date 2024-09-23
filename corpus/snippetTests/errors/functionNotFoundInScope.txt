@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/functionNotFoundInScope
-================================================================================
+==========
 
 function fooa() = 42
 function foob(x) = 42
@@ -9,31 +9,5 @@ function other() = 42
 
 res1 = foox()
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList))
-    (intLiteral))
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList
-        (typedIdentifier
-          (identifier))))
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classMethod
-    (methodHeader
-      (identifier)
-      (parameterList))
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList))))

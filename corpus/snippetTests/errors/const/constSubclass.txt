@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/const/constSubclass
-================================================================================
+==========
 
 open class Foo {
   const x: Int
@@ -12,33 +12,5 @@ class Bar extends Foo {
 
 bar = new Bar {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (modifier)
-    (identifier)
-    (classBody
-      (classProperty
-        (modifier)
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
-    (classBody
-      (classProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody))))

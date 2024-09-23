@@ -1,23 +1,8 @@
-================================================================================
+==========
 errors/duplicateTypeParameter
-================================================================================
+==========
 
 typealias MyType<Elem, Elem> = List<Elem>
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (typeAlias
-    (identifier)
-    (typeParameterList
-      (typeParameter
-        (identifier))
-      (typeParameter
-        (identifier)))
-    (type
-      (qualifiedIdentifier
-        (identifier))
-      (typeArgumentList
-        (type
-          (qualifiedIdentifier
-            (identifier)))))))

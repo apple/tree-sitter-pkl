@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/if
-================================================================================
+==========
 
 amends "../snippetTest.pkl"
 
@@ -17,67 +17,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (ifExpr
-              (trueLiteral)
-              (intLiteral)
-              (intLiteral)))
-          (objectElement
-            (ifExpr
-              (falseLiteral)
-              (intLiteral)
-              (ifExpr
-                (falseLiteral)
-                (intLiteral)
-                (intLiteral))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (ifExpr
-                    (slStringLiteral)
-                    (trueLiteral)
-                    (falseLiteral))))))
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (ifExpr
-                    (intLiteral)
-                    (trueLiteral)
-                    (falseLiteral))))))
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (ifExpr
-                    (nullLiteral)
-                    (trueLiteral)
-                    (falseLiteral)))))))))))

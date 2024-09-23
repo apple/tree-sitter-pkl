@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/invalidClassPropertyModifier
-================================================================================
+==========
 
 class Foo {
   open foo: Int = 42
@@ -8,22 +8,5 @@ class Foo {
 
 res1 = Foo {}
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (modifier)
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))))
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (variableObjectLiteral
-      (identifier)
-      (objectBody))))

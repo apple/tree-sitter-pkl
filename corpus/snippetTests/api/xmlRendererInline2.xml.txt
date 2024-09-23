@@ -1,6 +1,6 @@
-================================================================================
+==========
 api/xmlRendererInline2.xml
-================================================================================
+==========
 
 import "pkl:xml"
 
@@ -20,90 +20,5 @@ output {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (objectBody
-          (objectElement
-            (newExpr
-              (objectBody
-                (objectProperty
-                  (identifier)
-                  (slStringLiteral
-                    (slStringLiteralPart)))
-                (objectProperty
-                  (identifier)
-                  (intLiteral)))))
-          (objectElement
-            (newExpr
-              (objectBody
-                (objectProperty
-                  (identifier)
-                  (slStringLiteral
-                    (slStringLiteralPart)))
-                (objectProperty
-                  (identifier)
-                  (intLiteral)))))))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (objectBody
-                (objectEntry
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (functionLiteral
-                    (parameterList
-                      (typedIdentifier
-                        (identifier)))
-                    (methodCallExpr
-                      (variableExpr
-                        (identifier))
-                      (identifier)
-                      (argumentList
-                        (variableExpr
-                          (identifier))))))
-                (lineComment)
-                (objectEntry
-                  (slStringLiteral
-                    (slStringLiteralPart))
-                  (functionLiteral
-                    (parameterList
-                      (typedIdentifier
-                        (identifier)))
-                    (objectLiteral
-                      (parenthesizedExpr
-                        (methodCallExpr
-                          (variableExpr
-                            (identifier))
-                          (identifier)
-                          (argumentList
-                            (slStringLiteral
-                              (slStringLiteralPart)))))
-                      (objectBody
-                        (objectElement
-                          (methodCallExpr
-                            (variableExpr
-                              (identifier))
-                            (identifier)
-                            (argumentList
-                              (variableExpr
-                                (identifier)))))))))
-                (lineComment)))))))))

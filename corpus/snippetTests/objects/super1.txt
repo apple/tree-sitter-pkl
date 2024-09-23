@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/super1
-================================================================================
+==========
 
 parent {
   x = 1
@@ -17,51 +17,5 @@ grandChild = (child) {
   y = super.x * 3
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))
-      (objectProperty
-        (identifier)
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (binaryExpr
-            (binaryExpr
-              (propertyCallExpr
-                (identifier))
-              (propertyCallExpr
-                (identifier)))
-            (propertyCallExpr
-              (identifier))))
-        (objectProperty
-          (identifier)
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (objectLiteral
-      (parenthesizedExpr
-        (variableExpr
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (intLiteral))
-        (objectProperty
-          (identifier)
-          (binaryExpr
-            (propertyCallExpr
-              (identifier))
-            (intLiteral)))))))

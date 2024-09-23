@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/constraints3
-================================================================================
+==========
 
 import "pkl:test"
 
@@ -26,72 +26,5 @@ res2 = test.catch(() ->
   }.address
 )
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (methodCallExpr
-              (variableExpr
-                (identifier))
-              (identifier)
-              (argumentList
-                (slStringLiteral
-                  (slStringLiteralPart)))))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectProperty
-              (identifier)
-              (slStringLiteral
-                (slStringLiteralPart))))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (propertyCallExpr
-            (newExpr
-              (type
-                (qualifiedIdentifier
-                  (identifier)))
-              (objectBody
-                (objectProperty
-                  (identifier)
-                  (objectBody
-                    (objectProperty
-                      (identifier)
-                      (slStringLiteral
-                        (slStringLiteralPart)))))))
-            (identifier)))))))

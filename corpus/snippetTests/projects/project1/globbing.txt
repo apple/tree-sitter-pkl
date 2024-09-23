@@ -1,6 +1,6 @@
-================================================================================
+==========
 projects/project1/globbing
-================================================================================
+==========
 
 amends ".../snippetTest.pkl"
 
@@ -44,109 +44,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (lineComment)
-          (objectElement
-            (propertyCallExpr
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart)))
-              (identifier)))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (importGlobExpr
-              (stringConstant
-                (slStringLiteralPart))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (importGlobExpr
-              (stringConstant
-                (slStringLiteralPart))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (propertyCallExpr
-              (importGlobExpr
-                (stringConstant
-                  (slStringLiteralPart)))
-              (identifier)))
-          (objectElement
-            (propertyCallExpr
-              (importGlobExpr
-                (stringConstant
-                  (slStringLiteralPart)))
-              (identifier)))
-          (objectElement
-            (propertyCallExpr
-              (importGlobExpr
-                (stringConstant
-                  (slStringLiteralPart)))
-              (identifier)))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (readGlobExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (objectElement
-            (readGlobExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))
-          (objectElement
-            (readGlobExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (lineComment)
-          (objectElement
-            (propertyCallExpr
-              (importExpr
-                (stringConstant
-                  (slStringLiteralPart)))
-              (identifier)))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (readGlobExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (importExpr
-              (stringConstant
-                (slStringLiteralPart)))))))))

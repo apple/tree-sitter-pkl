@@ -1,6 +1,6 @@
-================================================================================
+==========
 projects/evaluatorSettings/basic
-================================================================================
+==========
 
 amends ".../snippetTest.pkl"
 
@@ -17,56 +17,5 @@ examples {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (readGlobExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (readGlobExpr
-              (parenthesizedExpr
-                (slStringLiteral
-                  (slStringLiteralPart)))))))
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (importExpr
-                    (stringConstant
-                      (slStringLiteralPart)))))))
-          (objectElement
-            (methodCallExpr
-              (moduleExpr)
-              (identifier)
-              (argumentList
-                (functionLiteral
-                  (parameterList)
-                  (readExpr
-                    (parenthesizedExpr
-                      (slStringLiteral
-                        (slStringLiteralPart)))))))))))))

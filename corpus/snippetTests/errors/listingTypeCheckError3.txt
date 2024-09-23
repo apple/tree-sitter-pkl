@@ -1,36 +1,10 @@
-================================================================================
+==========
 errors/listingTypeCheckError3
-================================================================================
+==========
 
 res: Listing<String(!isEmpty)> = new Listing<String> {
   ""
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))
-        (typeArgumentList
-          (type
-            (type
-              (qualifiedIdentifier
-                (identifier)))
-            (unaryExpr
-              (variableExpr
-                (identifier)))))))
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier))
-        (typeArgumentList
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (objectBody
-        (objectElement
-          (slStringLiteral))))))

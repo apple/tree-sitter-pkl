@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/cannotAmendFixedProperty1
-================================================================================
+==========
 
 class Bird {
   name: String
@@ -18,45 +18,5 @@ n: Nest = new {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (modifier)
-        (identifier)
-        (newExpr
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (objectBody
-            (objectProperty
-              (identifier)
-              (slStringLiteral
-                (slStringLiteralPart))))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (objectBody
-            (objectProperty
-              (identifier)
-              (slStringLiteral
-                (slStringLiteralPart)))))))))

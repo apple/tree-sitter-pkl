@@ -1,6 +1,6 @@
-================================================================================
+==========
 objects/outer2
-================================================================================
+==========
 
 res1 {
   x {
@@ -9,20 +9,5 @@ res1 {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (objectBody
-          (objectProperty
-            (identifier)
-            (intLiteral))
-          (objectProperty
-            (identifier)
-            (propertyCallExpr
-              (outerExpr)
-              (identifier))))))))

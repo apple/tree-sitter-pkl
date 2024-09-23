@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/spreadSyntaxCannotHaveEntry
-================================================================================
+==========
 
 local source {
   ["foo"] = 1
@@ -10,25 +10,5 @@ res: Listing = new {
   ...source
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectSpread
-          (variableExpr
-            (identifier)))))))

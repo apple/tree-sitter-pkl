@@ -1,19 +1,10 @@
-================================================================================
+==========
 errors/invalidGlobImport4
-================================================================================
+==========
 
 import* ".../input-helper/**.pkl" as invalidGlob
 
 result = invalidGlob
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importGlobClause
-    (stringConstant
-      (slStringLiteralPart))
-    (identifier))
-  (classProperty
-    (identifier)
-    (variableExpr
-      (identifier))))

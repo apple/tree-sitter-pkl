@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/forGeneratorWrongVariableName
-================================================================================
+==========
 
 res: Mapping<String, Int> = new {
   for (idx, o in List(1, 2)) {
@@ -11,60 +11,5 @@ res: Mapping<String, Int> = new {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))
-        (typeArgumentList
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (type
-            (qualifiedIdentifier
-              (identifier))))))
-    (newExpr
-      (objectBody
-        (forGenerator
-          (typedIdentifier
-            (identifier))
-          (typedIdentifier
-            (identifier))
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (intLiteral)
-              (intLiteral)))
-          (objectBody
-            (objectEntry
-              (slStringLiteral
-                (interpolationExpr
-                  (variableExpr
-                    (identifier)))
-                (slStringLiteralPart))
-              (variableExpr
-                (identifier)))))
-        (forGenerator
-          (typedIdentifier
-            (identifier))
-          (typedIdentifier
-            (identifier))
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (intLiteral)
-              (intLiteral)))
-          (objectBody
-            (objectEntry
-              (slStringLiteral
-                (interpolationExpr
-                  (variableExpr
-                    (identifier)))
-                (slStringLiteralPart))
-              (variableExpr
-                (identifier)))
-            (lineComment)))))))

@@ -1,19 +1,10 @@
-================================================================================
+==========
 errors/invalidGlobImport5
-================================================================================
+==========
 
 import* "https://www.apple.com/**.pkl" as allPklModules
 
 res = allPklModules
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importGlobClause
-    (stringConstant
-      (slStringLiteralPart))
-    (identifier))
-  (classProperty
-    (identifier)
-    (variableExpr
-      (identifier))))

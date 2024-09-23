@@ -1,20 +1,10 @@
-================================================================================
+==========
 projects/badProjectDeps3/bug
-================================================================================
+==========
 
 import "@bird/Bird.pkl"
 
 bird: Bird
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))))

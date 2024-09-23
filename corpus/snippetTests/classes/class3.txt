@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/class3
-================================================================================
+==========
 
 class Person {
   name: String
@@ -15,53 +15,5 @@ person = new Person {
   adress = "Howdy St."
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier))
-            (typeArgumentList
-              (type
-                (qualifiedIdentifier
-                  (identifier)))))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (lineComment)
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 errors/spreadSyntaxDuplicateEntry1
-================================================================================
+==========
 
 local source {
   ["foo"] = 1
@@ -11,29 +11,5 @@ res: Mapping = new {
   ["foo"] = 2
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (modifier)
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier))))
-    (newExpr
-      (objectBody
-        (objectSpread
-          (variableExpr
-            (identifier)))
-        (objectEntry
-          (slStringLiteral
-            (slStringLiteralPart))
-          (intLiteral))))))

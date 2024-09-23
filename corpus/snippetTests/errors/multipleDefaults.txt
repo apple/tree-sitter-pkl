@@ -1,26 +1,8 @@
-================================================================================
+==========
 errors/multipleDefaults
-================================================================================
+==========
 
 foo: *Int|*String|*"foo"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
-          (type
-            (qualifiedIdentifier
-              (identifier)))
-          (type
-            (type
-              (type
-                (qualifiedIdentifier
-                  (identifier)))
-              (type
-                (type
-                  (stringConstant
-                    (slStringLiteralPart)))))))))))

@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/recursiveModule2
-================================================================================
+==========
 
 import "recursiveModule1.pkl"
 
@@ -8,19 +8,5 @@ class Bar {
   foo: recursiveModule1.Foo
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)
-              (identifier))))))))

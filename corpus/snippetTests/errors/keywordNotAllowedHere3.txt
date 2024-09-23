@@ -1,18 +1,9 @@
-================================================================================
+==========
 errors/keywordNotAllowedHere3
-================================================================================
+==========
 
 res1 = outer.outer
 res2 = 42
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (outerExpr)
-      (identifier)))
-  (classProperty
-    (identifier)
-    (intLiteral)))

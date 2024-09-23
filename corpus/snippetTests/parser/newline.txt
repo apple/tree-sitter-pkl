@@ -1,6 +1,6 @@
-================================================================================
+==========
 parser/newline
-================================================================================
+==========
 
 amends "../snippetTest.pkl"
 
@@ -14,54 +14,5 @@ facts {
   }
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectEntry
-        (slStringLiteral
-          (slStringLiteralPart))
-        (objectBody
-          (objectProperty
-            (modifier)
-            (identifier)
-            (intLiteral))
-          (objectElement
-            (binaryExpr
-              (propertyCallExpr
-                (newExpr
-                  (type
-                    (qualifiedIdentifier
-                      (identifier)))
-                  (objectBody
-                    (objectElement
-                      (isExpr
-                        (isExpr
-                          (variableExpr
-                            (identifier))
-                          (type
-                            (type
-                              (qualifiedIdentifier
-                                (identifier)))
-                            (type
-                              (type
-                                (qualifiedIdentifier
-                                  (identifier)))
-                              (variableExpr
-                                (identifier)))))
-                        (type
-                          (type
-                            (qualifiedIdentifier
-                              (identifier)))
-                          (type
-                            (qualifiedIdentifier
-                              (identifier))))))))
-                (identifier))
-              (intLiteral)))
-          (lineComment))))))

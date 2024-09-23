@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/wrongType2
-================================================================================
+==========
 
 class Person {
   name: String
@@ -12,36 +12,5 @@ pigeon = new Person {
   age = "42"
 }
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classProperty
-    (identifier)
-    (newExpr
-      (type
-        (qualifiedIdentifier
-          (identifier)))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))))

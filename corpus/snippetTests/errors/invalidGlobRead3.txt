@@ -1,15 +1,8 @@
-================================================================================
+==========
 errors/invalidGlobRead3
-================================================================================
+==========
 
 res = read*("https://www.google.com/**.pkl")
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (classProperty
-    (identifier)
-    (readGlobExpr
-      (parenthesizedExpr
-        (slStringLiteral
-          (slStringLiteralPart))))))

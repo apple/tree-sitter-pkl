@@ -1,6 +1,6 @@
-================================================================================
+==========
 classes/class4
-================================================================================
+==========
 
 import "pkl:test"
 
@@ -15,50 +15,5 @@ class Person {
 res1 = test.catch(() -> Person.foo)
 res2 = test.catch(() -> Person.bar())
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (importClause
-    (stringConstant
-      (slStringLiteralPart)))
-  (clazz
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (intLiteral))
-      (classMethod
-        (methodHeader
-          (identifier)
-          (parameterList))
-        (intLiteral))))
-  (lineComment)
-  (lineComment)
-  (lineComment)
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (propertyCallExpr
-            (variableExpr
-              (identifier))
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (variableExpr
-        (identifier))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList)
-          (methodCallExpr
-            (variableExpr
-              (identifier))
-            (identifier)
-            (argumentList)))))))

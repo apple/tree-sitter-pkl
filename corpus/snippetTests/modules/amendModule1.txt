@@ -1,6 +1,6 @@
-================================================================================
+==========
 modules/amendModule1
-================================================================================
+==========
 
 module amendModule1
 
@@ -13,25 +13,5 @@ pigeon {
 
 name = "pigeon1"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (qualifiedIdentifier
-        (identifier)))
-    (lineComment)
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (slStringLiteral
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (slStringLiteral
-      (slStringLiteralPart))))

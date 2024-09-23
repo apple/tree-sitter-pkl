@@ -1,6 +1,6 @@
-================================================================================
+==========
 basic/newInAmendingModuleMethod
-================================================================================
+==========
 
 amends "baseModule.pkl"
 
@@ -17,100 +17,5 @@ local function parrot(): unknown = new { name = "Parrot"; type = getClass().simp
 
 foo = List(pigeon(), barnOwl(), parrot())
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (clazz
-    (modifier)
-    (identifier)
-    (classBody
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))
-      (classProperty
-        (identifier)
-        (typeAnnotation
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
-  (classMethod
-    (methodHeader
-      (modifier)
-      (identifier)
-      (parameterList)
-      (typeAnnotation
-        (type
-          (qualifiedIdentifier
-            (identifier)))))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectProperty
-          (identifier)
-          (propertyCallExpr
-            (methodCallExpr
-              (identifier)
-              (argumentList))
-            (identifier))))))
-  (classMethod
-    (methodHeader
-      (modifier)
-      (identifier)
-      (parameterList))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectProperty
-          (identifier)
-          (propertyCallExpr
-            (methodCallExpr
-              (identifier)
-              (argumentList))
-            (identifier))))))
-  (classMethod
-    (methodHeader
-      (modifier)
-      (identifier)
-      (parameterList)
-      (typeAnnotation
-        (type)))
-    (newExpr
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))
-        (objectProperty
-          (identifier)
-          (propertyCallExpr
-            (methodCallExpr
-              (identifier)
-              (argumentList))
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList
-        (methodCallExpr
-          (identifier)
-          (argumentList))
-        (methodCallExpr
-          (identifier)
-          (argumentList))
-        (methodCallExpr
-          (identifier)
-          (argumentList))))))

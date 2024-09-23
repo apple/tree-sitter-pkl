@@ -1,6 +1,6 @@
-================================================================================
+==========
 annotation/deprecatedWithMessage2
-================================================================================
+==========
 
 module deprecatedWithMessage2
 
@@ -15,89 +15,5 @@ res1b = List(22, 23, 24).map((n) -> f1(n))
 res2 = f2(900)
 res2b = List(25, 26, 27).map((n) -> f2(n))
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (moduleClause
-      (qualifiedIdentifier
-        (identifier)))
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart))))
-  (classMethod
-    (annotation
-      (qualifiedIdentifier
-        (identifier))
-      (objectBody
-        (objectProperty
-          (identifier)
-          (slStringLiteral
-            (slStringLiteralPart)))))
-    (methodHeader
-      (identifier)
-      (parameterList
-        (typedIdentifier
-          (identifier))))
-    (binaryExpr
-      (unaryExpr
-        (intLiteral))
-      (parenthesizedExpr
-        (binaryExpr
-          (binaryExpr
-            (variableExpr
-              (identifier))
-            (intLiteral))
-          (intLiteral)))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (methodCallExpr
-        (identifier)
-        (argumentList
-          (intLiteral)
-          (intLiteral)
-          (intLiteral)))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList
-            (typedIdentifier
-              (identifier)))
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (variableExpr
-                (identifier))))))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (identifier)
-      (argumentList
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (methodCallExpr
-      (methodCallExpr
-        (identifier)
-        (argumentList
-          (intLiteral)
-          (intLiteral)
-          (intLiteral)))
-      (identifier)
-      (argumentList
-        (functionLiteral
-          (parameterList
-            (typedIdentifier
-              (identifier)))
-          (methodCallExpr
-            (identifier)
-            (argumentList
-              (variableExpr
-                (identifier)))))))))

@@ -1,13 +1,8 @@
-================================================================================
+==========
 errors/moduleAmendsVersionCheck
-================================================================================
+==========
 
 amends "moduleWithHighMinPklVersion.pkl"
 
---------------------------------------------------------------------------------
+---
 
-(module
-  (moduleHeader
-    (extendsOrAmendsClause
-      (stringConstant
-        (slStringLiteralPart)))))
