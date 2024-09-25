@@ -1,0 +1,164 @@
+===
+types
+===
+
+res1: String
+
+res2: String?
+
+res3: String|Int
+
+res4: *String|Int
+
+res5: String?
+
+res6: String?(this == null)
+
+res7: String(this == null)?
+
+res8: String(this == null)?(!isEmpty)
+
+res9: module
+
+res10: module?
+
+res11: nothing
+
+res12: nothing?
+
+res13: unknown
+
+res14: unknown?
+
+res15: "string literal type"
+
+res16: (Int) -> Boolean
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (binaryExpr
+          (thisExpr)
+          (nullLiteral)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (binaryExpr
+            (thisExpr)
+            (nullLiteral))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (binaryExpr
+              (thisExpr)
+              (nullLiteral))))
+        (unaryExpr
+          (variableExpr
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (stringConstant
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (type
+          (qualifiedIdentifier
+            (identifier)))))))

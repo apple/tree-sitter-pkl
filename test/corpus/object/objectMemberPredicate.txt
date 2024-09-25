@@ -1,0 +1,33 @@
+===
+objectMemberPredicate
+===
+
+foo {
+  [[fuzz == 15]] {
+    foo = 1
+  }
+
+  [[fuzz == 15]] = 15
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectPredicate
+        (binaryExpr
+          (variableExpr
+            (identifier))
+          (intLiteral))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral))))
+      (objectPredicate
+        (binaryExpr
+          (variableExpr
+            (identifier))
+          (intLiteral))
+        (intLiteral)))))

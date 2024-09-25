@@ -1,12 +1,18 @@
 ================================================================================
-importExpr
+import
 ================================================================================
 
-foo = import*("*.txt")
+res1 = import("foo.txt")
+res2 = import*("foo.txt")
 
 --------------------------------------------------------------------------------
 
 (module
+  (classProperty
+    (identifier)
+    (importExpr
+      (stringConstant
+        (slStringLiteralPart))))
   (classProperty
     (identifier)
     (importGlobExpr

@@ -1,15 +1,29 @@
 ================================================================================
-readExpr
+read
 ================================================================================
 
-foo = read*("*.txt")
+res1 = read("foo.txt")
+res2 = read*("*.txt")
+res3 = read?("foo.txt")
 
 --------------------------------------------------------------------------------
 
 (module
   (classProperty
     (identifier)
+    (readExpr
+      (parenthesizedExpr
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
     (readGlobExpr
+      (parenthesizedExpr
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (readOrNullExpr
       (parenthesizedExpr
         (slStringLiteral
           (slStringLiteralPart))))))
