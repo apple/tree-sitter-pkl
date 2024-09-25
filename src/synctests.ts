@@ -27,14 +27,17 @@ const pattern = '**/*.pkl';
 const treeSitterCmd = 'node_modules/.bin/tree-sitter';
 
 (async () => {
-  await fs.rmdir('corpus/snippetTests/', { recursive: true });
+  await fs.rmdir('test/corpus/snippetTests/', { recursive: true });
 
   const srcFiles = await glob(`${testDir}/${pattern}`);
   for (const srcFile of srcFiles) {
+    if (srcFile.includes("error") || srcFile.includes("Error")) {
+      continue;
+    }
     const contents = await fs.readFile(srcFile, { encoding: 'utf-8' })
     const testName = srcFile.replace(testDir + '/', '').replace(/.pkl$/, '')
     const output = `==========\n${testName}\n==========\n\n${contents.trim()}\n\n---\n\n`
-    const dest = `corpus/snippetTests/${testName}.txt`;
+    const dest = `test/corpus/snippetTests/${testName}.txt`;
     // const destExists = await fs.
     await fs.mkdir(path.dirname(dest), { recursive: true });
     await fs.writeFile(dest, output, { encoding: 'utf-8' });
