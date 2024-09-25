@@ -1,0 +1,14 @@
+==========
+basic/fixedProperty4
+==========
+
+fixed module foo
+
+---
+
+(module
+  (moduleHeader
+    (moduleClause
+      (modifier)
+      (qualifiedIdentifier
+        (identifier)))))

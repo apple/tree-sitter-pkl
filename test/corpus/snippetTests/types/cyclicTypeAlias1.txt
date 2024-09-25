@@ -1,0 +1,18 @@
+==========
+types/cyclicTypeAlias1
+==========
+
+typealias Foo = List<Foo>
+
+---
+
+(module
+  (typeAlias
+    (identifier)
+    (type
+      (qualifiedIdentifier
+        (identifier))
+      (typeArgumentList
+        (type
+          (qualifiedIdentifier
+            (identifier)))))))

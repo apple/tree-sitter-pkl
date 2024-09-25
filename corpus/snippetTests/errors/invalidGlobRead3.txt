@@ -1,8 +1,0 @@
-==========
-errors/invalidGlobRead3
-==========
-
-res = read*("https://www.google.com/**.pkl")
-
----
-

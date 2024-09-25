@@ -1,0 +1,163 @@
+==========
+api/anyConverter
+==========
+
+class User {
+  name: String
+}
+
+class Dog {
+  age: Int
+}
+
+class Env {
+  type: "test"|"prod"
+}
+
+foo = new Listing {
+  new User {
+    name = "Pigeon"
+  }
+  new Dog {
+    age = 5
+  }
+  new Env {
+    type = "prod"
+  }
+  "42"
+}
+
+output {
+  renderer = new PcfRenderer {
+    converters {
+      [Any] = (o) -> if (o is module) o else "Unconverted class: \(o.getClass())"
+      [Dog] = (d) -> "Dog(\(d.age))"
+    }
+  }
+}
+
+---
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (stringConstant
+                (slStringLiteralPart)))
+            (type
+              (stringConstant
+                (slStringLiteralPart))))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectElement
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectProperty
+                (identifier)
+                (slStringLiteral
+                  (slStringLiteralPart))))))
+        (objectElement
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectProperty
+                (identifier)
+                (intLiteral)))))
+        (objectElement
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody
+              (objectProperty
+                (identifier)
+                (slStringLiteral
+                  (slStringLiteralPart))))))
+        (objectElement
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (objectBody
+                (objectEntry
+                  (variableExpr
+                    (identifier))
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (ifExpr
+                      (isExpr
+                        (variableExpr
+                          (identifier))
+                        (type
+                          (qualifiedIdentifier
+                            (identifier))))
+                      (variableExpr
+                        (identifier))
+                      (slStringLiteral
+                        (slStringLiteralPart)
+                        (interpolationExpr
+                          (methodCallExpr
+                            (variableExpr
+                              (identifier))
+                            (identifier)
+                            (argumentList)))))))
+                (objectEntry
+                  (variableExpr
+                    (identifier))
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (slStringLiteral
+                      (slStringLiteralPart)
+                      (interpolationExpr
+                        (propertyCallExpr
+                          (variableExpr
+                            (identifier))
+                          (identifier)))
+                      (slStringLiteralPart))))))))))))

@@ -1,9 +1,0 @@
-==========
-errors/keywordNotAllowedHere3
-==========
-
-res1 = outer.outer
-res2 = 42
-
----
-

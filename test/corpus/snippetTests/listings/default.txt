@@ -1,0 +1,132 @@
+==========
+listings/default
+==========
+
+class Person {
+  name: String
+  age: Int = 42
+}
+
+res1: Listing<Person> = new {
+  new {
+    name = "Pigeon"
+  }
+}
+
+res2 = (res1) {
+  default {
+    age = 21
+  }
+  new {
+    name = "Parrot"
+  }
+}
+
+res3 = (res2) {
+  default { n ->
+    age = n
+  }
+}
+
+res4 = (res3) {
+  (default.apply(5)) {
+    name = "Barn Owl"
+  }
+}
+
+---
+
+(module
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (type
+            (qualifiedIdentifier
+              (identifier))))))
+    (newExpr
+      (objectBody
+        (objectElement
+          (newExpr
+            (objectBody
+              (objectProperty
+                (identifier)
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectProperty
+              (identifier)
+              (intLiteral))))
+        (objectElement
+          (newExpr
+            (objectBody
+              (objectProperty
+                (identifier)
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectBodyParameters
+              (typedIdentifier
+                (identifier)))
+            (objectProperty
+              (identifier)
+              (variableExpr
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (objectLiteral
+      (parenthesizedExpr
+        (variableExpr
+          (identifier)))
+      (objectBody
+        (objectElement
+          (objectLiteral
+            (parenthesizedExpr
+              (methodCallExpr
+                (variableExpr
+                  (identifier))
+                (identifier)
+                (argumentList
+                  (intLiteral))))
+            (objectBody
+              (objectProperty
+                (identifier)
+                (slStringLiteral
+                  (slStringLiteralPart))))))))))

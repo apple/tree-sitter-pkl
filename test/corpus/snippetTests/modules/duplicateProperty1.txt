@@ -1,0 +1,19 @@
+==========
+modules/duplicateProperty1
+==========
+
+import "pkl:test"
+
+test = "test" // duplicate
+
+---
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (lineComment))

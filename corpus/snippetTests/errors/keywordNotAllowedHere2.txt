@@ -1,9 +1,0 @@
-==========
-errors/keywordNotAllowedHere2
-==========
-
-function outer() = 42
-res1 = 42
-
----
-

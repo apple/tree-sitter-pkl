@@ -1,8 +1,0 @@
-==========
-modules/amendModule6
-==========
-
-amends ".../input-helper/modules/Birds.pkl"
-
----
-

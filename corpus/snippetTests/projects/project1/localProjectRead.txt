@@ -1,9 +1,0 @@
-==========
-projects/project1/localProjectRead
-==========
-
-res = read("@project2/penguin.pkl").text
-res2 = read*("@project2/*")
-
----
-

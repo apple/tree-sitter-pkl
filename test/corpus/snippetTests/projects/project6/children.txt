@@ -1,0 +1,14 @@
+==========
+projects/project6/children
+==========
+
+children = import*("children/*.pkl")
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (importGlobExpr
+      (stringConstant
+        (slStringLiteralPart)))))

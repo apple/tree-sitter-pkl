@@ -1,9 +1,0 @@
-==========
-errors/invalidTypeName1
-==========
-
-local base = import("pkl:base")
-listing = new base.Listing {}
-
----
-

@@ -1,0 +1,15 @@
+==========
+modules/invalidExtend3
+==========
+
+// extend an amended module
+extends "amendModule1.pkl"
+
+---
+
+(module
+  (lineComment)
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart)))))

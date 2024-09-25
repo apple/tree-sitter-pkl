@@ -1,0 +1,70 @@
+==========
+modules/amendModule5
+==========
+
+// define local members
+amends "library.pkl"
+
+pigeon {
+  name = pigeon5
+}
+
+name = id(new Foo {}.name)
+
+local pigeon5 = "pigeon5"
+
+local function id(arg) = arg
+
+local class Foo {
+  name = "pigeon5"
+}
+
+---
+
+(module
+  (lineComment)
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (propertyCallExpr
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody))
+          (identifier)))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classMethod
+    (methodHeader
+      (modifier)
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier))))
+    (variableExpr
+      (identifier)))
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (slStringLiteral
+          (slStringLiteralPart))))))

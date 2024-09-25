@@ -1,8 +1,0 @@
-==========
-errors/unterminatedUnicodeEscape
-==========
-
-res1 = "foo \u{123 bar"
-
----
-

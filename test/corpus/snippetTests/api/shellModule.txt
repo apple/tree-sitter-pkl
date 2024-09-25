@@ -1,0 +1,77 @@
+==========
+api/shellModule
+==========
+
+amends "../snippetTest.pkl"
+
+import "pkl:shell"
+
+examples {
+  ["escapeWithSingleQuotes()"] {
+    shell.escapeWithSingleQuotes("asdf")
+    shell.escapeWithSingleQuotes("`@#$")
+    shell.escapeWithSingleQuotes("abc\"abc")
+    shell.escapeWithSingleQuotes("abc'def''ghi'''jkl")
+    shell.escapeWithSingleQuotes("'abc'")
+  }
+}
+
+---
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (slStringLiteralPart)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (slStringLiteralPart)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (slStringLiteralPart)
+                  (escapeSequence)
+                  (slStringLiteralPart)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (slStringLiteralPart)))))
+          (objectElement
+            (methodCallExpr
+              (variableExpr
+                (identifier))
+              (identifier)
+              (argumentList
+                (slStringLiteral
+                  (slStringLiteralPart))))))))))

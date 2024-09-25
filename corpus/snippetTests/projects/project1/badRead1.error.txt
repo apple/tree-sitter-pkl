@@ -1,8 +1,0 @@
-==========
-projects/project1/badRead1.error
-==========
-
-res = read("@doesnotexist/bar/baz.pkl")
-
----
-

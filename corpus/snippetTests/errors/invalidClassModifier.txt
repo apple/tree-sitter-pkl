@@ -1,8 +1,0 @@
-==========
-errors/invalidClassModifier
-==========
-
-hidden class Foo
-
----
-

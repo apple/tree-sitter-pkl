@@ -1,8 +1,0 @@
-==========
-modules/externalProperty
-==========
-
-external foo: String
-
----
-

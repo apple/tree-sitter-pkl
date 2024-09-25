@@ -1,0 +1,14 @@
+==========
+projects/notAProject/goodImport
+==========
+
+res = import("./@child/theChild.pkl")
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (importExpr
+      (stringConstant
+        (slStringLiteralPart)))))

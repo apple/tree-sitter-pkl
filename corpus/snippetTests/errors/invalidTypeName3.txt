@@ -1,9 +1,0 @@
-==========
-errors/invalidTypeName3
-==========
-
-class Foo
-bar = new Foo.Bar {}
-
----
-

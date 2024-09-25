@@ -1,8 +1,0 @@
-==========
-modules/typedModuleProperties2
-==========
-
-res1: String = 42
-
----
-

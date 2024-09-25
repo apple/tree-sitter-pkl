@@ -1,8 +1,0 @@
-==========
-api/propertiesRenderer10.properties
-==========
-
-foo = new PropertiesRenderer {}.renderValue(List("bar"))
-
----
-

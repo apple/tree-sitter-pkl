@@ -1,8 +1,0 @@
-==========
-errors/invalidTypeAliasModifier
-==========
-
-abstract typealias Foo = Int
-
----
-

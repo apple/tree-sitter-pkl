@@ -1,9 +1,0 @@
-==========
-errors/functionNotFoundMaybeLambda
-==========
-
-listing = (it) -> it
-call = listing(10)
-
----
-

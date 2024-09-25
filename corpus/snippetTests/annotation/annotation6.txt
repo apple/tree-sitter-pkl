@@ -1,8 +1,0 @@
-==========
-annotation/annotation6
-==========
-
-@Int someProperty: String = "hi"
-
----
-

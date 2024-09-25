@@ -1,8 +1,0 @@
-==========
-modules/filename with spaces
-==========
-
-foo = "bar"
-
----
-

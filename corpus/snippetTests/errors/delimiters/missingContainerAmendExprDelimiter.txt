@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingContainerAmendExprDelimiter
-==========
-
-foo = (bar) {
-  x = 1
-
----
-

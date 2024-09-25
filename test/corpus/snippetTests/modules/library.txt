@@ -1,0 +1,76 @@
+==========
+modules/library
+==========
+
+open module my.library
+
+name: String = "Pigeon"
+
+pigeon: Person = new Person {
+  name = "Pigeon"
+}
+
+function say(msg: String) = msg
+
+open class Person {
+  name: String(!isEmpty)
+}
+
+---
+
+(module
+  (moduleHeader
+    (moduleClause
+      (modifier)
+      (qualifiedIdentifier
+        (identifier)
+        (identifier))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier)
+          (typeAnnotation
+            (type
+              (qualifiedIdentifier
+                (identifier)))))))
+    (variableExpr
+      (identifier)))
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (unaryExpr
+              (variableExpr
+                (identifier)))))))))

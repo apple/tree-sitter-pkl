@@ -1,8 +1,0 @@
-==========
-errors/localFixedMember
-==========
-
-local fixed name: String = "hello"
-
----
-

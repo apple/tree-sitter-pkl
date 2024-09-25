@@ -1,0 +1,278 @@
+==========
+basic/stringUnicode
+==========
+
+amends "../snippetTest.pkl"
+
+local str1 = "😈👿👾"
+local str2 = "🤑🤓😎"
+local str3 = "🙈🙉🙊🐒"
+
+facts {
+  ["equality"] {
+    "😀😬😁" == "😀😬😁"
+    !("😀😬😁" == "😀😬🐭")
+  }
+
+  ["inequality"] {
+    "😀😬😁" != "😀😬🐭"
+    !("😀😬😁" != "😀😬😁")
+  }
+}
+
+examples {
+  ["interpolation"] {
+    "\(str1) are \(str2) today? Are \(str2) hungry?"
+    "Can \(str2 + " nest \(str3)") for me?"
+    "Is \(str1 + str2) a word?"
+    "Is \("soma") a word?"
+    "Can \(str2 + " nest (((") for me?"
+    "Can \(str2 + " nest )))") for me?"
+    "Can you \( new Dynamic { x = "nest \( new Dynamic { y = str3 }.y )" }.x ) for me?"
+  }
+
+  ["multiline interpolation"] {
+    """
+    How are you today?
+    Are \(str2) hungry?\n
+    Can you \( new Dynamic { x = "nest \( new Dynamic { y = str3 }.y )" }.x ) for me?
+    """
+  }
+
+  ["subscript"] {
+    str3[2]
+    module.catch(() -> str3[-1])
+    module.catch(() -> str3[4])
+  }
+}
+
+---
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
+  (classProperty
+    (modifier)
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
+          (objectElement
+            (unaryExpr
+              (parenthesizedExpr
+                (binaryExpr
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (slStringLiteral
+                (slStringLiteralPart))
+              (slStringLiteral
+                (slStringLiteralPart))))
+          (objectElement
+            (unaryExpr
+              (parenthesizedExpr
+                (binaryExpr
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (slStringLiteral
+                    (slStringLiteralPart))))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (slStringLiteral
+              (interpolationExpr
+                (variableExpr
+                  (identifier)))
+              (slStringLiteralPart)
+              (interpolationExpr
+                (variableExpr
+                  (identifier)))
+              (slStringLiteralPart)
+              (interpolationExpr
+                (variableExpr
+                  (identifier)))
+              (slStringLiteralPart)))
+          (objectElement
+            (slStringLiteral
+              (slStringLiteralPart)
+              (interpolationExpr
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (slStringLiteral
+                    (slStringLiteralPart)
+                    (interpolationExpr
+                      (variableExpr
+                        (identifier))))))
+              (slStringLiteralPart)))
+          (objectElement
+            (slStringLiteral
+              (slStringLiteralPart)
+              (interpolationExpr
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (variableExpr
+                    (identifier))))
+              (slStringLiteralPart)))
+          (objectElement
+            (slStringLiteral
+              (slStringLiteralPart)
+              (interpolationExpr
+                (slStringLiteral
+                  (slStringLiteralPart)))
+              (slStringLiteralPart)))
+          (objectElement
+            (slStringLiteral
+              (slStringLiteralPart)
+              (interpolationExpr
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
+              (slStringLiteralPart)))
+          (objectElement
+            (slStringLiteral
+              (slStringLiteralPart)
+              (interpolationExpr
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (slStringLiteral
+                    (slStringLiteralPart))))
+              (slStringLiteralPart)))
+          (objectElement
+            (slStringLiteral
+              (slStringLiteralPart)
+              (interpolationExpr
+                (propertyCallExpr
+                  (newExpr
+                    (type
+                      (qualifiedIdentifier
+                        (identifier)))
+                    (objectBody
+                      (objectProperty
+                        (identifier)
+                        (slStringLiteral
+                          (slStringLiteralPart)
+                          (interpolationExpr
+                            (propertyCallExpr
+                              (newExpr
+                                (type
+                                  (qualifiedIdentifier
+                                    (identifier)))
+                                (objectBody
+                                  (objectProperty
+                                    (identifier)
+                                    (variableExpr
+                                      (identifier)))))
+                              (identifier)))))))
+                  (identifier)))
+              (slStringLiteralPart)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (mlStringLiteral
+              (mlStringLiteralPart)
+              (interpolationExpr
+                (variableExpr
+                  (identifier)))
+              (mlStringLiteralPart)
+              (escapeSequence)
+              (mlStringLiteralPart)
+              (interpolationExpr
+                (propertyCallExpr
+                  (newExpr
+                    (type
+                      (qualifiedIdentifier
+                        (identifier)))
+                    (objectBody
+                      (objectProperty
+                        (identifier)
+                        (slStringLiteral
+                          (slStringLiteralPart)
+                          (interpolationExpr
+                            (propertyCallExpr
+                              (newExpr
+                                (type
+                                  (qualifiedIdentifier
+                                    (identifier)))
+                                (objectBody
+                                  (objectProperty
+                                    (identifier)
+                                    (variableExpr
+                                      (identifier)))))
+                              (identifier)))))))
+                  (identifier)))
+              (mlStringLiteralPart)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (subscriptExpr
+              (variableExpr
+                (identifier))
+              (intLiteral)))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (subscriptExpr
+                    (variableExpr
+                      (identifier))
+                    (unaryExpr
+                      (intLiteral)))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (subscriptExpr
+                    (variableExpr
+                      (identifier))
+                    (intLiteral)))))))))))

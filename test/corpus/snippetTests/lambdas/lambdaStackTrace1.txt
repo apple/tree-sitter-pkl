@@ -1,0 +1,35 @@
+==========
+lambdas/lambdaStackTrace1
+==========
+
+hidden f = (a, b) -> a + b
+
+res1 = f.apply("Pigeon", 42)
+
+---
+
+(module
+  (classProperty
+    (modifier)
+    (identifier)
+    (functionLiteral
+      (parameterList
+        (typedIdentifier
+          (identifier))
+        (typedIdentifier
+          (identifier)))
+      (binaryExpr
+        (variableExpr
+          (identifier))
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart))
+        (intLiteral)))))

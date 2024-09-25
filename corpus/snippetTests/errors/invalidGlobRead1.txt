@@ -1,8 +1,0 @@
-==========
-errors/invalidGlobRead1
-==========
-
-res = read*("{foo{bar}}.txt")
-
----
-

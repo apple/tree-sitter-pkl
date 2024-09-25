@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingContainerAmendDefDelimiter
-==========
-
-foo {
-  x = 1
-
----
-

@@ -1,0 +1,38 @@
+==========
+lambdas/wrongArgumentListLength
+==========
+
+f = (a1, a2, a3) -> a1
+res = f.applyToList(List(1, 2, 3, 4, 5, 6))
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (functionLiteral
+      (parameterList
+        (typedIdentifier
+          (identifier))
+        (typedIdentifier
+          (identifier))
+        (typedIdentifier
+          (identifier)))
+      (variableExpr
+        (identifier))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (intLiteral)
+            (intLiteral)
+            (intLiteral)
+            (intLiteral)
+            (intLiteral)
+            (intLiteral)))))))

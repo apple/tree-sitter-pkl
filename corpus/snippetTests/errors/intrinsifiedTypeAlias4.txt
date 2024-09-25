@@ -1,8 +1,0 @@
-==========
-errors/intrinsifiedTypeAlias4
-==========
-
-res1: Uri = 42
-
----
-

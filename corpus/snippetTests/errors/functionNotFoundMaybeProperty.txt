@@ -1,9 +1,0 @@
-==========
-errors/functionNotFoundMaybeProperty
-==========
-
-prop = 42
-call = prop()
-
----
-

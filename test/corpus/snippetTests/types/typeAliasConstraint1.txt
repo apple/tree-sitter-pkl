@@ -1,0 +1,83 @@
+==========
+types/typeAliasConstraint1
+==========
+
+// length should bind to `String#length` instead of `ClassWithLengthProperty#length`
+local typealias OneCharacterString = String(length == 1)
+
+local class ClassWithLengthProperty {
+  length: Int = 99
+  
+  // length constraint binds to ClassWithLengthProperty.length here
+  characters: List<OneCharacterString> = List("a", "b")
+}
+
+res1: OneCharacterString = "a"
+res2 = let (c = new ClassWithLengthProperty {}) c.characters
+
+---
+
+(module
+  (lineComment)
+  (typeAlias
+    (modifier)
+    (identifier)
+    (type
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (binaryExpr
+        (variableExpr
+          (identifier))
+        (intLiteral))))
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (intLiteral))
+      (lineComment)
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (qualifiedIdentifier
+                  (identifier))))))
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (slStringLiteralPart))
+            (slStringLiteral
+              (slStringLiteralPart)))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (letExpr
+      (typedIdentifier
+        (identifier))
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody))
+      (propertyCallExpr
+        (variableExpr
+          (identifier))
+        (identifier)))))

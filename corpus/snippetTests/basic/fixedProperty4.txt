@@ -1,8 +1,0 @@
-==========
-basic/fixedProperty4
-==========
-
-fixed module foo
-
----
-

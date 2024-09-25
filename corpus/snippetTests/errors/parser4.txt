@@ -1,9 +1,0 @@
-==========
-errors/parser4
-==========
-
-res1 = """some string
-res2 = 2
-
----
-

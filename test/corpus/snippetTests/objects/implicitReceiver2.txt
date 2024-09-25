@@ -1,0 +1,33 @@
+==========
+objects/implicitReceiver2
+==========
+
+x = 0
+foo {
+  x = 1
+  bar {
+    y = x + 3
+  }
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (binaryExpr
+              (variableExpr
+                (identifier))
+              (intLiteral))))))))

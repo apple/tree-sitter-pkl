@@ -1,8 +1,0 @@
-==========
-errors/propertyNotFound2
-==========
-
-res0 = Pair(1, 2).foo
-
----
-

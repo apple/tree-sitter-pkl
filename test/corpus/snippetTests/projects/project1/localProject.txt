@@ -1,0 +1,18 @@
+==========
+projects/project1/localProject
+==========
+
+import "@project2/penguin.pkl"
+
+res = penguin
+
+---
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (variableExpr
+      (identifier))))

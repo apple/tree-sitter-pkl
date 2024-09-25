@@ -1,8 +1,0 @@
-==========
-errors/undefinedOp2
-==========
-
-res1 = "str" + 42
-
----
-

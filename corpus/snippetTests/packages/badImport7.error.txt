@@ -1,8 +1,0 @@
-==========
-packages/badImport7.error
-==========
-
-res = import("package://localhost:0/badMetadataJson@1.0.0#/Bug.pkl")
-
----
-

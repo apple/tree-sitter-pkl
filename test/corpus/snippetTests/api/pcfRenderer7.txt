@@ -1,0 +1,60 @@
+==========
+api/pcfRenderer7
+==========
+
+rawString = import("../basic/rawString.pkl")
+
+res39 = """
+  ""\"#####
+
+  delimiters for multiline string
+  """
+res40 = """
+  "#####
+
+  no delimiters for multiline string
+  """
+res41 = "\\#"
+
+output {
+  renderer = new PcfRenderer {
+    useCustomStringDelimiters = true
+  }
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (importExpr
+      (stringConstant
+        (slStringLiteralPart))))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (escapeSequence)
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (escapeSequence)
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (trueLiteral))))))))

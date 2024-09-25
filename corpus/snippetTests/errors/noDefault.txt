@@ -1,8 +1,0 @@
-==========
-errors/noDefault
-==========
-
-foo: "foo"|"bar"|"baz"
-
----
-

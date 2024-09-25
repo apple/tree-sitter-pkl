@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingEmptyMultiLineStringDelimiterAtEof
-==========
-
-// no newline after opening quote
-res1 = """
-
----
-

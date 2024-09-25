@@ -1,8 +1,0 @@
-==========
-errors/wrongNumberOfMapArguments
-==========
-
-res1 = Map(1, 2, 3)
-
----
-

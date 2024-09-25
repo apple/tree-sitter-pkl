@@ -1,8 +1,0 @@
-==========
-projects/project1/badImport1.error
-==========
-
-import "@doesnotexist/bar/baz.pkl"
-
----
-

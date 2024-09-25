@@ -1,0 +1,179 @@
+==========
+api/jsonParser5
+==========
+
+import "pkl:json"
+
+local parser = new json.Parser {
+  useMapping = true
+  converters {
+    ["^firstName"] = (_) -> "changed"
+    ["^city"] = (_) -> "no match"
+    ["age"] = (_) -> 42
+    ["address.city"] = (it) -> it.reverse()
+    ["state"] = (_) -> "CA"
+    ["phoneNumber[*].type"] = (_) -> "mobile"
+    ["phoneNumber[*]"] = (it) -> it["type"]
+    ["gender.*"] = (_) -> "female"
+  }
+}
+
+// from: https://en.wikipedia.org/wiki/JSON#JSON_sample
+res1 = parser.parse("""
+  {
+    "firstName": "John",
+    "lastName": "Smith",
+    "age": 25,
+    "address": {
+      "streetAddress": "21 2nd Street",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10021"
+    },
+    "phoneNumber": [
+      {
+        "type": "home",
+        "number": "212 555-1234"
+      },
+      {
+        "type": "fax",
+        "number": "646 555-4567"
+      }
+    ],
+    "gender": {
+      "type": "male"
+    }
+  }
+  """)
+
+res2 = res1 is Mapping
+
+res3 = res1["address"] is Mapping
+
+---
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (trueLiteral))
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (slStringLiteral
+                  (slStringLiteralPart))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (slStringLiteral
+                  (slStringLiteralPart))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (intLiteral)))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (methodCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier)
+                  (argumentList))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (slStringLiteral
+                  (slStringLiteralPart))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (slStringLiteral
+                  (slStringLiteralPart))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (subscriptExpr
+                  (variableExpr
+                    (identifier))
+                  (slStringLiteral
+                    (slStringLiteralPart)))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (functionLiteral
+                (parameterList
+                  (typedIdentifier
+                    (identifier)))
+                (slStringLiteral
+                  (slStringLiteralPart)))))))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (mlStringLiteral
+          (mlStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (isExpr
+      (variableExpr
+        (identifier))
+      (type
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (isExpr
+      (subscriptExpr
+        (variableExpr
+          (identifier))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (type
+        (qualifiedIdentifier
+          (identifier))))))

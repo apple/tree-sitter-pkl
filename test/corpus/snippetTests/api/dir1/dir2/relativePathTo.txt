@@ -1,0 +1,30 @@
+==========
+api/dir1/dir2/relativePathTo
+==========
+
+import "pkl:test"
+
+res1 = test.catch(() -> module.relativePathTo(import("../../module.pkl")))
+
+---
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (moduleExpr)
+            (identifier)
+            (argumentList
+              (importExpr
+                (stringConstant
+                  (slStringLiteralPart))))))))))

@@ -1,0 +1,229 @@
+==========
+modules/typedModuleMethods1
+==========
+
+import "pkl:test"
+
+import "library.pkl"
+
+function zeroArgs(): String(!isEmpty) = "Pigeon"
+
+function oneArg(a: String(!isEmpty)): String(!isEmpty) = a
+
+function twoArgs(a: String(!isEmpty), b: String(!isEmpty)): String(!isEmpty) = a + b
+
+function mixed(a: String(!isEmpty), b) = a + b
+
+res1 = zeroArgs()
+res2 = oneArg("Pigeon")
+res3 = twoArgs("Pigeon", "Parrot")
+res4 = mixed("Pigeon", "Parrot")
+res5 = library.say("Pigeon")
+
+res6 = test.catch(() -> oneArg(42))
+res7 = test.catch(() -> twoArgs("Pigeon", 42))
+res8 = test.catch(() -> mixed(42, "Pigeon"))
+res9 = test.catch(() -> library.say(42))
+
+---
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList)
+      (typeAnnotation
+        (type
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (unaryExpr
+            (variableExpr
+              (identifier))))))
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier)
+          (typeAnnotation
+            (type
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (unaryExpr
+                (variableExpr
+                  (identifier)))))))
+      (typeAnnotation
+        (type
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (unaryExpr
+            (variableExpr
+              (identifier))))))
+    (variableExpr
+      (identifier)))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier)
+          (typeAnnotation
+            (type
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (unaryExpr
+                (variableExpr
+                  (identifier))))))
+        (typedIdentifier
+          (identifier)
+          (typeAnnotation
+            (type
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (unaryExpr
+                (variableExpr
+                  (identifier)))))))
+      (typeAnnotation
+        (type
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (unaryExpr
+            (variableExpr
+              (identifier))))))
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (variableExpr
+        (identifier))))
+  (classMethod
+    (methodHeader
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier)
+          (typeAnnotation
+            (type
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (unaryExpr
+                (variableExpr
+                  (identifier))))))
+        (typedIdentifier
+          (identifier))))
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (variableExpr
+        (identifier))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart))
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (slStringLiteral
+                (slStringLiteralPart))
+              (intLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (identifier)
+            (argumentList
+              (intLiteral)
+              (slStringLiteral
+                (slStringLiteralPart))))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (methodCallExpr
+            (variableExpr
+              (identifier))
+            (identifier)
+            (argumentList
+              (intLiteral))))))))

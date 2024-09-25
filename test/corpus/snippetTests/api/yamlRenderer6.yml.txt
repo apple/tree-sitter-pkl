@@ -1,0 +1,163 @@
+==========
+api/yamlRenderer6.yml
+==========
+
+name = "pigeon"
+age = 42
+friends = new Listing {
+  "barn owl"
+  "parrot"
+}
+hobbies {
+  ["surfing"] {
+    skill = "low"
+  }
+  ["firemaking"] {
+    skill = "high"
+  }
+}
+address {
+  street = "Norton St."
+  zip = 12345
+}
+
+output {
+  renderer = new YamlRenderer {
+    converters {
+      ["name"] = (it) -> it.reverse()
+      ["friends[*]"] = (it) -> it + "x"
+      ["hobbies[*]"] = (it) -> it.skill
+      ["address.street"] = (it) -> "Other St."
+      ["address.*"] = (it) -> "changed"
+      ["unmatched"] = (it) -> "unmatched"
+    }
+  }
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectElement
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectElement
+          (slStringLiteral
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (slStringLiteral
+              (slStringLiteralPart)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (slStringLiteral
+              (slStringLiteralPart)))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (objectProperty
+        (identifier)
+        (intLiteral))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (objectBody
+                (objectEntry
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (methodCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier)
+                      (argumentList))))
+                (objectEntry
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (binaryExpr
+                      (variableExpr
+                        (identifier))
+                      (slStringLiteral
+                        (slStringLiteralPart)))))
+                (objectEntry
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (propertyCallExpr
+                      (variableExpr
+                        (identifier))
+                      (identifier))))
+                (objectEntry
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
+                (objectEntry
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))
+                (objectEntry
+                  (slStringLiteral
+                    (slStringLiteralPart))
+                  (functionLiteral
+                    (parameterList
+                      (typedIdentifier
+                        (identifier)))
+                    (slStringLiteral
+                      (slStringLiteralPart))))))))))))

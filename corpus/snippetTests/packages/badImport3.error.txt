@@ -1,9 +1,0 @@
-==========
-packages/badImport3.error
-==========
-
-// no fragment
-res = import("package://localhost:0/bar/baz@1.0.0")
-
----
-

@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingClassDelimiter
-==========
-
-class Person {
-  name: String
-
----
-

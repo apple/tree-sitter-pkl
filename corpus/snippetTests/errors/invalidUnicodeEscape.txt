@@ -1,8 +1,0 @@
-==========
-errors/invalidUnicodeEscape
-==========
-
-res1 = "\u{12x}"
-
----
-
