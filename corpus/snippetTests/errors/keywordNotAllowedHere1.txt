@@ -1,9 +1,0 @@
-==========
-errors/keywordNotAllowedHere1
-==========
-
-outer = 42
-res1 = 42
-
----
-

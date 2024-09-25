@@ -1,8 +1,0 @@
-==========
-errors/missingLocalPropertyValue1
-==========
-
-local x: Int
-
----
-

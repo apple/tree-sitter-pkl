@@ -1,8 +1,0 @@
-==========
-projects/project6/children/a
-==========
-
-name = "a"
-
----
-

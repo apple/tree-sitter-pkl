@@ -1,0 +1,56 @@
+==========
+classes/functions2
+==========
+
+a = 1
+
+class X {
+  a = 2
+  function compute() = a
+}
+
+res1 = new X {}.compute()
+
+res2 = new X { a = 3 }.compute()
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (intLiteral))
+  (clazz
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (intLiteral))
+      (classMethod
+        (methodHeader
+          (identifier)
+          (parameterList))
+        (variableExpr
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody))
+      (identifier)
+      (argumentList)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (newExpr
+        (type
+          (qualifiedIdentifier
+            (identifier)))
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral))))
+      (identifier)
+      (argumentList))))

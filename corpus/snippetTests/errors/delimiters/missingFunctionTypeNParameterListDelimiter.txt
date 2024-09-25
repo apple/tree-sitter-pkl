@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingFunctionTypeNParameterListDelimiter
-==========
-
-f: (String, Int, String -> String
-res1 = 42
-
----
-

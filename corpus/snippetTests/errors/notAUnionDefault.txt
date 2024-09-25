@@ -1,8 +1,0 @@
-==========
-errors/notAUnionDefault
-==========
-
-foo: *"foo"
-
----
-

@@ -1,0 +1,13 @@
+==========
+projects/project6/children/c
+==========
+
+name = "c"
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart))))

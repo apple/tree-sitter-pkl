@@ -1,9 +1,0 @@
-==========
-packages/badRead1.error
-==========
-
-// no semver
-res = read("package://localhost:0/foo#/bar.pkl")
-
----
-

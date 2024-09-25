@@ -1,8 +1,0 @@
-==========
-errors/invalidClassModifier2
-==========
-
-fixed class Foo
-
----
-

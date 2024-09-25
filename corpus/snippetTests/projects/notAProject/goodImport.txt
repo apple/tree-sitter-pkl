@@ -1,8 +1,0 @@
-==========
-projects/notAProject/goodImport
-==========
-
-res = import("./@child/theChild.pkl")
-
----
-

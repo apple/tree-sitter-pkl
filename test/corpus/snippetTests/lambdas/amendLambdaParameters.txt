@@ -1,0 +1,152 @@
+==========
+lambdas/amendLambdaParameters
+==========
+
+example1 {
+  local f = (x) -> new Dynamic {}
+  result = (f) { x -> prop = x + 1 }.apply(1)
+}
+
+example2 {
+  local f = (x, y) -> new Dynamic {}
+  result = (f) { a, b -> prop = a + b }.apply(1, 2)
+}
+
+example3 {
+  local f = (x, y) -> (z) -> new Dynamic { prop3 = z }
+  result = (f) { a, b -> prop1 = a; prop2 = b }.apply(1, 2).apply(3)
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (modifier)
+        (identifier)
+        (functionLiteral
+          (parameterList
+            (typedIdentifier
+              (identifier)))
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody))))
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (objectLiteral
+            (parenthesizedExpr
+              (variableExpr
+                (identifier)))
+            (objectBody
+              (objectBodyParameters
+                (typedIdentifier
+                  (identifier)))
+              (objectProperty
+                (identifier)
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (intLiteral)))))
+          (identifier)
+          (argumentList
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (modifier)
+        (identifier)
+        (functionLiteral
+          (parameterList
+            (typedIdentifier
+              (identifier))
+            (typedIdentifier
+              (identifier)))
+          (newExpr
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (objectBody))))
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (objectLiteral
+            (parenthesizedExpr
+              (variableExpr
+                (identifier)))
+            (objectBody
+              (objectBodyParameters
+                (typedIdentifier
+                  (identifier))
+                (typedIdentifier
+                  (identifier)))
+              (objectProperty
+                (identifier)
+                (binaryExpr
+                  (variableExpr
+                    (identifier))
+                  (variableExpr
+                    (identifier))))))
+          (identifier)
+          (argumentList
+            (intLiteral)
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (modifier)
+        (identifier)
+        (functionLiteral
+          (parameterList
+            (typedIdentifier
+              (identifier))
+            (typedIdentifier
+              (identifier)))
+          (functionLiteral
+            (parameterList
+              (typedIdentifier
+                (identifier)))
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (variableExpr
+                    (identifier))))))))
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (methodCallExpr
+            (objectLiteral
+              (parenthesizedExpr
+                (variableExpr
+                  (identifier)))
+              (objectBody
+                (objectBodyParameters
+                  (typedIdentifier
+                    (identifier))
+                  (typedIdentifier
+                    (identifier)))
+                (objectProperty
+                  (identifier)
+                  (variableExpr
+                    (identifier)))
+                (objectProperty
+                  (identifier)
+                  (variableExpr
+                    (identifier)))))
+            (identifier)
+            (argumentList
+              (intLiteral)
+              (intLiteral)))
+          (identifier)
+          (argumentList
+            (intLiteral)))))))

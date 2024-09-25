@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingMethodArgumentListDelimiter
-==========
-
-res1 = "abc".substring(0, 1 + "def"
-res2 = 42
-
----
-

@@ -1,0 +1,13 @@
+==========
+modules/filename with spaces
+==========
+
+foo = "bar"
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart))))

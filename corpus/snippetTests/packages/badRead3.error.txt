@@ -1,9 +1,0 @@
-==========
-packages/badRead3.error
-==========
-
-// no fragment
-res = read("package://localhost:0/bar/baz@1.0.0")
-
----
-

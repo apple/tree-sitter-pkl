@@ -1,8 +1,0 @@
-==========
-errors/intrinsifiedTypeAlias3
-==========
-
-res1: NonNull = null
-
----
-

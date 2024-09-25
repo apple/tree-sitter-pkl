@@ -1,8 +1,0 @@
-==========
-projects/badPklProject1/bug
-==========
-
-res = 1
-
----
-

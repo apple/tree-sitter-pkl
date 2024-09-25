@@ -1,0 +1,147 @@
+==========
+api/platformModule
+==========
+
+amends "../snippetTest.pkl"
+
+import "pkl:platform"
+
+local current = platform.current
+
+facts {
+  ["language"] {
+    current.language.version != ""
+  }
+
+  ["runtime"] {
+    current.runtime.name != ""
+    current.runtime.version != ""
+  }
+
+  ["virtualMachine"] {
+    current.virtualMachine.name != ""
+    current.virtualMachine.version != ""
+  }
+
+  ["operatingSystem"] {
+    current.operatingSystem.name != ""
+    current.operatingSystem.version != ""
+  }
+
+  ["processor"] {
+    current.processor.architecture != ""
+  }
+}
+
+---
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (propertyCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral)))
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (propertyCallExpr
+                (propertyCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier))
+                (identifier))
+              (slStringLiteral))))))))

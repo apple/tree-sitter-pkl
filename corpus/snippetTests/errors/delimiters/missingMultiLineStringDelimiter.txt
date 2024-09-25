@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingMultiLineStringDelimiter
-==========
-
-res1 = """abc
-res2 = 42
-
----
-

@@ -1,8 +1,0 @@
-==========
-modules/typedModuleProperties3
-==========
-
-res1: String(!isEmpty) = ""
-
----
-

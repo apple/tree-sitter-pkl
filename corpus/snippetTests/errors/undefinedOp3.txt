@@ -1,9 +1,0 @@
-==========
-errors/undefinedOp3
-==========
-
-l = List(1,2,3)
-res1 = l["idx"]
-
----
-

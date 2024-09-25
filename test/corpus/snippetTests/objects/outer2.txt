@@ -1,0 +1,28 @@
+==========
+objects/outer2
+==========
+
+res1 {
+  x {
+    y = 1
+    z = outer.y
+  }
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral))
+          (objectProperty
+            (identifier)
+            (propertyCallExpr
+              (outerExpr)
+              (identifier))))))))

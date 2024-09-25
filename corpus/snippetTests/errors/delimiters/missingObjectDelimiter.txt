@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingObjectDelimiter
-==========
-
-foo = new {
-  x = 1
-
----
-

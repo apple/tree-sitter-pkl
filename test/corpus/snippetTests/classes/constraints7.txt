@@ -1,0 +1,148 @@
+==========
+classes/constraints7
+==========
+
+import "pkl:test"
+
+const function add(x, y) = x + y
+
+class X {
+  function subtract(x, y) = x - y
+  y: Y(multiply(subtract(add(5, 4), 3), 2) == z)
+}
+
+class Y {
+  function multiply(x, y) = x * y
+  z: Int
+}
+
+res1 = new X {
+  y {
+    z = 12
+  }
+}
+
+res2 = test.catch(() ->
+  new X {
+    y {
+      z = 13
+    }
+  }.y
+)
+
+---
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (classMethod
+    (methodHeader
+      (modifier)
+      (identifier)
+      (parameterList
+        (typedIdentifier
+          (identifier))
+        (typedIdentifier
+          (identifier))))
+    (binaryExpr
+      (variableExpr
+        (identifier))
+      (variableExpr
+        (identifier))))
+  (clazz
+    (identifier)
+    (classBody
+      (classMethod
+        (methodHeader
+          (identifier)
+          (parameterList
+            (typedIdentifier
+              (identifier))
+            (typedIdentifier
+              (identifier))))
+        (binaryExpr
+          (variableExpr
+            (identifier))
+          (variableExpr
+            (identifier))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (binaryExpr
+              (methodCallExpr
+                (identifier)
+                (argumentList
+                  (methodCallExpr
+                    (identifier)
+                    (argumentList
+                      (methodCallExpr
+                        (identifier)
+                        (argumentList
+                          (intLiteral)
+                          (intLiteral)))
+                      (intLiteral)))
+                  (intLiteral)))
+              (variableExpr
+                (identifier))))))))
+  (clazz
+    (identifier)
+    (classBody
+      (classMethod
+        (methodHeader
+          (identifier)
+          (parameterList
+            (typedIdentifier
+              (identifier))
+            (typedIdentifier
+              (identifier))))
+        (binaryExpr
+          (variableExpr
+            (identifier))
+          (variableExpr
+            (identifier))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (objectBody
+            (objectProperty
+              (identifier)
+              (intLiteral)))))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (functionLiteral
+          (parameterList)
+          (propertyCallExpr
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (objectBody
+                    (objectProperty
+                      (identifier)
+                      (intLiteral))))))
+            (identifier)))))))

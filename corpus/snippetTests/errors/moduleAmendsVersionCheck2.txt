@@ -1,9 +1,0 @@
-==========
-errors/moduleAmendsVersionCheck2
-==========
-
-@ModuleInfo { minPklVersion = "99.9.9" }
-amends "baseModule.pkl"
-
----
-

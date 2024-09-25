@@ -1,8 +1,0 @@
-==========
-errors/outOfRange2
-==========
-
-res1 = "abc".substring(2, 1)
-
----
-

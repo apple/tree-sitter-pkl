@@ -1,0 +1,48 @@
+==========
+api/xmlRendererCData.xml
+==========
+
+import "pkl:xml"
+
+res1 = xml.CData("The <drumroll>Dodos</drumroll>")
+res2 = xml.CData("Malicious CDATA input: ]]><script>doMaliciousThing();</script>")
+
+output {
+  renderer = new xml.Renderer {}
+}
+
+---
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (methodCallExpr
+      (variableExpr
+        (identifier))
+      (identifier)
+      (argumentList
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)
+              (identifier)))
+          (objectBody))))))

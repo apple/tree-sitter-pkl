@@ -1,8 +1,0 @@
-==========
-packages/badImport8.error
-==========
-
-res = import("package://localhost:0/badImportsWithinPackage@1.0.0#/unknownDependency.pkl")
-
----
-

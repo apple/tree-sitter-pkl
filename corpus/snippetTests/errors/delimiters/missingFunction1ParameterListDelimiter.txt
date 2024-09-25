@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingFunction1ParameterListDelimiter
-==========
-
-f = (arg -> arg + 1
-res1 = 42
-
----
-

@@ -1,0 +1,20 @@
+==========
+modules/invalidAmend1
+==========
+
+amends "library.pkl"
+
+// wrong type
+name = 42
+
+---
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
+  (lineComment)
+  (classProperty
+    (identifier)
+    (intLiteral)))

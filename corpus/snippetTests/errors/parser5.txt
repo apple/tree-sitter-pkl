@@ -1,8 +1,0 @@
-==========
-errors/parser5
-==========
-
-res1 = "some string"""
-
----
-

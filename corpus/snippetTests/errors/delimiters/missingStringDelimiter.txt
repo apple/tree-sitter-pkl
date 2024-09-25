@@ -1,9 +1,0 @@
-==========
-errors/delimiters/missingStringDelimiter
-==========
-
-res1 = "abc
-res2 = 42
-
----
-

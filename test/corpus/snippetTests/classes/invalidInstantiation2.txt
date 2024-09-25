@@ -1,0 +1,21 @@
+==========
+classes/invalidInstantiation2
+==========
+
+abstract class Base
+
+res1 = new Base {}
+
+---
+
+(module
+  (clazz
+    (modifier)
+    (identifier))
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody))))

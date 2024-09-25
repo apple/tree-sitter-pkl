@@ -1,0 +1,25 @@
+==========
+types/helpers/someModule
+==========
+
+foo: String = "foo"
+bar: Int = 42
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (intLiteral)))

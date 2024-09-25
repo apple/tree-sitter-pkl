@@ -1,8 +1,0 @@
-==========
-basic/fixedProperty6
-==========
-
-fixed function foo() = 5
-
----
-

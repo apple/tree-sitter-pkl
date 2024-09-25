@@ -1,0 +1,12 @@
+==========
+basic/baseModule
+==========
+
+foo {}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody)))

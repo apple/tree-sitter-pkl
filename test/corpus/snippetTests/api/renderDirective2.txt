@@ -1,0 +1,374 @@
+==========
+api/renderDirective2
+==========
+
+amends ".../snippetTest.pkl"
+
+import "pkl:xml"
+import "pkl:jsonnet"
+import "pkl:protobuf"
+
+local class TypedTestCase {
+  property: String
+  elements: Listing<String>
+  entries: Mapping<String, String>
+}
+
+examples {
+  for (format, renderer in new Mapping {
+    local converters: Mixin<ValueRenderer> = new {
+      converters {
+        [String] = (str) -> new RenderDirective { text = "(\(str))" }
+      }
+    }
+    ["pcf"] = new PcfRenderer {} |> converters
+    ["json"] = new JsonRenderer {} |> converters
+    ["jsonnet"] = new jsonnet.Renderer {} |> converters
+    ["plist"] = new PListRenderer {} |> converters
+    ["properties"] = new PropertiesRenderer {
+      converters {
+        [Listing] = (it: Listing) -> it.join(",")
+      }
+    } |> converters
+    ["textproto"] = new protobuf.Renderer {
+      converters {
+        [Dynamic] = (it) ->
+          (it) {
+            elements = it.elements.toList().toListing()
+            entries = it.entries.toMap().toMapping()
+          }.toTyped(TypedTestCase)
+        [String] = (it) -> new RenderDirective { text = "(\(it))"}
+      }
+    }
+    ["xml"] = new xml.Renderer {} |> converters
+    ["yaml"] = new YamlRenderer {} |> converters
+  }) {
+    [format] {
+      renderer.renderDocument(new Dynamic {
+        property = "value"
+        elements {
+          "element1"
+          "element2"
+        }
+        entries {
+          ["key1"] = "value1"
+          ["key2"] = "value2"
+        }
+      })
+    }
+  }
+}
+
+---
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (qualifiedIdentifier
+                  (identifier)))))))
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (type
+                (qualifiedIdentifier
+                  (identifier)))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (forGenerator
+        (typedIdentifier
+          (identifier))
+        (typedIdentifier
+          (identifier))
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (modifier)
+              (identifier)
+              (typeAnnotation
+                (type
+                  (qualifiedIdentifier
+                    (identifier))
+                  (typeArgumentList
+                    (type
+                      (qualifiedIdentifier
+                        (identifier))))))
+              (newExpr
+                (objectBody
+                  (objectProperty
+                    (identifier)
+                    (objectBody
+                      (objectEntry
+                        (variableExpr
+                          (identifier))
+                        (functionLiteral
+                          (parameterList
+                            (typedIdentifier
+                              (identifier)))
+                          (newExpr
+                            (type
+                              (qualifiedIdentifier
+                                (identifier)))
+                            (objectBody
+                              (objectProperty
+                                (identifier)
+                                (slStringLiteral
+                                  (slStringLiteralPart)
+                                  (interpolationExpr
+                                    (variableExpr
+                                      (identifier)))
+                                  (slStringLiteralPart))))))))))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (binaryExpr
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody))
+                (variableExpr
+                  (identifier))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (binaryExpr
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody))
+                (variableExpr
+                  (identifier))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (binaryExpr
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)
+                      (identifier)))
+                  (objectBody))
+                (variableExpr
+                  (identifier))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (binaryExpr
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody))
+                (variableExpr
+                  (identifier))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (binaryExpr
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody
+                    (objectProperty
+                      (identifier)
+                      (objectBody
+                        (objectEntry
+                          (variableExpr
+                            (identifier))
+                          (functionLiteral
+                            (parameterList
+                              (typedIdentifier
+                                (identifier)
+                                (typeAnnotation
+                                  (type
+                                    (qualifiedIdentifier
+                                      (identifier))))))
+                            (methodCallExpr
+                              (variableExpr
+                                (identifier))
+                              (identifier)
+                              (argumentList
+                                (slStringLiteral
+                                  (slStringLiteralPart))))))))))
+                (variableExpr
+                  (identifier))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (newExpr
+                (type
+                  (qualifiedIdentifier
+                    (identifier)
+                    (identifier)))
+                (objectBody
+                  (objectProperty
+                    (identifier)
+                    (objectBody
+                      (objectEntry
+                        (variableExpr
+                          (identifier))
+                        (functionLiteral
+                          (parameterList
+                            (typedIdentifier
+                              (identifier)))
+                          (methodCallExpr
+                            (objectLiteral
+                              (parenthesizedExpr
+                                (variableExpr
+                                  (identifier)))
+                              (objectBody
+                                (objectProperty
+                                  (identifier)
+                                  (methodCallExpr
+                                    (methodCallExpr
+                                      (propertyCallExpr
+                                        (variableExpr
+                                          (identifier))
+                                        (identifier))
+                                      (identifier)
+                                      (argumentList))
+                                    (identifier)
+                                    (argumentList)))
+                                (objectProperty
+                                  (identifier)
+                                  (methodCallExpr
+                                    (methodCallExpr
+                                      (propertyCallExpr
+                                        (variableExpr
+                                          (identifier))
+                                        (identifier))
+                                      (identifier)
+                                      (argumentList))
+                                    (identifier)
+                                    (argumentList)))))
+                            (identifier)
+                            (argumentList
+                              (variableExpr
+                                (identifier))))))
+                      (objectEntry
+                        (variableExpr
+                          (identifier))
+                        (functionLiteral
+                          (parameterList
+                            (typedIdentifier
+                              (identifier)))
+                          (newExpr
+                            (type
+                              (qualifiedIdentifier
+                                (identifier)))
+                            (objectBody
+                              (objectProperty
+                                (identifier)
+                                (slStringLiteral
+                                  (slStringLiteralPart)
+                                  (interpolationExpr
+                                    (variableExpr
+                                      (identifier)))
+                                  (slStringLiteralPart))))))))))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (binaryExpr
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)
+                      (identifier)))
+                  (objectBody))
+                (variableExpr
+                  (identifier))))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (binaryExpr
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody))
+                (variableExpr
+                  (identifier))))))
+        (objectBody
+          (objectEntry
+            (variableExpr
+              (identifier))
+            (objectBody
+              (objectElement
+                (methodCallExpr
+                  (variableExpr
+                    (identifier))
+                  (identifier)
+                  (argumentList
+                    (newExpr
+                      (type
+                        (qualifiedIdentifier
+                          (identifier)))
+                      (objectBody
+                        (objectProperty
+                          (identifier)
+                          (slStringLiteral
+                            (slStringLiteralPart)))
+                        (objectProperty
+                          (identifier)
+                          (objectBody
+                            (objectElement
+                              (slStringLiteral
+                                (slStringLiteralPart)))
+                            (objectElement
+                              (slStringLiteral
+                                (slStringLiteralPart)))))
+                        (objectProperty
+                          (identifier)
+                          (objectBody
+                            (objectEntry
+                              (slStringLiteral
+                                (slStringLiteralPart))
+                              (slStringLiteral
+                                (slStringLiteralPart)))
+                            (objectEntry
+                              (slStringLiteral
+                                (slStringLiteralPart))
+                              (slStringLiteral
+                                (slStringLiteralPart)))))))))))))))))

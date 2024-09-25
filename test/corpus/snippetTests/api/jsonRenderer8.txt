@@ -1,0 +1,32 @@
+==========
+api/jsonRenderer8
+==========
+
+// Test that unrenderable types do have an informative location in the error message.
+m = new Mixin {}
+
+output {
+  renderer = new JsonRenderer {}
+}
+
+---
+
+(module
+  (lineComment)
+  (classProperty
+    (identifier)
+    (newExpr
+      (type
+        (qualifiedIdentifier
+          (identifier)))
+      (objectBody)))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody))))))

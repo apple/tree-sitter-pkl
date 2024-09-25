@@ -1,8 +1,0 @@
-==========
-projects/project1/directPackageImport.error
-==========
-
-res = import("@birds")
-
----
-

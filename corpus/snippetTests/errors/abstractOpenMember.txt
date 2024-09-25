@@ -1,8 +1,0 @@
-==========
-errors/abstractOpenMember
-==========
-
-abstract open class Person
-
----
-

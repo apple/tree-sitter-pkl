@@ -1,0 +1,27 @@
+==========
+generators/duplicateDefinition3
+==========
+
+x {
+  when (true) { y = 1 }
+  when (true) { y = 2 }
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (whenGenerator
+        (trueLiteral)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral))))
+      (whenGenerator
+        (trueLiteral)
+        (objectBody
+          (objectProperty
+            (identifier)
+            (intLiteral)))))))

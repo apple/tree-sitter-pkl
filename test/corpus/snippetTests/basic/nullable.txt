@@ -1,0 +1,239 @@
+==========
+basic/nullable
+==========
+
+amends "../snippetTest.pkl"
+
+facts {
+  ["equality"] {
+    null == null
+    !(null == 1)
+    !(1 == null)
+  }
+
+  ["inequality"] {
+    null != 1
+    1 != null
+    !(null != null)
+  }
+}
+
+examples {
+  ["literal"] {
+    null
+  }
+
+  ["coalescing"] {
+    null ?? 2
+    1 ?? 2
+    1 ?? 2 ?? 3
+    null ?? null ?? 3
+    new Person {}.age ?? 40
+  }
+
+  ["null-safe invocation"] {
+    null?.toUpperCase()
+    "Pigeon"?.toUpperCase()
+    null?.kb
+    3?.kb
+
+    module.catch(() -> null.foo)
+    module.catch(() -> null.foo())
+  }
+
+  ["amendment"] {
+    local p = Null(new Person {})
+    local p2 = (p) {
+      age = 20
+    }
+    p2
+    p2 is Person
+  }
+}
+
+local class Person {
+  age: Int?
+}
+
+---
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (nullLiteral)
+              (nullLiteral)))
+          (objectElement
+            (unaryExpr
+              (parenthesizedExpr
+                (binaryExpr
+                  (nullLiteral)
+                  (intLiteral)))))
+          (objectElement
+            (unaryExpr
+              (parenthesizedExpr
+                (binaryExpr
+                  (intLiteral)
+                  (nullLiteral)))))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExpr
+              (nullLiteral)
+              (intLiteral)))
+          (objectElement
+            (binaryExpr
+              (intLiteral)
+              (nullLiteral)))
+          (objectElement
+            (unaryExpr
+              (parenthesizedExpr
+                (binaryExpr
+                  (nullLiteral)
+                  (nullLiteral)))))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (nullLiteral))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (binaryExprRightAssoc
+              (nullLiteral)
+              (intLiteral)))
+          (objectElement
+            (binaryExprRightAssoc
+              (intLiteral)
+              (intLiteral)))
+          (objectElement
+            (binaryExprRightAssoc
+              (intLiteral)
+              (binaryExprRightAssoc
+                (intLiteral)
+                (intLiteral))))
+          (objectElement
+            (binaryExprRightAssoc
+              (nullLiteral)
+              (binaryExprRightAssoc
+                (nullLiteral)
+                (intLiteral))))
+          (objectElement
+            (binaryExprRightAssoc
+              (propertyCallExpr
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody))
+                (identifier))
+              (intLiteral)))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectElement
+            (methodCallExpr
+              (nullLiteral)
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (methodCallExpr
+              (slStringLiteral
+                (slStringLiteralPart))
+              (identifier)
+              (argumentList)))
+          (objectElement
+            (propertyCallExpr
+              (nullLiteral)
+              (identifier)))
+          (objectElement
+            (propertyCallExpr
+              (intLiteral)
+              (identifier)))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (propertyCallExpr
+                    (nullLiteral)
+                    (identifier))))))
+          (objectElement
+            (methodCallExpr
+              (moduleExpr)
+              (identifier)
+              (argumentList
+                (functionLiteral
+                  (parameterList)
+                  (methodCallExpr
+                    (nullLiteral)
+                    (identifier)
+                    (argumentList))))))))
+      (objectEntry
+        (slStringLiteral
+          (slStringLiteralPart))
+        (objectBody
+          (objectProperty
+            (modifier)
+            (identifier)
+            (methodCallExpr
+              (identifier)
+              (argumentList
+                (newExpr
+                  (type
+                    (qualifiedIdentifier
+                      (identifier)))
+                  (objectBody)))))
+          (objectProperty
+            (modifier)
+            (identifier)
+            (objectLiteral
+              (parenthesizedExpr
+                (variableExpr
+                  (identifier)))
+              (objectBody
+                (objectProperty
+                  (identifier)
+                  (intLiteral)))))
+          (objectElement
+            (variableExpr
+              (identifier)))
+          (objectElement
+            (isExpr
+              (variableExpr
+                (identifier))
+              (type
+                (qualifiedIdentifier
+                  (identifier)))))))))
+  (clazz
+    (modifier)
+    (identifier)
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))))))))

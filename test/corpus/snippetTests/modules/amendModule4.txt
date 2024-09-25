@@ -1,0 +1,37 @@
+==========
+modules/amendModule4
+==========
+
+// amend an extended module
+amends "extendModule1.pkl"
+
+pigeon {
+  name = "pigeon4"
+}
+
+parrot {
+  name = "parrot4"
+}
+
+---
+
+(module
+  (lineComment)
+  (moduleHeader
+    (extendsOrAmendsClause
+      (stringConstant
+        (slStringLiteralPart))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (slStringLiteral
+          (slStringLiteralPart))))))

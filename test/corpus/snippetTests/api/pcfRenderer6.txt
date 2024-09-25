@@ -1,0 +1,118 @@
+==========
+api/pcfRenderer6
+==========
+
+foo = null
+bar = null
+baz {
+  qux = 42
+  quux = null
+  corge = new Listing {
+    null
+    1337
+    null
+    "Hello World"
+  }
+  grault = new Mapping {
+    ["garply"] = null
+    ["waldo"] = 42
+    [new Listing {
+      "pigeon"
+    }] = null
+  }
+  thud = Pair(new Dynamic {}, new Listing {})
+}
+
+output {
+  renderer = new PcfRenderer {
+    omitNullProperties = true
+  }
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (nullLiteral))
+  (classProperty
+    (identifier)
+    (nullLiteral))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (intLiteral))
+      (objectProperty
+        (identifier)
+        (nullLiteral))
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectElement
+              (nullLiteral))
+            (objectElement
+              (intLiteral))
+            (objectElement
+              (nullLiteral))
+            (objectElement
+              (slStringLiteral
+                (slStringLiteralPart))))))
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (nullLiteral))
+            (objectEntry
+              (slStringLiteral
+                (slStringLiteralPart))
+              (intLiteral))
+            (objectEntry
+              (newExpr
+                (type
+                  (qualifiedIdentifier
+                    (identifier)))
+                (objectBody
+                  (objectElement
+                    (slStringLiteral
+                      (slStringLiteralPart)))))
+              (nullLiteral)))))
+      (objectProperty
+        (identifier)
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody))
+            (newExpr
+              (type
+                (qualifiedIdentifier
+                  (identifier)))
+              (objectBody)))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectProperty
+        (identifier)
+        (newExpr
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (trueLiteral))))))))

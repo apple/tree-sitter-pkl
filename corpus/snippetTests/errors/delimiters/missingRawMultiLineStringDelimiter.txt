@@ -1,8 +1,0 @@
-==========
-errors/delimiters/missingRawMultiLineStringDelimiter
-==========
-
-res1 = #"""abc
-
----
-

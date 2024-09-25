@@ -1,8 +1,0 @@
-==========
-projects/notAProject/badImport.error
-==========
-
-res = import("@child/theChild.pkl")
-
----
-
