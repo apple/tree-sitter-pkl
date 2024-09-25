@@ -34,7 +34,6 @@
   "scripts": {
     "build": "tree-sitter generate && node-gyp configure && node-gyp build",
     "test": "tree-sitter test",
-    "synctests": "ts-node src/synctests.ts",
     "getVersion": "node -p \"require('./package.json').version\"",
     "gen-lib": "tree-sitter generate -b --libdir ."
   },

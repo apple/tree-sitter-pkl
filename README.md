@@ -11,22 +11,11 @@ A tree-sitter grammar for Pkl.
 
 # Tests
 
-Tree sitter comes with its own test framework. Files in `corpus/`
-describe one test each. All tests in `corpus/` are performed by the
+Tree sitter comes with its own test framework. Files in `test/corpus/`
+describe one test each. All tests in `test/corpus/` are performed by the
 command
 
     $ tree-sitter test
-
-The script `src/synctests.ts` creates `corpus/` test files from tests in
-`pkl`'s `LanguageSnippetTests`. The script assumes that `../pkl` is a
-checked out `pkl` repository (and that the tests are under
-`pkl-core/src/test/files/LanguageSnippetFiles/input`). A pre-condition
-of the script is that `tree-sitter test` currently passes. If broken
-tests need replacing, the broken tests must first be deleted.
-
-It can be executed by running
-
-    $ npm run synctests
 
 # Upgrading tree-sitter
 
