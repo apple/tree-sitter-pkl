@@ -3244,17 +3244,21 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "super"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "_expr"
-            }
-          ]
+          "type": "FIELD",
+          "name": "receiver",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "super"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_expr"
+              }
+            ]
+          }
         },
         {
           "type": "CHOICE",
@@ -3270,8 +3274,17 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "identifier"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "identifier"
+            },
+            {
+              "type": "STRING",
+              "value": "\n"
+            }
+          ]
         }
       ]
     },
