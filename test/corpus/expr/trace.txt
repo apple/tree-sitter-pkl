@@ -1,0 +1,14 @@
+===
+trace
+===
+
+res1 = trace("foo")
+---
+
+(module
+  (classProperty
+    (identifier)
+    (traceExpr
+      (parenthesizedExpr
+        (slStringLiteral
+          (slStringLiteralPart))))))

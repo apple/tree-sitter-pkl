@@ -1,0 +1,241 @@
+================
+annotation
+================
+
+/// doc comment
+/// doc comment
+@Ann
+@Ann2 { x = "foo" }
+@Ann3 {
+  x = "foo"
+  y = 1
+}
+module some.mod
+
+/// doc comment
+/// doc comment
+@Ann
+@Ann2 { x = "foo" }
+@Ann3 {
+  x = "foo"
+  y = 1
+}
+class SomeClass {
+  /// doc comment
+  /// doc comment
+  @Ann
+  @Ann2 { x = "foo" }
+  @Ann3 {
+    x = "foo"
+    y = 1
+  }
+  function someMethod() = "hi"
+
+  /// doc comment
+  /// doc comment
+  @Ann
+  @Ann2 { x = "foo" }
+  @Ann3 {
+    x = "foo"
+    y = 1
+  }
+  someProperty: String = "hi"
+}
+
+/// doc comment
+/// doc comment
+@Ann
+@Ann2 { x = "foo" }
+@Ann3 {
+  x = "foo"
+  y = 1
+}
+function someMethod() = "hi"
+
+/// doc comment
+/// doc comment
+@Ann
+@Ann2 { x = "foo" }
+@Ann3 {
+  x = "foo"
+  y = 1
+}
+someProperty: String = "hi"
+
+----------------
+
+(module
+  (moduleHeader
+    (docComment)
+    (annotation
+      (qualifiedIdentifier
+        (identifier)))
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart)))))
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectProperty
+          (identifier)
+          (intLiteral))))
+    (moduleClause
+      (qualifiedIdentifier
+        (identifier)
+        (identifier))))
+  (clazz
+    (docComment)
+    (annotation
+      (qualifiedIdentifier
+        (identifier)))
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart)))))
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectProperty
+          (identifier)
+          (intLiteral))))
+    (identifier)
+    (classBody
+      (classMethod
+        (docComment)
+        (annotation
+          (qualifiedIdentifier
+            (identifier)))
+        (annotation
+          (qualifiedIdentifier
+            (identifier))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (slStringLiteralPart)))))
+        (annotation
+          (qualifiedIdentifier
+            (identifier))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (objectProperty
+              (identifier)
+              (intLiteral))))
+        (methodHeader
+          (identifier)
+          (parameterList))
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (classProperty
+        (docComment)
+        (annotation
+          (qualifiedIdentifier
+            (identifier)))
+        (annotation
+          (qualifiedIdentifier
+            (identifier))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (slStringLiteralPart)))))
+        (annotation
+          (qualifiedIdentifier
+            (identifier))
+          (objectBody
+            (objectProperty
+              (identifier)
+              (slStringLiteral
+                (slStringLiteralPart)))
+            (objectProperty
+              (identifier)
+              (intLiteral))))
+        (identifier)
+        (typeAnnotation
+          (type
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classMethod
+    (docComment)
+    (annotation
+      (qualifiedIdentifier
+        (identifier)))
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart)))))
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectProperty
+          (identifier)
+          (intLiteral))))
+    (methodHeader
+      (identifier)
+      (parameterList))
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (docComment)
+    (annotation
+      (qualifiedIdentifier
+        (identifier)))
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart)))))
+    (annotation
+      (qualifiedIdentifier
+        (identifier))
+      (objectBody
+        (objectProperty
+          (identifier)
+          (slStringLiteral
+            (slStringLiteralPart)))
+        (objectProperty
+          (identifier)
+          (intLiteral))))
+    (identifier)
+    (typeAnnotation
+      (type
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteral
+      (slStringLiteralPart))))

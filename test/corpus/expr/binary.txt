@@ -1,0 +1,107 @@
+===
+binary
+===
+
+exprs {
+  1 as Int
+  1 is Int
+  1 == 1
+  1 != 1
+  1 && 1
+  1 || 1
+  1 |> 1
+  1 >= 2
+  1 <= 2
+  1 > 2
+  1 < 2
+  1 * 2
+  1 / 2
+  1 ~/ 2
+  1 ** 2
+  1 % 2
+  1 + 2
+  1 - 2
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (asExpr
+          (intLiteral)
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (objectElement
+        (isExpr
+          (intLiteral)
+          (type
+            (qualifiedIdentifier
+              (identifier)))))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExprRightAssoc
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral)))
+      (objectElement
+        (binaryExpr
+          (intLiteral)
+          (intLiteral))))))

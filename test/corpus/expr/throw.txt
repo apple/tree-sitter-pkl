@@ -1,0 +1,14 @@
+===
+throw
+===
+
+res1 = throw("Uh oh!")
+---
+
+(module
+  (classProperty
+    (identifier)
+    (throwExpr
+      (parenthesizedExpr
+        (slStringLiteral
+          (slStringLiteralPart))))))
