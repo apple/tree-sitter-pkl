@@ -1,0 +1,71 @@
+===
+objectWhenGenerator
+===
+
+res1 {
+  when (bar) {
+    1
+  }
+}
+
+res2 {
+  when (baz) {
+    1
+  } else {
+    2
+  }
+}
+
+res3 {
+  when (bar) { 1 }
+}
+
+res4 {
+  when (bar) { 1 } else { 2 }
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (whenGenerator
+        (variableExpr
+          (identifier))
+        (objectBody
+          (objectElement
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (whenGenerator
+        (variableExpr
+          (identifier))
+        (objectBody
+          (objectElement
+            (intLiteral)))
+        (objectBody
+          (objectElement
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (whenGenerator
+        (variableExpr
+          (identifier))
+        (objectBody
+          (objectElement
+            (intLiteral))))))
+  (classProperty
+    (identifier)
+    (objectBody
+      (whenGenerator
+        (variableExpr
+          (identifier))
+        (objectBody
+          (objectElement
+            (intLiteral)))
+        (objectBody
+          (objectElement
+            (intLiteral)))))))

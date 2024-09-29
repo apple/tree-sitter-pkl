@@ -55,6 +55,7 @@
 (lineComment) @comment
 (blockComment) @comment
 (docComment) @comment
+(shebangComment) @comment
 
 ; Operators
 
