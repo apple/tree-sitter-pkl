@@ -175,8 +175,9 @@ someProperty: String = "hi"
         (identifier)
         (typeAnnotation
           (type
-            (qualifiedIdentifier
-              (identifier))))
+            (declaredType
+              (qualifiedIdentifier
+                (identifier)))))
         (slStringLiteral
           (slStringLiteralPart)))))
   (classMethod
@@ -235,7 +236,8 @@ someProperty: String = "hi"
     (identifier)
     (typeAnnotation
       (type
-        (qualifiedIdentifier
-          (identifier))))
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))))
     (slStringLiteral
       (slStringLiteralPart))))

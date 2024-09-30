@@ -80,10 +80,6 @@
 "%"  @operator
 "|>" @operator
 
-"?"  @operator.type
-"|"  @operator.type
-"->" @operator.type
-
 "," @punctuation.delimiter
 ":" @punctuation.delimiter
 "." @punctuation.delimiter
@@ -121,7 +117,6 @@
 (moduleExpr "module" @type.builtin)
 "module" @keyword
 "new" @keyword
-"nothing" @type.builtin
 (nullLiteral) @constant.builtin
 "open" @keyword
 "out" @keyword
@@ -135,5 +130,4 @@
 "trace" @function.method.builtin
 (trueLiteral) @constant.builtin
 "typealias" @keyword
-"unknown" @type.builtin
 "when" @keyword

@@ -18,8 +18,9 @@ res3 = new Dynamic {} {} {}
     (identifier)
     (newExpr
       (type
-        (qualifiedIdentifier
-          (identifier)))
+        (declaredType
+          (qualifiedIdentifier
+            (identifier))))
       (objectBody)))
   (classProperty
     (identifier)
@@ -27,8 +28,9 @@ res3 = new Dynamic {} {} {}
       (objectLiteral
         (newExpr
           (type
-            (qualifiedIdentifier
-              (identifier)))
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))
           (objectBody))
         (objectBody))
       (objectBody))))
