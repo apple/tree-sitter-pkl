@@ -28,10 +28,10 @@ enum TokenType {
   ML5_STRING_CHARS,
   // sequence of "normal" characters in multiline string with six pound signs
   ML6_STRING_CHARS,
-  // `[` as used in subscript expressions
-  OPEN_SQUARE_BRACKET,
-  // `[` as used in object entries
-  OPEN_ENTRY_BRACKET,
+  // '[' at the start of a subscript
+  OPEN_SUBSCRIPT_BRACKET,
+  // '(' at the start of a method call, or a type constraint
+  OPEN_ARGUMENT_PAREN,
 };
 
 void *tree_sitter_pkl_external_scanner_create() { return NULL; }
@@ -41,6 +41,7 @@ unsigned tree_sitter_pkl_external_scanner_serialize(void *p, char *buffer) { ret
 void tree_sitter_pkl_external_scanner_deserialize(void *p, const char *b, unsigned n) {}
 
 static void advance(TSLexer *lexer) { lexer->advance(lexer, false); }
+static void skip(TSLexer *lexer) { lexer->advance(lexer, true); }
 
 static bool parse_slx_string_chars(TSLexer *lexer, int num_pounds) {
   bool has_content = false;
@@ -193,27 +194,34 @@ static bool parse_mlx_string_chars(TSLexer *lexer, int num_pounds) {
   }
 }
 
-bool parse_square_bracket_variant(TSLexer *lexer, bool open_square_bracket, bool open_entry_bracket) {
-  while (
-    lexer->lookahead == ' ' ||
-    lexer->lookahead == '\t' ||
-    (open_entry_bracket && (
-      lexer->lookahead == ';' ||
-      lexer->lookahead == '\n'
-    ))
-  ) {
-    open_square_bracket = open_square_bracket && (lexer->lookahead != '\n' && lexer->lookahead != ';');
-    lexer->advance(lexer, true);
+static bool parse_open_subscript_or_argument(TSLexer *lexer, bool open_subscript_bracket, bool open_argument_paren) {
+  if (lexer->eof(lexer)) {
+    return false;
   }
-  if (lexer->lookahead == '[') {
-    lexer->result_symbol = open_square_bracket ? OPEN_SQUARE_BRACKET : OPEN_ENTRY_BRACKET;
-    lexer->advance(lexer, false);
-    if (lexer->lookahead != '[') {
-        lexer->mark_end(lexer);
-        return true;
+  while (true) {
+    switch (lexer->lookahead) {
+      case ' ':
+      case '\t':
+      case '\r':
+      case '\f':
+        skip(lexer);
+        break;
+      case '[':
+        if (open_subscript_bracket) {
+          advance(lexer);
+          lexer->result_symbol = OPEN_SUBSCRIPT_BRACKET;
+          return true;
+        }
+      case '(':
+        if (open_argument_paren) {
+          advance(lexer);
+          lexer->result_symbol = OPEN_ARGUMENT_PAREN;
+          return true;
+        }
+      default:
+        return false;
     }
   }
-  return false;
 }
 
 bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
@@ -230,10 +238,10 @@ bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const 
   bool ml4 = valid_symbols[ML4_STRING_CHARS];
   bool ml5 = valid_symbols[ML5_STRING_CHARS];
   bool ml6 = valid_symbols[ML6_STRING_CHARS];
-  bool osb = valid_symbols[OPEN_SQUARE_BRACKET];
-  bool oeb = valid_symbols[OPEN_ENTRY_BRACKET];
+  bool osb = valid_symbols[OPEN_SUBSCRIPT_BRACKET];
+  bool oap = valid_symbols[OPEN_ARGUMENT_PAREN];
   
-  if (sl1 && sl2 && sl3 && sl4 && sl5 && sl6 && ml && ml1 && ml2 && ml3 && ml4 && ml5 && ml6 && osb && oeb) {
+  if (sl1 && sl2 && sl3 && sl4 && sl5 && sl6 && ml && ml1 && ml2 && ml3 && ml4 && ml5 && ml6 && osb && oap) {
     // error recovery mode -> don't match any string chars
     return false;
   }
@@ -277,9 +285,9 @@ bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const 
   if (ml6) {
     return parse_mlx_string_chars(lexer, 6);
   }
-  if (osb || oeb) {
-    return parse_square_bracket_variant(lexer, osb, oeb);
+  // both can possibly be true
+  if (osb || oap) {
+    return parse_open_subscript_or_argument(lexer, osb, oap);
   }
   return false;
 }
-

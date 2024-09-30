@@ -770,12 +770,7 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_open_entry_bracket"
-          },
-          "named": false,
+          "type": "STRING",
           "value": "["
         },
         {
@@ -1112,7 +1107,12 @@
               "name": "type"
             },
             {
-              "type": "STRING",
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_open_argument_paren"
+              },
+              "named": false,
               "value": "("
             },
             {
@@ -1400,7 +1400,12 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_open_argument_paren"
+          },
+          "named": false,
           "value": "("
         },
         {
@@ -3184,7 +3189,7 @@
           "type": "ALIAS",
           "content": {
             "type": "SYMBOL",
-            "name": "_open_square_bracket"
+            "name": "_open_subscript_bracket"
           },
           "named": false,
           "value": "["
@@ -4072,30 +4077,6 @@
   ],
   "conflicts": [
     [
-      "objectProperty",
-      "subscriptExpr"
-    ],
-    [
-      "objectMethod",
-      "subscriptExpr"
-    ],
-    [
-      "objectEntry",
-      "subscriptExpr"
-    ],
-    [
-      "objectPredicate",
-      "subscriptExpr"
-    ],
-    [
-      "propertyCallExpr",
-      "methodCallExpr"
-    ],
-    [
-      "variableExpr",
-      "methodCallExpr"
-    ],
-    [
       "variableExpr",
       "typedIdentifier"
     ],
@@ -4166,11 +4147,11 @@
     },
     {
       "type": "SYMBOL",
-      "name": "_open_square_bracket"
+      "name": "_open_subscript_bracket"
     },
     {
       "type": "SYMBOL",
-      "name": "_open_entry_bracket"
+      "name": "_open_argument_paren"
     }
   ],
   "inline": [],

@@ -72,8 +72,10 @@ module.exports = grammar({
     $._ml4_string_chars,
     $._ml5_string_chars,
     $._ml6_string_chars,
-    $._open_square_bracket,
-    $._open_entry_bracket,
+    // '[' without preceding newline or semicolon
+    $._open_subscript_bracket,
+    // '(' without preceding newline or semicolon
+    $._open_argument_paren,
   ],
 
   extras: $ => [
@@ -85,15 +87,7 @@ module.exports = grammar({
   word: $ => $.identifier,
 
   conflicts: $ => [
-    // in ANTLR we deal with these by not allowing a newline or semicolon before subscript
-    [$.objectProperty, $.subscriptExpr],
-    [$.objectMethod, $.subscriptExpr],
-    [$.objectEntry, $.subscriptExpr],
-    [$.objectPredicate, $.subscriptExpr],
-
     // these should be fixable in some other way (perhaps with prec)
-    [$.propertyCallExpr, $.methodCallExpr],
-    [$.variableExpr, $.methodCallExpr],
     [$.variableExpr, $.typedIdentifier],
 
     // not sure what this one is about
@@ -256,7 +250,7 @@ module.exports = grammar({
     objectMethod: $ => seq($.methodHeader, "=", $._expr),
 
     objectEntry: $ => seq(
-      alias($._open_entry_bracket, "["),
+      "[",
       $._expr,
       "]",
       choice(
@@ -327,7 +321,7 @@ module.exports = grammar({
       seq($.qualifiedIdentifier, optional($.typeArgumentList)),
       seq("(", $.type, ")"),
       prec(PREC.NULLABLE_TYPE, seq($.type, "?")),
-      seq($.type, "(", commaSep1($._expr), ")"),
+      seq($.type, alias($._open_argument_paren, "("), commaSep1($._expr), ")"),
       prec.left(PREC.UNION_TYPE, seq($.type, "|", $.type)),
       prec(PREC.DEFAULT_TYPE, seq("*", $.type)),
       prec(PREC.FUN_TYPE, seq("(", commaSep($.type), ")", "->", $.type))
@@ -357,7 +351,7 @@ module.exports = grammar({
     ),
 
     argumentList: $ => seq(
-      '(',
+      alias($._open_argument_paren, '('),
       commaSep($._expr),
       ')'
     ),
@@ -707,7 +701,7 @@ module.exports = grammar({
 
     propertyCallExpr: $ => seq(choice("super", $._expr), choice(".", "?."), $.identifier),
 
-    subscriptExpr: $ => seq(choice("super", $._expr), alias($._open_square_bracket, "["), $._expr, "]"),
+    subscriptExpr: $ => seq(choice("super", $._expr), alias($._open_subscript_bracket, "["), $._expr, "]"),
 
     unaryExpr: $ => choice(
       prec.left(PREC.NEG, seq($._expr, '!!')),
