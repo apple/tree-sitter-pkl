@@ -5,8 +5,10 @@ objectElementsWithParens
 res13 {
     foo
     foo(bar)
-    (bar)
-    (baz) {
+    bar
+    (baz)
+    qux
+    (quux) {
       1
       2
     }
