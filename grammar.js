@@ -732,7 +732,25 @@ module.exports = grammar({
         $.argumentList
     ),
 
-    propertyCallExpr: $ => seq(choice("super", $._expr), choice(".", "?."), $.identifier),
+    propertyCallExpr: $ => seq(
+        field("receiver", choice("super", $._expr)),
+        choice(".", "?."),
+        // allow newline as a possible token because tree-sitter otherwise doesn't handle error recovery correctly.
+        // E.g.
+        // This gets parsed as a single class property, where `bar.baz { foo = bar }` is the property's value
+        // ```
+        // foo = bar.
+        // baz { foo = bar }
+        // ```
+        //
+        // This gets parsed as two class properties; `foo = bar.typealias` and `Baz = String`
+        // ```
+        // foo = bar.
+        //
+        // typealias Baz = String
+        // ```
+        choice($.identifier, field("err", "\n"))
+    ),
 
     subscriptExpr: $ => seq(field("receiver", choice("super", $._expr)), alias($._open_subscript_bracket, "["), $._expr, "]"),
 
