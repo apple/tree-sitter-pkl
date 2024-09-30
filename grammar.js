@@ -45,8 +45,8 @@ const PREC = {
 
   NULLABLE_TYPE: 5,
   FUN_TYPE: -5,
-  UNION_TYPE: -6,
-  DEFAULT_TYPE: -7,
+  DEFAULT_TYPE: -6,
+  UNION_DEFAULT_TYPE: -7,
 
   VAR_OBJ_LITERAL: 2,
   OBJ_LITERAL: 1,
@@ -330,7 +330,7 @@ module.exports = grammar({
       seq("(", $.type, ")"),
       prec(PREC.NULLABLE_TYPE, seq($.type, "?")),
       seq($.type, alias($._open_argument_paren, "("), commaSep1($._expr), ")"),
-      prec.left(PREC.UNION_TYPE, seq($.type, "|", $.type)),
+      prec.left(PREC.UNION_DEFAULT_TYPE, seq($.type, "|", $.type)),
       prec(PREC.DEFAULT_TYPE, seq("*", $.type)),
       prec(PREC.FUN_TYPE, seq("(", commaSep($.type), ")", "->", $.type))
     ),
