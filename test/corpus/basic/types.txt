@@ -44,62 +44,66 @@ res18: (String|Boolean)|(Int) -> Boolean
     (identifier)
     (typeAnnotation
       (type
-        (qualifiedIdentifier
-          (identifier)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
+        (declaredType
           (qualifiedIdentifier
             (identifier))))))
   (classProperty
     (identifier)
     (typeAnnotation
       (type
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (type
-          (qualifiedIdentifier
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
+        (nullableType
           (type
-            (qualifiedIdentifier
-              (identifier))))
-        (type
-          (qualifiedIdentifier
-            (identifier))))))
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))))))
   (classProperty
     (identifier)
     (typeAnnotation
       (type
-        (type
-          (qualifiedIdentifier
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
+        (unionType
           (type
-            (qualifiedIdentifier
-              (identifier))))
-        (binaryExpr
-          (thisExpr)
-          (nullLiteral)))))
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))
+          (type
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))))))
   (classProperty
     (identifier)
     (typeAnnotation
       (type
-        (type
+        (unionType
           (type
-            (qualifiedIdentifier
-              (identifier)))
+            (unionDefaultType
+              (type
+                (declaredType
+                  (qualifiedIdentifier
+                    (identifier))))))
+          (type
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (nullableType
+          (type
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (constrainedType
+          (type
+            (nullableType
+              (type
+                (declaredType
+                  (qualifiedIdentifier
+                    (identifier))))))
           (binaryExpr
             (thisExpr)
             (nullLiteral))))))
@@ -107,81 +111,122 @@ res18: (String|Boolean)|(Int) -> Boolean
     (identifier)
     (typeAnnotation
       (type
-        (type
+        (nullableType
           (type
-            (type
+            (constrainedType
+              (type
+                (declaredType
+                  (qualifiedIdentifier
+                    (identifier))))
+              (binaryExpr
+                (thisExpr)
+                (nullLiteral))))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (constrainedType
+          (type
+            (nullableType
+              (type
+                (constrainedType
+                  (type
+                    (declaredType
+                      (qualifiedIdentifier
+                        (identifier))))
+                  (binaryExpr
+                    (thisExpr)
+                    (nullLiteral))))))
+          (unaryExpr
+            (variableExpr
+              (identifier)))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (moduleType))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (nullableType
+          (type
+            (moduleType))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (nothingType))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (nullableType
+          (type
+            (nothingType))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (unknownType))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (nullableType
+          (type
+            (unknownType))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (stringLiteralType
+          (stringConstant
+            (slStringLiteralPart))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (functionLiteralType
+          (type
+            (declaredType
               (qualifiedIdentifier
-                (identifier)))
-            (binaryExpr
-              (thisExpr)
-              (nullLiteral))))
-        (unaryExpr
-          (variableExpr
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type)))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (stringConstant
-          (slStringLiteralPart)))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
-          (qualifiedIdentifier
-            (identifier)))
-        (type
-          (qualifiedIdentifier
-            (identifier))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (type
+                (identifier))))
           (type
-            (type
+            (declaredType
               (qualifiedIdentifier
-                (identifier)))
-            (type
-              (qualifiedIdentifier
-                (identifier)))))
-        (type
+                (identifier))))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (parenthesizedType
           (type
-            (qualifiedIdentifier
-              (identifier)))
+            (moduleType))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (unionType
           (type
-            (qualifiedIdentifier
-              (identifier))))))))
+            (parenthesizedType
+              (type
+                (unionType
+                  (type
+                    (declaredType
+                      (qualifiedIdentifier
+                        (identifier))))
+                  (type
+                    (declaredType
+                      (qualifiedIdentifier
+                        (identifier))))))))
+          (type
+            (functionLiteralType
+              (type
+                (declaredType
+                  (qualifiedIdentifier
+                    (identifier))))
+              (type
+                (declaredType
+                  (qualifiedIdentifier
+                    (identifier)))))))))))

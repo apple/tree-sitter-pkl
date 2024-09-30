@@ -14,8 +14,9 @@ res1 = (bar: Int) -> bar + 5
           (identifier)
           (typeAnnotation
             (type
-              (qualifiedIdentifier
-                (identifier))))))
+              (declaredType
+                (qualifiedIdentifier
+                  (identifier)))))))
       (binaryExpr
         (variableExpr
           (identifier))

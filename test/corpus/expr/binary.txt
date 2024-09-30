@@ -33,14 +33,16 @@ exprs {
         (asExpr
           (intLiteral)
           (type
-            (qualifiedIdentifier
-              (identifier)))))
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))))
       (objectElement
         (isExpr
           (intLiteral)
           (type
-            (qualifiedIdentifier
-              (identifier)))))
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))))
       (objectElement
         (binaryExpr
           (intLiteral)

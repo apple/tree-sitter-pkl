@@ -45,8 +45,8 @@ const PREC = {
 
   NULLABLE_TYPE: 5,
   FUN_TYPE: -5,
-  DEFAULT_TYPE: -6,
-  UNION_DEFAULT_TYPE: -7,
+  UNION_DEFAULT_TYPE: -6,
+  UNION_TYPE: -7,
 
   VAR_OBJ_LITERAL: 2,
   OBJ_LITERAL: 1,
@@ -95,7 +95,7 @@ module.exports = grammar({
     [$.objectElement, $._expr],
 
     [$.qualifiedIdentifier],
-    [$.type]
+    [$.declaredType]
   ],
 
   rules: {
@@ -322,18 +322,34 @@ module.exports = grammar({
     typeAnnotation: $ => seq(":", $.type),
 
     type: $ => choice(
-      "unknown",
-      "nothing",
-      "module",
-      $.stringConstant,
-      seq($.qualifiedIdentifier, optional($.typeArgumentList)),
-      seq("(", $.type, ")"),
-      prec(PREC.NULLABLE_TYPE, seq($.type, "?")),
-      seq($.type, alias($._open_argument_paren, "("), commaSep1($._expr), ")"),
-      prec.left(PREC.UNION_DEFAULT_TYPE, seq($.type, "|", $.type)),
-      prec(PREC.DEFAULT_TYPE, seq("*", $.type)),
-      prec(PREC.FUN_TYPE, seq("(", commaSep($.type), ")", "->", $.type))
+      alias("unknown", $.unknownType),
+      alias("nothing", $.nothingType),
+      alias("module", $.moduleType),
+      $.stringLiteralType,
+      $.declaredType,
+      $.parenthesizedType,
+      $.nullableType,
+      $.constrainedType,
+      $.unionType,
+      $.unionDefaultType,
+      $.functionLiteralType
     ),
+
+    stringLiteralType: $ => $.stringConstant,
+
+    declaredType: $ => seq($.qualifiedIdentifier, optional($.typeArgumentList)),
+
+    parenthesizedType: $ => seq("(", $.type, ")"),
+
+    nullableType: $ => prec(PREC.NULLABLE_TYPE, seq($.type, "?")),
+
+    constrainedType: $ => seq($.type, "(", commaSep1($._expr), ")"),
+
+    unionType: $ => prec.left(PREC.UNION_TYPE, seq($.type, "|", $.type)),
+
+    unionDefaultType: $ => prec(PREC.UNION_DEFAULT_TYPE, seq("*", $.type)),
+
+    functionLiteralType: $ => prec(PREC.FUN_TYPE, seq("(", commaSep($.type), ")", "->", $.type)),
 
     typeArgumentList: $ => seq(
       "<",
