@@ -4049,6 +4049,16 @@
     "type": "propertyCallExpr",
     "named": true,
     "fields": {
+      "err": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "\n",
+            "named": false
+          }
+        ]
+      },
       "receiver": {
         "multiple": false,
         "required": true,
