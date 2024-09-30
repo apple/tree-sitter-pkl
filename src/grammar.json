@@ -3281,8 +3281,12 @@
               "name": "identifier"
             },
             {
-              "type": "STRING",
-              "value": "\n"
+              "type": "FIELD",
+              "name": "err",
+              "content": {
+                "type": "STRING",
+                "value": "\n"
+              }
             }
           ]
         }

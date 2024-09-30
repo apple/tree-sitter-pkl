@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //===----------------------------------------------------------------------===//
-amends ".../pkl-project-commons/packages/pkl.impl.circleci/PklCI.pkl"
+amends "package://pkg.pkl-lang.org/pkl-project-commons/pkl.impl.circleci@1.0.2#/PklCI.pkl"
 
 prb = buildWorkflow
 
@@ -45,7 +45,7 @@ jobs {
   ["build"] {
     docker {
       new {
-        image = "cimg/node:18.19.0"
+        image = "cimg/node:22.9.0"
       }
     }
     steps {
