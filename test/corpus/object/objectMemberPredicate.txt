@@ -8,8 +8,9 @@ foo {
   }
 
   [[fuzz == 15]] = 15
-}
 
+  [[foo[bar]]] = true
+}
 ---
 
 (module
@@ -30,4 +31,11 @@ foo {
           (variableExpr
             (identifier))
           (intLiteral))
-        (intLiteral)))))
+        (intLiteral))
+      (objectPredicate
+        (subscriptExpr
+          (variableExpr
+            (identifier))
+          (variableExpr
+            (identifier)))
+        (trueLiteral)))))

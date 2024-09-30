@@ -1,0 +1,43 @@
+====
+objectElementsWithParens
+====
+
+res13 {
+    foo
+    foo(bar)
+    (bar)
+    (baz) {
+      1
+      2
+    }
+}
+
+----
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (variableExpr
+          (identifier)))
+      (objectElement
+        (methodCallExpr
+          (identifier)
+          (argumentList
+            (variableExpr
+              (identifier)))))
+      (objectElement
+        (parenthesizedExpr
+          (variableExpr
+            (identifier))))
+      (objectElement
+        (objectLiteral
+          (parenthesizedExpr
+            (variableExpr
+              (identifier)))
+          (objectBody
+            (objectElement
+              (intLiteral))
+            (objectElement
+              (intLiteral))))))))
