@@ -1042,10 +1042,6 @@
           "named": true
         },
         {
-          "type": "forGenerator",
-          "named": true
-        },
-        {
           "type": "functionLiteral",
           "named": true
         },
@@ -1098,31 +1094,7 @@
           "named": true
         },
         {
-          "type": "objectElement",
-          "named": true
-        },
-        {
-          "type": "objectEntry",
-          "named": true
-        },
-        {
           "type": "objectLiteral",
-          "named": true
-        },
-        {
-          "type": "objectMethod",
-          "named": true
-        },
-        {
-          "type": "objectPredicate",
-          "named": true
-        },
-        {
-          "type": "objectProperty",
-          "named": true
-        },
-        {
-          "type": "objectSpread",
           "named": true
         },
         {
@@ -1187,10 +1159,6 @@
         },
         {
           "type": "variableObjectLiteral",
-          "named": true
-        },
-        {
-          "type": "whenGenerator",
           "named": true
         }
       ]
@@ -1999,7 +1967,150 @@
   {
     "type": "methodCallExpr",
     "named": true,
-    "fields": {},
+    "fields": {
+      "receiver": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "asExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExprRightAssoc",
+            "named": true
+          },
+          {
+            "type": "falseLiteral",
+            "named": true
+          },
+          {
+            "type": "floatLiteral",
+            "named": true
+          },
+          {
+            "type": "functionLiteral",
+            "named": true
+          },
+          {
+            "type": "ifExpr",
+            "named": true
+          },
+          {
+            "type": "importExpr",
+            "named": true
+          },
+          {
+            "type": "importGlobExpr",
+            "named": true
+          },
+          {
+            "type": "intLiteral",
+            "named": true
+          },
+          {
+            "type": "isExpr",
+            "named": true
+          },
+          {
+            "type": "letExpr",
+            "named": true
+          },
+          {
+            "type": "methodCallExpr",
+            "named": true
+          },
+          {
+            "type": "mlStringLiteral",
+            "named": true
+          },
+          {
+            "type": "moduleExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nullLiteral",
+            "named": true
+          },
+          {
+            "type": "objectLiteral",
+            "named": true
+          },
+          {
+            "type": "outerExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          },
+          {
+            "type": "propertyCallExpr",
+            "named": true
+          },
+          {
+            "type": "readExpr",
+            "named": true
+          },
+          {
+            "type": "readGlobExpr",
+            "named": true
+          },
+          {
+            "type": "readOrNullExpr",
+            "named": true
+          },
+          {
+            "type": "slStringLiteral",
+            "named": true
+          },
+          {
+            "type": "subscriptExpr",
+            "named": true
+          },
+          {
+            "type": "super",
+            "named": false
+          },
+          {
+            "type": "thisExpr",
+            "named": true
+          },
+          {
+            "type": "throwExpr",
+            "named": true
+          },
+          {
+            "type": "traceExpr",
+            "named": true
+          },
+          {
+            "type": "trueLiteral",
+            "named": true
+          },
+          {
+            "type": "unaryExpr",
+            "named": true
+          },
+          {
+            "type": "variableExpr",
+            "named": true
+          },
+          {
+            "type": "variableObjectLiteral",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
@@ -2009,139 +2120,7 @@
           "named": true
         },
         {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
           "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "methodCallExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
-          "type": "objectLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "propertyCallExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
-          "named": true
-        },
-        {
-          "type": "variableExpr",
-          "named": true
-        },
-        {
-          "type": "variableObjectLiteral",
           "named": true
         }
       ]
@@ -2241,6 +2220,10 @@
         },
         {
           "type": "moduleHeader",
+          "named": true
+        },
+        {
+          "type": "shebangComment",
           "named": true
         },
         {
@@ -2524,145 +2507,290 @@
   {
     "type": "objectEntry",
     "named": true,
-    "fields": {},
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "asExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExprRightAssoc",
+            "named": true
+          },
+          {
+            "type": "falseLiteral",
+            "named": true
+          },
+          {
+            "type": "floatLiteral",
+            "named": true
+          },
+          {
+            "type": "functionLiteral",
+            "named": true
+          },
+          {
+            "type": "ifExpr",
+            "named": true
+          },
+          {
+            "type": "importExpr",
+            "named": true
+          },
+          {
+            "type": "importGlobExpr",
+            "named": true
+          },
+          {
+            "type": "intLiteral",
+            "named": true
+          },
+          {
+            "type": "isExpr",
+            "named": true
+          },
+          {
+            "type": "letExpr",
+            "named": true
+          },
+          {
+            "type": "methodCallExpr",
+            "named": true
+          },
+          {
+            "type": "mlStringLiteral",
+            "named": true
+          },
+          {
+            "type": "moduleExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nullLiteral",
+            "named": true
+          },
+          {
+            "type": "objectLiteral",
+            "named": true
+          },
+          {
+            "type": "outerExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          },
+          {
+            "type": "propertyCallExpr",
+            "named": true
+          },
+          {
+            "type": "readExpr",
+            "named": true
+          },
+          {
+            "type": "readGlobExpr",
+            "named": true
+          },
+          {
+            "type": "readOrNullExpr",
+            "named": true
+          },
+          {
+            "type": "slStringLiteral",
+            "named": true
+          },
+          {
+            "type": "subscriptExpr",
+            "named": true
+          },
+          {
+            "type": "thisExpr",
+            "named": true
+          },
+          {
+            "type": "throwExpr",
+            "named": true
+          },
+          {
+            "type": "traceExpr",
+            "named": true
+          },
+          {
+            "type": "trueLiteral",
+            "named": true
+          },
+          {
+            "type": "unaryExpr",
+            "named": true
+          },
+          {
+            "type": "variableExpr",
+            "named": true
+          },
+          {
+            "type": "variableObjectLiteral",
+            "named": true
+          }
+        ]
+      },
+      "valueExpr": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "asExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExprRightAssoc",
+            "named": true
+          },
+          {
+            "type": "falseLiteral",
+            "named": true
+          },
+          {
+            "type": "floatLiteral",
+            "named": true
+          },
+          {
+            "type": "functionLiteral",
+            "named": true
+          },
+          {
+            "type": "ifExpr",
+            "named": true
+          },
+          {
+            "type": "importExpr",
+            "named": true
+          },
+          {
+            "type": "importGlobExpr",
+            "named": true
+          },
+          {
+            "type": "intLiteral",
+            "named": true
+          },
+          {
+            "type": "isExpr",
+            "named": true
+          },
+          {
+            "type": "letExpr",
+            "named": true
+          },
+          {
+            "type": "methodCallExpr",
+            "named": true
+          },
+          {
+            "type": "mlStringLiteral",
+            "named": true
+          },
+          {
+            "type": "moduleExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nullLiteral",
+            "named": true
+          },
+          {
+            "type": "objectLiteral",
+            "named": true
+          },
+          {
+            "type": "outerExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          },
+          {
+            "type": "propertyCallExpr",
+            "named": true
+          },
+          {
+            "type": "readExpr",
+            "named": true
+          },
+          {
+            "type": "readGlobExpr",
+            "named": true
+          },
+          {
+            "type": "readOrNullExpr",
+            "named": true
+          },
+          {
+            "type": "slStringLiteral",
+            "named": true
+          },
+          {
+            "type": "subscriptExpr",
+            "named": true
+          },
+          {
+            "type": "thisExpr",
+            "named": true
+          },
+          {
+            "type": "throwExpr",
+            "named": true
+          },
+          {
+            "type": "traceExpr",
+            "named": true
+          },
+          {
+            "type": "trueLiteral",
+            "named": true
+          },
+          {
+            "type": "unaryExpr",
+            "named": true
+          },
+          {
+            "type": "variableExpr",
+            "named": true
+          },
+          {
+            "type": "variableObjectLiteral",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "methodCallExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
           "type": "objectBody",
-          "named": true
-        },
-        {
-          "type": "objectLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "propertyCallExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
-          "named": true
-        },
-        {
-          "type": "variableExpr",
-          "named": true
-        },
-        {
-          "type": "variableObjectLiteral",
           "named": true
         }
       ]
@@ -2957,145 +3085,290 @@
   {
     "type": "objectPredicate",
     "named": true,
-    "fields": {},
+    "fields": {
+      "conditionExpr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "asExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExprRightAssoc",
+            "named": true
+          },
+          {
+            "type": "falseLiteral",
+            "named": true
+          },
+          {
+            "type": "floatLiteral",
+            "named": true
+          },
+          {
+            "type": "functionLiteral",
+            "named": true
+          },
+          {
+            "type": "ifExpr",
+            "named": true
+          },
+          {
+            "type": "importExpr",
+            "named": true
+          },
+          {
+            "type": "importGlobExpr",
+            "named": true
+          },
+          {
+            "type": "intLiteral",
+            "named": true
+          },
+          {
+            "type": "isExpr",
+            "named": true
+          },
+          {
+            "type": "letExpr",
+            "named": true
+          },
+          {
+            "type": "methodCallExpr",
+            "named": true
+          },
+          {
+            "type": "mlStringLiteral",
+            "named": true
+          },
+          {
+            "type": "moduleExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nullLiteral",
+            "named": true
+          },
+          {
+            "type": "objectLiteral",
+            "named": true
+          },
+          {
+            "type": "outerExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          },
+          {
+            "type": "propertyCallExpr",
+            "named": true
+          },
+          {
+            "type": "readExpr",
+            "named": true
+          },
+          {
+            "type": "readGlobExpr",
+            "named": true
+          },
+          {
+            "type": "readOrNullExpr",
+            "named": true
+          },
+          {
+            "type": "slStringLiteral",
+            "named": true
+          },
+          {
+            "type": "subscriptExpr",
+            "named": true
+          },
+          {
+            "type": "thisExpr",
+            "named": true
+          },
+          {
+            "type": "throwExpr",
+            "named": true
+          },
+          {
+            "type": "traceExpr",
+            "named": true
+          },
+          {
+            "type": "trueLiteral",
+            "named": true
+          },
+          {
+            "type": "unaryExpr",
+            "named": true
+          },
+          {
+            "type": "variableExpr",
+            "named": true
+          },
+          {
+            "type": "variableObjectLiteral",
+            "named": true
+          }
+        ]
+      },
+      "valueExpr": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "asExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExprRightAssoc",
+            "named": true
+          },
+          {
+            "type": "falseLiteral",
+            "named": true
+          },
+          {
+            "type": "floatLiteral",
+            "named": true
+          },
+          {
+            "type": "functionLiteral",
+            "named": true
+          },
+          {
+            "type": "ifExpr",
+            "named": true
+          },
+          {
+            "type": "importExpr",
+            "named": true
+          },
+          {
+            "type": "importGlobExpr",
+            "named": true
+          },
+          {
+            "type": "intLiteral",
+            "named": true
+          },
+          {
+            "type": "isExpr",
+            "named": true
+          },
+          {
+            "type": "letExpr",
+            "named": true
+          },
+          {
+            "type": "methodCallExpr",
+            "named": true
+          },
+          {
+            "type": "mlStringLiteral",
+            "named": true
+          },
+          {
+            "type": "moduleExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nullLiteral",
+            "named": true
+          },
+          {
+            "type": "objectLiteral",
+            "named": true
+          },
+          {
+            "type": "outerExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          },
+          {
+            "type": "propertyCallExpr",
+            "named": true
+          },
+          {
+            "type": "readExpr",
+            "named": true
+          },
+          {
+            "type": "readGlobExpr",
+            "named": true
+          },
+          {
+            "type": "readOrNullExpr",
+            "named": true
+          },
+          {
+            "type": "slStringLiteral",
+            "named": true
+          },
+          {
+            "type": "subscriptExpr",
+            "named": true
+          },
+          {
+            "type": "thisExpr",
+            "named": true
+          },
+          {
+            "type": "throwExpr",
+            "named": true
+          },
+          {
+            "type": "traceExpr",
+            "named": true
+          },
+          {
+            "type": "trueLiteral",
+            "named": true
+          },
+          {
+            "type": "unaryExpr",
+            "named": true
+          },
+          {
+            "type": "variableExpr",
+            "named": true
+          },
+          {
+            "type": "variableObjectLiteral",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "methodCallExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
           "type": "objectBody",
-          "named": true
-        },
-        {
-          "type": "objectLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "propertyCallExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
-          "named": true
-        },
-        {
-          "type": "variableExpr",
-          "named": true
-        },
-        {
-          "type": "variableObjectLiteral",
           "named": true
         }
       ]
@@ -4153,6 +4426,11 @@
     }
   },
   {
+    "type": "shebangComment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "slStringLiteral",
     "named": true,
     "fields": {},
@@ -4202,9 +4480,152 @@
   {
     "type": "subscriptExpr",
     "named": true,
-    "fields": {},
+    "fields": {
+      "receiver": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "asExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExprRightAssoc",
+            "named": true
+          },
+          {
+            "type": "falseLiteral",
+            "named": true
+          },
+          {
+            "type": "floatLiteral",
+            "named": true
+          },
+          {
+            "type": "functionLiteral",
+            "named": true
+          },
+          {
+            "type": "ifExpr",
+            "named": true
+          },
+          {
+            "type": "importExpr",
+            "named": true
+          },
+          {
+            "type": "importGlobExpr",
+            "named": true
+          },
+          {
+            "type": "intLiteral",
+            "named": true
+          },
+          {
+            "type": "isExpr",
+            "named": true
+          },
+          {
+            "type": "letExpr",
+            "named": true
+          },
+          {
+            "type": "methodCallExpr",
+            "named": true
+          },
+          {
+            "type": "mlStringLiteral",
+            "named": true
+          },
+          {
+            "type": "moduleExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nullLiteral",
+            "named": true
+          },
+          {
+            "type": "objectLiteral",
+            "named": true
+          },
+          {
+            "type": "outerExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          },
+          {
+            "type": "propertyCallExpr",
+            "named": true
+          },
+          {
+            "type": "readExpr",
+            "named": true
+          },
+          {
+            "type": "readGlobExpr",
+            "named": true
+          },
+          {
+            "type": "readOrNullExpr",
+            "named": true
+          },
+          {
+            "type": "slStringLiteral",
+            "named": true
+          },
+          {
+            "type": "subscriptExpr",
+            "named": true
+          },
+          {
+            "type": "super",
+            "named": false
+          },
+          {
+            "type": "thisExpr",
+            "named": true
+          },
+          {
+            "type": "throwExpr",
+            "named": true
+          },
+          {
+            "type": "traceExpr",
+            "named": true
+          },
+          {
+            "type": "trueLiteral",
+            "named": true
+          },
+          {
+            "type": "unaryExpr",
+            "named": true
+          },
+          {
+            "type": "variableExpr",
+            "named": true
+          },
+          {
+            "type": "variableObjectLiteral",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -5081,180 +5502,165 @@
   {
     "type": "whenGenerator",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "forGenerator",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "methodCallExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
-          "type": "objectBody",
-          "named": true
-        },
-        {
-          "type": "objectElement",
-          "named": true
-        },
-        {
-          "type": "objectEntry",
-          "named": true
-        },
-        {
-          "type": "objectLiteral",
-          "named": true
-        },
-        {
-          "type": "objectMethod",
-          "named": true
-        },
-        {
-          "type": "objectPredicate",
-          "named": true
-        },
-        {
-          "type": "objectProperty",
-          "named": true
-        },
-        {
-          "type": "objectSpread",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "propertyCallExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
-          "named": true
-        },
-        {
-          "type": "variableExpr",
-          "named": true
-        },
-        {
-          "type": "variableObjectLiteral",
-          "named": true
-        },
-        {
-          "type": "whenGenerator",
-          "named": true
-        }
-      ]
+    "fields": {
+      "conditionExpr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "asExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExpr",
+            "named": true
+          },
+          {
+            "type": "binaryExprRightAssoc",
+            "named": true
+          },
+          {
+            "type": "falseLiteral",
+            "named": true
+          },
+          {
+            "type": "floatLiteral",
+            "named": true
+          },
+          {
+            "type": "functionLiteral",
+            "named": true
+          },
+          {
+            "type": "ifExpr",
+            "named": true
+          },
+          {
+            "type": "importExpr",
+            "named": true
+          },
+          {
+            "type": "importGlobExpr",
+            "named": true
+          },
+          {
+            "type": "intLiteral",
+            "named": true
+          },
+          {
+            "type": "isExpr",
+            "named": true
+          },
+          {
+            "type": "letExpr",
+            "named": true
+          },
+          {
+            "type": "methodCallExpr",
+            "named": true
+          },
+          {
+            "type": "mlStringLiteral",
+            "named": true
+          },
+          {
+            "type": "moduleExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nullLiteral",
+            "named": true
+          },
+          {
+            "type": "objectLiteral",
+            "named": true
+          },
+          {
+            "type": "outerExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          },
+          {
+            "type": "propertyCallExpr",
+            "named": true
+          },
+          {
+            "type": "readExpr",
+            "named": true
+          },
+          {
+            "type": "readGlobExpr",
+            "named": true
+          },
+          {
+            "type": "readOrNullExpr",
+            "named": true
+          },
+          {
+            "type": "slStringLiteral",
+            "named": true
+          },
+          {
+            "type": "subscriptExpr",
+            "named": true
+          },
+          {
+            "type": "thisExpr",
+            "named": true
+          },
+          {
+            "type": "throwExpr",
+            "named": true
+          },
+          {
+            "type": "traceExpr",
+            "named": true
+          },
+          {
+            "type": "trueLiteral",
+            "named": true
+          },
+          {
+            "type": "unaryExpr",
+            "named": true
+          },
+          {
+            "type": "variableExpr",
+            "named": true
+          },
+          {
+            "type": "variableObjectLiteral",
+            "named": true
+          }
+        ]
+      },
+      "elseBody": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "objectBody",
+            "named": true
+          }
+        ]
+      },
+      "thenBody": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "objectBody",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -5323,6 +5729,10 @@
   },
   {
     "type": "\"######",
+    "named": false
+  },
+  {
+    "type": "#!",
     "named": false
   },
   {

@@ -81,6 +81,7 @@ module.exports = grammar({
   extras: $ => [
     $.lineComment,
     $.blockComment,
+    $.shebangComment,
     /[ \t\f\r\n;]/
   ],
 
@@ -99,9 +100,15 @@ module.exports = grammar({
 
   rules: {
     module: $ => seq(
+      optional($.shebangComment),
       optional($.moduleHeader),
       repeat(choice($.importClause, $.importGlobClause)),
       repeat($._moduleMember)
+    ),
+
+    shebangComment: $ => seq(
+      "#!",
+      /.*/
     ),
 
     moduleHeader: $ => seq(
@@ -251,10 +258,10 @@ module.exports = grammar({
 
     objectEntry: $ => seq(
       "[",
-      $._expr,
+      field("key", $._expr),
       "]",
       choice(
-        seq("=", $._expr),
+        seq("=", field("valueExpr", $._expr)),
         repeat1($.objectBody)
       )
     ),
@@ -263,10 +270,10 @@ module.exports = grammar({
 
     objectPredicate: $ => seq(
       "[[",
-      $._expr,
+      field("conditionExpr", $._expr),
       "]]",
       choice(
-        seq("=", $._expr),
+        seq("=", field("valueExpr", $._expr)),
         repeat1($.objectBody)
       )
     ),
@@ -282,20 +289,20 @@ module.exports = grammar({
       "in",
       $._expr,
       ")",
-      choice(
-        $.objectBody,
-        $._objectMember // deprecated in 0.15
-      )
+      $.objectBody
     ),
 
     whenGenerator: $ => seq(
       "when",
       "(",
-      $._expr,
+      field("conditionExpr", $._expr),
       ")",
-      choice(
-        $.objectBody,
-        $._objectMember // deprecated in 0.15
+      field("thenBody", $.objectBody),
+      optional(
+        seq(
+          "else",
+          field("elseBody", $.objectBody)
+        )
       )
     ),
 
@@ -317,6 +324,7 @@ module.exports = grammar({
     type: $ => choice(
       "unknown",
       "nothing",
+      "module",
       $.stringConstant,
       seq($.qualifiedIdentifier, optional($.typeArgumentList)),
       seq("(", $.type, ")"),
@@ -697,11 +705,20 @@ module.exports = grammar({
 
     objectLiteral: $ => prec(PREC.OBJ_LITERAL, seq($._expr2, $.objectBody)),
 
-    methodCallExpr: $ => seq(optional(seq(choice("super", $._expr), choice(".", "?."))), $.identifier, $.argumentList),
+    methodCallExpr: $ => seq(
+        optional(
+            seq(
+                field("receiver", choice("super", $._expr)),
+                choice(".", "?.")
+            )
+        ),
+        $.identifier,
+        $.argumentList
+    ),
 
     propertyCallExpr: $ => seq(choice("super", $._expr), choice(".", "?."), $.identifier),
 
-    subscriptExpr: $ => seq(choice("super", $._expr), alias($._open_subscript_bracket, "["), $._expr, "]"),
+    subscriptExpr: $ => seq(field("receiver", choice("super", $._expr)), alias($._open_subscript_bracket, "["), $._expr, "]"),
 
     unaryExpr: $ => choice(
       prec.left(PREC.NEG, seq($._expr, '!!')),

@@ -34,6 +34,9 @@ res15: "string literal type"
 
 res16: (Int) -> Boolean
 
+res17: (module)
+
+res18: (String|Boolean)|(Int) -> Boolean
 ---
 
 (module
@@ -118,16 +121,12 @@ res16: (Int) -> Boolean
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
-        (qualifiedIdentifier
-          (identifier)))))
+      (type)))
   (classProperty
     (identifier)
     (typeAnnotation
       (type
-        (type
-          (qualifiedIdentifier
-            (identifier))))))
+        (type))))
   (classProperty
     (identifier)
     (typeAnnotation
@@ -161,4 +160,28 @@ res16: (Int) -> Boolean
             (identifier)))
         (type
           (qualifiedIdentifier
-            (identifier)))))))
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (type
+        (type
+          (type
+            (type
+              (qualifiedIdentifier
+                (identifier)))
+            (type
+              (qualifiedIdentifier
+                (identifier)))))
+        (type
+          (type
+            (qualifiedIdentifier
+              (identifier)))
+          (type
+            (qualifiedIdentifier
+              (identifier))))))))
