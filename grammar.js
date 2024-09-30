@@ -749,7 +749,7 @@ module.exports = grammar({
         //
         // typealias Baz = String
         // ```
-        choice($.identifier, "\n")
+        choice($.identifier, field("err", "\n"))
     ),
 
     subscriptExpr: $ => seq(field("receiver", choice("super", $._expr)), alias($._open_subscript_bracket, "["), $._expr, "]"),
