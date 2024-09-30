@@ -1208,7 +1208,7 @@
         },
         {
           "type": "PREC_LEFT",
-          "value": -6,
+          "value": -7,
           "content": {
             "type": "SEQ",
             "members": [
@@ -1229,7 +1229,7 @@
         },
         {
           "type": "PREC",
-          "value": -7,
+          "value": -6,
           "content": {
             "type": "SEQ",
             "members": [

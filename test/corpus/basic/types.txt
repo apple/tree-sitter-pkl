@@ -70,10 +70,10 @@ res18: (String|Boolean)|(Int) -> Boolean
         (type
           (type
             (qualifiedIdentifier
-              (identifier)))
-          (type
-            (qualifiedIdentifier
-              (identifier)))))))
+              (identifier))))
+        (type
+          (qualifiedIdentifier
+            (identifier))))))
   (classProperty
     (identifier)
     (typeAnnotation
