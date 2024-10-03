@@ -1,0 +1,397 @@
+===
+customStringDelimiters
+===
+
+res1 = #"\r\n\t\\"#
+res2 = #"$foo"#
+res3 = #"\(3 * 4)"#
+
+res4 = #"""
+\r\n\t\\
+"""#
+
+res5 = #"""
+$foo
+"""#
+
+res6 = #"""
+\(3 * 4)
+"""#
+
+res7 = #"""
+\r\n\t\\
+$foo
+\(3 * 4)
+"""#
+
+res9 = #"""
+leading and trailing newline trimmed
+"""#
+
+res10 = #"""
+
+leading newline not trimmed
+"""#
+
+res11 = #"""
+
+
+
+leading newlines not trimmed
+"""#
+
+res13 = #"""
+trailing newline not trimmed
+
+"""#
+
+res14 = #"""
+trailing newlines not trimmed
+
+
+
+"""#
+
+res16 = #"""
+  leading
+  whitespace
+  trimmed
+  """#
+
+res17 = #"""
+    leading
+    whitespace
+    partially
+    trimmed
+  """#
+
+res18 = #"""
+  leading
+    whitespace
+      partially
+        trimmed
+  """#
+
+res19 = #"""
+"AS IS"
+"""#
+
+res20 = #"""
+""AS IS""
+"""#
+
+res21 = #"""
+"""""AS IS"""""
+"""#
+
+local body = "AS IS"
+
+res22 = #"""
+"\#(body)"
+"""#
+
+res23 = #"""
+""\#(body)""
+"""#
+
+res24 = #"""
+"""""\#(body)"""""
+"""#
+
+res25 = ##"# ## ### " "" """ \ \#"##
+
+res26 = ###"# ## ### #### " "" """ """" \ \# \##"###
+
+res27 = #####"# ## ### #### ##### ###### " "" """ """" """"" \ \# \## \### \####"#####
+
+res28 = #"one\#(###"two\###("three")two"###)one\#(##"two"##)"#
+
+res29 = #"\#t \#(###"\###t\###t \###("\t\t\t") \###t\###t"###) \#t \#(##"\##t\##t"##)"#
+
+res30 = #"\#u{61} \#u{1F920} \#(##"\##u{1dd}"##)"#
+
+res31 = ###"\###u{61} \###u{1F920} \###(#"\#u{1dd}"#)"###
+
+res32 = ##"""
+  # ## ### " "" """ \ \#
+  """##
+
+res33 = ###"""
+  # ## ### #### " "" """ """" \ \# \##
+  """###
+
+res34 = #####"""
+  # ## ### #### ##### ###### " "" """ """" """"" \ \# \## \### \####
+  """#####
+
+res35 = #"""
+  one\#(###"two\###("three")two"###)one\#(##"two"##)
+  """#
+
+res36 = #"""
+  \#t \#(###"\###t\###t \###("\t\t\t") \###t\###t"###) \#t \#(##"\##t\##t"##)
+  """#
+
+res37 = #"""
+  \#u{61} \#u{1F920} \#(##"\##u{1dd}"##)
+  """#
+
+res38 = ###"""
+  \###u{61} \###u{1F920} \###(#"\#u{1dd}"#)
+  """###
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (modifier)
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (variableExpr
+          (identifier)))
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (slStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (slStringLiteralPart)
+          (interpolationExpr
+            (slStringLiteral
+              (slStringLiteralPart)))
+          (slStringLiteralPart)))
+      (slStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (slStringLiteralPart)))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (escapeSequence)
+      (slStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)
+          (escapeSequence)
+          (slStringLiteralPart)
+          (interpolationExpr
+            (slStringLiteral
+              (escapeSequence)
+              (escapeSequence)
+              (escapeSequence)))
+          (slStringLiteralPart)
+          (escapeSequence)
+          (escapeSequence)))
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)
+          (escapeSequence)))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (escapeSequence)
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)))))
+  (classProperty
+    (identifier)
+    (slStringLiteral
+      (escapeSequence)
+      (slStringLiteralPart)
+      (escapeSequence)
+      (slStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)))))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (slStringLiteralPart)
+          (interpolationExpr
+            (slStringLiteral
+              (slStringLiteralPart)))
+          (slStringLiteralPart)))
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (slStringLiteralPart)))
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (escapeSequence)
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)
+          (escapeSequence)
+          (slStringLiteralPart)
+          (interpolationExpr
+            (slStringLiteral
+              (escapeSequence)
+              (escapeSequence)
+              (escapeSequence)))
+          (slStringLiteralPart)
+          (escapeSequence)
+          (escapeSequence)))
+      (mlStringLiteralPart)
+      (escapeSequence)
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)
+          (escapeSequence)))
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (escapeSequence)
+      (mlStringLiteralPart)
+      (escapeSequence)
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)))
+      (mlStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (mlStringLiteral
+      (mlStringLiteralPart)
+      (escapeSequence)
+      (mlStringLiteralPart)
+      (escapeSequence)
+      (mlStringLiteralPart)
+      (interpolationExpr
+        (slStringLiteral
+          (escapeSequence)))
+      (mlStringLiteralPart))))

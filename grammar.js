@@ -59,6 +59,7 @@ module.exports = grammar({
   name: 'pkl',
 
   externals: $ => [
+    $._sl_string_chars,
     $._sl1_string_chars,
     $._sl2_string_chars,
     $._sl3_string_chars,
@@ -553,7 +554,7 @@ module.exports = grammar({
       ),
     ),
 
-    slStringLiteralPart: $ => token.immediate(/[^"\\\n\r]+/),
+    slStringLiteralPart: $ => $._sl_string_chars,
 
     slStringLiteralPart1: $ => $._sl1_string_chars,
 

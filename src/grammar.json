@@ -2443,11 +2443,8 @@
       ]
     },
     "slStringLiteralPart": {
-      "type": "IMMEDIATE_TOKEN",
-      "content": {
-        "type": "PATTERN",
-        "value": "[^\"\\\\\\n\\r]+"
-      }
+      "type": "SYMBOL",
+      "name": "_sl_string_chars"
     },
     "slStringLiteralPart1": {
       "type": "SYMBOL",
@@ -3281,8 +3278,12 @@
               "name": "identifier"
             },
             {
-              "type": "STRING",
-              "value": "\n"
+              "type": "FIELD",
+              "name": "err",
+              "content": {
+                "type": "STRING",
+                "value": "\n"
+              }
             }
           ]
         }
@@ -4220,6 +4221,10 @@
   ],
   "precedences": [],
   "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "_sl_string_chars"
+    },
     {
       "type": "SYMBOL",
       "name": "_sl1_string_chars"
