@@ -762,28 +762,28 @@ module.exports = grammar({
     ),
 
     binaryExprRightAssoc: $ => choice(...[
-      ['**', PREC.EXP],
-      ['??', PREC.COALESCE]
+      [field('operator', '**'), PREC.EXP],
+      [field('operator', '??'), PREC.COALESCE]
     ].map(([operator, precedence]) =>
       prec.right(precedence, seq($._expr, operator, $._expr))
     )),
 
     binaryExpr: $ => choice(...[
-      ['*', PREC.MUL],
-      ['/', PREC.MUL],
-      ['~/', PREC.MUL],
-      ['%', PREC.MUL],
-      ['+', PREC.ADD],
-      ['-', PREC.ADD],
-      ['<', PREC.REL],
-      ['<=', PREC.REL],
-      ['>=', PREC.REL],
-      ['>', PREC.REL],
-      ['==', PREC.EQ],
-      ['!=', PREC.EQ],
-      ['&&', PREC.AND],
-      ['||', PREC.OR],
-      ['|>', PREC.PIPE]
+      [field('operator', '*'), PREC.MUL],
+      [field('operator', '/'), PREC.MUL],
+      [field('operator', '~/'), PREC.MUL],
+      [field('operator', '%'), PREC.MUL],
+      [field('operator', '+'), PREC.ADD],
+      [field('operator', '-'), PREC.ADD],
+      [field('operator', '<'), PREC.REL],
+      [field('operator', '<='), PREC.REL],
+      [field('operator', '>='), PREC.REL],
+      [field('operator', '>'), PREC.REL],
+      [field('operator', '=='), PREC.EQ],
+      [field('operator', '!='), PREC.EQ],
+      [field('operator', '&&'), PREC.AND],
+      [field('operator', '||'), PREC.OR],
+      [field('operator', '|>'), PREC.PIPE]
     ].map(([operator, precedence]) =>
       prec.left(precedence, seq($._expr, operator, $._expr))
     )),
