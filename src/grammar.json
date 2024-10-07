@@ -758,8 +758,17 @@
                   "value": "="
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "_expr"
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "delete"
+                    }
+                  ]
                 }
               ]
             },
@@ -821,12 +830,21 @@
                   "value": "="
                 },
                 {
-                  "type": "FIELD",
-                  "name": "valueExpr",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "_expr"
-                  }
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "FIELD",
+                      "name": "valueExpr",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "_expr"
+                      }
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "delete"
+                    }
+                  ]
                 }
               ]
             },
@@ -884,12 +902,21 @@
                   "value": "="
                 },
                 {
-                  "type": "FIELD",
-                  "name": "valueExpr",
-                  "content": {
-                    "type": "SYMBOL",
-                    "name": "_expr"
-                  }
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "FIELD",
+                      "name": "valueExpr",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "_expr"
+                      }
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "delete"
+                    }
+                  ]
                 }
               ]
             },
@@ -1598,6 +1625,10 @@
           "name": "_expr2"
         }
       ]
+    },
+    "delete": {
+      "type": "STRING",
+      "value": "delete"
     },
     "variableObjectLiteral": {
       "type": "PREC",
