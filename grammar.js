@@ -249,7 +249,7 @@ module.exports = grammar({
         seq(
           optional($.typeAnnotation),
           "=",
-          $._expr
+          choice($._expr, $.delete),
         ),
         repeat1($.objectBody)
       )
@@ -262,7 +262,7 @@ module.exports = grammar({
       field("key", $._expr),
       "]",
       choice(
-        seq("=", field("valueExpr", $._expr)),
+        seq("=", choice(field("valueExpr", $._expr), $.delete)),
         repeat1($.objectBody)
       )
     ),
@@ -274,7 +274,7 @@ module.exports = grammar({
       field("conditionExpr", $._expr),
       "]]",
       choice(
-        seq("=", field("valueExpr", $._expr)),
+        seq("=", choice(field("valueExpr", $._expr), $.delete)),
         repeat1($.objectBody)
       )
     ),
@@ -396,6 +396,8 @@ module.exports = grammar({
       $.variableObjectLiteral,
       $._expr2
     ),
+
+    delete: $ => "delete",
 
     variableObjectLiteral: $ => prec(PREC.VAR_OBJ_LITERAL, seq(
       $.identifier,

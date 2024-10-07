@@ -2986,6 +2986,10 @@
       "required": false,
       "types": [
         {
+          "type": "delete",
+          "named": true
+        },
+        {
           "type": "objectBody",
           "named": true
         }
@@ -3564,6 +3568,10 @@
       "required": false,
       "types": [
         {
+          "type": "delete",
+          "named": true
+        },
+        {
           "type": "objectBody",
           "named": true
         }
@@ -3588,6 +3596,10 @@
         },
         {
           "type": "binaryExprRightAssoc",
+          "named": true
+        },
+        {
+          "type": "delete",
           "named": true
         },
         {
@@ -6131,6 +6143,10 @@
   {
     "type": "const",
     "named": false
+  },
+  {
+    "type": "delete",
+    "named": true
   },
   {
     "type": "else",

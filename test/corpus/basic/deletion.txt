@@ -1,0 +1,71 @@
+========
+deletion
+========
+
+validPositions {
+    ["entry"] = delete
+    [0] = delete
+    fooBar = delete
+    [[true]] = delete
+}
+
+invalidPositions {
+    // TODO: Make these ERRORs (may require custom scanner to exclude keywords from identifiers)
+    inExpression {
+        bar = if (false) 0 else delete
+    }
+    asElement {
+        delete
+    }
+    asPrefix {
+        delete 0
+    }
+}
+
+--------
+
+    (module
+      (classProperty
+        (identifier)
+        (objectBody
+          (objectEntry
+            (slStringLiteral
+              (slStringLiteralPart))
+            (delete))
+          (objectEntry
+            (intLiteral)
+            (delete))
+          (objectProperty
+            (identifier)
+            (delete))
+          (objectPredicate
+            (trueLiteral)
+            (delete))))
+      (classProperty
+        (identifier)
+        (objectBody
+          (lineComment)
+          (objectProperty
+            (identifier)
+            (objectBody
+              (objectProperty
+                (identifier)
+                (ifExpr
+                  (falseLiteral)
+                  (intLiteral)
+                  (variableExpr
+                    (identifier))))))
+          (objectProperty
+            (identifier)
+            (objectBody
+              (objectElement
+                (variableExpr
+                  (identifier)))))
+          (objectProperty
+            (identifier)
+            (objectBody
+              (objectElement
+                (variableExpr
+                  (identifier)))
+              (objectElement
+                (intLiteral)))))))
