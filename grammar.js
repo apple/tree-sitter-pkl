@@ -765,7 +765,7 @@ module.exports = grammar({
       ['**', PREC.EXP],
       ['??', PREC.COALESCE]
     ].map(([operator, precedence]) =>
-      prec.right(precedence, seq($._expr, operator, $._expr))
+      prec.right(precedence, seq($._expr, field('operator', operator), $._expr))
     )),
 
     binaryExpr: $ => choice(...[
@@ -785,7 +785,7 @@ module.exports = grammar({
       ['||', PREC.OR],
       ['|>', PREC.PIPE]
     ].map(([operator, precedence]) =>
-      prec.left(precedence, seq($._expr, operator, $._expr))
+      prec.left(precedence, seq($._expr, field('operator', operator), $._expr))
     )),
 
     isExpr: $ => prec(PREC.IS, seq($._expr, "is", $.type)),
