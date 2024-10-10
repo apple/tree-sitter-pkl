@@ -1,0 +1,40 @@
+= Changelog
+
+[[release-0.17.0]]
+== 0.17.0 (2024-10-10)
+
+=== Breaking changes
+
+* Give type nodes explicit names (e.g. `"unknown"` -> `unknownTypeNode`)
+* Remove support for legacy syntax in for and when generators
+
+=== Additions
+
+* Add support for Swift Package Manager
+* Add support for C bindings
+* Add doc comments to the parse tree
+* Add `slStringLiteralPart` and `mlStringLiteralPart` to the parse tree
+* Add field names to various nodes
+* Add support for shebang comments
+
+=== Fixes
+
+* Fix parsing of parenthesized expressions in object 
+elements
+* Fix parsing of union types with default markers
+* Add missing `else` in when generators
+* Add missing module type
+* Fix parsing of strings that start with two slashes
+
+=== Contributors ❤️
+
+Thanks to all the contributors for this release!
+
+* https://github.com/ObserverOfTime[@ObserverOfTime]
+* https://github.com/jayadamsmorgan[jayadamsmorgan]
+* https://github.com/thomaspurchas[@thomaspurchas]
+
+[[release-0.16.0]]
+== 0.16.0 (2024-02-02)
+
+Initial release
