@@ -3,6 +3,13 @@ version: '2.1'
 orbs:
   pr-approval: apple/pr-approval@0.1.0
 jobs:
+  test-license-headers:
+    steps:
+    - checkout
+    - run:
+        command: /bin/hawkeye check --fail-if-unknown
+    docker:
+    - image: ghcr.io/korandoru/hawkeye
   build:
     steps:
     - checkout
@@ -47,16 +54,19 @@ workflows:
         type: approval
     - pr-approval/authenticate:
         context: pkl-pr-approval
+    - test-license-headers:
+        requires:
+        - hold
     - build:
         requires:
         - hold
-        - pr-approval/authenticate
     when:
       matches:
         value: << pipeline.git.branch >>
         pattern: ^pull/\d+(/head)?$
   main:
     jobs:
+    - test-license-headers
     - build
     when:
       equal:
