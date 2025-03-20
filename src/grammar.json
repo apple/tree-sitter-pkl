@@ -3382,8 +3382,8 @@
                   "value": "+"
                 },
                 {
-                  "type": "STRING",
-                  "value": "-"
+                  "type": "SYMBOL",
+                  "name": "_binary_minus"
                 }
               ]
             }
@@ -4206,6 +4206,10 @@
     {
       "type": "SYMBOL",
       "name": "_open_argument_paren"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "_binary_minus"
     }
   ],
   "inline": [],

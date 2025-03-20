@@ -77,6 +77,8 @@ module.exports = grammar({
     $._open_subscript_bracket,
     // '(' without preceding newline or semicolon
     $._open_argument_paren,
+    // '-' without preceding newline or semicolon
+    $._binary_minus,
   ],
 
   extras: $ => [
@@ -724,7 +726,7 @@ module.exports = grammar({
 
     multiplicativeExpr: $ => prec.left(PREC.MUL, seq($._expr, field('operator', choice("*", "/", "~/", "%")), $._expr)),
 
-    additiveExpr: $ => prec.left(PREC.ADD, seq($._expr, field('operator', choice("+", "-")), $._expr)),
+    additiveExpr: $ => prec.left(PREC.ADD, seq($._expr, field('operator', choice("+", $._binary_minus)), $._expr)),
 
     comparisonExpr: $ => prec.left(PREC.REL, seq($._expr, field('operator', choice("<", "<=", ">=", ">")), $._expr)),
 
