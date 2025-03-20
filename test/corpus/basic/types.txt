@@ -138,7 +138,7 @@ res18: (String|Boolean)|(Int) -> Boolean
                     (thisExpr)
                     (nullLiteral))))))
           (unaryExpr
-            (variableExpr
+            (unqualifiedAccessExpr
               (identifier)))))))
   (classProperty
     (identifier)

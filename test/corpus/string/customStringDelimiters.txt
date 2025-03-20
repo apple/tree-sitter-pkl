@@ -225,7 +225,7 @@ res38 = ###"""
     (mlStringLiteral
       (mlStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
@@ -233,7 +233,7 @@ res38 = ###"""
     (mlStringLiteral
       (mlStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
@@ -241,7 +241,7 @@ res38 = ###"""
     (mlStringLiteral
       (mlStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty

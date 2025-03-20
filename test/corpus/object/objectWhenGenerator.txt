@@ -31,7 +31,7 @@ res4 {
     (identifier)
     (objectBody
       (whenGenerator
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))
         (objectBody
           (objectElement
@@ -40,7 +40,7 @@ res4 {
     (identifier)
     (objectBody
       (whenGenerator
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))
         (objectBody
           (objectElement
@@ -52,7 +52,7 @@ res4 {
     (identifier)
     (objectBody
       (whenGenerator
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))
         (objectBody
           (objectElement
@@ -61,7 +61,7 @@ res4 {
     (identifier)
     (objectBody
       (whenGenerator
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))
         (objectBody
           (objectElement

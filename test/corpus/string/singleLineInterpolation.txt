@@ -30,7 +30,7 @@ res10 = ######"Hi there \######(bob)"######
     (slStringLiteral
       (slStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
@@ -41,7 +41,7 @@ res10 = ######"Hi there \######(bob)"######
     (slStringLiteral
       (slStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
@@ -52,7 +52,7 @@ res10 = ######"Hi there \######(bob)"######
     (slStringLiteral
       (slStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
@@ -62,33 +62,33 @@ res10 = ######"Hi there \######(bob)"######
         (slStringLiteral
           (slStringLiteralPart)
           (interpolationExpr
-            (variableExpr
+            (unqualifiedAccessExpr
               (identifier)))))))
   (classProperty
     (identifier)
     (slStringLiteral
       (slStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
     (slStringLiteral
       (slStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
     (slStringLiteral
       (slStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
     (slStringLiteral
       (slStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))))))

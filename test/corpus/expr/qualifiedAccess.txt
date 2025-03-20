@@ -22,74 +22,81 @@ res7 = foo?.bar()
 res8 = foo
   ?.bar()
 
-// permit newline as terminator of qualified access (treated as error)
-res9 = foo.
-
 res10 = foo.bar
+
+res11 = "foo" + List("bar").join("")
 ---
 
 (module
   (classProperty
     (identifier)
-    (propertyCallExpr
-      (variableExpr
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
         (identifier))
       (identifier)))
   (classProperty
     (identifier)
-    (propertyCallExpr
-      (variableExpr
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
         (identifier))
       (identifier)))
   (classProperty
     (identifier)
-    (methodCallExpr
-      (variableExpr
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
         (identifier))
       (identifier)
       (argumentList)))
   (classProperty
     (identifier)
-    (methodCallExpr
-      (variableExpr
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
         (identifier))
       (identifier)
       (argumentList)))
   (classProperty
     (identifier)
-    (propertyCallExpr
-      (variableExpr
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
         (identifier))
       (identifier)))
   (classProperty
     (identifier)
-    (propertyCallExpr
-      (variableExpr
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
         (identifier))
       (identifier)))
   (classProperty
     (identifier)
-    (methodCallExpr
-      (variableExpr
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
         (identifier))
       (identifier)
       (argumentList)))
   (classProperty
     (identifier)
-    (methodCallExpr
-      (variableExpr
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
         (identifier))
       (identifier)
       (argumentList)))
-  (lineComment)
   (classProperty
     (identifier)
-    (propertyCallExpr
-      (variableExpr
-        (identifier))))
-  (classProperty
-    (identifier)
-    (propertyCallExpr
-      (variableExpr
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
         (identifier))
-      (identifier))))
+      (identifier)))
+  (classProperty
+    (identifier)
+    (binaryExpr
+      (slStringLiteral
+        (slStringLiteralPart))
+      (qualifiedAccessExpr
+        (unqualifiedAccessExpr
+          (identifier)
+          (argumentList
+            (slStringLiteral
+              (slStringLiteralPart))))
+        (identifier)
+        (argumentList
+          (slStringLiteral))))))

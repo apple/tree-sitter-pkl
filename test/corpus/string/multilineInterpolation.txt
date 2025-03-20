@@ -49,7 +49,7 @@ res9 = ######"""
     (mlStringLiteral
       (mlStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
@@ -61,7 +61,7 @@ res9 = ######"""
     (mlStringLiteral
       (mlStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
@@ -73,7 +73,7 @@ res9 = ######"""
     (mlStringLiteral
       (mlStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
@@ -81,7 +81,7 @@ res9 = ######"""
     (mlStringLiteral
       (mlStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
@@ -89,7 +89,7 @@ res9 = ######"""
     (mlStringLiteral
       (mlStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
@@ -97,6 +97,6 @@ res9 = ######"""
     (mlStringLiteral
       (mlStringLiteralPart)
       (interpolationExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart))))

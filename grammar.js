@@ -20,6 +20,7 @@
  * Operator precedences
  */
 const PREC = {
+  ACCESS: 99,
   NON_NULL: 21,
   NEG: 20,
   NOT: 19,
@@ -50,7 +51,7 @@ const PREC = {
   UNION_TYPE: -7,
 
   VAR_OBJ_LITERAL: 2,
-  OBJ_LITERAL: 1,
+  AMEND_EXPR: 1,
   OBJ_MEMBER: -1
 };
 
@@ -90,13 +91,7 @@ module.exports = grammar({
   word: $ => $.identifier,
 
   conflicts: $ => [
-    // these should be fixable in some other way (perhaps with prec)
-    [$.variableExpr, $.typedIdentifier],
-
-    // not sure what this one is about
-    [$.objectElement, $._expr],
-
-    [$.qualifiedIdentifier],
+    [$.unqualifiedAccessExpr, $.typedIdentifier],
     [$.declaredType]
   ],
 
@@ -268,7 +263,7 @@ module.exports = grammar({
       )
     ),
 
-    objectElement: $ => choice($.variableExpr, $._expr2),
+    objectElement: $ => $._expr,
 
     objectPredicate: $ => seq(
       "[[",
@@ -393,18 +388,6 @@ module.exports = grammar({
     ),
 
     _expr: $ => choice(
-      $.variableExpr,
-      $.variableObjectLiteral,
-      $._expr2
-    ),
-
-    variableObjectLiteral: $ => prec(PREC.VAR_OBJ_LITERAL, seq(
-      $.identifier,
-      $.objectBody
-    )),
-
-    _expr2: $ => choice(
-      $.parenthesizedExpr,
       $.thisExpr,
       $.outerExpr,
       $.moduleExpr,
@@ -413,12 +396,21 @@ module.exports = grammar({
       $.falseLiteral,
       $.intLiteral,
       $.floatLiteral,
+      $.throwExpr,
+      $.traceExpr,
+      $.importExpr,
+      $.importGlobExpr,
+      $.readExpr,
+      $.readOrNullExpr,
+      $.readGlobExpr,
+      $.unqualifiedAccessExpr,
       $.slStringLiteral,
       $.mlStringLiteral,
       $.newExpr,
-      $.objectLiteral,
-      $.methodCallExpr,
-      $.propertyCallExpr,
+      $.amendExpr,
+      $.superAccessExpr,
+      $.superSubscriptExpr,
+      $.qualifiedAccessExpr,
       $.subscriptExpr,
       $.unaryExpr,
       $.binaryExpr,
@@ -427,14 +419,8 @@ module.exports = grammar({
       $.asExpr,
       $.ifExpr,
       $.letExpr,
-      $.throwExpr,
-      $.traceExpr,
-      $.readExpr,
-      $.readOrNullExpr,
-      $.readGlobExpr,
-      $.importExpr,
-      $.importGlobExpr,
-      $.functionLiteral
+      $.functionLiteral,
+      $.parenthesizedExpr,
     ),
 
     parenthesizedExpr: $ => seq("(", $._expr, ")"),
@@ -444,8 +430,6 @@ module.exports = grammar({
     outerExpr: $ => "outer",
 
     moduleExpr: $ => "module",
-
-    variableExpr: $ => $.identifier,
 
     nullLiteral: $ => "null",
 
@@ -721,40 +705,9 @@ module.exports = grammar({
 
     newExpr: $ => seq("new", optional($.type), $.objectBody),
 
-    objectLiteral: $ => prec(PREC.OBJ_LITERAL, seq($._expr2, $.objectBody)),
+    amendExpr: $ => prec(PREC.AMEND_EXPR, seq(choice($.newExpr, $.amendExpr, seq('(', $._expr, ')')), $.objectBody)),
 
-    methodCallExpr: $ => seq(
-        optional(
-            seq(
-                field("receiver", choice("super", $._expr)),
-                choice(".", "?.")
-            )
-        ),
-        $.identifier,
-        $.argumentList
-    ),
-
-    propertyCallExpr: $ => seq(
-        field("receiver", choice("super", $._expr)),
-        choice(".", "?."),
-        // allow newline as a possible token because tree-sitter otherwise doesn't handle error recovery correctly.
-        // E.g.
-        // This gets parsed as a single class property, where `bar.baz { foo = bar }` is the property's value
-        // ```
-        // foo = bar.
-        // baz { foo = bar }
-        // ```
-        //
-        // This gets parsed as two class properties; `foo = bar.typealias` and `Baz = String`
-        // ```
-        // foo = bar.
-        //
-        // typealias Baz = String
-        // ```
-        choice($.identifier, field("err", "\n"))
-    ),
-
-    subscriptExpr: $ => seq(field("receiver", choice("super", $._expr)), alias($._open_subscript_bracket, "["), $._expr, "]"),
+    subscriptExpr: $ => seq(field("receiver", $._expr), alias($._open_subscript_bracket, "["), $._expr, "]"),
 
     unaryExpr: $ => choice(
       prec.left(PREC.NEG, seq($._expr, '!!')),
@@ -797,26 +750,55 @@ module.exports = grammar({
 
     letExpr: $ => prec(PREC.LET, seq("let", "(", $.typedIdentifier, "=", $._expr, ")", $._expr)),
 
-    throwExpr: $ => prec(PREC.THROW, seq("throw", $._expr)),
+    throwExpr: $ => prec(PREC.THROW, seq("throw", '(', $._expr, ')')),
 
-    traceExpr: $ => prec(PREC.TRACE, seq("trace", $._expr)),
+    traceExpr: $ => prec(PREC.TRACE, seq("trace", '(', $._expr, ')')),
 
-    readExpr: $ => prec(PREC.READ, seq("read", $._expr)),
+    readExpr: $ => prec(PREC.READ, seq("read", '(', $._expr, ')')),
 
-    readOrNullExpr: $ => prec(PREC.READ_OR_NULL, seq("read?", $._expr)),
+    readOrNullExpr: $ => prec(PREC.READ_OR_NULL, seq("read?", '(', $._expr, ')')),
 
-    readGlobExpr: $ => prec(PREC.READ_GLOB, seq("read*", $._expr)),
+    readGlobExpr: $ => prec(PREC.READ_GLOB, seq("read*", '(', $._expr, ')')),
 
     importExpr: $ => seq("import", seq('(', $.stringConstant, ')')),
 
     importGlobExpr: $ => seq("import*", seq('(', $.stringConstant, ')')),
 
+    unqualifiedAccessExpr: $ => seq($.identifier, optional($.argumentList)),
+
+    superAccessExpr: $ => prec.left(PREC.ACCESS, seq("super", ".", $.identifier, optional($.argumentList))),
+
+    superSubscriptExpr: $ => prec.left(PREC.ACCESS, seq("super", alias($._open_subscript_bracket, "["), $._expr, "]")),
+
+    qualifiedAccessExpr: $ => prec.left(
+        PREC.ACCESS,
+        seq(
+            field("receiver", $._expr),
+            choice(".", "?."),
+            // allow newline as a possible token because tree-sitter otherwise doesn't handle error recovery correctly.
+            // E.g. this gets parsed as two class properties; `foo = bar.typealias` and `Baz = String`
+            // ```
+            // foo = bar.
+            //
+            // typealias Baz = String
+            // ```
+            // TODO: adopt `reserved` construct after upgrading to 0.25 (see https://github.com/tree-sitter/tree-sitter/pull/3896)
+            choice(
+              seq(
+                $.identifier,
+                optional($.argumentList)
+              ),
+              field("err", "\n")
+            )
+        )
+    ),
+
     functionLiteral: $ => prec(PREC.FUN, seq($.parameterList, "->", $._expr)),
 
-    qualifiedIdentifier: $ => seq(
+    qualifiedIdentifier: $ => prec.left(seq(
       $.identifier,
       repeat(seq(".", $.identifier)),
-    ),
+    )),
 
     typedIdentifier: $ => seq($.identifier, optional($.typeAnnotation)),
 

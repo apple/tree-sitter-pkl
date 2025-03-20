@@ -18,6 +18,6 @@ res1 = (bar: Int) -> bar + 5
                 (qualifiedIdentifier
                   (identifier)))))))
       (binaryExpr
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))
         (intLiteral)))))

@@ -9,11 +9,6 @@
   "<" @punctuation.bracket
   ">" @punctuation.bracket)
 
-; Method calls
-
-(methodCallExpr
-  (identifier) @function.method)
-
 ; Method definitions
 
 (classMethod (methodHeader (identifier)) @function.method)

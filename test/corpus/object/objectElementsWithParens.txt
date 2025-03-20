@@ -21,29 +21,28 @@ res13 {
     (identifier)
     (objectBody
       (objectElement
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (objectElement
-        (methodCallExpr
+        (unqualifiedAccessExpr
           (identifier)
           (argumentList
-            (variableExpr
+            (unqualifiedAccessExpr
               (identifier)))))
       (objectElement
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (objectElement
         (parenthesizedExpr
-          (variableExpr
+          (unqualifiedAccessExpr
             (identifier))))
       (objectElement
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (objectElement
-        (objectLiteral
-          (parenthesizedExpr
-            (variableExpr
-              (identifier)))
+        (amendExpr
+          (unqualifiedAccessExpr
+            (identifier))
           (objectBody
             (objectElement
               (intLiteral))
