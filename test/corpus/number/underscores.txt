@@ -42,7 +42,7 @@ res22 = 0o7_5_5__
     (intLiteral))
   (classProperty
     (identifier)
-    (unaryExpr
+    (unaryMinusExpr
       (intLiteral)))
   (classProperty
     (identifier)
@@ -55,7 +55,7 @@ res22 = 0o7_5_5__
     (intLiteral))
   (classProperty
     (identifier)
-    (unaryExpr
+    (unaryMinusExpr
       (intLiteral)))
   (classProperty
     (identifier)
@@ -68,7 +68,7 @@ res22 = 0o7_5_5__
     (intLiteral))
   (classProperty
     (identifier)
-    (unaryExpr
+    (unaryMinusExpr
       (intLiteral)))
   (classProperty
     (identifier)

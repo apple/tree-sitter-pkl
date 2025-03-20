@@ -41,8 +41,6 @@ const PREC = {
   THROW: -6,
   TRACE: -7,
   READ: -8,
-  READ_OR_NULL: -9,
-  READ_GLOB: -10,
   FUN: -11,
 
   NULLABLE_TYPE: 5,
@@ -399,10 +397,7 @@ module.exports = grammar({
       $.throwExpr,
       $.traceExpr,
       $.importExpr,
-      $.importGlobExpr,
       $.readExpr,
-      $.readOrNullExpr,
-      $.readGlobExpr,
       $.unqualifiedAccessExpr,
       $.slStringLiteral,
       $.mlStringLiteral,
@@ -412,11 +407,19 @@ module.exports = grammar({
       $.superSubscriptExpr,
       $.qualifiedAccessExpr,
       $.subscriptExpr,
-      $.unaryExpr,
-      $.binaryExpr,
-      $.binaryExprRightAssoc,
-      $.isExpr,
-      $.asExpr,
+      $.nonNullExpr,
+      $.unaryMinusExpr,
+      $.logicalNotExpr,
+      $.exponentiationExpr,
+      $.multiplicativeExpr,
+      $.additiveExpr,
+      $.comparisonExpr,
+      $.typeTestExpr,
+      $.equalityExpr,
+      $.logicalAndExpr,
+      $.logicalOrExpr,
+      $.pipeExpr,
+      $.nullCoalesceExpr,
       $.ifExpr,
       $.letExpr,
       $.functionLiteral,
@@ -709,42 +712,31 @@ module.exports = grammar({
 
     subscriptExpr: $ => seq(field("receiver", $._expr), alias($._open_subscript_bracket, "["), $._expr, "]"),
 
-    unaryExpr: $ => choice(
-      prec.left(PREC.NEG, seq($._expr, '!!')),
-      prec.left(PREC.NEG, seq('-', $._expr)),
-      prec.left(PREC.NOT, seq('!', $._expr)),
-    ),
+    unaryMinusExpr: $ => prec.left(PREC.NEG, seq('-', $._expr)),
 
-    binaryExprRightAssoc: $ => choice(...[
-      ['**', PREC.EXP],
-      ['??', PREC.COALESCE]
-    ].map(([operator, precedence]) =>
-      prec.right(precedence, seq($._expr, field('operator', operator), $._expr))
-    )),
+    logicalNotExpr: $ => prec.left(PREC.NOT, seq('!', $._expr)),
 
-    binaryExpr: $ => choice(...[
-      ['*', PREC.MUL],
-      ['/', PREC.MUL],
-      ['~/', PREC.MUL],
-      ['%', PREC.MUL],
-      ['+', PREC.ADD],
-      ['-', PREC.ADD],
-      ['<', PREC.REL],
-      ['<=', PREC.REL],
-      ['>=', PREC.REL],
-      ['>', PREC.REL],
-      ['==', PREC.EQ],
-      ['!=', PREC.EQ],
-      ['&&', PREC.AND],
-      ['||', PREC.OR],
-      ['|>', PREC.PIPE]
-    ].map(([operator, precedence]) =>
-      prec.left(precedence, seq($._expr, field('operator', operator), $._expr))
-    )),
+    nonNullExpr: $ => prec.left(PREC.NON_NULL, seq($._expr, "!!")),
 
-    isExpr: $ => prec(PREC.IS, seq($._expr, "is", $.type)),
+    nullCoalesceExpr: $ => prec.right(PREC.COALESCE, seq($._expr, field('operator', '??'), $._expr)),
 
-    asExpr: $ => prec(PREC.IS, seq($._expr, "as", $.type)),
+    exponentiationExpr: $ => prec.right(PREC.EXP, seq($._expr, field('operator', '**'), $._expr)),
+
+    multiplicativeExpr: $ => prec.left(PREC.MUL, seq($._expr, field('operator', choice("*", "/", "~/", "%")), $._expr)),
+
+    additiveExpr: $ => prec.left(PREC.ADD, seq($._expr, field('operator', choice("+", "-")), $._expr)),
+
+    comparisonExpr: $ => prec.left(PREC.REL, seq($._expr, field('operator', choice("<", "<=", ">=", ">")), $._expr)),
+
+    equalityExpr: $ => prec.left(PREC.EQ, seq($._expr, field('operator', choice("==", "!=")), $._expr)),
+
+    logicalAndExpr: $ => prec.left(PREC.AND, seq($._expr, field('operator', "&&"), $._expr)),
+
+    logicalOrExpr: $ => prec.left(PREC.OR, seq($._expr, field('operator', "||"), $._expr)),
+    
+    pipeExpr: $ => prec.left(PREC.PIPE, seq($._expr, field('operator', "|>"), $._expr)),
+
+    typeTestExpr: $ => prec(PREC.IS, seq($._expr, field("operator", choice("is", "as")), $.type)),
 
     ifExpr: $ => prec(PREC.IF, seq("if", "(", $._expr, ")", $._expr, "else", $._expr)),
 
@@ -754,15 +746,9 @@ module.exports = grammar({
 
     traceExpr: $ => prec(PREC.TRACE, seq("trace", '(', $._expr, ')')),
 
-    readExpr: $ => prec(PREC.READ, seq("read", '(', $._expr, ')')),
+    readExpr: $ => prec(PREC.READ, seq(field("keyword", choice("read", "read?", "read*")), '(', $._expr, ')')),
 
-    readOrNullExpr: $ => prec(PREC.READ_OR_NULL, seq("read?", '(', $._expr, ')')),
-
-    readGlobExpr: $ => prec(PREC.READ_GLOB, seq("read*", '(', $._expr, ')')),
-
-    importExpr: $ => seq("import", seq('(', $.stringConstant, ')')),
-
-    importGlobExpr: $ => seq("import*", seq('(', $.stringConstant, ')')),
+    importExpr: $ => seq(choice("import", "import*"), seq('(', $.stringConstant, ')')),
 
     unqualifiedAccessExpr: $ => seq($.identifier, optional($.argumentList)),
 

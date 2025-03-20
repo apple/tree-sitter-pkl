@@ -9,7 +9,7 @@ res = 1.h + 3.h
 (module
   (classProperty
     (identifier)
-    (binaryExpr
+    (additiveExpr
       (qualifiedAccessExpr
         (intLiteral)
         (identifier))

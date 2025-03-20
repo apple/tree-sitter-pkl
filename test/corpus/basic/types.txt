@@ -104,7 +104,7 @@ res18: (String|Boolean)|(Int) -> Boolean
                 (declaredType
                   (qualifiedIdentifier
                     (identifier))))))
-          (binaryExpr
+          (equalityExpr
             (thisExpr)
             (nullLiteral))))))
   (classProperty
@@ -118,7 +118,7 @@ res18: (String|Boolean)|(Int) -> Boolean
                 (declaredType
                   (qualifiedIdentifier
                     (identifier))))
-              (binaryExpr
+              (equalityExpr
                 (thisExpr)
                 (nullLiteral))))))))
   (classProperty
@@ -134,10 +134,10 @@ res18: (String|Boolean)|(Int) -> Boolean
                     (declaredType
                       (qualifiedIdentifier
                         (identifier))))
-                  (binaryExpr
+                  (equalityExpr
                     (thisExpr)
                     (nullLiteral))))))
-          (unaryExpr
+          (logicalNotExpr
             (unqualifiedAccessExpr
               (identifier)))))))
   (classProperty

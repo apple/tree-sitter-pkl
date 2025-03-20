@@ -18,7 +18,7 @@ foo {
     (identifier)
     (objectBody
       (objectPredicate
-        (binaryExpr
+        (equalityExpr
           (unqualifiedAccessExpr
             (identifier))
           (intLiteral))
@@ -27,7 +27,7 @@ foo {
             (identifier)
             (intLiteral))))
       (objectPredicate
-        (binaryExpr
+        (equalityExpr
           (unqualifiedAccessExpr
             (identifier))
           (intLiteral))

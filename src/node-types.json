@@ -1,26 +1,45 @@
 [
   {
-    "type": "amendExpr",
+    "type": "additiveExpr",
     "named": true,
-    "fields": {},
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -44,19 +63,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -68,15 +91,23 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nonNullExpr",
           "named": true
         },
         {
-          "type": "objectBody",
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
           "named": true
         },
         {
@@ -88,19 +119,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -136,7 +163,178 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "amendExpr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "objectBody",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -174,19 +372,23 @@
       "required": false,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -210,19 +412,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -234,7 +440,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -250,19 +468,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -298,522 +512,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
           "named": true
         },
         {
-          "type": "unqualifiedAccessExpr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "asExpr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "amendExpr",
-          "named": true
-        },
-        {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "qualifiedAccessExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "superAccessExpr",
-          "named": true
-        },
-        {
-          "type": "superSubscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
-          "named": true
-        },
-        {
-          "type": "unqualifiedAccessExpr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "binaryExpr",
-    "named": true,
-    "fields": {
-      "operator": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "!=",
-            "named": false
-          },
-          {
-            "type": "%",
-            "named": false
-          },
-          {
-            "type": "&&",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "+",
-            "named": false
-          },
-          {
-            "type": "-",
-            "named": false
-          },
-          {
-            "type": "/",
-            "named": false
-          },
-          {
-            "type": "<",
-            "named": false
-          },
-          {
-            "type": "<=",
-            "named": false
-          },
-          {
-            "type": "==",
-            "named": false
-          },
-          {
-            "type": ">",
-            "named": false
-          },
-          {
-            "type": ">=",
-            "named": false
-          },
-          {
-            "type": "|>",
-            "named": false
-          },
-          {
-            "type": "||",
-            "named": false
-          },
-          {
-            "type": "~/",
-            "named": false
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "amendExpr",
-          "named": true
-        },
-        {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "qualifiedAccessExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "superAccessExpr",
-          "named": true
-        },
-        {
-          "type": "superSubscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
-          "named": true
-        },
-        {
-          "type": "unqualifiedAccessExpr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "binaryExprRightAssoc",
-    "named": true,
-    "fields": {
-      "operator": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "**",
-            "named": false
-          },
-          {
-            "type": "??",
-            "named": false
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "amendExpr",
-          "named": true
-        },
-        {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "qualifiedAccessExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "superAccessExpr",
-          "named": true
-        },
-        {
-          "type": "superSubscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -870,6 +573,10 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
@@ -878,19 +585,19 @@
           "named": true
         },
         {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
+          "type": "comparisonExpr",
           "named": true
         },
         {
           "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -914,19 +621,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -942,7 +653,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -958,19 +681,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -1006,7 +725,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -1025,6 +748,10 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
@@ -1033,19 +760,19 @@
           "named": true
         },
         {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
+          "type": "comparisonExpr",
           "named": true
         },
         {
           "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -1073,19 +800,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -1101,7 +832,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -1121,19 +864,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -1173,7 +912,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -1223,27 +966,54 @@
     }
   },
   {
-    "type": "constrainedType",
+    "type": "comparisonExpr",
     "named": true,
-    "fields": {},
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -1267,19 +1037,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -1291,7 +1065,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -1307,6 +1093,10 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
@@ -1315,11 +1105,166 @@
           "named": true
         },
         {
-          "type": "readGlobExpr",
+          "type": "slStringLiteral",
           "named": true
         },
         {
-          "type": "readOrNullExpr",
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "constrainedType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
           "named": true
         },
         {
@@ -1359,7 +1304,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -1394,6 +1343,358 @@
     "fields": {}
   },
   {
+    "type": "equalityExpr",
+    "named": true,
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exponentiationExpr",
+    "named": true,
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "**",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "extendsOrAmendsClause",
     "named": true,
     "fields": {},
@@ -1417,19 +1718,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -1453,19 +1758,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -1477,7 +1786,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -1497,19 +1818,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -1545,11 +1862,15 @@
           "named": true
         },
         {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
           "type": "typedIdentifier",
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -1568,19 +1889,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -1604,19 +1929,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -1628,7 +1957,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -1648,19 +1989,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -1696,7 +2033,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -1730,19 +2071,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -1766,19 +2111,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -1790,7 +2139,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -1806,19 +2167,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -1854,7 +2211,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -1918,21 +2279,6 @@
     }
   },
   {
-    "type": "importGlobExpr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "stringConstant",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "interpolationExpr",
     "named": true,
     "fields": {},
@@ -1941,19 +2287,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -1977,19 +2327,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -2001,7 +2355,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -2017,19 +2383,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -2065,154 +2427,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
           "named": true
         },
         {
-          "type": "unqualifiedAccessExpr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "isExpr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "amendExpr",
-          "named": true
-        },
-        {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "qualifiedAccessExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "superAccessExpr",
-          "named": true
-        },
-        {
-          "type": "superSubscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -2231,19 +2450,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -2267,19 +2490,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -2291,7 +2518,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -2307,19 +2546,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -2355,11 +2590,15 @@
           "named": true
         },
         {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
           "type": "typedIdentifier",
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -2373,6 +2612,517 @@
     "type": "lineComment",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "logicalAndExpr",
+    "named": true,
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "&&",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "logicalNotExpr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "logicalOrExpr",
+    "named": true,
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "||",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "methodHeader",
@@ -2533,6 +3283,192 @@
     }
   },
   {
+    "type": "multiplicativeExpr",
+    "named": true,
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "~/",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "newExpr",
     "named": true,
     "fields": {},
@@ -2546,6 +3482,343 @@
         },
         {
           "type": "type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nonNullExpr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nullCoalesceExpr",
+    "named": true,
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "??",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
           "named": true
         }
       ]
@@ -2637,19 +3910,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -2673,19 +3950,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -2697,7 +3978,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -2713,19 +4006,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -2761,7 +4050,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -2780,19 +4073,23 @@
         "required": true,
         "types": [
           {
+            "type": "additiveExpr",
+            "named": true
+          },
+          {
             "type": "amendExpr",
             "named": true
           },
           {
-            "type": "asExpr",
+            "type": "comparisonExpr",
             "named": true
           },
           {
-            "type": "binaryExpr",
+            "type": "equalityExpr",
             "named": true
           },
           {
-            "type": "binaryExprRightAssoc",
+            "type": "exponentiationExpr",
             "named": true
           },
           {
@@ -2816,19 +4113,23 @@
             "named": true
           },
           {
-            "type": "importGlobExpr",
-            "named": true
-          },
-          {
             "type": "intLiteral",
             "named": true
           },
           {
-            "type": "isExpr",
+            "type": "letExpr",
             "named": true
           },
           {
-            "type": "letExpr",
+            "type": "logicalAndExpr",
+            "named": true
+          },
+          {
+            "type": "logicalNotExpr",
+            "named": true
+          },
+          {
+            "type": "logicalOrExpr",
             "named": true
           },
           {
@@ -2840,7 +4141,19 @@
             "named": true
           },
           {
+            "type": "multiplicativeExpr",
+            "named": true
+          },
+          {
             "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nonNullExpr",
+            "named": true
+          },
+          {
+            "type": "nullCoalesceExpr",
             "named": true
           },
           {
@@ -2856,19 +4169,15 @@
             "named": true
           },
           {
+            "type": "pipeExpr",
+            "named": true
+          },
+          {
             "type": "qualifiedAccessExpr",
             "named": true
           },
           {
             "type": "readExpr",
-            "named": true
-          },
-          {
-            "type": "readGlobExpr",
-            "named": true
-          },
-          {
-            "type": "readOrNullExpr",
             "named": true
           },
           {
@@ -2904,7 +4213,11 @@
             "named": true
           },
           {
-            "type": "unaryExpr",
+            "type": "typeTestExpr",
+            "named": true
+          },
+          {
+            "type": "unaryMinusExpr",
             "named": true
           },
           {
@@ -2918,19 +4231,23 @@
         "required": false,
         "types": [
           {
+            "type": "additiveExpr",
+            "named": true
+          },
+          {
             "type": "amendExpr",
             "named": true
           },
           {
-            "type": "asExpr",
+            "type": "comparisonExpr",
             "named": true
           },
           {
-            "type": "binaryExpr",
+            "type": "equalityExpr",
             "named": true
           },
           {
-            "type": "binaryExprRightAssoc",
+            "type": "exponentiationExpr",
             "named": true
           },
           {
@@ -2954,19 +4271,23 @@
             "named": true
           },
           {
-            "type": "importGlobExpr",
-            "named": true
-          },
-          {
             "type": "intLiteral",
             "named": true
           },
           {
-            "type": "isExpr",
+            "type": "letExpr",
             "named": true
           },
           {
-            "type": "letExpr",
+            "type": "logicalAndExpr",
+            "named": true
+          },
+          {
+            "type": "logicalNotExpr",
+            "named": true
+          },
+          {
+            "type": "logicalOrExpr",
             "named": true
           },
           {
@@ -2978,7 +4299,19 @@
             "named": true
           },
           {
+            "type": "multiplicativeExpr",
+            "named": true
+          },
+          {
             "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nonNullExpr",
+            "named": true
+          },
+          {
+            "type": "nullCoalesceExpr",
             "named": true
           },
           {
@@ -2994,19 +4327,15 @@
             "named": true
           },
           {
+            "type": "pipeExpr",
+            "named": true
+          },
+          {
             "type": "qualifiedAccessExpr",
             "named": true
           },
           {
             "type": "readExpr",
-            "named": true
-          },
-          {
-            "type": "readGlobExpr",
-            "named": true
-          },
-          {
-            "type": "readOrNullExpr",
             "named": true
           },
           {
@@ -3042,7 +4371,11 @@
             "named": true
           },
           {
-            "type": "unaryExpr",
+            "type": "typeTestExpr",
+            "named": true
+          },
+          {
+            "type": "unaryMinusExpr",
             "named": true
           },
           {
@@ -3072,19 +4405,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -3108,19 +4445,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -3136,7 +4477,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -3152,19 +4505,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -3200,7 +4549,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -3219,19 +4572,23 @@
         "required": true,
         "types": [
           {
+            "type": "additiveExpr",
+            "named": true
+          },
+          {
             "type": "amendExpr",
             "named": true
           },
           {
-            "type": "asExpr",
+            "type": "comparisonExpr",
             "named": true
           },
           {
-            "type": "binaryExpr",
+            "type": "equalityExpr",
             "named": true
           },
           {
-            "type": "binaryExprRightAssoc",
+            "type": "exponentiationExpr",
             "named": true
           },
           {
@@ -3255,19 +4612,23 @@
             "named": true
           },
           {
-            "type": "importGlobExpr",
-            "named": true
-          },
-          {
             "type": "intLiteral",
             "named": true
           },
           {
-            "type": "isExpr",
+            "type": "letExpr",
             "named": true
           },
           {
-            "type": "letExpr",
+            "type": "logicalAndExpr",
+            "named": true
+          },
+          {
+            "type": "logicalNotExpr",
+            "named": true
+          },
+          {
+            "type": "logicalOrExpr",
             "named": true
           },
           {
@@ -3279,7 +4640,19 @@
             "named": true
           },
           {
+            "type": "multiplicativeExpr",
+            "named": true
+          },
+          {
             "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nonNullExpr",
+            "named": true
+          },
+          {
+            "type": "nullCoalesceExpr",
             "named": true
           },
           {
@@ -3295,19 +4668,15 @@
             "named": true
           },
           {
+            "type": "pipeExpr",
+            "named": true
+          },
+          {
             "type": "qualifiedAccessExpr",
             "named": true
           },
           {
             "type": "readExpr",
-            "named": true
-          },
-          {
-            "type": "readGlobExpr",
-            "named": true
-          },
-          {
-            "type": "readOrNullExpr",
             "named": true
           },
           {
@@ -3343,7 +4712,11 @@
             "named": true
           },
           {
-            "type": "unaryExpr",
+            "type": "typeTestExpr",
+            "named": true
+          },
+          {
+            "type": "unaryMinusExpr",
             "named": true
           },
           {
@@ -3357,19 +4730,23 @@
         "required": false,
         "types": [
           {
+            "type": "additiveExpr",
+            "named": true
+          },
+          {
             "type": "amendExpr",
             "named": true
           },
           {
-            "type": "asExpr",
+            "type": "comparisonExpr",
             "named": true
           },
           {
-            "type": "binaryExpr",
+            "type": "equalityExpr",
             "named": true
           },
           {
-            "type": "binaryExprRightAssoc",
+            "type": "exponentiationExpr",
             "named": true
           },
           {
@@ -3393,19 +4770,23 @@
             "named": true
           },
           {
-            "type": "importGlobExpr",
-            "named": true
-          },
-          {
             "type": "intLiteral",
             "named": true
           },
           {
-            "type": "isExpr",
+            "type": "letExpr",
             "named": true
           },
           {
-            "type": "letExpr",
+            "type": "logicalAndExpr",
+            "named": true
+          },
+          {
+            "type": "logicalNotExpr",
+            "named": true
+          },
+          {
+            "type": "logicalOrExpr",
             "named": true
           },
           {
@@ -3417,7 +4798,19 @@
             "named": true
           },
           {
+            "type": "multiplicativeExpr",
+            "named": true
+          },
+          {
             "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nonNullExpr",
+            "named": true
+          },
+          {
+            "type": "nullCoalesceExpr",
             "named": true
           },
           {
@@ -3433,19 +4826,15 @@
             "named": true
           },
           {
+            "type": "pipeExpr",
+            "named": true
+          },
+          {
             "type": "qualifiedAccessExpr",
             "named": true
           },
           {
             "type": "readExpr",
-            "named": true
-          },
-          {
-            "type": "readGlobExpr",
-            "named": true
-          },
-          {
-            "type": "readOrNullExpr",
             "named": true
           },
           {
@@ -3481,7 +4870,11 @@
             "named": true
           },
           {
-            "type": "unaryExpr",
+            "type": "typeTestExpr",
+            "named": true
+          },
+          {
+            "type": "unaryMinusExpr",
             "named": true
           },
           {
@@ -3511,19 +4904,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -3551,19 +4948,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -3579,7 +4980,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -3599,19 +5012,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -3651,7 +5060,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -3670,19 +5083,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -3706,19 +5123,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -3730,7 +5151,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -3746,19 +5179,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -3794,7 +5223,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -3828,19 +5261,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -3864,19 +5301,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -3888,7 +5329,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -3904,19 +5357,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -3952,7 +5401,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -3978,6 +5431,180 @@
     }
   },
   {
+    "type": "pipeExpr",
+    "named": true,
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "|>",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "qualifiedAccessExpr",
     "named": true,
     "fields": {
@@ -3996,19 +5623,23 @@
         "required": true,
         "types": [
           {
+            "type": "additiveExpr",
+            "named": true
+          },
+          {
             "type": "amendExpr",
             "named": true
           },
           {
-            "type": "asExpr",
+            "type": "comparisonExpr",
             "named": true
           },
           {
-            "type": "binaryExpr",
+            "type": "equalityExpr",
             "named": true
           },
           {
-            "type": "binaryExprRightAssoc",
+            "type": "exponentiationExpr",
             "named": true
           },
           {
@@ -4032,19 +5663,23 @@
             "named": true
           },
           {
-            "type": "importGlobExpr",
-            "named": true
-          },
-          {
             "type": "intLiteral",
             "named": true
           },
           {
-            "type": "isExpr",
+            "type": "letExpr",
             "named": true
           },
           {
-            "type": "letExpr",
+            "type": "logicalAndExpr",
+            "named": true
+          },
+          {
+            "type": "logicalNotExpr",
+            "named": true
+          },
+          {
+            "type": "logicalOrExpr",
             "named": true
           },
           {
@@ -4056,7 +5691,19 @@
             "named": true
           },
           {
+            "type": "multiplicativeExpr",
+            "named": true
+          },
+          {
             "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nonNullExpr",
+            "named": true
+          },
+          {
+            "type": "nullCoalesceExpr",
             "named": true
           },
           {
@@ -4072,19 +5719,15 @@
             "named": true
           },
           {
+            "type": "pipeExpr",
+            "named": true
+          },
+          {
             "type": "qualifiedAccessExpr",
             "named": true
           },
           {
             "type": "readExpr",
-            "named": true
-          },
-          {
-            "type": "readGlobExpr",
-            "named": true
-          },
-          {
-            "type": "readOrNullExpr",
             "named": true
           },
           {
@@ -4120,7 +5763,11 @@
             "named": true
           },
           {
-            "type": "unaryExpr",
+            "type": "typeTestExpr",
+            "named": true
+          },
+          {
+            "type": "unaryMinusExpr",
             "named": true
           },
           {
@@ -4163,25 +5810,48 @@
   {
     "type": "readExpr",
     "named": true,
-    "fields": {},
+    "fields": {
+      "keyword": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "read",
+            "named": false
+          },
+          {
+            "type": "read*",
+            "named": false
+          },
+          {
+            "type": "read?",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -4205,19 +5875,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -4229,7 +5903,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -4245,19 +5931,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -4293,293 +5975,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
           "named": true
         },
         {
-          "type": "unqualifiedAccessExpr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "readGlobExpr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "amendExpr",
-          "named": true
-        },
-        {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "qualifiedAccessExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "superAccessExpr",
-          "named": true
-        },
-        {
-          "type": "superSubscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
-          "named": true
-        },
-        {
-          "type": "unqualifiedAccessExpr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "readOrNullExpr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "amendExpr",
-          "named": true
-        },
-        {
-          "type": "asExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExpr",
-          "named": true
-        },
-        {
-          "type": "binaryExprRightAssoc",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "isExpr",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "qualifiedAccessExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "superAccessExpr",
-          "named": true
-        },
-        {
-          "type": "superSubscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "unaryExpr",
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -4665,19 +6065,23 @@
         "required": true,
         "types": [
           {
+            "type": "additiveExpr",
+            "named": true
+          },
+          {
             "type": "amendExpr",
             "named": true
           },
           {
-            "type": "asExpr",
+            "type": "comparisonExpr",
             "named": true
           },
           {
-            "type": "binaryExpr",
+            "type": "equalityExpr",
             "named": true
           },
           {
-            "type": "binaryExprRightAssoc",
+            "type": "exponentiationExpr",
             "named": true
           },
           {
@@ -4701,19 +6105,23 @@
             "named": true
           },
           {
-            "type": "importGlobExpr",
-            "named": true
-          },
-          {
             "type": "intLiteral",
             "named": true
           },
           {
-            "type": "isExpr",
+            "type": "letExpr",
             "named": true
           },
           {
-            "type": "letExpr",
+            "type": "logicalAndExpr",
+            "named": true
+          },
+          {
+            "type": "logicalNotExpr",
+            "named": true
+          },
+          {
+            "type": "logicalOrExpr",
             "named": true
           },
           {
@@ -4725,7 +6133,19 @@
             "named": true
           },
           {
+            "type": "multiplicativeExpr",
+            "named": true
+          },
+          {
             "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nonNullExpr",
+            "named": true
+          },
+          {
+            "type": "nullCoalesceExpr",
             "named": true
           },
           {
@@ -4741,19 +6161,15 @@
             "named": true
           },
           {
+            "type": "pipeExpr",
+            "named": true
+          },
+          {
             "type": "qualifiedAccessExpr",
             "named": true
           },
           {
             "type": "readExpr",
-            "named": true
-          },
-          {
-            "type": "readGlobExpr",
-            "named": true
-          },
-          {
-            "type": "readOrNullExpr",
             "named": true
           },
           {
@@ -4789,7 +6205,11 @@
             "named": true
           },
           {
-            "type": "unaryExpr",
+            "type": "typeTestExpr",
+            "named": true
+          },
+          {
+            "type": "unaryMinusExpr",
             "named": true
           },
           {
@@ -4804,19 +6224,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -4840,19 +6264,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -4864,7 +6292,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -4880,19 +6320,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -4928,7 +6364,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -4966,19 +6406,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -5002,19 +6446,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -5026,7 +6474,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -5042,19 +6502,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -5090,7 +6546,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -5109,19 +6569,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -5145,19 +6609,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -5169,7 +6637,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -5185,19 +6665,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -5233,7 +6709,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -5252,19 +6732,23 @@
       "required": true,
       "types": [
         {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -5288,19 +6772,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -5312,7 +6800,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -5328,19 +6828,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -5376,7 +6872,11 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -5537,46 +7037,46 @@
     }
   },
   {
-    "type": "typedIdentifier",
+    "type": "typeTestExpr",
     "named": true,
-    "fields": {},
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "as",
+            "named": false
+          },
+          {
+            "type": "is",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "additiveExpr",
           "named": true
         },
-        {
-          "type": "typeAnnotation",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "unaryExpr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
         {
           "type": "amendExpr",
           "named": true
         },
         {
-          "type": "asExpr",
+          "type": "comparisonExpr",
           "named": true
         },
         {
-          "type": "binaryExpr",
+          "type": "equalityExpr",
           "named": true
         },
         {
-          "type": "binaryExprRightAssoc",
+          "type": "exponentiationExpr",
           "named": true
         },
         {
@@ -5600,19 +7100,23 @@
           "named": true
         },
         {
-          "type": "importGlobExpr",
-          "named": true
-        },
-        {
           "type": "intLiteral",
           "named": true
         },
         {
-          "type": "isExpr",
+          "type": "letExpr",
           "named": true
         },
         {
-          "type": "letExpr",
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
           "named": true
         },
         {
@@ -5624,7 +7128,19 @@
           "named": true
         },
         {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
           "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
           "named": true
         },
         {
@@ -5640,19 +7156,15 @@
           "named": true
         },
         {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
           "type": "qualifiedAccessExpr",
           "named": true
         },
         {
           "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "readGlobExpr",
-          "named": true
-        },
-        {
-          "type": "readOrNullExpr",
           "named": true
         },
         {
@@ -5688,7 +7200,197 @@
           "named": true
         },
         {
-          "type": "unaryExpr",
+          "type": "type",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typedIdentifier",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "typeAnnotation",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unaryMinusExpr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteral",
+          "named": true
+        },
+        {
+          "type": "floatLiteral",
+          "named": true
+        },
+        {
+          "type": "functionLiteral",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteral",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteral",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteral",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteral",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteral",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
           "named": true
         },
         {
@@ -5756,19 +7458,23 @@
         "required": true,
         "types": [
           {
+            "type": "additiveExpr",
+            "named": true
+          },
+          {
             "type": "amendExpr",
             "named": true
           },
           {
-            "type": "asExpr",
+            "type": "comparisonExpr",
             "named": true
           },
           {
-            "type": "binaryExpr",
+            "type": "equalityExpr",
             "named": true
           },
           {
-            "type": "binaryExprRightAssoc",
+            "type": "exponentiationExpr",
             "named": true
           },
           {
@@ -5792,19 +7498,23 @@
             "named": true
           },
           {
-            "type": "importGlobExpr",
-            "named": true
-          },
-          {
             "type": "intLiteral",
             "named": true
           },
           {
-            "type": "isExpr",
+            "type": "letExpr",
             "named": true
           },
           {
-            "type": "letExpr",
+            "type": "logicalAndExpr",
+            "named": true
+          },
+          {
+            "type": "logicalNotExpr",
+            "named": true
+          },
+          {
+            "type": "logicalOrExpr",
             "named": true
           },
           {
@@ -5816,7 +7526,19 @@
             "named": true
           },
           {
+            "type": "multiplicativeExpr",
+            "named": true
+          },
+          {
             "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nonNullExpr",
+            "named": true
+          },
+          {
+            "type": "nullCoalesceExpr",
             "named": true
           },
           {
@@ -5832,19 +7554,15 @@
             "named": true
           },
           {
+            "type": "pipeExpr",
+            "named": true
+          },
+          {
             "type": "qualifiedAccessExpr",
             "named": true
           },
           {
             "type": "readExpr",
-            "named": true
-          },
-          {
-            "type": "readGlobExpr",
-            "named": true
-          },
-          {
-            "type": "readOrNullExpr",
             "named": true
           },
           {
@@ -5880,7 +7598,11 @@
             "named": true
           },
           {
-            "type": "unaryExpr",
+            "type": "typeTestExpr",
+            "named": true
+          },
+          {
+            "type": "unaryMinusExpr",
             "named": true
           },
           {

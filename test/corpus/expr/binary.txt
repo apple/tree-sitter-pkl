@@ -30,80 +30,80 @@ exprs {
     (identifier)
     (objectBody
       (objectElement
-        (asExpr
+        (typeTestExpr
           (intLiteral)
           (type
             (declaredType
               (qualifiedIdentifier
                 (identifier))))))
       (objectElement
-        (isExpr
+        (typeTestExpr
           (intLiteral)
           (type
             (declaredType
               (qualifiedIdentifier
                 (identifier))))))
       (objectElement
-        (binaryExpr
+        (equalityExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (equalityExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (logicalAndExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (logicalOrExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (pipeExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (comparisonExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (comparisonExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (comparisonExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (comparisonExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (multiplicativeExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (multiplicativeExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (multiplicativeExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExprRightAssoc
+        (exponentiationExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (multiplicativeExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (additiveExpr
           (intLiteral)
           (intLiteral)))
       (objectElement
-        (binaryExpr
+        (additiveExpr
           (intLiteral)
           (intLiteral))))))

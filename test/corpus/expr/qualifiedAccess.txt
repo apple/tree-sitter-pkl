@@ -88,7 +88,7 @@ res11 = "foo" + List("bar").join("")
       (identifier)))
   (classProperty
     (identifier)
-    (binaryExpr
+    (additiveExpr
       (slStringLiteral
         (slStringLiteralPart))
       (qualifiedAccessExpr

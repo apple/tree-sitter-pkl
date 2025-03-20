@@ -43,7 +43,7 @@ foo {
             (unqualifiedAccessExpr
               (identifier)))))
       (whenGenerator
-        (binaryExpr
+        (equalityExpr
           (unqualifiedAccessExpr
             (identifier))
           (nullLiteral))

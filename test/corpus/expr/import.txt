@@ -15,6 +15,6 @@ res2 = import*("foo.txt")
         (slStringLiteralPart))))
   (classProperty
     (identifier)
-    (importGlobExpr
+    (importExpr
       (stringConstant
         (slStringLiteralPart)))))
