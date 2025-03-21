@@ -8,3 +8,6 @@ target/
 bindings/rust/
 build/
 *.wasm
+gradle/
+buildSrc/
+*.kts

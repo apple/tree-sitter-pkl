@@ -11,8 +11,8 @@ res = 1.h + 3.h
     (identifier)
     (additiveExpr
       (qualifiedAccessExpr
-        (intLiteral)
+        (intLiteralExpr)
         (identifier))
       (qualifiedAccessExpr
-        (intLiteral)
+        (intLiteralExpr)
         (identifier)))))

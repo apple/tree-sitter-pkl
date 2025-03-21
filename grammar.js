@@ -1,3 +1,5 @@
+// noinspection JSUnusedLocalSymbols
+
 /*
  * Copyright © 2024-2025 Apple Inc. and the Pkl project authors. All rights reserved.
  *
@@ -43,14 +45,17 @@ const PREC = {
   READ: -8,
   FUN: -11,
 
-  NULLABLE_TYPE: 5,
-  FUN_TYPE: -5,
-  UNION_DEFAULT_TYPE: -6,
-  UNION_TYPE: -7,
+  DECLARED_TYPE: 30,
+  CONSTRAINED_TYPE: 30,
+  NULLABLE_TYPE: 29,
+  UNION_DEFAULT_TYPE: 29,
+  UNION_TYPE: 28,
+  FUN_TYPE: 27,
 
   VAR_OBJ_LITERAL: 2,
   AMEND_EXPR: 1,
-  OBJ_MEMBER: -1
+  OBJ_BODY_PARAMETERS: -1,
+  OBJ_MEMBER: -2,
 };
 
 const decimalLiteral = seq(/\d/, /[\d_]*/);
@@ -60,6 +65,7 @@ module.exports = grammar({
 
   reserved: {
     global: $ => [
+      '_',
       'abstract',
       'amends',
       'as',
@@ -143,8 +149,7 @@ module.exports = grammar({
   word: $ => $.identifier,
 
   conflicts: $ => [
-    [$.unqualifiedAccessExpr, $.typedIdentifier],
-    [$.declaredType]
+    [$.typedIdentifier, $.unqualifiedAccessExpr],
   ],
 
   rules: {
@@ -230,7 +235,7 @@ module.exports = grammar({
       $.identifier,
       optional($.typeParameterList),
       "=",
-      $.type
+      $._type
     ),
 
     classProperty: $ => seq(
@@ -284,7 +289,7 @@ module.exports = grammar({
       $.objectMethod,
       $.objectEntry,
       $.objectElement,
-      $.objectPredicate,
+      $.memberPredicate,
       $.forGenerator,
       $.whenGenerator,
       $.objectSpread,
@@ -317,7 +322,7 @@ module.exports = grammar({
 
     objectElement: $ => $._expr,
 
-    objectPredicate: $ => seq(
+    memberPredicate: $ => seq(
       "[[",
       field("conditionExpr", $._expr),
       "]]",
@@ -330,10 +335,10 @@ module.exports = grammar({
     forGenerator: $ => seq(
       "for",
       "(",
-      $.typedIdentifier,
+      $._parameter,
       optional(seq(
         ",",
-        $.typedIdentifier
+        $._parameter
       )),
       "in",
       $._expr,
@@ -364,13 +369,13 @@ module.exports = grammar({
     ),
 
     objectBodyParameters: $ => seq(
-      commaSep1($.typedIdentifier),
+      commaSep1($._parameter),
       "->"
     ),
 
-    typeAnnotation: $ => seq(":", $.type),
+    typeAnnotation: $ => seq(":", $._type),
 
-    type: $ => choice(
+    _type: $ => choice(
       alias("unknown", $.unknownType),
       alias("nothing", $.nothingType),
       alias("module", $.moduleType),
@@ -380,29 +385,37 @@ module.exports = grammar({
       $.nullableType,
       $.constrainedType,
       $.unionType,
-      $.unionDefaultType,
+      $.defaultUnionType,
       $.functionLiteralType
     ),
 
     stringLiteralType: $ => $.stringConstant,
 
-    declaredType: $ => seq($.qualifiedIdentifier, optional($.typeArgumentList)),
+    declaredType: $ => prec.right(seq($.qualifiedIdentifier, optional($.typeArgumentList))),
 
-    parenthesizedType: $ => seq("(", $.type, ")"),
+    parenthesizedType: $ => seq("(", $._type, ")"),
 
-    nullableType: $ => prec(PREC.NULLABLE_TYPE, seq($.type, "?")),
+    nullableType: $ => prec(PREC.NULLABLE_TYPE, seq($._type, "?")),
 
-    constrainedType: $ => seq($.type, "(", commaSep1($._expr), ")"),
+    constrainedType: $ => prec.right(
+      PREC.CONSTRAINED_TYPE,
+      seq(
+        $._type,
+        alias($._open_argument_paren, '('),
+        commaSep1($._expr),
+        ")"
+      )
+    ),
 
-    unionType: $ => prec.left(PREC.UNION_TYPE, seq($.type, "|", $.type)),
+    unionType: $ => prec.left(PREC.UNION_TYPE, seq($._type, "|", $._type)),
 
-    unionDefaultType: $ => prec(PREC.UNION_DEFAULT_TYPE, seq("*", $.type)),
+    defaultUnionType: $ => prec.left(PREC.UNION_DEFAULT_TYPE, seq("*", $._type)),
 
-    functionLiteralType: $ => prec(PREC.FUN_TYPE, seq("(", commaSep($.type), ")", "->", $.type)),
+    functionLiteralType: $ => prec(PREC.FUN_TYPE, seq("(", commaSep($._type), ")", "->", $._type)),
 
     typeArgumentList: $ => seq(
       "<",
-      commaSep1($.type),
+      commaSep1($._type),
       ">"
     ),
 
@@ -419,9 +432,15 @@ module.exports = grammar({
 
     parameterList: $ => seq(
       '(',
-      commaSep($.typedIdentifier),
+      commaSep($._parameter),
       ')'
     ),
+
+    _parameter: $ => choice($.typedIdentifier, $.blankIdentifier),
+
+    typedIdentifier: $ => seq($.identifier, optional($.typeAnnotation)),
+
+    blankIdentifier: $ => "_",
 
     argumentList: $ => seq(
       alias($._open_argument_paren, '('),
@@ -443,18 +462,18 @@ module.exports = grammar({
       $.thisExpr,
       $.outerExpr,
       $.moduleExpr,
-      $.nullLiteral,
-      $.trueLiteral,
-      $.falseLiteral,
-      $.intLiteral,
-      $.floatLiteral,
+      $.nullLiteralExpr,
+      $.trueLiteralExpr,
+      $.falseLiteralExpr,
+      $.intLiteralExpr,
+      $.floatLiteralExpr,
       $.throwExpr,
       $.traceExpr,
       $.importExpr,
       $.readExpr,
       $.unqualifiedAccessExpr,
-      $.slStringLiteral,
-      $.mlStringLiteral,
+      $.slStringLiteralExpr,
+      $.mlStringLiteralExpr,
       $.newExpr,
       $.amendExpr,
       $.superAccessExpr,
@@ -476,7 +495,7 @@ module.exports = grammar({
       $.nullCoalesceExpr,
       $.ifExpr,
       $.letExpr,
-      $.functionLiteral,
+      $.functionLiteralExpr,
       $.parenthesizedExpr,
     ),
 
@@ -488,13 +507,13 @@ module.exports = grammar({
 
     moduleExpr: $ => "module",
 
-    nullLiteral: $ => "null",
+    nullLiteralExpr: $ => "null",
 
-    trueLiteral: $ => "true",
+    trueLiteralExpr: $ => "true",
 
-    falseLiteral: $ => "false",
+    falseLiteralExpr: $ => "false",
 
-    intLiteral: $ => {
+    intLiteralExpr: $ => {
       return token(choice(
         decimalLiteral,
         seq('0x', /[\da-fA-F]/, /[\da-fA-F_]*/),
@@ -503,7 +522,7 @@ module.exports = grammar({
       ))
     },
 
-    floatLiteral: $ => {
+    floatLiteralExpr: $ => {
       const exponent = seq(choice('e', 'E'), optional(choice('+', '-')), decimalLiteral)
       return token(choice(
         seq(optional(decimalLiteral), '.', decimalLiteral, optional(exponent)),
@@ -530,13 +549,13 @@ module.exports = grammar({
       )
     ),
 
-    slStringLiteral: $ => choice(
+    slStringLiteralExpr: $ => choice(
       seq(
         '"',
         repeat(choice(
           $.slStringLiteralPart,
           $.escapeSequence,
-          $.interpolationExpr,
+          $.stringInterpolation,
         )),
         '"'
       ),
@@ -545,7 +564,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.slStringLiteralPart1, $.slStringLiteralPart),
           alias($.escapeSequence1, $.escapeSequence),
-          alias($.interpolationExpr1, $.interpolationExpr)
+          alias($.stringInterpolation1, $.stringInterpolation)
         )),
         '"#'
       ),
@@ -554,7 +573,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.slStringLiteralPart2, $.slStringLiteralPart),
           alias($.escapeSequence2, $.escapeSequence),
-          alias($.interpolationExpr2, $.interpolationExpr)
+          alias($.stringInterpolation2, $.stringInterpolation)
         )),
         '"##'
       ),
@@ -563,7 +582,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.slStringLiteralPart3, $.slStringLiteralPart),
           alias($.escapeSequence3, $.escapeSequence),
-          alias($.interpolationExpr3, $.interpolationExpr)
+          alias($.stringInterpolation3, $.stringInterpolation)
         )),
         '"###'
       ),
@@ -572,7 +591,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.slStringLiteralPart4, $.slStringLiteralPart),
           alias($.escapeSequence4, $.escapeSequence),
-          alias($.interpolationExpr4, $.interpolationExpr)
+          alias($.stringInterpolation4, $.stringInterpolation)
         )),
         '"####'
       ),
@@ -581,7 +600,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.slStringLiteralPart5, $.slStringLiteralPart),
           alias($.escapeSequence5, $.escapeSequence),
-          alias($.interpolationExpr5, $.interpolationExpr)
+          alias($.stringInterpolation5, $.stringInterpolation)
         )),
         '"#####'
       ),
@@ -590,7 +609,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.slStringLiteralPart6, $.slStringLiteralPart),
           alias($.escapeSequence6, $.escapeSequence),
-          alias($.interpolationExpr6, $.interpolationExpr)
+          alias($.stringInterpolation6, $.stringInterpolation)
         )),
         '"######'
       ),
@@ -610,13 +629,13 @@ module.exports = grammar({
 
     slStringLiteralPart6: $ => $._sl6_string_chars,
 
-    mlStringLiteral: $ => choice(
+    mlStringLiteralExpr: $ => choice(
       seq(
         '"""',
         repeat(choice(
           $.mlStringLiteralPart,
           $.escapeSequence,
-          $.interpolationExpr
+          $.stringInterpolation
         )),
         '"""'
       ),
@@ -625,7 +644,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart1, $.mlStringLiteralPart),
           alias($.escapeSequence1, $.escapeSequence),
-          alias($.interpolationExpr1, $.interpolationExpr)
+          alias($.stringInterpolation1, $.stringInterpolation)
         )),
         '"""#'
       ),
@@ -634,7 +653,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart2, $.mlStringLiteralPart),
           alias($.escapeSequence2, $.escapeSequence),
-          alias($.interpolationExpr2, $.interpolationExpr)
+          alias($.stringInterpolation2, $.stringInterpolation)
         )),
         '"""##'
       ),
@@ -643,7 +662,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart3, $.mlStringLiteralPart),
           alias($.escapeSequence3, $.escapeSequence),
-          alias($.interpolationExpr3, $.interpolationExpr)
+          alias($.stringInterpolation3, $.stringInterpolation)
         )),
         '"""###'
       ),
@@ -652,7 +671,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart4, $.mlStringLiteralPart),
           alias($.escapeSequence4, $.escapeSequence),
-          alias($.interpolationExpr4, $.interpolationExpr)
+          alias($.stringInterpolation4, $.stringInterpolation)
         )),
         '"""####'
       ),
@@ -661,7 +680,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart5, $.mlStringLiteralPart),
           alias($.escapeSequence5, $.escapeSequence),
-          alias($.interpolationExpr5, $.interpolationExpr)
+          alias($.stringInterpolation5, $.stringInterpolation)
         )),
         '"""#####'
       ),
@@ -670,7 +689,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart6, $.mlStringLiteralPart),
           alias($.escapeSequence6, $.escapeSequence),
-          alias($.interpolationExpr6, $.interpolationExpr)
+          alias($.stringInterpolation6, $.stringInterpolation)
         )),
         '"""######'
       ),
@@ -694,7 +713,7 @@ module.exports = grammar({
       '\\',
       choice(
         /[tnr\\"]/,
-        /u\{[0-9a-fA-F]+\}/
+        /u\{[0-9a-fA-F]+}/
       )
     )),
 
@@ -702,7 +721,7 @@ module.exports = grammar({
       '\\#',
       choice(
         /[tnr\\"]/,
-        /u\{[0-9a-fA-F]+\}/
+        /u\{[0-9a-fA-F]+}/
       )
     )),
 
@@ -710,7 +729,7 @@ module.exports = grammar({
       '\\##',
       choice(
         /[tnr\\"]/,
-        /u\{[0-9a-fA-F]+\}/
+        /u\{[0-9a-fA-F]+}/
       )
     )),
 
@@ -718,7 +737,7 @@ module.exports = grammar({
       '\\###',
       choice(
         /[tnr\\"]/,
-        /u\{[0-9a-fA-F]+\}/
+        /u\{[0-9a-fA-F]+}/
       )
     )),
 
@@ -726,7 +745,7 @@ module.exports = grammar({
       '\\####',
       choice(
         /[tnr\\"]/,
-        /u\{[0-9a-fA-F]+\}/
+        /u\{[0-9a-fA-F]+}/
       )
     )),
 
@@ -734,7 +753,7 @@ module.exports = grammar({
       '\\#####',
       choice(
         /[tnr\\"]/,
-        /u\{[0-9a-fA-F]+\}/
+        /u\{[0-9a-fA-F]+}/
       )
     )),
 
@@ -742,29 +761,29 @@ module.exports = grammar({
       '\\######',
       choice(
         /[tnr\\"]/,
-        /u\{[0-9a-fA-F]+\}/
+        /u\{[0-9a-fA-F]+}/
       )
     )),
 
-    interpolationExpr: $ => seq(token.immediate("\\("), $._expr, ")"),
+    stringInterpolation: $ => seq(token.immediate("\\("), $._expr, ")"),
 
-    interpolationExpr1: $ => seq(token.immediate("\\#("), $._expr, ")"),
+    stringInterpolation1: $ => seq(token.immediate("\\#("), $._expr, ")"),
 
-    interpolationExpr2: $ => seq(token.immediate("\\##("), $._expr, ")"),
+    stringInterpolation2: $ => seq(token.immediate("\\##("), $._expr, ")"),
 
-    interpolationExpr3: $ => seq(token.immediate("\\###("), $._expr, ")"),
+    stringInterpolation3: $ => seq(token.immediate("\\###("), $._expr, ")"),
 
-    interpolationExpr4: $ => seq(token.immediate("\\####("), $._expr, ")"),
+    stringInterpolation4: $ => seq(token.immediate("\\####("), $._expr, ")"),
 
-    interpolationExpr5: $ => seq(token.immediate("\\#####("), $._expr, ")"),
+    stringInterpolation5: $ => seq(token.immediate("\\#####("), $._expr, ")"),
 
-    interpolationExpr6: $ => seq(token.immediate("\\######("), $._expr, ")"),
+    stringInterpolation6: $ => seq(token.immediate("\\######("), $._expr, ")"),
 
-    newExpr: $ => seq("new", optional($.type), $.objectBody),
+    newExpr: $ => seq("new", optional($._type), $.objectBody),
 
-    amendExpr: $ => prec(PREC.AMEND_EXPR, seq(choice($.newExpr, $.amendExpr, seq('(', $._expr, ')')), $.objectBody)),
+    amendExpr: $ => prec(PREC.AMEND_EXPR, seq(field("parent", choice($.newExpr, $.amendExpr, $.parenthesizedExpr)), $.objectBody)),
 
-    subscriptExpr: $ => seq(field("receiver", $._expr), alias($._open_subscript_bracket, "["), $._expr, "]"),
+    subscriptExpr: $ => prec.left(PREC.ACCESS, seq(field("receiver", $._expr), alias($._open_subscript_bracket, "["), $._expr, "]")),
 
     unaryMinusExpr: $ => prec.left(PREC.NEG, seq('-', $._expr)),
 
@@ -778,7 +797,7 @@ module.exports = grammar({
 
     multiplicativeExpr: $ => prec.left(PREC.MUL, seq($._expr, field('operator', choice("*", "/", "~/", "%")), $._expr)),
 
-    additiveExpr: $ => prec.left(PREC.ADD, seq($._expr, field('operator', choice("+", $._binary_minus)), $._expr)),
+    additiveExpr: $ => prec.left(PREC.ADD, seq($._expr, field('operator', choice("+", alias($._binary_minus, "-"))), $._expr)),
 
     comparisonExpr: $ => prec.left(PREC.REL, seq($._expr, field('operator', choice("<", "<=", ">=", ">")), $._expr)),
 
@@ -790,19 +809,19 @@ module.exports = grammar({
     
     pipeExpr: $ => prec.left(PREC.PIPE, seq($._expr, field('operator', "|>"), $._expr)),
 
-    typeTestExpr: $ => prec(PREC.IS, seq($._expr, field("operator", choice("is", "as")), $.type)),
+    typeTestExpr: $ => prec(PREC.IS, seq($._expr, field("operator", choice("is", "as")), $._type)),
 
     ifExpr: $ => prec(PREC.IF, seq("if", "(", $._expr, ")", $._expr, "else", $._expr)),
 
-    letExpr: $ => prec(PREC.LET, seq("let", "(", $.typedIdentifier, "=", $._expr, ")", $._expr)),
+    letExpr: $ => prec(PREC.LET, seq("let", "(", $._parameter, "=", $._expr, ")", $._expr)),
 
     throwExpr: $ => prec(PREC.THROW, seq("throw", '(', $._expr, ')')),
 
     traceExpr: $ => prec(PREC.TRACE, seq("trace", '(', $._expr, ')')),
 
-    readExpr: $ => prec(PREC.READ, seq(field("keyword", choice("read", "read?", "read*")), '(', $._expr, ')')),
+    readExpr: $ => prec(PREC.READ, seq(field("variant", choice("read", "read?", "read*")), '(', $._expr, ')')),
 
-    importExpr: $ => seq(choice("import", "import*"), seq('(', $.stringConstant, ')')),
+    importExpr: $ => seq(field("variant", choice("import", "import*")), seq('(', $.stringConstant, ')')),
 
     unqualifiedAccessExpr: $ => seq($.identifier, optional($.argumentList)),
 
@@ -822,14 +841,12 @@ module.exports = grammar({
       )
     ),
 
-    functionLiteral: $ => prec(PREC.FUN, seq($.parameterList, "->", $._expr)),
+    functionLiteralExpr: $ => prec(PREC.FUN, seq($.parameterList, "->", $._expr)),
 
     qualifiedIdentifier: $ => prec.left(seq(
       $.identifier,
       repeat(seq(".", $.identifier)),
     )),
-
-    typedIdentifier: $ => seq($.identifier, optional($.typeAnnotation)),
 
     // TODO: adapt to pkl
     identifier: $ => {

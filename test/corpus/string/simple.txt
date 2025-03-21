@@ -9,5 +9,5 @@ str = "Hello there"
 (module
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart))))

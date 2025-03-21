@@ -1,0 +1,65 @@
+===
+objectElementsWithTypeParams
+===
+
+foo {
+  baz as List<Int>
+  bar
+	foo is List<String>|List<Int>
+  bar is List<String|Int>
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (typeTestExpr
+          (unqualifiedAccessExpr
+            (identifier))
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (declaredType
+                (qualifiedIdentifier
+                  (identifier)))))))
+      (objectElement
+        (unqualifiedAccessExpr
+          (identifier)))
+      (objectElement
+        (typeTestExpr
+          (unqualifiedAccessExpr
+            (identifier))
+          (unionType
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))
+              (typeArgumentList
+                (declaredType
+                  (qualifiedIdentifier
+                    (identifier)))))
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))
+              (typeArgumentList
+                (declaredType
+                  (qualifiedIdentifier
+                    (identifier))))))))
+      (objectElement
+        (typeTestExpr
+          (unqualifiedAccessExpr
+            (identifier))
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (unionType
+                (declaredType
+                  (qualifiedIdentifier
+                    (identifier)))
+                (declaredType
+                  (qualifiedIdentifier
+                    (identifier)))))))))))

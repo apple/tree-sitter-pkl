@@ -1,0 +1,19 @@
+===
+typeTest
+===
+foo = bar is Int(this < 0)
+---
+
+(module
+  (classProperty
+    (identifier)
+    (typeTestExpr
+      (unqualifiedAccessExpr
+        (identifier))
+      (constrainedType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))
+        (comparisonExpr
+          (thisExpr)
+          (intLiteralExpr))))))

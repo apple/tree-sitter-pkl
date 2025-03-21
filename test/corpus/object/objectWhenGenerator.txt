@@ -35,7 +35,7 @@ res4 {
           (identifier))
         (objectBody
           (objectElement
-            (intLiteral))))))
+            (intLiteralExpr))))))
   (classProperty
     (identifier)
     (objectBody
@@ -44,10 +44,10 @@ res4 {
           (identifier))
         (objectBody
           (objectElement
-            (intLiteral)))
+            (intLiteralExpr)))
         (objectBody
           (objectElement
-            (intLiteral))))))
+            (intLiteralExpr))))))
   (classProperty
     (identifier)
     (objectBody
@@ -56,7 +56,7 @@ res4 {
           (identifier))
         (objectBody
           (objectElement
-            (intLiteral))))))
+            (intLiteralExpr))))))
   (classProperty
     (identifier)
     (objectBody
@@ -65,7 +65,7 @@ res4 {
           (identifier))
         (objectBody
           (objectElement
-            (intLiteral)))
+            (intLiteralExpr)))
         (objectBody
           (objectElement
-            (intLiteral)))))))
+            (intLiteralExpr)))))))

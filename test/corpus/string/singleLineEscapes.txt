@@ -20,7 +20,7 @@ res7 = ######"bar \#####t \######t baz"######
 (module
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
       (escapeSequence)
       (slStringLiteralPart)
@@ -28,37 +28,37 @@ res7 = ######"bar \#####t \######t baz"######
       (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
       (escapeSequence)
       (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
       (escapeSequence)
       (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
       (escapeSequence)
       (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
       (escapeSequence)
       (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
       (escapeSequence)
       (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
       (escapeSequence)
       (slStringLiteralPart))))
