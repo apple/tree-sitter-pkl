@@ -18,8 +18,8 @@ foo {
     (identifier)
     (objectBody
       (objectPredicate
-        (binaryExpr
-          (variableExpr
+        (equalityExpr
+          (unqualifiedAccessExpr
             (identifier))
           (intLiteral))
         (objectBody
@@ -27,15 +27,15 @@ foo {
             (identifier)
             (intLiteral))))
       (objectPredicate
-        (binaryExpr
-          (variableExpr
+        (equalityExpr
+          (unqualifiedAccessExpr
             (identifier))
           (intLiteral))
         (intLiteral))
       (objectPredicate
         (subscriptExpr
-          (variableExpr
+          (unqualifiedAccessExpr
             (identifier))
-          (variableExpr
+          (unqualifiedAccessExpr
             (identifier)))
         (trueLiteral)))))

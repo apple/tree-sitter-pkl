@@ -17,7 +17,7 @@ res1 = (bar: Int) -> bar + 5
               (declaredType
                 (qualifiedIdentifier
                   (identifier)))))))
-      (binaryExpr
-        (variableExpr
+      (additiveExpr
+        (unqualifiedAccessExpr
           (identifier))
         (intLiteral)))))

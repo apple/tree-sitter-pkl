@@ -25,26 +25,26 @@ foo {
       (forGenerator
         (typedIdentifier
           (identifier))
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))
         (objectBody
           (objectElement
-            (variableExpr
+            (unqualifiedAccessExpr
               (identifier)))))
       (forGenerator
         (typedIdentifier
           (identifier))
         (typedIdentifier
           (identifier))
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))
         (objectBody
           (objectElement
-            (variableExpr
+            (unqualifiedAccessExpr
               (identifier)))))
       (whenGenerator
-        (binaryExpr
-          (variableExpr
+        (equalityExpr
+          (unqualifiedAccessExpr
             (identifier))
           (nullLiteral))
         (objectBody

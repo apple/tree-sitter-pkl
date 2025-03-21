@@ -24,8 +24,8 @@ res3 = new Dynamic {} {} {}
       (objectBody)))
   (classProperty
     (identifier)
-    (objectLiteral
-      (objectLiteral
+    (amendExpr
+      (amendExpr
         (newExpr
           (type
             (declaredType

@@ -22,30 +22,30 @@ res {
     (identifier)
     (objectBody
       (objectSpread
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (objectSpread
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (objectSpread
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (objectSpread
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier)))
       (forGenerator
         (typedIdentifier
           (identifier))
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))
         (objectBody
           (objectSpread
-            (variableExpr
+            (unqualifiedAccessExpr
               (identifier)))))
       (whenGenerator
-        (variableExpr
+        (unqualifiedAccessExpr
           (identifier))
         (objectBody
           (objectSpread
-            (variableExpr
+            (unqualifiedAccessExpr
               (identifier))))))))
