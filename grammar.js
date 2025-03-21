@@ -58,6 +58,58 @@ const decimalLiteral = seq(/\d/, /[\d_]*/);
 module.exports = grammar({
   name: 'pkl',
 
+  reserved: {
+    global: $ => [
+      'abstract',
+      'amends',
+      'as',
+      'class',
+      'const',
+      'else',
+      'extends',
+      'external',
+      'false',
+      'fixed',
+      'for',
+      'function',
+      'hidden',
+      'if',
+      'import',
+      'import*',
+      'in',
+      'is',
+      'let',
+      'local',
+      'module',
+      'new',
+      'nothing',
+      'null',
+      'open',
+      'out',
+      'outer',
+      'read',
+      'read*',
+      'read?',
+      'super',
+      'this',
+      'throw',
+      'trace',
+      'true',
+      'typealias',
+      'unknown',
+      'when',
+
+      // TODO support reserved keywords
+      // 'protected',
+      // 'override',
+      // 'record',
+      // 'delete',
+      // 'case',
+      // 'switch',
+      // 'vararg',
+    ]
+  },
+
   externals: $ => [
     $._sl_string_chars,
     $._sl1_string_chars,
@@ -759,26 +811,15 @@ module.exports = grammar({
     superSubscriptExpr: $ => prec.left(PREC.ACCESS, seq("super", alias($._open_subscript_bracket, "["), $._expr, "]")),
 
     qualifiedAccessExpr: $ => prec.left(
-        PREC.ACCESS,
+      PREC.ACCESS,
+      seq(
+        field("receiver", $._expr),
+        choice(".", "?."),
         seq(
-            field("receiver", $._expr),
-            choice(".", "?."),
-            // allow newline as a possible token because tree-sitter otherwise doesn't handle error recovery correctly.
-            // E.g. this gets parsed as two class properties; `foo = bar.typealias` and `Baz = String`
-            // ```
-            // foo = bar.
-            //
-            // typealias Baz = String
-            // ```
-            // TODO: adopt `reserved` construct after upgrading to 0.25 (see https://github.com/tree-sitter/tree-sitter/pull/3896)
-            choice(
-              seq(
-                $.identifier,
-                optional($.argumentList)
-              ),
-              field("err", "\n")
-            )
-        )
+          $.identifier,
+          optional($.argumentList)
+        ),
+      )
     ),
 
     functionLiteral: $ => prec(PREC.FUN, seq($.parameterList, "->", $._expr)),
@@ -813,7 +854,7 @@ module.exports = grammar({
       '/*',
       /[^*]*\*+([^/*][^*]*\*+)*/,
       '/'
-    ))
+    )),
   }
 });
 

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "pkl",
+      "camelcase": "Pkl",
+      "title": "Pkl",
+      "scope": "source.pkl",
+      "file-types": [
+        "pcf",
+        "pkl"
+      ],
+      "injection-regex": "^pkl$",
+      "class-name": "TreeSitterPkl"
+    }
+  ],
+  "metadata": {
+    "version": "0.17.0",
+    "license": "Apache-2.0",
+    "description": "Parser for Pkl programming language",
+    "authors": [
+      {
+        "name": "The Pkl Authors",
+        "email": "pkl-oss@group.apple.com",
+        "url": "https://pkl-lang.org/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/apple/tree-sitter-pkl"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}

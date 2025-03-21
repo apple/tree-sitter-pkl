@@ -3187,6 +3187,7 @@
   {
     "type": "module",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -5604,16 +5605,6 @@
     "type": "qualifiedAccessExpr",
     "named": true,
     "fields": {
-      "err": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "\n",
-            "named": false
-          }
-        ]
-      },
       "receiver": {
         "multiple": false,
         "required": true,
@@ -5775,7 +5766,7 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "argumentList",
@@ -7630,10 +7621,6 @@
     }
   },
   {
-    "type": "\n",
-    "named": false
-  },
-  {
     "type": "!",
     "named": false
   },
@@ -7915,7 +7902,8 @@
   },
   {
     "type": "blockComment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "class",
