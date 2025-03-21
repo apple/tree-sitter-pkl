@@ -17,7 +17,7 @@ import "foo.pkl"
         (objectProperty
           (identifier)
           (slStringLiteral
-            (slStringLiteralPart)))))
-    (identifier)
-    (identifier)
-    (identifier)))
+            (slStringLiteralPart))))))
+    (importClause
+      (stringConstant
+        (slStringLiteralPart))))
