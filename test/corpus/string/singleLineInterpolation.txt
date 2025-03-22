@@ -27,68 +27,68 @@ res10 = ######"Hi there \######(bob)"######
 (module
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
-      (interpolationExpr
-        (slStringLiteral
+      (stringInterpolation
+        (slStringLiteralExpr
           (slStringLiteralPart)
-          (interpolationExpr
+          (stringInterpolation
             (unqualifiedAccessExpr
               (identifier)))))))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))))
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier))))))

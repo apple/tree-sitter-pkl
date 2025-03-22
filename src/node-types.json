@@ -10,6 +10,10 @@
           {
             "type": "+",
             "named": false
+          },
+          {
+            "type": "-",
+            "named": false
           }
         ]
       }
@@ -39,15 +43,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -59,7 +63,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -79,7 +83,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -103,7 +107,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -127,7 +131,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -155,7 +159,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -176,165 +180,32 @@
   {
     "type": "amendExpr",
     "named": true,
-    "fields": {},
+    "fields": {
+      "parent": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "amendExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "additiveExpr",
-          "named": true
-        },
-        {
-          "type": "amendExpr",
-          "named": true
-        },
-        {
-          "type": "comparisonExpr",
-          "named": true
-        },
-        {
-          "type": "equalityExpr",
-          "named": true
-        },
-        {
-          "type": "exponentiationExpr",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "logicalAndExpr",
-          "named": true
-        },
-        {
-          "type": "logicalNotExpr",
-          "named": true
-        },
-        {
-          "type": "logicalOrExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "multiplicativeExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nonNullExpr",
-          "named": true
-        },
-        {
-          "type": "nullCoalesceExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
           "type": "objectBody",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "pipeExpr",
-          "named": true
-        },
-        {
-          "type": "qualifiedAccessExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "superAccessExpr",
-          "named": true
-        },
-        {
-          "type": "superSubscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "typeTestExpr",
-          "named": true
-        },
-        {
-          "type": "unaryMinusExpr",
-          "named": true
-        },
-        {
-          "type": "unqualifiedAccessExpr",
           "named": true
         }
       ]
@@ -388,15 +259,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -408,7 +279,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -428,7 +299,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -452,7 +323,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -476,7 +347,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -504,7 +375,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -597,15 +468,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -617,7 +488,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -641,7 +512,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -665,7 +536,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -689,7 +560,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -717,7 +588,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -772,15 +643,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -796,7 +667,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -816,7 +687,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -844,7 +715,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -872,7 +743,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -900,7 +771,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -1013,15 +884,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -1033,7 +904,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -1053,7 +924,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -1077,7 +948,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -1101,7 +972,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -1129,7 +1000,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -1168,6 +1039,18 @@
           "named": true
         },
         {
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
           "type": "equalityExpr",
           "named": true
         },
@@ -1176,15 +1059,19 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
           "named": true
         },
         {
@@ -1196,7 +1083,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -1216,11 +1103,15 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
           "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "moduleType",
           "named": true
         },
         {
@@ -1236,11 +1127,19 @@
           "named": true
         },
         {
+          "type": "nothingType",
+          "named": true
+        },
+        {
           "type": "nullCoalesceExpr",
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "nullableType",
           "named": true
         },
         {
@@ -1249,6 +1148,10 @@
         },
         {
           "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
           "named": true
         },
         {
@@ -1264,7 +1167,11 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
           "named": true
         },
         {
@@ -1292,11 +1199,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "type",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -1305,6 +1208,14 @@
         },
         {
           "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         },
         {
@@ -1328,6 +1239,61 @@
         },
         {
           "type": "typeArgumentList",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "defaultUnionType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         }
       ]
@@ -1382,15 +1348,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -1402,7 +1368,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -1422,7 +1388,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -1446,7 +1412,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -1470,7 +1436,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -1498,7 +1464,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -1556,15 +1522,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -1576,7 +1542,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -1596,7 +1562,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -1620,7 +1586,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -1644,7 +1610,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -1672,7 +1638,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -1722,6 +1688,10 @@
           "named": true
         },
         {
+          "type": "blankIdentifier",
+          "named": true
+        },
+        {
           "type": "comparisonExpr",
           "named": true
         },
@@ -1734,15 +1704,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -1754,7 +1724,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -1774,7 +1744,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -1798,7 +1768,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -1826,7 +1796,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -1854,7 +1824,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -1877,7 +1847,7 @@
     }
   },
   {
-    "type": "functionLiteral",
+    "type": "functionLiteralExpr",
     "named": true,
     "fields": {},
     "children": {
@@ -1905,15 +1875,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -1925,7 +1895,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -1945,7 +1915,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -1969,7 +1939,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -1997,7 +1967,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -2025,7 +1995,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -2052,7 +2022,47 @@
       "required": true,
       "types": [
         {
-          "type": "type",
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         }
       ]
@@ -2087,15 +2097,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -2107,7 +2117,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -2127,7 +2137,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -2151,7 +2161,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -2175,7 +2185,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -2203,7 +2213,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -2243,7 +2253,22 @@
   {
     "type": "importExpr",
     "named": true,
-    "fields": {},
+    "fields": {
+      "variant": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "import",
+            "named": false
+          },
+          {
+            "type": "import*",
+            "named": false
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
       "required": true,
@@ -2275,169 +2300,6 @@
     }
   },
   {
-    "type": "interpolationExpr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "additiveExpr",
-          "named": true
-        },
-        {
-          "type": "amendExpr",
-          "named": true
-        },
-        {
-          "type": "comparisonExpr",
-          "named": true
-        },
-        {
-          "type": "equalityExpr",
-          "named": true
-        },
-        {
-          "type": "exponentiationExpr",
-          "named": true
-        },
-        {
-          "type": "falseLiteral",
-          "named": true
-        },
-        {
-          "type": "floatLiteral",
-          "named": true
-        },
-        {
-          "type": "functionLiteral",
-          "named": true
-        },
-        {
-          "type": "ifExpr",
-          "named": true
-        },
-        {
-          "type": "importExpr",
-          "named": true
-        },
-        {
-          "type": "intLiteral",
-          "named": true
-        },
-        {
-          "type": "letExpr",
-          "named": true
-        },
-        {
-          "type": "logicalAndExpr",
-          "named": true
-        },
-        {
-          "type": "logicalNotExpr",
-          "named": true
-        },
-        {
-          "type": "logicalOrExpr",
-          "named": true
-        },
-        {
-          "type": "mlStringLiteral",
-          "named": true
-        },
-        {
-          "type": "moduleExpr",
-          "named": true
-        },
-        {
-          "type": "multiplicativeExpr",
-          "named": true
-        },
-        {
-          "type": "newExpr",
-          "named": true
-        },
-        {
-          "type": "nonNullExpr",
-          "named": true
-        },
-        {
-          "type": "nullCoalesceExpr",
-          "named": true
-        },
-        {
-          "type": "nullLiteral",
-          "named": true
-        },
-        {
-          "type": "outerExpr",
-          "named": true
-        },
-        {
-          "type": "parenthesizedExpr",
-          "named": true
-        },
-        {
-          "type": "pipeExpr",
-          "named": true
-        },
-        {
-          "type": "qualifiedAccessExpr",
-          "named": true
-        },
-        {
-          "type": "readExpr",
-          "named": true
-        },
-        {
-          "type": "slStringLiteral",
-          "named": true
-        },
-        {
-          "type": "subscriptExpr",
-          "named": true
-        },
-        {
-          "type": "superAccessExpr",
-          "named": true
-        },
-        {
-          "type": "superSubscriptExpr",
-          "named": true
-        },
-        {
-          "type": "thisExpr",
-          "named": true
-        },
-        {
-          "type": "throwExpr",
-          "named": true
-        },
-        {
-          "type": "traceExpr",
-          "named": true
-        },
-        {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "typeTestExpr",
-          "named": true
-        },
-        {
-          "type": "unaryMinusExpr",
-          "named": true
-        },
-        {
-          "type": "unqualifiedAccessExpr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "letExpr",
     "named": true,
     "fields": {},
@@ -2454,6 +2316,10 @@
           "named": true
         },
         {
+          "type": "blankIdentifier",
+          "named": true
+        },
+        {
           "type": "comparisonExpr",
           "named": true
         },
@@ -2466,15 +2332,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -2486,7 +2352,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -2506,7 +2372,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -2530,7 +2396,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -2554,7 +2420,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -2582,7 +2448,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -2649,15 +2515,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -2669,7 +2535,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -2689,7 +2555,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -2713,7 +2579,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -2737,7 +2603,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -2765,7 +2631,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -2812,15 +2678,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -2832,7 +2698,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -2852,7 +2718,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -2876,7 +2742,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -2900,7 +2766,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -2928,7 +2794,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -2986,15 +2852,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -3006,7 +2872,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -3026,7 +2892,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -3050,7 +2916,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -3074,7 +2940,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -3102,7 +2968,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -3115,6 +2981,338 @@
         },
         {
           "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "memberPredicate",
+    "named": true,
+    "fields": {
+      "conditionExpr": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "additiveExpr",
+            "named": true
+          },
+          {
+            "type": "amendExpr",
+            "named": true
+          },
+          {
+            "type": "comparisonExpr",
+            "named": true
+          },
+          {
+            "type": "equalityExpr",
+            "named": true
+          },
+          {
+            "type": "exponentiationExpr",
+            "named": true
+          },
+          {
+            "type": "falseLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "floatLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "functionLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "ifExpr",
+            "named": true
+          },
+          {
+            "type": "importExpr",
+            "named": true
+          },
+          {
+            "type": "intLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "letExpr",
+            "named": true
+          },
+          {
+            "type": "logicalAndExpr",
+            "named": true
+          },
+          {
+            "type": "logicalNotExpr",
+            "named": true
+          },
+          {
+            "type": "logicalOrExpr",
+            "named": true
+          },
+          {
+            "type": "mlStringLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "moduleExpr",
+            "named": true
+          },
+          {
+            "type": "multiplicativeExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nonNullExpr",
+            "named": true
+          },
+          {
+            "type": "nullCoalesceExpr",
+            "named": true
+          },
+          {
+            "type": "nullLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "outerExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          },
+          {
+            "type": "pipeExpr",
+            "named": true
+          },
+          {
+            "type": "qualifiedAccessExpr",
+            "named": true
+          },
+          {
+            "type": "readExpr",
+            "named": true
+          },
+          {
+            "type": "slStringLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "subscriptExpr",
+            "named": true
+          },
+          {
+            "type": "superAccessExpr",
+            "named": true
+          },
+          {
+            "type": "superSubscriptExpr",
+            "named": true
+          },
+          {
+            "type": "thisExpr",
+            "named": true
+          },
+          {
+            "type": "throwExpr",
+            "named": true
+          },
+          {
+            "type": "traceExpr",
+            "named": true
+          },
+          {
+            "type": "trueLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "typeTestExpr",
+            "named": true
+          },
+          {
+            "type": "unaryMinusExpr",
+            "named": true
+          },
+          {
+            "type": "unqualifiedAccessExpr",
+            "named": true
+          }
+        ]
+      },
+      "valueExpr": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "additiveExpr",
+            "named": true
+          },
+          {
+            "type": "amendExpr",
+            "named": true
+          },
+          {
+            "type": "comparisonExpr",
+            "named": true
+          },
+          {
+            "type": "equalityExpr",
+            "named": true
+          },
+          {
+            "type": "exponentiationExpr",
+            "named": true
+          },
+          {
+            "type": "falseLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "floatLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "functionLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "ifExpr",
+            "named": true
+          },
+          {
+            "type": "importExpr",
+            "named": true
+          },
+          {
+            "type": "intLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "letExpr",
+            "named": true
+          },
+          {
+            "type": "logicalAndExpr",
+            "named": true
+          },
+          {
+            "type": "logicalNotExpr",
+            "named": true
+          },
+          {
+            "type": "logicalOrExpr",
+            "named": true
+          },
+          {
+            "type": "mlStringLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "moduleExpr",
+            "named": true
+          },
+          {
+            "type": "multiplicativeExpr",
+            "named": true
+          },
+          {
+            "type": "newExpr",
+            "named": true
+          },
+          {
+            "type": "nonNullExpr",
+            "named": true
+          },
+          {
+            "type": "nullCoalesceExpr",
+            "named": true
+          },
+          {
+            "type": "nullLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "outerExpr",
+            "named": true
+          },
+          {
+            "type": "parenthesizedExpr",
+            "named": true
+          },
+          {
+            "type": "pipeExpr",
+            "named": true
+          },
+          {
+            "type": "qualifiedAccessExpr",
+            "named": true
+          },
+          {
+            "type": "readExpr",
+            "named": true
+          },
+          {
+            "type": "slStringLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "subscriptExpr",
+            "named": true
+          },
+          {
+            "type": "superAccessExpr",
+            "named": true
+          },
+          {
+            "type": "superSubscriptExpr",
+            "named": true
+          },
+          {
+            "type": "thisExpr",
+            "named": true
+          },
+          {
+            "type": "throwExpr",
+            "named": true
+          },
+          {
+            "type": "traceExpr",
+            "named": true
+          },
+          {
+            "type": "trueLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "typeTestExpr",
+            "named": true
+          },
+          {
+            "type": "unaryMinusExpr",
+            "named": true
+          },
+          {
+            "type": "unqualifiedAccessExpr",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "objectBody",
           "named": true
         }
       ]
@@ -3152,7 +3350,7 @@
     }
   },
   {
-    "type": "mlStringLiteral",
+    "type": "mlStringLiteralExpr",
     "named": true,
     "fields": {},
     "children": {
@@ -3164,11 +3362,11 @@
           "named": true
         },
         {
-          "type": "interpolationExpr",
+          "type": "mlStringLiteralPart",
           "named": true
         },
         {
-          "type": "mlStringLiteralPart",
+          "type": "stringInterpolation",
           "named": true
         }
       ]
@@ -3331,15 +3529,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -3351,7 +3549,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -3371,7 +3569,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -3395,7 +3593,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -3419,7 +3617,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -3447,7 +3645,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -3474,11 +3672,51 @@
       "required": true,
       "types": [
         {
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
           "type": "objectBody",
           "named": true
         },
         {
-          "type": "type",
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         }
       ]
@@ -3513,15 +3751,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -3533,7 +3771,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -3553,7 +3791,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -3577,7 +3815,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -3601,7 +3839,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -3629,7 +3867,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -3687,15 +3925,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -3707,7 +3945,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -3727,7 +3965,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -3751,7 +3989,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -3775,7 +4013,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -3803,7 +4041,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -3830,7 +4068,47 @@
       "required": true,
       "types": [
         {
-          "type": "type",
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         }
       ]
@@ -3849,6 +4127,10 @@
           "named": true
         },
         {
+          "type": "memberPredicate",
+          "named": true
+        },
+        {
           "type": "objectBodyParameters",
           "named": true
         },
@@ -3862,10 +4144,6 @@
         },
         {
           "type": "objectMethod",
-          "named": true
-        },
-        {
-          "type": "objectPredicate",
           "named": true
         },
         {
@@ -3891,6 +4169,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "blankIdentifier",
+          "named": true
+        },
         {
           "type": "typedIdentifier",
           "named": true
@@ -3927,15 +4209,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -3947,7 +4229,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -3967,7 +4249,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -3991,7 +4273,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -4015,7 +4297,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -4043,7 +4325,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -4090,15 +4372,15 @@
             "named": true
           },
           {
-            "type": "falseLiteral",
+            "type": "falseLiteralExpr",
             "named": true
           },
           {
-            "type": "floatLiteral",
+            "type": "floatLiteralExpr",
             "named": true
           },
           {
-            "type": "functionLiteral",
+            "type": "functionLiteralExpr",
             "named": true
           },
           {
@@ -4110,7 +4392,7 @@
             "named": true
           },
           {
-            "type": "intLiteral",
+            "type": "intLiteralExpr",
             "named": true
           },
           {
@@ -4130,7 +4412,7 @@
             "named": true
           },
           {
-            "type": "mlStringLiteral",
+            "type": "mlStringLiteralExpr",
             "named": true
           },
           {
@@ -4154,7 +4436,7 @@
             "named": true
           },
           {
-            "type": "nullLiteral",
+            "type": "nullLiteralExpr",
             "named": true
           },
           {
@@ -4178,7 +4460,7 @@
             "named": true
           },
           {
-            "type": "slStringLiteral",
+            "type": "slStringLiteralExpr",
             "named": true
           },
           {
@@ -4206,7 +4488,7 @@
             "named": true
           },
           {
-            "type": "trueLiteral",
+            "type": "trueLiteralExpr",
             "named": true
           },
           {
@@ -4248,15 +4530,15 @@
             "named": true
           },
           {
-            "type": "falseLiteral",
+            "type": "falseLiteralExpr",
             "named": true
           },
           {
-            "type": "floatLiteral",
+            "type": "floatLiteralExpr",
             "named": true
           },
           {
-            "type": "functionLiteral",
+            "type": "functionLiteralExpr",
             "named": true
           },
           {
@@ -4268,7 +4550,7 @@
             "named": true
           },
           {
-            "type": "intLiteral",
+            "type": "intLiteralExpr",
             "named": true
           },
           {
@@ -4288,7 +4570,7 @@
             "named": true
           },
           {
-            "type": "mlStringLiteral",
+            "type": "mlStringLiteralExpr",
             "named": true
           },
           {
@@ -4312,7 +4594,7 @@
             "named": true
           },
           {
-            "type": "nullLiteral",
+            "type": "nullLiteralExpr",
             "named": true
           },
           {
@@ -4336,7 +4618,7 @@
             "named": true
           },
           {
-            "type": "slStringLiteral",
+            "type": "slStringLiteralExpr",
             "named": true
           },
           {
@@ -4364,7 +4646,7 @@
             "named": true
           },
           {
-            "type": "trueLiteral",
+            "type": "trueLiteralExpr",
             "named": true
           },
           {
@@ -4422,15 +4704,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -4442,7 +4724,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -4466,7 +4748,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -4490,7 +4772,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -4514,7 +4796,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -4542,7 +4824,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -4555,338 +4837,6 @@
         },
         {
           "type": "unqualifiedAccessExpr",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "objectPredicate",
-    "named": true,
-    "fields": {
-      "conditionExpr": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "additiveExpr",
-            "named": true
-          },
-          {
-            "type": "amendExpr",
-            "named": true
-          },
-          {
-            "type": "comparisonExpr",
-            "named": true
-          },
-          {
-            "type": "equalityExpr",
-            "named": true
-          },
-          {
-            "type": "exponentiationExpr",
-            "named": true
-          },
-          {
-            "type": "falseLiteral",
-            "named": true
-          },
-          {
-            "type": "floatLiteral",
-            "named": true
-          },
-          {
-            "type": "functionLiteral",
-            "named": true
-          },
-          {
-            "type": "ifExpr",
-            "named": true
-          },
-          {
-            "type": "importExpr",
-            "named": true
-          },
-          {
-            "type": "intLiteral",
-            "named": true
-          },
-          {
-            "type": "letExpr",
-            "named": true
-          },
-          {
-            "type": "logicalAndExpr",
-            "named": true
-          },
-          {
-            "type": "logicalNotExpr",
-            "named": true
-          },
-          {
-            "type": "logicalOrExpr",
-            "named": true
-          },
-          {
-            "type": "mlStringLiteral",
-            "named": true
-          },
-          {
-            "type": "moduleExpr",
-            "named": true
-          },
-          {
-            "type": "multiplicativeExpr",
-            "named": true
-          },
-          {
-            "type": "newExpr",
-            "named": true
-          },
-          {
-            "type": "nonNullExpr",
-            "named": true
-          },
-          {
-            "type": "nullCoalesceExpr",
-            "named": true
-          },
-          {
-            "type": "nullLiteral",
-            "named": true
-          },
-          {
-            "type": "outerExpr",
-            "named": true
-          },
-          {
-            "type": "parenthesizedExpr",
-            "named": true
-          },
-          {
-            "type": "pipeExpr",
-            "named": true
-          },
-          {
-            "type": "qualifiedAccessExpr",
-            "named": true
-          },
-          {
-            "type": "readExpr",
-            "named": true
-          },
-          {
-            "type": "slStringLiteral",
-            "named": true
-          },
-          {
-            "type": "subscriptExpr",
-            "named": true
-          },
-          {
-            "type": "superAccessExpr",
-            "named": true
-          },
-          {
-            "type": "superSubscriptExpr",
-            "named": true
-          },
-          {
-            "type": "thisExpr",
-            "named": true
-          },
-          {
-            "type": "throwExpr",
-            "named": true
-          },
-          {
-            "type": "traceExpr",
-            "named": true
-          },
-          {
-            "type": "trueLiteral",
-            "named": true
-          },
-          {
-            "type": "typeTestExpr",
-            "named": true
-          },
-          {
-            "type": "unaryMinusExpr",
-            "named": true
-          },
-          {
-            "type": "unqualifiedAccessExpr",
-            "named": true
-          }
-        ]
-      },
-      "valueExpr": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "additiveExpr",
-            "named": true
-          },
-          {
-            "type": "amendExpr",
-            "named": true
-          },
-          {
-            "type": "comparisonExpr",
-            "named": true
-          },
-          {
-            "type": "equalityExpr",
-            "named": true
-          },
-          {
-            "type": "exponentiationExpr",
-            "named": true
-          },
-          {
-            "type": "falseLiteral",
-            "named": true
-          },
-          {
-            "type": "floatLiteral",
-            "named": true
-          },
-          {
-            "type": "functionLiteral",
-            "named": true
-          },
-          {
-            "type": "ifExpr",
-            "named": true
-          },
-          {
-            "type": "importExpr",
-            "named": true
-          },
-          {
-            "type": "intLiteral",
-            "named": true
-          },
-          {
-            "type": "letExpr",
-            "named": true
-          },
-          {
-            "type": "logicalAndExpr",
-            "named": true
-          },
-          {
-            "type": "logicalNotExpr",
-            "named": true
-          },
-          {
-            "type": "logicalOrExpr",
-            "named": true
-          },
-          {
-            "type": "mlStringLiteral",
-            "named": true
-          },
-          {
-            "type": "moduleExpr",
-            "named": true
-          },
-          {
-            "type": "multiplicativeExpr",
-            "named": true
-          },
-          {
-            "type": "newExpr",
-            "named": true
-          },
-          {
-            "type": "nonNullExpr",
-            "named": true
-          },
-          {
-            "type": "nullCoalesceExpr",
-            "named": true
-          },
-          {
-            "type": "nullLiteral",
-            "named": true
-          },
-          {
-            "type": "outerExpr",
-            "named": true
-          },
-          {
-            "type": "parenthesizedExpr",
-            "named": true
-          },
-          {
-            "type": "pipeExpr",
-            "named": true
-          },
-          {
-            "type": "qualifiedAccessExpr",
-            "named": true
-          },
-          {
-            "type": "readExpr",
-            "named": true
-          },
-          {
-            "type": "slStringLiteral",
-            "named": true
-          },
-          {
-            "type": "subscriptExpr",
-            "named": true
-          },
-          {
-            "type": "superAccessExpr",
-            "named": true
-          },
-          {
-            "type": "superSubscriptExpr",
-            "named": true
-          },
-          {
-            "type": "thisExpr",
-            "named": true
-          },
-          {
-            "type": "throwExpr",
-            "named": true
-          },
-          {
-            "type": "traceExpr",
-            "named": true
-          },
-          {
-            "type": "trueLiteral",
-            "named": true
-          },
-          {
-            "type": "typeTestExpr",
-            "named": true
-          },
-          {
-            "type": "unaryMinusExpr",
-            "named": true
-          },
-          {
-            "type": "unqualifiedAccessExpr",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "objectBody",
           "named": true
         }
       ]
@@ -4921,15 +4871,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -4945,7 +4895,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -4965,7 +4915,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -4993,7 +4943,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -5021,7 +4971,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -5049,7 +4999,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -5100,15 +5050,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -5120,7 +5070,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -5140,7 +5090,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -5164,7 +5114,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -5188,7 +5138,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -5216,7 +5166,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -5242,6 +5192,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "blankIdentifier",
+          "named": true
+        },
         {
           "type": "typedIdentifier",
           "named": true
@@ -5278,15 +5232,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -5298,7 +5252,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -5318,7 +5272,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -5342,7 +5296,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -5366,7 +5320,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -5394,7 +5348,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -5421,7 +5375,47 @@
       "required": true,
       "types": [
         {
-          "type": "type",
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         }
       ]
@@ -5467,15 +5461,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -5487,7 +5481,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -5507,7 +5501,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -5531,7 +5525,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -5555,7 +5549,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -5583,7 +5577,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -5630,15 +5624,15 @@
             "named": true
           },
           {
-            "type": "falseLiteral",
+            "type": "falseLiteralExpr",
             "named": true
           },
           {
-            "type": "floatLiteral",
+            "type": "floatLiteralExpr",
             "named": true
           },
           {
-            "type": "functionLiteral",
+            "type": "functionLiteralExpr",
             "named": true
           },
           {
@@ -5650,7 +5644,7 @@
             "named": true
           },
           {
-            "type": "intLiteral",
+            "type": "intLiteralExpr",
             "named": true
           },
           {
@@ -5670,7 +5664,7 @@
             "named": true
           },
           {
-            "type": "mlStringLiteral",
+            "type": "mlStringLiteralExpr",
             "named": true
           },
           {
@@ -5694,7 +5688,7 @@
             "named": true
           },
           {
-            "type": "nullLiteral",
+            "type": "nullLiteralExpr",
             "named": true
           },
           {
@@ -5718,7 +5712,7 @@
             "named": true
           },
           {
-            "type": "slStringLiteral",
+            "type": "slStringLiteralExpr",
             "named": true
           },
           {
@@ -5746,7 +5740,7 @@
             "named": true
           },
           {
-            "type": "trueLiteral",
+            "type": "trueLiteralExpr",
             "named": true
           },
           {
@@ -5798,7 +5792,7 @@
     "type": "readExpr",
     "named": true,
     "fields": {
-      "keyword": {
+      "variant": {
         "multiple": false,
         "required": true,
         "types": [
@@ -5842,15 +5836,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -5862,7 +5856,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -5882,7 +5876,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -5906,7 +5900,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -5930,7 +5924,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -5958,7 +5952,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -5982,7 +5976,7 @@
     "fields": {}
   },
   {
-    "type": "slStringLiteral",
+    "type": "slStringLiteralExpr",
     "named": true,
     "fields": {},
     "children": {
@@ -5994,11 +5988,11 @@
           "named": true
         },
         {
-          "type": "interpolationExpr",
+          "type": "slStringLiteralPart",
           "named": true
         },
         {
-          "type": "slStringLiteralPart",
+          "type": "stringInterpolation",
           "named": true
         }
       ]
@@ -6023,6 +6017,169 @@
         },
         {
           "type": "slStringLiteralPart",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stringInterpolation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "floatLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "functionLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
           "named": true
         }
       ]
@@ -6072,15 +6229,15 @@
             "named": true
           },
           {
-            "type": "falseLiteral",
+            "type": "falseLiteralExpr",
             "named": true
           },
           {
-            "type": "floatLiteral",
+            "type": "floatLiteralExpr",
             "named": true
           },
           {
-            "type": "functionLiteral",
+            "type": "functionLiteralExpr",
             "named": true
           },
           {
@@ -6092,7 +6249,7 @@
             "named": true
           },
           {
-            "type": "intLiteral",
+            "type": "intLiteralExpr",
             "named": true
           },
           {
@@ -6112,7 +6269,7 @@
             "named": true
           },
           {
-            "type": "mlStringLiteral",
+            "type": "mlStringLiteralExpr",
             "named": true
           },
           {
@@ -6136,7 +6293,7 @@
             "named": true
           },
           {
-            "type": "nullLiteral",
+            "type": "nullLiteralExpr",
             "named": true
           },
           {
@@ -6160,7 +6317,7 @@
             "named": true
           },
           {
-            "type": "slStringLiteral",
+            "type": "slStringLiteralExpr",
             "named": true
           },
           {
@@ -6188,7 +6345,7 @@
             "named": true
           },
           {
-            "type": "trueLiteral",
+            "type": "trueLiteralExpr",
             "named": true
           },
           {
@@ -6231,15 +6388,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -6251,7 +6408,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -6271,7 +6428,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -6295,7 +6452,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -6319,7 +6476,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -6347,7 +6504,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -6413,15 +6570,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -6433,7 +6590,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -6453,7 +6610,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -6477,7 +6634,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -6501,7 +6658,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -6529,7 +6686,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -6576,15 +6733,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -6596,7 +6753,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -6616,7 +6773,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -6640,7 +6797,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -6664,7 +6821,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -6692,7 +6849,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -6739,15 +6896,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -6759,7 +6916,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -6779,7 +6936,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -6803,7 +6960,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -6827,7 +6984,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -6855,7 +7012,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -6874,7 +7031,82 @@
     }
   },
   {
-    "type": "type",
+    "type": "typeAlias",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "annotation",
+          "named": true
+        },
+        {
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "docComment",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "modifier",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "typeParameterList",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "typeAnnotation",
     "named": true,
     "fields": {},
     "children": {
@@ -6887,6 +7119,10 @@
         },
         {
           "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
           "named": true
         },
         {
@@ -6914,65 +7150,11 @@
           "named": true
         },
         {
-          "type": "unionDefaultType",
-          "named": true
-        },
-        {
           "type": "unionType",
           "named": true
         },
         {
           "type": "unknownType",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "typeAlias",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "annotation",
-          "named": true
-        },
-        {
-          "type": "docComment",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "modifier",
-          "named": true
-        },
-        {
-          "type": "type",
-          "named": true
-        },
-        {
-          "type": "typeParameterList",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "typeAnnotation",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "type",
           "named": true
         }
       ]
@@ -6987,7 +7169,47 @@
       "required": true,
       "types": [
         {
-          "type": "type",
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         }
       ]
@@ -7059,6 +7281,18 @@
           "named": true
         },
         {
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
           "type": "equalityExpr",
           "named": true
         },
@@ -7067,15 +7301,19 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
           "named": true
         },
         {
@@ -7087,7 +7325,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -7107,11 +7345,15 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
           "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "moduleType",
           "named": true
         },
         {
@@ -7127,11 +7369,19 @@
           "named": true
         },
         {
+          "type": "nothingType",
+          "named": true
+        },
+        {
           "type": "nullCoalesceExpr",
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "nullableType",
           "named": true
         },
         {
@@ -7140,6 +7390,10 @@
         },
         {
           "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
           "named": true
         },
         {
@@ -7155,7 +7409,11 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
           "named": true
         },
         {
@@ -7183,11 +7441,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
-          "named": true
-        },
-        {
-          "type": "type",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -7196,6 +7450,14 @@
         },
         {
           "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         },
         {
@@ -7253,15 +7515,15 @@
           "named": true
         },
         {
-          "type": "falseLiteral",
+          "type": "falseLiteralExpr",
           "named": true
         },
         {
-          "type": "floatLiteral",
+          "type": "floatLiteralExpr",
           "named": true
         },
         {
-          "type": "functionLiteral",
+          "type": "functionLiteralExpr",
           "named": true
         },
         {
@@ -7273,7 +7535,7 @@
           "named": true
         },
         {
-          "type": "intLiteral",
+          "type": "intLiteralExpr",
           "named": true
         },
         {
@@ -7293,7 +7555,7 @@
           "named": true
         },
         {
-          "type": "mlStringLiteral",
+          "type": "mlStringLiteralExpr",
           "named": true
         },
         {
@@ -7317,7 +7579,7 @@
           "named": true
         },
         {
-          "type": "nullLiteral",
+          "type": "nullLiteralExpr",
           "named": true
         },
         {
@@ -7341,7 +7603,7 @@
           "named": true
         },
         {
-          "type": "slStringLiteral",
+          "type": "slStringLiteralExpr",
           "named": true
         },
         {
@@ -7369,7 +7631,7 @@
           "named": true
         },
         {
-          "type": "trueLiteral",
+          "type": "trueLiteralExpr",
           "named": true
         },
         {
@@ -7388,21 +7650,6 @@
     }
   },
   {
-    "type": "unionDefaultType",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "type",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "unionType",
     "named": true,
     "fields": {},
@@ -7411,7 +7658,47 @@
       "required": true,
       "types": [
         {
-          "type": "type",
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         }
       ]
@@ -7465,15 +7752,15 @@
             "named": true
           },
           {
-            "type": "falseLiteral",
+            "type": "falseLiteralExpr",
             "named": true
           },
           {
-            "type": "floatLiteral",
+            "type": "floatLiteralExpr",
             "named": true
           },
           {
-            "type": "functionLiteral",
+            "type": "functionLiteralExpr",
             "named": true
           },
           {
@@ -7485,7 +7772,7 @@
             "named": true
           },
           {
-            "type": "intLiteral",
+            "type": "intLiteralExpr",
             "named": true
           },
           {
@@ -7505,7 +7792,7 @@
             "named": true
           },
           {
-            "type": "mlStringLiteral",
+            "type": "mlStringLiteralExpr",
             "named": true
           },
           {
@@ -7529,7 +7816,7 @@
             "named": true
           },
           {
-            "type": "nullLiteral",
+            "type": "nullLiteralExpr",
             "named": true
           },
           {
@@ -7553,7 +7840,7 @@
             "named": true
           },
           {
-            "type": "slStringLiteral",
+            "type": "slStringLiteralExpr",
             "named": true
           },
           {
@@ -7581,7 +7868,7 @@
             "named": true
           },
           {
-            "type": "trueLiteral",
+            "type": "trueLiteralExpr",
             "named": true
           },
           {
@@ -7901,6 +8188,10 @@
     "named": false
   },
   {
+    "type": "blankIdentifier",
+    "named": true
+  },
+  {
     "type": "blockComment",
     "named": true,
     "extra": true
@@ -7930,7 +8221,7 @@
     "named": false
   },
   {
-    "type": "falseLiteral",
+    "type": "falseLiteralExpr",
     "named": true
   },
   {
@@ -7938,7 +8229,7 @@
     "named": false
   },
   {
-    "type": "floatLiteral",
+    "type": "floatLiteralExpr",
     "named": true
   },
   {
@@ -7974,7 +8265,7 @@
     "named": false
   },
   {
-    "type": "intLiteral",
+    "type": "intLiteralExpr",
     "named": true
   },
   {
@@ -8006,7 +8297,7 @@
     "named": true
   },
   {
-    "type": "nullLiteral",
+    "type": "nullLiteralExpr",
     "named": true
   },
   {
@@ -8050,7 +8341,7 @@
     "named": false
   },
   {
-    "type": "trueLiteral",
+    "type": "trueLiteralExpr",
     "named": true
   },
   {

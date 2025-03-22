@@ -9,5 +9,5 @@ res1 = throw("Uh oh!")
   (classProperty
     (identifier)
     (throwExpr
-      (slStringLiteral
+      (slStringLiteralExpr
         (slStringLiteralPart)))))

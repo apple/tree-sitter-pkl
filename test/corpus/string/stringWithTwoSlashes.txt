@@ -12,9 +12,9 @@ bar = """
 (module
   (classProperty
     (identifier)
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart))))

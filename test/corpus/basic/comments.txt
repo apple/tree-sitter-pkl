@@ -20,22 +20,22 @@ a = 20 // single-line comment running until EOF rather than newline
 (module
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (lineComment)
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (blockComment)
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (classMethod
     (docComment)
     (methodHeader
       (identifier)
       (parameterList))
-    (intLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (lineComment))

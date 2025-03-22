@@ -17,7 +17,7 @@ amends "foo.pkl"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))))
     (moduleClause
       (qualifiedIdentifier

@@ -1,0 +1,30 @@
+===
+objectElementsWithTypeParams
+===
+
+foo {
+  baz as List(length == 1)
+  bar
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (typeTestExpr
+          (unqualifiedAccessExpr
+            (identifier))
+          (constrainedType
+            (declaredType
+              (qualifiedIdentifier
+                (identifier)))
+            (equalityExpr
+              (unqualifiedAccessExpr
+                (identifier))
+              (intLiteralExpr)))))
+      (objectElement
+        (unqualifiedAccessExpr
+          (identifier))))))

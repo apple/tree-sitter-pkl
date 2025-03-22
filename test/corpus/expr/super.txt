@@ -23,5 +23,5 @@ exprs {
           (argumentList)))
       (objectElement
         (superSubscriptExpr
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))))))

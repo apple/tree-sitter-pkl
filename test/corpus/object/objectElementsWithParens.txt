@@ -41,10 +41,11 @@ res13 {
           (identifier)))
       (objectElement
         (amendExpr
-          (unqualifiedAccessExpr
-            (identifier))
+          (parenthesizedExpr
+            (unqualifiedAccessExpr
+              (identifier)))
           (objectBody
             (objectElement
-              (intLiteral))
+              (intLiteralExpr))
             (objectElement
-              (intLiteral))))))))
+              (intLiteralExpr))))))))

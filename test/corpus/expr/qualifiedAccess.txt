@@ -89,14 +89,14 @@ res11 = "foo" + List("bar").join("")
   (classProperty
     (identifier)
     (additiveExpr
-      (slStringLiteral
+      (slStringLiteralExpr
         (slStringLiteralPart))
       (qualifiedAccessExpr
         (unqualifiedAccessExpr
           (identifier)
           (argumentList
-            (slStringLiteral
+            (slStringLiteralExpr
               (slStringLiteralPart))))
         (identifier)
         (argumentList
-          (slStringLiteral))))))
+          (slStringLiteralExpr))))))

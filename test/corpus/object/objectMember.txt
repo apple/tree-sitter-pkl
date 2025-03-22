@@ -26,65 +26,65 @@ res12 {1.2;.3;.4;.5}
     (identifier)
     (objectBody
       (objectElement
-        (intLiteral))
+        (intLiteralExpr))
       (objectElement
-        (intLiteral))
+        (intLiteralExpr))
       (objectElement
-        (intLiteral))))
+        (intLiteralExpr))))
   (classProperty
     (identifier)
     (objectBody
       (objectElement
-        (intLiteral))
+        (intLiteralExpr))
       (objectElement
-        (intLiteral))
+        (intLiteralExpr))
       (objectElement
-        (intLiteral))))
+        (intLiteralExpr))))
   (classProperty
     (identifier)
     (objectBody
       (objectElement
-        (intLiteral))
+        (intLiteralExpr))
       (objectElement
-        (intLiteral))
+        (intLiteralExpr))
       (objectElement
-        (intLiteral))))
+        (intLiteralExpr))))
   (classProperty
     (identifier)
     (objectBody
       (objectElement
-        (intLiteral))
+        (intLiteralExpr))
       (objectElement
-        (intLiteral))
+        (intLiteralExpr))
       (objectElement
-        (intLiteral))))
+        (intLiteralExpr))))
   (classProperty
     (identifier)
     (objectBody
       (objectElement
-        (intLiteral))))
+        (intLiteralExpr))))
   (classProperty
     (identifier)
     (objectBody
       (objectElement
-        (intLiteral))
+        (intLiteralExpr))
       (objectElement
-        (intLiteral))))
-  (classProperty
-    (identifier)
-    (objectBody
-      (objectProperty
-        (identifier)
-        (intLiteral))))
+        (intLiteralExpr))))
   (classProperty
     (identifier)
     (objectBody
       (objectProperty
         (identifier)
-        (intLiteral))
+        (intLiteralExpr))))
+  (classProperty
+    (identifier)
+    (objectBody
       (objectProperty
         (identifier)
-        (intLiteral))))
+        (intLiteralExpr))
+      (objectProperty
+        (identifier)
+        (intLiteralExpr))))
   (classProperty
     (identifier)
     (objectBody
@@ -92,18 +92,18 @@ res12 {1.2;.3;.4;.5}
         (identifier)
         (objectBody
           (objectElement
-            (intLiteral))))))
+            (intLiteralExpr))))))
   (classProperty
     (identifier)
     (objectBody
       (objectEntry
-        (slStringLiteral
+        (slStringLiteralExpr
           (slStringLiteralPart))
-        (intLiteral))
+        (intLiteralExpr))
       (objectEntry
-        (slStringLiteral
+        (slStringLiteralExpr
           (slStringLiteralPart))
-        (intLiteral))))
+        (intLiteralExpr))))
   (classProperty
     (identifier)
     (objectBody
@@ -120,10 +120,10 @@ res12 {1.2;.3;.4;.5}
     (identifier)
     (objectBody
       (objectElement
-        (floatLiteral))
+        (floatLiteralExpr))
       (objectElement
-        (floatLiteral))
+        (floatLiteralExpr))
       (objectElement
-        (floatLiteral))
+        (floatLiteralExpr))
       (objectElement
-        (floatLiteral)))))
+        (floatLiteralExpr)))))

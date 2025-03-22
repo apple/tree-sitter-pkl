@@ -8,16 +8,15 @@ res1 = (bar: Int) -> bar + 5
 (module
   (classProperty
     (identifier)
-    (functionLiteral
+    (functionLiteralExpr
       (parameterList
         (typedIdentifier
           (identifier)
           (typeAnnotation
-            (type
-              (declaredType
-                (qualifiedIdentifier
-                  (identifier)))))))
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))))
       (additiveExpr
         (unqualifiedAccessExpr
           (identifier))
-        (intLiteral)))))
+        (intLiteralExpr)))))

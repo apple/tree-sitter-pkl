@@ -15,8 +15,8 @@ exprs {
     (objectBody
       (objectElement
         (additiveExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (unaryMinusExpr
-          (intLiteral))))))
+          (intLiteralExpr))))))

@@ -46,8 +46,8 @@ foo {
         (equalityExpr
           (unqualifiedAccessExpr
             (identifier))
-          (nullLiteral))
+          (nullLiteralExpr))
         (objectBody
           (objectProperty
             (identifier)
-            (intLiteral)))))))
+            (intLiteralExpr)))))))

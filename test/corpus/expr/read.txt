@@ -12,15 +12,15 @@ res3 = read?("foo.txt")
   (classProperty
     (identifier)
     (readExpr
-      (slStringLiteral
+      (slStringLiteralExpr
         (slStringLiteralPart))))
   (classProperty
     (identifier)
     (readExpr
-      (slStringLiteral
+      (slStringLiteralExpr
         (slStringLiteralPart))))
   (classProperty
     (identifier)
     (readExpr
-      (slStringLiteral
+      (slStringLiteralExpr
         (slStringLiteralPart)))))

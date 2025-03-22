@@ -17,20 +17,18 @@ res3 = new Dynamic {} {} {}
   (classProperty
     (identifier)
     (newExpr
-      (type
-        (declaredType
-          (qualifiedIdentifier
-            (identifier))))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)))
       (objectBody)))
   (classProperty
     (identifier)
     (amendExpr
       (amendExpr
         (newExpr
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))
+          (declaredType
+            (qualifiedIdentifier
+              (identifier)))
           (objectBody))
         (objectBody))
       (objectBody))))

@@ -23,17 +23,17 @@ res4 = #"""
 (module
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart))))
