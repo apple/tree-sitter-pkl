@@ -940,17 +940,19 @@ object SExprRenderer {
     tab = oldTab
   }
 
-  // tree-sitter expresses multiple alternatives as ((A | B) | C).
+  // tree-sitter expresses multiple alternatives as ((A | B) | C), rather than A | B | C
   fun nestUnionType(unionType: UnionType): UnionType {
     if (unionType.types.size == 2) {
       return unionType
     }
     val innerTypes = unionType.types.dropLast(1)
     val innerUnion =
-      UnionType(
-        unionType.types.dropLast(1),
-        if (unionType.defaultIndex < innerTypes.size) unionType.defaultIndex else -1,
-        unionType.span(),
+      nestUnionType(
+        UnionType(
+          innerTypes,
+          if (unionType.defaultIndex < innerTypes.size) unionType.defaultIndex else -1,
+          unionType.span(),
+        )
       )
     return UnionType(
       listOf(innerUnion, unionType.types.last()),
