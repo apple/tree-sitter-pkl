@@ -52,9 +52,7 @@ const PREC = {
   UNION_TYPE: 28,
   FUN_TYPE: 27,
 
-  VAR_OBJ_LITERAL: 2,
   AMEND_EXPR: 1,
-  OBJ_BODY_PARAMETERS: -1,
   OBJ_MEMBER: -2,
 };
 
