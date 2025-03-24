@@ -17,25 +17,25 @@ foo {
   (classProperty
     (identifier)
     (objectBody
-      (objectPredicate
+      (memberPredicate
         (equalityExpr
           (unqualifiedAccessExpr
             (identifier))
-          (intLiteral))
+          (intLiteralExpr))
         (objectBody
           (objectProperty
             (identifier)
-            (intLiteral))))
-      (objectPredicate
+            (intLiteralExpr))))
+      (memberPredicate
         (equalityExpr
           (unqualifiedAccessExpr
             (identifier))
-          (intLiteral))
-        (intLiteral))
-      (objectPredicate
+          (intLiteralExpr))
+        (intLiteralExpr))
+      (memberPredicate
         (subscriptExpr
           (unqualifiedAccessExpr
             (identifier))
           (unqualifiedAccessExpr
             (identifier)))
-        (trueLiteral)))))
+        (trueLiteralExpr)))))

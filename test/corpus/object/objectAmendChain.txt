@@ -21,18 +21,18 @@ res {
     (objectBody
       (objectProperty
         (identifier)
-        (intLiteral)))
+        (intLiteralExpr)))
     (objectBody
       (objectProperty
         (identifier)
-        (intLiteral))
+        (intLiteralExpr))
       (objectProperty
         (identifier)
         (objectBody
           (objectProperty
             (identifier)
-            (intLiteral)))
+            (intLiteralExpr)))
         (objectBody
           (objectProperty
             (identifier)
-            (intLiteral)))))))
+            (intLiteralExpr)))))))

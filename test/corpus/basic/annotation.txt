@@ -76,7 +76,7 @@ someProperty: String = "hi"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))))
     (annotation
       (qualifiedIdentifier
@@ -84,11 +84,11 @@ someProperty: String = "hi"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (intLiteral))))
+          (intLiteralExpr))))
     (moduleClause
       (qualifiedIdentifier
         (identifier)
@@ -104,7 +104,7 @@ someProperty: String = "hi"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))))
     (annotation
       (qualifiedIdentifier
@@ -112,11 +112,11 @@ someProperty: String = "hi"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (intLiteral))))
+          (intLiteralExpr))))
     (identifier)
     (classBody
       (classMethod
@@ -130,7 +130,7 @@ someProperty: String = "hi"
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral
+              (slStringLiteralExpr
                 (slStringLiteralPart)))))
         (annotation
           (qualifiedIdentifier
@@ -138,15 +138,15 @@ someProperty: String = "hi"
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral
+              (slStringLiteralExpr
                 (slStringLiteralPart)))
             (objectProperty
               (identifier)
-              (intLiteral))))
+              (intLiteralExpr))))
         (methodHeader
           (identifier)
           (parameterList))
-        (slStringLiteral
+        (slStringLiteralExpr
           (slStringLiteralPart)))
       (classProperty
         (docComment)
@@ -159,7 +159,7 @@ someProperty: String = "hi"
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral
+              (slStringLiteralExpr
                 (slStringLiteralPart)))))
         (annotation
           (qualifiedIdentifier
@@ -167,18 +167,17 @@ someProperty: String = "hi"
           (objectBody
             (objectProperty
               (identifier)
-              (slStringLiteral
+              (slStringLiteralExpr
                 (slStringLiteralPart)))
             (objectProperty
               (identifier)
-              (intLiteral))))
+              (intLiteralExpr))))
         (identifier)
         (typeAnnotation
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier)))))
-        (slStringLiteral
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteralExpr
           (slStringLiteralPart)))))
   (classMethod
     (docComment)
@@ -191,7 +190,7 @@ someProperty: String = "hi"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))))
     (annotation
       (qualifiedIdentifier
@@ -199,15 +198,15 @@ someProperty: String = "hi"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (intLiteral))))
+          (intLiteralExpr))))
     (methodHeader
       (identifier)
       (parameterList))
-    (slStringLiteral
+    (slStringLiteralExpr
       (slStringLiteralPart)))
   (classProperty
     (docComment)
@@ -220,7 +219,7 @@ someProperty: String = "hi"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))))
     (annotation
       (qualifiedIdentifier
@@ -228,16 +227,15 @@ someProperty: String = "hi"
       (objectBody
         (objectProperty
           (identifier)
-          (slStringLiteral
+          (slStringLiteralExpr
             (slStringLiteralPart)))
         (objectProperty
           (identifier)
-          (intLiteral))))
+          (intLiteralExpr))))
     (identifier)
     (typeAnnotation
-      (type
-        (declaredType
-          (qualifiedIdentifier
-            (identifier)))))
-    (slStringLiteral
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
+    (slStringLiteralExpr
       (slStringLiteralPart))))

@@ -42,61 +42,61 @@ res9 = ######"""
 (module
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart)))
   (classProperty
     (identifier)
-    (mlStringLiteral
+    (mlStringLiteralExpr
       (mlStringLiteralPart)
-      (interpolationExpr
+      (stringInterpolation
         (unqualifiedAccessExpr
           (identifier)))
       (mlStringLiteralPart))))

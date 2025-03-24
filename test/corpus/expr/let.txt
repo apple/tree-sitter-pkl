@@ -12,6 +12,6 @@ foo = let (prop = 1) prop
     (letExpr
       (typedIdentifier
         (identifier))
-      (intLiteral)
+      (intLiteralExpr)
       (unqualifiedAccessExpr
         (identifier)))))

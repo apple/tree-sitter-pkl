@@ -43,190 +43,145 @@ res18: (String|Boolean)|(Int) -> Boolean
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (nullableType
         (declaredType
           (qualifiedIdentifier
             (identifier))))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
+      (unionType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))
+        (declaredType
+          (qualifiedIdentifier
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (unionType
+        (defaultUnionType
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))))
+        (declaredType
+          (qualifiedIdentifier
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (nullableType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier))))))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (constrainedType
         (nullableType
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))))))
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))))
+        (equalityExpr
+          (thisExpr)
+          (nullLiteralExpr)))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
-        (unionType
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (unionType
-          (type
-            (unionDefaultType
-              (type
-                (declaredType
-                  (qualifiedIdentifier
-                    (identifier))))))
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (nullableType
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
+      (nullableType
         (constrainedType
-          (type
-            (nullableType
-              (type
-                (declaredType
-                  (qualifiedIdentifier
-                    (identifier))))))
+          (declaredType
+            (qualifiedIdentifier
+              (identifier)))
           (equalityExpr
             (thisExpr)
-            (nullLiteral))))))
+            (nullLiteralExpr))))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
+      (constrainedType
         (nullableType
-          (type
-            (constrainedType
-              (type
-                (declaredType
-                  (qualifiedIdentifier
-                    (identifier))))
-              (equalityExpr
-                (thisExpr)
-                (nullLiteral))))))))
+          (constrainedType
+            (declaredType
+              (qualifiedIdentifier
+                (identifier)))
+            (equalityExpr
+              (thisExpr)
+              (nullLiteralExpr))))
+        (logicalNotExpr
+          (unqualifiedAccessExpr
+            (identifier))))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
-        (constrainedType
-          (type
-            (nullableType
-              (type
-                (constrainedType
-                  (type
-                    (declaredType
-                      (qualifiedIdentifier
-                        (identifier))))
-                  (equalityExpr
-                    (thisExpr)
-                    (nullLiteral))))))
-          (logicalNotExpr
-            (unqualifiedAccessExpr
-              (identifier)))))))
+      (moduleType)))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
+      (nullableType
         (moduleType))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
-        (nullableType
-          (type
-            (moduleType))))))
+      (nothingType)))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
+      (nullableType
         (nothingType))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
-        (nullableType
-          (type
-            (nothingType))))))
+      (unknownType)))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
+      (nullableType
         (unknownType))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
-        (nullableType
-          (type
-            (unknownType))))))
+      (stringLiteralType
+        (stringConstant
+          (slStringLiteralPart)))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
-        (stringLiteralType
-          (stringConstant
-            (slStringLiteralPart))))))
+      (functionLiteralType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))
+        (declaredType
+          (qualifiedIdentifier
+            (identifier))))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
-        (functionLiteralType
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))))))
+      (parenthesizedType
+        (moduleType))))
   (classProperty
     (identifier)
     (typeAnnotation
-      (type
+      (unionType
         (parenthesizedType
-          (type
-            (moduleType))))))
-  (classProperty
-    (identifier)
-    (typeAnnotation
-      (type
-        (unionType
-          (type
-            (parenthesizedType
-              (type
-                (unionType
-                  (type
-                    (declaredType
-                      (qualifiedIdentifier
-                        (identifier))))
-                  (type
-                    (declaredType
-                      (qualifiedIdentifier
-                        (identifier))))))))
-          (type
-            (functionLiteralType
-              (type
-                (declaredType
-                  (qualifiedIdentifier
-                    (identifier))))
-              (type
-                (declaredType
-                  (qualifiedIdentifier
-                    (identifier)))))))))))
+          (unionType
+            (declaredType
+              (qualifiedIdentifier
+                (identifier)))
+            (declaredType
+              (qualifiedIdentifier
+                (identifier)))))
+        (functionLiteralType
+          (declaredType
+            (qualifiedIdentifier
+              (identifier)))
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))))))))

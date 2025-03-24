@@ -31,79 +31,77 @@ exprs {
     (objectBody
       (objectElement
         (typeTestExpr
-          (intLiteral)
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))))
+          (intLiteralExpr)
+          (declaredType
+            (qualifiedIdentifier
+              (identifier)))))
       (objectElement
         (typeTestExpr
-          (intLiteral)
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier))))))
+          (intLiteralExpr)
+          (declaredType
+            (qualifiedIdentifier
+              (identifier)))))
       (objectElement
         (equalityExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (equalityExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (logicalAndExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (logicalOrExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (pipeExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (comparisonExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (comparisonExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (comparisonExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (comparisonExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (multiplicativeExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (multiplicativeExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (multiplicativeExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (exponentiationExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (multiplicativeExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (additiveExpr
-          (intLiteral)
-          (intLiteral)))
+          (intLiteralExpr)
+          (intLiteralExpr)))
       (objectElement
         (additiveExpr
-          (intLiteral)
-          (intLiteral))))))
+          (intLiteralExpr)
+          (intLiteralExpr))))))

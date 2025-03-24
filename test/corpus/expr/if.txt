@@ -10,6 +10,6 @@ foo = if (true) 1 else 2
   (classProperty
     (identifier)
     (ifExpr
-      (trueLiteral)
-      (intLiteral)
-      (intLiteral))))
+      (trueLiteralExpr)
+      (intLiteralExpr)
+      (intLiteralExpr))))

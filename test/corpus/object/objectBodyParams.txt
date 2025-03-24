@@ -1,0 +1,21 @@
+===
+objectBodyParams
+===
+
+foo { bar ->
+  res = bar
+}
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectBodyParameters
+        (typedIdentifier
+          (identifier)))
+      (objectProperty
+        (identifier)
+        (unqualifiedAccessExpr
+          (identifier))))))

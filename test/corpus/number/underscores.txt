@@ -30,70 +30,70 @@ res22 = 0o7_5_5__
 (module
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (unaryMinusExpr
-      (intLiteral)))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (intLiteral))
-  (classProperty
-    (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
     (unaryMinusExpr
-      (intLiteral)))
+      (intLiteralExpr)))
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
-    (intLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
     (unaryMinusExpr
-      (intLiteral)))
+      (intLiteralExpr)))
   (classProperty
     (identifier)
-    (floatLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
-    (floatLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
-    (floatLiteral))
+    (intLiteralExpr))
   (classProperty
     (identifier)
-    (floatLiteral))
+    (unaryMinusExpr
+      (intLiteralExpr)))
   (classProperty
     (identifier)
-    (floatLiteral))
+    (floatLiteralExpr))
   (classProperty
     (identifier)
-    (floatLiteral))
+    (floatLiteralExpr))
   (classProperty
     (identifier)
-    (floatLiteral))
+    (floatLiteralExpr))
   (classProperty
     (identifier)
-    (intLiteral))
+    (floatLiteralExpr))
   (classProperty
     (identifier)
-    (intLiteral)))
+    (floatLiteralExpr))
+  (classProperty
+    (identifier)
+    (floatLiteralExpr))
+  (classProperty
+    (identifier)
+    (floatLiteralExpr))
+  (classProperty
+    (identifier)
+    (intLiteralExpr))
+  (classProperty
+    (identifier)
+    (intLiteralExpr)))

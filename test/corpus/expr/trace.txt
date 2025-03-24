@@ -9,5 +9,5 @@ res1 = trace("foo")
   (classProperty
     (identifier)
     (traceExpr
-      (slStringLiteral
+      (slStringLiteralExpr
         (slStringLiteralPart)))))

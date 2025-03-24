@@ -16,9 +16,8 @@ class MyClass {
         (modifier)
         (identifier)
         (typeAnnotation
-          (type
-            (declaredType
-              (qualifiedIdentifier
-                (identifier)))))
-        (slStringLiteral
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))))
+        (slStringLiteralExpr
           (slStringLiteralPart))))))
