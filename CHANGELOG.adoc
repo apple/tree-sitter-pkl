@@ -1,5 +1,53 @@
 = Changelog
 
+[[release-0.18.0]]
+== 0.18.0 (2024-03-27)
+
+This is a large change.
+It changes the parse tree to match other Pkl parsers, and also fixes all known parser issues.
+
+=== Additions
+
+* Add support for Go bindings (https://github.com/apple/tree-sitter-pkl/pull/33[#33])
+* Add support for Python bindings (https://github.com/apple/tree-sitter-pkl/pull/33[#33])
+
+=== Breaking Changes
+
+* Minimum tree-sitter version bumped to 0.25 (https://github.com/apple/tree-sitter-pkl/pull/33[#33])
+* Restructure parse tree to match other grammars (https://github.com/apple/tree-sitter-pkl/pull/32[#32], https://github.com/apple/tree-sitter-pkl/pull/34[#34])
+  ** Remove `variableExpr`, `propertyCallExpr`, `methodCallExpr`, `objectLiteral`, `variableObjectLiteral`
+  ** Introduce `unqualifiedAccessExpr`, `qualifiedAccessExpr`
+  ** Introduce `amendExpr`
+  ** Remove `_expr2` workaround
+  ** Split `binaryExpr` into separate parts
+  ** Merge `readExpr`/`readOrNullExpr`/`readGlobExpr` into `readExpr`
+  ** Merge `importExpr`/`importOrNullExpr` into `importExpr`
+  ** Merge `isExpr`/`asExpr` into `typeTestExpr`
+  ** Rename `objectPredicate` to `memberPredicate`
+  ** Add blank identifiers (all parameters can optionally use `_` as an identifier, can't use anywhere else)
+  ** Rename `unionDefaultType` to `defaultUnionType`
+  ** Suffix all expressions with `Expr`
+    *** `nullLiteral` -> `nullLiteralExpr`
+    *** `trueLiteral` -> `trueLiteralExpr`
+    *** `falseLiteral` -> `falseLiteralExpr`
+    *** `intLiteral` -> `intLiteralExpr`
+    *** `floatLiteral` -> `floatLiteralExpr`
+    *** `slStringLiteral` -> `slStringLiteralExpr`
+    *** `mlStringLiteral` -> `mlStringLiteralExpr`
+    *** `functionLiteral` -> `functionLiteralExpr`
+  ** Rename `interpolationExpr` to `stringInterpolation`
+  ** In `readExpr` and `importExpr`, rename field "keyword" to "variant"
+
+=== Fixes
+
+* Fix parser issues (https://github.com/apple/tree-sitter-pkl/pull/32[#32], https://github.com/apple/tree-sitter-pkl/pull/34[#34])
+** Fix parsing of unary minus as an object element
+** Fix precedence issues (e.g. make `.` stronger than `+`)
+** Fix precedence issues
+** Fix scanner producing incorrect tokens in some cases
+** Fix: disallow newline in type constraints between type and first parenthesis
+** Require parentheses around `trace`, `throw`
+
 [[release-0.17.0]]
 == 0.17.0 (2024-10-10)
 
