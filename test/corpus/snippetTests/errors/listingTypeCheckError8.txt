@@ -31,7 +31,7 @@ result = d
   (classProperty
     (modifier)
     (identifier)
-    (typeTestExpr
+    (typeCastExpr
       (unqualifiedAccessExpr
         (identifier))
       (declaredType
@@ -64,7 +64,7 @@ result = d
   (classProperty
     (modifier)
     (identifier)
-    (typeTestExpr
+    (typeCastExpr
       (unqualifiedAccessExpr
         (identifier))
       (declaredType

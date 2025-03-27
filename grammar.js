@@ -31,7 +31,7 @@ const PREC = {
   ADD: 16,
   REL: 15,
   IS: 14,
-  AS: 13,
+  AS: 14,
   EQ: 12,
   AND: 11,
   OR: 10,
@@ -486,6 +486,7 @@ module.exports = grammar({
       $.additiveExpr,
       $.comparisonExpr,
       $.typeTestExpr,
+      $.typeCastExpr,
       $.equalityExpr,
       $.logicalAndExpr,
       $.logicalOrExpr,
@@ -807,7 +808,9 @@ module.exports = grammar({
     
     pipeExpr: $ => prec.left(PREC.PIPE, seq($._expr, field('operator', "|>"), $._expr)),
 
-    typeTestExpr: $ => prec(PREC.IS, seq($._expr, field("operator", choice("is", "as")), $._type)),
+    typeTestExpr: $ => prec(PREC.IS, seq($._expr, field("operator", "is"), $._type)),
+
+    typeCastExpr: $ => prec(PREC.AS, seq($._expr, field("operator", "as"), $._type)),
 
     ifExpr: $ => prec(PREC.IF, seq("if", "(", $._expr, ")", $._expr, "else", $._expr)),
 

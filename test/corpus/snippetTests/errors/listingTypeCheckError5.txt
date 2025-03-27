@@ -13,7 +13,7 @@ res = l[0]
   (classProperty
     (modifier)
     (identifier)
-    (typeTestExpr
+    (typeCastExpr
       (newExpr
         (declaredType
           (qualifiedIdentifier

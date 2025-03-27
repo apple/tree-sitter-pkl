@@ -1133,7 +1133,7 @@ res94 = test.catch(() -> x45["hello"])
   (classProperty
     (modifier)
     (identifier)
-    (typeTestExpr
+    (typeCastExpr
       (newExpr
         (declaredType
           (qualifiedIdentifier

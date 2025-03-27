@@ -163,6 +163,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -379,6 +383,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -592,6 +600,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -776,6 +788,10 @@
         },
         {
           "type": "typeAnnotation",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -1004,6 +1020,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -1200,6 +1220,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -1468,6 +1492,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -1639,6 +1667,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -1828,6 +1860,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -1996,6 +2032,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -2214,6 +2254,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -2452,6 +2496,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -2635,6 +2683,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -2795,6 +2847,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -2972,6 +3028,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -3135,6 +3195,10 @@
             "named": true
           },
           {
+            "type": "typeCastExpr",
+            "named": true
+          },
+          {
             "type": "typeTestExpr",
             "named": true
           },
@@ -3290,6 +3354,10 @@
           },
           {
             "type": "trueLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "typeCastExpr",
             "named": true
           },
           {
@@ -3649,6 +3717,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -3871,6 +3943,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -4042,6 +4118,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -4329,6 +4409,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -4492,6 +4576,10 @@
             "named": true
           },
           {
+            "type": "typeCastExpr",
+            "named": true
+          },
+          {
             "type": "typeTestExpr",
             "named": true
           },
@@ -4647,6 +4735,10 @@
           },
           {
             "type": "trueLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "typeCastExpr",
             "named": true
           },
           {
@@ -4825,6 +4917,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -5007,6 +5103,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -5167,6 +5267,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -5349,6 +5453,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -5581,6 +5689,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -5741,6 +5853,10 @@
           },
           {
             "type": "trueLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "typeCastExpr",
             "named": true
           },
           {
@@ -5953,6 +6069,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -6171,6 +6291,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -6349,6 +6473,10 @@
             "named": true
           },
           {
+            "type": "typeCastExpr",
+            "named": true
+          },
+          {
             "type": "typeTestExpr",
             "named": true
           },
@@ -6505,6 +6633,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -6690,6 +6822,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -6853,6 +6989,10 @@
           "named": true
         },
         {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
           "type": "typeTestExpr",
           "named": true
         },
@@ -7013,6 +7153,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -7216,6 +7360,228 @@
     }
   },
   {
+    "type": "typeCastExpr",
+    "named": true,
+    "fields": {
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "as",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "additiveExpr",
+          "named": true
+        },
+        {
+          "type": "amendExpr",
+          "named": true
+        },
+        {
+          "type": "comparisonExpr",
+          "named": true
+        },
+        {
+          "type": "constrainedType",
+          "named": true
+        },
+        {
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "equalityExpr",
+          "named": true
+        },
+        {
+          "type": "exponentiationExpr",
+          "named": true
+        },
+        {
+          "type": "falseLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "floatLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "functionLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "ifExpr",
+          "named": true
+        },
+        {
+          "type": "importExpr",
+          "named": true
+        },
+        {
+          "type": "intLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "letExpr",
+          "named": true
+        },
+        {
+          "type": "logicalAndExpr",
+          "named": true
+        },
+        {
+          "type": "logicalNotExpr",
+          "named": true
+        },
+        {
+          "type": "logicalOrExpr",
+          "named": true
+        },
+        {
+          "type": "mlStringLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "moduleExpr",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "multiplicativeExpr",
+          "named": true
+        },
+        {
+          "type": "newExpr",
+          "named": true
+        },
+        {
+          "type": "nonNullExpr",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullCoalesceExpr",
+          "named": true
+        },
+        {
+          "type": "nullLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
+          "type": "outerExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedExpr",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "pipeExpr",
+          "named": true
+        },
+        {
+          "type": "qualifiedAccessExpr",
+          "named": true
+        },
+        {
+          "type": "readExpr",
+          "named": true
+        },
+        {
+          "type": "slStringLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "subscriptExpr",
+          "named": true
+        },
+        {
+          "type": "superAccessExpr",
+          "named": true
+        },
+        {
+          "type": "superSubscriptExpr",
+          "named": true
+        },
+        {
+          "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "throwExpr",
+          "named": true
+        },
+        {
+          "type": "traceExpr",
+          "named": true
+        },
+        {
+          "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
+          "named": true
+        },
+        {
+          "type": "typeTestExpr",
+          "named": true
+        },
+        {
+          "type": "unaryMinusExpr",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
+          "named": true
+        },
+        {
+          "type": "unqualifiedAccessExpr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "typeParameter",
     "named": true,
     "fields": {},
@@ -7253,10 +7619,6 @@
         "multiple": false,
         "required": true,
         "types": [
-          {
-            "type": "as",
-            "named": false
-          },
           {
             "type": "is",
             "named": false
@@ -7442,6 +7804,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -7632,6 +7998,10 @@
         },
         {
           "type": "trueLiteralExpr",
+          "named": true
+        },
+        {
+          "type": "typeCastExpr",
           "named": true
         },
         {
@@ -7869,6 +8239,10 @@
           },
           {
             "type": "trueLiteralExpr",
+            "named": true
+          },
+          {
+            "type": "typeCastExpr",
             "named": true
           },
           {

@@ -2,6 +2,8 @@
 typeTest
 ===
 foo = bar is Int(this < 0)
+
+qux = bar as Float
 ---
 
 (module
@@ -16,4 +18,12 @@ foo = bar is Int(this < 0)
             (identifier)))
         (comparisonExpr
           (thisExpr)
-          (intLiteralExpr))))))
+          (intLiteralExpr)))))
+  (classProperty
+    (identifier)
+    (typeCastExpr
+      (unqualifiedAccessExpr
+        (identifier))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))))
