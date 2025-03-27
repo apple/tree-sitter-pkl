@@ -50885,7 +50885,7 @@ TS_PUBLIC const TSLanguage *tree_sitter_pkl(void) {
     .max_reserved_word_set_size = 39,
     .metadata = {
       .major_version = 0,
-      .minor_version = 17,
+      .minor_version = 18,
       .patch_version = 0,
     },
   };
