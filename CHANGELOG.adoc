@@ -14,7 +14,7 @@ It changes the parse tree to match other Pkl parsers, and also fixes all known p
 === Breaking Changes
 
 * Minimum tree-sitter version bumped to 0.25 (https://github.com/apple/tree-sitter-pkl/pull/33[#33])
-* Restructure parse tree to match other grammars (https://github.com/apple/tree-sitter-pkl/pull/32[#32], https://github.com/apple/tree-sitter-pkl/pull/34[#34])
+* Restructure parse tree to match other grammars (https://github.com/apple/tree-sitter-pkl/pull/32[#32], https://github.com/apple/tree-sitter-pkl/pull/34[#34], https://github.com/apple/tree-sitter-pkl/pull/36[#36])
   ** Remove `variableExpr`, `propertyCallExpr`, `methodCallExpr`, `objectLiteral`, `variableObjectLiteral`
   ** Introduce `unqualifiedAccessExpr`, `qualifiedAccessExpr`
   ** Introduce `amendExpr`
@@ -22,7 +22,8 @@ It changes the parse tree to match other Pkl parsers, and also fixes all known p
   ** Split `binaryExpr` into separate parts
   ** Merge `readExpr`/`readOrNullExpr`/`readGlobExpr` into `readExpr`
   ** Merge `importExpr`/`importOrNullExpr` into `importExpr`
-  ** Merge `isExpr`/`asExpr` into `typeTestExpr`
+  ** Rename `isExpr` to `typeTestExpr`
+  ** Rename `asExpr` to `typeCastExpr`
   ** Rename `objectPredicate` to `memberPredicate`
   ** Add blank identifiers (all parameters can optionally use `_` as an identifier, can't use anywhere else)
   ** Rename `unionDefaultType` to `defaultUnionType`
@@ -43,7 +44,6 @@ It changes the parse tree to match other Pkl parsers, and also fixes all known p
 * Fix parser issues (https://github.com/apple/tree-sitter-pkl/pull/32[#32], https://github.com/apple/tree-sitter-pkl/pull/34[#34])
 ** Fix parsing of unary minus as an object element
 ** Fix precedence issues (e.g. make `.` stronger than `+`)
-** Fix precedence issues
 ** Fix scanner producing incorrect tokens in some cases
 ** Fix: disallow newline in type constraints between type and first parenthesis
 ** Require parentheses around `trace`, `throw`
