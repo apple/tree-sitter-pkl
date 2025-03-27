@@ -54,7 +54,7 @@ examples {
           (objectProperty
             (modifier)
             (identifier)
-            (typeTestExpr
+            (typeCastExpr
               (unqualifiedAccessExpr
                 (identifier)
                 (argumentList
@@ -83,7 +83,7 @@ examples {
           (objectProperty
             (modifier)
             (identifier)
-            (typeTestExpr
+            (typeCastExpr
               (unqualifiedAccessExpr
                 (identifier)
                 (argumentList
@@ -152,7 +152,7 @@ examples {
           (objectProperty
             (modifier)
             (identifier)
-            (typeTestExpr
+            (typeCastExpr
               (newExpr
                 (declaredType
                   (qualifiedIdentifier
@@ -200,7 +200,7 @@ examples {
           (objectProperty
             (modifier)
             (identifier)
-            (typeTestExpr
+            (typeCastExpr
               (newExpr
                 (declaredType
                   (qualifiedIdentifier
@@ -262,7 +262,7 @@ examples {
           (objectProperty
             (modifier)
             (identifier)
-            (typeTestExpr
+            (typeCastExpr
               (newExpr
                 (declaredType
                   (qualifiedIdentifier

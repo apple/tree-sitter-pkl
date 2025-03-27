@@ -107,7 +107,7 @@ examples {
           (slStringLiteralPart))
         (objectBody
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (unqualifiedAccessExpr
                 (identifier)
                 (argumentList
@@ -128,7 +128,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (unqualifiedAccessExpr
                       (identifier)
                       (argumentList
@@ -149,7 +149,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (unqualifiedAccessExpr
                       (identifier)
                       (argumentList
@@ -174,7 +174,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (unqualifiedAccessExpr
                       (identifier)
                       (argumentList
@@ -189,7 +189,7 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (unqualifiedAccessExpr
                 (identifier)
                 (argumentList
@@ -210,7 +210,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (unqualifiedAccessExpr
                       (identifier)
                       (argumentList
@@ -229,7 +229,7 @@ examples {
           (slStringLiteralPart))
         (objectBody
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (unqualifiedAccessExpr
                 (identifier)
                 (argumentList
@@ -256,7 +256,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (unqualifiedAccessExpr
                       (identifier)
                       (argumentList
@@ -281,7 +281,7 @@ examples {
           (slStringLiteralPart))
         (objectBody
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (newExpr
                 (declaredType
                   (qualifiedIdentifier
@@ -309,7 +309,7 @@ examples {
                   (parameterList)
                   (subscriptExpr
                     (parenthesizedExpr
-                      (typeTestExpr
+                      (typeCastExpr
                         (newExpr
                           (declaredType
                             (qualifiedIdentifier
@@ -350,7 +350,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -364,7 +364,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -378,7 +378,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -392,7 +392,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -412,7 +412,7 @@ examples {
                   (parameterList)
                   (subscriptExpr
                     (parenthesizedExpr
-                      (typeTestExpr
+                      (typeCastExpr
                         (unqualifiedAccessExpr
                           (identifier))
                         (declaredType
@@ -432,7 +432,7 @@ examples {
                   (parameterList)
                   (subscriptExpr
                     (parenthesizedExpr
-                      (typeTestExpr
+                      (typeCastExpr
                         (unqualifiedAccessExpr
                           (identifier))
                         (declaredType
@@ -452,7 +452,7 @@ examples {
                   (parameterList)
                   (subscriptExpr
                     (parenthesizedExpr
-                      (typeTestExpr
+                      (typeCastExpr
                         (unqualifiedAccessExpr
                           (identifier))
                         (declaredType
@@ -472,7 +472,7 @@ examples {
                   (parameterList)
                   (subscriptExpr
                     (parenthesizedExpr
-                      (typeTestExpr
+                      (typeCastExpr
                         (unqualifiedAccessExpr
                           (identifier))
                         (declaredType
@@ -494,7 +494,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (newExpr
                       (declaredType
                         (qualifiedIdentifier
@@ -517,7 +517,7 @@ examples {
                           (qualifiedIdentifier
                             (identifier))))))))))
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (newExpr
                 (declaredType
                   (qualifiedIdentifier
@@ -548,7 +548,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (newExpr
                       (declaredType
                         (qualifiedIdentifier
@@ -598,7 +598,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -616,7 +616,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -634,7 +634,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -652,7 +652,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -670,7 +670,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -688,7 +688,7 @@ examples {
           (objectElement
             (subscriptExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (unqualifiedAccessExpr
                     (identifier))
                   (declaredType
@@ -712,7 +712,7 @@ examples {
                   (parameterList)
                   (subscriptExpr
                     (parenthesizedExpr
-                      (typeTestExpr
+                      (typeCastExpr
                         (unqualifiedAccessExpr
                           (identifier))
                         (declaredType
@@ -736,7 +736,7 @@ examples {
                   (parameterList)
                   (subscriptExpr
                     (parenthesizedExpr
-                      (typeTestExpr
+                      (typeCastExpr
                         (unqualifiedAccessExpr
                           (identifier))
                         (declaredType
@@ -756,7 +756,7 @@ examples {
           (slStringLiteralPart))
         (objectBody
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (intLiteralExpr)
               (unionType
                 (declaredType
@@ -766,7 +766,7 @@ examples {
                   (qualifiedIdentifier
                     (identifier))))))
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (intLiteralExpr)
               (unionType
                 (declaredType
@@ -776,7 +776,7 @@ examples {
                   (qualifiedIdentifier
                     (identifier))))))
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (intLiteralExpr)
               (unionType
                 (declaredType
@@ -792,7 +792,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (intLiteralExpr)
                     (unionType
                       (declaredType
@@ -802,7 +802,7 @@ examples {
                         (qualifiedIdentifier
                           (identifier)))))))))
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (unqualifiedAccessExpr
                 (identifier)
                 (argumentList
@@ -825,7 +825,7 @@ examples {
                       (qualifiedIdentifier
                         (identifier))))))))
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (unqualifiedAccessExpr
                 (identifier)
                 (argumentList
@@ -850,7 +850,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (unqualifiedAccessExpr
                       (identifier)
                       (argumentList
@@ -877,14 +877,14 @@ examples {
           (slStringLiteralPart))
         (objectBody
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (nullLiteralExpr)
               (nullableType
                 (declaredType
                   (qualifiedIdentifier
                     (identifier))))))
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (nullLiteralExpr)
               (nullableType
                 (declaredType
@@ -904,7 +904,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (nullLiteralExpr)
                     (declaredType
                       (qualifiedIdentifier
@@ -924,7 +924,7 @@ examples {
           (objectElement
             (qualifiedAccessExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (parenthesizedExpr
                     (functionLiteralExpr
                       (parameterList
@@ -945,7 +945,7 @@ examples {
           (objectElement
             (qualifiedAccessExpr
               (parenthesizedExpr
-                (typeTestExpr
+                (typeCastExpr
                   (parenthesizedExpr
                     (functionLiteralExpr
                       (parameterList
@@ -970,7 +970,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (parenthesizedExpr
                       (functionLiteralExpr
                         (parameterList
@@ -991,7 +991,7 @@ examples {
           (slStringLiteralPart))
         (objectBody
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (slStringLiteralExpr
                 (slStringLiteralPart))
               (unionType
@@ -1008,7 +1008,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (slStringLiteralExpr
                       (slStringLiteralPart))
                     (unionType
@@ -1023,7 +1023,7 @@ examples {
           (slStringLiteralPart))
         (objectBody
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (slStringLiteralExpr
                 (slStringLiteralPart))
               (constrainedType
@@ -1041,7 +1041,7 @@ examples {
               (argumentList
                 (functionLiteralExpr
                   (parameterList)
-                  (typeTestExpr
+                  (typeCastExpr
                     (slStringLiteralExpr
                       (slStringLiteralPart))
                     (constrainedType
@@ -1053,7 +1053,7 @@ examples {
                           (identifier))
                         (intLiteralExpr))))))))
           (objectElement
-            (typeTestExpr
+            (typeCastExpr
               (unqualifiedAccessExpr
                 (identifier)
                 (argumentList

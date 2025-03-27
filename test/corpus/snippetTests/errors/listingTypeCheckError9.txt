@@ -47,7 +47,7 @@ class Bar extends Foo
   (classProperty
     (modifier)
     (identifier)
-    (typeTestExpr
+    (typeCastExpr
       (unqualifiedAccessExpr
         (identifier))
       (declaredType
@@ -74,7 +74,7 @@ class Bar extends Foo
   (classProperty
     (modifier)
     (identifier)
-    (typeTestExpr
+    (typeCastExpr
       (unqualifiedAccessExpr
         (identifier))
       (declaredType

@@ -581,7 +581,7 @@ res92 = test.catch(() -> x45[0])
   (classProperty
     (modifier)
     (identifier)
-    (typeTestExpr
+    (typeCastExpr
       (unqualifiedAccessExpr
         (identifier))
       (declaredType
@@ -906,7 +906,7 @@ res92 = test.catch(() -> x45[0])
   (classProperty
     (modifier)
     (identifier)
-    (typeTestExpr
+    (typeCastExpr
       (newExpr
         (declaredType
           (qualifiedIdentifier

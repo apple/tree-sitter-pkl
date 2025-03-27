@@ -14,7 +14,7 @@ foo {
     (identifier)
     (objectBody
       (objectElement
-        (typeTestExpr
+        (typeCastExpr
           (unqualifiedAccessExpr
             (identifier))
           (constrainedType

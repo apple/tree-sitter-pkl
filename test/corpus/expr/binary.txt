@@ -30,7 +30,7 @@ exprs {
     (identifier)
     (objectBody
       (objectElement
-        (typeTestExpr
+        (typeCastExpr
           (intLiteralExpr)
           (declaredType
             (qualifiedIdentifier

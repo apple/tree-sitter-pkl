@@ -1746,6 +1746,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "typeCastExpr"
+        },
+        {
+          "type": "SYMBOL",
           "name": "equalityExpr"
         },
         {
@@ -3612,17 +3616,33 @@
             "type": "FIELD",
             "name": "operator",
             "content": {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "is"
-                },
-                {
-                  "type": "STRING",
-                  "value": "as"
-                }
-              ]
+              "type": "STRING",
+              "value": "is"
+            }
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_type"
+          }
+        ]
+      }
+    },
+    "typeCastExpr": {
+      "type": "PREC",
+      "value": 14,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_expr"
+          },
+          {
+            "type": "FIELD",
+            "name": "operator",
+            "content": {
+              "type": "STRING",
+              "value": "as"
             }
           },
           {

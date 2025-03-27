@@ -791,8 +791,6 @@ object SExprRenderer {
         Operator.GT,
         Operator.LTE,
         Operator.GTE -> "(comparisonExpr"
-        Operator.IS,
-        Operator.AS -> "(typeTestExpr"
         Operator.EQ_EQ,
         Operator.NOT_EQ -> "(equalityExpr"
         Operator.AND -> "(logicalAndExpr"
@@ -825,7 +823,7 @@ object SExprRenderer {
 
   fun renderTypeCastExpr(expr: TypeCastExpr) {
     buf.append(tab)
-    buf.append("(typeTestExpr")
+    buf.append("(typeCastExpr")
     val oldTab = increaseTab()
     buf.append('\n')
     renderExpr(expr.expr)
