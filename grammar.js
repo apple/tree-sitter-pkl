@@ -18,11 +18,17 @@
 
 /// <reference path="node_modules/tree-sitter-cli/dsl.d.ts" />
 
-/**
- * Operator precedences
- */
+/** Precedences */
 const PREC = {
-  ACCESS: 99,
+  QUALIFIED_IDENTIFIER: 31,
+  DECLARED_TYPE: 30,
+  CONSTRAINED_TYPE: 30,
+  NULLABLE_TYPE: 29,
+  UNION_DEFAULT_TYPE: 29,
+  UNION_TYPE: 28,
+  FUN_TYPE: 27,
+
+  ACCESS: 22,
   NON_NULL: 21,
   NEG: 20,
   NOT: 19,
@@ -44,13 +50,6 @@ const PREC = {
   TRACE: -7,
   READ: -8,
   FUN: -11,
-
-  DECLARED_TYPE: 30,
-  CONSTRAINED_TYPE: 30,
-  NULLABLE_TYPE: 29,
-  UNION_DEFAULT_TYPE: 29,
-  UNION_TYPE: 28,
-  FUN_TYPE: 27,
 
   AMEND_EXPR: 1,
   OBJ_MEMBER: -2,
@@ -148,6 +147,7 @@ module.exports = grammar({
 
   conflicts: $ => [
     [$.typedIdentifier, $.unqualifiedAccessExpr],
+    [$.qualifiedIdentifier]
   ],
 
   rules: {
@@ -389,7 +389,7 @@ module.exports = grammar({
 
     stringLiteralType: $ => $.stringConstant,
 
-    declaredType: $ => prec.right(seq($.qualifiedIdentifier, optional($.typeArgumentList))),
+    declaredType: $ => prec.right(PREC.DECLARED_TYPE, seq($.qualifiedIdentifier, optional($.typeArgumentList))),
 
     parenthesizedType: $ => seq("(", $._type, ")"),
 
@@ -844,10 +844,10 @@ module.exports = grammar({
 
     functionLiteralExpr: $ => prec(PREC.FUN, seq($.parameterList, "->", $._expr)),
 
-    qualifiedIdentifier: $ => prec.left(seq(
+    qualifiedIdentifier: $ => seq(
       $.identifier,
       repeat(seq(".", $.identifier)),
-    )),
+    ),
 
     // TODO: adapt to pkl
     identifier: $ => {

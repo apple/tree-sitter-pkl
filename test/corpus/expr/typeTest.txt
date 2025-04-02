@@ -4,6 +4,8 @@ typeTest
 foo = bar is Int(this < 0)
 
 qux = bar as Float
+
+corge = bar as foo.Bar
 ---
 
 (module
@@ -26,4 +28,13 @@ qux = bar as Float
         (identifier))
       (declaredType
         (qualifiedIdentifier
+          (identifier)))))
+  (classProperty
+    (identifier)
+    (typeCastExpr
+      (unqualifiedAccessExpr
+        (identifier))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)
           (identifier))))))
