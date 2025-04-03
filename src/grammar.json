@@ -1147,7 +1147,7 @@
     },
     "declaredType": {
       "type": "PREC_RIGHT",
-      "value": 0,
+      "value": 30,
       "content": {
         "type": "SEQ",
         "members": [
@@ -3237,7 +3237,7 @@
     },
     "subscriptExpr": {
       "type": "PREC_LEFT",
-      "value": 99,
+      "value": 22,
       "content": {
         "type": "SEQ",
         "members": [
@@ -3880,7 +3880,7 @@
     },
     "superAccessExpr": {
       "type": "PREC_LEFT",
-      "value": 99,
+      "value": 22,
       "content": {
         "type": "SEQ",
         "members": [
@@ -3913,7 +3913,7 @@
     },
     "superSubscriptExpr": {
       "type": "PREC_LEFT",
-      "value": 99,
+      "value": 22,
       "content": {
         "type": "SEQ",
         "members": [
@@ -3943,7 +3943,7 @@
     },
     "qualifiedAccessExpr": {
       "type": "PREC_LEFT",
-      "value": 99,
+      "value": 22,
       "content": {
         "type": "SEQ",
         "members": [
@@ -4014,33 +4014,29 @@
       }
     },
     "qualifiedIdentifier": {
-      "type": "PREC_LEFT",
-      "value": 0,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "identifier"
-          },
-          {
-            "type": "REPEAT",
-            "content": {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "."
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "identifier"
-                }
-              ]
-            }
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "."
+              },
+              {
+                "type": "SYMBOL",
+                "name": "identifier"
+              }
+            ]
           }
-        ]
-      }
+        }
+      ]
     },
     "identifier": {
       "type": "TOKEN",
@@ -4178,6 +4174,9 @@
     [
       "typedIdentifier",
       "unqualifiedAccessExpr"
+    ],
+    [
+      "qualifiedIdentifier"
     ]
   ],
   "precedences": [],

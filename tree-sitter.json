@@ -11,6 +11,9 @@
         "pkl"
       ],
       "injection-regex": "^pkl$",
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm",
+      "locals": "queries/locals.scm",
       "class-name": "TreeSitterPkl"
     }
   ],
