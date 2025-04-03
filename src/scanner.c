@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tree_sitter/parser.h>
+#include "tree_sitter/parser.h"
 #include <stdio.h>
 
 enum TokenType {
