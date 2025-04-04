@@ -1,7 +1,15 @@
 = Changelog
 
+[[release-0.18.1]]
+== 0.18.1 (2025-04-07)
+
+=== Fixes
+
+* Fix an issue where the project fails to be used as a Go library (https://github.com/apple/tree-sitter-pkl/pull/38[#38]).
+* Fix an issue where qualified identifiers are parsed incorrectly in some cases (https://github.com/apple/tree-sitter-pkl/pull/39[#39]).
+
 [[release-0.18.0]]
-== 0.18.0 (2024-03-27)
+== 0.18.0 (2025-03-27)
 
 This is a large change.
 It changes the parse tree to match other Pkl parsers, and also fixes all known parser issues.

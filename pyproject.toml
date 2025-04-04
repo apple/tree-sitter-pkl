@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "tree-sitter-pkl"
 description = "Parser for Pkl programming language"
-version = "0.18.0"
+version = "0.18.1"
 keywords = ["incremental", "parsing", "tree-sitter", "pkl"]
 classifiers = [
   "Intended Audience :: Developers",
