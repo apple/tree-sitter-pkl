@@ -1,6 +1,6 @@
 {
   "name": "@apple/tree-sitter-pkl",
-  "version": "0.18.0",
+  "version": "0.18.1",
   "description": "Pkl grammar for node-tree-sitter",
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-pkl
-        VERSION "0.18.0"
+        VERSION "0.18.1"
         DESCRIPTION "Parser for Pkl programming language"
         HOMEPAGE_URL "https://github.com/apple/tree-sitter-pkl"
         LANGUAGES C)
