@@ -12,7 +12,7 @@ A tree-sitter grammar for Pkl.
 # Tests
 
 Tree sitter comes with its own test framework. Files in `test/corpus/`
-describe one test each. All tests in `test/corpus/` are performed by the
+Describe one test each. All tests in `test/corpus/` are performed by the
 command
 
     $ tree-sitter test
