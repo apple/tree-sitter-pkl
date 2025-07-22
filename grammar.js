@@ -805,7 +805,7 @@ module.exports = grammar({
     logicalAndExpr: $ => prec.left(PREC.AND, seq($._expr, field('operator', "&&"), $._expr)),
 
     logicalOrExpr: $ => prec.left(PREC.OR, seq($._expr, field('operator', "||"), $._expr)),
-    
+
     pipeExpr: $ => prec.left(PREC.PIPE, seq($._expr, field('operator', "|>"), $._expr)),
 
     typeTestExpr: $ => prec(PREC.IS, seq($._expr, field("operator", "is"), $._type)),
@@ -877,7 +877,7 @@ module.exports = grammar({
 });
 
 function commaSep1 (rule) {
-  return seq(rule, repeat(seq(',', rule)));
+  return seq(rule, repeat(seq(',', rule)), optional(','));
 }
 
 function commaSep (rule) {
