@@ -2,8 +2,13 @@
 objectBodyParams
 ===
 
-foo { bar ->
-  res = bar
+root {
+  foo { bar ->
+    res = bar
+  }
+  zig { zag, zing, ->
+    pop = zag + zing
+  }
 }
 
 ---
@@ -12,10 +17,28 @@ foo { bar ->
   (classProperty
     (identifier)
     (objectBody
-      (objectBodyParameters
-        (typedIdentifier
-          (identifier)))
       (objectProperty
         (identifier)
-        (unqualifiedAccessExpr
-          (identifier))))))
+        (objectBody
+          (objectBodyParameters
+            (typedIdentifier
+              (identifier)))
+          (objectProperty
+            (identifier)
+            (unqualifiedAccessExpr
+              (identifier)))))
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectBodyParameters
+            (typedIdentifier
+              (identifier))
+            (typedIdentifier
+              (identifier)))
+          (objectProperty
+            (identifier)
+            (additiveExpr
+              (unqualifiedAccessExpr
+                (identifier))
+              (unqualifiedAccessExpr
+                (identifier)))))))))
