@@ -1,5 +1,12 @@
 = Changelog
 
+[[release-0.19.0]]
+== 0.19.0 (2025-10-30)
+
+=== Additions
+
+* Allow trailing commas in comma-separated syntax elements (https://github.com/apple/tree-sitter-pkl/pull/45[#45]).
+
 [[release-0.18.1]]
 == 0.18.1 (2025-04-07)
 
@@ -75,8 +82,7 @@ It changes the parse tree to match other Pkl parsers, and also fixes all known p
 
 === Fixes
 
-* Fix parsing of parenthesized expressions in object 
-elements
+* Fix parsing of parenthesized expressions in object elements
 * Fix parsing of union types with default markers
 * Add missing `else` in when generators
 * Add missing module type

@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-pkl
 HOMEPAGE_URL := https://github.com/apple/tree-sitter-pkl
-VERSION := 0.18.1
+VERSION := 0.19.0
 
 # repository
 SRC_DIR := src
