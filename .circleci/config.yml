@@ -18,7 +18,7 @@ jobs:
     - run:
         command: npm test
     docker:
-    - image: cimg/node:18.19.0
+    - image: cimg/node:24.11.0
   do-release:
     steps:
     - checkout
@@ -33,7 +33,7 @@ jobs:
         command: npm publish
         name: Publish to NPM
     docker:
-    - image: cimg/node:18.19.0
+    - image: cimg/node:24.11.0
   github-release:
     steps:
     - run:

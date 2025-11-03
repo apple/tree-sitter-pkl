@@ -6,6 +6,9 @@ root {
   foo { bar ->
     res = bar
   }
+  baz { qux, ->
+    res = quz
+  }
   zig { zag, zing, ->
     pop = zag + zing
   }
@@ -17,6 +20,16 @@ root {
   (classProperty
     (identifier)
     (objectBody
+      (objectProperty
+        (identifier)
+        (objectBody
+          (objectBodyParameters
+            (typedIdentifier
+              (identifier)))
+          (objectProperty
+            (identifier)
+            (unqualifiedAccessExpr
+              (identifier)))))
       (objectProperty
         (identifier)
         (objectBody
