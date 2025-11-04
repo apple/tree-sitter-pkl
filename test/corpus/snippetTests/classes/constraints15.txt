@@ -3,6 +3,8 @@ classes/constraints15.pkl
 ===
 
 res1: String(length >= 3, length <= 5) = "abcd"
+res2: String(length >= 3, length <= 5,) = "abcd"
+res3: String(length >= 3,) = "abcd"
 
 ---
 
@@ -18,6 +20,36 @@ res1: String(length >= 3, length <= 5) = "abcd"
           (unqualifiedAccessExpr
             (identifier))
           (intLiteralExpr))
+        (comparisonExpr
+          (unqualifiedAccessExpr
+            (identifier))
+          (intLiteralExpr))))
+    (slStringLiteralExpr
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (constrainedType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))
+        (comparisonExpr
+          (unqualifiedAccessExpr
+            (identifier))
+          (intLiteralExpr))
+        (comparisonExpr
+          (unqualifiedAccessExpr
+            (identifier))
+          (intLiteralExpr))))
+    (slStringLiteralExpr
+      (slStringLiteralPart)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (constrainedType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))
         (comparisonExpr
           (unqualifiedAccessExpr
             (identifier))

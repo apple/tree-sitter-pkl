@@ -17,22 +17,27 @@
     "url": "https://github.com/apple/tree-sitter-pkl/issues"
   },
   "engines": {
-    "node": "18.17.0",
-    "npm": "9.6.0"
+    "node": "^24.11.0",
+    "npm": "^11.6.1"
   },
   "dependencies": {
-    "nan": "^2.17.0"
+    "node-addon-api": "^8.5.0",
+    "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
-    "@types/glob": "^8.1.0",
-    "@types/node": "^20.4.5",
-    "node-gyp": "^9.1.0",
-    "tree-sitter": "^0.22.4",
-    "tree-sitter-cli": "^0.25.3",
-    "typescript": "^4.9.0"
+    "tree-sitter-cli": "^0.25.10",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.25.0"
+  },
+  "peerDependenciesMeta": {
+    "tree-sitter": {
+      "optional": true
+    }
   },
   "scripts": {
-    "build": "tree-sitter generate && node-gyp configure && node-gyp build",
+    "build": "tree-sitter generate && node-gyp-build",
     "generate": "tree-sitter generate --no-bindings",
     "test": "tree-sitter test",
     "getVersion": "node -p \"require('./package.json').version\""

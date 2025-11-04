@@ -1,5 +1,5 @@
-#ifndef TREE_SITTER_PKL_H
-#define TREE_SITTER_PKL_H
+#ifndef TREE_SITTER_PKL_H_
+#define TREE_SITTER_PKL_H_
 
 typedef struct TSLanguage TSLanguage;
 
@@ -7,10 +7,10 @@ typedef struct TSLanguage TSLanguage;
 extern "C" {
 #endif
 
-extern TSLanguage *tree_sitter_pkl();
+const TSLanguage *tree_sitter_pkl(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif  // TREE_SITTER_PKL_H
+#endif // TREE_SITTER_PKL_H_

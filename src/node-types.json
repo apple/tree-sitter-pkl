@@ -2521,6 +2521,7 @@
   {
     "type": "lineComment",
     "named": true,
+    "extra": true,
     "fields": {}
   },
   {
@@ -6093,6 +6094,7 @@
   {
     "type": "shebangComment",
     "named": true,
+    "extra": true,
     "fields": {}
   },
   {
