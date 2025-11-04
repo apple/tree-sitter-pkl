@@ -1,5 +1,12 @@
 = Changelog
 
+[[release-0.20.0]]
+== 0.20.0 (2025-11-03)
+
+=== Changes
+
+* Upgrade dependencies including node and tree-sitter (https://github.com/apple/tree-sitter-pkl/pull/48[#48]).
+
 [[release-0.19.0]]
 == 0.19.0 (2025-10-30)
 
