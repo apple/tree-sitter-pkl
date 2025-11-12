@@ -1,0 +1,26 @@
+# Do not modify!
+# This file was generated from a template using https://github.com/StefMa/pkl-gha
+
+name: Build (main)
+'on':
+  push:
+    branches:
+    - main
+    tags-ignore:
+    - '**'
+permissions:
+  contents: read
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - name: Setup nodejs
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24.11.0
+    - name: Build
+      run: npm ci
+    - name: Test
+      run: npm test

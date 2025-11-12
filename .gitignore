@@ -64,3 +64,6 @@ zig-out/
 *.tar.gz
 *.tgz
 *.zip
+
+# Pkl
+.pkl-lsp

@@ -1,0 +1,40 @@
+amends "@pkl.impl.ghactions/PklCI.pkl"
+
+import "@gha/Workflow.pkl"
+import "@gha/actions/Common.pkl"
+
+local baseJob: Workflow.Job = new {
+  `runs-on` = "ubuntu-latest"
+  steps {
+    new Common.Checkout {}
+    new {
+      name = "Setup nodejs"
+      uses = "actions/setup-node@v6"
+      with {
+        ["node-version"] = "24.11.0"
+      }
+    }
+    new {
+      name = "Build"
+      run = "npm ci"
+    }
+    new {
+      name = "Test"
+      run = "npm test"
+    }
+  }
+}
+
+local buildAndTest: Workflow = new {
+  jobs {
+    ["build-and-test"] = (baseJob) {
+      name = "Build and test"
+    }
+  }
+}
+
+build = buildAndTest
+
+prb = buildAndTest
+
+main = buildAndTest

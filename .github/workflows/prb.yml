@@ -1,0 +1,31 @@
+# Do not modify!
+# This file was generated from a template using https://github.com/StefMa/pkl-gha
+
+name: Pull Request
+'on':
+  pull_request: {}
+permissions:
+  contents: read
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - name: Setup nodejs
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24.11.0
+    - name: Build
+      run: npm ci
+    - name: Test
+      run: npm test
+  upload-event-file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Upload event file
+      if: '!cancelled()'
+      uses: actions/upload-artifact@v5
+      with:
+        name: test-results-event-file
+        path: ${{ github.event_path }}
