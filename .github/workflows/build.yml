@@ -12,6 +12,20 @@ name: Build
 permissions:
   contents: read
 jobs:
+  test-licenses:
+    name: Test license headers
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+      with:
+        fetch-depth: 0
+    - name: Install hawkeye
+      run: |-
+        curl -L -o hawkeye.tar.xz https://github.com/korandoru/hawkeye/releases/download/v6.3.0/hawkeye-x86_64-unknown-linux-gnu.tar.xz
+        tar xf hawkeye.tar.xz
+        chmod +x hawkeye
+    - name: Check licenses
+      run: ./hawkeye check --fail-if-unknown
   build-and-test:
     name: Build and test
     runs-on: ubuntu-latest
