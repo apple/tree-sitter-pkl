@@ -16,8 +16,21 @@
 
 amends "@pkl.impl.ghactions/PklCI.pkl"
 
-import "@gha/Workflow.pkl"
 import "@gha/actions/Common.pkl"
+import "@gha/Workflow.pkl"
+
+build = buildAndTest
+
+prb = buildAndTest
+
+main = buildAndTest
+
+release = new {
+  jobs {
+    ["npm-publish"] = npmPublishJob
+    ["github-release"] = releaseToGithubJob
+  }
+}
 
 local baseJob: Workflow.Job = new {
   `runs-on` = "ubuntu-latest"
@@ -76,8 +89,49 @@ local buildAndTest: Workflow = new {
   }
 }
 
-build = buildAndTest
+local releaseToGithubJob: Workflow.Job = new {
+  name = "Create GitHub Release"
+  `runs-on` = "ubuntu-latest"
+  permissions {
+    contents = "write"
+  }
+  steps {
+    new Common.Checkout {}
+    new {
+      name = "Create Release"
+      uses = "softprops/action-gh-release@v2"
+    }
+  }
+}
 
-prb = buildAndTest
-
-main = buildAndTest
+local npmPublishJob: Workflow.Job = new {
+  name = "Publish to npm"
+  `runs-on` = "ubuntu-latest"
+  permissions {
+    contents = "read"
+    `id-token` = "write"
+  }
+  steps {
+    new Common.Checkout {}
+    new {
+      name = "Setup Node.js"
+      uses = "actions/setup-node@v6"
+      with {
+        ["node-version"] = "24.11.0"
+        ["registry-url"] = "https://registry.npmjs.org"
+      }
+    }
+    new {
+      name = "Build"
+      run = "npm ci"
+    }
+    new {
+      name = "Test"
+      run = "npm test"
+    }
+    new {
+      name = "Publish to npm"
+      run = "npm publish --provenance"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+# Do not modify!
+# This file was generated from a template using https://github.com/StefMa/pkl-gha
+
+name: Release
+'on':
+  push:
+    branches-ignore:
+    - '**'
+    tags:
+    - '**'
+permissions:
+  contents: read
+jobs:
+  npm-publish:
+    name: Publish to npm
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - name: Setup Node.js
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24.11.0
+        registry-url: https://registry.npmjs.org
+    - name: Build
+      run: npm ci
+    - name: Test
+      run: npm test
+    - name: Publish to npm
+      run: npm publish --provenance
+  github-release:
+    name: Create GitHub Release
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
