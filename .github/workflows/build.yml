@@ -23,7 +23,7 @@ jobs:
       run: |-
         curl -L -o hawkeye.tar.xz https://github.com/korandoru/hawkeye/releases/download/v6.3.0/hawkeye-x86_64-unknown-linux-gnu.tar.xz
         tar xf hawkeye.tar.xz
-        chmod +x hawkeye
+        cp hawkeye-x86_64-unknown-linux-gnu/hawkeye .
     - name: Check licenses
       run: ./hawkeye check --fail-if-unknown
   build-and-test:
