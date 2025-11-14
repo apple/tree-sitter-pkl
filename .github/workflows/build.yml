@@ -1,0 +1,44 @@
+# Do not modify!
+# This file was generated from a template using https://github.com/StefMa/pkl-gha
+
+name: Build
+'on':
+  push:
+    branches-ignore:
+    - main
+    - release/*
+    tags-ignore:
+    - '**'
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  test-licenses:
+    name: Test license headers
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+      with:
+        fetch-depth: 0
+    - name: Install hawkeye
+      run: |-
+        curl -L -o hawkeye.tar.xz https://github.com/korandoru/hawkeye/releases/download/v6.3.0/hawkeye-x86_64-unknown-linux-gnu.tar.xz
+        tar xf hawkeye.tar.xz
+        cp hawkeye-x86_64-unknown-linux-gnu/hawkeye .
+    - name: Check licenses
+      run: ./hawkeye check --fail-if-unknown
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - name: Setup nodejs
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24.11.0
+    - name: Build
+      run: npm ci
+    - name: Test
+      run: npm test
