@@ -1,6 +1,4 @@
-# Do not modify!
-# This file was generated from a template using https://github.com/StefMa/pkl-gha
-
+# Generated from Workflow.pkl. DO NOT EDIT.
 name: Release
 'on':
   push:
@@ -21,13 +19,13 @@ jobs:
       id-token: write
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
       with:
         persist-credentials: false
     - name: Setup Node.js
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6
       with:
-        node-version: 24.11.0
+        node-version: 24.x
         registry-url: https://registry.npmjs.org
     - name: Build
       run: npm ci
@@ -41,8 +39,8 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
       with:
         persist-credentials: false
     - name: Create Release
-      uses: softprops/action-gh-release@v2
+      uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2
