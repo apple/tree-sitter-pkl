@@ -1,0 +1,38 @@
+================================================================================
+moduleHeader7
+================================================================================
+
+amends Foo in "bar.pkl"
+import "baz.pkl" as _baz
+import "qux.pkl" as { quux, corge as _corge }
+import "grault.pkl" as _grault, { garply as _garply }
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (extendsOrAmendsClause
+      (identifier)
+      (stringConstant
+        (slStringLiteralPart))))
+  (importClause
+    (stringConstant
+      (slStringLiteralPart))
+    (identifier))
+  (importClause
+    (stringConstant
+      (slStringLiteralPart))
+    (importDestructionList
+      (importDestruction
+        (identifier))
+      (importDestruction
+        (identifier)
+        (identifier))))
+  (importClause
+    (stringConstant
+      (slStringLiteralPart))
+    (identifier)
+    (importDestructionList
+      (importDestruction
+        (identifier)
+        (identifier)))))
