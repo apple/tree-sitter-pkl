@@ -17,6 +17,7 @@
 amends "@pkl.impl.ghactions/PklCI.pkl"
 
 import "@com.github.actions/catalog.pkl"
+import "@com.github.actions/context.pkl"
 import "@com.github.actions/Workflow.pkl"
 
 build = buildAndTest
@@ -97,8 +98,31 @@ local releaseToGithubJob: Workflow.Job = new {
   steps {
     (catalog.`actions/checkout@v6`) {}
     new {
-      name = "Create Release"
-      uses = "softprops/action-gh-release@v2"
+      name = "Publish release to GitHub"
+      env {
+        ["GH_TOKEN"] = context.github.token
+        ["GH_REPO"] = context.github.repository
+        ["GIT_TAG"] = context.github.refName
+      }
+      run =
+        #"""
+        # strip preceding "v"
+        VERSION="${GIT_TAG:1}"
+        EXPECTED_VERSION=$(jq -r .version package.json)
+
+        if [ "${EXPECTED_VERSION}" != "${VERSION}" ]; then
+          echo "Mismatching versions!"
+          echo "package.json has ${EXPECTED_VERSION}"
+          echo "Inferred version from Git tag is ${VERSION}"
+          echo "Use 'tree-sitter version ${VERSION}' to match the tag, and re-tag."
+          exit 1
+        fi
+
+        gh release create "${GIT_TAG}" \
+          --title "${GIT_TAG}" \
+          --verify-tag \
+          --notes ""
+        """#
     }
   }
 }
