@@ -22,5 +22,3 @@ jobs:
       uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
     - name: actions/upload-artifact@v5
       uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
-    - name: softprops/action-gh-release@v2
-      uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2
