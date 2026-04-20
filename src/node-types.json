@@ -3431,6 +3431,10 @@
           "named": true
         },
         {
+          "type": "mlStringContinuation",
+          "named": true
+        },
+        {
           "type": "mlStringLiteralPart",
           "named": true
         },
@@ -8655,6 +8659,10 @@
   {
     "type": "local",
     "named": false
+  },
+  {
+    "type": "mlStringContinuation",
+    "named": true
   },
   {
     "type": "module",
