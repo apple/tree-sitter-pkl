@@ -59,6 +59,7 @@ zig-out/
 *.wasm
 *.obj
 *.o
+log.html
 
 # Archives
 *.tar.gz

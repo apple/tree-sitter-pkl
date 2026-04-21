@@ -2612,6 +2612,10 @@
                   },
                   {
                     "type": "SYMBOL",
+                    "name": "mlStringContinuation"
+                  },
+                  {
+                    "type": "SYMBOL",
                     "name": "escapeSequence"
                   },
                   {
@@ -2656,6 +2660,15 @@
                     },
                     "named": true,
                     "value": "escapeSequence"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "mlStringContinuation1"
+                    },
+                    "named": true,
+                    "value": "mlStringContinuation"
                   },
                   {
                     "type": "ALIAS",
@@ -2709,6 +2722,15 @@
                     "type": "ALIAS",
                     "content": {
                       "type": "SYMBOL",
+                      "name": "mlStringContinuation2"
+                    },
+                    "named": true,
+                    "value": "mlStringContinuation"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
                       "name": "stringInterpolation2"
                     },
                     "named": true,
@@ -2752,6 +2774,15 @@
                     },
                     "named": true,
                     "value": "escapeSequence"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "mlStringContinuation3"
+                    },
+                    "named": true,
+                    "value": "mlStringContinuation"
                   },
                   {
                     "type": "ALIAS",
@@ -2805,6 +2836,15 @@
                     "type": "ALIAS",
                     "content": {
                       "type": "SYMBOL",
+                      "name": "mlStringContinuation4"
+                    },
+                    "named": true,
+                    "value": "mlStringContinuation"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
                       "name": "stringInterpolation4"
                     },
                     "named": true,
@@ -2853,6 +2893,15 @@
                     "type": "ALIAS",
                     "content": {
                       "type": "SYMBOL",
+                      "name": "mlStringContinuation5"
+                    },
+                    "named": true,
+                    "value": "mlStringContinuation"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
                       "name": "stringInterpolation5"
                     },
                     "named": true,
@@ -2896,6 +2945,15 @@
                     },
                     "named": true,
                     "value": "escapeSequence"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "mlStringContinuation6"
+                    },
+                    "named": true,
+                    "value": "mlStringContinuation"
                   },
                   {
                     "type": "ALIAS",
@@ -3118,6 +3176,55 @@
             ]
           }
         ]
+      }
+    },
+    "mlStringContinuation": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\\\\\r?\\n"
+      }
+    },
+    "mlStringContinuation1": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\\\#\\r?\\n"
+      }
+    },
+    "mlStringContinuation2": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\\\##\\r?\\n"
+      }
+    },
+    "mlStringContinuation3": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\\\###\\r?\\n"
+      }
+    },
+    "mlStringContinuation4": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\\\####\\r?\\n"
+      }
+    },
+    "mlStringContinuation5": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\\\#####\\r?\\n"
+      }
+    },
+    "mlStringContinuation6": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\\\######\\r?\\n"
       }
     },
     "stringInterpolation": {

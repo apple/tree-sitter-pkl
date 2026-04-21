@@ -1,5 +1,5 @@
 /*
- * Copyright © 2024-2025 Apple Inc. and the Pkl project authors. All rights reserved.
+ * Copyright © 2024-2026 Apple Inc. and the Pkl project authors. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -137,7 +137,7 @@ static bool parse_slx_string_chars(TSLexer *lexer, int num_pounds) {
 static bool parse_ml_string_chars(TSLexer *lexer) {
   bool has_content = false;
   lexer->result_symbol = ML_STRING_CHARS;
-  
+
   while (true) {
     switch (lexer->lookahead) {
       case '"':
@@ -302,7 +302,7 @@ bool tree_sitter_pkl_external_scanner_scan(void *payload, TSLexer *lexer, const 
     // error recovery mode -> don't match any string chars
     return false;
   }
-  
+
   if (sl) {
     return parse_sl_string_chars(lexer);
   }

@@ -44,3 +44,6 @@ indent_size = 2
 
 [{alloc,array,parser}.h]
 indent_size = 2
+
+[*.txt]
+trim_trailing_whitespace = false

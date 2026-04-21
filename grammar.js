@@ -1,7 +1,5 @@
-// noinspection JSUnusedLocalSymbols
-
 /*
- * Copyright © 2024-2025 Apple Inc. and the Pkl project authors. All rights reserved.
+ * Copyright © 2024-2026 Apple Inc. and the Pkl project authors. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -633,6 +631,7 @@ module.exports = grammar({
         '"""',
         repeat(choice(
           $.mlStringLiteralPart,
+          $.mlStringContinuation,
           $.escapeSequence,
           $.stringInterpolation
         )),
@@ -643,6 +642,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart1, $.mlStringLiteralPart),
           alias($.escapeSequence1, $.escapeSequence),
+          alias($.mlStringContinuation1, $.mlStringContinuation),
           alias($.stringInterpolation1, $.stringInterpolation)
         )),
         '"""#'
@@ -652,6 +652,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart2, $.mlStringLiteralPart),
           alias($.escapeSequence2, $.escapeSequence),
+          alias($.mlStringContinuation2, $.mlStringContinuation),
           alias($.stringInterpolation2, $.stringInterpolation)
         )),
         '"""##'
@@ -661,6 +662,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart3, $.mlStringLiteralPart),
           alias($.escapeSequence3, $.escapeSequence),
+          alias($.mlStringContinuation3, $.mlStringContinuation),
           alias($.stringInterpolation3, $.stringInterpolation)
         )),
         '"""###'
@@ -670,6 +672,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart4, $.mlStringLiteralPart),
           alias($.escapeSequence4, $.escapeSequence),
+          alias($.mlStringContinuation4, $.mlStringContinuation),
           alias($.stringInterpolation4, $.stringInterpolation)
         )),
         '"""####'
@@ -679,6 +682,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart5, $.mlStringLiteralPart),
           alias($.escapeSequence5, $.escapeSequence),
+          alias($.mlStringContinuation5, $.mlStringContinuation),
           alias($.stringInterpolation5, $.stringInterpolation)
         )),
         '"""#####'
@@ -688,6 +692,7 @@ module.exports = grammar({
         repeat(choice(
           alias($.mlStringLiteralPart6, $.mlStringLiteralPart),
           alias($.escapeSequence6, $.escapeSequence),
+          alias($.mlStringContinuation6, $.mlStringContinuation),
           alias($.stringInterpolation6, $.stringInterpolation)
         )),
         '"""######'
@@ -763,6 +768,20 @@ module.exports = grammar({
         /u\{[0-9a-fA-F]+}/
       )
     )),
+
+    mlStringContinuation: $ => token.immediate(/\\\r?\n/),
+
+    mlStringContinuation1: $ => token.immediate(/\\#\r?\n/),
+
+    mlStringContinuation2: $ => token.immediate(/\\##\r?\n/),
+
+    mlStringContinuation3: $ => token.immediate(/\\###\r?\n/),
+
+    mlStringContinuation4: $ => token.immediate(/\\####\r?\n/),
+
+    mlStringContinuation5: $ => token.immediate(/\\#####\r?\n/),
+
+    mlStringContinuation6: $ => token.immediate(/\\######\r?\n/),
 
     stringInterpolation: $ => seq(token.immediate("\\("), $._expr, ")"),
 
