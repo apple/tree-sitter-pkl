@@ -158,3 +158,18 @@ local npmPublishJob: Workflow.Job = new {
     }
   }
 }
+
+dependabot {
+  updates {
+    new {
+      `package-ecosystem` = "npm"
+      directory = "/"
+      cooldown {
+        `default-days` = 7
+      }
+      schedule {
+        interval = "weekly"
+      }
+    }
+  }
+}
