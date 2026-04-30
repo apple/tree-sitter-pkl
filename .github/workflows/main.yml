@@ -40,5 +40,9 @@ jobs:
         node-version: 24.x
     - name: Build
       run: npm ci
+    - name: Check Code Generation
+      run: |-
+        npm run generate
+        git diff --name-only --exit-code
     - name: Test
       run: npm test
