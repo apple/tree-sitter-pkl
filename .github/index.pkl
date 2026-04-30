@@ -48,6 +48,13 @@ local baseJob: Workflow.Job = new {
       run = "npm ci"
     }
     new {
+      name = "Check Code Generation"
+      run = """
+        npm run generate
+        git diff --name-only --exit-code
+        """
+    }
+    new {
       name = "Test"
       run = "npm test"
     }

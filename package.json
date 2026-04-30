@@ -38,7 +38,7 @@
   },
   "scripts": {
     "build": "tree-sitter generate && node-gyp-build",
-    "generate": "tree-sitter generate --no-bindings",
+    "generate": "tree-sitter generate",
     "test": "tree-sitter test",
     "getVersion": "node -p \"require('./package.json').version\""
   },
