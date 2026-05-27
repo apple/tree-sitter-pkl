@@ -19,6 +19,7 @@ amends "@pkl.impl.ghactions/PklCI.pkl"
 import "@com.github.actions/catalog.pkl"
 import "@com.github.actions/context.pkl"
 import "@com.github.actions/Workflow.pkl"
+import "@pkl.impl.ghactions/jobs/HawkeyeCheck.pkl"
 
 build = buildAndTest
 
@@ -49,7 +50,8 @@ local baseJob: Workflow.Job = new {
     }
     new {
       name = "Check Code Generation"
-      run = """
+      run =
+        """
         npm run generate
         git diff --name-only --exit-code
         """
@@ -61,35 +63,9 @@ local baseJob: Workflow.Job = new {
   }
 }
 
-local testLicenses: Workflow.Job = new {
-  name = "Test license headers"
-  `runs-on` = "ubuntu-latest"
-  steps {
-    (catalog.`actions/checkout@v6`) {
-      with {
-        `fetch-depth` = 0
-      }
-    }
-    new {
-      name = "Install hawkeye"
-      // language=bash
-      run =
-        """
-        curl -L -o hawkeye.tar.xz https://github.com/korandoru/hawkeye/releases/download/v6.3.0/hawkeye-x86_64-unknown-linux-gnu.tar.xz
-        tar xf hawkeye.tar.xz
-        cp hawkeye-x86_64-unknown-linux-gnu/hawkeye .
-        """
-    }
-    new {
-      name = "Check licenses"
-      run = "./hawkeye check --fail-if-unknown"
-    }
-  }
-}
-
 local buildAndTest: Workflow = new {
   jobs {
-    ["test-licenses"] = testLicenses
+    ["test-licenses"] = new HawkeyeCheck {}.job
     ["build-and-test"] = (baseJob) {
       name = "Build and test"
     }

@@ -15,20 +15,18 @@ permissions:
   contents: read
 jobs:
   test-licenses:
-    name: Test license headers
+    name: hawkeye-check
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       with:
+        ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || '' }}
         persist-credentials: false
         fetch-depth: 0
-    - name: Install hawkeye
-      run: |-
-        curl -L -o hawkeye.tar.xz https://github.com/korandoru/hawkeye/releases/download/v6.3.0/hawkeye-x86_64-unknown-linux-gnu.tar.xz
-        tar xf hawkeye.tar.xz
-        cp hawkeye-x86_64-unknown-linux-gnu/hawkeye .
-    - name: Check licenses
-      run: ./hawkeye check --fail-if-unknown
+    - run: git config --global --add safe.directory $(pwd)
+    - run: hawkeye check --config licenserc.toml --fail-if-unknown
+    container:
+      image: ghcr.io/korandoru/hawkeye@sha256:e0abf8dbfaeeeba1249679d662d9fb404b1dcdb041c6093ea1f7a6edb7d89319
   build-and-test:
     name: Build and test
     runs-on: ubuntu-latest
