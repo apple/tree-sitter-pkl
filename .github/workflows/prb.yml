@@ -40,6 +40,15 @@ jobs:
         git diff --name-only --exit-code
     - name: Test
       run: npm test
+  verdict:
+    if: '!cancelled() && !failure()'
+    needs:
+    - check-pkl-github-actions
+    - test-licenses
+    - build-and-test
+    runs-on: ubuntu-latest
+    steps:
+    - run: 'true'
   upload-event-file:
     runs-on: ubuntu-latest
     steps:
