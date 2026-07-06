@@ -17,8 +17,8 @@
     "url": "https://github.com/apple/tree-sitter-pkl/issues"
   },
   "engines": {
-    "node": "^24.11.0",
-    "npm": "^11.6.1"
+    "node": ">= 24",
+    "npm": ">= 11"
   },
   "dependencies": {
     "node-addon-api": "^8.5.0",
