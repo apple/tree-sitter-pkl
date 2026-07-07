@@ -10,14 +10,15 @@
 === Fixes
 
 * Fix Rust binding library (https://github.com/apple/tree-sitter-pkl/pull/52[#52]).
+* Enable compatibility with Node 25+ and NPM 12+ (https://github.com/apple/tree-sitter-pkl/pull/87[#87]).
 
 === Contributors ❤️
 
 Thanks to all the contributors for this release!
 
+* https://github.com/bioball[@bioball]
 * https://github.com/HT154[@HT154]
 * https://github.com/vmeurisse[@vmeurisse]
-
 
 [[release-0.20.0]]
 == 0.20.0 (2025-11-03)
