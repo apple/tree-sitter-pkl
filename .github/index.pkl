@@ -113,6 +113,7 @@ local releaseToGithubJob: Workflow.Job = new {
 local npmPublishJob: Workflow.Job = new {
   name = "Publish to npm"
   `runs-on` = "ubuntu-latest"
+  environment = "npmjs"
   permissions {
     contents = "read"
     `id-token` = "write"
