@@ -1,5 +1,24 @@
 = Changelog
 
+[[release-0.21.0]]
+== 0.21.0 (2026-07-07)
+
+=== Additions
+
+* Add support for multi-line string line continuations (https://github.com/apple/tree-sitter-pkl/pull/69[#69]).
+
+=== Fixes
+
+* Fix Rust binding library (https://github.com/apple/tree-sitter-pkl/pull/52[#52]).
+
+=== Contributors ❤️
+
+Thanks to all the contributors for this release!
+
+* https://github.com/HT154[@HT154]
+* https://github.com/vmeurisse[@vmeurisse]
+
+
 [[release-0.20.0]]
 == 0.20.0 (2025-11-03)
 

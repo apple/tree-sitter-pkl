@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-pkl"
 description = "Parser for Pkl programming language"
-version = "0.20.0"
+version = "0.21.0"
 authors = ["The Pkl Authors <pkl-oss@group.apple.com>"]
 license = "Apache-2.0"
 readme = "README.md"
