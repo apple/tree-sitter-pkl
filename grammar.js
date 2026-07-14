@@ -375,6 +375,7 @@ module.exports = grammar({
       alias("unknown", $.unknownType),
       alias("nothing", $.nothingType),
       alias("module", $.moduleType),
+      alias("this", $.thisType),
       $.stringLiteralType,
       $.declaredType,
       $.parenthesizedType,
