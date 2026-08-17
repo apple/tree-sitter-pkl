@@ -1211,6 +1211,10 @@
           "named": true
         },
         {
+          "type": "thisType",
+          "named": true
+        },
+        {
           "type": "throwExpr",
           "named": true
         },
@@ -1310,6 +1314,10 @@
         },
         {
           "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "thisType",
           "named": true
         },
         {
@@ -2095,6 +2103,10 @@
         },
         {
           "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "thisType",
           "named": true
         },
         {
@@ -3789,6 +3801,10 @@
           "named": true
         },
         {
+          "type": "thisType",
+          "named": true
+        },
+        {
           "type": "unionType",
           "named": true
         },
@@ -4186,6 +4202,10 @@
         },
         {
           "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "thisType",
           "named": true
         },
         {
@@ -5524,6 +5544,10 @@
           "named": true
         },
         {
+          "type": "thisType",
+          "named": true
+        },
+        {
           "type": "unionType",
           "named": true
         },
@@ -6847,6 +6871,11 @@
     }
   },
   {
+    "type": "thisExpr",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "throwExpr",
     "named": true,
     "fields": {},
@@ -7241,6 +7270,10 @@
           "named": true
         },
         {
+          "type": "thisType",
+          "named": true
+        },
+        {
           "type": "typeParameterList",
           "named": true
         },
@@ -7300,6 +7333,10 @@
           "named": true
         },
         {
+          "type": "thisType",
+          "named": true
+        },
+        {
           "type": "unionType",
           "named": true
         },
@@ -7352,6 +7389,10 @@
         },
         {
           "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "thisType",
           "named": true
         },
         {
@@ -7546,6 +7587,10 @@
         },
         {
           "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "thisType",
           "named": true
         },
         {
@@ -7798,6 +7843,10 @@
         },
         {
           "type": "thisExpr",
+          "named": true
+        },
+        {
+          "type": "thisType",
           "named": true
         },
         {
@@ -8067,6 +8116,10 @@
         },
         {
           "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "thisType",
           "named": true
         },
         {
@@ -8713,7 +8766,11 @@
     "named": false
   },
   {
-    "type": "thisExpr",
+    "type": "this",
+    "named": false
+  },
+  {
+    "type": "thisType",
     "named": true
   },
   {

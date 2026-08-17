@@ -110,6 +110,7 @@
 "let" @keyword
 "local" @keyword
 (moduleExpr "module" @type.builtin)
+(thisType) @type.builtin
 "module" @keyword
 "new" @keyword
 (nullLiteralExpr) @constant.builtin
