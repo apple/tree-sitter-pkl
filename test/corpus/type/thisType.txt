@@ -1,0 +1,11 @@
+===
+thisType
+===
+res: this
+---
+
+(module
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (thisType))))
