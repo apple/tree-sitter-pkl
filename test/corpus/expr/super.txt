@@ -6,6 +6,7 @@ exprs {
   super.foo
   super.foo()
   super["foo"]
+  super.foo::<Bar>()
 }
 
 ---
@@ -24,4 +25,13 @@ exprs {
       (objectElement
         (superSubscriptExpr
           (slStringLiteralExpr
-            (slStringLiteralPart)))))))
+            (slStringLiteralPart))))
+      (objectElement
+        (superAccessExpr
+          (identifier)
+          (methodTypeArguments
+            (typeArgumentList
+              (declaredType
+                (qualifiedIdentifier
+                  (identifier)))))
+          (argumentList))))))

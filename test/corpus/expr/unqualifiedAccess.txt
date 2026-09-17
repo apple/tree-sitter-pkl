@@ -1,0 +1,19 @@
+===
+unqualifiedAccess
+===
+
+res1 = foo::<Bar>()
+
+---
+
+(module
+  (classProperty
+    (identifier)
+    (unqualifiedAccessExpr
+      (identifier)
+      (methodTypeArguments
+        (typeArgumentList
+          (declaredType
+            (qualifiedIdentifier
+              (identifier)))))
+      (argumentList))))
