@@ -25,6 +25,8 @@ res8 = foo
 res10 = foo.bar
 
 res11 = "foo" + List("bar").join("")
+
+res12 = foo.bar::<Baz>()
 ---
 
 (module
@@ -99,4 +101,16 @@ res11 = "foo" + List("bar").join("")
               (slStringLiteralPart))))
         (identifier)
         (argumentList
-          (slStringLiteralExpr))))))
+          (slStringLiteralExpr)))))
+  (classProperty
+    (identifier)
+    (qualifiedAccessExpr
+      (unqualifiedAccessExpr
+        (identifier))
+      (identifier)
+      (methodTypeArguments
+        (typeArgumentList
+          (declaredType
+            (qualifiedIdentifier
+              (identifier)))))
+      (argumentList))))

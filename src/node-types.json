@@ -3431,6 +3431,21 @@
     }
   },
   {
+    "type": "methodTypeArguments",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "typeArgumentList",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "mlStringLiteralExpr",
     "named": true,
     "fields": {},
@@ -5914,6 +5929,10 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "methodTypeArguments",
+          "named": true
         }
       ]
     }
@@ -6698,6 +6717,10 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "methodTypeArguments",
           "named": true
         }
       ]
@@ -8148,6 +8171,10 @@
         {
           "type": "identifier",
           "named": true
+        },
+        {
+          "type": "methodTypeArguments",
+          "named": true
         }
       ]
     }
@@ -8522,6 +8549,10 @@
   },
   {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": "::",
     "named": false
   },
   {
