@@ -10,7 +10,7 @@ function foo() = "parrot"
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (classMethod

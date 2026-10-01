@@ -10,7 +10,7 @@ renderer { mode = "1.2" }
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (classProperty

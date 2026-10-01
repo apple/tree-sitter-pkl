@@ -20,10 +20,9 @@ res2b = List(25, 26, 27).map((n) -> f2(n))
 (module
   (moduleHeader
     (moduleClause
-
       (qualifiedIdentifier
         (identifier)))
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (classMethod

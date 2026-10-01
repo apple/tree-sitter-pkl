@@ -21,11 +21,12 @@ parrot: Teacher = new Teacher {
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

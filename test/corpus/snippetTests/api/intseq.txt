@@ -101,7 +101,7 @@ examples {
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (importClause

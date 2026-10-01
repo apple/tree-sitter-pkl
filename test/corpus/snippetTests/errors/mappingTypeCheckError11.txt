@@ -101,6 +101,7 @@ class Bar extends Foo
     (modifier)
     (identifier))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))))

@@ -190,7 +190,7 @@ examples {
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (classProperty
@@ -232,7 +232,8 @@ examples {
     (identifier))
   (clazz
     (modifier)
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier))))
   (classProperty

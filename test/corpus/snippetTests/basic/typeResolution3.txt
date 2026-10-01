@@ -14,7 +14,7 @@ local ppp3: Person3 = new Person3 {}
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (clazz

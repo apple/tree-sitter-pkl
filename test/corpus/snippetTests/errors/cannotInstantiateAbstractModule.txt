@@ -10,7 +10,6 @@ res1 = new module {}
 (module
   (moduleHeader
     (moduleClause
-
       (modifier)
       (qualifiedIdentifier
         (identifier))))

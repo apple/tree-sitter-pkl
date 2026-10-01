@@ -37,7 +37,8 @@ res3 = (res2) {
             (qualifiedIdentifier
               (identifier)))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

@@ -36,11 +36,10 @@ facts {
   (moduleHeader
     (docComment)
     (moduleClause
-
       (qualifiedIdentifier
         (identifier)
         (identifier)))
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (importClause

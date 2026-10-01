@@ -62,28 +62,33 @@ output {
               (identifier)))))))
   (clazz
     (modifier)
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody))
   (clazz
     (modifier)
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody))

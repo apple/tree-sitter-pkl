@@ -122,7 +122,6 @@ res4 = (res3) {
           (identifier)
           (objectBody
             (objectBodyParameters
-
               (typedIdentifier
                 (identifier)))
             (objectProperty

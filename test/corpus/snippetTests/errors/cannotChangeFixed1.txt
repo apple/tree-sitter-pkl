@@ -25,7 +25,8 @@ class Dog extends Animal {
             (qualifiedIdentifier
               (identifier)))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

@@ -24,7 +24,6 @@ res4b = List(37, 38, 39).map((n) -> deprecated2.f2(n))
 (module
   (moduleHeader
     (moduleClause
-
       (qualifiedIdentifier
         (identifier))))
   (importClause

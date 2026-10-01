@@ -17,10 +17,9 @@ name = "pigeon1"
 (module
   (moduleHeader
     (moduleClause
-
       (qualifiedIdentifier
         (identifier)))
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (classProperty

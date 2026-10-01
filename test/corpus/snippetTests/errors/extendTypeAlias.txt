@@ -21,7 +21,8 @@ qux = new Baz {}
           (identifier)))
       (trueLiteralExpr)))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier))))
   (classProperty

@@ -192,7 +192,8 @@ res18 = new Bar2 {}.x
               (qualifiedIdentifier
                 (identifier))))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -207,7 +208,8 @@ res18 = new Bar2 {}.x
         (slStringLiteralExpr
           (slStringLiteralPart)))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -222,7 +224,8 @@ res18 = new Bar2 {}.x
         (slStringLiteralExpr
           (slStringLiteralPart)))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -237,7 +240,8 @@ res18 = new Bar2 {}.x
         (slStringLiteralExpr
           (slStringLiteralPart)))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -252,7 +256,8 @@ res18 = new Bar2 {}.x
         (slStringLiteralExpr
           (slStringLiteralPart)))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -413,7 +418,8 @@ res18 = new Bar2 {}.x
                   (identifier)
                   (argumentList)))))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -469,7 +475,8 @@ res18 = new Bar2 {}.x
           (identifier)
           (argumentList)))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

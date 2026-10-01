@@ -13,3 +13,29 @@ foo {
   """
 }
 ---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (mlStringLiteralExpr
+          (mlStringLiteralPart)
+          (stringInterpolation
+            (unqualifiedAccessExpr
+              (identifier)))
+          (mlStringLiteralPart)))
+      (objectElement
+        (mlStringLiteralExpr
+          (mlStringLiteralPart)
+          (stringInterpolation
+            (unqualifiedAccessExpr
+              (identifier)))
+          (mlStringLiteralPart)))
+      (objectElement
+        (mlStringLiteralExpr
+          (mlStringLiteralPart)
+          (stringInterpolation
+            (unqualifiedAccessExpr
+              (identifier)))
+          (mlStringLiteralPart))))))

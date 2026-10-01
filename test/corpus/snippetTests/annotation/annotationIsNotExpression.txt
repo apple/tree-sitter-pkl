@@ -13,7 +13,8 @@ foo = 1
 
 (module
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier))))
   (classProperty

@@ -50,7 +50,7 @@ res18 = foo.ff3
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (clazz

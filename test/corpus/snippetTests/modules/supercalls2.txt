@@ -17,11 +17,10 @@ sameProp = super.sameProp + "b"
 (module
   (moduleHeader
     (moduleClause
-
       (modifier)
       (qualifiedIdentifier
         (identifier)))
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (classProperty

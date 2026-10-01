@@ -68,7 +68,6 @@ example6 {
                 (identifier)))
             (objectBody
               (objectBodyParameters
-
                 (typedIdentifier
                   (identifier)
                   (typeAnnotation
@@ -110,7 +109,6 @@ example6 {
                 (identifier)))
             (objectBody
               (objectBodyParameters
-
                 (typedIdentifier
                   (identifier))
                 (typedIdentifier
@@ -163,7 +161,6 @@ example6 {
                       (identifier)))
                   (objectBody
                     (objectBodyParameters
-
                       (typedIdentifier
                         (identifier))
                       (typedIdentifier
@@ -229,7 +226,6 @@ example6 {
                         (identifier)))
                     (objectBody
                       (objectBodyParameters
-
                         (typedIdentifier
                           (identifier)
                           (typeAnnotation
@@ -291,7 +287,6 @@ example6 {
                 (identifier)))
             (objectBody
               (objectBodyParameters
-
                 (typedIdentifier
                   (identifier)
                   (typeAnnotation
@@ -374,7 +369,6 @@ example6 {
                       (identifier)))
                   (objectBody
                     (objectBodyParameters
-
                       (typedIdentifier
                         (identifier)
                         (typeAnnotation

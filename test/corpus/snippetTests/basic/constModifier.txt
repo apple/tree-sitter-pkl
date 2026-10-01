@@ -77,7 +77,6 @@ res04 = test.catch(() -> "\(new BrokenFunction {})")
 (module
   (moduleHeader
     (moduleClause
-
       (modifier)
       (qualifiedIdentifier
         (identifier))))

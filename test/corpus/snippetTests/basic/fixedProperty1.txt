@@ -17,7 +17,6 @@ fixed res3: Bird = new { name = "Swallow" }
 (module
   (moduleHeader
     (moduleClause
-
       (modifier)
       (qualifiedIdentifier
         (identifier))))

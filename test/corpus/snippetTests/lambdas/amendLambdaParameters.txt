@@ -44,7 +44,6 @@ example3 {
                 (identifier)))
             (objectBody
               (objectBodyParameters
-
                 (typedIdentifier
                   (identifier)))
               (objectProperty
@@ -82,7 +81,6 @@ example3 {
                 (identifier)))
             (objectBody
               (objectBodyParameters
-
                 (typedIdentifier
                   (identifier))
                 (typedIdentifier
@@ -133,7 +131,6 @@ example3 {
                   (identifier)))
               (objectBody
                 (objectBodyParameters
-
                   (typedIdentifier
                     (identifier))
                   (typedIdentifier

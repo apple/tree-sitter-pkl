@@ -81,7 +81,8 @@ res14 = three2.sameProp
           (slStringLiteralPart)))))
   (clazz
     (modifier)
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -135,7 +136,8 @@ res14 = three2.sameProp
           (slStringLiteralExpr
             (slStringLiteralPart))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

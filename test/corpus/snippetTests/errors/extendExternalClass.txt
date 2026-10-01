@@ -7,6 +7,7 @@ class Person extends Any
 
 (module
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))))
