@@ -11,10 +11,9 @@ amends "baseModule.pkl"
 (module
   (moduleHeader
     (moduleClause
-
       (modifier)
       (qualifiedIdentifier
         (identifier)))
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart)))))

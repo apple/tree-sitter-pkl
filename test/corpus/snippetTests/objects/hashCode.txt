@@ -63,7 +63,7 @@ facts {
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (clazz
@@ -96,7 +96,8 @@ facts {
               (identifier)))))))
   (clazz
     (modifier)
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

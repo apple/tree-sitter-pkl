@@ -32,7 +32,6 @@ class Person {
 (module
   (moduleHeader
     (moduleClause
-
       (qualifiedIdentifier
         (identifier))))
   (classProperty

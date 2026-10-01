@@ -8,6 +8,6 @@ extends "amendModule1.pkl"
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart)))))

@@ -85,7 +85,8 @@ class Teacher extends library.Person {
               (slStringLiteralExpr
                 (slStringLiteralPart))))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)
         (identifier)))

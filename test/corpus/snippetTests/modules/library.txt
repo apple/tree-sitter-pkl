@@ -21,7 +21,6 @@ open class Person {
 (module
   (moduleHeader
     (moduleClause
-
       (modifier)
       (qualifiedIdentifier
         (identifier)

@@ -259,7 +259,8 @@ res40 = test.catch(() -> mixin4.apply(1))
               (slStringLiteralExpr
                 (slStringLiteralPart))))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

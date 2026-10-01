@@ -154,7 +154,6 @@ res3: Mapping<String, Person> = new {
           (identifier)
           (objectBody
             (objectBodyParameters
-
               (typedIdentifier
                 (identifier)))
             (objectProperty

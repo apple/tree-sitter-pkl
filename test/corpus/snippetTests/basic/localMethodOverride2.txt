@@ -67,7 +67,8 @@ res3 = new Foo6 {}.foo.x
               (identifier)
               (argumentList)))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -109,7 +110,8 @@ res3 = new Foo6 {}.foo.x
               (identifier)
               (argumentList)))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -149,7 +151,8 @@ res3 = new Foo6 {}.foo.x
               (identifier)
               (argumentList)))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

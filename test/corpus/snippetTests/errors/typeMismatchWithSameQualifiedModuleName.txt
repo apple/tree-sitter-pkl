@@ -13,7 +13,6 @@ mod: module = typeMismatchHelper
 (module
   (moduleHeader
     (moduleClause
-
       (qualifiedIdentifier
         (identifier)
         (identifier))))

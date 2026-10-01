@@ -52,7 +52,8 @@ res6 = test.catch(() -> (res3) { yyy = 0 }.yyy)
               (identifier))))
         (intLiteralExpr))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

@@ -11,7 +11,6 @@ x: Int = 42
 (module
   (moduleHeader
     (moduleClause
-
       (modifier)
       (qualifiedIdentifier
         (identifier))))

@@ -21,7 +21,7 @@ foo = List(pigeon(), barnOwl(), parrot())
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (clazz

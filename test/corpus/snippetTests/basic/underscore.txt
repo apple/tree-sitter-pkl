@@ -376,7 +376,6 @@ var = let (_ = "foo") 0
           (identifier)
           (objectBody
             (objectBodyParameters
-
               (blankIdentifier)
               (typedIdentifier
                 (identifier)))
@@ -399,7 +398,6 @@ var = let (_ = "foo") 0
           (identifier)
           (objectBody
             (objectBodyParameters
-
               (typedIdentifier
                 (identifier))
               (blankIdentifier))

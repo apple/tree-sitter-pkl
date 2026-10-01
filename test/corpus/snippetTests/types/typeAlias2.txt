@@ -316,7 +316,8 @@ res8 = new {
       (qualifiedIdentifier
         (identifier))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody))

@@ -18,7 +18,8 @@ pigeonAge = pigeon.age
 
 (module
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

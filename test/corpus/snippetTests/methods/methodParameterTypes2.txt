@@ -71,7 +71,8 @@ res27 = x.derived(new Derived {}, new Derived {})
     (modifier)
     (identifier))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier))))
   (clazz

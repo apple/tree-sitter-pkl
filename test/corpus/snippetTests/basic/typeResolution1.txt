@@ -12,7 +12,6 @@ p1: Person1
 (module
   (moduleHeader
     (moduleClause
-
       (modifier)
       (qualifiedIdentifier
         (identifier))))

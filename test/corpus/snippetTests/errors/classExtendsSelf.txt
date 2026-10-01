@@ -13,7 +13,8 @@ f: Recurring = new {}
 (module
   (clazz
     (modifier)
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody))

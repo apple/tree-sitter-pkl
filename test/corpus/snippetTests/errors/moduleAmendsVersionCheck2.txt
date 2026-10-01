@@ -17,6 +17,6 @@ amends "baseModule.pkl"
           (identifier)
           (slStringLiteralExpr
             (slStringLiteralPart)))))
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart)))))

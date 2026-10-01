@@ -268,7 +268,8 @@ class Person2 {
                 (slStringLiteralExpr
                   (slStringLiteralPart)))))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

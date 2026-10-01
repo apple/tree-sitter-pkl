@@ -60,7 +60,8 @@ res4 = new Y { c = 6 }.compute()
         (identifier)
         (intLiteralExpr))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

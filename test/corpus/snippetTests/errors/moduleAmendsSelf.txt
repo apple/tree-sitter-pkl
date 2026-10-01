@@ -8,6 +8,6 @@ amends "moduleAmendsSelf.pkl"
 
 (module
   (moduleHeader
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart)))))

@@ -100,7 +100,6 @@ class Ann3 extends Annotation {
           (identifier)
           (intLiteralExpr))))
     (moduleClause
-
       (qualifiedIdentifier
         (identifier)
         (identifier))))
@@ -251,11 +250,13 @@ class Ann3 extends Annotation {
     (slStringLiteralExpr
       (slStringLiteralPart)))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody
@@ -266,7 +267,8 @@ class Ann3 extends Annotation {
             (qualifiedIdentifier
               (identifier)))))))
   (clazz
-    (identifier)      (classExtendsClause
+    (identifier)
+    (classExtendsClause
       (qualifiedIdentifier
         (identifier)))
     (classBody

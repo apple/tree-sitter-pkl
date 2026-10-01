@@ -15,7 +15,6 @@ baz: Baz = new typeMismatchHelper.Baz {}
 (module
   (moduleHeader
     (moduleClause
-
       (qualifiedIdentifier
         (identifier)
         (identifier))))

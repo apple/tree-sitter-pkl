@@ -31,10 +31,9 @@ res8 = sameMethod()
 (module
   (moduleHeader
     (moduleClause
-
       (qualifiedIdentifier
         (identifier)))
-      (extendsOrAmendsClause
+    (extendsOrAmendsClause
       (stringConstant
         (slStringLiteralPart))))
   (importClause
