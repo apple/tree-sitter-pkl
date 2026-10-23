@@ -26,7 +26,7 @@ res10 = foo.bar
 
 res11 = "foo" + List("bar").join("")
 
-res12 = foo.bar::<Baz>()
+res12 = foo.bar<Baz>(1)
 ---
 
 (module
@@ -108,9 +108,9 @@ res12 = foo.bar::<Baz>()
       (unqualifiedAccessExpr
         (identifier))
       (identifier)
-      (methodTypeArguments
-        (typeArgumentList
-          (declaredType
-            (qualifiedIdentifier
-              (identifier)))))
-      (argumentList))))
+      (typeArgumentList
+        (declaredType
+          (qualifiedIdentifier
+            (identifier))))
+      (argumentList
+        (intLiteralExpr)))))

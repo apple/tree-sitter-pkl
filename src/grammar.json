@@ -1794,12 +1794,30 @@
           "name": "superAccessExpr"
         },
         {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_superMethodCallWithTypeArguments"
+          },
+          "named": true,
+          "value": "superAccessExpr"
+        },
+        {
           "type": "SYMBOL",
           "name": "superSubscriptExpr"
         },
         {
           "type": "SYMBOL",
           "name": "qualifiedAccessExpr"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_qualifiedMethodCallWithTypeArguments"
+          },
+          "named": true,
+          "value": "qualifiedAccessExpr"
         },
         {
           "type": "SYMBOL",
@@ -4057,19 +4075,6 @@
         }
       ]
     },
-    "methodTypeArguments": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "::"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "typeArgumentList"
-        }
-      ]
-    },
     "unqualifiedAccessExpr": {
       "type": "SEQ",
       "members": [
@@ -4088,7 +4093,7 @@
                   "members": [
                     {
                       "type": "SYMBOL",
-                      "name": "methodTypeArguments"
+                      "name": "typeArgumentList"
                     },
                     {
                       "type": "BLANK"
@@ -4109,7 +4114,7 @@
       ]
     },
     "superAccessExpr": {
-      "type": "PREC_LEFT",
+      "type": "PREC",
       "value": 22,
       "content": {
         "type": "SEQ",
@@ -4130,25 +4135,8 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "SEQ",
-                "members": [
-                  {
-                    "type": "CHOICE",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "methodTypeArguments"
-                      },
-                      {
-                        "type": "BLANK"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "argumentList"
-                  }
-                ]
+                "type": "SYMBOL",
+                "name": "argumentList"
               },
               {
                 "type": "BLANK"
@@ -4156,6 +4144,39 @@
             ]
           }
         ]
+      }
+    },
+    "_superMethodCallWithTypeArguments": {
+      "type": "PREC_DYNAMIC",
+      "value": 1,
+      "content": {
+        "type": "PREC",
+        "value": 22,
+        "content": {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "super"
+            },
+            {
+              "type": "STRING",
+              "value": "."
+            },
+            {
+              "type": "SYMBOL",
+              "name": "identifier"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "typeArgumentList"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "argumentList"
+            }
+          ]
+        }
       }
     },
     "superSubscriptExpr": {
@@ -4189,7 +4210,7 @@
       }
     },
     "qualifiedAccessExpr": {
-      "type": "PREC_LEFT",
+      "type": "PREC",
       "value": 22,
       "content": {
         "type": "SEQ",
@@ -4226,25 +4247,8 @@
                 "type": "CHOICE",
                 "members": [
                   {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "CHOICE",
-                        "members": [
-                          {
-                            "type": "SYMBOL",
-                            "name": "methodTypeArguments"
-                          },
-                          {
-                            "type": "BLANK"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "argumentList"
-                      }
-                    ]
+                    "type": "SYMBOL",
+                    "name": "argumentList"
                   },
                   {
                     "type": "BLANK"
@@ -4254,6 +4258,57 @@
             ]
           }
         ]
+      }
+    },
+    "_qualifiedMethodCallWithTypeArguments": {
+      "type": "PREC_DYNAMIC",
+      "value": 1,
+      "content": {
+        "type": "PREC",
+        "value": 22,
+        "content": {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "receiver",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_expr"
+              }
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "."
+                },
+                {
+                  "type": "STRING",
+                  "value": "?."
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "typeArgumentList"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "argumentList"
+                }
+              ]
+            }
+          ]
+        }
       }
     },
     "functionLiteralExpr": {
@@ -4441,6 +4496,17 @@
     ],
     [
       "qualifiedIdentifier"
+    ],
+    [
+      "unqualifiedAccessExpr"
+    ],
+    [
+      "superAccessExpr",
+      "_superMethodCallWithTypeArguments"
+    ],
+    [
+      "qualifiedAccessExpr",
+      "_qualifiedMethodCallWithTypeArguments"
     ]
   ],
   "precedences": [],
