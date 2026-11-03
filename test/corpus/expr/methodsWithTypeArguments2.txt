@@ -1,0 +1,17 @@
+===
+methodsWithTypeArguments2
+===
+res = foo<Int>(5)
+---
+
+(module
+  (classProperty
+    (identifier)
+    (unqualifiedAccessExpr
+      (identifier)
+      (typeArgumentList
+        (declaredType
+          (qualifiedIdentifier
+            (identifier))))
+      (argumentList
+        (intLiteralExpr)))))
