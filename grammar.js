@@ -851,7 +851,7 @@ module.exports = grammar({
 
     unqualifiedAccessExpr: $ => seq(
       $.identifier,
-      optional(seq(optional($.typeArgumentList), $.argumentList))
+      optional(seq(optional(prec.dynamic(1, $.typeArgumentList)), $.argumentList))
     ),
 
     superAccessExpr: $ => prec(

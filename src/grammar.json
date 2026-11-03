@@ -4092,8 +4092,12 @@
                   "type": "CHOICE",
                   "members": [
                     {
-                      "type": "SYMBOL",
-                      "name": "typeArgumentList"
+                      "type": "PREC_DYNAMIC",
+                      "value": 1,
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "typeArgumentList"
+                      }
                     },
                     {
                       "type": "BLANK"
