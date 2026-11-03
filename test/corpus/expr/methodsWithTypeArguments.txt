@@ -1,0 +1,44 @@
+===
+methodsWithTypeArguments
+===
+
+res {
+  foo<Foo>(1)
+  super.bar<Foo>(1)
+  qux.foo<Foo>(1)
+}
+---
+
+(module
+  (classProperty
+    (identifier)
+    (objectBody
+      (objectElement
+        (unqualifiedAccessExpr
+          (identifier)
+          (typeArgumentList
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))
+          (argumentList
+            (intLiteralExpr))))
+      (objectElement
+        (superAccessExpr
+          (identifier)
+          (typeArgumentList
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))
+          (argumentList
+            (intLiteralExpr))))
+      (objectElement
+        (qualifiedAccessExpr
+          (unqualifiedAccessExpr
+            (identifier))
+          (identifier)
+          (typeArgumentList
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))
+          (argumentList
+            (intLiteralExpr)))))))

@@ -145,7 +145,10 @@ module.exports = grammar({
 
   conflicts: $ => [
     [$.typedIdentifier, $.unqualifiedAccessExpr],
-    [$.qualifiedIdentifier]
+    [$.qualifiedIdentifier],
+    [$.unqualifiedAccessExpr],
+    [$.superAccessExpr, $._superMethodCallWithTypeArguments],
+    [$.qualifiedAccessExpr, $._qualifiedMethodCallWithTypeArguments]
   ],
 
   rules: {
@@ -474,8 +477,10 @@ module.exports = grammar({
       $.newExpr,
       $.amendExpr,
       $.superAccessExpr,
+      alias($._superMethodCallWithTypeArguments, $.superAccessExpr),
       $.superSubscriptExpr,
       $.qualifiedAccessExpr,
+      alias($._qualifiedMethodCallWithTypeArguments, $.qualifiedAccessExpr),
       $.subscriptExpr,
       $.nonNullExpr,
       $.unaryMinusExpr,
@@ -844,36 +849,49 @@ module.exports = grammar({
 
     importExpr: $ => seq(field("variant", choice("import", "import*")), seq('(', $.stringConstant, ')')),
 
-    methodTypeArguments: $ => seq("::", $.typeArgumentList),
-
     unqualifiedAccessExpr: $ => seq(
       $.identifier,
-      optional(seq(optional($.methodTypeArguments), $.argumentList))
+      optional(seq(optional($.typeArgumentList), $.argumentList))
     ),
 
-    superAccessExpr: $ => prec.left(
+    superAccessExpr: $ => prec(
       PREC.ACCESS,
       seq(
         "super",
         ".",
         $.identifier,
-        optional(seq(optional($.methodTypeArguments), $.argumentList))
+        optional($.argumentList)
       )
     ),
 
+    _superMethodCallWithTypeArguments: $ => prec.dynamic(1, prec(
+      PREC.ACCESS,
+      seq("super", ".", $.identifier, $.typeArgumentList, $.argumentList)
+    )),
+
     superSubscriptExpr: $ => prec.left(PREC.ACCESS, seq("super", alias($._open_subscript_bracket, "["), $._expr, "]")),
 
-    qualifiedAccessExpr: $ => prec.left(
+    qualifiedAccessExpr: $ => prec(
       PREC.ACCESS,
       seq(
         field("receiver", $._expr),
         choice(".", "?."),
         seq(
           $.identifier,
-          optional(seq(optional($.methodTypeArguments), $.argumentList))
+          optional($.argumentList)
         )
       )
     ),
+
+    _qualifiedMethodCallWithTypeArguments: $ => prec.dynamic(1, prec(PREC.ACCESS, seq(
+      field("receiver", $._expr),
+      choice(".", "?."),
+      seq(
+        $.identifier,
+        $.typeArgumentList,
+        $.argumentList
+      )
+    ))),
 
     functionLiteralExpr: $ => prec(PREC.FUN, seq($.parameterList, "->", $._expr)),
 

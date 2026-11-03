@@ -2,7 +2,7 @@
 unqualifiedAccess
 ===
 
-res1 = foo::<Bar>()
+res1 = foo<Bar>()
 
 ---
 
@@ -11,9 +11,8 @@ res1 = foo::<Bar>()
     (identifier)
     (unqualifiedAccessExpr
       (identifier)
-      (methodTypeArguments
-        (typeArgumentList
-          (declaredType
-            (qualifiedIdentifier
-              (identifier)))))
+      (typeArgumentList
+        (declaredType
+          (qualifiedIdentifier
+            (identifier))))
       (argumentList))))

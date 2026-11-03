@@ -6,7 +6,7 @@ exprs {
   super.foo
   super.foo()
   super["foo"]
-  super.foo::<Bar>()
+  super.foo<Bar>(1)
 }
 
 ---
@@ -29,9 +29,9 @@ exprs {
       (objectElement
         (superAccessExpr
           (identifier)
-          (methodTypeArguments
-            (typeArgumentList
-              (declaredType
-                (qualifiedIdentifier
-                  (identifier)))))
-          (argumentList))))))
+          (typeArgumentList
+            (declaredType
+              (qualifiedIdentifier
+                (identifier))))
+          (argumentList
+            (intLiteralExpr)))))))
