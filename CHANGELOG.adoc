@@ -1,5 +1,20 @@
 = Changelog
 
+[[release-0.22.0]]
+== 0.22.0 (2026-11-05)
+
+=== Additions
+
+* Add support for the `this` type (https://github.com/apple/tree-sitter-pkl/pull/86[#86]).
+* Add support for generic method calls (https://github.com/apple/tree-sitter-pkl/pull/97[#97], https://github.com/apple/tree-sitter-pkl/pull/104[#104], https://github.com/apple/tree-sitter-pkl/pull/105[#105]).
+
+=== Contributors ❤️
+
+Thanks to all the contributors for this release!
+
+* https://github.com/bioball[@bioball]
+* https://github.com/HT154[@HT154]
+
 [[release-0.21.0]]
 == 0.21.0 (2026-07-07)
 
