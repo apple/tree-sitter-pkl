@@ -1,0 +1,30 @@
+================================================================================
+extendsModule
+================================================================================
+
+open module Base
+
+class Child extends module {
+  extra: Int = 1
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (moduleHeader
+    (moduleClause
+      (modifier)
+      (qualifiedIdentifier
+        (identifier))))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (moduleType))
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))))
+        (intLiteralExpr)))))

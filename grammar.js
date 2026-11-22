@@ -216,8 +216,10 @@ module.exports = grammar({
 
     classExtendsClause: $ => seq(
       "extends",
-      $.qualifiedIdentifier,
-      optional($.typeArgumentList)
+      choice(
+        seq($.qualifiedIdentifier, optional($.typeArgumentList)),
+        alias("module", $.moduleType)
+      )
     ),
 
     classBody: $ => seq(

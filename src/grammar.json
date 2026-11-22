@@ -336,18 +336,37 @@
           "value": "extends"
         },
         {
-          "type": "SYMBOL",
-          "name": "qualifiedIdentifier"
-        },
-        {
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "typeArgumentList"
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "qualifiedIdentifier"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "typeArgumentList"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "type": "BLANK"
+              "type": "ALIAS",
+              "content": {
+                "type": "STRING",
+                "value": "module"
+              },
+              "named": true,
+              "value": "moduleType"
             }
           ]
         }

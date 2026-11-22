@@ -429,6 +429,10 @@
       "required": true,
       "types": [
         {
+          "type": "moduleType",
+          "named": true
+        },
+        {
           "type": "qualifiedIdentifier",
           "named": true
         },
