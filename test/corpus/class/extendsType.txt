@@ -1,0 +1,205 @@
+================================================================================
+extendsThis
+================================================================================
+
+class A extends this
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (thisType))))
+
+================================================================================
+extendsNullable
+================================================================================
+
+class A extends Base?
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (nullableType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))))))
+
+================================================================================
+extendsUnion
+================================================================================
+
+class A extends Base | Other
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (unionType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))))))
+
+================================================================================
+extendsConstrained
+================================================================================
+
+class A extends Base(isValid) {
+  isValid: Boolean = true
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (constrainedType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))
+        (unqualifiedAccessExpr
+          (identifier))))
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))))
+        (trueLiteralExpr)))))
+
+================================================================================
+extendsGeneric
+================================================================================
+
+class A extends Mapping<String, List<Int>>
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))
+        (typeArgumentList
+          (declaredType
+            (qualifiedIdentifier
+              (identifier)))
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))
+            (typeArgumentList
+              (declaredType
+                (qualifiedIdentifier
+                  (identifier))))))))))
+
+================================================================================
+extendsQualifiedGeneric
+================================================================================
+
+import "base.pkl"
+
+class A extends base.Base<Int> {
+  foo: Int = 1
+}
+
+--------------------------------------------------------------------------------
+
+(module
+  (importClause
+    (stringConstant
+      (slStringLiteralPart)))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)
+          (identifier))
+        (typeArgumentList
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))))))
+    (classBody
+      (classProperty
+        (identifier)
+        (typeAnnotation
+          (declaredType
+            (qualifiedIdentifier
+              (identifier))))
+        (intLiteralExpr)))))
+
+================================================================================
+extendsOtherTypes
+================================================================================
+
+class A extends unknown
+
+class B extends "foo"
+
+class C extends (Int) -> String
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (unknownType)))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (stringLiteralType
+        (stringConstant
+          (slStringLiteralPart)))))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (functionLiteralType
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))
+        (declaredType
+          (qualifiedIdentifier
+            (identifier)))))))
+
+================================================================================
+extendsWithoutBody
+================================================================================
+
+class A extends Base
+class B extends module
+foo: Int = 1
+
+--------------------------------------------------------------------------------
+
+(module
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)))))
+  (clazz
+    (identifier)
+    (classExtendsClause
+      (moduleType)))
+  (classProperty
+    (identifier)
+    (typeAnnotation
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
+    (intLiteralExpr)))

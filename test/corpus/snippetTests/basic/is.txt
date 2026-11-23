@@ -332,8 +332,9 @@ facts {
     (modifier)
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier))))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)))))
   (clazz
     (modifier)
     (identifier))

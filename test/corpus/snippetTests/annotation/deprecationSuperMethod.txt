@@ -62,8 +62,9 @@ bazCall2ShouldNotWarn = new Bar {}.baz()
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classMethod
         (methodHeader

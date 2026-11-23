@@ -252,13 +252,15 @@ class Ann3 extends Annotation {
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier))))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)))))
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classProperty
         (identifier)
@@ -269,8 +271,9 @@ class Ann3 extends Annotation {
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classProperty
         (identifier)

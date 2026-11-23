@@ -20,8 +20,9 @@ pigeonAge = pigeon.age
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classProperty
         (identifier)

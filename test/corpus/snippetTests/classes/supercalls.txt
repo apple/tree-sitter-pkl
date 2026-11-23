@@ -83,8 +83,9 @@ res14 = three2.sameProp
     (modifier)
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classProperty
         (identifier)
@@ -138,8 +139,9 @@ res14 = three2.sameProp
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classProperty
         (identifier)

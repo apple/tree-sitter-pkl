@@ -337,19 +337,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "qualifiedIdentifier"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "typeArgumentList"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
+          "name": "_type"
         }
       ]
     },

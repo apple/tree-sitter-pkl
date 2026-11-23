@@ -425,15 +425,55 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "qualifiedIdentifier",
+          "type": "constrainedType",
           "named": true
         },
         {
-          "type": "typeArgumentList",
+          "type": "declaredType",
+          "named": true
+        },
+        {
+          "type": "defaultUnionType",
+          "named": true
+        },
+        {
+          "type": "functionLiteralType",
+          "named": true
+        },
+        {
+          "type": "moduleType",
+          "named": true
+        },
+        {
+          "type": "nothingType",
+          "named": true
+        },
+        {
+          "type": "nullableType",
+          "named": true
+        },
+        {
+          "type": "parenthesizedType",
+          "named": true
+        },
+        {
+          "type": "stringLiteralType",
+          "named": true
+        },
+        {
+          "type": "thisType",
+          "named": true
+        },
+        {
+          "type": "unionType",
+          "named": true
+        },
+        {
+          "type": "unknownType",
           "named": true
         }
       ]

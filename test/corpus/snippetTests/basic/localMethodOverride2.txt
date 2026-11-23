@@ -69,8 +69,9 @@ res3 = new Foo6 {}.foo.x
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classMethod
         (methodHeader
@@ -112,8 +113,9 @@ res3 = new Foo6 {}.foo.x
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classMethod
         (methodHeader
@@ -153,8 +155,9 @@ res3 = new Foo6 {}.foo.x
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classMethod
         (methodHeader
