@@ -62,8 +62,9 @@ res4 = new Y { c = 6 }.compute()
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classMethod
         (methodHeader

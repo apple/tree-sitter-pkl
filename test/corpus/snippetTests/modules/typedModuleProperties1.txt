@@ -87,9 +87,10 @@ class Teacher extends library.Person {
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)
+          (identifier))))
     (classBody
       (classProperty
         (identifier)

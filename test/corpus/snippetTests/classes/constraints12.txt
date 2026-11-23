@@ -54,8 +54,9 @@ res6 = test.catch(() -> (res3) { yyy = 0 }.yyy)
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classProperty
         (identifier)

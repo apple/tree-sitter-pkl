@@ -103,5 +103,6 @@ class Bar extends Foo
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))))

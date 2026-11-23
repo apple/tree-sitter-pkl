@@ -133,8 +133,9 @@ res7b = List(19, 20, 21).map((n) -> new C {}.f2(n))
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))
     (classBody
       (classMethod
         (annotation

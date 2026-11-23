@@ -336,39 +336,8 @@
           "value": "extends"
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "qualifiedIdentifier"
-                },
-                {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "typeArgumentList"
-                    },
-                    {
-                      "type": "BLANK"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "ALIAS",
-              "content": {
-                "type": "STRING",
-                "value": "module"
-              },
-              "named": true,
-              "value": "moduleType"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_type"
         }
       ]
     },

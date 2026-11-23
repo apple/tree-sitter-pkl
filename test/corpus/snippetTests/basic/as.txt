@@ -234,8 +234,9 @@ examples {
     (modifier)
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier))))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)))))
   (classProperty
     (modifier)
     (identifier)

@@ -9,5 +9,6 @@ class Person extends Any
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier)))))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier))))))

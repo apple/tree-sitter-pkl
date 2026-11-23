@@ -23,8 +23,9 @@ qux = new Baz {}
   (clazz
     (identifier)
     (classExtendsClause
-      (qualifiedIdentifier
-        (identifier))))
+      (declaredType
+        (qualifiedIdentifier
+          (identifier)))))
   (classProperty
     (identifier)
     (newExpr
